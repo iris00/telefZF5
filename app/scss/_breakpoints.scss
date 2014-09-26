@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@media only screen and (min-width: 74.063em) {
+  .contrato-pc {
+    display: block;
+  }
+  .contrato-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 74.062em) {
+  .contrato-pc {
+    display: none;
+  }
+  .contrato-mobile {
+    display: block;
+  }
+}

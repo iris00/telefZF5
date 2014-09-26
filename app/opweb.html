@@ -1,0 +1,228 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Configurador de Movistar Fusión Empresas">
+    <title>Configurador MFE - Selección de sedes</title>
+    <!-- build:css css/libraries.min.css -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css css/app.min.css -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app_override.css">
+    <!-- endbuild -->
+    <!-- build:js js/vendor/modernizr.min.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+</head>
+
+<body class="opweb">
+    <div class="row">
+        <div class="off-canvas-wrap" data-offcanvas>
+            <div class="inner-wrap">
+                <header role="banner">
+                    <div class="tit-sede text-center">
+                    </div>
+                    <!-- tit-sede -->
+                    <nav class="tab-bar row" role="navigation">
+                        <section>
+                            <div>
+                                <a title="Menú de navegación" href="" class="left-off-canvas-toggle menu-icon" tabindex="0">
+                                    <span></span>
+                                </a>
+                            </div>
+                            <div>
+                                <h1 class="text-center">OPWEB | 2LBS</h1>
+                            </div>
+                        </section>
+                    </nav>
+                    <!-- tab-bar -->
+                </header>
+
+                <aside class="left-off-canvas-menu">
+                    <ul class="off-canvas-list">
+                        <li class="off-canvas-head clearfix">
+                            <a href="index.html" title="Inicio" class="home left">
+                                <i class="fa fa-home fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="off-canvas-head">
+                            Usuario: T661403
+                            <br>
+                            <button data-dropdown="perfil" aria-controls="perfil" aria-expanded="false" class="button dropdown">Administrador</button>
+                            <br>
+                            <ul id="perfil" data-dropdown-content class="f-dropdown" aria-hidden="true">
+                                <li><a href="#">Comercial</a>
+                                </li>
+                                <li><a href="#">Otro perfil</a>
+                                </li>
+                                <li><a href="#">Otro perfil más</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-bar-chart fa-2x"></i> Crear Informes</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-bookmark fa-2x"></i> Producto MFE</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-comments fa-2x"></i> Ayuda</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gears fa-2x"></i> Administración</a>
+                        </li>
+                    </ul><!-- off-canvas-list -->
+                </aside><!-- left-off-canvas-menu -->
+
+                <section role="main" class="main-section">
+                    <article class="row">
+                        <div class="contenido large-12 columns">
+
+                            <form class="datos-empresa" action="action">
+                                <div class="row">
+                                    <div class="large-1 columns text-right">
+                                        <label for="cif2">CIF</label>
+                                    </div>
+                                    <div class="large-2 columns text-right">
+                                        <input type="text" id="cif2">
+                                    </div>
+                                    <div class="large-2 columns text-right">
+                                        <label for="nomem">Nombre de la empresa</label>
+                                    </div>
+                                    <div class="large-3 columns">
+                                        <input type="text" id="nomem">
+                                    </div>
+                                    <div class="large-4 columns text-right">
+                                        <button class="radius">Generar Bussines Case</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <dl class="tabs" data-tab>
+                                <dd><a href="#panel1">Situación actual</a>
+                                </dd>
+                                <dd class="active"><a href="#panel2">Propuesta cliente</a>
+                                </dd>
+                                <dd><a href="#panel3">Nuevas líneas</a>
+                                </dd>
+                                <dd><a href="#panel4">Descuentos</a>
+                                </dd>
+                                <dd><a href="#panel5">Bussines Case</a>
+                                </dd>
+                            </dl>
+                            <div class="tabs-content">
+                                <div class="content" id="panel1">
+                                    <p>Panel Situación actual</p>
+                                </div>
+                                <div class="content active" id="panel2">
+                                    <form action="action">
+                                        <div class="row">
+                                            <div class="large-4 columns">
+                                                <label for="linact">Líneas actuales
+                                                <input type="text" id="linact"></label>
+                                            </div>
+                                            <div class="large-4 columns">
+                                                <label for="facact">Facturación actual
+                                                <input type="text" id="facact"></label>
+                                            </div>
+                                            <div class="large-4 columns">
+                                                <label for="desact">Porcentaje de descuento actual
+                                                <input type="text" id="desact"></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-4 columns">
+                                                <label for="linpro">Líneas propuestas
+                                                <input type="text" id="linpro"></label>
+                                            </div>
+                                            <div class="large-4 columns">
+                                                <label for="facpro">Facturación proporcional
+                                                <input type="text" id="facpro"></label>
+                                            </div>
+                                            <div class="large-4 columns">
+                                                <label for="despro">Porcentaje de descuento proporcional
+                                                <input type="text" id="despro"></label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="content" id="panel3">
+                                    <p>Panel Nuevas líneas</p>
+                                </div>
+                                <div class="content" id="panel4">
+                                    <p>Panel Descuentos</p>
+                                </div>
+                                <div class="content" id="panel5">
+                                    <p>Panel Bussines Case</p>
+                                </div>
+                            </div>
+
+                            <div class="panel">panel</div>
+
+                            <h2>Título secundario</h2>
+
+                            <div class="panel tit">
+                                <h2>Título de panel</h2>
+                                <div class="panel-cont"><p>Contenido de panel con título</p></div>
+                                <div class="panel tit">
+                                <h2>Título de panel anidado</h2>
+                                <div class="panel-cont"><p>Contenido de panel anidado con título</p></div>
+                            </div>
+                            </div>
+
+                        </div>
+                        <!-- contenido -->
+                    </article>
+                </section>
+                <a class="exit-off-canvas"></a>
+            </div>
+            <!-- inner-wrap -->
+        </div>
+        <!-- off-canvas-wrap -->
+    </div>
+    <!-- row -->
+
+    <footer class="row" role="contentinfo">
+        <div class="large-2 columns">T151221 - 1</div>
+        <div class="large-8 columns end text-center">
+            Telefónica de España S.A
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- build:js js/vendor/libraries.min.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js js/vendor/foundation.min.js -->
+    <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+        <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+        <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/app.min.js -->
+    <script src="js/app.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

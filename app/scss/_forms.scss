@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+// Formularios Ofertas
+.ofertas {
+  label,
+  .label {
+    background-color: $third-color;
+    //padding-right: rem-calc(5);
+    text-align: center;
+  }
+  .botonera {
+    padding-top: rem-calc(15);
+  }
+  .botonera .button {
+    margin-bottom: 0;
+  }
+}
+
+// Formularios OPWEB
+.opweb {
+  form, .tabs {
+    margin-top: rem-calc(15);
+  }
+  .tabs-content > .content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  label,
+  .label,
+  input[type="text"],
+  button,
+  .button {
+    margin-bottom: 0;
+  }
+  label,
+  .label {
+    color: $oil;
+    font-size: rem-calc(14);
+    line-height: rem-calc(25);
+  }
+  input[type="text"] {
+    color: $oil;
+    padding: rem-calc(2);
+    height: auto;
+  }
+  button,
+  .button {
+    padding: rem-calc(3) rem-calc(15);
+    font-size: rem-calc(14);
+  }
+}

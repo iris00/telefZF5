@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+// Pestañas OPWEB
+.opweb {
+  .tabs {}
+  .tabs dd > a, .tabs .tab-title > a {
+    font-size: rem-calc(14);
+    padding: rem-calc(8) rem-calc(16);
+  }
+  .tabs dd.active a,
+  .tabs .tab-title.active a {
+    background-color: $secondary-color;
+    color: $white;
+  }
+  .tabs-content {
+    border-top: 1px solid $secondary-color;
+  }
+}

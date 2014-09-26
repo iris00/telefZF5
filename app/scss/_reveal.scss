@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+// Reveal-modal
+.reveal-modal {
+  border-radius: 8px 8px 6px 6px;
+  border: 0 solid;
+  padding: 0;
+  h2 {
+    border-radius: 6px 6px 0 0;
+    color: $white;
+    font-size: rem-calc(20);
+    padding: rem-calc(10) rem-calc(20);
+    line-height: rem-calc(35);
+    background-color: $secondary-color;
+    a {
+      color: $white;
+      float: right;
+    }
+    .fa {
+      font-size: rem-calc(26);
+    }
+    .close-reveal-modal {
+      color: $white;
+      font-size: rem-calc(25);
+      position: initial;
+      line-height: rem-calc(35);
+      margin-left: rem-calc(30);
+    }
+  }
+  form {
+    padding: rem-calc(30) rem-calc(10) rem-calc(30) rem-calc(30);
+  }
+}
+
+.reveal-modal .botonera {
+  .button,
+  button {
+    font-family: "robotothin", Helvetica, Arial, sans-serif;
+  }
+  .button.disabled {
+    background-color: $iron;
+  }
+  .func-secondary {
+    background-color: $button-func-bg-secondary;
+    &:hover {
+      background-color: #7d7d7d;
+    }
+  }
+}

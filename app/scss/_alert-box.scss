@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+// Alert boxes
+.alert-box {
+  font-family: 'robotothin';
+  font-size: rem-calc(15);
+  background-color: #009eb8;
+  display: inline-block;
+  position: relative;
+  left: 120px;
+  top: 10px;
+}
+
+.alert-box.filtro {
+  background-color: $filter-color;
+  color: $oil;
+}

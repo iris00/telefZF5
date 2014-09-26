@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+// Top-bar OPWEB
+.opweb {
+  .top-bar {
+    background-color: $primary-color;
+  }
+  .top-bar-section ul li,
+  .top-bar-section li:not(.has-form) a:not(.button) {
+    background-color: $primary-color;
+  }
+  .top-bar-section ul li > a {
+    font-size: rem-calc(14);
+  }
+  .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
+    background-color: $primary-color;
+  }
+}

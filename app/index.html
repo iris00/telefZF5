@@ -1,0 +1,482 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Configurador de Movistar Fusión Empresas">
+    <title>Configurador MFE - Selección de sedes</title>
+    <!-- build:css css/libraries.min.css -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css css/app.min.css -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app_override.css">
+    <!-- endbuild -->
+    <!-- build:js js/vendor/modernizr.min.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+</head>
+
+<body class="ofertas">
+    <div class="row">
+        <div class="off-canvas-wrap" data-offcanvas>
+            <div class="inner-wrap">
+                <header role="banner">
+                    <div class="tit-sede text-center">
+                        Panadería Madrid S.L. B10156754 (Calle Orense 14, Madrid)
+                    </div>
+                    <!-- tit-sede -->
+                    <nav class="tab-bar row" role="navigation">
+                        <section>
+                            <div>
+                                <a title="Menú de navegación" href="" class="left-off-canvas-toggle menu-icon" tabindex="0">
+                                    <span></span>
+                                </a>
+                            </div>
+
+                            <div>
+                                <h1 class="text-center">Configurador de Movistar Fusión Empresas</h1>
+                            </div>
+
+                            <div>
+                                <a href="#" title="Notificaciones" data-reveal-id="notific">
+                                    <i class="fa fa-bell-o"><span>3</span></i>
+                                </a>
+                                <a href="#" title="Buscar" data-reveal-id="search">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                                <a href="#" title="Buscar con filtro avanzado" data-reveal-id="search-filter">
+                                    <i class="fa fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </section>
+                    </nav>
+                    <!-- tab-bar -->
+                </header>
+
+                <aside class="left-off-canvas-menu">
+                    <ul class="off-canvas-list">
+                        <li class="off-canvas-head clearfix">
+                            <a href="index.html" title="Inicio" class="home left">
+                                <i class="fa fa-home fa-2x"></i>
+                            </a>
+                            <a href="#" title="Buscar" class="search right" data-reveal-id="search">
+                                <i class="fa fa-search fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="off-canvas-head">
+                            Manuel Beltrán Pérez
+                            <br>
+                            <button data-dropdown="perfil" aria-controls="drop2" aria-expanded="false" class="button dropdown">Comercial</button>
+                            <br>
+                            <ul id="perfil" data-dropdown-content class="f-dropdown" aria-hidden="true">
+                                <li><a href="#">Comercial</a>
+                                </li>
+                                <li><a href="#">Otro perfil</a>
+                                </li>
+                                <li><a href="#">Otro perfil más</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-bar-chart fa-2x"></i> Crear Informes</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-bell-o"></i> Crear Notificaciones</a>
+                        </li>                        
+                        <li><a href="#"><i class="fa fa-bookmark fa-2x"></i> Producto MFE</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-comments fa-2x"></i> Ayuda</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gears fa-2x"></i> Administración</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-asterisk"></i> Traslados MFE</a>
+                        </li>  
+                    </ul>
+                    <!-- off-canvas-list -->
+                </aside>
+                <!-- left-off-canvas-menu -->
+
+                <section class="main-section" role="main">
+                    <article class="row">
+                        <div class="contenido large-8 columns">
+                            <a class="plus" href="#" title="Nueva oferta">
+                                <i class="fa fa-plus"></i>
+                            </a>
+
+                            <div class="alert-box radius filtro" data-alert="">
+                                Aviso gris
+                                <a class="close" href="" title="Cerrar"><i class="fa fa-times"></i></a>
+                            </div>
+
+                            <div class="alert-box radius" data-alert="">
+                                Por defecto
+                                <a class="close" href="" title="Cerrar"><i class="fa fa-times"></i></a>
+                            </div>
+
+                            <div class="alert-box radius alert" data-alert="">
+                                Alerta
+                                <a class="close" href="" title="Cerrar"><i class="fa fa-times"></i></a>
+                            </div>
+
+                            <div class="alert-box radius info" data-alert="">
+                                Información
+                                <a class="close" href="" title="Cerrar"><i class="fa fa-times"></i></a>
+                            </div>
+                            <!-- alert-box -->
+
+                            <table class="ofertas">
+                                <caption class="hidden-for-small-up">Tabla de Clientes</caption>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Cliente</th>
+                                        <th>Importe</th>
+                                        <th>Fecha Mod.</th>
+                                        <th>Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a class="new" href="#" title="Editar">
+                                                <i class="fa fa-play-circle"></i>
+                                            </a>
+                                        </td>
+                                        <td>Panadería Madrid S.L.
+                                            <span>B10156754</span>
+                                        </td>
+                                        <td>231€</td>
+                                        <td>26/05/14</td>
+                                        <td>Tramitación Fase I</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a class="new" href="#" title="Editar">
+                                                <i class="fa fa-play-circle"></i>
+                                            </a>
+                                        </td>
+                                        <td>Grupo VIPs S.A.
+                                            <span>B10156754</span>
+                                        </td>
+                                        <td>625€</td>
+                                        <td>25/05/14</td>
+                                        <td>Borrador</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a class="new" href="#" title="Editar">
+                                                <i class="fa fa-play-circle"></i>
+                                            </a>
+                                        </td>
+                                        <td>BMW Automóviles S.A.
+                                            <span>B10156754</span>
+                                        </td>
+                                        <td>7362€</td>
+                                        <td>24/05/14</td>
+                                        <td class="warning">Incidencia</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a class="new" href="#" title="Editar">
+                                                <i class="fa fa-play-circle"></i>
+                                            </a>
+                                        </td>
+                                        <td>Congelados Burgos S.L.
+                                            <span>B10156754</span>
+                                        </td>
+                                        <td>736€</td>
+                                        <td>23/05/14</td>
+                                        <td>Borrador</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a class="new" href="#" title="Editar">
+                                                <i class="fa fa-play-circle"></i>
+                                            </a>
+                                        </td>
+                                        <td>Ayuntamiento de Dénia
+                                            <span>B10156754</span>
+                                        </td>
+                                        <td>456€</td>
+                                        <td>22/05/14</td>
+                                        <td class="alert">Anexar contrato</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a class="new" href="#" title="Editar">
+                                                <i class="fa fa-play-circle"></i>
+                                            </a>
+                                        </td>
+                                        <td>Google Inc
+                                            <span>B10156754</span>
+                                        </td>
+                                        <td>431€</td>
+                                        <td>21/05/14</td>
+                                        <td>Contrato generado</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- contenido -->
+                        <aside class="col-dcha large-4 columns" role="complementary">
+                            <div class="aside-right">
+                                <header>
+                                    <a class="trash" href="#" title="Eliminar">
+                                        <i class="fa fa-trash-o"></i>
+                                    </a>
+                                    <p>ID de oferta: FU00001234
+                                        <br>Boletín HECO: 13M122234</p>
+                                    <h2 class="text-center">Panadería Madrid S.L.</h2>
+                                </header>
+
+                                <p class="info-ofer">Info de la oferta
+                                    <span><i title="Matrícula de creación" class="fa fa-user"></i> T151221</span>
+                                    <span><i title="Fecha de creación" class="fa fa-calendar"></i> 22/05/14</span>
+                                </p>
+                                <!-- info-ofer -->
+
+                                <div class="factur">
+                                    <p class="clearfix">Facturación del cliente</p>
+                                    <p class="clearfix">
+                                        <span class="left">Dentro de MFE</span>
+                                        <span class="right">723€</span>
+                                    </p>
+                                    <p class="clearfix">
+                                        <span class="left">Fuera de MFE</span>
+                                        <span class="right">1736€</span>
+                                    </p>
+                                </div>
+                                <!-- factur -->
+
+                                <div class="heco">
+                                    <p>Comentarios HECO</p>
+                                    <dl data-accordion class="accordion">
+                                        <dd class="accordion-navigation active">
+                                            <a href="#panel1">Alta Móvil <span class="right">26/05/14</span></a>
+                                            <div class="content active" id="panel1">
+                                                <p>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada, integer vivamus elit eu mauris eu, cum eros quis aliquam nisl wisi.</p>
+                                            </div>
+                                        </dd>
+                                        <dd class="accordion-navigation">
+                                            <a href="#panel2">Integra <span class="right">26/05/14</span></a>
+                                            <div class="content" id="panel2">
+                                                <p>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada, integer vivamus elit eu mauris eu, cum eros quis aliquam nisl wisi.</p>
+                                            </div>
+                                        </dd>
+                                        <dd class="accordion-navigation">
+                                            <a href="#panel3">Conectividad <span class="right">24/05/14</span></a>
+                                            <div class="content" id="panel3">
+                                                <p>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada, integer vivamus elit eu mauris eu, cum eros quis aliquam nisl wisi.</p>
+                                            </div>
+                                        </dd>
+                                        <dd class="accordion-navigation">
+                                            <a href="#panel4">Mantenimiento <span class="right">22/05/14</span></a>
+                                            <div class="content" id="panel4">
+                                                <p>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada, integer vivamus elit eu mauris eu, cum eros quis aliquam nisl wisi.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <!-- accordion -->
+                                </div>
+                                <!-- heco -->
+                                <div class="contrato">
+                                    <p class="contrato-pc">Arrastra aquí el contrato</p>
+                                    <input class="contrato-mobile" title="Selecione el contrato que desea anexar" type="file">
+                                </div>
+                                <div class="estado">
+                                    <label>Cambio de estado</label>
+                                        <select name="estado" id="">
+                                            <option value="">Estado 1</option>
+                                            <option value="">Estado 2</option>
+                                            <option value="">Estado 3</option>
+                                            <option value="">Estado 4</option>
+                                        </select>
+                                    
+                                </div>
+                                <!-- contrato -->
+                            </div>
+                            <!-- aside-right -->
+                        </aside>
+                        <!-- col-dcha -->
+                    </article>
+                </section>
+                <a class="exit-off-canvas"></a>
+            </div>
+            <!-- inner-wrap -->
+        </div>
+        <!-- off-canvas-wrap -->
+    </div>
+    <!-- row -->
+
+    <footer class="row" role="contentinfo">
+        <div class="large-2 columns">T151221 - 1</div>
+        <div class="large-8 columns end text-center">
+            Telefónica de España S.A
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- Ventanas modales -->
+    <div id="notific" class="reveal-modal tiny" data-reveal="true">
+        <h2 class="clearfix">Notificaciones
+            <a href="#" title="Cerrar" class="close-reveal-modal">
+                <i class="fa fa-close"></i>
+            </a>
+            <a href="#" title="Eliminar notificaciones">
+                <i class="fa fa-trash-o"></i>
+            </a>
+        </h2>
+        <ul>
+            <li>
+                <a class="alert" href="#">Pedido con Incidencias
+                    <span>B10158947 - Incidencia de tramitación en VT</span></a>
+            </li>
+            <li>
+                <a class="warning" href="#">Pedido pendiente de anexar contrato
+                    <span>El pedido 14M12312343 está pendiente de anexar el contrato para continuar su tramitación</span></a> 
+            </li>
+            <li>
+                <a href="#">Lanzamiento de respaldo móvil 
+                    <span></span></a>
+            </li>
+        </ul>
+    </div>
+    <!-- notific -->
+
+    <div id="search" class="small reveal-modal" data-reveal>
+        <h2>Buscar <a class="close-reveal-modal"><i class="fa fa-times"></i></a>
+        </h2>
+        <form class="row" action="action">
+            <div class="large-12 columns">
+                <div class="row collapse">
+                    <div class="small-10 columns">
+                        <input type="text" placeholder="Buscar" title="buscar">
+                    </div>
+                    <div class="small-2 columns">
+                        <a class="button postfix" href="#" title="Buscar"><i class="fa fa-search fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- search -->
+
+    <div id="search-filter" class="large reveal-modal" data-reveal>
+        <h2>Filtrado avanzado <a class="close-reveal-modal"><i class="fa fa-times"></i></a>
+        </h2>
+        <form action="action2">
+            <div class="row">
+                <div class="small-4 columns">
+                    <label for="ideuni">CUC</label>
+                </div>
+                <div class="small-8 columns">
+                    <input type="text" id="ideuni" placeholder="Ej. T151221">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-4 columns">
+                    <label for="cif">CIF</label>
+                </div>
+                <div class="small-8 columns">
+                    <input type="text" id="cif" placeholder="Ej. T151221">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-4 columns">
+                    <label for="fecre">Fecha Creación</label>
+                </div>
+                <div class="small-8 columns">
+                    <div class="row">
+                        <div class="small-6 columns">
+                            <input id="fecre" class="calendario" type="text" placeholder="Desde...">
+                        </div>
+                        <div class="small-6 columns">
+                            <input id="" class="calendario" type="text" placeholder="Hasta...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-4 columns">
+                    <label for="femod">Fecha Modificación</label>
+                </div>
+                <div class="small-8 columns">
+                    <div class="row">
+                        <div class="small-6 columns">
+                            <label for="femod">desde</label><input id="femod" class="calendario" type="text" placeholder="Desde...">
+                        </div>
+                        <div class="small-6 columns">
+                            <input id="" class="calendario" type="text" placeholder="Hasta...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-4 columns">
+                    <label for="imp">Importe</label>
+                </div>
+                <div class="small-8 columns">
+                    <div class="row">
+                        <div class="small-6 columns">
+                            <input id="imp" type="text" placeholder="Desde...">
+                        </div>
+                        <div class="small-6 columns">
+                            <input id="" type="text" placeholder="Hasta...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row botonera">
+                <div class="large-12 columns">
+                    <div>
+                        <button type="reset" class="radius func-secondary tiny cierra-modal" title="Borrar formulario">Cancelar</button>
+                        <button type="submit" class="radius tiny" title="Iniciar búsqueda">Buscar</button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <!-- search-filter -->
+
+    <!-- build:js js/vendor/libraries.min.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js js/vendor/foundation.min.js -->
+    <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+        <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+        <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>
+        <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+        <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+        <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script> -->
+    <!-- endbuild -->
+    <!-- build:js js/app.min.js -->
+    <script src="js/app.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

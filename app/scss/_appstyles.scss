@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+// Estilos generales
+.main-section article {
+  min-height: 607px;
+}
+
+.contenido {
+  min-height: 607px;
+  position: relative;
+  a.plus {
+    color: $charcoal;
+    position: absolute;
+    top: -15px;
+    left: 50px;
+    .fa {
+      padding: 17px 19px;
+      box-shadow: 0 0 5px $charcoal;
+      background-color: $white;
+      border-radius: 50%;
+      font-size: rem-calc(20);
+    }
+  }
+}
+
+.opweb {
+  .contenido {
+    font-size: rem-calc(14);
+  }
+  h2 {
+    font-size: rem-calc(16);
+  }
+  .panel {
+    padding: rem-calc(10);
+  }
+  .tit h2 {
+    margin: rem-calc(-10) rem-calc(-10) rem-calc(10) rem-calc(-10);
+    padding: rem-calc(5) rem-calc(10);
+    background-color: $primary-color;
+    color: $white;
+  }
+}
+
+// Columna derecha
+.aside-right {
+  min-height: 607px;
+  box-shadow: 0 3px 6px $charcoal;
+}
+
+.col-dcha {
+  .aside-right {
+    background-color: $silver;
+  }
+  p {
+    padding: 10px 20px 10px;
+  }
+  header {
+    background-color: $third-color;
+    padding: 10px 20px 2px;
+    color: $white;
+    .trash .fa {
+      float: right;
+      color: $white;
+      font-size: rem-calc(26);
+    }
+    p {
+      padding: 0;
+      margin: 0;
+    }
+    h2 {
+      font-size: rem-calc(22);
+      color: $white;
+    }
+  }
+  .info-ofer {
+    color: $monsoon;
+    padding-bottom: 0;
+    margin-bottom: 15px;
+  }
+  span {
+    display: block;
+    font-size: rem-calc(18);
+  }
+  .fa {
+    color: $oil;
+    margin-right: 6px;
+  }
+  .factur {
+    background-color: $gainsboro;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    p {
+      margin-bottom: 0;
+      color: $monsoon;
+      padding: 0 20px;
+    }
+    p span {
+      margin-top: 10px;
+    }
+    p .left {
+      color: $oil;
+    }
+  }
+  .heco {
+    position: relative;
+    p {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      color: $monsoon;
+    }
+    .accordion a {
+      background-color: transparent;
+      font-size: rem-calc(18);
+      padding: 5px 20px 5px 40px;
+      color: $oil;
+    }
+    .accordion .content p {
+      padding: 0;
+      //margin-bottom: rem-calc(15);
+      font-size: rem-calc(16);
+      line-height: rem-calc(20);
+      display: block;
+    }
+    .accordion a:before {
+      position: relative;
+      font-family: FontAwesome;
+      top: 0;
+      left: -20px;
+      content: "\f04b";
+      font-size: rem-calc(15);
+      display: inline-block;
+    }
+    .accordion .active a:before {
+      transform: rotate(90deg);
+    }
+    .accordion a .right {
+      color: $monsoon;
+    }
+  }
+  .contrato {
+    width: 100%;
+    background-color: $third-color;
+    padding: rem-calc(20) rem-calc(40);
+    p {
+      width: 100%;
+      height: 100px;
+      line-height: rem-calc(50);
+      padding: rem-calc(20);
+      margin-bottom: 0;
+      border-radius: rem-calc(20);
+      border: 5px dashed $white;
+      text-align: center;
+      font-family: 'robotoregular';
+      color: $white;
+    }
+    input[type=file] {
+      margin-bottom: 0;
+    }
+  }
+  .estado {
+    padding: rem-calc(10);
+    label {
+      background-color: $silver;
+      color: $oil;
+      font-size: rem-calc(16);
+    }
+  }
+}
+
+// Notificaciones
+#notific {
+  ul {
+    list-style-type: none;
+    font-size: rem-calc(20);
+    padding: rem-calc(30) rem-calc(10) 0 rem-calc(30);
+    li {
+      background: transparent url("../images/linea-notific.png") 6px 10px no-repeat;
+      padding-bottom: rem-calc(20);
+      padding-left: rem-calc(30);
+      line-height: rem-calc(18);
+      position: relative;
+      &:last-child {
+        background-image: none;
+      }
+    }
+    a {
+      font-size: rem-calc(18);
+    }
+    a:before {
+      height: 14px;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 14px;
+      border: 3px solid $iron;
+      content: " ";
+      background-color: $white;
+    }
+    a.warning:before {
+      background-color: $warning-color;
+    }
+    a.alert:before {
+      background-color: $alert-color;
+    }
+    span {
+      color: $monsoon;
+      font-size: rem-calc(14);
+      padding: rem-calc(5) rem-calc(20) rem-calc(15) 0;
+      display: block;
+      line-height: rem-calc(16);
+      padding: 10px 0 15px;
+    }
+  }
+}
+
+// Search
+#search {
+  input[type="text"] {
+    font-size: rem-calc(18);
+  }
+}
+
+// Search filter
+#search-filter {}
+
+// Footer
+footer {
+  background-color: $secondary-color;
+  color: $white;
+  height: rem-calc(46);
+  line-height: rem-calc(46);
+}
