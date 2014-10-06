@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+// Pasos listado sedes
+.sedes .breadcrumbs > *:before {
+    margin: 0;
+}
+
+.breadcrumbs {
+    min-height: rem-calc(46);
+    font-family: 'robotoregular';
+    padding: 0;
+    margin: 0;
+    //box-shadow: 0 2px 4px $charcoal;
+    li {
+        line-height: rem-calc(46);
+        height: rem-calc(46);
+        text-align: center;
+        background-color: $base;
+        border-bottom: 3px solid $base;
+        .fa-shopping-cart {
+            font-size: rem-calc(35);
+            vertical-align: middle;
+        }
+    }
+    > li.activo:before {
+        width: 28px;
+        height: 46px;
+        background: transparent url("../images/breadcrumb.svg") 0 0 no-repeat;
+        position: absolute;
+        right: -20px;
+        top: 0;
+        z-index: 100;
+    }
+    li.activo {
+        background-color: $third-color;
+        border-color: $warning-color;
+    }
+    li.current {
+        background-color: $third-color;
+        border-color: $third-color;
+        a {
+            cursor: pointer;
+        }
+        a:hover,
+        a:focus,
+        a:active {
+            color: #00708f;
+        }
+    }
+}
+
+// Pasos configuración sede
+// .breadcrumbs.breadconf {
+//   @include grid-row;
+//   li {
+//     position: relative;
+//     width: 12.5%;
+//   }
+// }
+
+.breadconf,
+.conf-basica .panel {
+    .fa-building-o,
+    .fa-desktop,
+    .fa-stack-2x {
+        font-size: rem-calc(30);
+    }
+    .fa-building-o {
+        margin-top: rem-calc(7);
+    }
+    .fa-stack-2x {
+        margin-top: rem-calc(9);
+    }
+    .fa-stack-1x {
+        margin-left: rem-calc(13);
+        margin-top: rem-calc(-10);
+    }
+    .fa-phone.fa-stack-1x {
+        font-size: rem-calc(20);
+    }
+    .paralelo .fa-stack-2x:nth-child(1) {
+        margin-left: rem-calc(-13);
+    }
+    .paralelo .fa-stack-2x:nth-child(2) {
+        font-size: rem-calc(20);
+        margin-top: rem-calc(15);
+    }
+    .paralelo .fa-stack-2x:nth-child(3) {
+        margin-left: rem-calc(18);
+        margin-top: rem-calc(5);
+        font-size: rem-calc(35);
+    }
+    .fa-stack-1x.fa-desktop {
+        font-size: rem-calc(18);
+        margin-left: rem-calc(19);
+        margin-top: rem-calc(-10);
+    }
+    .fa-stack-2x.fa-building-o {
+        margin-top: rem-calc(5);
+    }
+    .fa-stack-1x.fa-fighter-jet {
+        margin-left: rem-calc(-8);
+        margin-top: rem-calc(10);
+        font-size: rem-calc(22);
+    }
+    .fa-desktop {
+        margin-top: rem-calc(10);
+    }
+}

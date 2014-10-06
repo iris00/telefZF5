@@ -1,38 +1,50 @@
 @charset "UTF-8";
 
-// Tabla Ofertas
-table.ofertas {
+// Tablas
+table {
   border: 0 none;
   margin-bottom: 0;
   thead,
   tr:nth-of-type(2n) {
     background-color: $snow;
   }
-  tbody tr:hover {
-    background-color: $smoke;
-  }
-  td, th {
+  tr td, tr th {
     font-size: rem-calc(14);
     line-height: rem-calc(24);
     vertical-align: top;
     padding: rem-calc(10 0);
     color: $oil;
   }
-  th {
-    padding-top: rem-calc(60);
+  tr th {
     border-bottom: 1px solid $iron;
     font-size: rem-calc(16);
-    text-align: center;
     font-weight: normal;
+    text-align: center;
   }
-  th:first-child {
+}
+
+// Tabla Ofertas
+table.ofertas {
+  tbody tr:hover {
+    background-color: $smoke;
+  }
+  // Anchura columnas
+  th:nth-child(1) {
+    width: rem-calc(40);
     border-bottom: 0 solid;
   }
-  td {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  th:nth-child(3) {
+    text-align: right;
   }
+  // th:nth-child(3),
+  // th:nth-child(4) {
+  //   width: rem-calc(130);
+  // }
+  // td {
+  //   overflow: hidden;
+  //   text-overflow: ellipsis;
+  //   white-space: nowrap;
+  // }
   td:nth-child(2) {
     font-family: 'robotoregular';
     font-size: rem-calc(16);
@@ -50,16 +62,6 @@ table.ofertas {
     font-family: 'robotolight';
     display: block;
   }
-  // Anchura columnas
-  th:nth-child(1) {
-    width: rem-calc(45);
-  }
-  // th:nth-child(3) {
-  //   width: rem-calc(85);
-  // }
-  // th:nth-child(4) {
-  //   width: rem-calc(130);
-  // }
   // Alineamiento celdas
   td:nth-child(4),
   td:nth-child(5) {
@@ -69,8 +71,134 @@ table.ofertas {
     text-align: right;
   }
   // Iconos
-  .fa {
-    font-size: rem-calc(38);
-    color: $aluminum;
+  td .fa {
+    font-size: rem-calc(30);
+    //color: $aluminum;
+ 
+  }
+}
+
+// Tabla listado sedes
+table.listado-sedes {
+  width: 98%;
+  margin: 0 auto rem-calc(15);
+  tbody tr {
+    border: 1px solid $iron;
+    border-width: 0 1px 1px;
+  }
+  tbody tr {
+    background-color: $smoke;
+    border-right: 10px solid $iron;
+    &.alert {
+      border-right-color: $alert-color;
+      background-color: $snow;
+    }
+    &.success {
+      border-right-color: $success-color;
+      background-color: $snow;
+    }
+  }
+  td {
+    text-align: center;
+    vertical-align: middle;
+    span.city {
+      font-size: rem-calc(12);
+      font-family: 'robotolight';
+      display: block;
+    }
+    &:nth-child(2) {
+      font-family: 'robotoregular';
+      font-size: rem-calc(16);
+      text-align: left;
+    }
+    &:nth-child(2) span {
+      font-size: rem-calc(12);
+      font-family: 'robotolight';
+      display: block;
+    }
+  }
+  // Anchura columnas
+  th:nth-child(1) {
+    width: rem-calc(80);
+  }
+  th:nth-child(2) {
+    width: 60%;
+  }
+  th:nth-child(2) {
+    text-align: left;
+  }
+  // a .fa,
+  // .fa {
+  //   color: $jumbo;
+  // }
+  .fa-stack-2x {
+    font-size: 2.5em;
+  }
+  .fa-stack-1x {
+    margin-left: 2px;
+    margin-top: 5px;
+  }
+}
+
+// Tabla configuración sedes
+.conf {
+  h2 {
+    font-size: rem-calc(18);
+    background-color: $third-color;
+    text-align: center;
+    padding: rem-calc(5) 0;
+    color: $white;
+  }
+}
+
+table.conf-sede {
+  .columns {
+    padding: 0 1px;
+  }
+  th {
+    border-bottom: 0;
+    line-height: rem-calc(37);
+    font-size: rem-calc(25);
+    font-family: 'robotoregular';
+  }
+  input[type="text"] {
+    padding: rem-calc(8) rem-calc(4);
+    //background-color: $silver;
+ 
+  }
+  select {
+    padding: rem-calc(8) 0;
+    //background-color: $silver;
+ 
+  }
+}
+
+// Tabla listado notificaciones
+table.notif {
+  // Alineamiento celdas
+  th {
+    text-align: left;
+  }
+  th:nth-child(2),
+  th:nth-child(3),
+  tr td:nth-child(2),
+  tr td:nth-child(3),
+  tr td:nth-child(4) {
+    text-align: center;
+  }
+  // Anchura columnas
+  th:nth-child(1) {
+    width: 40%;
+  }
+  th:nth-child(4) {
+    width: rem-calc(30);
+  }
+  td:nth-child(1) {
+    font-family: 'robotoregular';
+    font-size: rem-calc(16);
+  }
+  // Iconos
+  td .fa {
+    font-size: rem-calc(25);
   }
 }

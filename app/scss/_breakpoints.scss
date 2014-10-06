@@ -1,5 +1,63 @@
 @charset "UTF-8";
 
+// hide por all
+@media only screen and (min-width: 1px) {
+  caption {
+    display: none;
+  }
+}
+
+// max-width 640px, mobile-only styles
+@media only screen and (max-width: 40em) {
+  header nav section > div,
+  header .tab-bar.row,
+  .tab-bar .menu-icon,
+  section div:nth-child(3) a .fa,
+  .tab-bar {
+    height: rem-calc(48);
+  }
+  section div:nth-child(3) a .fa {
+    vertical-align: top;
+    margin-top: rem-calc(12);
+  }
+  .ofertas a.plus {
+    left: rem-calc(80);
+  }
+  table.listado-sedes th:nth-child(2) {
+    width: 30%;
+  }
+  .breadcrumbs > li {
+    font-size: rem-calc(14);
+    padding: 0 5px;
+  }
+  // .breadcrumbs.breadconf li {
+  //   width: 25%;
+  // }
+  .breadconf .current a {
+    font-size: rem-calc(16);
+  }
+  .breadconf .fa-stack-1x.fa-fighter-jet {
+    margin-top: rem-calc(13);
+  }
+  .breadconf .fa {
+    font-size: calc(inherit - 1rem);
+  }
+}
+
+// small tablet
+@media only screen and (max-width: 60em) {
+  .breadcrumbs .fa-shopping-cart {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: rem-calc(1201)) {
+  .contenido {
+    padding-left: rem-calc(20);
+  }
+}
+
+// small desktop
 @media only screen and (min-width: 74.063em) {
   .contrato-pc {
     display: block;
@@ -9,6 +67,7 @@
   }
 }
 
+// desktop
 @media only screen and (max-width: 74.062em) {
   .contrato-pc {
     display: none;
@@ -16,4 +75,12 @@
   .contrato-mobile {
     display: block;
   }
+  // .reveal-modal form,
+  // .reveal-modal dialog {
+  //   padding: 0;
+  // }
+  // .reveal-modal h2 {
+  //   font-size: rem-calc(18);
+  //   border-radius: 0;
+  // }
 }

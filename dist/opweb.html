@@ -8,18 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Configurador de Movistar Fusión Empresas">
     <title>Configurador MFE - Selección de sedes</title>
-    <!-- build:css css/libraries.min.css -->
-    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css css/app.min.css -->
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/app_override.css">
-    <!-- endbuild -->
-    <!-- build:js js/vendor/modernizr.min.js -->
-    <script src="bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
+    <link rel="stylesheet" href="css/libraries.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+    <script src="js/vendor/modernizr.min.js"></script>
 </head>
 
 <body class="opweb">
@@ -30,15 +21,20 @@
                     <div class="tit-sede text-center">
                     </div>
                     <!-- tit-sede -->
-                    <nav class="tab-bar row" role="navigation">
-                        <section>
-                            <div>
+                    <nav class="tab-bar" role="navigation">
+                        <section class="row">
+                            <div class="large-1 medium-1 small-2 columns">
                                 <a title="Menú de navegación" href="" class="left-off-canvas-toggle menu-icon" tabindex="0">
                                     <span></span>
                                 </a>
                             </div>
-                            <div>
+                            <div class="large-10 medium-10 small-8 columns">
                                 <h1 class="text-center">OPWEB | 2LBS</h1>
+                            </div>
+                            <div class="large-1 medium-1 small-2 columns">
+                                <a href="index.html" title="Inicio" class="home">
+                                    <i class="fa fa-home fa-2x"></i>
+                                </a>
                             </div>
                         </section>
                     </nav>
@@ -47,11 +43,11 @@
 
                 <aside class="left-off-canvas-menu">
                     <ul class="off-canvas-list">
-                        <li class="off-canvas-head clearfix">
+                        <!-- <li class="off-canvas-head clearfix">
                             <a href="index.html" title="Inicio" class="home left">
                                 <i class="fa fa-home fa-2x"></i>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="off-canvas-head">
                             Usuario: T661403
                             <br>
@@ -76,30 +72,28 @@
                         </li>
                         <li><a href="#"><i class="fa fa-gears fa-2x"></i> Administración</a>
                         </li>
-                    </ul>
-                    <!-- off-canvas-list -->
-                </aside>
-                <!-- left-off-canvas-menu -->
+                    </ul><!-- off-canvas-list -->
+                </aside><!-- left-off-canvas-menu -->
 
-                <section class="main-section" role="main">
-                    <article>
-                        <div class="contenido">
+                <section role="main" class="main-section">
+                    <article class="row">
+                        <div class="contenido large-12 columns">
 
                             <form class="datos-empresa" action="action">
                                 <div class="row">
-                                    <div class="large-1 columns text-right">
-                                        <label for="cif2">CIF</label>
+                                    <div class="small-1 columns text-right">
+                                        <label>CIF</label>
                                     </div>
-                                    <div class="large-2 columns text-right">
-                                        <input type="text" id="cif2">
+                                    <div class="small-2 columns text-right">
+                                        <input type="text">
                                     </div>
-                                    <div class="large-2 columns text-right">
-                                        <label for="nomem">Nombre de la empresa</label>
+                                    <div class="small-2 columns text-right">
+                                        <label>Nombre de la empresa</label>
                                     </div>
-                                    <div class="large-3 columns">
-                                        <input type="text" id="nomem">
+                                    <div class="small-3 columns">
+                                        <input type="text">
                                     </div>
-                                    <div class="large-4 columns text-right">
+                                    <div class="small-4 columns text-right">
                                         <button class="radius">Generar Bussines Case</button>
                                     </div>
                                 </div>
@@ -124,31 +118,31 @@
                                 <div class="content active" id="panel2">
                                     <form action="action">
                                         <div class="row">
-                                            <div class="large-4 columns">
-                                                <label for="linact">Líneas actuales
-                                                <input type="text" id="linact"></label>
+                                            <div class="small-4 columns">
+                                                <label>Líneas actuales
+                                                <input type="text"></label>
                                             </div>
-                                            <div class="large-4 columns">
-                                                <label for="facact">Facturación actual
-                                                <input type="text" id="facact"></label>
+                                            <div class="small-4 columns">
+                                                <label>Facturación actual
+                                                <input type="text"></label>
                                             </div>
-                                            <div class="large-4 columns">
-                                                <label for="desact">Porcentaje de descuento actual
-                                                <input type="text" id="desact"></label>
+                                            <div class="small-4 columns">
+                                                <label>Porcentaje de descuento actual
+                                                <input type="text"></label>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="large-4 columns">
-                                                <label for="linpro">Líneas propuestas
-                                                <input type="text" id="linpro"></label>
+                                            <div class="small-4 columns">
+                                                <label>Líneas propuestas
+                                                <input type="text"></label>
                                             </div>
-                                            <div class="large-4 columns">
-                                                <label for="facpro">Facturación proporcional
-                                                <input type="text" id="facpro"></label>
+                                            <div class="small-4 columns">
+                                                <label>Facturación proporcional
+                                                <input type="text"></label>
                                             </div>
-                                            <div class="large-4 columns">
-                                                <label for="despro">Porcentaje de descuento proporcional
-                                                <input type="text" id="despro"></label>
+                                            <div class="small-4 columns">
+                                                <label>Porcentaje de descuento proporcional
+                                                <input type="text"></label>
                                             </div>
                                         </div>
                                     </form>
@@ -190,41 +184,16 @@
     <!-- row -->
 
     <footer class="row" role="contentinfo">
-        <div class="large-2 columns">T151221 - 1</div>
-        <div class="large-8 columns end text-center">
+        <div class="small-4 large-2 columns">T151221 - 1</div>
+        <div class="small-8 large-8 columns end text-center">
             Telefónica de España S.A
         </div>
     </footer>
     <!-- footer -->
 
-    <!-- build:js js/vendor/libraries.min.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/fastclick/lib/fastclick.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:js js/vendor/foundation.min.js -->
-    <script src="bower_components/foundation/js/foundation/foundation.js"></script>
-    <!-- <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script> -->
-    <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
-    <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
-    <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
-    <!-- <script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
-        <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
-        <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
-    <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
-    <!-- <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script> -->
-    <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
-    <!-- <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script> -->
-    <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
-    <!-- <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script> -->
-    <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
-    <!-- endbuild -->
-    <!-- build:js js/app.min.js -->
-    <script src="js/app.js"></script>
-    <!-- endbuild -->
+    <script src="js/vendor/libraries.min.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script src="js/app.min.js"></script>
 </body>
 
 </html>

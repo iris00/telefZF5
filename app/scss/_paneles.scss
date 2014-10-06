@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+// Paneles sedes
+.sedes {
+  .r-s-margen {
+    margin: 30px;
+    p {
+      font-size: rem-calc(14);
+    }
+    p.conectiv {
+      margin-top: rem-calc(54);
+    }
+  }
+  .conf-basica .panel {
+    box-shadow: 0 0 4px $base;
+    margin: 0 20px;
+    text-align: center;
+    color: $monsoon;
+    h2 {
+      font-size: rem-calc(20);
+      color: $monsoon;
+      line-height: rem-calc(20);
+      margin-bottom: rem-calc(25);
+    }
+    .output {
+      font-size: rem-calc(25);
+      line-height: rem-calc(43);
+      font-family: 'robotoregular';
+    }
+    select {
+      margin-bottom: rem-calc(6);
+    }
+  }
+}
+
+// vertical range-slider
+.range-slider.vertical-range .range-slider-handle {
+  margin-left: rem-calc(-9);
+  top: rem-calc(-3);
+}

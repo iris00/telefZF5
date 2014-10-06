@@ -13,45 +13,41 @@ header {
     padding: rem-calc(5) 0;
     min-height: rem-calc(35);
     color: $white;
+    line-height: rem-calc(22);
   }
   .tab-bar section h1 {
-    white-space: nowrap;
-    overflow: hidden;
     font-weight: normal;
     font-size: rem-calc(22);
+    white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    padding: 0 10.5rem 0 4rem;
+    //padding: 0 10.5rem 0 4rem;
+ 
   }
   // Columnas
   section {
     background-color: $primary-color;
-    position: relative;
   }
-  section div:nth-child(1) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5rem;
-    height: 5rem;
-  }
+  // section div:nth-child(1) {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 5rem;
+  //   height: 5rem;
+  // }
   section div:nth-child(3) {
-    position: absolute;
-    top: 0;
-    right: 15px;
-    width: 10rem;
-    height: 5rem;
-    a,
-    a .fa,
-    a.button {
+    text-align: right;
+    // position: absolute;
+    // top: 0;
+    // right: 15px;
+    // width: 10rem;
+    // height: 5rem;
+    .fa {
       color: $white;
       font-size: rem-calc(28);
-      margin-right: rem-calc(12);
+      margin-right: rem-calc(16);
       padding: 0;
-    }
-    a.button:hover,
-    a.button:focus {
-      background-color: transparent;
+      vertical-align: middle;
     }
     .fa-bell-o {
       position: relative;
@@ -69,5 +65,17 @@ header {
       padding-top: 2px;
       vertical-align: middle;
     }
+    // .fa-question-circle {
+    //   font-size: rem-calc(30);
+    // }
+    .fa-home,
+    .fa-info-circle {
+      font-size: rem-calc(32);
+    }
+    // a.button:hover,
+    // a.button:focus {
+    //   background-color: transparent;
+    // }
+ 
   }
 }

@@ -53,29 +53,29 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 @font-face {
-  font-family: 'robotolight';
-  src: url("../fonts/roboto-light-webfont.eot");
-  src: url("../fonts/roboto-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-light-webfont.woff2") format("woff2"), url("../fonts/roboto-light-webfont.woff") format("woff"), url("../fonts/roboto-light-webfont.ttf") format("truetype"), url("../fonts/roboto-light-webfont.svg#robotolight") format("svg");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'robotolight';
+    src: url("../fonts/roboto-light-webfont.eot");
+    src: url("../fonts/roboto-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-light-webfont.woff2") format("woff2"), url("../fonts/roboto-light-webfont.woff") format("woff"), url("../fonts/roboto-light-webfont.ttf") format("truetype"), url("../fonts/roboto-light-webfont.svg#robotolight") format("svg");
+    font-weight: normal;
+    font-style: normal;
 }
 
 
 @font-face {
-  font-family: 'robotoregular';
-  src: url("../fonts/roboto-regular-webfont.eot");
-  src: url("../fonts/roboto-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-regular-webfont.woff2") format("woff2"), url("../fonts/roboto-regular-webfont.woff") format("woff"), url("../fonts/roboto-regular-webfont.ttf") format("truetype"), url("../fonts/roboto-regular-webfont.svg#robotoregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'robotoregular';
+    src: url("../fonts/roboto-regular-webfont.eot");
+    src: url("../fonts/roboto-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-regular-webfont.woff2") format("woff2"), url("../fonts/roboto-regular-webfont.woff") format("woff"), url("../fonts/roboto-regular-webfont.ttf") format("truetype"), url("../fonts/roboto-regular-webfont.svg#robotoregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
 }
 
 
 @font-face {
-  font-family: 'robotothin';
-  src: url("../fonts/roboto-thin-webfont.eot");
-  src: url("../fonts/roboto-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-thin-webfont.woff2") format("woff2"), url("../fonts/roboto-thin-webfont.woff") format("woff"), url("../fonts/roboto-thin-webfont.ttf") format("truetype"), url("../fonts/roboto-thin-webfont.svg#robotothin") format("svg");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'robotothin';
+    src: url("../fonts/roboto-thin-webfont.eot");
+    src: url("../fonts/roboto-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-thin-webfont.woff2") format("woff2"), url("../fonts/roboto-thin-webfont.woff") format("woff"), url("../fonts/roboto-thin-webfont.ttf") format("truetype"), url("../fonts/roboto-thin-webfont.svg#robotothin") format("svg");
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -111,7 +111,7 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
 
-$row-width: rem-calc(1200);
+$row-width: rem-calc(1240);
 
 // $total-columns: 12;
 // $column-gutter: rem-calc(30);
@@ -442,30 +442,34 @@ $alert-close-padding: 0 6px 4px;
 // $include-html-nav-classes: $include-html-classes;
 
 // We use this to set the background color for the breadcrumb container.
-// $crumb-bg: scale-color($secondary-color, $lightness: 55%);
+$crumb-bg: $third-color;
 
 // We use these to set the padding around the breadcrumbs.
-// $crumb-padding: rem-calc(9 14 9);
+$crumb-padding: rem-calc(0 20);
+
 // $crumb-side-padding: rem-calc(12);
 
 // We use these to control border styles.
 // $crumb-function-factor: -10%;
-// $crumb-border-size: 1px;
+$crumb-border-size: 0;
+
 // $crumb-border-style: solid;
 // $crumb-border-color: scale-color($crumb-bg, $lightness: $crumb-function-factor);
-// $crumb-radius: $global-radius;
+$crumb-radius: 0;
 
 // We use these to set various text styles for breadcrumbs.
-// $crumb-font-size: rem-calc(11);
-// $crumb-font-color: $primary-color;
-// $crumb-font-color-current: $oil;
-// $crumb-font-color-unavailable: $aluminum;
-// $crumb-font-transform: uppercase;
+$crumb-font-size: rem-calc(18);
+$crumb-font-color: $white;
+
+$crumb-font-color-current: $white;
+$crumb-font-color-unavailable: $white;
+$crumb-font-transform: none;
+
 // $crumb-link-decor: underline;
 
 // We use these to control the slash between breadcrumbs
 // $crumb-slash-color: $base;
-// $crumb-slash: "/";
+$crumb-slash: "";
 
 // 05. Buttons
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -677,7 +681,8 @@ $form-label-font-color: $white;
 // $form-label-small-transform: capitalize;
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
-// $input-font-color: rgba(0,0,0,0.75);
+$input-font-color: $oil;
+
 // $input-font-size: rem-calc(14);
 // $input-bg-color: $white;
 // $input-focus-bg-color: scale-color($white, $lightness: -2%);
@@ -1009,7 +1014,8 @@ $off-canvas-overlay-background-hover: rgba(195, 195, 195, 0.3);
 // $include-html-panel-classes: $include-html-classes;
 
 // We use these to control the background and border styles
-// $panel-bg: scale-color($white, $lightness: -5%);
+$panel-bg: $white;
+
 // $panel-border-style: solid;
 // $panel-border-size: 1px;
 
@@ -1112,23 +1118,27 @@ $off-canvas-overlay-background-hover: rgba(195, 195, 195, 0.3);
 
 // These variabels define the slider bar styles
 // $range-slider-bar-width: 100%;
-// $range-slider-bar-height: rem-calc(16);
+$range-slider-bar-height: rem-calc(4);
 
-// $range-slider-bar-border-width: 1px;
+$range-slider-bar-border-width: 0;
+
 // $range-slider-bar-border-style: solid;
-// $range-slider-bar-border-color: $gainsboro;
+$range-slider-bar-border-color: $base;
+
 // $range-slider-radius: $global-radius;
 // $range-slider-round: $global-rounded;
-// $range-slider-bar-bg-color: $ghost;
+$range-slider-bar-bg-color: $iron;
 
 // Vertical bar styles
-// $range-slider-vertical-bar-width: rem-calc(16);
+$range-slider-vertical-bar-width: rem-calc(4);
+
 // $range-slider-vertical-bar-height: rem-calc(200);
 
 // These variabels define the slider handle styles
-// $range-slider-handle-width: rem-calc(32);
-// $range-slider-handle-height: rem-calc(22);
-// $range-slider-handle-position-top: rem-calc(-5);
+$range-slider-handle-width: rem-calc(24);
+$range-slider-handle-height: rem-calc(24);
+$range-slider-handle-position-top: rem-calc(-11);
+
 // $range-slider-handle-bg-color: $primary-color;
 // $range-slider-handle-border-width: 1px;
 // $range-slider-handle-border-style: solid;

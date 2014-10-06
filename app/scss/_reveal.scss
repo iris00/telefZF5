@@ -29,21 +29,16 @@
   }
   form {
     padding: rem-calc(30) rem-calc(10) rem-calc(30) rem-calc(30);
+    .botonera {
+      padding-top: rem-calc(15);
+    }
   }
 }
 
-.reveal-modal .botonera {
-  .button,
-  button {
-    font-family: "robotothin", Helvetica, Arial, sans-serif;
-  }
-  .button.disabled {
-    background-color: $iron;
-  }
-  .func-secondary {
-    background-color: $button-func-bg-secondary;
-    &:hover {
-      background-color: #7d7d7d;
-    }
-  }
+.reveal-modal-bg {
+  cursor: pointer;
+}
+
+.reveal-modal-bg:hover {
+  background-color: rgba(195, 195, 195, 0.3);
 }

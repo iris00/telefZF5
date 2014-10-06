@@ -1,11 +1,17 @@
 @charset "UTF-8";
 
 // Estilos generales
+// a:focus,
+// a:active {
+//   outline: 1px dotted;
+// }
+
 .main-section article {
   min-height: 607px;
 }
 
 .contenido {
+  padding-top: 50px;
   min-height: 607px;
   position: relative;
   a.plus {
@@ -13,6 +19,8 @@
     position: absolute;
     top: -15px;
     left: 50px;
+    width: rem-calc(60);
+    height: rem-calc(60);
     .fa {
       padding: 17px 19px;
       box-shadow: 0 0 5px $charcoal;
@@ -22,6 +30,15 @@
     }
   }
 }
+
+// .sedes {
+//   a.plus {
+//     position: static;
+//     display: inline;
+//     float: left;
+//     margin: 0 0 rem-calc(10) rem-calc(10);
+//   }
+// }
 
 .opweb {
   .contenido {
@@ -42,16 +59,14 @@
 }
 
 // Columna derecha
-.aside-right {
-  min-height: 607px;
-  box-shadow: 0 3px 6px $charcoal;
-}
-
 .col-dcha {
   .aside-right {
+    min-height: 607px;
+    box-shadow: 0 6px 3px $charcoal;
     background-color: $silver;
   }
   p {
+    font-size: rem-calc(14);
     padding: 10px 20px 10px;
   }
   header {
@@ -68,7 +83,7 @@
       margin: 0;
     }
     h2 {
-      font-size: rem-calc(22);
+      font-size: rem-calc(20);
       color: $white;
     }
   }
@@ -79,7 +94,7 @@
   }
   span {
     display: block;
-    font-size: rem-calc(18);
+    font-size: rem-calc(16);
   }
   .fa {
     color: $oil;
@@ -99,6 +114,7 @@
     }
     p .left {
       color: $oil;
+      font-family: 'robotoregular';
     }
   }
   .heco {
@@ -110,14 +126,14 @@
     }
     .accordion a {
       background-color: transparent;
-      font-size: rem-calc(18);
+      font-size: rem-calc(16);
       padding: 5px 20px 5px 40px;
       color: $oil;
     }
     .accordion .content p {
       padding: 0;
       //margin-bottom: rem-calc(15);
-      font-size: rem-calc(16);
+      //font-size: rem-calc(16);
       line-height: rem-calc(20);
       display: block;
     }
@@ -127,7 +143,7 @@
       top: 0;
       left: -20px;
       content: "\f04b";
-      font-size: rem-calc(15);
+      font-size: rem-calc(14);
       display: inline-block;
     }
     .accordion .active a:before {
@@ -140,7 +156,7 @@
   .contrato {
     width: 100%;
     background-color: $third-color;
-    padding: rem-calc(20) rem-calc(40);
+    padding: rem-calc(20);
     p {
       width: 100%;
       height: 100px;
@@ -151,6 +167,7 @@
       border: 5px dashed $white;
       text-align: center;
       font-family: 'robotoregular';
+      font-size: rem-calc(16);
       color: $white;
     }
     input[type=file] {
@@ -158,11 +175,16 @@
     }
   }
   .estado {
-    padding: rem-calc(10);
-    label {
-      background-color: $silver;
-      color: $oil;
+    padding: rem-calc(20) rem-calc(10) 0;
+    background-color: $gainsboro;
+    // label {
+    //   background-color: $silver;
+    //   color: $oil;
+    //   font-size: rem-calc(16);
+    // }
+    .button.small {
       font-size: rem-calc(16);
+      padding: rem-calc(7) rem-calc(28) rem-calc(8);
     }
   }
 }
@@ -179,6 +201,7 @@
       padding-left: rem-calc(30);
       line-height: rem-calc(18);
       position: relative;
+      margin-bottom: -3px;
       &:last-child {
         background-image: none;
       }
@@ -186,21 +209,21 @@
     a {
       font-size: rem-calc(18);
     }
-    a:before {
+    li:before {
       height: 14px;
       border-radius: 50%;
       position: absolute;
       left: 0;
-      top: 1px;
+      top: 3px;
       width: 14px;
       border: 3px solid $iron;
       content: " ";
       background-color: $white;
     }
-    a.warning:before {
+    li.warning:before {
       background-color: $warning-color;
     }
-    a.alert:before {
+    li.alert:before {
       background-color: $alert-color;
     }
     span {
@@ -225,7 +248,7 @@
 #search-filter {}
 
 // Footer
-footer {
+footer.row {
   background-color: $secondary-color;
   color: $white;
   height: rem-calc(46);

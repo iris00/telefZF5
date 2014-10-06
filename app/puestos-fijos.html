@@ -1,0 +1,312 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Configurador de Movistar Fusión Empresas">
+    <title>Configurador MFE - Selección de sedes</title>
+    <!-- build:css css/libraries.min.css -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css css/app.min.css -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app_override.css">
+    <!-- endbuild -->
+    <!-- build:js js/vendor/modernizr.min.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+</head>
+
+<body class="sedes">
+    <div class="row">
+        <div class="off-canvas-wrap" data-offcanvas>
+            <div class="inner-wrap">
+                <header role="banner">
+                    <div class="tit-sede text-center"></div>
+                    <!-- tit-sede -->
+
+                    <nav class="tab-bar row" role="navigation">
+                        <section>
+                            <div class="large-1 medium-1 small-1 columns">
+                                <a title="Menú de navegación" href="" class="left-off-canvas-toggle menu-icon" tabindex="0">
+                                    <span></span>
+                                </a>
+                            </div>
+                            <div class="large-9 medium-8 columns show-for-medium-up">
+                                <h1 class="text-center">Configuración básica de sede</h1>
+                            </div>
+                            <div class="large-2 medium-3 small-10 columns">
+                                <a href="#" title="Información">
+                                    <i class="fa fa-info-circle"></i>
+                                </a>
+                                <a href="#" title="Buscar con filtro avanzado" data-reveal-id="search-filter" data-reveal-ajax="_buscar-filtro.html">
+                                    <i class="fa fa-search-plus"></i>
+                                </a>
+                                <a href="index.html" title="Inicio">
+                                    <i class="fa fa-home fa-2x"></i>
+                                </a>
+                            </div>
+                        </section>
+                    </nav>
+                    <!-- tab-bar -->
+
+                     <nav role="navigation">
+                         <ul class="breadcrumbs breadconf" role="menubar">
+                            <li class="large-2 medium-2 small-4 columns activo">
+                                <a href="#" title="Sede"><i class="fa fa-building-o"></i>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns">
+                                <a href="#" title="Puestos fijos"><span class="fa-stack fa-lg">
+                                    <i class="fa fa-user fa-stack-2x"></i>
+                                    <i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i>
+                                </span></a></a>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns">
+                                <a href="#" title="Puestos móviles">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-user fa-stack-2x"></i>
+                                        <i class="fa fa-mobile fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                            </li>
+<!--                             <li>
+                                <a href="#" title="Conectividad">
+                                    <span class="fa-stack fa-lg paralelo">
+                                        <i class="fa fa-phone fa-stack-2x fa-rotate-45"></i>
+                                        <i class="fa fa-plus fa-stack-2x"></i>
+                                        <i class="fa fa-mobile fa-stack-2x"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Productividad">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-user fa-stack-2x"></i>
+                                        <i class="fa fa-desktop fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                            </li> -->
+                            <li class="large-2 medium-2 small-4 columns">
+                                <a href="#" title="Presencia en internet">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-4x fa-building-o fa-stack-2x"></i>
+                                        <i class="fa fa-fighter-jet fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns">
+                                <a href="#" title="Seguridad"><i class="fa fa-desktop"></i></a>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns current">
+                                <a href="resumen-sedes.html" title="Precio total de la oferta"><i class="fa fa-shopping-cart"></i>
+                                1744 &euro;</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- breadcrumbs -->
+
+                </header>
+
+                <aside class="left-off-canvas-menu">
+                    <ul class="off-canvas-list">
+                        <li class="off-canvas-head">
+                            Manuel Beltrán Pérez
+                            <br>
+                            <button data-dropdown="perfil" aria-controls="drop2" aria-expanded="false" class="button dropdown">Comercial</button>
+                            <br>
+                            <ul id="perfil" data-dropdown-content class="f-dropdown" aria-hidden="true">
+                                <li><a href="#">Comercial</a>
+                                </li>
+                                <li><a href="#">Otro perfil</a>
+                                </li>
+                                <li><a href="#">Otro perfil más</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
+                        </li>
+                        <li><a href="#" data-reveal-id="informes" data-reveal-ajax="_informes.html"><i class="fa fa-bar-chart fa-2x"></i> Crear informes</a>
+                        </li>
+                        <li><a href="notificaciones.html"><i class="fa fa-bell-o"></i> Notificaciones</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-bookmark fa-2x"></i> Producto MFE</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-comments fa-2x"></i> Ayuda</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gears fa-2x"></i> Administración</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-asterisk"></i> Traslados MFE</a>
+                        </li>
+                    </ul>
+                    <!-- off-canvas-list -->
+                </aside>
+                <!-- left-off-canvas-menu -->
+
+                <section class="main-section" role="main">
+                    <article class="row">
+                        <div class="contenido large-8 columns">
+contenido
+                        </div>
+                        <!-- contenido -->
+                        <aside class="col-dcha large-4 columns" role="complementary">
+                            <div class="aside-right">
+                                <header id="detalle-oferta">
+                                    <a class="trash" href="#" title="Eliminar">
+                                        <i class="fa fa-trash-o"></i>
+                                    </a>
+                                    <p>ID de oferta: FU00001234
+                                        <br>Boletín HECO: 13M122234</p>
+                                    <h2 class="text-center">Panadería Madrid S.L.</h2>
+                                </header>
+
+                                <p class="info-ofer">Info de la oferta
+                                    <span><i title="Matrícula de creación" class="fa fa-user"></i> T151221</span>
+                                    <span><i title="Fecha de creación" class="fa fa-calendar"></i> 22/05/14</span>
+                                </p>
+                                <!-- info-ofer -->
+
+                                <div class="factur">
+                                    <p class="clearfix">Facturación del cliente</p>
+                                    <p class="clearfix">
+                                        <span class="left">Dentro de MFE</span>
+                                        <span class="right">723€</span>
+                                    </p>
+                                    <p class="clearfix">
+                                        <span class="left">Fuera de MFE</span>
+                                        <span class="right">1736€</span>
+                                    </p>
+                                </div>
+                                <!-- factur -->
+
+                                <div class="heco">
+                                    <p>Comentarios HECO</p>
+                                    <dl data-accordion class="accordion">
+                                        <dd class="accordion-navigation active">
+                                            <a href="#panel1">Alta Móvil <span class="right">26/05/14</span></a>
+                                            <div class="content active" id="panel1">
+                                                <p>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada, integer vivamus elit eu mauris eu, cum eros quis aliquam nisl wisi.</p>
+                                            </div>
+                                        </dd>
+                                        <dd class="accordion-navigation">
+                                            <a href="#panel2">Integra <span class="right">26/05/14</span></a>
+                                            <div class="content" id="panel2">
+                                                <p>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada, integer vivamus elit eu mauris eu, cum eros quis aliquam nisl wisi.</p>
+                                            </div>
+                                        </dd>
+                                        <dd class="accordion-navigation">
+                                            <a href="#panel3">Conectividad <span class="right">24/05/14</span></a>
+                                            <div class="content" id="panel3">
+                                                <p>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada, integer vivamus elit eu mauris eu, cum eros quis aliquam nisl wisi.</p>
+                                            </div>
+                                        </dd>
+                                        <dd class="accordion-navigation">
+                                            <a href="#panel4">Mantenimiento <span class="right">22/05/14</span></a>
+                                            <div class="content" id="panel4">
+                                                <p>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada, integer vivamus elit eu mauris eu, cum eros quis aliquam nisl wisi.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <!-- accordion -->
+                                </div>
+                                <!-- heco -->
+                                <div class="contrato">
+                                    <p class="contrato-pc">Arrastre aquí el contrato</p>
+                                    <!-- <label id="add-computer-button" class="contrato-mobile" for="fileupload">Seleccionar contrato</label>
+                                    <input id="fileupload" type="file" multiple="multiple"> -->
+                                    <input class="contrato-mobile" title="Selecione el contrato que desea anexar" type="file">
+                                </div>
+                                <div class="estado clearfix">
+                                    <!-- <label>Cambio de estado</label> -->
+                                    <select class="small-7 columns" name="estado" id="">
+                                        <option value="">Cambio de estado</option>
+                                        <option value="">Estado 2</option>
+                                        <option value="">Estado 3</option>
+                                        <option value="">Estado 4</option>
+                                    </select>
+                                    <a class="button small small-4 columns" href="#" title="Cambiar estado">Aplicar</a>
+
+                                </div>
+                                <!-- contrato -->
+                            </div>
+                            <!-- aside-right -->
+                        </aside>
+                        <!-- col-dcha -->
+                    </article>
+                </section>
+                <a class="exit-off-canvas"></a>
+            </div>
+            <!-- inner-wrap -->
+        </div>
+        <!-- off-canvas-wrap -->
+    </div>
+    <!-- row -->
+
+    <footer class="row" role="contentinfo">
+        <div class="small-4 large-2 columns">T151221 - 1</div>
+        <div class="small-8 large-8 columns end text-center">
+            Telefónica de España S.A
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- Ventanas modales -->
+    <div id="notific" class="small reveal-modal" data-reveal></div>
+    <!-- modal notificaciones -->
+
+    <div id="search" class="small reveal-modal" data-reveal></div>
+    <!-- modal search -->
+
+    <div id="search-filter" class="medium reveal-modal" data-reveal></div>
+    <!-- modal search-filter -->
+
+    <div id="informes" class="medium reveal-modal" data-reveal></div>
+    <!-- modal informes -->
+
+    <div id="new-notif" class="medium reveal-modal" data-reveal></div>
+    <!-- modal nueva notificación -->
+
+    <div id="edit-notif" class="medium reveal-modal" data-reveal></div>
+    <!-- modal editar notificación -->
+
+    <div id="new-ofert" class="small reveal-modal" data-reveal></div>
+    <!-- modal nueva oferta -->
+
+    <div id="new-client" class="medium reveal-modal" data-reveal></div>
+    <!-- modal nuevo cliente -->
+
+    <!-- build:js js/vendor/libraries.min.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js js/vendor/foundation.min.js -->
+    <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+        <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+        <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>
+    <!--    <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+        <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+        <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script> -->
+    <!-- endbuild -->
+    <!-- build:js js/app.min.js -->
+    <script src="js/app.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

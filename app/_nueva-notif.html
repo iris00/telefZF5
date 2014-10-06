@@ -1,0 +1,80 @@
+<h2>Creación de notificaciones<a class="close-reveal-modal" title="Cerrar"><i class="fa fa-times"></i></a>
+</h2>
+<form action="action">
+    <div class="row">
+        <div class="large-3 columns">
+            <label>Título</label>
+        </div>
+        <div class="large-9 columns">
+             <input type="text">    
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-3 columns">
+            <label>Descripción</label>
+        </div>
+        <div class="large-9 columns">
+             <textarea name="descripcion" cols="30" rows="4"></textarea>    
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-3 columns">
+            <label>Fecha deseada</label>
+        </div>
+        <div class="large-3 columns">
+             <input class="calendario" type="text">
+        </div>
+        <div class="large-3 columns">
+            <label>Perfiles</label>
+        </div>
+        <div class="large-3 columns">
+             <select name="perfil">
+                <option value="per1">Todos</option>
+                <option value="per2">Perfil 2</option>
+                <option value="per3">Perfil 3</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-3 columns">
+            <label>Territorio</label>
+        </div>
+        <div class="large-3 columns">
+             <select name="territorio">
+                <option value="ter1">Todos</option>
+                <option value="ter2">Territorio 2</option>
+                <option value="ter3">Territorio 3</option>
+            </select>
+        </div>
+        <div class="large-3 columns">
+            <label>Expiración</label>
+        </div>
+        <div class="large-3 columns">
+             <input class="calendario" type="text">
+        </div>
+    </div>  
+
+    <div class="row">
+        <div class="large-3 columns">
+            <label>Segmento</label>
+        </div>
+        <div class="large-3 columns end">
+             <select name="segmento">
+                <option value="seg1">Todos</option>
+                <option value="seg2">Segmento 2</option>
+                <option value="seg3">Segmento 3</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row botonera">
+        <div class="large-12 columns text-right">
+            <button type="reset" class="radius func-secondary tiny" title="Borrar formulario">Borrar</button>
+            <button type="submit" class="radius tiny" title="Crear notificación">Crear</button>
+        </div>
+    </div>            
+</form>
+<script src="js/app.js"></script>

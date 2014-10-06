@@ -31,27 +31,28 @@
                         Panadería Madrid S.L. B10156754 (Calle Orense 14, Madrid)
                     </div>
                     <!-- tit-sede -->
-                    <nav class="tab-bar row" role="navigation">
-                        <section>
-                            <div>
+                    <nav class="tab-bar" role="navigation">
+                        <section class="row">
+                            <div class="large-1 medium-1 small-1 columns">
                                 <a title="Menú de navegación" href="" class="left-off-canvas-toggle menu-icon" tabindex="0">
                                     <span></span>
                                 </a>
                             </div>
-
-                            <div>
+                            <div class="large-8 medium-7 columns show-for-medium-up">
                                 <h1 class="text-center">Configurador de Movistar Fusión Empresas</h1>
                             </div>
-
-                            <div>
-                                <a href="#" title="Notificaciones" data-reveal-id="notific">
+                            <div class="large-3 medium-4 small-10 columns">
+                                <a href="#" title="Notificaciones" data-reveal-id="notific" data-reveal-ajax="_notific.html">
                                     <i class="fa fa-bell-o"><span>3</span></i>
                                 </a>
-                                <a href="#" title="Buscar" data-reveal-id="search">
+                                <a href="#" title="Buscar" data-reveal-id="search" data-reveal-ajax="_buscar.html">
                                     <i class="fa fa-search"></i>
                                 </a>
-                                <a href="#" title="Buscar con filtro avanzado" data-reveal-id="search-filter">
+                                <a href="#" title="Buscar con filtro avanzado" data-reveal-id="search-filter" data-reveal-ajax="_buscar-filtro.html">
                                     <i class="fa fa-search-plus"></i>
+                                </a>
+                                <a href="index.html" title="Inicio" class="home">
+                                    <i class="fa fa-home fa-2x"></i>
                                 </a>
                             </div>
                         </section>
@@ -61,17 +62,22 @@
 
                 <aside class="left-off-canvas-menu">
                     <ul class="off-canvas-list">
-                        <li class="off-canvas-head clearfix">
+                        <!-- <li class="off-canvas-head clearfix">
                             <a href="index.html" title="Inicio" class="home left">
                                 <i class="fa fa-home fa-2x"></i>
                             </a>
-                            <a href="#" title="Buscar" class="search right" data-reveal-id="search">
+                            <a href="#" title="Buscar" class="search right" data-reveal-id="search" data-reveal-ajax="_buscar.html">
                                 <i class="fa fa-search fa-2x"></i>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="off-canvas-head">
-                            Manuel Beltrán Pérez
-                            <br>
+                            <p>Manuel Beltrán Pérez</p>
+                            <select name="perfil" disabled>
+                                <option value="">Comercial</option>
+                                <option value="">Otro perfil</option>
+                                <option value="">Otro perfil más</option>
+                            </select>
+                            <!-- <br>
                             <button data-dropdown="perfil" aria-controls="drop2" aria-expanded="false" class="button dropdown">Comercial</button>
                             <br>
                             <ul id="perfil" data-dropdown-content class="f-dropdown" aria-hidden="true">
@@ -81,14 +87,14 @@
                                 </li>
                                 <li><a href="#">Otro perfil más</a>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </li>
-                        <li><a href="#"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
+                        <li><a href="#" ><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-bar-chart fa-2x"></i> Crear Informes</a>
+                        <li><a href="#" data-reveal-id="informes" data-reveal-ajax="_informes.html"><i class="fa fa-bar-chart fa-2x"></i> Crear informes</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-bell-o"></i> Crear Notificaciones</a>
-                        </li>                        
+                        <li><a href="notificaciones.html"><i class="fa fa-bell-o"></i> Notificaciones</a>
+                        </li>
                         <li><a href="#"><i class="fa fa-bookmark fa-2x"></i> Producto MFE</a>
                         </li>
                         <li><a href="#"><i class="fa fa-comments fa-2x"></i> Ayuda</a>
@@ -96,7 +102,7 @@
                         <li><a href="#"><i class="fa fa-gears fa-2x"></i> Administración</a>
                         </li>
                         <li><a href="#"><i class="fa fa-asterisk"></i> Traslados MFE</a>
-                        </li>  
+                        </li>
                     </ul>
                     <!-- off-canvas-list -->
                 </aside>
@@ -105,33 +111,11 @@
                 <section class="main-section" role="main">
                     <article class="row">
                         <div class="contenido large-8 columns">
-                            <a class="plus" href="#" title="Nueva oferta">
+                            <a class="plus" href="#" title="Nueva oferta" data-reveal-id="new-ofert" data-reveal-ajax="_nueva-oferta.html">
                                 <i class="fa fa-plus"></i>
                             </a>
-
-                            <div class="alert-box radius filtro" data-alert="">
-                                Aviso gris
-                                <a class="close" href="" title="Cerrar"><i class="fa fa-times"></i></a>
-                            </div>
-
-                            <div class="alert-box radius" data-alert="">
-                                Por defecto
-                                <a class="close" href="" title="Cerrar"><i class="fa fa-times"></i></a>
-                            </div>
-
-                            <div class="alert-box radius alert" data-alert="">
-                                Alerta
-                                <a class="close" href="" title="Cerrar"><i class="fa fa-times"></i></a>
-                            </div>
-
-                            <div class="alert-box radius info" data-alert="">
-                                Información
-                                <a class="close" href="" title="Cerrar"><i class="fa fa-times"></i></a>
-                            </div>
-                            <!-- alert-box -->
-
                             <table class="ofertas">
-                                <caption class="hidden-for-small-up">Tabla de Clientes</caption>
+                                <caption>Listado de Clientes</caption>
                                 <thead>
                                     <tr>
                                         <th></th>
@@ -148,8 +132,8 @@
                                                 <i class="fa fa-play-circle"></i>
                                             </a>
                                         </td>
-                                        <td>Panadería Madrid S.L.
-                                            <span>B10156754</span>
+                                        <td><a href="#detalle-oferta">Panadería Madrid S.L. 
+                                            <span>B10156754</span></a>
                                         </td>
                                         <td>231€</td>
                                         <td>26/05/14</td>
@@ -226,7 +210,7 @@
                         <!-- contenido -->
                         <aside class="col-dcha large-4 columns" role="complementary">
                             <div class="aside-right">
-                                <header>
+                                <header id="detalle-oferta">
                                     <a class="trash" href="#" title="Eliminar">
                                         <i class="fa fa-trash-o"></i>
                                     </a>
@@ -286,18 +270,21 @@
                                 </div>
                                 <!-- heco -->
                                 <div class="contrato">
-                                    <p class="contrato-pc">Arrastra aquí el contrato</p>
+                                    <p class="contrato-pc">Arrastre aquí el contrato</p>
+                                    <!-- <label id="add-computer-button" class="contrato-mobile" for="fileupload">Seleccionar contrato</label>
+                                    <input id="fileupload" type="file" multiple="multiple"> -->
                                     <input class="contrato-mobile" title="Selecione el contrato que desea anexar" type="file">
                                 </div>
-                                <div class="estado">
-                                    <label>Cambio de estado</label>
-                                        <select name="estado" id="">
-                                            <option value="">Estado 1</option>
-                                            <option value="">Estado 2</option>
-                                            <option value="">Estado 3</option>
-                                            <option value="">Estado 4</option>
-                                        </select>
-                                    
+                                <div class="estado clearfix">
+                                    <!-- <label>Cambio de estado</label> -->
+                                    <select class="small-7 columns" name="estado" id="">
+                                        <option value="">Cambio de estado</option>
+                                        <option value="">Estado 2</option>
+                                        <option value="">Estado 3</option>
+                                        <option value="">Estado 4</option>
+                                    </select>
+                                    <a class="button small small-4 columns" href="#" title="Cambiar estado">Aplicar</a>
+
                                 </div>
                                 <!-- contrato -->
                             </div>
@@ -315,139 +302,37 @@
     <!-- row -->
 
     <footer class="row" role="contentinfo">
-        <div class="large-2 columns">T151221 - 1</div>
-        <div class="large-8 columns end text-center">
+        <div class="small-4 large-2 columns">T151221 - 1</div>
+        <div class="small-8 large-8 columns end text-center">
             Telefónica de España S.A
         </div>
     </footer>
     <!-- footer -->
 
     <!-- Ventanas modales -->
-    <div id="notific" class="reveal-modal tiny" data-reveal="true">
-        <h2 class="clearfix">Notificaciones
-            <a href="#" title="Cerrar" class="close-reveal-modal">
-                <i class="fa fa-close"></i>
-            </a>
-            <a href="#" title="Eliminar notificaciones">
-                <i class="fa fa-trash-o"></i>
-            </a>
-        </h2>
-        <ul>
-            <li>
-                <a class="alert" href="#">Pedido con Incidencias
-                    <span>B10158947 - Incidencia de tramitación en VT</span></a>
-            </li>
-            <li>
-                <a class="warning" href="#">Pedido pendiente de anexar contrato
-                    <span>El pedido 14M12312343 está pendiente de anexar el contrato para continuar su tramitación</span></a> 
-            </li>
-            <li>
-                <a href="#">Lanzamiento de respaldo móvil 
-                    <span></span></a>
-            </li>
-        </ul>
-    </div>
-    <!-- notific -->
+    <div id="notific" class="small reveal-modal" data-reveal></div>
+    <!-- modal notificaciones -->
 
-    <div id="search" class="small reveal-modal" data-reveal>
-        <h2>Buscar <a class="close-reveal-modal"><i class="fa fa-times"></i></a>
-        </h2>
-        <form class="row" action="action">
-            <div class="large-12 columns">
-                <div class="row collapse">
-                    <div class="small-10 columns">
-                        <input type="text" placeholder="Buscar" title="buscar">
-                    </div>
-                    <div class="small-2 columns">
-                        <a class="button postfix" href="#" title="Buscar"><i class="fa fa-search fa-lg"></i></a>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-    <!-- search -->
+    <div id="search" class="small reveal-modal" data-reveal></div>
+    <!-- modal search -->
 
-    <div id="search-filter" class="large reveal-modal" data-reveal>
-        <h2>Filtrado avanzado <a class="close-reveal-modal"><i class="fa fa-times"></i></a>
-        </h2>
-        <form action="action2">
-            <div class="row">
-                <div class="small-4 columns">
-                    <label for="ideuni">CUC</label>
-                </div>
-                <div class="small-8 columns">
-                    <input type="text" id="ideuni" placeholder="Ej. T151221">
-                </div>
-            </div>
+    <div id="search-filter" class="medium reveal-modal" data-reveal></div>
+    <!-- modal search-filter -->
 
-            <div class="row">
-                <div class="small-4 columns">
-                    <label for="cif">CIF</label>
-                </div>
-                <div class="small-8 columns">
-                    <input type="text" id="cif" placeholder="Ej. T151221">
-                </div>
-            </div>
+    <div id="informes" class="medium reveal-modal" data-reveal></div>
+    <!-- modal informes -->
 
-            <div class="row">
-                <div class="small-4 columns">
-                    <label for="fecre">Fecha Creación</label>
-                </div>
-                <div class="small-8 columns">
-                    <div class="row">
-                        <div class="small-6 columns">
-                            <input id="fecre" class="calendario" type="text" placeholder="Desde...">
-                        </div>
-                        <div class="small-6 columns">
-                            <input id="" class="calendario" type="text" placeholder="Hasta...">
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div id="new-notif" class="medium reveal-modal" data-reveal></div>
+    <!-- modal nueva notificación -->
 
-            <div class="row">
-                <div class="small-4 columns">
-                    <label for="femod">Fecha Modificación</label>
-                </div>
-                <div class="small-8 columns">
-                    <div class="row">
-                        <div class="small-6 columns">
-                            <label for="femod">desde</label><input id="femod" class="calendario" type="text" placeholder="Desde...">
-                        </div>
-                        <div class="small-6 columns">
-                            <input id="" class="calendario" type="text" placeholder="Hasta...">
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div id="edit-notif" class="medium reveal-modal" data-reveal></div>
+    <!-- modal editar notificación -->
 
-            <div class="row">
-                <div class="small-4 columns">
-                    <label for="imp">Importe</label>
-                </div>
-                <div class="small-8 columns">
-                    <div class="row">
-                        <div class="small-6 columns">
-                            <input id="imp" type="text" placeholder="Desde...">
-                        </div>
-                        <div class="small-6 columns">
-                            <input id="" type="text" placeholder="Hasta...">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row botonera">
-                <div class="large-12 columns">
-                    <div>
-                        <button type="reset" class="radius func-secondary tiny cierra-modal" title="Borrar formulario">Cancelar</button>
-                        <button type="submit" class="radius tiny" title="Iniciar búsqueda">Buscar</button>
-                    </div>
-                </div>
-            </div>
+    <div id="new-ofert" class="small reveal-modal" data-reveal></div>
+    <!-- modal nueva oferta -->
 
-        </form>
-    </div>
-    <!-- search-filter -->
+    <div id="new-client" class="medium reveal-modal" data-reveal></div>
+    <!-- modal nuevo cliente -->
 
     <!-- build:js js/vendor/libraries.min.js -->
     <!-- bower:js -->
@@ -457,7 +342,7 @@
     <!-- endbuild -->
     <!-- build:js js/vendor/foundation.min.js -->
     <script src="bower_components/foundation/js/foundation/foundation.js"></script>
-    <!-- <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
     <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
