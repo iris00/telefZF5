@@ -62,32 +62,13 @@
 
                 <aside class="left-off-canvas-menu">
                     <ul class="off-canvas-list">
-                        <!-- <li class="off-canvas-head clearfix">
-                            <a href="index.html" title="Inicio" class="home left">
-                                <i class="fa fa-home fa-2x"></i>
-                            </a>
-                            <a href="#" title="Buscar" class="search right" data-reveal-id="search" data-reveal-ajax="_buscar.html">
-                                <i class="fa fa-search fa-2x"></i>
-                            </a>
-                        </li> -->
                         <li class="off-canvas-head">
                             <p>Manuel Beltrán Pérez</p>
-                            <select name="perfil" disabled>
+                            <select name="perfil">
                                 <option value="">Comercial</option>
                                 <option value="">Otro perfil</option>
                                 <option value="">Otro perfil más</option>
                             </select>
-                            <!-- <br>
-                            <button data-dropdown="perfil" aria-controls="drop2" aria-expanded="false" class="button dropdown">Comercial</button>
-                            <br>
-                            <ul id="perfil" data-dropdown-content class="f-dropdown" aria-hidden="true">
-                                <li><a href="#">Comercial</a>
-                                </li>
-                                <li><a href="#">Otro perfil</a>
-                                </li>
-                                <li><a href="#">Otro perfil más</a>
-                                </li>
-                            </ul> -->
                         </li>
                         <li><a href="#" ><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
                         </li>
@@ -110,7 +91,7 @@
 
                 <section class="main-section" role="main">
                     <article class="row">
-                        <div class="contenido large-8 columns">
+                        <div class="contenido medium-8 columns">
                             <a class="plus" href="#" title="Nueva oferta" data-reveal-id="new-ofert" data-reveal-ajax="_nueva-oferta.html">
                                 <i class="fa fa-plus"></i>
                             </a>
@@ -135,7 +116,7 @@
                                         <td><a href="#detalle-oferta">Panadería Madrid S.L. 
                                             <span>B10156754</span></a>
                                         </td>
-                                        <td>231€</td>
+                                        <td class="numeros">231&euro;</td>
                                         <td>26/05/14</td>
                                         <td>Tramitación Fase I</td>
                                     </tr>
@@ -148,7 +129,7 @@
                                         <td>Grupo VIPs S.A.
                                             <span>B10156754</span>
                                         </td>
-                                        <td>625€</td>
+                                        <td class="numeros">625&euro;</td>
                                         <td>25/05/14</td>
                                         <td>Borrador</td>
                                     </tr>
@@ -161,7 +142,7 @@
                                         <td>BMW Automóviles S.A.
                                             <span>B10156754</span>
                                         </td>
-                                        <td>7362€</td>
+                                        <td class="numeros">7362&euro;</td>
                                         <td>24/05/14</td>
                                         <td class="warning">Incidencia</td>
                                     </tr>
@@ -174,7 +155,7 @@
                                         <td>Congelados Burgos S.L.
                                             <span>B10156754</span>
                                         </td>
-                                        <td>736€</td>
+                                        <td class="numeros">736&euro;</td>
                                         <td>23/05/14</td>
                                         <td>Borrador</td>
                                     </tr>
@@ -187,7 +168,7 @@
                                         <td>Ayuntamiento de Dénia
                                             <span>B10156754</span>
                                         </td>
-                                        <td>456€</td>
+                                        <td class="numeros">456&euro;</td>
                                         <td>22/05/14</td>
                                         <td class="alert">Anexar contrato</td>
                                     </tr>
@@ -200,7 +181,7 @@
                                         <td>Google Inc
                                             <span>B10156754</span>
                                         </td>
-                                        <td>431€</td>
+                                        <td class="numeros">431&euro;</td>
                                         <td>21/05/14</td>
                                         <td>Contrato generado</td>
                                     </tr>
@@ -208,9 +189,9 @@
                             </table>
                         </div>
                         <!-- contenido -->
-                        <aside class="col-dcha large-4 columns" role="complementary">
+                        <aside class="col-dcha medium-4 columns" role="complementary">
                             <div class="aside-right">
-                                <header id="detalle-oferta">
+                                <header>
                                     <a class="trash" href="#" title="Eliminar">
                                         <i class="fa fa-trash-o"></i>
                                     </a>
@@ -226,14 +207,14 @@
                                 <!-- info-ofer -->
 
                                 <div class="factur">
-                                    <p class="clearfix">Facturación del cliente</p>
+                                    <p>Facturación del cliente</p>
                                     <p class="clearfix">
                                         <span class="left">Dentro de MFE</span>
-                                        <span class="right">723€</span>
+                                        <span class="right">723&euro;</span>
                                     </p>
                                     <p class="clearfix">
                                         <span class="left">Fuera de MFE</span>
-                                        <span class="right">1736€</span>
+                                        <span class="right">1736&euro;</span>
                                     </p>
                                 </div>
                                 <!-- factur -->
@@ -270,13 +251,11 @@
                                 </div>
                                 <!-- heco -->
                                 <div class="contrato">
-                                    <p class="contrato-pc">Arrastre aquí el contrato</p>
-                                    <!-- <label id="add-computer-button" class="contrato-mobile" for="fileupload">Seleccionar contrato</label>
-                                    <input id="fileupload" type="file" multiple="multiple"> -->
-                                    <input class="contrato-mobile" title="Selecione el contrato que desea anexar" type="file">
+                                    <p>Anexar contrato</p>
+                                    <input title="Selecione el contrato que desea anexar" type="file">
                                 </div>
+                                <!-- contrato -->
                                 <div class="estado clearfix">
-                                    <!-- <label>Cambio de estado</label> -->
                                     <select class="small-7 columns" name="estado" id="">
                                         <option value="">Cambio de estado</option>
                                         <option value="">Estado 2</option>
@@ -284,9 +263,8 @@
                                         <option value="">Estado 4</option>
                                     </select>
                                     <a class="button small small-4 columns" href="#" title="Cambiar estado">Aplicar</a>
-
                                 </div>
-                                <!-- contrato -->
+                                <!-- estado -->
                             </div>
                             <!-- aside-right -->
                         </aside>

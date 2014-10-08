@@ -17,7 +17,8 @@ module.exports = function(grunt) {
             },
             dist: {
                 options: {
-                    outputStyle: 'extended'
+                    outputStyle: 'extended',
+                    sourceMap: true
                 },
                 files: {
                     '<%= app %>/css/app.css': '<%= app %>/scss/app.scss'

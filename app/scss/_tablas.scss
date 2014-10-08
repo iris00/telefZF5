@@ -2,203 +2,217 @@
 
 // Tablas
 table {
-  border: 0 none;
-  margin-bottom: 0;
-  thead,
-  tr:nth-of-type(2n) {
-    background-color: $snow;
-  }
-  tr td, tr th {
-    font-size: rem-calc(14);
-    line-height: rem-calc(24);
-    vertical-align: top;
-    padding: rem-calc(10 0);
-    color: $oil;
-  }
-  tr th {
-    border-bottom: 1px solid $iron;
-    font-size: rem-calc(16);
-    font-weight: normal;
-    text-align: center;
-  }
+    border: 0 solid;
+    margin-bottom: 0;
+    thead,
+    tr:nth-of-type(2n) {
+        background-color: $snow;
+    }
+    tbody tr td, thead tr th {
+        font-size: rem-calc(16);
+        line-height: rem-calc(24);
+        vertical-align: top;
+        padding: rem-calc(10 0);
+        color: $oil;
+    }
+    tr th {
+        border-bottom: 1px solid $iron;
+        font-weight: normal;
+        text-align: center;
+    }
+    td.numeros {
+        text-align: right;
+    }
 }
 
 // Tabla Ofertas
 table.ofertas {
-  tbody tr:hover {
-    background-color: $smoke;
-  }
-  // Anchura columnas
-  th:nth-child(1) {
-    width: rem-calc(40);
-    border-bottom: 0 solid;
-  }
-  th:nth-child(3) {
-    text-align: right;
-  }
-  // th:nth-child(3),
-  // th:nth-child(4) {
-  //   width: rem-calc(130);
-  // }
-  // td {
-  //   overflow: hidden;
-  //   text-overflow: ellipsis;
-  //   white-space: nowrap;
-  // }
-  td:nth-child(2) {
-    font-family: 'robotoregular';
-    font-size: rem-calc(16);
-  }
-  td.warning {
-    color: $warning-color;
-    font-family: 'robotoregular';
-  }
-  td.alert {
-    color: $alert-color;
-    font-family: 'robotoregular';
-  }
-  td span {
-    font-size: rem-calc(12);
-    font-family: 'robotolight';
-    display: block;
-  }
-  // Alineamiento celdas
-  td:nth-child(4),
-  td:nth-child(5) {
-    text-align: center;
-  }
-  td:nth-child(3) {
-    text-align: right;
-  }
-  // Iconos
-  td .fa {
-    font-size: rem-calc(30);
-    //color: $aluminum;
- 
-  }
+    tbody tr:hover {
+        background-color: $smoke;
+    }
+    th:nth-child(1) {
+        width: rem-calc(40);
+        border-bottom: 0 solid;
+    }
+    th:nth-child(3) {
+        text-align: right;
+    }
+    td:nth-child(2),
+    td.warning,
+    td.alert {
+        font-family: 'robotoregular';
+    }
+    td.warning {
+        color: $warning-color;
+    }
+    td.alert {
+        color: $alert-color;
+    }
+    td span {
+        font-size: rem-calc(14);
+        font-family: 'robotolight';
+        display: block;
+    }
+    // Alineamiento celdas
+    td:nth-child(4),
+    td:nth-child(5) {
+        text-align: center;
+    }
+    // Iconos
+    td .fa {
+        font-size: rem-calc(30);
+    }
 }
 
 // Tabla listado sedes
 table.listado-sedes {
-  width: 98%;
-  margin: 0 auto rem-calc(15);
-  tbody tr {
-    border: 1px solid $iron;
-    border-width: 0 1px 1px;
-  }
-  tbody tr {
-    background-color: $smoke;
-    border-right: 10px solid $iron;
-    &.alert {
-      border-right-color: $alert-color;
-      background-color: $snow;
+    width: 98%;
+    margin: 0 auto rem-calc(15);
+    tbody tr {
+        border: 1px solid $iron;
+        border-width: 0 1px 1px;
+        background-color: $snow;
+        border-right: 10px solid $iron;
+        &.bloqueada {
+            background-color: $smoke;
+        }
+        &.alert {
+            border-right-color: $alert-color;
+        }
+        &.success {
+            border-right-color: $success-color;
+        }
     }
-    &.success {
-      border-right-color: $success-color;
-      background-color: $snow;
+    td {
+        text-align: center;
+        vertical-align: middle;
+        font-size: rem-calc(18);
+        &:nth-child(2) {
+            font-family: 'robotoregular';
+            text-align: left;
+        }
+        &:nth-child(3) {
+            font-family: 'robotoregular';
+            color: $steel;
+        }
+        &:nth-child(2) span {
+            font-size: rem-calc(14);
+            font-family: 'robotolight';
+            display: block;
+        }
     }
-  }
-  td {
-    text-align: center;
-    vertical-align: middle;
-    span.city {
-      font-size: rem-calc(12);
-      font-family: 'robotolight';
-      display: block;
+    // Anchura columnas
+    th:nth-child(1) {
+        width: rem-calc(80);
     }
-    &:nth-child(2) {
-      font-family: 'robotoregular';
-      font-size: rem-calc(16);
-      text-align: left;
+    th:nth-child(2) {
+        width: 60%;
     }
-    &:nth-child(2) span {
-      font-size: rem-calc(12);
-      font-family: 'robotolight';
-      display: block;
+    th:nth-child(2) {
+        text-align: left;
     }
-  }
-  // Anchura columnas
-  th:nth-child(1) {
-    width: rem-calc(80);
-  }
-  th:nth-child(2) {
-    width: 60%;
-  }
-  th:nth-child(2) {
-    text-align: left;
-  }
-  // a .fa,
-  // .fa {
-  //   color: $jumbo;
-  // }
-  .fa-stack-2x {
-    font-size: 2.5em;
-  }
-  .fa-stack-1x {
-    margin-left: 2px;
-    margin-top: 5px;
-  }
+    .fa-stack-2x {
+        font-size: 2.5em;
+    }
+    .fa-stack-1x {
+        margin-left: 2px;
+        margin-top: 5px;
+    }
 }
 
 // Tabla configuración sedes
-.conf {
-  h2 {
+.conf h2 {
     font-size: rem-calc(18);
     background-color: $third-color;
     text-align: center;
     padding: rem-calc(5) 0;
     color: $white;
-  }
 }
 
 table.conf-sede {
-  .columns {
-    padding: 0 1px;
-  }
-  th {
-    border-bottom: 0;
-    line-height: rem-calc(37);
-    font-size: rem-calc(25);
-    font-family: 'robotoregular';
-  }
-  input[type="text"] {
-    padding: rem-calc(8) rem-calc(4);
-    //background-color: $silver;
- 
-  }
-  select {
-    padding: rem-calc(8) 0;
-    //background-color: $silver;
- 
-  }
+    .columns {
+        padding: 0 1px;
+    }
+    th {
+        border-bottom: 0;
+        line-height: rem-calc(37);
+        font-size: rem-calc(25);
+        font-family: 'robotoregular';
+    }
+    input[type="text"] {
+        padding: rem-calc(8) rem-calc(4);
+    }
+    select {
+        padding: rem-calc(8) 0;
+    }
+}
+
+// Tabla puestos-fijos
+.puestos-fijos {
+    tr td,
+    tr th {
+        text-align: center;
+        vertical-align: middle;
+        padding: rem-calc(10) rem-calc(2);
+    }
+    td.numeros {
+        text-align: right;
+    }
+    td:nth-child(2).numeros {
+        text-align: center;
+    }
+    // Anchura columnas
+    th:nth-child(1),
+    th:nth-child(2) {
+        width: 5%;
+    }
+    th:nth-child(5) {
+        width: 10%;
+    }
+    th:nth-child(6) {
+        width: 13%;
+    }
+    .fa-plus-circle {
+        font-size: rem-calc(35px);
+    }
+    tbody tr:last-child td.numeros {
+        text-align: right;
+        background-color: $silver;
+    }
+    td a.plus {
+        position: static;
+        float: left;
+    }
+    td a.plus fa {
+        padding: rem-calc(10) rem-calc(12);
+    }
 }
 
 // Tabla listado notificaciones
 table.notif {
-  // Alineamiento celdas
-  th {
-    text-align: left;
-  }
-  th:nth-child(2),
-  th:nth-child(3),
-  tr td:nth-child(2),
-  tr td:nth-child(3),
-  tr td:nth-child(4) {
-    text-align: center;
-  }
-  // Anchura columnas
-  th:nth-child(1) {
-    width: 40%;
-  }
-  th:nth-child(4) {
-    width: rem-calc(30);
-  }
-  td:nth-child(1) {
-    font-family: 'robotoregular';
-    font-size: rem-calc(16);
-  }
-  // Iconos
-  td .fa {
-    font-size: rem-calc(25);
-  }
+    // Alineamiento celdas
+    th {
+        text-align: left;
+    }
+    th:nth-child(2),
+    th:nth-child(3),
+    tr td:nth-child(2),
+    tr td:nth-child(3),
+    tr td:nth-child(4) {
+        text-align: center;
+    }
+    // Anchura columnas
+    th:nth-child(1) {
+        width: 40%;
+    }
+    th:nth-child(4) {
+        width: rem-calc(30);
+    }
+    td:nth-child(1) {
+        font-family: 'robotoregular';
+    }
+    // Iconos
+    td .fa {
+        font-size: rem-calc(25);
+    }
 }

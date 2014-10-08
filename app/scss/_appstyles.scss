@@ -1,247 +1,282 @@
 @charset "UTF-8";
 
 // Estilos generales
-// a:focus,
-// a:active {
-//   outline: 1px dotted;
-// }
-
-.main-section article {
-  min-height: 607px;
-}
-
 .contenido {
-  padding-top: 50px;
-  min-height: 607px;
-  position: relative;
-  a.plus {
-    color: $charcoal;
-    position: absolute;
-    top: -15px;
-    left: 50px;
-    width: rem-calc(60);
-    height: rem-calc(60);
-    .fa {
-      padding: 17px 19px;
-      box-shadow: 0 0 5px $charcoal;
-      background-color: $white;
-      border-radius: 50%;
-      font-size: rem-calc(20);
+    padding-top: rem-calc(50);
+    min-height: 607px;
+    position: relative;
+    a.plus {
+        color: $charcoal;
+        position: absolute;
+        top: rem-calc(-15);
+        left: rem-calc(70);
+        .fa {
+            padding: rem-calc(17) rem-calc(19);
+            box-shadow: 0 0 5px $charcoal;
+            background-color: $white;
+            border-radius: 50%;
+            font-size: rem-calc(20);
+        }
     }
-  }
 }
 
-// .sedes {
-//   a.plus {
-//     position: static;
-//     display: inline;
-//     float: left;
-//     margin: 0 0 rem-calc(10) rem-calc(10);
-//   }
-// }
+.numeros {
+    font-size: rem-calc(20);
+    font-family: 'robotoregular';
+    color: $monsoon;
+}
 
+// Opweb
 .opweb {
-  .contenido {
-    font-size: rem-calc(14);
-  }
-  h2 {
-    font-size: rem-calc(16);
-  }
-  .panel {
-    padding: rem-calc(10);
-  }
-  .tit h2 {
-    margin: rem-calc(-10) rem-calc(-10) rem-calc(10) rem-calc(-10);
-    padding: rem-calc(5) rem-calc(10);
-    background-color: $primary-color;
-    color: $white;
-  }
+    .contenido {
+        font-size: rem-calc(14);
+    }
+    h2 {
+        font-size: rem-calc(16);
+    }
+    .panel {
+        padding: rem-calc(10);
+    }
+    .tit h2 {
+        margin: rem-calc(-10) rem-calc(-10) rem-calc(10) rem-calc(-10);
+        padding: rem-calc(5) rem-calc(10);
+        background-color: $primary-color;
+        color: $white;
+    }
 }
 
 // Columna derecha
 .col-dcha {
-  .aside-right {
-    min-height: 607px;
-    box-shadow: 0 6px 3px $charcoal;
-    background-color: $silver;
-  }
-  p {
-    font-size: rem-calc(14);
-    padding: 10px 20px 10px;
-  }
-  header {
-    background-color: $third-color;
-    padding: 10px 20px 2px;
-    color: $white;
-    .trash .fa {
-      float: right;
-      color: $white;
-      font-size: rem-calc(26);
+    .aside-right {
+        min-height: 607px;
+        box-shadow: 0 6px 3px $charcoal;
+        background-color: $silver;
     }
     p {
-      padding: 0;
-      margin: 0;
+        font-size: rem-calc(14);
+        padding: rem-calc(10) rem-calc(20);
     }
-    h2 {
-      font-size: rem-calc(20);
-      color: $white;
+    header {
+        background-color: $third-color;
+        padding: rem-calc(10) rem-calc(20) rem-calc(2);
+        color: $white;
+        .trash .fa {
+            float: right;
+            color: $white;
+            font-size: rem-calc(26);
+        }
+        p {
+            padding: 0;
+            margin: 0;
+        }
+        h2 {
+            font-size: rem-calc(20);
+            color: $white;
+        }
+        .trash {
+            position: absolute;
+            right: 40px;
+            top: 15px;
+        }
     }
-  }
-  .info-ofer {
-    color: $monsoon;
-    padding-bottom: 0;
-    margin-bottom: 15px;
-  }
-  span {
-    display: block;
-    font-size: rem-calc(16);
-  }
-  .fa {
-    color: $oil;
-    margin-right: 6px;
-  }
-  .factur {
-    background-color: $gainsboro;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    p {
-      margin-bottom: 0;
-      color: $monsoon;
-      padding: 0 20px;
+    .info-ofer {
+        color: $monsoon;
+        padding-bottom: 0;
+        margin-bottom: rem-calc(15);
     }
-    p span {
-      margin-top: 10px;
+    span {
+        display: block;
+        font-size: rem-calc(16);
     }
-    p .left {
-      color: $oil;
-      font-family: 'robotoregular';
+    .fa {
+        color: $oil;
+        margin-right: rem-calc(6);
     }
-  }
-  .heco {
-    position: relative;
-    p {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      color: $monsoon;
+    .factur {
+        background-color: $gainsboro;
+        padding-bottom: rem-calc(15);
+        padding-top: rem-calc(15);
+        p {
+            margin-bottom: 0;
+            color: $monsoon;
+            padding: 0 rem-calc(20);
+        }
+        p span {
+            margin-top: rem-calc(10);
+        }
+        p .left {
+            color: $oil;
+            font-family: 'robotoregular';
+        }
     }
-    .accordion a {
-      background-color: transparent;
-      font-size: rem-calc(16);
-      padding: 5px 20px 5px 40px;
-      color: $oil;
+    // Scroll teléfonos
+    .telefonos {
+        background-color: $gainsboro;
+        padding: rem-calc(10);
+        font-family: 'robotoregular';
+        p {
+            margin-bottom: 0;
+            padding: 0 rem-calc(20);
+        }
+        .telef-tit,
+        .telef-precio {
+            font-size: rem-calc(22);
+            line-height: rem-calc(30);
+        }
+        .telef-tit {
+            color: $aluminum;
+        }
+        .telef-precio {
+            color: $charcoal;
+        }
     }
-    .accordion .content p {
-      padding: 0;
-      //margin-bottom: rem-calc(15);
-      //font-size: rem-calc(16);
-      line-height: rem-calc(20);
-      display: block;
+    // SVAs
+    .svas {
+        p,
+        div {
+            text-align: center;
+        }
+        p:nth-child(1) {
+            font-size: rem-calc(20);
+            margin: rem-calc(20);
+            padding: rem-calc(10) 0;
+            font-family: 'robotoregular';
+            color: $charcoal;
+        }
+        label {
+            font-size: rem-calc(20);
+            color: $oil;
+        }
+        .coste {
+            text-align: right;
+            margin-left: rem-calc(20);
+            display: inline-block;
+            font-size: rem-calc(20);
+        }
+        select {
+            width: 60%;
+        }
     }
-    .accordion a:before {
-      position: relative;
-      font-family: FontAwesome;
-      top: 0;
-      left: -20px;
-      content: "\f04b";
-      font-size: rem-calc(14);
-      display: inline-block;
+    // oper-tarif
+    .oper-tarif {
+        padding: rem-calc(20) rem-calc(40);
+        label {
+            text-align: left;
+        }
     }
-    .accordion .active a:before {
-      transform: rotate(90deg);
+    // Heco
+    .heco {
+        position: relative;
+        p {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            color: $monsoon;
+        }
+        .accordion a {
+            background-color: transparent;
+            font-size: rem-calc(16);
+            padding: rem-calc(5) rem-calc(20) rem-calc(5) rem-calc(40);
+            color: $oil;
+        }
+        .accordion .content p {
+            padding: 0;
+            //margin-bottom: rem-calc(15);
+            //font-size: rem-calc(16);
+            line-height: rem-calc(20);
+            display: block;
+        }
+        .accordion a:before {
+            position: relative;
+            font-family: FontAwesome;
+            top: 0;
+            left: rem-calc(-20);
+            content: "\f04b";
+            font-size: rem-calc(14);
+            display: inline-block;
+        }
+        .accordion .active a:before {
+            transform: rotate(90deg);
+        }
+        .accordion a .right {
+            color: $monsoon;
+        }
     }
-    .accordion a .right {
-      color: $monsoon;
+    .contrato {
+        background-color: $third-color;
+        padding: rem-calc(20);
+        p {
+            padding: 0;
+            font-family: 'robotoregular';
+            font-size: rem-calc(18);
+            color: $white;
+        }
+        input[type=file] {
+            margin-bottom: 0;
+        }
     }
-  }
-  .contrato {
-    width: 100%;
-    background-color: $third-color;
-    padding: rem-calc(20);
-    p {
-      width: 100%;
-      height: 100px;
-      line-height: rem-calc(50);
-      padding: rem-calc(20);
-      margin-bottom: 0;
-      border-radius: rem-calc(20);
-      border: 5px dashed $white;
-      text-align: center;
-      font-family: 'robotoregular';
-      font-size: rem-calc(16);
-      color: $white;
+    .estado {
+        padding: rem-calc(20) rem-calc(10) 0;
+        background-color: $gainsboro;
+        .button.small {
+            font-size: rem-calc(16);
+            padding: rem-calc(7) rem-calc(28) rem-calc(8);
+        }
     }
-    input[type=file] {
-      margin-bottom: 0;
-    }
-  }
-  .estado {
-    padding: rem-calc(20) rem-calc(10) 0;
-    background-color: $gainsboro;
-    // label {
-    //   background-color: $silver;
-    //   color: $oil;
-    //   font-size: rem-calc(16);
-    // }
-    .button.small {
-      font-size: rem-calc(16);
-      padding: rem-calc(7) rem-calc(28) rem-calc(8);
-    }
-  }
 }
 
 // Notificaciones
 #notific {
-  ul {
-    list-style-type: none;
-    font-size: rem-calc(20);
-    padding: rem-calc(30) rem-calc(10) 0 rem-calc(30);
-    li {
-      background: transparent url("../images/linea-notific.png") 6px 10px no-repeat;
-      padding-bottom: rem-calc(20);
-      padding-left: rem-calc(30);
-      line-height: rem-calc(18);
-      position: relative;
-      margin-bottom: -3px;
-      &:last-child {
-        background-image: none;
-      }
+    ul {
+        list-style-type: none;
+        font-size: rem-calc(20);
+        padding: rem-calc(30) rem-calc(10) 0 rem-calc(30);
+        li {
+            background: transparent url("../images/linea-notific.png") 6px 10px no-repeat;
+            padding-bottom: rem-calc(20);
+            padding-left: rem-calc(30);
+            line-height: rem-calc(18);
+            position: relative;
+            margin-bottom: rem-calc(-3);
+            &:last-child {
+                background-image: none;
+            }
+        }
+        a {
+            font-size: rem-calc(18);
+        }
+        li:before {
+            height: 14px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: rem-calc(3);
+            width: rem-calc(14);
+            border: 3px solid $iron;
+            content: " ";
+            background-color: $white;
+        }
+        li.warning:before {
+            background-color: $warning-color;
+        }
+        li.alert:before {
+            background-color: $alert-color;
+        }
+        span {
+            color: $monsoon;
+            font-size: rem-calc(14);
+            padding: rem-calc(5) rem-calc(20) rem-calc(15) 0;
+            display: block;
+            line-height: rem-calc(16);
+            padding: rem-calc(10) 0 rem-calc(15);
+        }
     }
-    a {
-      font-size: rem-calc(18);
-    }
-    li:before {
-      height: 14px;
-      border-radius: 50%;
-      position: absolute;
-      left: 0;
-      top: 3px;
-      width: 14px;
-      border: 3px solid $iron;
-      content: " ";
-      background-color: $white;
-    }
-    li.warning:before {
-      background-color: $warning-color;
-    }
-    li.alert:before {
-      background-color: $alert-color;
-    }
-    span {
-      color: $monsoon;
-      font-size: rem-calc(14);
-      padding: rem-calc(5) rem-calc(20) rem-calc(15) 0;
-      display: block;
-      line-height: rem-calc(16);
-      padding: 10px 0 15px;
-    }
-  }
 }
 
 // Search
 #search {
-  input[type="text"] {
-    font-size: rem-calc(18);
-  }
+    input[type="text"] {
+        font-size: rem-calc(18);
+    }
 }
 
 // Search filter
@@ -249,8 +284,8 @@
 
 // Footer
 footer.row {
-  background-color: $secondary-color;
-  color: $white;
-  height: rem-calc(46);
-  line-height: rem-calc(46);
+    background-color: $secondary-color;
+    color: $white;
+    height: rem-calc(46);
+    line-height: rem-calc(46);
 }

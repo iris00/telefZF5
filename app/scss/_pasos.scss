@@ -32,12 +32,12 @@
         z-index: 100;
     }
     li.activo {
-        background-color: $third-color;
+        background-color: $fourth-color;
         border-color: $warning-color;
     }
     li.current {
-        background-color: $third-color;
-        border-color: $third-color;
+        background-color: $fourth-color;
+        border-color: $fourth-color;
         a {
             cursor: pointer;
         }

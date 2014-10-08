@@ -2,90 +2,172 @@
 
 // Validación
 input[type="text"][data-invalid] {
-  border: 1px solid $alert-color;
+    border: 1px solid $alert-color;
 }
 
 [data-abide] .error small.error, [data-abide] .error span.error, [data-abide] span.error, [data-abide] small.error {
-  font-style: normal;
-  background-color: $alert-color;
-  font-family: 'robotoregular';
+    font-style: normal;
+    background-color: $alert-color;
+    font-family: 'robotoregular';
 }
 
 // Formularios en general
-option {
-  padding: rem-calc(10) 0;
+label {
+    cursor: default;
 }
 
-label {
-  cursor: default;
+select,
+select:hover {
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    cursor: pointer;
+    border-color: $iron;
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+.off-canvas-list {
+    select {
+        color: $white;
+        border-color: scale-color($primary-color, $lightness: -20%);
+    }
+    option {
+        color: $oil;
+    }
+}
+
+// input[type="checkbox"].checkbox {
+//     -moz-appearance: none;
+//     width: rem-calc(20);
+//     height: rem-calc(20);
+//     background: $white;
+//     border-radius: 5px !important;
+//     border: 1px solid #555 !important;
+//     margin-right: 10px;
+// }
+
+// input[type="checkbox"]:checked {
+//     background: #abd;
+// }
+
+option {
+    padding: rem-calc(10);
+    line-height: rem-calc(20);
+    background-color: $white;
 }
 
 .botonera {
-  padding: rem-calc(15) 0;
-  .button,
-  button {
-    font-family: "robotothin", Helvetica, Arial, sans-serif;
-    margin-bottom: 0;
-  }
-  .button.disabled {
-    background-color: $iron;
-  }
-  .func-secondary {
-    background-color: $button-func-bg-secondary;
-    &:hover {
-      background-color: #7d7d7d;
+    padding: rem-calc(15) 0;
+    .button,
+    button {
+        font-family: "robotothin", Helvetica, Arial, sans-serif;
+        margin-bottom: 0;
     }
-  }
+    .button.disabled {
+        background-color: $iron;
+    }
+    .func-secondary {
+        background-color: $button-func-bg-secondary;
+        &:hover {
+            background-color: #7d7d7d;
+        }
+    }
 }
 
 // Formularios Ofertas
 .ofertas,
 .sedes {
-  label,
-  .label {
-    background-color: $third-color;
-    text-align: center;
-    font-size: rem-calc(16);
-    font-family: 'robotoregular';
-    line-height: rem-calc(37);
-  }
-  // .botonera {
-  //   padding-top: rem-calc(30);
-  // }
+    label,
+    .label {
+        background-color: $third-color;
+        text-align: center;
+        font-size: rem-calc(16);
+        font-family: 'robotoregular';
+        line-height: rem-calc(37);
+    }
+    label span,
+    .label span {
+        display: inline;
+    }
 }
 
 // Formularios sedes
+.aside-right label {
+    background-color: transparent;
+    color: $aluminum;
+    font-family: 'robotolight';
+}
+
+.oper-tarif {
+    label {
+        text-align: right;
+    }
+    select {
+        margin-bottom: 0;
+        font-family: 'robotoregular';
+        font-size: rem-calc(16);
+    }
+}
+
+.svas {
+    select {
+        font-family: 'robotoregular';
+        font-size: rem-calc(16);
+        margin-top: rem-calc(20);
+    }
+}
+
+// Formularios puestos-fijos
+.puestos-fijos {
+    label {
+        background-color: transparent;
+    }
+    select {
+        margin-bottom: 0;
+    }
+}
+
+.otros-prod {
+    margin-top: rem-calc(20);
+    font-size: rem-calc(18);
+    .fa {
+        font-size: rem-calc(25);
+        margin-right: rem-calc(5);
+        vertical-align: text-top;
+    }
+}
 
 // Formularios OPWEB
 .opweb {
-  form, .tabs {
-    margin-top: rem-calc(15);
-  }
-  .tabs-content > .content {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  label,
-  .label,
-  input[type="text"],
-  button,
-  .button {
-    margin-bottom: 0;
-  }
-  label,
-  .label {
-    color: $oil;
-    font-size: rem-calc(14);
-    line-height: rem-calc(25);
-  }
-  input[type="text"] {
-    color: $oil;
-    padding: rem-calc(2);
-    height: auto;
-  }
-  button,
-  .button {
-    padding: rem-calc(3) rem-calc(15);
-    font-size: rem-calc(14);
-  }
+    form, .tabs {
+        margin-top: rem-calc(15);
+    }
+    .tabs-content > .content {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    label,
+    .label,
+    input[type="text"],
+    button,
+    .button {
+        margin-bottom: 0;
+    }
+    label,
+    .label {
+        color: $oil;
+        font-size: rem-calc(14);
+        line-height: rem-calc(25);
+    }
+    input[type="text"] {
+        color: $oil;
+        padding: rem-calc(2);
+        height: auto;
+    }
+    button,
+    .button {
+        padding: rem-calc(3) rem-calc(15);
+        font-size: rem-calc(14);
+    }
 }

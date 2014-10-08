@@ -54,7 +54,7 @@
                     </nav>
                     <!-- tab-bar -->
 
-                    <ul class="breadcrumbs" role="menubar">
+                    <ul class="breadcrumbs">
                         <li class="small-2 columns activo">Sedes
                         </li>
                         <li class="small-4 columns">Resumen
@@ -63,7 +63,7 @@
                         </li>
                         <li class="small-3 current columns">
                             <a href="resumen-sedes.html" title="Precio total de la oferta"><i class="fa fa-shopping-cart"></i>
-                            1744 &euro;</a>
+                            1744&euro;</a>
                         </li>
                     </ul>
                     <!-- breadcrumbs -->
@@ -73,17 +73,11 @@
                     <ul class="off-canvas-list">
                         <li class="off-canvas-head">
                             Manuel Beltrán Pérez
-                            <br>
-                            <button data-dropdown="perfil" aria-controls="drop2" aria-expanded="false" class="button dropdown">Comercial</button>
-                            <br>
-                            <ul id="perfil" data-dropdown-content class="f-dropdown" aria-hidden="true">
-                                <li><a href="#">Comercial</a>
-                                </li>
-                                <li><a href="#">Otro perfil</a>
-                                </li>
-                                <li><a href="#">Otro perfil más</a>
-                                </li>
-                            </ul>
+                            <select name="perfil">
+                                <option value="">Comercial</option>
+                                <option value="">Otro perfil</option>
+                                <option value="">Otro perfil más</option>
+                            </select>
                         </li>
                         <li><a href="#"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
                         </li>
@@ -130,7 +124,7 @@
                                                 <span>Madrid, Madrid</span>
                                             </a>
                                         </td>
-                                        <td>164€</td>
+                                        <td>164&euro;</td>
                                         <td>
                                             <a href="#" title="Restablecer valores de la sede">
                                                 <span class="fa-stack fa-lg">
@@ -141,7 +135,7 @@
                                         </td>
                                     </tr>
 
-                                    <tr title="Oferta bloqueada por...">
+                                    <tr class="bloqueada" title="Oferta bloqueada por...">
                                         <td>
                                             <a href="#" title="Ninguno">
                                                 <i class="fa fa-4x fa-building-o"></i>
@@ -151,11 +145,11 @@
                                             <a href="#">Calle Huertas, 32
                                             <span>Madrid, Madrid</span></a>
                                         </td>
-                                        <td>625€</td>
+                                        <td>625&euro;</td>
                                         <td></td>
                                     </tr>
 
-                                    <tr title="Oferta bloqueada por...">
+                                    <tr class="bloqueada" title="Oferta bloqueada por...">
                                         <td>
                                             <a href="#" title="Movistar Fusión Empresas Básico">
                                                 <i class="fa fa-4x fa-building-o"></i>
@@ -165,7 +159,7 @@
                                             <a href="#">BMW Automóviles S.A.
                                             <span>Madrid, Madrid</span></a>
                                         </td>
-                                        <td>7362€</td>
+                                        <td>7362&euro;</td>
                                         <td></td>
                                     </tr>
 
@@ -179,7 +173,7 @@
                                             <a href="#">Congelados Burgos S.L.
                                             <span>Madrid, Madrid</span></a>
                                         </td>
-                                        <td>736€</td>
+                                        <td>736&euro;</td>
                                         <td>
                                             <a href="#" title="Restablecer valores de la sede">
                                                 <span class="fa-stack fa-lg">
