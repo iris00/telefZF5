@@ -2,43 +2,85 @@
 
 // Reveal-modal
 .reveal-modal {
-  border-radius: 8px 8px 6px 6px;
-  border: 0 solid;
-  padding: 0;
-  h2 {
-    border-radius: 6px 6px 0 0;
-    color: $white;
-    font-size: rem-calc(20);
-    padding: rem-calc(10) rem-calc(20);
-    line-height: rem-calc(35);
-    background-color: $secondary-color;
-    a {
-      color: $white;
-      float: right;
+    border-radius: 8px 8px 6px 6px;
+    border: 0 solid;
+    padding: 0;
+    h2 {
+        border-radius: 6px 6px 0 0;
+        color: $white;
+        font-size: rem-calc(20);
+        padding: rem-calc(10) rem-calc(20);
+        line-height: rem-calc(35);
+        background-color: $secondary-color;
+        a {
+            color: $white;
+            float: right;
+        }
+        .fa {
+            font-size: rem-calc(26);
+        }
+        .close-reveal-modal {
+            color: $white;
+            font-size: rem-calc(25);
+            position: initial;
+            line-height: rem-calc(35);
+            margin-left: rem-calc(30);
+        }
     }
-    .fa {
-      font-size: rem-calc(26);
+    form {
+        padding: rem-calc(30) rem-calc(10) rem-calc(30) rem-calc(30);
+        .botonera {
+            padding-top: rem-calc(15);
+        }
     }
-    .close-reveal-modal {
-      color: $white;
-      font-size: rem-calc(25);
-      position: initial;
-      line-height: rem-calc(35);
-      margin-left: rem-calc(30);
+    .small-6.separador {
+        border-right: 1px solid $base;
     }
-  }
-  form {
-    padding: rem-calc(30) rem-calc(10) rem-calc(30) rem-calc(30);
     .botonera {
-      padding-top: rem-calc(15);
+        margin-top: rem-calc(15);
     }
-  }
+    .prohibido {
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        left: 0;
+        margin-top: rem-calc(-15);
+        text-align: center;
+        .fa-ban {
+            font-size: 150px;
+            color: $alert-color;
+            opacity: .6;
+        }
+    }
+    .config-numer {
+        h3,
+        h4 {
+            color: $white;
+            text-align: center;
+            padding: rem-calc(3);
+        }
+        h3 {
+            background-color: $third-color;
+            font-size: rem-calc(20);
+        }
+        h4 {
+            background-color: $jumbo;
+            font-size: rem-calc(16);
+        }
+        h3 + h4 {
+            margin-top: rem-calc(-8);
+        }
+        h5 {
+            text-align: center;
+            font-size: rem-calc(16);
+        }
+    }
 }
 
 .reveal-modal-bg {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .reveal-modal-bg:hover {
-  background-color: rgba(195, 195, 195, 0.3);
+    background-color: rgba(195, 195, 195, 0.3);
 }

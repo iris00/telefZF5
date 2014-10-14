@@ -1,64 +1,66 @@
 @charset "UTF-8";
 
 /* Off-canvas menu */
-.move-right .exit-off-canvas {
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-}
-
 .left-off-canvas-menu {
-  left: 1px;
+    left: 1px;
 }
 
 .tab-bar .menu-icon span:after {
-  left: rem-calc(30);
+    left: rem-calc(30);
 }
 
-.off-canvas-head {
-  color: $white;
-  background-color: $primary-color;
-  padding: rem-calc(10) rem-calc(10) 0;
-  &.clearfix {
-    padding-bottom: 10px;
-  }
-  // a.home,
-  // a.search {
-  //   color: $white;
-  //   padding-bottom: 0;
-  //   &:hover {
-  //     background-color: transparent;
-  //   }
-  // }
-  .button.dropdown {
-    width: 100%;
-    padding-left: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin: rem-calc(8) 0;
-    text-align: left;
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: transparent;
+li.off-canvas-head {
+    color: $white;
+    background-color: $primary-color;
+    padding: rem-calc(10) rem-calc(10) 0;
+    &.clearfix {
+        padding-bottom: 10px;
     }
-  }
-  .f-dropdown a {
-    font-size: rem-calc(16);
-    padding: rem-calc(10);
-  }
+    // a.home,
+    // a.search {
+    //   color: $white;
+    //   padding-bottom: 0;
+    //   &:hover {
+    //     background-color: transparent;
+    //   }
+    // }
+    // .button.dropdown {
+    //   width: 100%;
+    //   padding-left: 0;
+    //   padding-top: 0;
+    //   padding-bottom: 0;
+    //   margin: rem-calc(8) 0;
+    //   text-align: left;
+    //   &:hover,
+    //   &:focus,
+    //   &:active {
+    //     background-color: transparent;
+    //   }
+    // }
+    // .f-dropdown a {
+    //   font-size: rem-calc(16);
+    //   padding: rem-calc(10);
+    // }
+    select {
+        margin-bottom: rem-calc(16);
+    }
+    select:hover {
+        background-color: transparent;
+    }
 }
 
-ul.off-canvas-list {
-  li a {
-    padding: rem-calc(15) rem-calc(10);
-    .fa {
-      vertical-align: middle;
-      margin-right: rem-calc(8);
-      font-size: rem-calc(28);
-      min-width: 28px;
-      text-align: center;
+.off-canvas-list {
+    li a {
+        padding: rem-calc(15) rem-calc(10);
+        .fa {
+            vertical-align: middle;
+            margin-right: rem-calc(8);
+            font-size: rem-calc(28);
+            min-width: 28px;
+            text-align: center;
+        }
+        &:hover {
+            background-color: $smoke;
+        }
     }
-    &:hover {
-      background-color: $smoke;
-    }
-  }
 }

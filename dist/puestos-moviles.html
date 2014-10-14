@@ -1,0 +1,625 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Configurador de Movistar Fusión Empresas">
+    <title>Configurador MFE - Selección de sedes</title>
+    
+    <!-- Iconos de aplicación -->
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/chrome-touch-icon-192x192.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="Configurador de Movistar Fusión Empresas">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+    <link rel="stylesheet" href="css/libraries.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+    <script src="js/vendor/modernizr.min.js"></script>
+</head>
+
+<body class="sedes">
+    <div class="row">
+        <div class="off-canvas-wrap" data-offcanvas>
+            <div class="inner-wrap">
+                <header role="banner">
+                    <div class="tit-sede text-center">Panadería Madrid S.L. B10156754 (Calle Orense 14, Madrid)</div>
+                    <!-- tit-sede -->
+
+                    <nav class="tab-bar row" role="navigation">
+                        <section>
+                            <div class="large-1 medium-1 small-1 columns">
+                                <a title="Menú de navegación" href="" class="left-off-canvas-toggle menu-icon" tabindex="0">
+                                    <span></span>
+                                </a>
+                            </div>
+                            <div class="large-9 medium-8 columns show-for-medium-up">
+                                <h1 class="text-center">Configuración de los Puestos Móviles</h1>
+                            </div>
+                            <div class="large-2 medium-3 small-10 columns">
+                                <a href="#" title="Información">
+                                    <i class="fa fa-info-circle"></i>
+                                </a>
+                                <a href="#" title="Buscar con filtro avanzado" data-reveal-id="search-filter" data-reveal-ajax="_buscar-filtro.html">
+                                    <i class="fa fa-search-plus"></i>
+                                </a>
+                                <a href="index.html" title="Inicio">
+                                    <i class="fa fa-home fa-2x"></i>
+                                </a>
+                            </div>
+                        </section>
+                    </nav>
+                    <!-- tab-bar -->
+
+                    <nav role="navigation">
+                        <ul class="breadcrumbs breadconf">
+                            <li class="large-2 medium-2 small-4 columns current">
+                                <a href="sedes.html" title="Sede"><i class="fa fa-building-o"></i></a>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns activo">
+                                <a href="puestos-moviles.html" title="Puestos móviles">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-user fa-stack-2x"></i>
+                                        <i class="fa fa-mobile fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns">
+                                <a href="puestos-fijos.html" title="Puestos fijos">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-user fa-stack-2x"></i>
+                                        <i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                                </a>
+                            </li>
+
+                            <li class="large-2 medium-2 small-4 columns">
+                                <a href="#" title="Presencia en internet">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-4x fa-building-o fa-stack-2x"></i>
+                                        <i class="fa fa-fighter-jet fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns">
+                                <a href="#" title="Seguridad"><i class="fa fa-desktop"></i></a>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns current">
+                                <a href="resumen-sedes.html" title="Precio total de la oferta"><i class="fa fa-shopping-cart"></i>
+                                1744&euro;</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- breadcrumbs -->
+
+                </header>
+
+                <aside class="left-off-canvas-menu">
+                    <ul class="off-canvas-list">
+                        <li class="off-canvas-head">
+                            <p>Manuel Beltrán Pérez</p>
+                            <select name="perfil">
+                                <option value="">Comercial</option>
+                                <option value="">Otro perfil</option>
+                                <option value="">Otro perfil más</option>
+                            </select>
+                        </li>
+                        <li><a href="#"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
+                        </li>
+                        <li><a href="#" data-reveal-id="informes" data-reveal-ajax="_informes.html"><i class="fa fa-bar-chart fa-2x"></i> Crear informes</a>
+                        </li>
+                        <li><a href="notificaciones.html"><i class="fa fa-bell-o"></i> Notificaciones</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-bookmark fa-2x"></i> Producto MFE</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-comments fa-2x"></i> Ayuda</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gears fa-2x"></i> Administración</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-asterisk"></i> Traslados MFE</a>
+                        </li>
+                    </ul>
+                    <!-- off-canvas-list -->
+                </aside>
+                <!-- left-off-canvas-menu -->
+
+                <section class="main-section" role="main">
+                    <article class="row" data-equalizer>
+                        <div class="contenido medium-8 columns" data-equalizer-watch>
+                            <form action="puestos-fijos.html">
+                                <table class="puestos moviles">
+                                    <caption>Listado de puestos fijos</caption>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <input id="checkAll" type="checkbox" name="" title="Marcar / desmarcar todos">
+                                            </th>
+                                            <th>Numeración</th>
+                                            <th>Tarifa</th>
+                                            <th>Dispositivos</th>
+                                            <th>SVAs</th>
+                                            <th>Precio</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option value="">621231231</option>
+                                                    <option value="">Portabilidad</option>
+                                                    <option value="">Portabilidad con cambio de titular</option>
+                                                    <option value="">921231231</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option value="">Tarifa 5</option>
+                                                    <option value="">Tarifa 10</option>
+                                                    <option value="">Tarifa 20</option>
+                                                    <option value="">Tarifa 25</option>
+                                                </select>
+                                            </td>
+                                            <td class="dispositivo">
+                                                <div>
+                                                    <a href="#" data-reveal-id="terminal1" data-reveal-ajax="_terminal-1.html">Nokia</a>
+                                                </div>
+                                                <div></div>
+                                            </td>
+                                            <td>
+                                                <a href="#" data-dropdown="svas1" aria-controls="svas1" aria-expanded="false"><i class="fa fa-plus-circle"></i></a>
+                                                <div id="svas1" data-dropdown-content class="f-dropdown content small row" aria-hidden="true" tabindex="-1">
+                                                    <div class="large-12 columns">
+                                                        <input type="checkbox">CCUU con fijo
+                                                        <span class="coste">12&euro;</span>
+                                                    </div>
+                                                    <div class="large-8 columns">
+                                                        <select>
+                                                            <option value="">Bono 100</option>
+                                                            <option value="">Bono 2</option>
+                                                            <option value="">Bono 3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="large-4 columns">
+                                                        <span class="numeros">6&euro;</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="numeros">15&euro;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+
+                                            <td>
+                                                <select>
+                                                    <option value="">Alta</option>
+                                                    <option value="">Portabilidad</option>
+                                                    <option value="">Portabilidad con cambio de titular</option>
+                                                    <option value="">921231231</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option value="">Tarifa 5</option>
+                                                    <option value="">Tarifa 10</option>
+                                                    <option value="">Tarifa 20</option>
+                                                    <option value="">Tarifa 25</option>
+                                                </select>
+                                            </td>
+                                            <td class="dispositivo">
+                                                <div>
+                                                    <a href="#" data-reveal-id="terminal2" data-reveal-ajax="_terminal-2.html">Apple</a>
+                                                </div>
+                                                <div>Nokia</div>
+                                            </td>
+                                            <td>
+                                                <a href="#" data-dropdown="svas2" aria-controls="svas2" aria-expanded="false"><i class="fa fa-plus-circle"></i></a>
+                                                <div id="svas2" data-dropdown-content class="f-dropdown content small row" aria-hidden="true" tabindex="-1">
+                                                    <div class="large-12 columns">
+                                                        <input type="checkbox">CCUU con fijo
+                                                        <span class="coste">12&euro;</span>
+                                                    </div>
+                                                    <div class="large-8 columns">
+                                                        <select>
+                                                            <option value="">Bono 100</option>
+                                                            <option value="">Bono 2</option>
+                                                            <option value="">Bono 3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="large-4 columns">
+                                                        <span class="numeros">6&euro;</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="numeros">15&euro;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+
+                                            <td>
+                                                <select>
+                                                    <option value="">Alta</option>
+                                                    <option value="">Portabilidad</option>
+                                                    <option value="">Portabilidad con cambio de titular</option>
+                                                    <option value="">921231231</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option value="">Tarifa 5</option>
+                                                    <option value="">Tarifa 10</option>
+                                                    <option value="">Tarifa 20</option>
+                                                    <option value="">Tarifa 25</option>
+                                                </select>
+                                            </td>
+                                            <td class="dispositivo">
+                                                <div>Nokia</div>
+                                                <div></div>
+                                            </td>
+                                            <td><a href="#"><i class="fa fa-plus-circle"></i></a>
+                                            </td>
+                                            <td class="numeros">15&euro;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option value="">Alta</option>
+                                                    <option value="">Portabilidad</option>
+                                                    <option value="">Portabilidad con cambio de titular</option>
+                                                    <option value="">921231231</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option value="">Tarifa 55</option>
+                                                    <option value="">Tarifa 10</option>
+                                                    <option value="">Tarifa 20</option>
+                                                    <option value="">Tarifa 25</option>
+                                                </select>
+                                            </td>
+                                            <td class="dispositivo">
+                                                <div>Nokia</div>
+                                                <div></div>
+                                            </td>
+                                            <td><a href="#"><i class="fa fa-plus-circle"></i></a>
+                                            </td>
+                                            <td class="numeros">15&euro;</td>
+                                        </tr>
+                                        <tr class="numeros">
+                                            <td>
+                                                <a href="#" title="Configuración de las numeraciones" data-reveal-id="pm-conf-numer" data-reveal-ajax="_pm-conf-numer.html"><i class="fa fa-gear fa-3x"></i></a>
+                                            </td>
+                                            <td>
+                                                <a class="plus" href="nuevo-pm.html" title="Nuevo puesto móvil">
+                                                    <i class="fa fa-plus"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td></td>
+                                            <td class="numeros">Total:</td>
+                                            <td class="numeros">60&euro;</td>
+                                        </tr>
+                                        <tr class="numeros">
+                                            <td></td>
+                                            <td colspan="2"></td>
+                                            <td class="numeros" colspan="2">Conceptos ocasionales:</td>
+                                            <td class="numeros">160&euro;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- puestos-fijos -->
+                                <div class="row botonera">
+                                    <div class="large-12 columns text-right">
+                                        <button type="reset" class="radius func-secondary tiny" title="Finalizar la configuración">Finalizar</button>
+                                        <button type="submit" class="radius tiny" title="Continuar con la configuración">Continuar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- contenido -->
+
+                        <aside class="col-dcha medium-4 columns" role="complementary" data-equalizer-watch>
+                            <div class="aside-right">
+                                <form class="puestos-fijos" action="action">
+                                    <header>
+                                        <a class="trash" href="#" title="Eliminar">
+                                            <i class="fa fa-trash-o"></i>
+                                        </a>
+                                        <h2 class="text-center">Seleccionados 2 de 4
+                                            <br>Configuración de grupo</h2>
+                                    </header>
+
+                                    <div class="oper-tarif clearfix">
+                                        <div class="small-6 columns">
+                                            <label>Operación</label>
+                                        </div>
+                                        <div class="small-6 columns">
+                                            <select name="">
+                                                <option value="">Alta</option>
+                                                <option value="">Operación 2</option>
+                                                <option value="">Operación 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="small-6 columns">
+                                            <label>Tarifa</label>
+                                        </div>
+                                        <div class="small-6 columns">
+                                            <select name="">
+                                                <option value="">Tarifa 20</option>
+                                                <option value="">Tarifa 2</option>
+                                                <option value="">Tarifa 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- oper-tarif 1 -->
+
+                                    <div class="oper-tarif destacado clearfix">
+                                        <div class="small-6 columns">
+                                            <label>Regimen</label>
+                                        </div>
+                                        <div class="small-6 columns">
+                                            <select name="">
+                                                <option value="">Alquiler</option>
+                                                <option value="">Regimen 2</option>
+                                                <option value="">Regimen 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="small-6 columns">
+                                            <select name="">
+                                                <option value="">Apple</option>
+                                                <option value="">Regimen 2</option>
+                                                <option value="">Regimen 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="small-6 columns numeros text-center">
+                                            Iphone 5S
+                                        </div>
+                                    </div>
+                                    <!-- oper-tarif 1 destacado -->
+
+                                    <div class="visualizador">
+                                        <ul class="carrusel destacado text-center" data-orbit>
+                                            <li class="telefono" data-orbit-slide="headline-1">
+                                                <img src="images/iphone.png" alt="iphone 5S" title="Información del producto" data-dropdown="movil1" data-options="align:left">
+                                                <p class="prod-precio">19&euro; (29&euro; - 10&euro;)</p>
+                                            </li>
+                                            <li class="telefono" data-orbit-slide="headline-2">
+                                                <img src="images/iphone.png" alt="iphone 5S" title="Información del producto" data-dropdown="movil2" data-options="align:left">
+                                                <p class="prod-precio">19&euro; (29&euro; - 10&euro;)</p>
+                                            </li>
+                                            <li class="telefono" data-orbit-slide="headline-3">
+                                                <img src="images/iphone.png" alt="iphone 5S" title="Información del producto" data-dropdown="movil3" data-options="align:left">
+                                                <p class="prod-precio">19&euro; (29&euro; - 10&euro;)</p>
+                                            </li>
+                                            <li class="telefono" data-orbit-slide="headline-4">
+                                                <img src="images/iphone.png" alt="iphone 5S" title="Información del producto" data-dropdown="movil4" data-options="align:left">
+                                                <p class="prod-precio">19&euro; (29&euro; - 10&euro;)</p>
+                                            </li>
+                                            <li class="telefono" data-orbit-slide="headline-5">
+                                                <img src="images/iphone.png" alt="iphone 5S" title="Información del producto" data-dropdown="movil5" data-options="align:left">
+                                                <p class="prod-precio">19&euro; (29&euro; - 10&euro;)</p>
+                                            </li>
+                                            <li class="telefono" data-orbit-slide="headline-6">
+                                                <img src="images/iphone.png" alt="iphone 5S" title="Información del producto" data-dropdown="movil6" data-options="align:left">
+                                                <p class="prod-precio">19&euro; (29&euro; - 10&euro;)</p>
+                                            </li>
+                                        </ul>
+
+                                        <div id="movil1" class="f-dropdown content small" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <h3>Móvil 1</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati asperiores, et, odit explicabo nesciunt temporibus sit inventore sapiente vitae a ipsum dicta deserunt repellat aut!</p>
+                                        </div>
+
+                                        <div id="movil2" class="f-dropdown content small" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <h3>Móvil 2</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda, ea. Illo et autem ad temporibus quibusdam minima!</p>
+                                        </div>
+
+                                        <div id="movil3" class="f-dropdown content small" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <h3>Móvil 3</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque odit inventore praesentium incidunt.</p>
+                                        </div>
+
+                                        <div id="movil4" class="f-dropdown content small" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <h3>Móvil 4</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur repellat quas nesciunt corrupti beatae impedit, dolore temporibus cum corporis recusandae quibusdam ex, obcaecati dignissimos consequuntur aspernatur consequatur quasi adipisci maxime, iste quod.</p>
+                                        </div>
+
+                                        <div id="movil5" class="f-dropdown content small" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <h3>Móvil 5</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, doloribus, possimus!</p>
+                                        </div>
+
+                                        <div id="movil6" class="f-dropdown content small" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <h3>Móvil 6</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda quo, amet iste dignissimos recusandae alias corporis nam accusantium dolore, sit in quod commodi consequuntur ut iure. Sapiente esse ipsum quod ex error ipsam, impedit, maiores nam, pariatur molestias, nihil fugiat.</p>
+                                        </div>
+                                    </div>
+                                    <!-- visualizador carrusel 1 -->
+
+                                    <div class="oper-tarif clearfix">
+                                        <div class="small-6 columns">
+                                            <label>Regimen</label>
+                                        </div>
+                                        <div class="small-6 columns">
+                                            <select name="">
+                                                <option value="">Alquiler</option>
+                                                <option value="">Regimen 2</option>
+                                                <option value="">Regimen 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="small-6 columns">
+                                            <select name="">
+                                                <option value="">Microsoft</option>
+                                                <option value="">Regimen 2</option>
+                                                <option value="">Regimen 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="small-6 columns numeros text-center">
+                                            Lumia 1520
+                                        </div>
+                                    </div>
+                                    <!-- oper-tarif 2 -->
+
+                                    <div class="visualizador">
+                                        <ul class="carrusel text-center" data-orbit>
+                                            <li class="telefono" data-orbit-slide="headline-1">
+                                                <img src="images/lumia.png" alt="lumia 1520" title="Información del producto" data-dropdown="movil11" data-options="align:left">
+                                                <p class="prod-precio">19&euro;</p>
+                                            </li>
+                                            <li class="telefono" data-orbit-slide="headline-2">
+                                                <img src="images/lumia.png" alt="lumia 1520" title="Información del producto" data-dropdown="movil12" data-options="align:left">
+                                                <p class="prod-precio">19&euro;</p>
+                                            </li>
+                                            <li class="telefono" data-orbit-slide="headline-3">
+                                                <img src="images/lumia.png" alt="lumia 1520" title="Información del producto" data-dropdown="movil13" data-options="align:left">
+                                                <p class="prod-precio">19&euro;</p>
+                                            </li>
+                                            <li class="telefono" data-orbit-slide="headline-4">
+                                                <img src="images/lumia.png" alt="lumia 1520" title="Información del producto" data-dropdown="movil14" data-options="align:left">
+                                                <p class="prod-precio">19&euro;</p>
+                                            </li>
+                                            <li class="telefono" data-orbit-slide="headline-5">
+                                                <img src="images/lumia.png" alt="lumia 1520" title="Información del producto" data-dropdown="movil15" data-options="align:left">
+                                                <p class="prod-precio">19&euro;</p>
+                                            </li>
+                                            <li class="telefono" data-orbit-slide="headline-6">
+                                                <img src="images/lumia.png" alt="lumia 1520" title="Información del producto" data-dropdown="movil16" data-options="align:left">
+                                                <p class="prod-precio">19&euro;</p>
+                                            </li>
+                                        </ul>
+
+                                        <div id="movil11" class="f-dropdown content small" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <h3>Móvil 1</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati asperiores, et, odit explicabo nesciunt temporibus sit inventore sapiente vitae a ipsum dicta deserunt repellat aut!</p>
+                                        </div>
+
+                                        <div id="movil12" class="f-dropdown content small" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <h3>Móvil 2</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda, ea. Illo et autem ad temporibus quibusdam minima!</p>
+                                        </div>
+
+                                        <div id="movil13" class="f-dropdown content small" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <h3>Móvil 3</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque odit inventore praesentium incidunt.</p>
+                                        </div>
+
+                                        <div id="movil14" class="f-dropdown content small" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <h3>Móvil 4</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur repellat quas nesciunt corrupti beatae impedit, dolore temporibus cum corporis recusandae quibusdam ex, obcaecati dignissimos consequuntur aspernatur consequatur quasi adipisci maxime, iste quod.</p>
+                                        </div>
+
+                                        <div id="movil15" class="f-dropdown content small" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <h3>Móvil 5</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, doloribus, possimus!</p>
+                                        </div>
+
+                                        <div id="movil16" class="f-dropdown content small" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <h3>Móvil 6</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda quo, amet iste dignissimos recusandae alias corporis nam accusantium dolore, sit in quod commodi consequuntur ut iure. Sapiente esse ipsum quod ex error ipsam, impedit, maiores nam, pariatur molestias, nihil fugiat.</p>
+                                        </div>
+                                    </div>
+                                    <!-- visualizador carrusel 2 -->
+
+                                    <div class="svas">
+                                        <p>SVAs</p>
+                                        <div>
+                                            <label>
+                                                <input type="checkbox">CCUU con fijo
+                                                <span class="coste">12&euro;</span>
+                                            </label>
+                                            <select>
+                                                <option value="">Bono 100</option>
+                                                <option value="">Bono 2</option>
+                                                <option value="">Bono 3</option>
+                                            </select>
+                                            <span class="coste">6&euro;</span>
+                                        </div>
+                                    </div>
+                                    <!-- svas -->
+
+                                </form>
+                            </div>
+                            <!-- aside-right -->
+                        </aside>
+                        <!-- col-dcha -->
+                    </article>
+                </section>
+                <a class="exit-off-canvas"></a>
+            </div>
+            <!-- inner-wrap -->
+        </div>
+        <!-- off-canvas-wrap -->
+    </div>
+    <!-- row -->
+
+    <footer class="row" role="contentinfo">
+        <div class="small-4 large-2 columns">T151221 - 1</div>
+        <div class="small-8 large-8 columns end text-center">
+            Telefónica de España S.A
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- Ventanas modales -->
+    <div id="notific" class="small reveal-modal" data-reveal></div>
+    <!-- modal notificaciones -->
+
+    <div id="search" class="small reveal-modal" data-reveal></div>
+    <!-- modal search -->
+
+    <div id="search-filter" class="medium reveal-modal" data-reveal></div>
+    <!-- modal search-filter -->
+
+    <div id="informes" class="medium reveal-modal" data-reveal></div>
+    <!-- modal informes -->
+
+    <div id="new-notif" class="medium reveal-modal" data-reveal></div>
+    <!-- modal nueva notificación -->
+
+    <div id="edit-notif" class="medium reveal-modal" data-reveal></div>
+    <!-- modal editar notificación -->
+
+    <div id="new-ofert" class="small reveal-modal" data-reveal></div>
+    <!-- modal nueva oferta -->
+
+    <div id="new-client" class="medium reveal-modal" data-reveal></div>
+    <!-- modal nuevo cliente -->
+
+    <div id="svas1" class="tiny reveal-modal" data-reveal></div>
+    <!-- svas -->
+
+    <div id="terminal1" class="small reveal-modal" data-reveal></div>
+    <!-- terminal 1 -->
+
+    <div id="terminal2" class="medium reveal-modal" data-reveal></div>
+    <!-- terminal 2 -->
+
+    <div id="pm-conf-numer" class="xlarge reveal-modal" data-reveal></div>
+    <!-- configuración numeraciones -->
+
+
+    <script src="js/vendor/libraries.min.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

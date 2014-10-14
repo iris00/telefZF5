@@ -522,7 +522,8 @@ $button-bg-hover: #009eb8;
 // $button-round: $global-rounded;
 
 // We use this to set default opacity and cursor for disabled buttons.
-// $button-disabled-opacity: 0.7;
+$button-disabled-opacity: 0.4;
+
 // $button-disabled-cursor: $cursor-default-value;
 
 // 06. Button Groups
@@ -592,10 +593,11 @@ $f-dropdown-margin-top: 9px;
 // We use this to set the border styles for dropdowns.
 // $f-dropdown-border-style: solid;
 // $f-dropdown-border-width: 1px;
-$f-dropdown-border-color: $primary-color;
+$f-dropdown-border-color: $aluminum;
 
 // We use these to style the triangle pip.
-// $f-dropdown-triangle-size: 6px;
+$f-dropdown-triangle-size: 8px;
+
 // $f-dropdown-triangle-color: $white;
 // $f-dropdown-triangle-side-offset: 100px;
 
@@ -948,9 +950,9 @@ $off-canvas-overlay-background-hover: rgba(195, 195, 195, 0.3);
 
 // We use these to control the left/right nav styles
 // $orbit-nav-bg: transparent;
-// $orbit-nav-bg-hover: rgba(0,0,0,0.3);
-// $orbit-nav-arrow-color: $white;
-// $orbit-nav-arrow-color-hover: $white;
+$orbit-nav-bg-hover: transparent;
+$orbit-nav-arrow-color: $primary-color;
+$orbit-nav-arrow-color-hover: $secondary-color;
 
 // We use these to control the timer styles
 // $orbit-timer-bg: rgba(255,255,255,0.3);

@@ -8,6 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Configurador de Movistar Fusión Empresas">
     <title>Configurador MFE - Selección de sedes</title>
+    
+    <!-- Iconos de aplicación -->
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/chrome-touch-icon-192x192.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="Configurador de Movistar Fusión Empresas">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
     <!-- build:css css/libraries.min.css -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
     <!-- bower:css -->
@@ -22,7 +34,7 @@
     <!-- endbuild -->
 </head>
 
-<body class="sedes">
+<body class="puestos">
     <div class="row">
         <div class="off-canvas-wrap" data-offcanvas>
             <div class="inner-wrap">
@@ -58,9 +70,17 @@
                     <nav role="navigation">
                         <ul class="breadcrumbs breadconf">
                             <li class="large-2 medium-2 small-4 columns current">
-                                <a href="#" title="Sede"><i class="fa fa-building-o"></i></a>
+                                <a href="sedes.html" title="Sede"><i class="fa fa-building-o"></i></a>
                             </li>
                             <li class="large-2 medium-2 small-4 columns current">
+                                <a href="puestos-moviles.html" title="Puestos móviles">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-user fa-stack-2x"></i>
+                                        <i class="fa fa-mobile fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns activo">
                                 <a href="#" title="Puestos fijos">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-user fa-stack-2x"></i>
@@ -69,14 +89,7 @@
                                 </a>
                                 </a>
                             </li>
-                            <li class="large-2 medium-2 small-4 columns activo">
-                                <a href="#" title="Puestos móviles">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-user fa-stack-2x"></i>
-                                        <i class="fa fa-mobile fa-stack-1x"></i>
-                                    </span>
-                                </a>
-                            </li>
+
                             <li class="large-2 medium-2 small-4 columns">
                                 <a href="#" title="Presencia en internet">
                                     <span class="fa-stack fa-lg">
@@ -101,7 +114,7 @@
                 <aside class="left-off-canvas-menu">
                     <ul class="off-canvas-list">
                         <li class="off-canvas-head">
-                            Manuel Beltrán Pérez
+                            <p>Manuel Beltrán Pérez</p>
                             <select name="perfil">
                                 <option value="">Comercial</option>
                                 <option value="">Otro perfil</option>
@@ -131,14 +144,12 @@
                     <article class="row" data-equalizer>
                         <div class="contenido medium-8 columns" data-equalizer-watch>
                             <form action="accesorios.html">
-                                <table class="puestos-fijos">
+                                <table class="puestos">
                                     <caption>Listado de puestos fijos</caption>
                                     <thead>
                                         <tr>
                                             <th>
-                                                <label id="check-all" class="cb-checkbox cb-md" title="Marcar / desmarcar todos">
-                                                    <input type="checkbox" name="check-all">
-                                                </label>
+                                                <input id="checkAll" type="checkbox" name="" title="Marcar / desmarcar todos">
                                             </th>
                                             <th></th>
                                             <th>Numeración</th>
@@ -150,9 +161,7 @@
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <label class="cb-checkbox cb-md">
-                                                    <input type="checkbox">
-                                                </label>
+                                                <input type="checkbox">
                                             </td>
                                             <td class="numeros">1</td>
                                             <td>
@@ -170,15 +179,30 @@
                                                     <option value="">Puesto avanzado 3</option>
                                                 </select>
                                             </td>
-                                            <td><a href="#"><i class="fa fa-plus-circle"></i></a>
+                                            <td>
+                                                <a href="nuevo-puesto-fijo.html" data-dropdown="svas1" aria-controls="svas1" aria-expanded="false"><i class="fa fa-plus-circle"></i></a>
+                                                <div id="svas1" data-dropdown-content class="f-dropdown content small row" aria-hidden="true" tabindex="-1">
+                                                    <div class="large-12 columns">
+                                                        <input type="checkbox">CCUU con fijo
+                                                        <span class="coste">12&euro;</span>
+                                                    </div>
+                                                    <div class="large-8 columns">
+                                                        <select>
+                                                            <option value="">Bono 100</option>
+                                                            <option value="">Bono 2</option>
+                                                            <option value="">Bono 3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="large-4 columns">
+                                                        <span class="numeros">6&euro;</span>
+                                                    </div>
+                                                </div>
                                             </td>
                                             <td class="numeros">15&euro;</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <label class="cb-checkbox cb-md">
-                                                    <input type="checkbox">
-                                                </label>
+                                                <input type="checkbox">
                                             </td>
                                             <td class="numeros">2</td>
                                             <td>
@@ -196,15 +220,30 @@
                                                     <option value="">Puesto avanzado 3</option>
                                                 </select>
                                             </td>
-                                            <td><a href="#"><i class="fa fa-plus-circle"></i></a>
+                                            <td>
+                                                <a href="#" data-dropdown="svas2" aria-controls="svas2" aria-expanded="false"><i class="fa fa-plus-circle"></i></a>
+                                                <div id="svas2" data-dropdown-content class="f-dropdown content small row" aria-hidden="true" tabindex="-1">
+                                                    <div class="large-12 columns">
+                                                        <input type="checkbox">CCUU con fijo
+                                                        <span class="coste">12&euro;</span>
+                                                    </div>
+                                                    <div class="large-8 columns">
+                                                        <select>
+                                                            <option value="">Bono 100</option>
+                                                            <option value="">Bono 2</option>
+                                                            <option value="">Bono 3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="large-4 columns">
+                                                        <span class="numeros">6&euro;</span>
+                                                    </div>
+                                                </div>
                                             </td>
                                             <td class="numeros">15&euro;</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <label class="cb-checkbox cb-md">
-                                                    <input type="checkbox">
-                                                </label>
+                                                <input type="checkbox">
                                             </td>
                                             <td class="numeros">3</td>
                                             <td>
@@ -228,9 +267,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <label class="cb-checkbox cb-md">
-                                                    <input type="checkbox">
-                                                </label>
+                                                <input type="checkbox">
                                             </td>
                                             <td class="numeros">4</td>
                                             <td>
@@ -250,35 +287,38 @@
                                             </td>
                                             <td><a href="#"><i class="fa fa-plus-circle"></i></a>
                                             </td>
-                                            <td class="numeros">111115&euro;</td>
+                                            <td class="numeros">15&euro;</td>
                                         </tr>
                                         <tr>
-                                            <td><a href="#"><i class="fa fa-cog fa-3x"></i></a></td>
-                                            <td></td>
                                             <td>
-                                                <a class="plus" href="#" title="Nuevo puesto" data-reveal-id="new-puesto" data-reveal-ajax="_nuevo-puesto.html">
+                                                <a href="#" title="Configuración de las numeraciones" data-reveal-id="pf-conf-numer" data-reveal-ajax="_pf-conf-numer.html"><i class="fa fa-gear fa-3x"></i></a>
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <a class="plus" href="nuevo-pf.html" title="Nuevo puesto fijo">
                                                     <i class="fa fa-plus"></i>
                                                 </a>
                                             </td>
                                             <td></td>
-                                            <td class="numeros">Total:</a>
-                                            </td>
-                                            <td class="numeros">111160&euro;</td>
+                                            <td class="numeros">Total:</td>
+                                            <td class="numeros">60&euro;</td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <!-- puestos-fijos -->
-                                <p class="otros-prod"><a href="#"><i class="fa fa-caret-right"></i> Otros productos</a></p>
+                                <p class="otros-prod"><a href="#"><i class="fa fa-caret-right"></i> Otros productos</a>
+                                </p>
                                 <div class="row botonera">
                                     <div class="large-12 columns text-right">
                                         <button type="reset" class="radius func-secondary tiny" title="Finalizar la configuración">Finalizar</button>
-                                        <button type="submit" class="radius tiny" title="Continuar con la configuración">Continuar</button>
+                                        <button type="submit" class="radius tiny" title="Continuar con la configuración" data-reveal-id="incompat" data-reveal-ajax="_incompat.html">Continuar</button>
                                     </div>
                                 </div>
                             </form>
                         </div>
-
                         <!-- contenido -->
+
                         <aside class="col-dcha medium-4 columns" role="complementary">
                             <div class="aside-right" data-equalizer-watch>
                                 <form class="puestos-fijos" action="action">
@@ -290,11 +330,11 @@
                                             <br>Configuración de grupo</h2>
                                     </header>
 
-                                    <div class="oper-tarif row">
-                                        <div class="small-5 columns">
+                                    <div class="oper-tarif clearfix">
+                                        <div class="small-6 columns">
                                             <label>Operación</label>
                                         </div>
-                                        <div class="small-7 columns">
+                                        <div class="small-6 columns">
                                             <select name="">
                                                 <option value="">Alta</option>
                                                 <option value="">Operación 2</option>
@@ -304,58 +344,76 @@
                                     </div>
                                     <!-- oper-tarif -->
 
-                                    <div class="telefonos">
-                                        <div class="scroll">
-                                            <div class="scrollbar">
-                                                <div class="track">
-                                                    <div class="thumb">
-                                                        <div class="end"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="viewport">
-                                                <div class="overview text-center">
-                                                    <div class="telefono">
-                                                        <img src="images/fijo1.png" alt="fijo">
-                                                        <p class="telef-tit">Puesto avanzado 1</p>
-                                                        <p class="telef-precio">7&euro;</p>
-                                                    </div>
-                                                    <div class="telefono">
-                                                        <img src="images/fijo1.png" alt="fijo">
-                                                        <p class="telef-tit">Puesto avanzado 2</p>
-                                                        <p class="telef-precio">7&euro;</p>
-                                                    </div>
-                                                    <div class="telefono">
-                                                        <img src="images/fijo1.png" alt="fijo">
-                                                        <p class="telef-tit">Puesto avanzado 3</p>
-                                                        <p class="telef-precio">7&euro;</p>
-                                                    </div>
-                                                    <div class="telefono">
-                                                        <img src="images/fijo1.png" alt="fijo">
-                                                        <p class="telef-tit">Puesto avanzado 4</p>
-                                                        <p class="telef-precio">7&euro;</p>
-                                                    </div>
-                                                    <div class="telefono">
-                                                        <img src="images/fijo1.png" alt="fijo">
-                                                        <p class="telef-tit">Puesto avanzado 5</p>
-                                                        <p class="telef-precio">7&euro;</p>
-                                                    </div>
-                                                    <div class="telefono">
-                                                        <img src="images/fijo1.png" alt="fijo">
-                                                        <p class="telef-tit">Puesto avanzado 6</p>
-                                                        <p class="telef-precio">7&euro;</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    <div class="visualizador">
+                                        <ul class="carrusel destacado text-center" data-orbit>
+                                            <li class="telefono" data-orbit-slide="headline-1">
+                                                <img src="images/fijo1.png" alt="fijo" title="Información del producto" data-dropdown="fijo1" data-options="align:left">
+                                                <p class="prod-tit">Puesto avanzado 1</p>
+                                                <p class="prod-precio">7&euro;</p>
+                                            </li>
+                                            <li class="telefono" data-orbit-slide="headline-2">
+                                                <img src="images/fijo1.png" alt="fijo" title="Información del producto" data-dropdown="fijo2" data-options="align:left">
+                                                <p class="prod-tit">Puesto avanzado 2</p>
+                                                <p class="prod-precio">12&euro;</p>
+                                            </li>
+                                            <li class="telefono" data-orbit-slide="headline-3">
+                                                <img src="images/fijo1.png" alt="fijo" title="Información del producto" data-dropdown="fijo3" data-options="align:left">
+                                                <p class="prod-tit">Puesto avanzado 3</p>
+                                                <p class="prod-precio">4&euro;</p>
+                                            </li>
+                                            <li class="telefono" data-orbit-slide="headline-4">
+                                                <img src="images/fijo1.png" alt="fijo" title="Información del producto" data-dropdown="fijo4" data-options="align:left">
+                                                <p class="prod-tit">Puesto avanzado 4</p>
+                                                <p class="prod-precio">23&euro;</p>
+                                            </li>
+                                            <li class="telefono" data-orbit-slide="headline-5">
+                                                <img src="images/fijo1.png" alt="fijo" title="Información del producto" data-dropdown="fijo5" data-options="align:left">
+                                                <p class="prod-tit">Puesto avanzado 5</p>
+                                                <p class="prod-precio">6&euro;</p>
+                                            </li>
+                                            <li class="telefono" data-orbit-slide="headline-6">
+                                                <img src="images/fijo1.png" alt="fijo" title="Información del producto" data-dropdown="fijo6" data-options="align:left">
+                                                <p class="prod-tit">Puesto avanzado 6</p>
+                                                <p class="prod-precio">1&euro;</p>
+                                            </li>
+                                        </ul>
+
+                                        <div id="fijo1" class="f-dropdown content small" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <h3>Puesto avanzado 1</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati asperiores, et, odit explicabo nesciunt temporibus sit inventore sapiente vitae a ipsum dicta deserunt repellat aut!</p>
                                         </div>
-                                        <!-- scroll -->
+
+                                        <div id="fijo2" class="f-dropdown content small" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <h3>Puesto avanzado 2</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda, ea. Illo et autem ad temporibus quibusdam minima!</p>
+                                        </div>
+
+                                        <div id="fijo3" class="f-dropdown content small" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <h3>Puesto avanzado 3</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque odit inventore praesentium incidunt.</p>
+                                        </div>
+
+                                        <div id="fijo4" class="f-dropdown content small" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <h3>Puesto avanzado 4</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur repellat quas nesciunt corrupti beatae impedit, dolore temporibus cum corporis recusandae quibusdam ex, obcaecati dignissimos consequuntur aspernatur consequatur quasi adipisci maxime, iste quod.</p>
+                                        </div>
+
+                                        <div id="fijo5" class="f-dropdown content small" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <h3>Puesto avanzado 5</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, doloribus, possimus!</p>
+                                        </div>
+
+                                        <div id="fijo6" class="f-dropdown content small" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <h3>Puesto avanzado 6</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda quo, amet iste dignissimos recusandae alias corporis nam accusantium dolore, sit in quod commodi consequuntur ut iure. Sapiente esse ipsum quod ex error ipsam, impedit, maiores nam, pariatur molestias, nihil fugiat.</p>
+                                        </div>
                                     </div>
-                                    <!-- telefonos -->
+                                    <!-- visualizador carrusel -->
 
                                     <div class="svas">
                                         <p>SVAs</p>
                                         <div>
-                                            <label class="cb-checkbox cb-md">
+                                            <label>
                                                 <input type="checkbox">CCUU con fijo
                                                 <span class="coste">12&euro;</span>
                                             </label>
@@ -417,8 +475,15 @@
     <div id="new-client" class="medium reveal-modal" data-reveal></div>
     <!-- modal nuevo cliente -->
 
-    <div id="new-puesto" class="small reveal-modal" data-reveal></div>
-    <!-- modal puesto -->
+    <div id="svas1" class="tiny reveal-modal" data-reveal></div>
+    <!-- SVAS -->
+
+    <div id="pf-conf-numer" class="xlarge reveal-modal" data-reveal></div>
+    <!-- configuración numeraciones -->
+
+    <div id="incompat" class="small reveal-modal" data-reveal></div>
+    <!-- configuración numeraciones -->
+
 
     <!-- build:js js/vendor/libraries.min.js -->
     <!-- bower:js -->
@@ -438,7 +503,7 @@
         <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
         <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
     <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
-    <!-- <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>
     <!--    <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>

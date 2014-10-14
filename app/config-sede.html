@@ -8,6 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Configurador de Movistar Fusión Empresas">
     <title>Configurador MFE - Selección de sedes</title>
+    
+    <!-- Iconos de aplicación -->
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/chrome-touch-icon-192x192.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="Configurador de Movistar Fusión Empresas">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
     <!-- build:css css/libraries.min.css -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
     <!-- bower:css -->
@@ -55,16 +67,19 @@
                     </nav>
                     <!-- tab-bar -->
 
-                     <nav role="navigation">
-                         <ul class="breadcrumbs breadconf">
+                    <nav role="navigation">
+                        <ul class="breadcrumbs breadconf">
                             <li class="large-2 medium-2 small-4 columns activo">
                                 <a href="#" title="Sede"><i class="fa fa-building-o"></i></a>
                             </li>
                             <li class="large-2 medium-2 small-4 columns">
-                                <a href="#" title="Puestos fijos"><span class="fa-stack fa-lg">
-                                    <i class="fa fa-user fa-stack-2x"></i>
-                                    <i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i>
-                                </span></a></a>
+                                <a href="#" title="Puestos fijos">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-user fa-stack-2x"></i>
+                                        <i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                                </a>
                             </li>
                             <li class="large-2 medium-2 small-4 columns">
                                 <a href="#" title="Puestos móviles">
@@ -98,7 +113,7 @@
                 <aside class="left-off-canvas-menu">
                     <ul class="off-canvas-list">
                         <li class="off-canvas-head">
-                            Manuel Beltrán Pérez
+                            <p>Manuel Beltrán Pérez</p>
                             <select name="perfil">
                                 <option value="">Comercial</option>
                                 <option value="">Otro perfil</option>
@@ -129,7 +144,7 @@
                         <div class="contenido large-12 columns">
                             <form class="conf">
                                 <div class="row">
-                                    <div class="large-6 columns"> 
+                                    <div class="large-6 columns">
                                         <h2>Puestos fijos</h2>
                                         <table class="conf-sede">
                                             <caption>Listado de Clientes</caption>
@@ -194,7 +209,7 @@
                                                     </select>
                                                 </td>
                                                 <td class="medium-2 columns">
-                                                     <select name="" id="">
+                                                    <select name="" id="">
                                                         <option value="">634543452</option>
                                                         <option value=""></option>
                                                         <option value=""></option>
@@ -206,7 +221,8 @@
                                                 </td>
                                             </tr>
                                         </table>
-                                     </div><!-- primer bloque izda. -->
+                                    </div>
+                                    <!-- primer bloque izda. -->
 
                                     <div class="large-6 columns">
                                         <h2>Puestos móviles</h2>
@@ -267,7 +283,7 @@
                                                     <input type="text" value="654543452">
                                                 </td>
                                                 <td class="medium-2 columns">
-                                                     <select name="" id="">
+                                                    <select name="" id="">
                                                         <option value="">Operador</option>
                                                         <option value=""></option>
                                                         <option value=""></option>
@@ -295,7 +311,7 @@
                                                     <input type="text" value="634543452">
                                                 </td>
                                                 <td class="medium-2 columns">
-                                                     <select name="" id="">
+                                                    <select name="" id="">
                                                         <option value="">Titular 1</option>
                                                         <option value=""></option>
                                                         <option value=""></option>
@@ -345,8 +361,10 @@
                                                 </td>
                                             </tr>
                                         </table>
-                                    </div><!-- segundo bloque dcha. -->
-                                </div><!-- primera fila -->
+                                    </div>
+                                    <!-- segundo bloque dcha. -->
+                                </div>
+                                <!-- primera fila -->
 
                                 <div class="row">
                                     <div class="large-6 columns end">
@@ -371,8 +389,10 @@
                                                 </td>
                                             </tr>
                                         </table>
-                                    </div><!-- tercer bloque izda. -->
-                                </div><!-- segunda fila -->
+                                    </div>
+                                    <!-- tercer bloque izda. -->
+                                </div>
+                                <!-- segunda fila -->
                             </form>
 
                             <div class="row botonera">

@@ -12,19 +12,49 @@ input[type="text"][data-invalid] {
 }
 
 // Formularios en general
-label {
-    cursor: default;
+.postfix.button {
+    height: rem-calc(30);
+    line-height: rem-calc(30);
 }
 
-select,
-select:hover {
+input[type="text"] {
+    padding: rem-calc(2) rem-calc(4);
+    height: rem-calc(30);
+}
+
+label {
+    cursor: default;
+    line-height: rem-calc(30);
+}
+
+input[type=checkbox] {
+    margin-right: rem-calc(10);
+}
+
+select {
+    padding: rem-calc(2) rem-calc(4);
+    height: rem-calc(30);
+    background-color: transparent;
+}
+
+select, select:hover {
     -moz-appearance: none;
     text-indent: 0.01px;
     text-overflow: '';
     cursor: pointer;
     border-color: $iron;
-    background-color: transparent;
+    //background-color: transparent;
     border-radius: 4px;
+}
+
+select[multiple] {
+    height: auto;
+    max-height: 100px;
+}
+
+option {
+    padding: rem-calc(4) 0 rem-calc(4) rem-calc(6);
+    background-color: $white;
 }
 
 .off-canvas-list {
@@ -46,21 +76,12 @@ select:hover {
 //     border: 1px solid #555 !important;
 //     margin-right: 10px;
 // }
-
 // input[type="checkbox"]:checked {
 //     background: #abd;
 // }
-
-option {
-    padding: rem-calc(10);
-    line-height: rem-calc(20);
-    background-color: $white;
-}
-
 .botonera {
     padding: rem-calc(15) 0;
-    .button,
-    button {
+    .button, button {
         font-family: "robotothin", Helvetica, Arial, sans-serif;
         margin-bottom: 0;
     }
@@ -73,21 +94,24 @@ option {
             background-color: #7d7d7d;
         }
     }
+    .close-reveal-modal {
+        font-size: rem-calc(14);
+        position: static;
+        line-height: normal;
+    }
 }
 
 // Formularios Ofertas
-.ofertas,
-.sedes {
-    label,
-    .label {
+.ofertas, .sedes, .puestos {
+    label, .label {
         background-color: $third-color;
         text-align: center;
         font-size: rem-calc(16);
         font-family: 'robotoregular';
-        line-height: rem-calc(37);
+        //line-height: rem-calc(37);
+   
     }
-    label span,
-    .label span {
+    label span, .label span {
         display: inline;
     }
 }
@@ -104,7 +128,6 @@ option {
         text-align: right;
     }
     select {
-        margin-bottom: 0;
         font-family: 'robotoregular';
         font-size: rem-calc(16);
     }
@@ -119,12 +142,16 @@ option {
 }
 
 // Formularios puestos-fijos
-.puestos-fijos {
-    label {
-        background-color: transparent;
-    }
+.puestos {
     select {
         margin-bottom: 0;
+    }
+    .search-filter select {
+        margin-bottom: rem-calc(16);
+    }
+    input[type="checkbox"] {
+        margin-bottom: 0;
+        margin-top: 10px;
     }
 }
 
@@ -147,15 +174,10 @@ option {
         padding-top: 0;
         padding-bottom: 0;
     }
-    label,
-    .label,
-    input[type="text"],
-    button,
-    .button {
+    label, .label, input[type="text"], button, .button {
         margin-bottom: 0;
     }
-    label,
-    .label {
+    label, .label {
         color: $oil;
         font-size: rem-calc(14);
         line-height: rem-calc(25);
@@ -165,8 +187,7 @@ option {
         padding: rem-calc(2);
         height: auto;
     }
-    button,
-    .button {
+    button, .button {
         padding: rem-calc(3) rem-calc(15);
         font-size: rem-calc(14);
     }

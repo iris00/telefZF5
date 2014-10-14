@@ -45,6 +45,10 @@
     }
 }
 
+.f-dropdown {
+    box-shadow: 0 0 3px 3px hsla(0, 0%, 0%, 0.15);
+}
+
 // Columna derecha
 .col-dcha {
     .aside-right {
@@ -60,6 +64,7 @@
         background-color: $third-color;
         padding: rem-calc(10) rem-calc(20) rem-calc(2);
         color: $white;
+        min-height: rem-calc(55);
         .trash .fa {
             float: right;
             color: $white;
@@ -109,36 +114,17 @@
             font-family: 'robotoregular';
         }
     }
-    // Scroll teléfonos
-    .telefonos {
-        background-color: $gainsboro;
-        padding: rem-calc(10);
-        font-family: 'robotoregular';
-        p {
-            margin-bottom: 0;
-            padding: 0 rem-calc(20);
-        }
-        .telef-tit,
-        .telef-precio {
-            font-size: rem-calc(22);
-            line-height: rem-calc(30);
-        }
-        .telef-tit {
-            color: $aluminum;
-        }
-        .telef-precio {
-            color: $charcoal;
-        }
-    }
     // SVAs
     .svas {
+        padding-bottom: rem-calc(20);
+        border-top: 1px solid $gainsboro;
         p,
         div {
             text-align: center;
         }
         p:nth-child(1) {
             font-size: rem-calc(20);
-            margin: rem-calc(20);
+            margin: 0;
             padding: rem-calc(10) 0;
             font-family: 'robotoregular';
             color: $charcoal;
@@ -159,47 +145,55 @@
     }
     // oper-tarif
     .oper-tarif {
-        padding: rem-calc(20) rem-calc(40);
+        padding: rem-calc(20) rem-calc(40) 0;
         label {
             text-align: left;
+            color: $steel;
+        }
+        select {
+            margin-bottom: rem-calc(10);
+        }
+        &.destacado {
+            background-color: $gainsboro;
         }
     }
     // Heco
     .heco {
         position: relative;
         p {
-            margin-bottom: 0;
+            //margin-bottom: 0;
             padding-bottom: 0;
             color: $monsoon;
         }
-        .accordion a {
-            background-color: transparent;
-            font-size: rem-calc(16);
-            padding: rem-calc(5) rem-calc(20) rem-calc(5) rem-calc(40);
-            color: $oil;
-        }
-        .accordion .content p {
-            padding: 0;
-            //margin-bottom: rem-calc(15);
-            //font-size: rem-calc(16);
-            line-height: rem-calc(20);
-            display: block;
-        }
-        .accordion a:before {
-            position: relative;
-            font-family: FontAwesome;
-            top: 0;
-            left: rem-calc(-20);
-            content: "\f04b";
-            font-size: rem-calc(14);
-            display: inline-block;
-        }
-        .accordion .active a:before {
-            transform: rotate(90deg);
-        }
-        .accordion a .right {
-            color: $monsoon;
-        }
+        // .accordion a {
+        //     background-color: transparent;
+        //     font-size: rem-calc(16);
+        //     padding: rem-calc(5) rem-calc(20) rem-calc(5) rem-calc(40);
+        //     color: $oil;
+        // }
+        // .accordion .content p {
+        //     padding: 0;
+        //     //margin-bottom: rem-calc(15);
+        //     //font-size: rem-calc(16);
+        //     line-height: rem-calc(20);
+        //     display: block;
+        // }
+        // .accordion a:before {
+        //     position: relative;
+        //     font-family: FontAwesome;
+        //     top: 0;
+        //     left: rem-calc(-20);
+        //     content: "\f04b";
+        //     font-size: rem-calc(14);
+        //     display: inline-block;
+        // }
+        // .accordion .active a:before {
+        //     transform: rotate(90deg);
+        // }
+        // .accordion a .right {
+        //     color: $monsoon;
+        // }
+   
     }
     .contrato {
         background-color: $third-color;

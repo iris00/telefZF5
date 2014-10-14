@@ -2,16 +2,19 @@
 
 // Alert boxes
 .alert-box {
-  font-family: 'robotothin';
-  font-size: rem-calc(15);
-  background-color: #009eb8;
-  display: inline-block;
-  position: absolute;
-  left: 120px;
-  top: 10px;
+    font-size: rem-calc(15);
+    background-color: #009eb8;
+    display: inline-block;
+    position: absolute;
+    left: 130px;
+    top: 10px;
+}
+
+.sedes .alert-box {
+    left: 30px;
 }
 
 .alert-box.filtro {
-  background-color: $filter-color;
-  color: $oil;
+    background-color: $filter-color;
+    color: $oil;
 }

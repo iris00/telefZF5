@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+// Carrusel teléfonos
+.carrusel {
+    padding: rem-calc(10);
+    font-family: 'robotoregular';
+    min-height: 140px;
+    &.destacado {
+        background-color: $gainsboro;
+    }
+    li {
+        min-height: 140px;
+    }
+    img {
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    p {
+        margin-bottom: 0;
+        padding: 0 rem-calc(20);
+    }
+    .prod-tit,
+    .prod-precio {
+        font-size: rem-calc(22);
+        line-height: rem-calc(30);
+    }
+    .prod-tit {
+        color: $aluminum;
+    }
+    .prod-precio {
+        color: $charcoal;
+    }
+}
+
+.orbit-container .orbit-prev,
+.orbit-container .orbit-next {
+    top: 35%;
+}
+
+.visualizador .content {
+    h3 {
+        font-size: rem-calc(20);
+    }
+    p {
+        padding: 0;
+    }
+}

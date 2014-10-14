@@ -8,6 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Configurador de Movistar Fusión Empresas">
     <title>Configurador MFE - Selección de sedes</title>
+    
+    <!-- Iconos de aplicación -->
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/chrome-touch-icon-192x192.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="Configurador de Movistar Fusión Empresas">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
     <link rel="stylesheet" href="css/libraries.min.css">
     <link rel="stylesheet" href="css/app.min.css">
     <script src="js/vendor/modernizr.min.js"></script>
@@ -46,67 +58,57 @@
                     </nav>
                     <!-- tab-bar -->
 
-                    <ul class="breadcrumbs breadconf row" role="menubar">
-                        <li class="activo">
-                            <a href="#" title="Sede"><i class="fa fa-building-o"></i>
-                        </li>
-                        <li>
-                            <a href="#" title="Puestos fijos"><span class="fa-stack fa-lg">
-                                <i class="fa fa-user fa-stack-2x"></i>
-                                <i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i>
-                            </span></a></a>
-                        </li>
-                        <li>
-                            <a href="#" title="Puestos móviles"><span class="fa-stack fa-lg">
-                                <i class="fa fa-user fa-stack-2x"></i>
-                                <i class="fa fa-mobile fa-stack-1x"></i>
-                            </span></a>
-                        </li>
-                        <li>
-                            <a href="#" title="Conectividad"><span class="fa-stack fa-lg paralelo">
-                                <i class="fa fa-phone fa-stack-2x fa-rotate-45"></i>
-                                <i class="fa fa-plus fa-stack-2x"></i>
-                                <i class="fa fa-mobile fa-stack-2x"></i>
-                            </span></a>
-                        </li>
-                        <li>
-                            <a href="#" title="Productividad"><span class="fa-stack fa-lg">
-                                <i class="fa fa-user fa-stack-2x"></i>
-                                <i class="fa fa-desktop fa-stack-1x"></i>
-                            </span></a>
-                        </li>
-                        <li>
-                            <a href="#" title="Presencia en internet"><span class="fa-stack fa-lg">
-                                <i class="fa fa-4x fa-building-o fa-stack-2x"></i>
-                                <i class="fa fa-fighter-jet fa-stack-1x"></i>
-                            </span></a>
-                        </li>
-                        <li>
-                            <a href="#" title="Seguridad"><i class="fa fa-desktop"></i></a>
-                        </li>
-                        <li class="current">
-                            <a href="resumen-sedes.html" title="Precio total de la oferta"><i class="fa fa-shopping-cart"></i>
-                            1744 &euro;</a>
-                        </li>
-                    </ul>
+                    <nav role="navigation">
+                        <ul class="breadcrumbs breadconf">
+                            <li class="large-2 medium-2 small-4 columns activo">
+                                <a href="#" title="Sede"><i class="fa fa-building-o"></i></a>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns">
+                                <a href="#" title="Puestos fijos">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-user fa-stack-2x"></i>
+                                        <i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                                </a>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns">
+                                <a href="#" title="Puestos móviles">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-user fa-stack-2x"></i>
+                                        <i class="fa fa-mobile fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns">
+                                <a href="#" title="Presencia en internet">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-4x fa-building-o fa-stack-2x"></i>
+                                        <i class="fa fa-fighter-jet fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns">
+                                <a href="#" title="Seguridad"><i class="fa fa-desktop"></i></a>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns current">
+                                <a href="resumen-sedes.html" title="Precio total de la oferta"><i class="fa fa-shopping-cart"></i>
+                                1744&euro;</a>
+                            </li>
+                        </ul>
+                    </nav>
                     <!-- breadcrumbs -->
                 </header>
 
                 <aside class="left-off-canvas-menu">
                     <ul class="off-canvas-list">
                         <li class="off-canvas-head">
-                            Manuel Beltrán Pérez
-                            <br>
-                            <button data-dropdown="perfil" aria-controls="drop2" aria-expanded="false" class="button dropdown">Comercial</button>
-                            <br>
-                            <ul id="perfil" data-dropdown-content class="f-dropdown" aria-hidden="true">
-                                <li><a href="#">Comercial</a>
-                                </li>
-                                <li><a href="#">Otro perfil</a>
-                                </li>
-                                <li><a href="#">Otro perfil más</a>
-                                </li>
-                            </ul>
+                            <p>Manuel Beltrán Pérez</p>
+                            <select name="perfil">
+                                <option value="">Comercial</option>
+                                <option value="">Otro perfil</option>
+                                <option value="">Otro perfil más</option>
+                            </select>
                         </li>
                         <li><a href="#"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
                         </li>
@@ -136,7 +138,7 @@
                                         <div class="panel row">
                                             <h2>Puestos fijos</h2>
                                             <div class="small-6 columns">
-                                                <a href="#">
+                                                <a href="puestos-fijos.html">
                                                     <span class="fa-stack fa-lg">
                                                         <i class="fa fa-user fa-stack-2x"></i>
                                                         <i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i>
@@ -153,13 +155,14 @@
                                             </div>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis sint, voluptates architecto quas esse quasi.</p>
                                         </div>
-                                    </div><!-- fila 1 col 1 -->
+                                    </div>
+                                    <!-- fila 1 col 1 -->
 
                                     <div class="large-4 columns">
                                         <div class="panel row">
                                             <h2>Puestos móviles</h2>
                                             <div class="small-6 columns">
-                                                <a href="#">
+                                                <a href="puestos-moviles.html">
                                                     <span class="fa-stack fa-lg">
                                                         <i class="fa fa-user fa-stack-2x"></i>
                                                         <i class="fa fa-mobile fa-stack-1x"></i>
@@ -176,7 +179,8 @@
                                             </div>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis sint, voluptates architecto quas esse quasi.</p>
                                         </div>
-                                    </div><!-- fila 1 col 2 -->
+                                    </div>
+                                    <!-- fila 1 col 2 -->
 
                                     <div class="large-4 columns">
                                         <div class="panel row">
@@ -192,8 +196,10 @@
                                         <div class="r-s-margen">
                                             <p class="conectiv">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis sint, voluptates architecto quas esse quasi.</p>
                                         </div>
-                                    </div><!-- fila 1 col 3 -->
-                                </div><!-- row -->
+                                    </div>
+                                    <!-- fila 1 col 3 -->
+                                </div>
+                                <!-- row -->
 
                                 <div class="row">
                                     <div class="large-4 columns">
@@ -214,7 +220,8 @@
                                             </div>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis sint, voluptates architecto quas esse quasi.</p>
                                         </div>
-                                    </div><!-- fila 2 col 1 -->
+                                    </div>
+                                    <!-- fila 2 col 1 -->
 
                                     <div class="large-4 columns">
                                         <div class="panel row">
@@ -234,7 +241,8 @@
                                             </div>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis sint, voluptates architecto quas esse quasi.</p>
                                         </div>
-                                    </div><!-- fila 2 col 2 -->
+                                    </div>
+                                    <!-- fila 2 col 2 -->
 
                                     <div class="large-4 columns">
                                         <div class="panel row">
@@ -254,8 +262,10 @@
                                             </div>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis sint, voluptates architecto quas esse quasi.</p>
                                         </div>
-                                    </div><!-- fila 2 col 3 -->
-                                </div><!-- row -->
+                                    </div>
+                                    <!-- fila 2 col 3 -->
+                                </div>
+                                <!-- row -->
                             </form>
 
                             <div class="row botonera">
@@ -313,7 +323,7 @@
 
     <div id="new-client" class="medium reveal-modal" data-reveal></div>
     <!-- modal nuevo cliente -->
-    
+
     <script src="js/vendor/libraries.min.js"></script>
     <script src="js/vendor/foundation.min.js"></script>
     <script src="js/app.min.js"></script>

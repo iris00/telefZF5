@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+// Select costumizados necesita un div y falla en FF30 porque necesita un color de fondo para tapar el "caret" línea 71
+// de http://jsbin.com/vehivaxoxemo/1/edit
+.custom-select {
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid $iron;
+    // -webkit-box-sizing: border-box;
+    // -moz-box-sizing: border-box;
+    // box-sizing: border-box;
+    //margin: 0 0 2em;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.custom-select:hover {
+    border-color: #999;
+}
+
+.custom-select:before {
+    color: #333;
+    display: block;
+    font-family: 'FontAwesome';
+    font-size: 1em;
+    height: 100%;
+    line-height: 2.5em;
+    padding: 0 0.625em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    width: 1.6em;
+    z-index: -1;
+}
+
+.custom-select select {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0 none;
+    box-shadow: none;
+    color: #333;
+    display: block;
+    font-size: 100%;
+    line-height: normal;
+    margin: 0;
+    padding: .5em;
+    width: 100%;
+    // -webkit-box-sizing: border-box;
+    // -moz-box-sizing: border-box;
+    // box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.custom-select select::-ms-expand {
+    display: none;
+    /* to ie 10 */
+}
+
+.custom-select select:focus {
+    outline: none;
+}
+
+/* little trick for custom select elements in mozilla firefox  17/06/2014 @rodrigoludgero */
+
+/* pseudo class https://developer.mozilla.org/en-US/docs/Web/CSS/:any */
+
+:-moz-any(.custom-select):before {
+    background-color: #fff;
+    /* this is necessary for overcome the caret default browser */
+    pointer-events: none;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events  */
+    z-index: 1;
+    /* this is necessary for overcome the pseudo element */
+}

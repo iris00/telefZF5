@@ -8,6 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Configurador de Movistar Fusión Empresas">
     <title>Configurador MFE - Selección de sedes</title>
+    
+    <!-- Iconos de aplicación -->
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/chrome-touch-icon-192x192.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="Configurador de Movistar Fusión Empresas">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
     <!-- build:css css/libraries.min.css -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
     <!-- bower:css -->
@@ -70,7 +82,7 @@
                                 <option value="">Otro perfil más</option>
                             </select>
                         </li>
-                        <li><a href="#" ><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
+                        <li><a href="#"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
                         </li>
                         <li><a href="#" data-reveal-id="informes" data-reveal-ajax="_informes.html"><i class="fa fa-bar-chart fa-2x"></i> Crear informes</a>
                         </li>
@@ -90,8 +102,8 @@
                 <!-- left-off-canvas-menu -->
 
                 <section class="main-section" role="main">
-                    <article class="row">
-                        <div class="contenido medium-8 columns">
+                    <article class="row" data-equalizer>
+                        <div class="contenido medium-8 columns" data-equalizer-watch>
                             <a class="plus" href="#" title="Nueva oferta" data-reveal-id="new-ofert" data-reveal-ajax="_nueva-oferta.html">
                                 <i class="fa fa-plus"></i>
                             </a>
@@ -190,7 +202,7 @@
                         </div>
                         <!-- contenido -->
                         <aside class="col-dcha medium-4 columns" role="complementary">
-                            <div class="aside-right">
+                            <div class="aside-right" data-equalizer-watch>
                                 <header>
                                     <a class="trash" href="#" title="Eliminar">
                                         <i class="fa fa-trash-o"></i>
@@ -220,34 +232,10 @@
                                 <!-- factur -->
 
                                 <div class="heco">
-                                    <p>Comentarios HECO</p>
-                                    <dl data-accordion class="accordion">
-                                        <dd class="accordion-navigation active">
-                                            <a href="#panel1">Alta Móvil <span class="right">26/05/14</span></a>
-                                            <div class="content active" id="panel1">
-                                                <p>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada, integer vivamus elit eu mauris eu, cum eros quis aliquam nisl wisi.</p>
-                                            </div>
-                                        </dd>
-                                        <dd class="accordion-navigation">
-                                            <a href="#panel2">Integra <span class="right">26/05/14</span></a>
-                                            <div class="content" id="panel2">
-                                                <p>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada, integer vivamus elit eu mauris eu, cum eros quis aliquam nisl wisi.</p>
-                                            </div>
-                                        </dd>
-                                        <dd class="accordion-navigation">
-                                            <a href="#panel3">Conectividad <span class="right">24/05/14</span></a>
-                                            <div class="content" id="panel3">
-                                                <p>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada, integer vivamus elit eu mauris eu, cum eros quis aliquam nisl wisi.</p>
-                                            </div>
-                                        </dd>
-                                        <dd class="accordion-navigation">
-                                            <a href="#panel4">Mantenimiento <span class="right">22/05/14</span></a>
-                                            <div class="content" id="panel4">
-                                                <p>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada, integer vivamus elit eu mauris eu, cum eros quis aliquam nisl wisi.</p>
-                                            </div>
-                                        </dd>
-                                    </dl>
-                                    <!-- accordion -->
+                                    <p>Comentarios HECO
+                                        <span class="right">26/05/14</span>
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada, integer vivamus elit eu mauris eu, cum eros quis aliquam nisl wisi.</p>
                                 </div>
                                 <!-- heco -->
                                 <div class="contrato">
@@ -332,8 +320,8 @@
     <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
     <!-- <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script> -->
     <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
-    <!-- <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>
-        <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>
+    <!--    <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
         <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
         <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script> -->
     <!-- endbuild -->

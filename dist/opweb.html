@@ -8,6 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Configurador de Movistar Fusión Empresas">
     <title>Configurador MFE - Selección de sedes</title>
+    
+    <!-- Iconos de aplicación -->
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/chrome-touch-icon-192x192.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="Configurador de Movistar Fusión Empresas">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
     <link rel="stylesheet" href="css/libraries.min.css">
     <link rel="stylesheet" href="css/app.min.css">
     <script src="js/vendor/modernizr.min.js"></script>
@@ -43,24 +55,13 @@
 
                 <aside class="left-off-canvas-menu">
                     <ul class="off-canvas-list">
-                        <!-- <li class="off-canvas-head clearfix">
-                            <a href="index.html" title="Inicio" class="home left">
-                                <i class="fa fa-home fa-2x"></i>
-                            </a>
-                        </li> -->
                         <li class="off-canvas-head">
-                            Usuario: T661403
-                            <br>
-                            <button data-dropdown="perfil" aria-controls="perfil" aria-expanded="false" class="button dropdown">Administrador</button>
-                            <br>
-                            <ul id="perfil" data-dropdown-content class="f-dropdown" aria-hidden="true">
-                                <li><a href="#">Comercial</a>
-                                </li>
-                                <li><a href="#">Otro perfil</a>
-                                </li>
-                                <li><a href="#">Otro perfil más</a>
-                                </li>
-                            </ul>
+                            <p>Manuel Beltrán Pérez</p>
+                            <select name="perfil">
+                                <option value="">Comercial</option>
+                                <option value="">Otro perfil</option>
+                                <option value="">Otro perfil más</option>
+                            </select>
                         </li>
                         <li><a href="#"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
                         </li>
@@ -72,8 +73,10 @@
                         </li>
                         <li><a href="#"><i class="fa fa-gears fa-2x"></i> Administración</a>
                         </li>
-                    </ul><!-- off-canvas-list -->
-                </aside><!-- left-off-canvas-menu -->
+                    </ul>
+                    <!-- off-canvas-list -->
+                </aside>
+                <!-- left-off-canvas-menu -->
 
                 <section role="main" class="main-section">
                     <article class="row">
@@ -120,29 +123,35 @@
                                         <div class="row">
                                             <div class="small-4 columns">
                                                 <label>Líneas actuales
-                                                <input type="text"></label>
+                                                    <input type="text">
+                                                </label>
                                             </div>
                                             <div class="small-4 columns">
                                                 <label>Facturación actual
-                                                <input type="text"></label>
+                                                    <input type="text">
+                                                </label>
                                             </div>
                                             <div class="small-4 columns">
                                                 <label>Porcentaje de descuento actual
-                                                <input type="text"></label>
+                                                    <input type="text">
+                                                </label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="small-4 columns">
                                                 <label>Líneas propuestas
-                                                <input type="text"></label>
+                                                    <input type="text">
+                                                </label>
                                             </div>
                                             <div class="small-4 columns">
                                                 <label>Facturación proporcional
-                                                <input type="text"></label>
+                                                    <input type="text">
+                                                </label>
                                             </div>
                                             <div class="small-4 columns">
                                                 <label>Porcentaje de descuento proporcional
-                                                <input type="text"></label>
+                                                    <input type="text">
+                                                </label>
                                             </div>
                                         </div>
                                     </form>
@@ -164,11 +173,15 @@
 
                             <div class="panel tit">
                                 <h2>Título de panel</h2>
-                                <div class="panel-cont"><p>Contenido de panel con título</p></div>
+                                <div class="panel-cont">
+                                    <p>Contenido de panel con título</p>
+                                </div>
                                 <div class="panel tit">
-                                <h2>Título de panel anidado</h2>
-                                <div class="panel-cont"><p>Contenido de panel anidado con título</p></div>
-                            </div>
+                                    <h2>Título de panel anidado</h2>
+                                    <div class="panel-cont">
+                                        <p>Contenido de panel anidado con título</p>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>

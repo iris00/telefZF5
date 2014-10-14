@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+// Scroll
+.scroll {
+    width: 95%;
+    .viewport {
+        height: rem-calc(160);
+        overflow: hidden;
+        position: relative;
+    }
+    .overview {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    .scrollbar {
+        position: relative;
+        float: right;
+        width: rem-calc(4);
+        .track {
+            background-color: $base;
+            width: rem-calc(4);
+            position: relative;
+            border-radius: 2px;
+        }
+        .thumb {
+            background-color: $primary-color;
+            height: rem-calc(24);
+            width: rem-calc(24) !important;
+            border-radius: 50%;
+            cursor: pointer;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: rem-calc(-10);
+            &:hover {
+                background-color: scale-color($primary-color, $lightness: -12%);
+            }
+            .end {
+                overflow: hidden;
+                height: rem-calc(5);
+                width: rem-calc(25);
+            }
+        }
+    }
+    .disable {
+        display: none;
+    }
+}
+
+.noSelect {
+    user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
