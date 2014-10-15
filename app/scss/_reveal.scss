@@ -77,6 +77,37 @@
     }
 }
 
+form.selecc-red {
+    padding-top: rem-calc(5);
+    select {
+        margin-top: rem-calc(10);
+    }
+    .puertos {
+        background-color: $smoke;
+        margin-bottom: rem-calc(6);
+        &.activo,
+        &:hover {
+            background-color: $primary-color;
+        }
+        &.activo a,
+        &:hover a {
+            color: $white;
+        }
+        a {
+            display: inline-block;
+        }
+        a:nth-child(1) {
+            float: left;
+            margin-bottom: 0;
+            line-height: rem-calc(44);
+        }
+        a:nth-child(2) {
+            float: right;
+            margin-top: rem-calc(6);
+        }
+    }
+}
+
 .reveal-modal-bg {
     cursor: pointer;
 }

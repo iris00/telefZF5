@@ -56,7 +56,7 @@
                                 <a href="#" title="Información">
                                     <i class="fa fa-info-circle"></i>
                                 </a>
-                                <a href="#" title="Buscar con filtro avanzado" data-reveal-id="search-filter" data-reveal-ajax="_buscar-filtro.html">
+                                <a href="_buscar-filtro.html" title="Buscar con filtro avanzado" data-reveal-id="search-filter" data-reveal-ajax="true">
                                     <i class="fa fa-search-plus"></i>
                                 </a>
                                 <a href="index.html" title="Inicio">
@@ -73,15 +73,6 @@
                                 <a href="#" title="Sede"><i class="fa fa-building-o"></i></a>
                             </li>
                             <li class="large-2 medium-2 small-4 columns">
-                                <a href="#" title="Puestos fijos">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-user fa-stack-2x"></i>
-                                        <i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i>
-                                    </span>
-                                </a>
-                                </a>
-                            </li>
-                            <li class="large-2 medium-2 small-4 columns">
                                 <a href="#" title="Puestos móviles">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-user fa-stack-2x"></i>
@@ -90,7 +81,17 @@
                                 </a>
                             </li>
                             <li class="large-2 medium-2 small-4 columns">
-                                <a href="#" title="Presencia en internet">
+                                <a href="#" title="Puestos fijos">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-user fa-stack-2x"></i>
+                                        <i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                                </a>
+                            </li>
+
+                            <li class="large-2 medium-2 small-4 columns">
+                                <a href="#" title="Accesorios de sede">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-4x fa-building-o fa-stack-2x"></i>
                                         <i class="fa fa-fighter-jet fa-stack-1x"></i>
@@ -121,7 +122,7 @@
                         </li>
                         <li><a href="#"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
                         </li>
-                        <li><a href="#" data-reveal-id="informes" data-reveal-ajax="_informes.html"><i class="fa fa-bar-chart fa-2x"></i> Crear informes</a>
+                        <li><a href="_informes.html" data-reveal-id="informes" data-reveal-ajax="true"><i class="fa fa-bar-chart fa-2x"></i> Crear informes</a>
                         </li>
                         <li><a href="notificaciones.html"><i class="fa fa-bell-o"></i> Notificaciones</a>
                         </li>
@@ -279,7 +280,7 @@
 
                             <div class="row botonera">
                                 <div class="large-12 columns text-right">
-                                    <a class="plus" href="#" title="Crear nueva sede" data-reveal-id="new-sede" data-reveal-ajax="_nueva-sede.html">
+                                    <a class="plus" href="_nueva-sede.html" title="Crear nueva sede" data-reveal-id="new-sede" data-reveal-ajax="true">
                                         <i class="fa fa-plus"></i>
                                     </a>
                                     <form action="config-sede.html">
@@ -342,20 +343,20 @@
     <!-- build:js js/vendor/foundation.min.js -->
     <script src="bower_components/foundation/js/foundation/foundation.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script> -->
     <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
     <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
     <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
-    <!-- <script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
-        <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
-        <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
+<!--<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
     <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
-    <!-- <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>
-    <!--    <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
-        <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+    <!--    <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
         <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script> -->
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->

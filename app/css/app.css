@@ -5843,6 +5843,9 @@ th.hide-for-touch {
   font-family: 'robotoregular';
   color: #777777; }
 
+.aviso {
+  color: #dd181e; }
+
 .opweb .contenido {
   font-size: 0.875rem; }
 .opweb h2 {
@@ -5857,6 +5860,8 @@ th.hide-for-touch {
 
 .f-dropdown {
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.15); }
+  .f-dropdown:focus {
+    outline: 0; }
 
 .col-dcha .aside-right {
   min-height: 607px;
@@ -5995,6 +6000,26 @@ th.hide-for-touch {
     display: block;
     line-height: 1rem;
     padding: 0.625rem 0 0.9375rem; }
+
+.sede-accesor .sede-accesor-tit {
+  font-size: 1.25rem;
+  font-family: 'robotoregular';
+  color: #999999;
+  margin-bottom: 1.5rem;
+  display: block; }
+.sede-accesor .columns > .fa {
+  display: block;
+  margin-bottom: 0; }
+.sede-accesor .fa-stack {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  color: #666666; }
+.sede-accesor .fa-stack-1x.fa-fighter-jet {
+  margin-left: -0.5rem;
+  margin-top: 0.8125rem;
+  font-size: 1.375rem; }
+.sede-accesor .output.numeros {
+  font-size: 1.5625rem; }
 
 #search input[type="text"] {
   font-size: 1.125rem; }
@@ -6598,6 +6623,27 @@ input[type="text"][readonly].calendario {
     text-align: center;
     font-size: 1rem; }
 
+form.selecc-red {
+  padding-top: 0.3125rem; }
+  form.selecc-red select {
+    margin-top: 0.625rem; }
+  form.selecc-red .puertos {
+    background-color: #EEEEEE;
+    margin-bottom: 0.375rem; }
+    form.selecc-red .puertos.activo, form.selecc-red .puertos:hover {
+      background-color: #0080a6; }
+    form.selecc-red .puertos.activo a, form.selecc-red .puertos:hover a {
+      color: #F9F9F9; }
+    form.selecc-red .puertos a {
+      display: inline-block; }
+    form.selecc-red .puertos a:nth-child(1) {
+      float: left;
+      margin-bottom: 0;
+      line-height: 2.75rem; }
+    form.selecc-red .puertos a:nth-child(2) {
+      float: right;
+      margin-top: 0.375rem; }
+
 .reveal-modal-bg {
   cursor: pointer; }
 
@@ -6672,7 +6718,6 @@ option {
 .botonera {
   padding: 0.9375rem 0; }
   .botonera .button, .botonera button {
-    font-family: "robotothin", Helvetica, Arial, sans-serif;
     margin-bottom: 0; }
   .botonera .button.disabled {
     background-color: #CCCCCC; }

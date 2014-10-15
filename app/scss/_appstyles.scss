@@ -26,6 +26,10 @@
     color: $monsoon;
 }
 
+.aviso {
+    color: $alert-color;
+}
+
 // Opweb
 .opweb {
     .contenido {
@@ -47,6 +51,9 @@
 
 .f-dropdown {
     box-shadow: 0 0 3px 3px hsla(0, 0%, 0%, 0.15);
+    &:focus {
+        outline: 0;
+    }
 }
 
 // Columna derecha
@@ -263,6 +270,34 @@
             line-height: rem-calc(16);
             padding: rem-calc(10) 0 rem-calc(15);
         }
+    }
+}
+
+// Accesorios de sede
+.sede-accesor {
+    .sede-accesor-tit {
+        font-size: rem-calc(20);
+        font-family: 'robotoregular';
+        color: $aluminum;
+        margin-bottom: rem-calc(24);
+        display: block;
+    }
+    .columns > .fa {
+        display: block;
+        margin-bottom: rem-calc(0);
+    }
+    .fa-stack {
+        margin-bottom: rem-calc(24);
+        margin-top: rem-calc(24);
+        color: $steel;
+    }
+    .fa-stack-1x.fa-fighter-jet {
+        margin-left: rem-calc(-8);
+        margin-top: rem-calc(13);
+        font-size: rem-calc(22);
+    }
+    .output.numeros {
+        font-size: em-calc(25);
     }
 }
 
