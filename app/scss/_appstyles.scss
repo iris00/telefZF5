@@ -11,7 +11,7 @@
         top: rem-calc(-15);
         left: rem-calc(70);
         .fa {
-            padding: rem-calc(17) rem-calc(19);
+            padding: rem-calc(17 19);
             box-shadow: 0 0 5px $charcoal;
             background-color: $white;
             border-radius: 50%;
@@ -42,17 +42,21 @@
         padding: rem-calc(10);
     }
     .tit h2 {
-        margin: rem-calc(-10) rem-calc(-10) rem-calc(10) rem-calc(-10);
-        padding: rem-calc(5) rem-calc(10);
+        margin: rem-calc((-10) -10 10);
+        padding: rem-calc(5 10);
         background-color: $primary-color;
         color: $white;
     }
 }
 
 .f-dropdown {
-    box-shadow: 0 0 3px 3px hsla(0, 0%, 0%, 0.15);
+    box-shadow: 0 0 2px 2px hsla(0, 0%, 0%, 0.1);
     &:focus {
         outline: 0;
+    }
+    &.drop-left.open:before,
+    &.drop-left.open:after {
+        left: auto;
     }
 }
 
@@ -65,11 +69,11 @@
     }
     p {
         font-size: rem-calc(14);
-        padding: rem-calc(10) rem-calc(20);
+        padding: rem-calc(10 20);
     }
     header {
         background-color: $third-color;
-        padding: rem-calc(10) rem-calc(20) rem-calc(2);
+        padding: rem-calc(10 20 2);
         color: $white;
         min-height: rem-calc(55);
         .trash .fa {
@@ -87,7 +91,7 @@
         }
         .trash {
             position: absolute;
-            right: 40px;
+            right: 30px;
             top: 15px;
         }
     }
@@ -132,7 +136,7 @@
         p:nth-child(1) {
             font-size: rem-calc(20);
             margin: 0;
-            padding: rem-calc(10) 0;
+            padding: rem-calc(10 0);
             font-family: 'robotoregular';
             color: $charcoal;
         }
@@ -152,7 +156,7 @@
     }
     // oper-tarif
     .oper-tarif {
-        padding: rem-calc(20) rem-calc(40) 0;
+        padding: rem-calc(20 40 0);
         label {
             text-align: left;
             color: $steel;
@@ -175,7 +179,7 @@
         // .accordion a {
         //     background-color: transparent;
         //     font-size: rem-calc(16);
-        //     padding: rem-calc(5) rem-calc(20) rem-calc(5) rem-calc(40);
+        //     padding: rem-calc(5 20 5 40);
         //     color: $oil;
         // }
         // .accordion .content p {
@@ -216,11 +220,11 @@
         }
     }
     .estado {
-        padding: rem-calc(20) rem-calc(10) 0;
+        padding: rem-calc(20 10);
         background-color: $gainsboro;
         .button.small {
             font-size: rem-calc(16);
-            padding: rem-calc(7) rem-calc(28) rem-calc(8);
+            padding: rem-calc(4 28 3);
         }
     }
 }
@@ -230,7 +234,7 @@
     ul {
         list-style-type: none;
         font-size: rem-calc(20);
-        padding: rem-calc(30) rem-calc(10) 0 rem-calc(30);
+        padding: rem-calc(30 10 0 30);
         li {
             background: transparent url("../images/linea-notific.png") 6px 10px no-repeat;
             padding-bottom: rem-calc(20);
@@ -265,10 +269,10 @@
         span {
             color: $monsoon;
             font-size: rem-calc(14);
-            padding: rem-calc(5) rem-calc(20) rem-calc(15) 0;
+            padding: rem-calc(5 20 15 0);
             display: block;
             line-height: rem-calc(16);
-            padding: rem-calc(10) 0 rem-calc(15);
+            padding: rem-calc(10 0 15);
         }
     }
 }
@@ -298,6 +302,172 @@
     }
     .output.numeros {
         font-size: em-calc(25);
+    }
+}
+
+// Complementos de sede
+.complem-sede {
+    .panel {
+        padding: 0;
+    }
+    dl {
+        background-color: $primary-color;
+    }
+    dd {
+        text-align: center;
+    }
+    dd a {
+        color: $iron;
+        border-bottom: 3px solid $primary-color;
+        font-size: rem-calc(20);
+        padding: rem-calc(10);
+    }
+    dd a,
+    dd.active a,
+    dd a:hover {
+        background-color: $primary-color;
+        font-family: 'robotoregular';
+    }
+    dd.active a,
+    dd a:hover {
+        border-bottom-color: $warning-color;
+        color: $white;
+    }
+    dd.gear a,
+    dd.gear a:hover {
+        border: none;
+    }
+    .tabs-content {
+        padding: rem-calc(16);
+        background-color: $silver;
+        .content {
+            padding: 0;
+        }
+        .gear {
+            color: $iron;
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            &:hover {
+                color: $white;
+            }
+            .fa {
+                font-size: rem-calc(34);
+            }
+        }
+    }
+    table {
+        tbody tr td {
+            padding: rem-calc(10 5);
+        }
+        tr:nth-of-type(n) {
+            background-color: $silver;
+        }
+        td:nth-of-type(1) {
+            width: 70%;
+        }
+        td:nth-of-type(2) {
+            background-color: scale-color($primary-color, $lightness: 80%);
+            text-align: center;
+        }
+        input {
+            font-family: 'robotoregular';
+            font-size: rem-calc(20);
+            color: $jumbo;
+            text-align: center;
+            margin: 0;
+        }
+        input[type="text"] {
+            border: none;
+            background-color: transparent;
+            box-shadow: none;
+        }
+        input[type="text"][disabled] {
+            text-align: right;
+        }
+    }
+    table.ecomfax {
+        td:nth-of-type(1),
+        td:nth-of-type(2) {
+            width: 35%;
+            background-color: $silver;
+        }
+        td:nth-of-type(3) {
+            background-color: scale-color($primary-color, $lightness: 80%);
+        }
+        td:nth-of-type(3),
+        td:nth-of-type(4),
+        td:nth-of-type(5) {
+            width: 10%;
+        }
+        td:nth-of-type(5) {
+            text-align: right;
+        }
+        .fa {
+            font-size: rem-calc(28);
+        }
+    }
+    a.plus {
+        bottom: rem-calc(-30);
+        left: rem-calc(30);
+        top: auto;
+    }
+}
+
+.complem-sede.resumen {}
+
+.complemento {
+    background: $smoke url(../images/iconos-complementos.png) 50% 0 no-repeat;
+    height: rem-calc(116);
+    text-align: center;
+    font-size: rem-calc(18);
+    line-height: rem-calc(18);
+    font-family: 'robotoregular';
+    padding-top: rem-calc(77);
+    color: $monsoon;
+    border-radius: rem-calc(4);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+    display: block;
+    &.activo,
+    &:hover {
+        background-color: $third-color;
+        color: $white;
+        box-shadow: none;
+    }
+    &.cloud {
+        background-position: 50% -148px;
+    }
+    &.activo.cloud,
+    &.cloud:hover {
+        background-position: 50% 15px;
+    }
+    &.dvr {
+        background-position: 50% -474px;
+    }
+    &.activo.dvr,
+    &.dvr:hover {
+        background-position: 50% -311px;
+    }
+    &.ecomfax {
+        background-position: 50% -800px;
+    }
+    &.activo.ecomfax,
+    &.ecomfax:hover {
+        background-position: 50% -637px;
+    }
+    &.multi-acess {
+        background-position: 50% -1130px;
+    }
+    &.activo.multi-acess,
+    &.multi-acess:hover {
+        background-position: 50% -967px;
+    }
+    &.office {
+        background-position: 50% -1457px;
+    }
+    &.activo.office,
+    &.office:hover {
+        background-position: 50% -1294px;
     }
 }
 

@@ -9,7 +9,8 @@
         border-radius: 6px 6px 0 0;
         color: $white;
         font-size: rem-calc(20);
-        padding: rem-calc(10) rem-calc(20);
+        padding: rem-calc(10 20);
+        margin-top: 0;
         line-height: rem-calc(35);
         background-color: $secondary-color;
         a {
@@ -28,7 +29,7 @@
         }
     }
     form {
-        padding: rem-calc(30) rem-calc(10) rem-calc(30) rem-calc(30);
+        padding: rem-calc(30);
         .botonera {
             padding-top: rem-calc(15);
         }

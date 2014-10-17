@@ -83,7 +83,7 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // This is the default html and body font-size for the base rem value.
-// $rem-base: 16px;
+$rem-base: 15px;
 
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import "foundation/functions";
@@ -593,7 +593,7 @@ $f-dropdown-margin-top: 9px;
 // We use this to set the border styles for dropdowns.
 // $f-dropdown-border-style: solid;
 // $f-dropdown-border-width: 1px;
-$f-dropdown-border-color: $aluminum;
+$f-dropdown-border-color: $base;
 
 // We use these to style the triangle pip.
 $f-dropdown-triangle-size: 8px;

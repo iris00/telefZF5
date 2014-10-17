@@ -18,7 +18,7 @@ input[type="text"][data-invalid] {
 }
 
 input[type="text"] {
-    padding: rem-calc(2) rem-calc(4);
+    padding: rem-calc(2 4);
     height: rem-calc(30);
 }
 
@@ -32,7 +32,7 @@ input[type=checkbox] {
 }
 
 select {
-    padding: rem-calc(2) rem-calc(4);
+    padding: rem-calc(2 4);
     height: rem-calc(30);
     background-color: transparent;
 }
@@ -53,7 +53,7 @@ select[multiple] {
 }
 
 option {
-    padding: rem-calc(4) 0 rem-calc(4) rem-calc(6);
+    padding: rem-calc(4 0 4 6);
     background-color: $white;
 }
 
@@ -80,7 +80,7 @@ option {
 //     background: #abd;
 // }
 .botonera {
-    padding: rem-calc(15) 0;
+    padding: rem-calc(15 0);
     .button, button {
         margin-bottom: 0;
     }
@@ -187,7 +187,7 @@ option {
         height: auto;
     }
     button, .button {
-        padding: rem-calc(3) rem-calc(15);
+        padding: rem-calc(3 15);
         font-size: rem-calc(14);
     }
 }

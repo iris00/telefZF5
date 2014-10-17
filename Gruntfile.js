@@ -25,7 +25,17 @@ module.exports = function(grunt) {
             }
         },
 
-
+        // webfont: {
+        //     icons: {
+        //         src: '../icons/*.svg',          //Ruta de los svg que van hacer convertidos
+        //         dest: '../fonts',           //Ruta de destino de la compilación
+        //         destCss: '../fonts/build',          //Ruta de destino donde se creará la hoja de estilos css y un html ejemplo
+        //         options: {
+        //             stylesheet: 'css',      //Extensión de la hoja de estilos, css
+        //             relativeFontPath: '../fonts'    //La ruta del src - font-family que se imprime dentro de la hoja de estilos
+        //         }
+        //     }
+        // }
 
         // jshint: {
         // 	options: {
@@ -47,7 +57,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= app %>/',
-                    src: ['fonts/**', '**/*.html', '!**/pruebas/**', '!**/*.scss', '!bower_components/**'],
+                    src: ['fonts/**', '**/*.html', '**/*.png', '!**/pruebas/**', '!**/*.scss', '!bower_components/**'],
                     dest: '<%= dist %>/'
                 }, {
                     expand: true,
@@ -151,6 +161,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('compile-sass', ['sass']);
     grunt.registerTask('bower-install', ['wiredep']);
+
+    // grunt.loadNpmTasks('grunt-webfont');
 
     grunt.registerTask('default', ['compile-sass', 'bower-install', 'connect:app', 'watch']);
     // grunt.registerTask('validate-js', ['jshint']);

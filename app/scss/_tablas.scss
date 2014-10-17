@@ -149,7 +149,7 @@ table.puestos {
     tr td, tr th {
         text-align: center;
         vertical-align: middle;
-        padding: rem-calc(10) rem-calc(2);
+        padding: rem-calc(10 2);
     }
     td.numeros {
         text-align: right;
@@ -175,7 +175,7 @@ table.puestos {
         float: left;
     }
     td a.plus fa {
-        padding: rem-calc(10) rem-calc(12);
+        padding: rem-calc(10 12);
     }
     td .f-dropdown input {
         margin-bottom: rem-calc(16);
@@ -212,7 +212,7 @@ table.notif {
     th {
         text-align: left;
     }
-    th:nth-child(2), th:nth-child(3), tr td:nth-child(2), tr td:nth-child(3), tr td:nth-child(4) {
+    th:nth-child(2), th:nth-child(3), tr td:nth-child(2), tr td:nth-child(3) {
         text-align: center;
     }
     // Anchura columnas
@@ -220,7 +220,7 @@ table.notif {
         width: 40%;
     }
     th:nth-child(4) {
-        width: rem-calc(30);
+        width: rem-calc(50);
     }
     td:nth-child(1) {
         font-family: 'robotoregular';

@@ -12,7 +12,7 @@
 li.off-canvas-head {
     color: $white;
     background-color: $primary-color;
-    padding: rem-calc(10) rem-calc(10) 0;
+    padding: rem-calc(10 10 0);
     &.clearfix {
         padding-bottom: 10px;
     }
@@ -49,9 +49,9 @@ li.off-canvas-head {
     }
 }
 
-.off-canvas-list {
+ul.off-canvas-list {
     li a {
-        padding: rem-calc(15) rem-calc(10);
+        padding: rem-calc(15 10);
         .fa {
             vertical-align: middle;
             margin-right: rem-calc(8);

@@ -27,8 +27,11 @@
         width: 30%;
     }
     .breadcrumbs > li {
-        font-size: rem-calc(14);
+        font-size: rem-calc(20);
         padding: 0 5px;
+    }
+    .complem-sede .tabs-content {
+        padding: rem-calc(5);
     }
     // .breadcrumbs.breadconf li {
     //   width: 25%;

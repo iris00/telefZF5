@@ -73,7 +73,7 @@
                                 <a href="#" title="Sede"><i class="fa fa-building-o"></i></a>
                             </li>
                             <li class="large-2 medium-2 small-4 columns">
-                                <a href="#" title="Puestos móviles">
+                                <a href="puestos-moviles.html" title="Puestos móviles">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-user fa-stack-2x"></i>
                                         <i class="fa fa-mobile fa-stack-1x"></i>
@@ -81,7 +81,7 @@
                                 </a>
                             </li>
                             <li class="large-2 medium-2 small-4 columns">
-                                <a href="#" title="Puestos fijos">
+                                <a href="puestos-fijos.html" title="Puestos fijos">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-user fa-stack-2x"></i>
                                         <i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i>
@@ -144,9 +144,9 @@
                         <div class="contenido large-10 large-offset-1 end columns">
                             <form class="conf-basica">
                                 <div class="row">
-                                    <div class="large-4 columns">
+                                    <div class="medium-4 columns">
                                         <div class="panel row">
-                                            <h2>Puestos fijos</h2>
+                                            <h2 id="puest-fij">Puestos fijos</h2>
                                             <div class="small-6 columns">
                                                 <a href="puestos-fijos.html">
                                                     <span class="fa-stack fa-lg">
@@ -158,8 +158,8 @@
                                             <div class="small-6 columns output" id="SliderOutput1"></div>
                                         </div>
                                         <div class="r-s-margen">
-                                            <div class="range-slider round" id="slider1" data-slider data-options="start: 0; end: 10; display_selector: #SliderOutput1;">
-                                                <span class="range-slider-handle" role="slider" aria-labelledby="sliderLabel"></span>
+                                            <div class="range-slider round" id="slider1" data-slider="4" data-options="start: 0; end: 10; display_selector: #SliderOutput1;">
+                                                <span class="range-slider-handle" role="slider" aria-labelledby="puest-fij"></span>
                                                 <span class="range-slider-active-segment"></span>
                                                 <input type="hidden">
                                             </div>
@@ -168,9 +168,9 @@
                                     </div>
                                     <!-- fila 1 col 1 -->
 
-                                    <div class="large-4 columns">
+                                    <div class="medium-4 columns">
                                         <div class="panel row">
-                                            <h2>Puestos móviles</h2>
+                                            <h2 id="puest-mov">Puestos móviles</h2>
                                             <div class="small-6 columns">
                                                 <a href="puestos-moviles.html">
                                                     <span class="fa-stack fa-lg">
@@ -182,8 +182,8 @@
                                             <div class="small-6 columns output" id="SliderOutput2"></div>
                                         </div>
                                         <div class="r-s-margen">
-                                            <div class="range-slider round" id="slider2" data-slider data-options="start: 0; end: 10; display_selector: #SliderOutput2;">
-                                                <span class="range-slider-handle" role="slider" aria-labelledby="sliderLabel"></span>
+                                            <div class="range-slider round" id="slider2" data-slider="4" data-options="start: 0; end: 10; display_selector: #SliderOutput2;">
+                                                <span class="range-slider-handle" role="slider" aria-labelledby="puest-mov"></span>
                                                 <span class="range-slider-active-segment"></span>
                                                 <input type="hidden">
                                             </div>
@@ -192,7 +192,7 @@
                                     </div>
                                     <!-- fila 1 col 2 -->
 
-                                    <div class="large-4 columns">
+                                    <div class="medium-4 columns">
                                         <div class="panel row">
                                             <h2>Conectividad</h2>
                                             <div class="small-12 columns">
@@ -212,9 +212,9 @@
                                 <!-- row -->
 
                                 <div class="row">
-                                    <div class="large-4 columns">
+                                    <div class="medium-4 columns">
                                         <div class="panel row">
-                                            <h2>Productividad</h2>
+                                            <h2 id="produ">Productividad</h2>
                                             <div class="small-6 columns">
                                                 <a href="#">
                                                     <img src="http://placehold.it/43x43" alt="Imagen temporal">
@@ -223,8 +223,8 @@
                                             <div class="small-6 columns output" id="SliderOutput3"></div>
                                         </div>
                                         <div class="r-s-margen">
-                                            <div class="range-slider round" id="slider3" data-slider data-options="start: 0; end: 10; display_selector: #SliderOutput3;">
-                                                <span class="range-slider-handle" role="slider" aria-labelledby="sliderLabel"></span>
+                                            <div class="range-slider round" id="slider3" data-slider="4" data-options="start: 0; end: 10; display_selector: #SliderOutput3;">
+                                                <span class="range-slider-handle" role="slider" aria-labelledby="produ"></span>
                                                 <span class="range-slider-active-segment"></span>
                                                 <input type="hidden">
                                             </div>
@@ -233,9 +233,9 @@
                                     </div>
                                     <!-- fila 2 col 1 -->
 
-                                    <div class="large-4 columns">
+                                    <div class="medium-4 columns">
                                         <div class="panel row">
-                                            <h2>Presencia en internet</h2>
+                                            <h2 id="pres-int">Presencia en internet</h2>
                                             <div class="small-6 columns">
                                                 <a href="#">
                                                     <img src="http://placehold.it/43x43" alt="Imagen temporal">
@@ -244,8 +244,8 @@
                                             <div class="small-6 columns output" id="SliderOutput4"></div>
                                         </div>
                                         <div class="r-s-margen">
-                                            <div class="range-slider round" id="slider4" data-slider data-options="start: 0; end: 10; display_selector: #SliderOutput4;">
-                                                <span class="range-slider-handle" role="slider" aria-labelledby="sliderLabel"></span>
+                                            <div class="range-slider round" id="slider4" data-slider="4" data-options="start: 0; end: 10; display_selector: #SliderOutput4;">
+                                                <span class="range-slider-handle" role="slider" aria-labelledby="pres-int"></span>
                                                 <span class="range-slider-active-segment"></span>
                                                 <input type="hidden">
                                             </div>
@@ -254,9 +254,9 @@
                                     </div>
                                     <!-- fila 2 col 2 -->
 
-                                    <div class="large-4 columns">
+                                    <div class="medium-4 columns">
                                         <div class="panel row">
-                                            <h2>Seguridad</h2>
+                                            <h2 id="seg">Seguridad</h2>
                                             <div class="small-6 columns">
                                                 <a href="#">
                                                     <img src="http://placehold.it/43x43" alt="Imagen temporal">
@@ -265,8 +265,8 @@
                                             <div class="small-6 columns output" id="SliderOutput5"></div>
                                         </div>
                                         <div class="r-s-margen">
-                                            <div class="range-slider round" id="slider5" data-slider data-options="start: 0; end: 10; display_selector: #SliderOutput5;">
-                                                <span class="range-slider-handle" role="slider" aria-labelledby="sliderLabel"></span>
+                                            <div class="range-slider round" id="slider5" data-slider="4" data-options="start: 0; end: 10; display_selector: #SliderOutput5;">
+                                                <span class="range-slider-handle" role="slider" aria-labelledby="seg"></span>
                                                 <span class="range-slider-active-segment"></span>
                                                 <input type="hidden">
                                             </div>
@@ -325,6 +325,9 @@
     <div id="new-notif" class="medium reveal-modal" data-reveal></div>
     <!-- modal nueva notificación -->
 
+    <div id="new-sede" class="medium reveal-modal" data-reveal></div>
+    <!-- modal nueva sede -->    
+
     <div id="edit-notif" class="medium reveal-modal" data-reveal></div>
     <!-- modal editar notificación -->
 
@@ -348,7 +351,7 @@
     <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
     <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
-<!--<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+    <!--<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
     <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
