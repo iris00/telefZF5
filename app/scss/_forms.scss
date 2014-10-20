@@ -145,6 +145,9 @@ option {
     select {
         margin-bottom: 0;
     }
+    // select[multiple] {
+    //     margin-bottom: $form-spacing;
+    // }
     .search-filter select {
         margin-bottom: rem-calc(16);
     }

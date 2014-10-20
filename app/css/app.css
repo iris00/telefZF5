@@ -5822,6 +5822,22 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 
+.login h2.row {
+  font-size: 1.4666666667rem;
+  background-color: #0080a6;
+  border: 1px solid #0080a6;
+  border-radius: 5px 5px 0 0;
+  color: #F9F9F9;
+  padding: 0.3333333333rem 0 0.3333333333rem 1.3333333333rem;
+  margin-top: 1.3333333333rem; }
+.login .panel {
+  padding: 3.3333333333rem 1.3333333333rem;
+  border-radius: 0 0 5px 5px; }
+.login .no-bullet {
+  line-height: 2.6666666667rem;
+  font-size: 1.3333333333rem;
+  font-family: 'robotoregular'; }
+
 .contenido {
   padding-top: 3.3333333333rem;
   min-height: 607px;
@@ -5837,6 +5853,9 @@ th.hide-for-touch {
       background-color: #F9F9F9;
       border-radius: 50%;
       font-size: 1.3333333333rem; }
+
+article.row .contenido.large-12 > * {
+  margin-right: 4px; }
 
 .numeros {
   font-size: 1.3333333333rem;
@@ -5886,10 +5905,11 @@ th.hide-for-touch {
     margin: 0; }
   .col-dcha header h2 {
     font-size: 1.3333333333rem;
-    color: #F9F9F9; }
+    color: #F9F9F9;
+    padding-right: 20px; }
   .col-dcha header .trash {
     position: absolute;
-    right: 30px;
+    right: 20px;
     top: 15px; }
 .col-dcha .info-ofer {
   color: #777777;
@@ -6076,7 +6096,9 @@ th.hide-for-touch {
   background-color: transparent;
   box-shadow: none; }
 .complem-sede table input[type="text"][disabled] {
-  text-align: right; }
+  text-align: right;
+  color: #666666;
+  -webkit-text-fill-color: #666666; }
 .complem-sede table.ecomfax td:nth-of-type(1), .complem-sede table.ecomfax td:nth-of-type(2) {
   width: 35%;
   background-color: #EFEFEF; }
@@ -6731,6 +6753,9 @@ input[type="text"][readonly].calendario {
   .reveal-modal .config-numer h5, .reveal-modal .config-numer dialog {
     text-align: center;
     font-size: 1.0666666667rem; }
+  .reveal-modal .config-numer > .row .columns, .reveal-modal .config-numer > .row dialog {
+    padding-left: 2px;
+    padding-right: 2px; }
 
 form.selecc-red {
   padding-top: 0.3333333333rem; }
@@ -6990,7 +7015,8 @@ option {
   box-shadow: 0 0 4px #AAAAAA;
   margin: 0 20px;
   text-align: center;
-  color: #777777; }
+  color: #777777;
+  min-height: 160px; }
   .sedes .conf-basica .panel h2 {
     font-size: 1.3333333333rem;
     color: #777777;
