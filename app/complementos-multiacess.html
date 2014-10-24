@@ -2,24 +2,27 @@
 <html class="no-js" lang="es-Es">
 
 <head>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial
--scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Configurador de Movistar Fusión Empresas">
     <title>Configurador MFE - Selección de sedes</title>
 
     <!-- Iconos de aplicación -->
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="images/chrome-touch-icon-192x192.png">
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="white">
-    <meta name="apple-mobile-web-app-title" content="Configurador de Movistar Fusión Empresas">
-    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
 
     <!-- build:css css/libraries.min.css -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
@@ -43,8 +46,7 @@
                     <div class="tit-sede text-center">
                         Panadería Madrid S.L. B10156754 (Calle Orense 14, Madrid)
                     </div>
-                    <!-- tit-sede -->
-
+                                        <!-- tit-sede -->
                     <nav class="tab-bar row" role="navigation">
                         <section>
                             <div class="large-1 medium-1 small-1 columns">
@@ -73,6 +75,14 @@
                                 <a href="sedes.html" title="Sede"><i class="fa fa-building-o"></i></a>
                             </li>
                             <li class="large-2 medium-2 small-4 columns current">
+                                <a href="#" title="Puestos fijos">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-user fa-stack-2x"></i>
+                                        <i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns current">
                                 <a href="puestos-moviles.html" title="Puestos móviles">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-user fa-stack-2x"></i>
@@ -80,16 +90,6 @@
                                     </span>
                                 </a>
                             </li>
-                            <li class="large-2 medium-2 small-4 columns current">
-                                <a href="#" title="Puestos fijos">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-user fa-stack-2x"></i>
-                                        <i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i>
-                                    </span>
-                                </a>
-                                </a>
-                            </li>
-
                             <li class="large-2 medium-2 small-4 columns current">
                                 <a href="#" title="Accesorios de sede">
                                     <span class="fa-stack fa-lg">
@@ -108,7 +108,6 @@
                         </ul>
                     </nav>
                     <!-- breadcrumbs -->
-
                 </header>
 
                 <aside class="left-off-canvas-menu">
@@ -144,9 +143,8 @@
                     <article class="row">
                         <div class="contenido large-12 columns">
                             <form class="complem-sede" action="complementos-presencia.html">
-
                                 <div class="medium-4 columns">
-                                    <ul class="small-block-grid-2">
+                                    <ul class="small-block-grid-3 medium-block-grid-2">
                                         <li>
                                             <a href="complementos.html" class="complemento office">Office 365</a>
                                         </li>
@@ -186,7 +184,7 @@
                                                             <input type="text" value="0">
                                                         </td>
                                                         <td>
-                                                            <input type="text" disabled value="0&euro;">
+                                                            <div class="euro"><input type="text" disabled value="0"></div>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -195,8 +193,8 @@
                                         <!-- content licenc -->
                                     </div>
                                     <!-- tabs-content -->
-
                                 </div>
+                                <!-- panel -->
 
                                 <div class="row botonera">
                                     <div class="medium-12 columns text-right">
@@ -219,10 +217,11 @@
 
     <footer class="row" role="contentinfo">
         <div class="small-4 large-2 columns">T151221 - 1</div>
-        <div class="small-8 large-8 columns end text-center">
+        <div class="medium-5 large-8 columns end text-center">
             Telefónica de España S.A
         </div>
     </footer>
+
     <!-- footer -->
 
     <!-- Ventanas modales -->
@@ -287,7 +286,7 @@
     <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
-    <!--    <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+    <!--<script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
         <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script> -->
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->

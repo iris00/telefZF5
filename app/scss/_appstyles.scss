@@ -1,27 +1,6 @@
 @charset "UTF-8";
 
 // Estilos generales
-.login {
-    h2.row {
-        font-size: rem-calc(22);
-        background-color: $primary-color;
-        border: 1px solid $primary-color;
-        border-radius: $global-radius $global-radius 0 0;
-        color: $white;
-        padding: rem-calc(5 0 5 20);
-        margin-top: rem-calc(20);
-    }
-    .panel {
-        padding: rem-calc(50 20);
-        border-radius: 0 0 $global-radius $global-radius;
-    }
-    .no-bullet {
-        line-height: rem-calc(40);
-        font-size: rem-calc(20);
-        font-family: 'robotoregular';
-    }
-}
-
 .contenido {
     padding-top: rem-calc(50);
     min-height: 607px;
@@ -45,14 +24,46 @@ article.row .contenido.large-12 > * {
     margin-right: 4px;
 }
 
-.numeros {
-    font-size: rem-calc(20);
-    font-family: 'robotoregular';
-    color: $monsoon;
-}
-
 .aviso {
     color: $alert-color;
+}
+
+.big {
+    font-size: large;
+    font-family: 'robotoregular';
+}
+
+a:active,
+a:link {
+    outline: 0 none;
+}
+
+a:focus {
+    border-bottom: 1px dotted;
+}
+
+// Login
+.login {
+    h2.row {
+        font-size: rem-calc(22);
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+        border-radius: $global-radius $global-radius 0 0;
+        color: $white;
+        padding: rem-calc(5 0 5 20);
+        margin-top: rem-calc(20);
+    }
+    .panel {
+        padding: rem-calc(50 20);
+        border-radius: 0 0 $global-radius $global-radius;
+        background-color: scale-color($primary-color, $lightness: 85%);
+        background-image: linear-gradient(to bottom, $white, scale-color($black, $lightness: 90%));
+    }
+    .no-bullet {
+        line-height: rem-calc(40);
+        font-size: rem-calc(20);
+        font-family: 'robotoregular';
+    }
 }
 
 // Opweb
@@ -304,7 +315,8 @@ article.row .contenido.large-12 > * {
 }
 
 // Accesorios de sede
-.sede-accesor {
+.sede-accesor,
+.complem-sede.resumen .visual {
     .sede-accesor-tit {
         font-size: rem-calc(20);
         font-family: 'robotoregular';
@@ -345,7 +357,7 @@ article.row .contenido.large-12 > * {
     dd a {
         color: $iron;
         border-bottom: 3px solid $primary-color;
-        font-size: rem-calc(20);
+        font-size: rem-calc(18);
         padding: rem-calc(10);
     }
     dd a,
@@ -390,46 +402,30 @@ article.row .contenido.large-12 > * {
             background-color: $silver;
         }
         td:nth-of-type(1) {
-            width: 70%;
+            width: 60%;
         }
         td:nth-of-type(2) {
             background-color: scale-color($primary-color, $lightness: 80%);
             text-align: center;
-        }
-        input {
-            font-family: 'robotoregular';
-            font-size: rem-calc(20);
-            color: $jumbo;
-            text-align: center;
-            margin: 0;
-        }
-        input[type="text"] {
-            border: none;
-            background-color: transparent;
-            box-shadow: none;
-        }
-        input[type="text"][disabled] {
-            text-align: right;
-            color: $steel;
-            -webkit-text-fill-color: $steel;
+            width: 20%;
         }
     }
     table.ecomfax {
         td:nth-of-type(1),
         td:nth-of-type(2) {
-            width: 35%;
+            width: 30%;
             background-color: $silver;
         }
         td:nth-of-type(3) {
             background-color: scale-color($primary-color, $lightness: 80%);
         }
         td:nth-of-type(3),
-        td:nth-of-type(4),
-        td:nth-of-type(5) {
-            width: 10%;
+        td:nth-of-type(4) {
+            width: 17.5%;
         }
         td:nth-of-type(5) {
             text-align: right;
+            width: 5%;
         }
         .fa {
             font-size: rem-calc(28);
@@ -442,7 +438,52 @@ article.row .contenido.large-12 > * {
     }
 }
 
-.complem-sede.resumen {}
+.complem-sede.resumen {
+    table {
+        th:nth-of-type(n) {
+            width: auto;
+            padding: rem-calc(10 5);
+        }
+        // td:nth-of-type(1),
+        th:nth-of-type(1) {
+            border-bottom: none;
+            width: 12%;
+        }
+        th:nth-of-type(5) {
+            width: 12%;
+            text-align: right;
+        }
+        td:nth-of-type(2) {
+            background-color: $silver;
+        }
+        td:nth-of-type(5) {
+            text-align: right;
+        }
+        td {
+            vertical-align: top;
+        }
+        tbody tr {
+            border-width: 0;
+        }
+    }
+    .visual {
+        position: absolute;
+        margin-top: -20px;
+        .numeros {
+            display: block;
+        }
+        .fa-stack {
+            margin-bottom: rem-calc(5);
+            margin-top: rem-calc(5);
+            color: $white;
+            background-color: $steel;
+            border-radius: 50%;
+        }
+    }
+    .panel + .row .columns p {
+        margin-bottom: rem-calc(10);
+    }
+}
 
 .complemento {
     background: $smoke url(../images/iconos-complementos.png) 50% 0 no-repeat;

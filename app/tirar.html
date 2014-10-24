@@ -108,95 +108,69 @@
                 <section class="main-section" role="main">
                     <article class="row" data-equalizer>
                         <div class="contenido medium-8 columns" data-equalizer-watch>
-                            <a class="plus" href="_nueva-oferta.html" title="Nueva oferta" data-reveal-id="new-ofert" data-reveal-ajax="true">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                            <table class="ofertas sortable">
-                                <caption>Listado de Clientes</caption>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>Cliente</th>
-                                        <th data-sort="float" data-sort-default="asc">Importe</th>
-                                        <th data-sort="date" data-sort-default="desc">Fecha Mod.</th>
-                                        <th>Estado</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <a class="new" href="#" title="Editar">
-                                                <i class="fa fa-play-circle"></i>
-                                            </a>
-                                        </td>
-                                        <td><a href="#">Grupo VIPs S.A.<span>B10156754</span></a>
-                                        </td>
-                                        <td class="numeros">625&euro;</td>
-                                        <td>25/05/2014</td>
-                                        <td>Borrador</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a class="new" href="#" title="Editar">
-                                                <i class="fa fa-play-circle"></i>
-                                            </a>
-                                        </td>
-                                        <td><a href="#">BMW Automóviles S.A.<span>B10156754</span></a>
-                                        </td>
-                                        <td class="numeros">7362&euro;</td>
-                                        <td>24/05/2014</td>
-                                        <td class="warning">Incidencia</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a class="new" href="#" title="Editar">
-                                                <i class="fa fa-play-circle"></i>
-                                            </a>
-                                        </td>
-                                        <td><a href="sedes.html">Panadería Madrid S.L.<span>B10156754</span></a>
-                                        </td>
-                                        <td class="numeros">231&euro;</td>
-                                        <td>30/05/2014</td>
-                                        <td>Tramitación Fase I</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a class="new" href="#" title="Editar">
-                                                <i class="fa fa-play-circle"></i>
-                                            </a>
-                                        </td>
-                                        <td><a href="#">Congelados Burgos S.L.<span>B10156754</span></a>
-                                        </td>
-                                        <td class="numeros">736&euro;</td>
-                                        <td>23/05/2014</td>
-                                        <td>Borrador</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a class="new" href="#" title="Editar">
-                                                <i class="fa fa-play-circle"></i>
-                                            </a>
-                                        </td>
-                                        <td><a href="#">Ayuntamiento de Dénia<span>B10156754</span></a>
-                                        </td>
-                                        <td class="numeros">456&euro;</td>
-                                        <td>22/05/2014</td>
-                                        <td class="alert">Anexar contrato</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a class="new" href="#" title="Editar">
-                                                <i class="fa fa-play-circle"></i>
-                                            </a>
-                                        </td>
-                                        <td><a href="#">Google Inc<span>B10156754</span></a>
-                                        </td>
-                                        <td class="numeros">431&euro;</td>
-                                        <td>21/05/2014</td>
-                                        <td>Contrato generado</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            
+<div class="range-slider-container">
+ <div class="range-slider" data-step="1"></div>
+ <div class="range-slider-value clearfix">
+ <span>Price: &ensp;</span>
+ <span id="min" class="min"></span>
+ <span id="max" class="max"></span>
+ </div>
+ </div>
+ 
+<script>
+$('.range-slider').each(function() {
+    var $this = $(this),
+        configs = new Array(),
+        low = $.Link({
+            target: $('#min'),
+            method: 'text',
+            format: {
+                decimals: 0,
+                mark: ",",
+                thousand: "."
+            }
+        }),
+        up = $.Link({
+            target: $('#max'),
+            method: 'text',
+            format: {
+                decimals: 0,
+                mark: ",",
+                thousand: "."
+            }
+        });
+
+    configs['min'] = ($this.data('min') === undefined) ? 0 : $this.data('min');
+    configs['max'] = ($this.data('max') === undefined) ? 100 : $this.data('max');
+    configs['start'] = ($this.data('start') === undefined) ? [configs['min'], configs['max']] : $this.data('start');
+    configs['step'] = ($this.data('step') === undefined) ? 1 : $this.data('step');
+    configs['currency'] = ($this.data('currency') === undefined) ? $('.dropdown-money #symbol').text() : $this.data('currency');
+
+    $this.noUiSlider({
+        range: {
+            min: configs['min'],
+            max: configs['max']
+        },
+        start: configs['start'],
+        step: configs['step'],
+        connect: true,
+        handles: 2,
+        serialization: {
+            lower: [low],
+            upper: [up]
+        }
+    }).change(function() {
+        priceSlider($(this).val());
+    });
+
+    $this.siblings('.range-slider-value').find('> .min').text(configs['currency'] + $this.val()[0]);
+    $this.siblings('.range-slider-value').find('> .max').text(configs['currency'] + $this.val()[1]);
+});
+
+
+</script>
+                            
                         </div>
                         <!-- contenido -->
                         <aside class="col-dcha medium-4 columns" role="complementary">

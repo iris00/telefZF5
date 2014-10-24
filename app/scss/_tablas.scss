@@ -27,17 +27,38 @@ table {
     }
 }
 
+// Tabla ordenable
+.sortable {
+    th[data-sort] {
+        cursor: pointer;
+        position: relative;
+    }
+    .tablesort-arrow {
+        font-family: 'FontAwesome';
+        position: absolute;
+        font-size: rem-calc(20);
+        margin-left: rem-calc(4);
+        color: $aluminum;
+    }
+    tr.awesome {
+        background-color: $smoke;
+    }
+}
+
 // Tabla Ofertas
 table.ofertas {
     tbody tr:hover {
         background-color: $smoke;
     }
     th:nth-child(1) {
-        width: rem-calc(40);
+        width: rem-calc(60);
         border-bottom: 0 solid;
     }
     th:nth-child(3) {
         text-align: right;
+    }
+    td:nth-child(1) {
+        padding-top: rem-calc(15);
     }
     td:nth-child(2), td.warning, td.alert {
         font-family: 'robotoregular';
@@ -54,7 +75,9 @@ table.ofertas {
         display: block;
     }
     // Alineamiento celdas
-    td:nth-child(4), td:nth-child(5) {
+    td:nth-child(1),
+    td:nth-child(4),
+    td:nth-child(5) {
         text-align: center;
     }
     // Iconos
@@ -91,8 +114,7 @@ table.listado-sedes {
             text-align: left;
         }
         &:nth-child(3) {
-            font-family: 'robotoregular';
-            color: $steel;
+            padding-right: 20px;
         }
         &:nth-child(2) span {
             font-size: rem-calc(14);
@@ -120,7 +142,8 @@ table.listado-sedes {
 }
 
 // Tabla configuración sedes
-.conf h2 {
+.conf h2,
+.concept-ocas h3 {
     font-size: rem-calc(18);
     background-color: $third-color;
     text-align: center;

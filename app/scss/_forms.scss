@@ -1,16 +1,5 @@
 @charset "UTF-8";
 
-// Validación
-input[type="text"][data-invalid] {
-    border: 1px solid $alert-color;
-}
-
-[data-abide] .error small.error, [data-abide] .error span.error, [data-abide] span.error, [data-abide] small.error {
-    font-style: normal;
-    background-color: $alert-color;
-    font-family: 'robotoregular';
-}
-
 // Formularios en general
 .postfix.button {
     height: rem-calc(30);
@@ -25,6 +14,17 @@ input[type="text"] {
 label {
     cursor: default;
     line-height: rem-calc(30);
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+}
+
+fieldset legend {
+    font-weight: normal;
+    font-size: rem-calc(20);
+    font-family: 'robotoregular';
 }
 
 input[type=checkbox] {
@@ -57,6 +57,74 @@ option {
     background-color: $white;
 }
 
+input[type="text"][disabled] {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.euro {
+    position: relative;
+    &:after {
+        content: "\20AC";
+        position: absolute;
+        right: 12px;
+        top: 3px;
+        z-index: 20;
+        font-family: 'robotoregular';
+        color: $steel;
+        font-size: rem-calc(20);
+    }
+    input[type="text"][disabled] {
+        text-align: right;
+        padding-right: 25px;
+        margin-bottom: 0;
+        -webkit-text-fill-color: $steel;
+    }
+}
+
+.numeros,
+.euro input {
+    font-size: rem-calc(20);
+    font-family: 'robotoregular';
+    color: $steel;
+}
+
+input[type="text"].numeros {
+    border-color: $silver;
+    text-align: center;
+    height: rem-calc(35);
+    margin-bottom: 0;
+}
+
+.complem-sede input[type="text"],
+.sede-accesor input[type="text"] {
+    font-family: 'robotoregular';
+    font-size: rem-calc(20);
+    text-align: center;
+    margin: 0;
+    color: $steel;
+    // background-color: transparent;
+    // border: medium none;
+    // box-shadow: none;
+}
+
+// Validación
+input[type="text"][data-invalid] {
+    border: 1px solid $alert-color;
+}
+
+[data-abide] .error small.error, [data-abide] .error span.error, [data-abide] span.error, [data-abide] small.error {
+    font-style: normal;
+    background-color: $alert-color;
+    font-family: 'robotoregular';
+}
+
+form[data-abide] label {
+    margin-bottom: rem-calc(17);
+}
+
+// Menu lateral
 .off-canvas-list {
     select {
         color: $white;
@@ -141,16 +209,16 @@ option {
 }
 
 // Formularios puestos-fijos
-.puestos {
+table.puestos {
     select {
         margin-bottom: 0;
     }
     // select[multiple] {
     //     margin-bottom: $form-spacing;
     // }
-    .search-filter select {
-        margin-bottom: rem-calc(16);
-    }
+    // .search-filter select {
+    //     margin-bottom: rem-calc(16);
+    // }
     input[type="checkbox"] {
         margin-bottom: 0;
         margin-top: 10px;
@@ -164,6 +232,26 @@ option {
         font-size: rem-calc(25);
         margin-right: rem-calc(5);
         vertical-align: text-top;
+    }
+}
+
+// Formularios tramitación de sede
+.sede-tramit {
+    label {
+        background-color: transparent;
+        color: $oil;
+    }
+    .panel {
+        margin-bottom: 0;
+        & > .row > div {
+            //display: table-cell;
+       
+        }
+        & > .row > .big {
+            vertical-align: middle;
+            text-align: center;
+            font-size: rem-calc(25);
+        }
     }
 }
 

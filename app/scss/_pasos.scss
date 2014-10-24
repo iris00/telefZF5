@@ -1,7 +1,10 @@
 @charset "UTF-8";
 
 // Pasos listado sedes
-.sedes .breadcrumbs > *:before {
+.sedes .breadcrumbs > *:before,
+.sedes .breadcrumbs > *:first-child:before,
+.puestos .breadcrumbs > *:before,
+.puestos .breadcrumbs > *:first-child:before {
     margin: 0;
 }
 
@@ -10,7 +13,6 @@
     font-family: 'robotoregular';
     padding: 0;
     margin: 0;
-    //box-shadow: 0 2px 4px $charcoal;
     li {
         line-height: rem-calc(46);
         height: rem-calc(46);
@@ -27,12 +29,12 @@
         height: 46px;
         background: transparent url("../images/breadcrumb.svg") 0 0 no-repeat;
         position: absolute;
-        right: -20px;
+        right: -28px;
         top: 0;
         z-index: 100;
     }
-    li:nth-child(5).activo:before,
-    li:nth-child(6).activo:before {
+    li:nth-child(3).activo:before,
+    li:nth-child(4).activo:before {
         background-image: none;
     }
     li.activo {
@@ -56,6 +58,17 @@
     }
 }
 
+.breadconf {
+    li:nth-child(3).activo:before,
+    li:nth-child(4).activo:before {
+        background: transparent url("../images/breadcrumb.svg") 0 0 no-repeat;
+    }
+    li:nth-child(5).activo:before,
+    li:nth-child(6).activo:before {
+        background-image: none;
+    }
+}
+
 // Pasos configuración sede
 // .breadcrumbs.breadconf {
 //   @include grid-row;
@@ -66,7 +79,8 @@
 // }
 
 .breadconf,
-.conf-basica .panel {
+.conf-basica .panel,
+.complem-sede.resumen .visual {
     .fa-building-o,
     .fa-desktop,
     .fa-stack-2x {

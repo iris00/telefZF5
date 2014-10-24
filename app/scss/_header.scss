@@ -37,17 +37,24 @@ header {
     // }
     section div:nth-child(3) {
         text-align: right;
+        padding-right: rem-calc(16);
         // position: absolute;
         // top: 0;
         // right: 15px;
         // width: 10rem;
         // height: 5rem;
+        a:focus,
+        a:active {
+            outline-color: $white;
+        }
         .fa {
             color: $white;
             font-size: rem-calc(28);
-            margin-right: rem-calc(16);
             padding: 0;
             vertical-align: middle;
+            text-align: center;
+            width: 46px;
+            height: 36px;
         }
         .fa-bell-o {
             position: relative;
@@ -57,7 +64,7 @@ header {
             border-radius: 50%;
             height: 19px;
             position: absolute;
-            right: -8px;
+            right: 0;
             text-align: center;
             top: -8px;
             min-width: 19px;
