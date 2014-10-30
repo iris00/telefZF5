@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+// Administración
+.catalogo .panel,
+.implantaciones .panel {
+    h2 {
+        background-color: $primary-color;
+        margin: rem-calc((-20) -20 20);
+        padding: rem-calc(15 0);
+        font-size: rem-calc(20);
+        text-align: center;
+        color: $white;
+    }
+    a.plus {
+        left: auto;
+        right: rem-calc(40);
+        top: rem-calc(20);
+    }
+    .familias,
+    .productos {
+        list-style: none;
+        a {
+            color: $charcoal;
+            font-size: rem-calc(17);
+            font-family: 'robotoregular';
+            display: block;
+            padding: rem-calc(8 0);
+        }
+    }
+    .productos ul {
+        list-style-type: disc;
+        li {
+            margin-left: rem-calc(10);
+        }
+    }
+    .botonera {
+        .trash {
+            font-size: rem-calc(35);
+            position: relative;
+            top: rem-calc(7);
+            right: rem-calc(40);
+        }
+    }
+}

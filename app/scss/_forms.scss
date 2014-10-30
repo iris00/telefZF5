@@ -37,14 +37,12 @@ select {
     background-color: transparent;
 }
 
-select, select:hover {
+select,
+select:hover {
     -moz-appearance: none;
     text-indent: 0.01px;
-    text-overflow: '';
     cursor: pointer;
     border-color: $iron;
-    //background-color: transparent;
-    border-radius: 4px;
 }
 
 select[multiple] {
@@ -98,7 +96,8 @@ input[type="text"].numeros {
 }
 
 .complem-sede input[type="text"],
-.sede-accesor input[type="text"] {
+.sede-accesor input[type="text"],
+.conf-basica input[type="text"] {
     font-family: 'robotoregular';
     font-size: rem-calc(20);
     text-align: center;
@@ -169,7 +168,7 @@ form[data-abide] label {
 }
 
 // Formularios Ofertas
-.ofertas, .sedes, .puestos {
+.ofertas, .sedes, .puestos, .admin {
     label, .label {
         background-color: $third-color;
         text-align: center;

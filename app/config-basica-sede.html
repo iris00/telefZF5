@@ -44,7 +44,7 @@
             <div class="inner-wrap">
                 <header role="banner">
                     <div class="tit-sede text-center"></div>
-                                        <!-- tit-sede -->
+                    <!-- tit-sede -->
                     <nav class="tab-bar row" role="navigation">
                         <section>
                             <div class="large-1 medium-1 small-1 columns">
@@ -121,7 +121,7 @@
                                 <option value="">Otro perfil más</option>
                             </select>
                         </li>
-                        <li><a href="#"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
+                        <li><a href="_otras-oper.html" data-reveal-id="otras-oper" data-reveal-ajax="true"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
                         </li>
                         <li><a href="_informes.html" data-reveal-id="informes" data-reveal-ajax="true"><i class="fa fa-bar-chart fa-2x"></i> Crear informes</a>
                         </li>
@@ -131,7 +131,7 @@
                         </li>
                         <li><a href="#"><i class="fa fa-comments fa-2x"></i> Ayuda</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gears fa-2x"></i> Administración</a>
+                        <li><a href="admin.html"><i class="fa fa-gears fa-2x"></i> Administración</a>
                         </li>
                         <li><a href="#"><i class="fa fa-asterisk"></i> Traslados MFE</a>
                         </li>
@@ -156,12 +156,12 @@
                                                     </span>
                                                 </a>
                                             </div>
-                                            <div class="small-6 columns output numeros">
+                                            <div class="small-6 columns output">
                                                 <input type="text" id="out-sl-pues-fijo">
                                             </div>
                                         </div>
                                         <div class="r-s-margen">
-                                            <div id="sl-pues-fijo" role="slider" aria-labelledby="pu-fi"></div>
+                                            <div class="slider" id="sl-pues-fijo" role="slider" aria-labelledby="pu-fi"></div>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis sint, voluptates architecto quas esse quasi.</p>
                                         </div>
                                     </div>
@@ -169,7 +169,7 @@
 
                                     <div class="medium-4 columns">
                                         <div class="panel row">
-                                            <h2 id="puest-mov">Puestos móviles</h2>
+                                            <h2 id="pu-mo">Puestos móviles</h2>
                                             <div class="small-6 columns">
                                                 <a href="puestos-moviles.html">
                                                     <span class="fa-stack fa-lg">
@@ -178,14 +178,12 @@
                                                     </span>
                                                 </a>
                                             </div>
-                                            <div class="small-6 columns output" id="SliderOutput2"></div>
+                                            <div class="small-6 columns output">
+                                                <input type="text" id="out-sl-pues-movi">
+                                            </div>
                                         </div>
                                         <div class="r-s-margen">
-                                            <div class="range-slider round" id="slider2" data-slider="4" data-options="start: 0; end: 10; display_selector: #SliderOutput2;">
-                                                <span class="range-slider-handle" role="slider" aria-labelledby="puest-mov"></span>
-                                                <span class="range-slider-active-segment"></span>
-                                                <input type="hidden">
-                                            </div>
+                                            <div class="slider" id="sl-pues-movi" role="slider" aria-labelledby="pu-mo"></div>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis sint, voluptates architecto quas esse quasi.</p>
                                         </div>
                                     </div>
@@ -213,20 +211,18 @@
                                 <div class="row">
                                     <div class="medium-4 columns">
                                         <div class="panel row">
-                                            <h2 id="produ">Productividad</h2>
+                                            <h2 id="produc">Productividad</h2>
                                             <div class="small-6 columns">
                                                 <a href="#">
                                                     <img src="images/office365.png" alt="Office 365">
                                                 </a>
                                             </div>
-                                            <div class="small-6 columns output" id="SliderOutput3"></div>
+                                            <div class="small-6 columns output">
+                                                <input type="text" id="out-sl-productiv">
+                                            </div>
                                         </div>
                                         <div class="r-s-margen">
-                                            <div class="range-slider round" id="slider3" data-slider="4" data-options="start: 0; end: 10; display_selector: #SliderOutput3;">
-                                                <span class="range-slider-handle" role="slider" aria-labelledby="produ"></span>
-                                                <span class="range-slider-active-segment"></span>
-                                                <input type="hidden">
-                                            </div>
+                                            <div class="slider" id="sl-productiv" role="slider" aria-labelledby="produc"></div>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis sint, voluptates architecto quas esse quasi.</p>
                                         </div>
                                     </div>
@@ -234,20 +230,18 @@
 
                                     <div class="medium-4 columns">
                                         <div class="panel row">
-                                            <h2 id="pres-int">Presencia en internet</h2>
+                                            <h2 id="presen">Presencia en internet</h2>
                                             <div class="small-6 columns">
                                                 <a href="#">
-                                                   <img src="images/web.png" alt="Tu web">
+                                                    <img src="images/web.png" alt="Tu web">
                                                 </a>
                                             </div>
-                                            <div class="small-6 columns output" id="SliderOutput4"></div>
+                                            <div class="small-6 columns output">
+                                                <input type="text" id="out-sl-presencia">
+                                            </div>
                                         </div>
                                         <div class="r-s-margen">
-                                            <div class="range-slider round" id="slider4" data-slider="4" data-options="start: 0; end: 10; display_selector: #SliderOutput4;">
-                                                <span class="range-slider-handle" role="slider" aria-labelledby="pres-int"></span>
-                                                <span class="range-slider-active-segment"></span>
-                                                <input type="hidden">
-                                            </div>
+                                            <div class="slider" id="sl-presencia" role="slider" aria-labelledby="presen"></div>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis sint, voluptates architecto quas esse quasi.</p>
                                         </div>
                                     </div>
@@ -255,20 +249,18 @@
 
                                     <div class="medium-4 columns">
                                         <div class="panel row">
-                                            <h2 id="seg">Seguridad</h2>
+                                            <h2 id="seguri">Seguridad</h2>
                                             <div class="small-6 columns">
                                                 <a href="#">
                                                     <img src="images/multi-access.png" alt="McAfee Multi Access">
                                                 </a>
                                             </div>
-                                            <div class="small-6 columns output" id="SliderOutput5"></div>
+                                            <div class="small-6 columns output">
+                                                <input type="text" id="out-sl-seguridad">
+                                            </div>
                                         </div>
                                         <div class="r-s-margen">
-                                            <div class="range-slider round" id="slider5" data-slider="4" data-options="start: 0; end: 10; display_selector: #SliderOutput5;">
-                                                <span class="range-slider-handle" role="slider" aria-labelledby="seg"></span>
-                                                <span class="range-slider-active-segment"></span>
-                                                <input type="hidden">
-                                            </div>
+                                            <div class="slider" id="sl-seguridad" role="slider" aria-labelledby="seguri"></div>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis sint, voluptates architecto quas esse quasi.</p>
                                         </div>
                                     </div>
@@ -306,6 +298,15 @@
     <!-- Ventanas modales -->
     <div id="notific" class="small reveal-modal" data-reveal></div>
     <!-- modal notificaciones -->
+
+    <div id="otras-oper" class="medium reveal-modal" data-reveal></div>
+    <!-- modal otras operaciones -->
+
+    <div id="cuenta-banc" class="large reveal-modal" data-reveal></div>
+    <!-- modal cuenta bancaria -->
+
+    <div id="camb-titular-lm" class="medium reveal-modal" data-reveal></div>
+    <!-- modal cambiar titular linea móvil -->
 
     <div id="search" class="small reveal-modal" data-reveal></div>
     <!-- modal search -->

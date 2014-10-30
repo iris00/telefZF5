@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+// Opweb
+.opweb {
+    .contenido {
+        font-size: rem-calc(14);
+    }
+    h2 {
+        font-size: rem-calc(16);
+    }
+    .panel {
+        padding: rem-calc(10);
+    }
+    .tit h2 {
+        margin: rem-calc((-10) -10 10);
+        padding: rem-calc(5 10);
+        background-color: $primary-color;
+        color: $white;
+    }
+}

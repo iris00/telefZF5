@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+// Columna derecha
+.col-dcha {
+    .aside-right {
+        min-height: 607px;
+        box-shadow: 0 6px 3px $charcoal;
+        background-color: $silver;
+    }
+    p {
+        font-size: rem-calc(14);
+        padding: rem-calc(10 20);
+    }
+    header {
+        background-color: $third-color;
+        padding: rem-calc(10 20 2);
+        color: $white;
+        min-height: rem-calc(55);
+        .trash:focus {
+            border-bottom-color: $white;
+        }
+        .trash .fa {
+            float: right;
+            color: $white;
+            font-size: rem-calc(26);
+        }
+        p {
+            padding: 0;
+            margin: 0;
+        }
+        h2 {
+            font-size: rem-calc(20);
+            color: $white;
+            padding-right: 20px;
+        }
+        .trash {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+        }
+    }
+    .info-ofer {
+        color: $monsoon;
+        padding-bottom: 0;
+        margin-bottom: rem-calc(15);
+    }
+    span {
+        display: block;
+        font-size: rem-calc(16);
+    }
+    .fa {
+        color: $oil;
+        margin-right: rem-calc(6);
+    }
+    .factur {
+        background-color: $gainsboro;
+        padding-bottom: rem-calc(15);
+        padding-top: rem-calc(15);
+        p {
+            margin-bottom: 0;
+            color: $monsoon;
+            padding: 0 rem-calc(20);
+        }
+        p span {
+            margin-top: rem-calc(10);
+        }
+        p .left {
+            color: $oil;
+            font-family: 'robotoregular';
+        }
+    }
+    // SVAs
+    .svas {
+        padding-bottom: rem-calc(20);
+        border-top: 1px solid $gainsboro;
+        p,
+        div {
+            text-align: center;
+        }
+        p:nth-child(1) {
+            font-size: rem-calc(20);
+            margin: 0;
+            padding: rem-calc(10 0);
+            font-family: 'robotoregular';
+            color: $charcoal;
+        }
+        label {
+            font-size: rem-calc(20);
+            color: $oil;
+        }
+        .coste {
+            text-align: right;
+            margin-left: rem-calc(20);
+            display: inline-block;
+            font-size: rem-calc(20);
+        }
+        select {
+            width: 60%;
+        }
+    }
+    // oper-tarif
+    .oper-tarif {
+        padding: rem-calc(20 40 0);
+        label {
+            text-align: left;
+            color: $steel;
+        }
+        select {
+            margin-bottom: rem-calc(10);
+        }
+        &.destacado {
+            background-color: $gainsboro;
+        }
+    }
+    // Heco
+    .heco {
+        position: relative;
+        p {
+            //margin-bottom: 0;
+            padding-bottom: 0;
+            color: $monsoon;
+        }
+        // .accordion a {
+        //     background-color: transparent;
+        //     font-size: rem-calc(16);
+        //     padding: rem-calc(5 20 5 40);
+        //     color: $oil;
+        // }
+        // .accordion .content p {
+        //     padding: 0;
+        //     //margin-bottom: rem-calc(15);
+        //     //font-size: rem-calc(16);
+        //     line-height: rem-calc(20);
+        //     display: block;
+        // }
+        // .accordion a:before {
+        //     position: relative;
+        //     font-family: FontAwesome;
+        //     top: 0;
+        //     left: rem-calc(-20);
+        //     content: "\f04b";
+        //     font-size: rem-calc(14);
+        //     display: inline-block;
+        // }
+        // .accordion .active a:before {
+        //     transform: rotate(90deg);
+        // }
+        // .accordion a .right {
+        //     color: $monsoon;
+        // }
+   
+    }
+    .contrato {
+        background-color: $third-color;
+        padding: rem-calc(20);
+        p {
+            padding: 0;
+            font-family: 'robotoregular';
+            font-size: rem-calc(18);
+            color: $white;
+        }
+        input[type=file] {
+            margin-bottom: 0;
+        }
+    }
+    .estado {
+        padding: rem-calc(20 10);
+        background-color: $gainsboro;
+        .button.small {
+            font-size: rem-calc(16);
+            padding: rem-calc(4 28 3);
+        }
+    }
+}

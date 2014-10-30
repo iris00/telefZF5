@@ -1,0 +1,285 @@
+@charset "UTF-8";
+
+// Multiselect
+// this is applied on that hidden select. DO NOT USE display:none; or visiblity:hidden; and Do not override any of these properties.
+.SelectClass {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border: none;
+    z-index: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity = 0);
+    -moz-opacity: 0;
+    opacity: 0;
+}
+
+.SumoSelect {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    & > .optWrapper > .options > li {
+        -moz-transition: 200ms ease;
+        -webkit-transition: 200ms ease;
+        transition: 200ms ease;
+    }
+    & > .optWrapper > .options > li label,
+    & > .CaptionCont {
+        user-select: none;
+        -o-user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        background-color: transparent;
+        color: $oil;
+        font-family: 'robotolight';
+        font-size: rem-calc(14);
+        padding: 3px 0 3px 6px;
+        cursor: pointer;
+    }
+    & > .CaptionCont {
+        position: relative;
+        border: 1px solid #ccc;
+        min-height: 20px;
+        background-color: #fff;
+    }
+    & p {
+        margin-bottom: 0;
+    }
+    & > .CaptionCont > span {
+        display: block;
+        padding-right: 30px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    & > .CaptionCont > span.placeholder {
+        color: $iron;
+    }
+    & > .CaptionCont > label {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 17px;
+        background: rgb(240, 240, 240);
+        background: -moz-linear-gradient(top, rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(218, 218, 218, 1) 50%, rgba(218, 218, 218, 1) 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(240, 240, 240, 1)), color-stop(50%, rgba(240, 240, 240, 1)), color-stop(50%, rgba(218, 218, 218, 1)), color-stop(100%, rgba(218, 218, 218, 1)));
+        background: -webkit-linear-gradient(top, rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(218, 218, 218, 1) 50%, rgba(218, 218, 218, 1) 100%);
+        background: -o-linear-gradient(top, rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(218, 218, 218, 1) 50%, rgba(218, 218, 218, 1) 100%);
+        background: -ms-linear-gradient(top, rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(218, 218, 218, 1) 50%, rgba(218, 218, 218, 1) 100%);
+        background: linear-gradient(to bottom, rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(218, 218, 218, 1) 50%, rgba(218, 218, 218, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#dadada',GradientType=0 );
+        border: 1px solid #707070;
+        cursor: pointer;
+    }
+    & > .CaptionCont > label > i {
+        background: url("../images/arrow-multiselect.png") center center no-repeat;
+        width: 15px;
+        height: 28px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        border: 1px solid #fcfcfc;
+    }
+    & > .optWrapper {
+        top: 30px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+        -webkit-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+        -moz-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+        -ms-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+        -o-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+        z-index: -100;
+        background: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.11);
+        border-radius: 3px;
+    }
+    & > .optWrapper.open {
+        top: 30px;
+        visibility: visible;
+        opacity: 1;
+        z-index: 1000;
+    }
+    & > .optWrapper > .options {
+        list-style: none;
+        display: block;
+        padding: 0px;
+        margin: 0px;
+        overflow: auto;
+        border-radius: 3px;
+        /*Set the height of pop up here (only for desktop mode)*/
+        max-height: 250px;
+        /*height*/
+    }
+    & > .optWrapper.isFloating > .options {
+        max-height: 100%;
+    }
+    & > .optWrapper > .options > li {
+        padding: 4px 6px;
+        border-bottom: 1px solid #F3F3F3;
+        position: relative;
+    }
+    & > .optWrapper > .options > li:first-child {
+        border-radius: 3px 3px 0px 0px;
+    }
+    & > .optWrapper > .options > li:last-child {
+        border-bottom: none;
+        border-radius: 0px 0px 3px 3px;
+    }
+    & > .optWrapper > .options > li:hover {
+        background-color: #3399ff;
+    }
+    & > .optWrapper > .options > li label {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        text-align: left;
+    }
+    & > .optWrapper > .options > li label:hover {
+        color: $white;
+    }
+    & > .optWrapper > .options > li span {
+        display: none;
+    }
+    /*Floating styles*/
+    & > .optWrapper.isFloating {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        width: 90%;
+        bottom: 0px;
+        margin: auto;
+        max-height: 90%;
+    }
+    /*Hover*/
+    &:hover > .CaptionCont > label {
+        background-color: #F1F1F1;
+    }
+    /*disabled state*/
+    & > .optWrapper > .options > li.disabled {
+        background-color: inherit;
+    }
+    & > .optWrapper > .options > li.disabled * {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        /* IE 5-7 */
+        filter: alpha(opacity = 50);
+        /* Netscape */
+        -moz-opacity: 0.5;
+        /* Safari 1.x */
+        -khtml-opacity: 0.5;
+        /* Good browsers */
+        opacity: 0.5;
+    }
+    /*styling for multiple select*/
+    & > .optWrapper.multiple > .options > li {
+        padding-left: 35px;
+    }
+    & > .optWrapper.multiple > .options > li span {
+        position: absolute;
+        display: block;
+        width: 30px;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+    }
+    & > .optWrapper.multiple > .options > li span i {
+        background-image: url("../images/checkbox.png");
+        position: absolute;
+        margin: auto;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+    }
+    & > .optWrapper > .MultiControls {
+        display: none;
+        border-top: 1px solid #ddd;
+        background-color: #fff;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.13);
+        border-radius: 0px 0px 3px 3px;
+    }
+    & > .optWrapper.multiple.isFloating > .MultiControls {
+        display: block;
+        margin-top: 5px;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+    & > .optWrapper.multiple.okCancelInMulti > .MultiControls {
+        display: block;
+    }
+    & > .optWrapper.multiple.okCancelInMulti > .MultiControls > p {
+        padding: 6px;
+    }
+    & > .optWrapper.multiple > .MultiControls > p {
+        display: inline-block;
+        cursor: pointer;
+        padding: 12px;
+        width: 50%;
+        text-align: center;
+    }
+    & > .optWrapper.multiple > .MultiControls > p:hover {
+        background-color: #f1f1f1;
+    }
+    & > .optWrapper.multiple > .MultiControls > p.btnOk {
+        border-right: 1px solid #DBDBDB;
+        border-radius: 0px 0px 0px 3px;
+    }
+    & > .optWrapper.multiple > .MultiControls > p.btnCancel {
+        border-radius: 0px 0px 3px 0px;
+    }
+    /*styling for select on popup mode*/
+    & > .optWrapper.isFloating > .options > li {
+        padding: 12px 6px;
+    }
+    /*styling for only multiple select on popup mode*/
+    & > .optWrapper.multiple.isFloating > .options > li {
+        padding-left: 35px;
+    }
+    & > .optWrapper.multiple.isFloating {
+        padding-bottom: 43px;
+    }
+    /*selected state*/
+    & > .optWrapper.multiple > .options > li.selected span i {
+        background-image: url("../images/checkbox-checked.png");
+    }
+    /*disabled state*/
+    .disabled {
+        opacity: 0.7;
+    }
+    .disabled > .CaptionCont > label {
+        background-color: #F1F1F1;
+    }
+}
+
+/*Background overlay*/
+body > .BackdropSelect {
+    display: none;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    z-index: 1000;
+}

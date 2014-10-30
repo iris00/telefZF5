@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+//SEDES
+// Accesorios de sede
+.sede-accesor,
+.complem-sede.resumen .visual {
+    .sede-accesor-tit {
+        font-size: rem-calc(20);
+        font-family: 'robotoregular';
+        color: $aluminum;
+        margin-bottom: rem-calc(24);
+        display: block;
+    }
+    .columns > .fa {
+        display: block;
+        margin-bottom: rem-calc(0);
+    }
+    .fa-stack {
+        margin-bottom: rem-calc(24);
+        margin-top: rem-calc(24);
+        color: $steel;
+    }
+    .fa-stack-1x.fa-fighter-jet {
+        margin-left: rem-calc(-8);
+        margin-top: rem-calc(13);
+        font-size: rem-calc(22);
+    }
+    .output.numeros {
+        font-size: em-calc(25);
+    }
+}
+
+// Complementos de sede
+.complem-sede {
+    .panel {
+        padding: 0;
+    }
+    dl {
+        background-color: $primary-color;
+    }
+    dd {
+        text-align: center;
+    }
+    dd a {
+        color: $iron;
+        border-bottom: 3px solid $primary-color;
+        font-size: rem-calc(18);
+        padding: rem-calc(10);
+    }
+    dd a,
+    dd.active a,
+    dd a:hover {
+        background-color: $primary-color;
+        font-family: 'robotoregular';
+    }
+    dd.active a,
+    dd a:hover {
+        border-bottom-color: $warning-color;
+        color: $white;
+    }
+    dd.gear a,
+    dd.gear a:hover {
+        border: none;
+    }
+    .tabs-content {
+        padding: rem-calc(16);
+        background-color: $silver;
+        .content {
+            padding: 0;
+        }
+        .gear {
+            color: $iron;
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            &:hover {
+                color: $white;
+            }
+            .fa {
+                font-size: rem-calc(34);
+            }
+        }
+    }
+    table {
+        tbody tr td {
+            padding: rem-calc(10 5);
+        }
+        tr:nth-of-type(n) {
+            background-color: $silver;
+        }
+        td:nth-of-type(1) {
+            width: 60%;
+        }
+        td:nth-of-type(2) {
+            background-color: scale-color($primary-color, $lightness: 80%);
+            text-align: center;
+            width: 20%;
+        }
+    }
+    table.ecomfax {
+        td:nth-of-type(1),
+        td:nth-of-type(2) {
+            width: 30%;
+            background-color: $silver;
+        }
+        td:nth-of-type(3) {
+            background-color: scale-color($primary-color, $lightness: 80%);
+        }
+        td:nth-of-type(3),
+        td:nth-of-type(4) {
+            width: 17.5%;
+        }
+        td:nth-of-type(5) {
+            text-align: right;
+            width: 5%;
+        }
+        .fa {
+            font-size: rem-calc(28);
+        }
+    }
+    a.plus {
+        bottom: rem-calc(-30);
+        left: rem-calc(30);
+        top: auto;
+    }
+}
+
+.complem-sede.resumen {
+    table {
+        th:nth-of-type(n) {
+            width: auto;
+            padding: rem-calc(10 5);
+        }
+        // td:nth-of-type(1),
+        th:nth-of-type(1) {
+            border-bottom: none;
+            width: 12%;
+        }
+        th:nth-of-type(5) {
+            width: 12%;
+            text-align: right;
+        }
+        td:nth-of-type(2) {
+            background-color: $silver;
+        }
+        td:nth-of-type(5) {
+            text-align: right;
+        }
+        td {
+            vertical-align: top;
+        }
+        tbody tr {
+            border-width: 0;
+        }
+    }
+    .visual {
+        position: absolute;
+        margin-top: -20px;
+        .numeros {
+            display: block;
+        }
+        .fa-stack {
+            margin-bottom: rem-calc(5);
+            margin-top: rem-calc(5);
+            color: $white;
+            background-color: $steel;
+            border-radius: 50%;
+        }
+    }
+    .panel + .row .columns p {
+        margin-bottom: rem-calc(10);
+    }
+}
+
+.complemento {
+    background: $smoke url(../images/iconos-complementos.png) 50% 0 no-repeat;
+    height: rem-calc(116);
+    text-align: center;
+    font-size: rem-calc(18);
+    line-height: rem-calc(18);
+    font-family: 'robotoregular';
+    padding-top: rem-calc(77);
+    color: $monsoon;
+    border-radius: rem-calc(4);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+    display: block;
+    &.activo,
+    &:hover {
+        background-color: $third-color;
+        color: $white;
+        box-shadow: none;
+    }
+    &.cloud {
+        background-position: 50% -148px;
+    }
+    &.activo.cloud,
+    &.cloud:hover {
+        background-position: 50% 15px;
+    }
+    &.dvr {
+        background-position: 50% -474px;
+    }
+    &.activo.dvr,
+    &.dvr:hover {
+        background-position: 50% -311px;
+    }
+    &.ecomfax {
+        background-position: 50% -800px;
+    }
+    &.activo.ecomfax,
+    &.ecomfax:hover {
+        background-position: 50% -637px;
+    }
+    &.multi-acess {
+        background-position: 50% -1130px;
+    }
+    &.activo.multi-acess,
+    &.multi-acess:hover {
+        background-position: 50% -967px;
+    }
+    &.office {
+        background-position: 50% -1457px;
+    }
+    &.activo.office,
+    &.office:hover {
+        background-position: 50% -1294px;
+    }
+}

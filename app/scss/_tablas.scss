@@ -253,3 +253,27 @@ table.notif {
         font-size: rem-calc(25);
     }
 }
+
+// Administración implantaciones
+table.implantac {
+    // Alineamiento celdas
+    th {
+        text-align: left;
+    }
+    th:nth-child(1),
+    td:nth-child(1) {
+        text-align: center;
+    }
+    // Anchura columnas
+    th:nth-child(1) {
+        width: 7%;
+    }
+    th:nth-child(3),
+    th:nth-child(4) {
+        width: 17%;
+    }
+    th:nth-child(6),
+    th:nth-child(5) {
+        width: 12%;
+    }
+}

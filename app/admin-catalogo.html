@@ -38,7 +38,7 @@
     <!-- endbuild -->
 </head>
 
-<body class="ofertas">
+<body class="admin">
     <div class="row">
         <div class="off-canvas-wrap" data-offcanvas>
             <div class="inner-wrap">
@@ -55,7 +55,7 @@
                                 </a>
                             </div>
                             <div class="large-8 medium-7 columns show-for-medium-up">
-                                <h1 class="text-center">Configurador de Movistar Fusión Empresas</h1>
+                                <h1 class="text-center">Panel de Administración</h1>
                             </div>
                             <div class="large-3 medium-4 small-10 columns">
                                 <a href="_notific.html" title="Notificaciones" data-reveal-id="notific" data-reveal-ajax="true">
@@ -86,7 +86,7 @@
                                 <option value="">Otro perfil más</option>
                             </select>
                         </li>
-                        <li><a href="#"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
+                        <li><a href="_otras-oper.html" data-reveal-id="otras-oper" data-reveal-ajax="true"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
                         </li>
                         <li><a href="_informes.html" data-reveal-id="informes" data-reveal-ajax="true"><i class="fa fa-bar-chart fa-2x"></i> Crear informes</a>
                         </li>
@@ -96,7 +96,7 @@
                         </li>
                         <li><a href="#"><i class="fa fa-comments fa-2x"></i> Ayuda</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gears fa-2x"></i> Administración</a>
+                        <li><a href="admin.html"><i class="fa fa-gears fa-2x"></i> Administración</a>
                         </li>
                         <li><a href="#"><i class="fa fa-asterisk"></i> Traslados MFE</a>
                         </li>
@@ -107,128 +107,99 @@
 
                 <section class="main-section" role="main">
                     <article class="row" data-equalizer>
-                        <div class="contenido medium-8 columns" data-equalizer-watch>
-                            
-<div class="range-slider-container">
- <div class="range-slider" data-step="1"></div>
- <div class="range-slider-value clearfix">
- <span>Price: &ensp;</span>
- <span id="min" class="min"></span>
- <span id="max" class="max"></span>
- </div>
- </div>
- 
-<script>
-$('.range-slider').each(function() {
-    var $this = $(this),
-        configs = new Array(),
-        low = $.Link({
-            target: $('#min'),
-            method: 'text',
-            format: {
-                decimals: 0,
-                mark: ",",
-                thousand: "."
-            }
-        }),
-        up = $.Link({
-            target: $('#max'),
-            method: 'text',
-            format: {
-                decimals: 0,
-                mark: ",",
-                thousand: "."
-            }
-        });
-
-    configs['min'] = ($this.data('min') === undefined) ? 0 : $this.data('min');
-    configs['max'] = ($this.data('max') === undefined) ? 100 : $this.data('max');
-    configs['start'] = ($this.data('start') === undefined) ? [configs['min'], configs['max']] : $this.data('start');
-    configs['step'] = ($this.data('step') === undefined) ? 1 : $this.data('step');
-    configs['currency'] = ($this.data('currency') === undefined) ? $('.dropdown-money #symbol').text() : $this.data('currency');
-
-    $this.noUiSlider({
-        range: {
-            min: configs['min'],
-            max: configs['max']
-        },
-        start: configs['start'],
-        step: configs['step'],
-        connect: true,
-        handles: 2,
-        serialization: {
-            lower: [low],
-            upper: [up]
-        }
-    }).change(function() {
-        priceSlider($(this).val());
-    });
-
-    $this.siblings('.range-slider-value').find('> .min').text(configs['currency'] + $this.val()[0]);
-    $this.siblings('.range-slider-value').find('> .max').text(configs['currency'] + $this.val()[1]);
-});
-
-
-</script>
-                            
+                        <aside class="col-izda medium-3 columns" role="complementary">
+                            <div class="aside-left" data-equalizer-watch>
+                                <ul>
+                                    <li><a href="admin.html">Inicio</a>
+                                    </li>
+                                    <li><a href="#">Oferta comercial</a>
+                                    </li>
+                                    <li><a class="activa" href="admin-catalogo.html">Catálogo comercial</a>
+                                    </li>
+                                    <li><a href="#">Usuarios</a>
+                                    </li>
+                                    <li><a href="#">Interfaz</a>
+                                    </li>
+                                    <li><a href="#">Navegación</a>
+                                    </li>
+                                    <li><a href="#">Estadísticas</a>
+                                    </li>
+                                    <li><a href="#">Notificaciones</a>
+                                    </li>
+                                    <li><a href="admin-implantaciones.html">Implantaciones</a>
+                                    </li>
+                                    <li><a href="#">Gestión de Informes</a>
+                                    </li>
+                                    <li><a href="#">Preparación del Pedido</a>
+                                    </li>
+                                    <li><a href="#">Cambios de estado</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- aside-left -->
+                        </aside>
+                        <!-- col-izda -->
+                        <div class="contenido medium-9 columns catalogo" data-equalizer-watch>
+                            <div class="medium-6 columns">
+                                <div class="panel">
+                                    <h2>Familias</h2>
+                                    <a class="plus" href="_nueva-familia.html" title="Nueva oferta" data-reveal-id="new-family" data-reveal-ajax="true">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    <ul class="familias">
+                                        <li><a href="#">Conectividad Empresas</a>
+                                        </li>
+                                        <li><a href="#">Puestos Fijos</a>
+                                        </li>
+                                        <li><a href="#">Puestos Móviles</a>
+                                        </li>
+                                        <li><a href="#">Puestos de Voz Activa</a>
+                                        </li>
+                                        <li><a href="#">Accesorios CE</a>
+                                        </li>
+                                        <li><a href="#">Accesorios Centralita</a>
+                                        </li>
+                                        <li><a href="#">Red Local</a>
+                                        </li>
+                                        <li><a href="#">McAffee Multi Access</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="medium-6 columns">
+                                <div class="panel">
+                                    <h2>Productos</h2>
+                                    <a class="plus" href="_nuevo-producto.html" title="Nueva oferta" data-reveal-id="new-product" data-reveal-ajax="true">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    <ul class="productos">
+                                        <li><a href="#">Conectividad Empresas</a>
+                                            <ul>
+                                                <li><a href="#">100 Mb/10 Mb</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Tarifas</a>
+                                            <ul>
+                                                <li><a href="#">Tarifa 5</a>
+                                                </li>
+                                                <li><a href="#">Tarifa 10</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Terminales Móviles en Alquiler</a>
+                                            <ul>
+                                                <li><a href="#">Apple iPhone 6</a>
+                                                </li>
+                                                <li><a href="#">Google Nexus X</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <!-- contenido -->
-                        <aside class="col-dcha medium-4 columns" role="complementary">
-                            <div class="aside-right" data-equalizer-watch>
-                                <header>
-                                    <a class="trash" href="#" title="Eliminar">
-                                        <i class="fa fa-trash-o"></i>
-                                    </a>
-                                    <p>ID de oferta: FU00001234
-                                        <br>Boletín HECO: 13M122234</p>
-                                    <h2 class="text-center">Panadería Madrid S.L.</h2>
-                                </header>
-
-                                <p class="info-ofer">Info de la oferta
-                                    <span><i title="Matrícula de creación" class="fa fa-user"></i> T151221</span>
-                                    <span><i title="Fecha de creación" class="fa fa-calendar"></i> 22/05/14</span>
-                                </p>
-                                <!-- info-ofer -->
-
-                                <div class="factur">
-                                    <p>Facturación del cliente</p>
-                                    <p class="clearfix">
-                                        <span class="left">Dentro de MFE</span>
-                                        <span class="right">723&euro;</span>
-                                    </p>
-                                    <p class="clearfix">
-                                        <span class="left">Fuera de MFE</span>
-                                        <span class="right">1736&euro;</span>
-                                    </p>
-                                </div>
-                                <!-- factur -->
-
-                                <div class="heco">
-                                    <p>Comentarios HECO
-                                        <span class="right">26/05/14</span>
-                                    </p>
-                                    <p>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada, integer vivamus elit eu mauris eu, cum eros quis aliquam nisl wisi.</p>
-                                </div>
-                                <!-- heco -->
-                                <div class="contrato">
-                                    <p>Anexar contrato</p>
-                                    <input title="Selecione el contrato que desea anexar" type="file">
-                                </div>
-                                <!-- contrato -->
-                                <div class="estado clearfix">
-                                    <select class="large-7 columns" name="estado" id="">
-                                        <option value="">Cambio de estado</option>
-                                        <option value="">Estado 2</option>
-                                        <option value="">Estado 3</option>
-                                        <option value="">Estado 4</option>
-                                    </select>
-                                    <a class="button small large-4 columns" href="#" title="Cambiar estado">Aplicar</a>
-                                </div>
-                                <!-- estado -->
-                            </div>
-                            <!-- aside-right -->
-                        </aside>
-                        <!-- col-dcha -->
                     </article>
                 </section>
                 <a class="exit-off-canvas"></a>
@@ -252,6 +223,15 @@ $('.range-slider').each(function() {
     <div id="notific" class="medium reveal-modal" data-reveal></div>
     <!-- modal notificaciones -->
 
+    <div id="otras-oper" class="medium reveal-modal" data-reveal></div>
+    <!-- modal otras operaciones -->
+
+    <div id="cuenta-banc" class="large reveal-modal" data-reveal></div>
+    <!-- modal cuenta bancaria -->
+
+    <div id="camb-titular-lm" class="medium reveal-modal" data-reveal></div>
+    <!-- modal cambiar titular linea móvil -->
+
     <div id="search" class="medium reveal-modal" data-reveal></div>
     <!-- modal search -->
 
@@ -271,6 +251,12 @@ $('.range-slider').each(function() {
     <!-- modal nueva oferta -->
 
     <div id="new-client" class="medium reveal-modal" data-reveal></div>
+    <!-- modal nuevo cliente -->
+
+    <div id="new-family" class="medium reveal-modal" data-reveal></div>
+    <!-- modal nuevo cliente -->
+
+    <div id="new-product" class="medium reveal-modal" data-reveal></div>
     <!-- modal nuevo cliente -->
 
     <!-- build:js js/vendor/libraries.min.js -->

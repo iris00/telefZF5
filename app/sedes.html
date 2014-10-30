@@ -94,7 +94,7 @@
                                 <option value="">Otro perfil más</option>
                             </select>
                         </li>
-                        <li><a href="#"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
+                        <li><a href="_otras-oper.html" data-reveal-id="otras-oper" data-reveal-ajax="true"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
                         </li>
                         <li><a href="_informes.html" data-reveal-id="informes" data-reveal-ajax="true"><i class="fa fa-bar-chart fa-2x"></i> Crear informes</a>
                         </li>
@@ -104,7 +104,7 @@
                         </li>
                         <li><a href="#"><i class="fa fa-comments fa-2x"></i> Ayuda</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gears fa-2x"></i> Administración</a>
+                        <li><a href="admin.html"><i class="fa fa-gears fa-2x"></i> Administración</a>
                         </li>
                         <li><a href="#"><i class="fa fa-asterisk"></i> Traslados MFE</a>
                         </li>
@@ -116,110 +116,120 @@
                 <section class="main-section" role="main">
                     <article class="row">
                         <div class="contenido large-12 columns">
-                            <table class="listado-sedes">
-                                <caption>Listado de Sedes</caption>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>Dirección</th>
-                                        <th>Importe dentro Fusión</th>
-                                        <th>Restablecer Sede</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="alert">
-                                        <td>
-                                            <a href="config-basica-sede.html" title="Movistar Fusión Empresas (Cloud)">
-                                                <img src="images/logo-fusion.png" alt="Fusión">
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href="config-basica-sede.html">
+                            <form action="config-basica-sede.html">
+                                <table class="listado-sedes">
+                                    <caption>Listado de Sedes</caption>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Dirección</th>
+                                            <th>Importe dentro Fusión</th>
+                                            <th>Restablecer Sede</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="alert">
+                                            <td>
+                                                <a href="config-basica-sede.html" title="Movistar Fusión Empresas (Cloud)">
+                                                    <img src="images/logo-fusion.png" alt="Fusión">
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="config-basica-sede.html">
                                                 Calle Orense, 14
                                                 <span>Madrid, Madrid</span>
                                             </a>
-                                        </td>
-                                        <td>
-                                            <div class="euro"><input type="text" disabled value="164"></div>
-                                        </td>
-                                        <td>
-                                            <a href="#" title="Restablecer valores de la sede">
-                                                <span class="fa-stack fa-lg">
-                                                    <i class="fa fa-repeat fa-stack-2x"></i>
-                                                    <i class="fa fa-home fa-stack-1x"></i>
-                                                </span>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                            </td>
+                                            <td>
+                                                <div class="euro">
+                                                    <input type="text" disabled value="164">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="#" title="Restablecer valores de la sede">
+                                                    <span class="fa-stack fa-lg">
+                                                        <i class="fa fa-repeat fa-stack-2x"></i>
+                                                        <i class="fa fa-home fa-stack-1x"></i>
+                                                    </span>
+                                                </a>
+                                            </td>
+                                        </tr>
 
-                                    <tr class="bloqueada" title="Oferta bloqueada por...">
-                                        <td>
-                                            <a href="#" title="Ninguno">
-                                                <i class="fa fa-3x fa-building-o"></i>
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href="#">Calle Huertas, 32
+                                        <tr class="bloqueada" title="Oferta bloqueada por...">
+                                            <td>
+                                                <a href="#" title="Ninguno">
+                                                    <i class="fa fa-3x fa-building-o"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">Calle Huertas, 32
                                             <span>Madrid, Madrid</span></a>
-                                        </td>
-                                        <td>
-                                            <div class="euro"><input type="text" disabled value="625"></div>
-                                        </td>
-                                        <td></td>
-                                    </tr>
+                                            </td>
+                                            <td>
+                                                <div class="euro">
+                                                    <input type="text" disabled value="625">
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                        </tr>
 
-                                    <tr class="bloqueada" title="Oferta bloqueada por...">
-                                        <td>
-                                            <a href="#" title="Movistar Fusión Empresas Básico">
-                                                <i class="fa fa-3x fa-building-o"></i>
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href="#">BMW Automóviles S.A.
+                                        <tr class="bloqueada" title="Oferta bloqueada por...">
+                                            <td>
+                                                <a href="#" title="Movistar Fusión Empresas Básico">
+                                                    <i class="fa fa-3x fa-building-o"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">BMW Automóviles S.A.
                                             <span>Madrid, Madrid</span></a>
-                                        </td>
-                                        <td>
-                                            <div class="euro"><input type="text" disabled value="7362"></div>
-                                        </td>
-                                        <td></td>
-                                    </tr>
+                                            </td>
+                                            <td>
+                                                <div class="euro">
+                                                    <input type="text" disabled value="7362">
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                        </tr>
 
-                                    <tr class="success">
-                                        <td>
-                                            <a href="#" title="Movistar Fusión Pro">
-                                                <img src="images/logo-fusion.png" alt="Fusión">
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href="#">Congelados Burgos S.L.
+                                        <tr class="success">
+                                            <td>
+                                                <a href="#" title="Movistar Fusión Pro">
+                                                    <img src="images/logo-fusion.png" alt="Fusión">
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">Congelados Burgos S.L.
                                             <span>Madrid, Madrid</span></a>
-                                        </td>
-                                        <td>
-                                            <div class="euro"><input type="text" disabled value="736"></div>
-                                        </td>
-                                        <td>
-                                            <a href="#" title="Restablecer valores de la sede">
-                                                <span class="fa-stack fa-lg">
-                                                    <i class="fa fa-repeat fa-stack-2x"></i>
-                                                    <i class="fa fa-home fa-stack-1x"></i>
-                                                </span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                            </td>
+                                            <td>
+                                                <div class="euro">
+                                                    <input type="text" disabled value="736">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="#" title="Restablecer valores de la sede">
+                                                    <span class="fa-stack fa-lg">
+                                                        <i class="fa fa-repeat fa-stack-2x"></i>
+                                                        <i class="fa fa-home fa-stack-1x"></i>
+                                                    </span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
 
-                            <div class="row botonera">
-                                <div class="large-12 columns text-right">
-                                    <a class="plus" href="_nueva-sede.html" title="Crear nueva sede" data-reveal-id="new-sede" data-reveal-ajax="true">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                    <form action=" action">
+                                <div class="botonera clearfix">
+                                    <div class="large-12 columns text-right">
+                                        <a class="plus" href="_nueva-sede.html" title="Crear nueva sede" data-reveal-id="new-sede" data-reveal-ajax="true">
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+
                                         <button type="reset" class="radius func-secondary tiny" title="Cancelar selección de sede">Cancelar</button>
                                         <button type="submit" class="radius tiny" title="Ver resumen">Continuar</button>
-                                    </form>
+
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                         <!-- contenido -->
                     </article>
@@ -244,6 +254,15 @@
     <!-- Ventanas modales -->
     <div id="notific" class="small reveal-modal" data-reveal></div>
     <!-- modal notificaciones -->
+
+    <div id="otras-oper" class="medium reveal-modal" data-reveal></div>
+    <!-- modal otras operaciones -->
+
+    <div id="cuenta-banc" class="large reveal-modal" data-reveal></div>
+    <!-- modal cuenta bancaria -->
+
+    <div id="camb-titular-lm" class="medium reveal-modal" data-reveal></div>
+    <!-- modal cambiar titular linea móvil -->
 
     <div id="search" class="small reveal-modal" data-reveal></div>
     <!-- modal search -->

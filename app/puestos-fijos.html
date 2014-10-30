@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Configurador de Movistar Fusión Empresas">
     <title>Configurador MFE - Selección de sedes</title>
-    
+
     <!-- Iconos de aplicación -->
     <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
@@ -23,7 +23,7 @@
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-    
+
     <!-- build:css css/libraries.min.css -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
     <!-- bower:css -->
@@ -44,7 +44,7 @@
             <div class="inner-wrap">
                 <header role="banner">
                     <div class="tit-sede text-center">Panadería Madrid S.L. B10156754 (Calle Orense 14, Madrid)</div>
-                                        <!-- tit-sede -->
+                    <!-- tit-sede -->
                     <nav class="tab-bar row" role="navigation">
                         <section>
                             <div class="large-1 medium-1 small-1 columns">
@@ -121,7 +121,7 @@
                                 <option value="">Otro perfil más</option>
                             </select>
                         </li>
-                        <li><a href="#"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
+                        <li><a href="_otras-oper.html" data-reveal-id="otras-oper" data-reveal-ajax="true"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
                         </li>
                         <li><a href="_informes.html" data-reveal-id="informes" data-reveal-ajax="true"><i class="fa fa-bar-chart fa-2x"></i> Crear informes</a>
                         </li>
@@ -131,7 +131,7 @@
                         </li>
                         <li><a href="#"><i class="fa fa-comments fa-2x"></i> Ayuda</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gears fa-2x"></i> Administración</a>
+                        <li><a href="admin.html"><i class="fa fa-gears fa-2x"></i> Administración</a>
                         </li>
                         <li><a href="#"><i class="fa fa-asterisk"></i> Traslados MFE</a>
                         </li>
@@ -199,7 +199,9 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="euro"><input type="text" disabled value="15"></div>
+                                                <div class="euro">
+                                                    <input type="text" disabled value="15">
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
@@ -242,7 +244,9 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="euro"><input type="text" disabled value="15"></div>
+                                                <div class="euro">
+                                                    <input type="text" disabled value="15">
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
@@ -268,7 +272,9 @@
                                             <td><a href="#"><i class="fa fa-plus-circle"></i></a>
                                             </td>
                                             <td>
-                                                <div class="euro"><input type="text" disabled value="15"></div>
+                                                <div class="euro">
+                                                    <input type="text" disabled value="15">
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
@@ -294,7 +300,9 @@
                                             <td><a href="#"><i class="fa fa-plus-circle"></i></a>
                                             </td>
                                             <td>
-                                                <div class="euro"><input type="text" disabled value="15"></div>
+                                                <div class="euro">
+                                                    <input type="text" disabled value="15">
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
@@ -311,7 +319,9 @@
                                             <td></td>
                                             <td class="numeros">Total:</td>
                                             <td>
-                                                <div class="euro"><input type="text" disabled value="60"></div>
+                                                <div class="euro">
+                                                    <input type="text" disabled value="60">
+                                                </div>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -465,6 +475,8 @@
     <div id="notific" class="small reveal-modal" data-reveal></div>
     <!-- modal notificaciones -->
 
+    <div id="otras-oper" class="large reveal-modal" data-reveal></div>
+
     <div id="search" class="small reveal-modal" data-reveal></div>
     <!-- modal search -->
 
@@ -509,7 +521,7 @@
     <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
     <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
-<!--<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+    <!--<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
     <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>

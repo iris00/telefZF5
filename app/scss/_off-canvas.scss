@@ -58,9 +58,15 @@ ul.off-canvas-list {
             font-size: rem-calc(28);
             min-width: 28px;
             text-align: center;
+            border-bottom: 1px dotted $white;
         }
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus {
             background-color: $smoke;
         }
+    }
+    &:focus {
+        border-bottom: 100px dotted blue;
     }
 }

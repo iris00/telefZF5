@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+// dropdown
+.f-dropdown {
+    box-shadow: 0 0 2px 2px hsla(0, 0%, 0%, 0.1);
+    &:focus {
+        outline: 0;
+    }
+    &.drop-left.open:before,
+    &.drop-left.open:after {
+        left: auto;
+    }
+}

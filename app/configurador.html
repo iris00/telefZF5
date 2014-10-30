@@ -86,7 +86,7 @@
                                 <option value="">Otro perfil más</option>
                             </select>
                         </li>
-                        <li><a href="#"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
+                        <li><a href="_otras-oper.html" data-reveal-id="otras-oper" data-reveal-ajax="true"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
                         </li>
                         <li><a href="_informes.html" data-reveal-id="informes" data-reveal-ajax="true"><i class="fa fa-bar-chart fa-2x"></i> Crear informes</a>
                         </li>
@@ -96,7 +96,7 @@
                         </li>
                         <li><a href="#"><i class="fa fa-comments fa-2x"></i> Ayuda</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gears fa-2x"></i> Administración</a>
+                        <li><a href="admin.html"><i class="fa fa-gears fa-2x"></i> Administración</a>
                         </li>
                         <li><a href="#"><i class="fa fa-asterisk"></i> Traslados MFE</a>
                         </li>
@@ -111,92 +111,206 @@
                             <a class="plus" href="_nueva-oferta.html" title="Nueva oferta" data-reveal-id="new-ofert" data-reveal-ajax="true">
                                 <i class="fa fa-plus"></i>
                             </a>
-                            <table class="ofertas sortable">
-                                <caption>Listado de Clientes</caption>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>Cliente</th>
-                                        <th data-sort="float" data-sort-default="asc">Importe</th>
-                                        <th data-sort="date" data-sort-default="desc">Fecha Mod.</th>
-                                        <th>Estado</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <a class="new" href="#" title="Editar">
-                                                <i class="fa fa-play-circle"></i>
-                                            </a>
-                                        </td>
-                                        <td><a href="#">Grupo VIPs S.A.<span>B10156754</span></a>
-                                        </td>
-                                        <td class="numeros">625&euro;</td>
-                                        <td>25/05/2014</td>
-                                        <td>Borrador</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a class="new" href="#" title="Editar">
-                                                <i class="fa fa-play-circle"></i>
-                                            </a>
-                                        </td>
-                                        <td><a href="#">BMW Automóviles S.A.<span>B10156754</span></a>
-                                        </td>
-                                        <td class="numeros">7362&euro;</td>
-                                        <td>24/05/2014</td>
-                                        <td class="warning">Incidencia</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a class="new" href="#" title="Editar">
-                                                <i class="fa fa-play-circle"></i>
-                                            </a>
-                                        </td>
-                                        <td><a href="sedes.html">Panadería Madrid S.L.<span>B10156754</span></a>
-                                        </td>
-                                        <td class="numeros">231&euro;</td>
-                                        <td>30/05/2014</td>
-                                        <td>Tramitación Fase I</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a class="new" href="#" title="Editar">
-                                                <i class="fa fa-play-circle"></i>
-                                            </a>
-                                        </td>
-                                        <td><a href="#">Congelados Burgos S.L.<span>B10156754</span></a>
-                                        </td>
-                                        <td class="numeros">736&euro;</td>
-                                        <td>23/05/2014</td>
-                                        <td>Borrador</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a class="new" href="#" title="Editar">
-                                                <i class="fa fa-play-circle"></i>
-                                            </a>
-                                        </td>
-                                        <td><a href="#">Ayuntamiento de Dénia<span>B10156754</span></a>
-                                        </td>
-                                        <td class="numeros">456&euro;</td>
-                                        <td>22/05/2014</td>
-                                        <td class="alert">Anexar contrato</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a class="new" href="#" title="Editar">
-                                                <i class="fa fa-play-circle"></i>
-                                            </a>
-                                        </td>
-                                        <td><a href="#">Google Inc<span>B10156754</span></a>
-                                        </td>
-                                        <td class="numeros">431&euro;</td>
-                                        <td>21/05/2014</td>
-                                        <td>Contrato generado</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="infinite-scroll">
+                                <table class="ofertas sortable">
+                                    <caption>Listado de Clientes</caption>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Cliente</th>
+                                            <th data-sort="float" data-sort-default="asc">Importe</th>
+                                            <th data-sort="date" data-sort-default="desc">Fecha Mod.</th>
+                                            <th>Estado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a class="new" href="#" title="Editar">
+                                                    <i class="fa fa-play-circle"></i>
+                                                </a>
+                                            </td>
+                                            <td><a href="#">Grupo VIPs S.A.<span>B10156754</span></a>
+                                            </td>
+                                            <td class="numeros">625&euro;</td>
+                                            <td>25/05/2014</td>
+                                            <td>Borrador</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="new" href="#" title="Editar">
+                                                    <i class="fa fa-play-circle"></i>
+                                                </a>
+                                            </td>
+                                            <td><a href="#">BMW Automóviles S.A.<span>B10156754</span></a>
+                                            </td>
+                                            <td class="numeros">7362&euro;</td>
+                                            <td>24/05/2014</td>
+                                            <td class="warning">Incidencia</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="new" href="#" title="Editar">
+                                                    <i class="fa fa-play-circle"></i>
+                                                </a>
+                                            </td>
+                                            <td><a href="sedes.html">Panadería Madrid S.L.<span>B10156754</span></a>
+                                            </td>
+                                            <td class="numeros">231&euro;</td>
+                                            <td>30/05/2014</td>
+                                            <td>Tramitación Fase I</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="new" href="#" title="Editar">
+                                                    <i class="fa fa-play-circle"></i>
+                                                </a>
+                                            </td>
+                                            <td><a href="#">Congelados Burgos S.L.<span>B10156754</span></a>
+                                            </td>
+                                            <td class="numeros">736&euro;</td>
+                                            <td>23/05/2014</td>
+                                            <td>Borrador</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="new" href="#" title="Editar">
+                                                    <i class="fa fa-play-circle"></i>
+                                                </a>
+                                            </td>
+                                            <td><a href="#">Ayuntamiento de Dénia<span>B10156754</span></a>
+                                            </td>
+                                            <td class="numeros">456&euro;</td>
+                                            <td>22/05/2014</td>
+                                            <td class="alert">Anexar contrato</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="new" href="#" title="Editar">
+                                                    <i class="fa fa-play-circle"></i>
+                                                </a>
+                                            </td>
+                                            <td><a href="#">Google Inc<span>B10156754</span></a>
+                                            </td>
+                                            <td class="numeros">431&euro;</td>
+                                            <td>21/05/2014</td>
+                                            <td>Contrato generado</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="new" href="#" title="Editar">
+                                                    <i class="fa fa-play-circle"></i>
+                                                </a>
+                                            </td>
+                                            <td><a href="#">Google Inc 7<span>B10156754</span></a>
+                                            </td>
+                                            <td class="numeros">431&euro;</td>
+                                            <td>20/05/2014</td>
+                                            <td>Contrato generado</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="new" href="#" title="Editar">
+                                                    <i class="fa fa-play-circle"></i>
+                                                </a>
+                                            </td>
+                                            <td><a href="#">Google Inc 8<span>B10156754</span></a>
+                                            </td>
+                                            <td class="numeros">431&euro;</td>
+                                            <td>19/05/2014</td>
+                                            <td>Contrato generado</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="new" href="#" title="Editar">
+                                                    <i class="fa fa-play-circle"></i>
+                                                </a>
+                                            </td>
+                                            <td><a href="#">Google Inc 9<span>B10156754</span></a>
+                                            </td>
+                                            <td class="numeros">431&euro;</td>
+                                            <td>18/05/2014</td>
+                                            <td>Contrato generado</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="new" href="#" title="Editar">
+                                                    <i class="fa fa-play-circle"></i>
+                                                </a>
+                                            </td>
+                                            <td><a href="#">Google Inc 10<span>B10156754</span></a>
+                                            </td>
+                                            <td class="numeros">431&euro;</td>
+                                            <td>17/05/2014</td>
+                                            <td>Contrato generado</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="new" href="#" title="Editar">
+                                                    <i class="fa fa-play-circle"></i>
+                                                </a>
+                                            </td>
+                                            <td><a href="#">Google Inc 11<span>B10156754</span></a>
+                                            </td>
+                                            <td class="numeros">431&euro;</td>
+                                            <td>16/05/2014</td>
+                                            <td>Contrato generado</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="new" href="#" title="Editar">
+                                                    <i class="fa fa-play-circle"></i>
+                                                </a>
+                                            </td>
+                                            <td><a href="#">Google Inc 12<span>B10156754</span></a>
+                                            </td>
+                                            <td class="numeros">431&euro;</td>
+                                            <td>15/05/2014</td>
+                                            <td>Contrato generado</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="new" href="#" title="Editar">
+                                                    <i class="fa fa-play-circle"></i>
+                                                </a>
+                                            </td>
+                                            <td><a href="#">Google Inc 13<span>B10156754</span></a>
+                                            </td>
+                                            <td class="numeros">431&euro;</td>
+                                            <td>17/05/2014</td>
+                                            <td>Contrato generado</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="new" href="#" title="Editar">
+                                                    <i class="fa fa-play-circle"></i>
+                                                </a>
+                                            </td>
+                                            <td><a href="#">Google Inc 15<span>B10156754</span></a>
+                                            </td>
+                                            <td class="numeros">431&euro;</td>
+                                            <td>16/05/2014</td>
+                                            <td>Contrato generado</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="new" href="#" title="Editar">
+                                                    <i class="fa fa-play-circle"></i>
+                                                </a>
+                                            </td>
+                                            <td><a href="#">Google Inc 15 ÚLTIMO<span>B10156754</span></a>
+                                            </td>
+                                            <td class="numeros">431&euro;</td>
+                                            <td>15/05/2014</td>
+                                            <td>Contrato generado</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="siguiente">
+                                    <a href="configurador2.html">siguiente</a>
+                                </div>
+                            </div>
+
                         </div>
                         <!-- contenido -->
                         <aside class="col-dcha medium-4 columns" role="complementary">
@@ -242,7 +356,7 @@
                                 </div>
                                 <!-- contrato -->
                                 <div class="estado clearfix">
-                                    <select class="large-7 columns" name="estado" id="">
+                                    <select class="large-7 columns" name="estado">
                                         <option value="">Cambio de estado</option>
                                         <option value="">Estado 2</option>
                                         <option value="">Estado 3</option>
@@ -277,6 +391,18 @@
     <!-- Ventanas modales -->
     <div id="notific" class="medium reveal-modal" data-reveal></div>
     <!-- modal notificaciones -->
+
+    <div id="otras-oper" class="medium reveal-modal" data-reveal></div>
+    <!-- modal otras operaciones -->
+
+    <div id="cuenta-banc" class="large reveal-modal" data-reveal></div>
+    <!-- modal cuenta bancaria -->
+
+    <div id="camb-titular-lm" class="medium reveal-modal" data-reveal></div>
+    <!-- modal cambiar titular linea móvil -->
+
+    <div id="camb-titular-lm" class="medium reveal-modal" data-reveal></div>
+    <!-- modal cambiar titular linea móvil -->
 
     <div id="search" class="medium reveal-modal" data-reveal></div>
     <!-- modal search -->

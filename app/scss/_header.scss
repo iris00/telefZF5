@@ -45,7 +45,7 @@ header {
         // height: 5rem;
         a:focus,
         a:active {
-            outline-color: $white;
+            border-bottom: 1px dotted $white;
         }
         .fa {
             color: $white;
