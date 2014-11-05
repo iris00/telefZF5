@@ -25,6 +25,18 @@ module.exports = function(grunt) {
             }
         },
 
+        // browserSync: {
+        //     app: {
+        //         bsFiles: {
+        //             src : 'css/*.css'
+        //         },
+        //         options: {
+        //             watchTask: true,
+        //             proxy: '10.47.25.193', 
+        //         }
+        //     }
+        // },
+
         // webfont: {
         //     icons: {
         //         src: '../icons/*.svg',          //Ruta de los svg que van hacer convertidos
@@ -166,7 +178,9 @@ module.exports = function(grunt) {
 
     // grunt.loadNpmTasks('grunt-webfont');
 
-    grunt.registerTask('default', ['compile-sass', 'bower-install', 'connect:app', 'watch']);
+    // grunt.loadNpmTasks('grunt-browser-sync');
+
+    grunt.registerTask('default', ['compile-sass', 'bower-install', 'connect:app', 'watch'/*, 'browserSync'*/]);
     // grunt.registerTask('validate-js', ['jshint']);
     grunt.registerTask('server-dist', ['connect:dist']);
 

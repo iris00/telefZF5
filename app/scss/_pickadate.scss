@@ -13,7 +13,7 @@
     user-select: none;
 }
 
-.date:before {
+.fecha:before {
     content: "\f073";
     position: absolute;
     right: 20px;
@@ -35,7 +35,7 @@ input[readonly].calendario {
     font-family: inherit;
     font-size: rem-calc(14);
     margin: 0 0 1rem;
-    padding: 0.5rem;
+    //padding: 0.5rem;
     transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
     width: 100%;
     position: relative;

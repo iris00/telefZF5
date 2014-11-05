@@ -25,6 +25,9 @@ table {
     td.numeros {
         text-align: right;
     }
+    tfoot {
+        background-color: transparent;
+    }
 }
 
 // Tabla ordenable
@@ -242,7 +245,8 @@ table.notif {
     th:nth-child(1) {
         width: 40%;
     }
-    th:nth-child(4) {
+    th:nth-child(4),
+    th:nth-child(5) {
         width: rem-calc(50);
     }
     td:nth-child(1) {

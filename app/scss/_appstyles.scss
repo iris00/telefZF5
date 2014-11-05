@@ -10,20 +10,6 @@ a:focus {
     border-bottom: 1px dotted;
 }
 
-// Mensajes infinite-scroll
-// #infscr-loading {
-//     height: 50px;
-//     width: 100%;
-//     border: 1px solid red;
-//     div em {
-//         display: block;
-//         color: $primary-color;
-//         text-align: center;
-//         font-size: rem-calc(50);
-//         border: 1px solid blue;
-//     }
-// }
-
 .contenido {
     padding-top: rem-calc(50);
     min-height: 607px;
@@ -55,6 +41,22 @@ article.row .contenido.large-12 > * {
     font-size: large;
     font-family: 'robotoregular';
 }
+
+// .sedes object {
+//     width: 100%;
+//     min-height: 600px;
+//     overflow: visible;
+// }
+
+// Charts admin
+// .chart-holder {
+//     width: 100%;
+//     h2 {
+//         font-size: rem-calc(16);
+//         text-align: center;
+//         margin-bottom: rem-calc(16);
+//     }
+// }
 
 // Parpadeo al actualizar el precio de la oferta
 @-webkit-keyframes parpadeo {
@@ -99,13 +101,13 @@ article.row .contenido.large-12 > * {
 
 .cambio {
     padding-left: rem-calc(16);
-    -webkit-animation: parpadeo 5s infinite;
+    -webkit-animation: parpadeo 3s infinite;
     /* Safari 4+ */
-    -moz-animation: parpadeo 5s infinite;
+    -moz-animation: parpadeo 3s infinite;
     /* Fx 5+ */
-    -o-animation: parpadeo 5s infinite;
+    -o-animation: parpadeo 3s infinite;
     /* Opera 12+ */
-    animation: parpadeo 5s infinite;
+    animation: parpadeo 3s infinite;
     /* IE 10+, Fx 29+ */
     p {
         padding-left: rem-calc(16);
@@ -126,7 +128,7 @@ article.row .contenido.large-12 > * {
 footer.row {
     background-color: $secondary-color;
     color: $white;
-    height: rem-calc(46);
+    min-height: rem-calc(46);
     line-height: rem-calc(46);
 }
 

@@ -16,6 +16,15 @@ label {
     line-height: rem-calc(30);
 }
 
+label.required:after {
+    content: "\f069";
+    position: absolute;
+    right: 20px;
+    top: 1px;
+    font-size: rem-calc(10);
+    font-family: fontawesome;
+}
+
 fieldset {
     border: 0;
     margin: 0;
@@ -32,7 +41,7 @@ input[type=checkbox] {
 }
 
 select {
-    padding: rem-calc(2 4);
+    padding: rem-calc(2 0);
     height: rem-calc(30);
     background-color: transparent;
 }
@@ -55,7 +64,8 @@ option {
     background-color: $white;
 }
 
-input[type="text"][disabled] {
+input[type="text"][disabled],
+input[type="text"].disabled {
     border: none;
     background-color: transparent;
     box-shadow: none;
@@ -73,6 +83,9 @@ input[type="text"][disabled] {
         color: $steel;
         font-size: rem-calc(20);
     }
+    &.peque:after {
+        color: $iron;
+    }
     input[type="text"][disabled] {
         text-align: right;
         padding-right: 25px;
@@ -86,6 +99,12 @@ input[type="text"][disabled] {
     font-size: rem-calc(20);
     font-family: 'robotoregular';
     color: $steel;
+}
+
+.euro.peque input {
+    font-size: rem-calc(14);
+    font-family: 'robotolight';
+    color: $oil;
 }
 
 input[type="text"].numeros {
@@ -117,6 +136,10 @@ input[type="text"][data-invalid] {
     font-style: normal;
     background-color: $alert-color;
     font-family: 'robotoregular';
+}
+
+[data-abide] .error input {
+    margin-bottom: 0;
 }
 
 form[data-abide] label {
@@ -164,6 +187,7 @@ form[data-abide] label {
         font-size: rem-calc(14);
         position: static;
         line-height: normal;
+        color: $white;
     }
 }
 

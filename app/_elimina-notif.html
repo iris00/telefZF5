@@ -1,0 +1,54 @@
+<h2>Eliminacion de notificaciones
+    <a class="close-reveal-modal" title="Cerrar"><i class="fa fa-times"></i></a>
+ </h2>
+<script type="text/javascript">
+function borrar()
+{
+	document.all.miForm.action="opwebServlet?"
+	//parent.fPrincipal.document.location="opwebServlet?opcion=administracion&accion=modificarNotificacion"		
+ 	alert("Se ha eliminado correctamente");
+}
+</script>
+
+<form id="miForm" name="miForm"  action="" ><!-- target="window.parent.location onSubmit="modif();"S" -->
+    <input type="hidden" name="opcion" value="administracion">
+	<input type="hidden" name="accion" value="eliminaNotif">
+    <div class="row">
+        <div class="large-3 columns">
+            <label>Titulo</label>
+        </div>
+        <div class="large-9 columns">
+            <input type="text" id="titulo" name="titulo" value="<!--titulo-->">
+        </div>
+    </div>
+<div class="row">
+        <div class="large-3 columns">
+            <label>fecha</label>
+        </div>
+        <div class="large-9 columns">
+            <input type="text" id="fx" name="fx" value="<!--fx-->">
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-3 columns">
+            <label>Estado</label>
+        </div>
+        <div class="large-9 columns">
+            <input type="text" id="estado" name="estado" value="<!--estado-->">
+        </div>
+    </div>
+   
+    <div class="row botonera">
+        <div class="large-12 columns text-right" >
+             <button type="submit" class="radius tiny close-reveal-modals" title="Borrar notificación" onClick="borrar();">Borrar
+            </button>
+           
+        </div>
+    </div>
+      
+</form>
+
+
+ <script src="js/vendor/libraries.min.js"></script>
+ <script src="js/vendor/foundation.min.js"></script>
+ <script src="js/app.js"></script>

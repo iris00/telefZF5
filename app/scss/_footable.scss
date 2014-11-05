@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+// FOOTABLE: añade paginación y ordenar filas pulsando en cabecera
+.footable {
+    .footable-toggle {
+        display: inline-block;
+        font-family: 'fontawesome';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        -webkit-font-smoothing: antialiased;
+        padding-right: rem-calc(5);
+        font-size: rem-calc(14);
+    }
+    th {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: -moz-none;
+        -ms-user-select: none;
+        user-select: none;
+        &.footable-sortable {
+            cursor: pointer;
+        }
+        &.footable-sorted .footable-sort-indicator:before {
+            content: "\f0d8";
+        }
+        &.footable-sorted-desc .footable-sort-indicator:before {
+            content: "\f0d7";
+        }
+        .footable-sort-indicator {
+            display: inline-block;
+            font-family: 'fontawesome';
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            -webkit-font-smoothing: antialiased;
+            padding-left: 5px;
+            color: $aluminum;
+        }
+        .footable-sort-indicator:before {
+            content: "\f0dc";
+        }
+    }
+}
+
+.pagination {
+    margin: 20px 0;
+    ul {
+        display: inline-block;
+        li {
+            display: inline;
+        }
+        li > a,
+        li > span {
+            padding: rem-calc(6 12);
+            margin: rem-calc(0 3);
+            text-decoration: none;
+            font-family: 'robotoregular';
+        }
+        li > a:hover,
+        li > a:focus,
+        .active > a,
+        .active > span {
+            background-color: $third-color;
+            color: $white;
+            border-radius: $global-radius;
+        }
+        .disabled > span,
+        .disabled > a {
+            color: $aluminum;
+        }
+        .disabled > a:hover,
+        .disabled > a:focus {
+            cursor: default;
+            background-color: transparent;
+            color: $aluminum;
+        }
+        .footable-page-arrow {
+            font-size: rem-calc(20);
+        }
+    }
+    &.pagination-centered {
+        text-align: center;
+    }
+}
+
+.no-paging .hide-if-no-paging {
+    display: none;
+}

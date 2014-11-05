@@ -1,37 +1,39 @@
 <h2>Filtrado avanzado <a class="close-reveal-modal" title="Cerrar"><i class="fa fa-times"></i></a>
 </h2>
-<form action="ofertas-filtradas.html" data-abide>
+<form action="ofertas-filtradas.html" data-abide validate>
     <div class="row">
         <div class="large-4 columns">
-            <label>CUC</label>
+            <label class="required">CUC</label>
         </div>
         <div class="large-8 columns">
-            <input type="text" placeholder="Ej. T151221" pattern="alpha_numeric" required>
+            <input type="text" placeholder="Ej. T151221" required pattern="alpha_numeric">
             <small class="error">Este campo es obligatorio y sólo admite letras y números</small>
         </div>
     </div>
 
     <div class="row">
         <div class="large-4 columns">
-            <label>CIF</label>
+            <label class="required">CIF</label>
         </div>
         <div class="large-8 columns">
-            <input type="text" placeholder="Ej. T151221">
+            <input type="text" placeholder="Ej. T151221" required pattern="alpha_numeric">
             <small class="error">Este campo es obligatorio y sólo admite letras y números</small>
         </div>
     </div>
 
     <div class="row">
         <div class="large-4 columns">
-            <label>Creación</label>
+            <label class="required">Creación</label>
         </div>
         <div class="large-8 columns">
             <div class="row">
-                <div class="large-6 columns date">
-                    <input class="calendario" type="text" placeholder="Desde...">
+                <div class="large-6 columns fecha">
+                    <input class="calendario" type="text" placeholder="Desde..." required pattern="day_month_year">
+                    <small class="error">Este campo es obligatorio y sólo admite fechas</small>
                 </div>
-                <div class="large-6 columns date">
-                    <input class="calendario" type="text" placeholder="Hasta...">
+                <div class="large-6 columns fecha">
+                    <input class="calendario" type="text" placeholder="Hasta..." required pattern="day_month_year">
+                    <small class="error">Este campo es obligatorio y sólo admite fechas</small>
                 </div>
             </div>
         </div>
@@ -39,15 +41,17 @@
 
     <div class="row">
         <div class="large-4 columns">
-            <label>Modificación</label>
+            <label class="required">Modificación</label>
         </div>
         <div class="large-8 columns">
             <div class="row">
-                <div class="large-6 columns date">
-                    <input class="calendario" type="text" placeholder="Desde...">
+                <div class="large-6 columns fecha">
+                    <input class="calendario" type="text" placeholder="Desde..." required pattern="day_month_year">
+                    <small class="error">Este campo es obligatorio y sólo admite fechas</small>
                 </div>
-                <div class="large-6 columns date">
-                    <input class="calendario" type="text" placeholder="Hasta...">
+                <div class="large-6 columns fecha">
+                    <input class="calendario" type="text" placeholder="Hasta..." required pattern="day_month_year">
+                    <small class="error">Este campo es obligatorio y sólo admite fechas</small>
                 </div>
             </div>
         </div>
@@ -55,17 +59,21 @@
 
     <div class="row">
         <div class="large-4 columns">
-            <label>Importe</label>
+            <label class="required">Importe</label>
         </div>
         <div class="large-8 columns">
             <div class="row">
                 <div class="large-6 columns">
-                    <input type="text" placeholder="Desde..." pattern="alpha_numeric" required>
-                    <small class="error">Este campo es obligatorio y sólo admite números</small>
+                    <div class="euro peque">
+                        <input type="text" placeholder="Desde..." required pattern="number">
+                        <small class="error">Este campo es obligatorio y sólo admite números</small>
+                    </div>
                 </div>
                 <div class="large-6 columns">
-                    <input type="text" placeholder="Hasta..." pattern="alpha_numeric" required>
-                    <small class="error">Este campo es obligatorio y sólo admite números</small>
+                    <div class="euro peque">
+                        <input type="text" placeholder="Hasta..." required pattern="number">
+                        <small class="error">Este campo es obligatorio y sólo admite números</small>
+                    </div>
                 </div>
             </div>
         </div>

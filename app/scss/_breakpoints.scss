@@ -20,6 +20,9 @@
         vertical-align: top;
         margin-top: rem-calc(12);
     }
+    table.ofertas th:nth-child(1) {
+        width: 40px;
+    }
     .ofertas a.plus {
         left: rem-calc(80);
     }

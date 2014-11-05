@@ -57,7 +57,7 @@
         overflow: hidden;
     }
     & > .CaptionCont > span.placeholder {
-        color: $iron;
+        color: $aluminum;
     }
     & > .CaptionCont > label {
         position: absolute;
@@ -263,7 +263,6 @@
     & > .optWrapper.multiple > .options > li.selected span i {
         background-image: url("../images/checkbox-checked.png");
     }
-    /*disabled state*/
     .disabled {
         opacity: 0.7;
     }

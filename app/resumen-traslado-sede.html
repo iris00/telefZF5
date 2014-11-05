@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Configurador de Movistar Fusión Empresas">
-    <title>Configurador MFE - Complementos: Acceso remoto</title>
+    <title>Configurador MFE - Resumen de traslado de sede</title>
 
     <!-- Iconos de aplicación -->
     <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
@@ -43,9 +43,7 @@
         <div class="off-canvas-wrap" data-offcanvas>
             <div class="inner-wrap">
                 <header role="banner">
-                    <div class="tit-sede text-center">
-                        Panadería Madrid S.L. B10156754 (Calle Orense 14, Madrid)
-                    </div>
+                    <div class="tit-sede text-center"></div>
                     <!-- tit-sede -->
                     <nav class="tab-bar" role="navigation">
                         <section>
@@ -55,9 +53,12 @@
                                 </a>
                             </div>
                             <div class="large-9 medium-7 columns show-for-medium-up">
-                                <h1 class="text-center">Complementos para la oficina</h1>
+                                <h1 class="text-center">Resumen traslado de sede</h1>
                             </div>
                             <div class="large-2 medium-4 small-10 columns">
+                                <a href="#" title="Información">
+                                    <i class="fa fa-info-circle"></i>
+                                </a>
                                 <a href="_buscar-filtro.html" title="Buscar con filtro avanzado" data-reveal-id="search-filter" data-reveal-ajax="true">
                                     <i class="fa fa-search-plus"></i>
                                 </a>
@@ -71,18 +72,18 @@
 
                     <nav role="navigation">
                         <ul class="breadcrumbs breadconf">
-                            <li class="large-2 medium-2 small-4 columns current">
-                                <a href="sedes.html" title="Sede"><i class="fa fa-building-o"></i></a>
+                            <li class="large-2 medium-2 small-4 columns activo">
+                                <a href="#" title="Sede"><i class="fa fa-building-o"></i></a>
                             </li>
-                            <li class="large-2 medium-2 small-4 columns current">
-                                <a href="#" title="Puestos fijos">
+                            <li class="large-2 medium-2 small-4 columns">
+                                <a href="puestos-fijos.html" title="Puestos fijos">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-user fa-stack-2x"></i>
                                         <i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i>
                                     </span>
                                 </a>
                             </li>
-                            <li class="large-2 medium-2 small-4 columns current">
+                            <li class="large-2 medium-2 small-4 columns">
                                 <a href="puestos-moviles.html" title="Puestos móviles">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-user fa-stack-2x"></i>
@@ -90,7 +91,7 @@
                                     </span>
                                 </a>
                             </li>
-                            <li class="large-2 medium-2 small-4 columns current">
+                            <li class="large-2 medium-2 small-4 columns">
                                 <a href="#" title="Accesorios de sede">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-4x fa-building-o fa-stack-2x"></i>
@@ -98,12 +99,12 @@
                                     </span>
                                 </a>
                             </li>
-                            <li class="large-2 medium-2 small-4 columns activo">
+                            <li class="large-2 medium-2 small-4 columns">
                                 <a href="#" title="Seguridad"><i class="fa fa-desktop"></i></a>
                             </li>
                             <li class="large-2 medium-2 small-4 columns current">
                                 <a href="resumen-sedes.html" title="Precio total de la oferta"><i class="fa fa-shopping-cart"></i>
-                                941&euro;</a>
+                                1744&euro;</a>
                             </li>
                         </ul>
                     </nav>
@@ -141,101 +142,50 @@
 
                 <section class="main-section" role="main">
                     <article class="row">
-                        <div class="contenido large-12 columns">
-                            <form class="complem-sede" action="complementos-ecomfax.html">
-
-                                <div class="medium-4 columns">
-                                    <ul class="small-block-grid-3 medium-block-grid-2">
-                                        <li>
-                                            <a href="complementos.html" class="complemento office">Office 365</a>
-                                        </li>
-                                        <li>
-                                            <a href="complementos-cloud.html" class="complemento cloud">Servidores Cloud</a>
-                                        </li>
-                                        <li>
-                                            <a href="complementos-multiacess.html" class="complemento multi-acess">Multi Acess</a>
-                                        </li>
-                                        <li>
-                                            <a href="complementos-presencia.html" class="complemento cloud">Presencia en Internet</a>
-                                        </li>
-                                        <li>
-                                            <a href="complementos-dvr.html" class="complemento dvr">DVR</a>
-                                        </li>
-                                        <li>
-                                            <a href="complementos-accesoremoto.html" class="complemento cloud activo">Acceso Remoto</a>
-                                        </li>
-                                        <li>
-                                            <a href="complementos-ecomfax.html" class="complemento ecomfax">eComFax</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="medium-7 medium-offset-1 columns panel">
-                                    <dl class="tabs" data-tab>
-                                        <dd class="active"><a href="#licenc">Licencias</a>
-                                        </dd>
-                                    </dl>
-                                    <!-- tabs -->
-                                    <div class="tabs-content">
-                                        <div class="content active" id="licenc">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Acceso remoto básico</td>
-                                                        <td>
-                                                            <input type="text" value="0">
-                                                        </td>
-                                                        <td>
-                                                            <div class="euro">
-                                                                <input type="text" disabled value="0">
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Instalación gratuita</td>
-                                                        <td>
-                                                            <input type="checkbox">
-                                                        </td>
-                                                        <td>
-                                                            <div class="euro">
-                                                                <input type="text" disabled value="0">
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Instalación remota</td>
-                                                        <td>
-                                                            <input type="checkbox">
-                                                        </td>
-                                                        <td>
-                                                            <div class="euro">
-                                                                <input type="text" disabled value="0">
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Instalación In Situ</td>
-                                                        <td>
-                                                            <input type="checkbox">
-                                                        </td>
-                                                        <td>
-                                                            <div class="euro">
-                                                                <input type="text" disabled value="0">
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                        <div class="contenido large-10 large-offset-1 end columns">
+                            <form class="conf-basica" action="config-sede.html">
+                                <div class="row">
+                                    <div class="medium-4 medium-offset-2 columns">
+                                        <div class="panel row">
+                                            <h2 id="pu-fi">Puestos fijos</h2>
+                                            <div class="small-6 columns">
+                                                <a href="puestos-fijos.html">
+                                                    <span class="fa-stack fa-lg">
+                                                        <i class="fa fa-user fa-stack-2x"></i>
+                                                        <i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="small-6 columns">
+                                                <input type="text" value="4" disabled>
+                                            </div>
                                         </div>
-                                        <!-- content licenc -->
+                                        <div class="r-s-margen"></div>
                                     </div>
-                                    <!-- tabs-content -->
+                                    <!-- fila 1 col 1 -->
+
+                                    <div class="medium-4 columns end">
+                                        <div class="panel row">
+                                            <h2>Conectividad</h2>
+                                            <div class="small-12 columns">
+                                                <select name="" id="">
+                                                    <option value="">Mantener</option>
+                                                    <option value="">CE 100/10 Mb Monosede</option>
+                                                    <option value="">CE 100/100 Mb Multisede</option>
+                                                    <option value="">CE 1000/10 Mb Monosede</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="r-s-margen"></div>
+                                    </div>
+                                    <!-- fila 1 col 2 -->
                                 </div>
-                                <!-- panel -->
+                                <!-- row -->
 
                                 <div class="row botonera">
-                                    <div class="medium-12 columns text-right">
-                                        <button type="submit" class="radius func-secondary tiny" title="Finalizar configuración">Finalizar</button>
-                                        <button type="submit" class="radius tiny" title="Continuar configuración">Continuar</button>
+                                    <div class="large-12 columns text-right">
+                                        <button type="reset" class="radius func-secondary tiny" title="Cancelar selección de sede">Cancelar</button>
+                                        <button type="submit" class="radius tiny" title="Ver resumen">Continuar</button>
                                     </div>
                                 </div>
                             </form>
@@ -285,6 +235,9 @@
     <div id="new-notif" class="medium reveal-modal" data-reveal></div>
     <!-- modal nueva notificación -->
 
+    <div id="new-sede" class="medium reveal-modal" data-reveal></div>
+    <!-- modal nueva sede -->
+
     <div id="edit-notif" class="medium reveal-modal" data-reveal></div>
     <!-- modal editar notificación -->
 
@@ -293,21 +246,6 @@
 
     <div id="new-client" class="medium reveal-modal" data-reveal></div>
     <!-- modal nuevo cliente -->
-
-    <div id="new-sede" class="medium reveal-modal" data-reveal></div>
-    <!-- modal nueva sede -->
-
-    <div id="conf-cob-movil" class="tiny reveal-modal" data-reveal></div>
-    <!-- modal Configuración Cobertura Móvil -->
-
-    <div id="ope-num" class="large reveal-modal" data-reveal></div>
-    <!-- modal Configuración de las numeraciones  -->
-
-    <div id="selecc-red" class="small reveal-modal" data-reveal></div>
-    <!-- modal seleccionar red -->
-
-    <div id="licen-info" class="small reveal-modal" data-reveal></div>
-    <!-- modal seleccionar red -->
 
     <!-- build:js js/vendor/libraries.min.js -->
     <!-- bower:js -->
