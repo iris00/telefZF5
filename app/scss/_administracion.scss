@@ -1,15 +1,16 @@
 @charset "UTF-8";
 
+/* COMIENZAN MIS ESTILOS */
 // Administración
 .catalogo .panel,
 .implantaciones .panel {
     h2 {
         background-color: $primary-color;
+        color: $white;
+        font-size: rem-calc(20);
         margin: rem-calc((-20) -20 20);
         padding: rem-calc(15 0);
-        font-size: rem-calc(20);
         text-align: center;
-        color: $white;
     }
     a.plus {
         left: auto;
@@ -21,9 +22,10 @@
         list-style: none;
         a {
             color: $charcoal;
-            font-size: rem-calc(17);
-            font-family: 'robotoregular';
             display: block;
+            font-family: 'robotoregular', sans-serif;
+            font-weight: normal;
+            font-size: rem-calc(17);
             padding: rem-calc(8 0);
         }
     }
@@ -32,13 +34,16 @@
         li {
             margin-left: rem-calc(10);
         }
+        a {
+            font-family: 'robotolight', sans-serif;
+        }
     }
     .botonera {
         .trash {
             font-size: rem-calc(35);
             position: relative;
-            top: rem-calc(7);
             right: rem-calc(40);
+            top: rem-calc(7);
         }
     }
 }

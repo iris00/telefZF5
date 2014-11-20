@@ -2,8 +2,8 @@
 
 // Pestañas OPWEB
 .opweb {
-    .tabs {}
-    .tabs dd > a, .tabs .tab-title > a {
+    .tabs dd > a, 
+    .tabs .tab-title > a {
         font-size: rem-calc(14);
         padding: rem-calc(8 16);
     }

@@ -9,19 +9,15 @@
 
 // max-width 640px, mobile-only styles
 @media only screen and (max-width: 40em) {
-    header nav section > div,
-    header .tab-bar.row,
-    .tab-bar .menu-icon,
-    section div:nth-child(3) a .fa,
-    .tab-bar {
+    header nav section > div, header .tab-bar.row, .tab-bar .menu-icon, section div:nth-child(3) a .fa, .tab-bar {
         height: rem-calc(48);
     }
     section div:nth-child(3) a .fa {
-        vertical-align: top;
         margin-top: rem-calc(12);
+        vertical-align: top;
     }
     table.ofertas th:nth-child(1) {
-        width: 40px;
+        width: rem-calc(30);
     }
     .ofertas a.plus {
         left: rem-calc(80);
@@ -29,16 +25,16 @@
     table.listado-sedes th:nth-child(2) {
         width: 30%;
     }
-    .breadcrumbs > li {
-        font-size: rem-calc(20);
-        padding: 0 5px;
+    .reveal-modal form {
+        padding: rem-calc(5);
     }
     .complem-sede .tabs-content {
         padding: rem-calc(5);
     }
-    // .breadcrumbs.breadconf li {
-    //   width: 25%;
-    // }
+    .breadcrumbs > li {
+        font-size: rem-calc(20);
+        padding: 0 5px;
+    }
     .breadconf .current a {
         font-size: rem-calc(16);
     }
@@ -48,6 +44,14 @@
     .breadconf .fa {
         font-size: calc(inherit - 1rem);
     }
+    // OCULTAR/MOSTRAR columna derecha en mobile
+    // aside.col-dcha {
+    //     position: absolute;
+    //     padding: 0;
+    //     width: 90%;
+    //     right: -90%;
+    //     z-index: 100;
+    // }
 }
 
 // small tablet

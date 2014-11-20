@@ -3,13 +3,12 @@
 // Columna izquierda para Administración
 .col-izda {
     .aside-left {
-        min-height: 607px;
-        box-shadow: 0 6px 3px $charcoal;
         background-color: $third-color;
+        box-shadow: 0 6px 3px $charcoal;
+        min-height: 607px;
     }
     ul {
         list-style: none;
-        //padding-top: rem-calc(16);
         margin: 0;
     }
     a {
@@ -20,8 +19,6 @@
         &.activa {
             background-color: scale-color($third-color, $lightness: -35%);
             color: #fff;
-            //font-weight: bold;
-       
         }
     }
 }

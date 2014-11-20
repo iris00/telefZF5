@@ -2,6 +2,7 @@
   "name": "zf5_project",
   "dependencies": {
     "foundation": "zurb/bower-foundation",
-    "font-awesome": "~4.2.0" 
+    "font-awesome": "~4.2.0",
+    "chartjs": "~0.2.0"
   }
 }

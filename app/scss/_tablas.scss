@@ -42,6 +42,7 @@ table {
         font-size: rem-calc(20);
         margin-left: rem-calc(4);
         color: $aluminum;
+        speak: none;
     }
     tr.awesome {
         background-color: $smoke;
@@ -64,7 +65,8 @@ table.ofertas {
         padding-top: rem-calc(15);
     }
     td:nth-child(2), td.warning, td.alert {
-        font-family: 'robotoregular';
+        font-family: 'robotoregular', sans-serif;
+        font-weight: normal;
     }
     td.warning {
         color: $warning-color;
@@ -74,7 +76,7 @@ table.ofertas {
     }
     td span {
         font-size: rem-calc(14);
-        font-family: 'robotolight';
+        font-family: 'robotolight', sans-serif;
         display: block;
     }
     // Alineamiento celdas
@@ -92,7 +94,7 @@ table.ofertas {
 // Tabla listado sedes
 table.listado-sedes {
     width: 98%;
-    margin: 0 auto rem-calc(15);
+    margin: 0 1% rem-calc(15);
     tbody tr {
         border: 1px solid $iron;
         border-width: 0 1px 1px;
@@ -113,7 +115,8 @@ table.listado-sedes {
         vertical-align: middle;
         font-size: rem-calc(18);
         &:nth-child(2) {
-            font-family: 'robotoregular';
+            font-family: 'robotoregular', sans-serif;
+            font-weight: normal;
             text-align: left;
         }
         &:nth-child(3) {
@@ -121,7 +124,7 @@ table.listado-sedes {
         }
         &:nth-child(2) span {
             font-size: rem-calc(14);
-            font-family: 'robotolight';
+            font-family: 'robotolight', sans-serif;
             display: block;
         }
     }
@@ -162,7 +165,8 @@ table.conf-sede {
         border-bottom: 0;
         line-height: rem-calc(37);
         font-size: rem-calc(25);
-        font-family: 'robotoregular';
+        font-family: 'robotoregular', sans-serif;
+        font-weight: normal;
     }
 }
 
@@ -250,7 +254,8 @@ table.notif {
         width: rem-calc(50);
     }
     td:nth-child(1) {
-        font-family: 'robotoregular';
+        font-family: 'robotoregular', sans-serif;
+        font-weight: normal;
     }
     // Iconos
     td .fa {

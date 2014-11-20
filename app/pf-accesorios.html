@@ -47,7 +47,7 @@
                     <!-- tit-sede -->
                     <nav class="tab-bar" role="navigation">
                         <section>
-                            <div class="large-1 medium-1 small-1 columns">
+                            <div class="large-1 medium-1 small-2 columns">
                                 <a title="Menú de navegación" href="" class="left-off-canvas-toggle menu-icon" tabindex="0">
                                     <span></span>
                                 </a>
@@ -150,7 +150,9 @@
                                     <caption>Listado de accesorios</caption>
                                     <thead>
                                         <tr>
-                                            <th><input id="checkAll" type="checkbox" name="" title="Marcar / desmarcar todos"></th>
+                                            <th>
+                                                <input id="checkAll" type="checkbox" name="" title="Marcar / desmarcar todos">
+                                            </th>
                                             <th>Cantidad</th>
                                             <th>Dispositivo</th>
                                             <th>Precio</th>
@@ -275,32 +277,32 @@
                                     <div class="visualizador">
                                         <ul class="carrusel text-center" data-orbit>
                                             <li class="accesorio" data-orbit-slide="headline-1">
-                                                <img src="images/accesorio1.png" alt="accesorio" title="Información del producto" data-dropdown="accesorio1" data-options="align:left">
+                                                <span class="acc1" aria-expanded="true" data-options="align:left" data-dropdown="accesorio1" title="Información del producto 1" alt="accesorio 1"></span>
                                                 <p class="prod-tit">Cascos Bluetooth Avanzados</p>
                                                 <p class="prod-precio">14&euro;</p>
                                             </li>
                                             <li class="accesorio" data-orbit-slide="headline-2">
-                                                <img src="images/accesorio1.png" alt="accesorio" title="Información del producto" data-dropdown="accesorio2" data-options="align:left">
+                                                <span class="acc2" aria-expanded="true" data-options="align:left" data-dropdown="accesorio2" title="Información del producto 2" alt="accesorio 2"></span>
                                                 <p class="prod-tit">Cascos Bluetooth Avanzados</p>
                                                 <p class="prod-precio">14&euro;</p>
                                             </li>
                                             <li class="accesorio" data-orbit-slide="headline-3">
-                                                <img src="images/accesorio1.png" alt="accesorio" title="Información del producto" data-dropdown="accesorio3" data-options="align:left">
+                                                <span class="acc3" aria-expanded="true" data-options="align:left" data-dropdown="accesorio3" title="Información del producto 3" alt="accesorio 3"></span>
                                                 <p class="prod-tit">Cascos Bluetooth Avanzados</p>
                                                 <p class="prod-precio">14&euro;</p>
                                             </li>
                                             <li class="accesorio" data-orbit-slide="headline-4">
-                                                <img src="images/accesorio1.png" alt="accesorio" title="Información del producto" data-dropdown="accesorio4" data-options="align:left">
+                                                <span class="acc4" aria-expanded="true" data-options="align:left" data-dropdown="accesorio4" title="Información del producto 4" alt="accesorio 4"></span>
                                                 <p class="prod-tit">Cascos Bluetooth Avanzados</p>
                                                 <p class="prod-precio">14&euro;</p>
                                             </li>
                                             <li class="accesorio" data-orbit-slide="headline-5">
-                                                <img src="images/accesorio1.png" alt="accesorio" title="Información del producto" data-dropdown="accesorio5" data-options="align:left">
+                                                <span class="acc5" aria-expanded="true" data-options="align:left" data-dropdown="accesorio5" title="Información del producto 5" alt="accesorio 5"></span>
                                                 <p class="prod-tit">Cascos Bluetooth Avanzados</p>
                                                 <p class="prod-precio">14&euro;</p>
                                             </li>
                                             <li class="accesorio" data-orbit-slide="headline-6">
-                                                <img src="images/accesorio1.png" alt="accesorio" title="Información del producto" data-dropdown="accesorio6" data-options="align:left">
+                                                <span class="acc6" aria-expanded="true" data-options="align:left" data-dropdown="accesorio6" title="Información del producto 6" alt="accesorio 6"></span>
                                                 <p class="prod-tit">Cascos Bluetooth Avanzados</p>
                                                 <p class="prod-precio">14&euro;</p>
                                             </li>
@@ -410,6 +412,7 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="bower_components/chartjs/Chart.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/vendor/foundation.min.js -->

@@ -2,12 +2,16 @@
 
 // Alert boxes
 .alert-box {
-    font-size: rem-calc(15);
     background-color: #009eb8;
     display: inline-block;
-    position: absolute;
+    font-size: rem-calc(15);
     left: 150px;
+    position: absolute;
     top: 10px;
+    &.info {
+        background-color: $primary-color;
+        color: $white;
+    }
 }
 
 .sedes .alert-box,

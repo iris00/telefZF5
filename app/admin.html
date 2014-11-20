@@ -49,7 +49,7 @@
                     <!-- tit-sede -->
                     <nav class="tab-bar" role="navigation">
                         <section>
-                            <div class="large-1 medium-1 small-1 columns">
+                            <div class="large-1 medium-1 small-2 columns">
                                 <a title="Menú de navegación" href="" class="left-off-canvas-toggle menu-icon" tabindex="0">
                                     <span></span>
                                 </a>
@@ -142,38 +142,32 @@
                         <div class="contenido medium-9 columns" data-equalizer-watch>
                             <div class="row">
                                 <div class="medium-12 columns">
-                                    <div class="medium-6 columns">
-                                        <div class="panel">
-                                            <div class="chart-holder">
-                                                <h2>Portabilidades según operador (Gráfica tipo donut)</h2>
-                                                
-                                            </div>
+                                    <div class="large-6 columns">
+                                        <div id="chart1" class="chart-holder">
+                                            <h2>Portabilidades según operador</h2>
+                                            <canvas id="donut"></canvas>
                                         </div>
                                     </div>
-                                    <div class="medium-6 columns">
-                                        <div class="panel">
-                                            <div class="chart-holder">
-                                                <h2>Ventas Fusión (Gráfica tipo línea)</h2>
-                                                
-                                            </div>
+                                    <div class="large-6 columns">
+                                        <div id="chart2" class="chart-holder">
+                                            <h2>Ventas Fusión</h2>
+                                            <canvas id="lineas"></canvas>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="medium-12 columns">
-                                    <div class="medium-6 columns">
-                                        <div class="panel">
-                                            <div class="chart-holder">
-                                                <h2>Dentro de MFE (Gráfica tipo barras)</h2>
-                                            </div>
+                                    <div class="large-6 columns">
+                                        <div id="chart3" class="chart-holder">
+                                            <h2>Dentro de MFE</h2>
+                                            <canvas id="barras"></canvas>
                                         </div>
                                     </div>
-                                    <div class="medium-6 columns">
-                                        <div class="panel">
-                                            <div class="chart-holder">
-                                                <h2>Dentro de MFE ? (Gráfica tipo línea)</h2>
-                                            </div>
+                                    <div class="large-6 columns">
+                                        <div id="chart4" class="chart-holder">
+                                            <h2>Dentro de MFE ¿?</h2>
+                                            <canvas id="lineas2"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -237,6 +231,7 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="bower_components/chartjs/Chart.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/vendor/foundation.min.js -->

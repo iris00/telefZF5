@@ -10,6 +10,7 @@ module.exports = function(grunt) {
         app: 'app',
         dist: 'dist',
 
+
         sass: {
             options: {
                 includePaths: ['<%= app %>/bower_components/foundation/scss'],
@@ -25,29 +26,21 @@ module.exports = function(grunt) {
             }
         },
 
-        // browserSync: {
-        //     app: {
-        //         bsFiles: {
-        //             src : 'css/*.css'
-        //         },
+
+        // webfont: {
+        //     icons: {
+        //         src: 'app/images/icons/*.svg', //Ruta de los svg que van hacer convertidos
+        //         dest: 'app/fonts', //Ruta de destino de la compilación
+        //         destCss: 'app/fonts/build', //Ruta de destino donde se creará la hoja de estilos css y un html ejemplo
         //         options: {
-        //             watchTask: true,
-        //             proxy: '10.47.25.193', 
+        //             stylesheet: 'scss', //Extensión de la hoja de estilos, css
+        //             relativeFontPath: '../fonts', //La ruta del src - font-family que se imprime dentro de la hoja de estilos
+        //             //font: 'ponies', //Nombre de los fonts pero les añade un chorizo de letras y números ¿por caché?
+        //             engine: 'node' // fontforge es mejor (default) pero no rula en windows :(
         //         }
         //     }
         // },
 
-        // webfont: {
-        //     icons: {
-        //         src: '../icons/*.svg',          //Ruta de los svg que van hacer convertidos
-        //         dest: '../fonts',           //Ruta de destino de la compilación
-        //         destCss: '../fonts/build',          //Ruta de destino donde se creará la hoja de estilos css y un html ejemplo
-        //         options: {
-        //             stylesheet: 'css',      //Extensión de la hoja de estilos, css
-        //             relativeFontPath: '../fonts'    //La ruta del src - font-family que se imprime dentro de la hoja de estilos
-        //         }
-        //     }
-        // }
 
         // jshint: {
         // 	options: {
@@ -59,11 +52,14 @@ module.exports = function(grunt) {
         // 	]
         // },
 
+
         clean: {
             dist: {
                 src: ['<%= dist %>/*']
-            },
+            }
         },
+
+
         copy: {
             dist: {
                 files: [{
@@ -81,6 +77,7 @@ module.exports = function(grunt) {
             },
         },
 
+
         imagemin: {
             target: {
                 files: [{
@@ -92,6 +89,7 @@ module.exports = function(grunt) {
             }
         },
 
+
         uglify: {
             options: {
                 preserveComments: 'some',
@@ -99,12 +97,14 @@ module.exports = function(grunt) {
             }
         },
 
+
         useminPrepare: {
             html: ['<%= app %>/index.html'],
             options: {
                 dest: '<%= dist %>'
             }
         },
+
 
         usemin: {
             html: ['<%= dist %>/**/*.html', '!<%= app %>/bower_components/**'],
@@ -114,46 +114,90 @@ module.exports = function(grunt) {
             }
         },
 
+
         watch: {
-            grunt: {
-                files: ['Gruntfile.js'],
-                tasks: ['sass']
+                grunt: {
+                    files: ['Gruntfile.js'],
+                    tasks: ['sass']
+                },
+                sass: {
+                    files: '<%= app %>/scss/**/*.scss',
+                    tasks: ['sass']
+                },
+                livereload: {
+                    files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
+                    options: {
+                        livereload: true
+                    }
+                }
             },
-            sass: {
-                files: '<%= app %>/scss/**/*.scss',
-                tasks: ['sass']
-            },
-            livereload: {
-                files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
+
+            // browserSync: {
+            //     default_options: {
+            //         bsFiles: {
+            //             src: [
+            //                 "css/*.css",
+            //                 "*.html"
+            //             ]
+            //         },
+            //         options: {
+            //             watchTask: true,
+            //             proxy: "localhost:9000",
+            //             port: 9000,
+            //             browser: ['chrome', 'firefox']
+            //         },
+            //         server: {
+            //             baseDir: './',
+            //         }
+            //     }
+            // },
+
+
+
+        browserSync: {
+            app: {
+                bsFiles: {
+                    src: 'css/*.css, *.html'
+                },
                 options: {
-                    livereload: true
+                    watchTask: true,
+                    proxy: 'localhost:9000',
+                    //port: 9000,
+                    browser: ['chrome', 'firefox']
+                },
+                server: {
+                    baseDir: './',
                 }
             }
         },
+
 
         connect: {
             app: {
                 options: {
                     port: 9000,
                     base: '<%= app %>/',
-                    open: true,
+                    //open: true,
                     livereload: true,
+                    hostname: 'localhost'
+                    //hostname: '10.47.25.77'
                     //hostname: '127.0.0.1'
-                    hostname: '10.47.25.193'
                 }
             },
             dist: {
                 options: {
                     port: 9001,
                     base: '<%= dist %>/',
-                    open: true,
+                    //open: true,
                     keepalive: true,
                     livereload: false,
+                    hostname: 'localhost'
+                    //hostname: '10.47.25.77'
                     //hostname: '127.0.0.1'
-                    hostname: '10.47.25.193'
                 }
             }
         },
+
 
         wiredep: {
             target: {
@@ -175,15 +219,12 @@ module.exports = function(grunt) {
 
     grunt.registerTask('compile-sass', ['sass']);
     grunt.registerTask('bower-install', ['wiredep']);
+    //grunt.loadNpmTasks('grunt-webfont', ['webfont']);
+    grunt.loadNpmTasks('grunt-browser-sync');
 
-    // grunt.loadNpmTasks('grunt-webfont');
-
-    // grunt.loadNpmTasks('grunt-browser-sync');
-
-    grunt.registerTask('default', ['compile-sass', 'bower-install', 'connect:app', 'watch'/*, 'browserSync'*/]);
+    grunt.registerTask('default', ['compile-sass', 'bower-install', 'browserSync', 'connect:app', 'watch'/*, 'webfont'*/]);
     // grunt.registerTask('validate-js', ['jshint']);
     grunt.registerTask('server-dist', ['connect:dist']);
-
     grunt.registerTask('publish', ['compile-sass', 'clean:dist', /* 'validate-js',*/ 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin'
     ]);
 };

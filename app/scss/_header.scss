@@ -1,46 +1,40 @@
 @charset "UTF-8";
 
 // Header
-h1, h2, h3, h4, h5, h6 {
-    font-family: "robotoregular", sans-serif;
-}
-
-// Icono hamburger
-header .tab-bar .menu-icon {
-    width: rem-calc(45);
-    span:after {
-        left: 1rem;
-    }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'robotoregular', sans-serif;
 }
 
 header {
     .tit-sede {
         background-color: $secondary-color;
-        font-family: "robotoregular", sans-serif;
-        font-size: rem-calc(18);
-        padding: rem-calc(5) 0;
-        min-height: rem-calc(35);
         color: $white;
+        font-family: 'robotoregular', sans-serif;
+        font-size: rem-calc(18);
         line-height: rem-calc(22);
+        min-height: rem-calc(35);
+        padding: rem-calc(5 0);
     }
     .tab-bar section {
         @include grid-row($behavior: nest);
     }
     .tab-bar section h1 {
-        font-weight: normal;
         font-size: rem-calc(22);
-        white-space: nowrap;
+        font-weight: normal;
         overflow: hidden;
         text-overflow: ellipsis;
-        // position: absolute;
-        // width: 100%;
-   
+        white-space: nowrap;
     }
     // Icono hamburger
     .tab-bar .menu-icon {
         width: rem-calc(45);
         span:after {
-            left: 1rem;
+            left: rem-calc(25);
         }
     }
     // Columnas
@@ -48,20 +42,11 @@ header {
         background-color: $primary-color;
     }
     section div:nth-child(2) {
-        // position: absolute;
-        // width: 100%;
-        padding: 0 0 0 80px;
-        //left: 0;
-   
+        padding: rem-calc(0 0 0 80);
     }
     section div:nth-child(3) {
-        text-align: right;
         padding-right: rem-calc(16);
-        // position: absolute;
-        // top: 0;
-        // right: 15px;
-        // width: 10rem;
-        // height: 5rem;
+        text-align: right;
         a:focus,
         a:active {
             border-bottom: 1px dotted $white;
@@ -69,11 +54,11 @@ header {
         .fa {
             color: $white;
             font-size: rem-calc(28);
+            height: rem-calc(36);
             padding: 0;
-            vertical-align: middle;
             text-align: center;
-            width: 46px;
-            height: 36px;
+            vertical-align: middle;
+            width: rem-calc(46);
         }
         .fa-bell-o {
             position: relative;
@@ -81,27 +66,19 @@ header {
         .fa-bell-o span {
             background-color: $alert-color;
             border-radius: 50%;
-            height: 19px;
+            font-size: rem-calc(15);
+            height: rem-calc(19);
+            min-width: rem-calc(19);
+            padding-top: rem-calc(2);
             position: absolute;
-            right: 0;
+            right: rem-calc(1);
             text-align: center;
-            top: -8px;
-            min-width: 19px;
-            font-size: 15px;
-            padding-top: 2px;
+            top: rem-calc(-8);
             vertical-align: middle;
         }
-        // .fa-question-circle {
-        //   font-size: rem-calc(30);
-        // }
         .fa-home,
         .fa-info-circle {
             font-size: rem-calc(32);
         }
-        // a.button:hover,
-        // a.button:focus {
-        //   background-color: transparent;
-        // }
-   
     }
 }

@@ -6,13 +6,13 @@
     border: 0 solid;
     padding: 0;
     h2 {
+        background-color: $secondary-color;
         border-radius: 6px 6px 0 0;
         color: $white;
         font-size: rem-calc(20);
-        padding: rem-calc(10 20);
-        margin-top: 0;
         line-height: rem-calc(35);
-        background-color: $secondary-color;
+        margin-top: 0;
+        padding: rem-calc(10 20);
         a {
             color: $white;
             float: right;
@@ -23,9 +23,9 @@
         .close-reveal-modal {
             color: $white;
             font-size: rem-calc(25);
-            position: initial;
             line-height: rem-calc(35);
             margin-left: rem-calc(30);
+            position: initial;
         }
     }
     form {
@@ -41,15 +41,15 @@
         margin-top: rem-calc(15);
     }
     .prohibido {
-        position: absolute;
-        z-index: 10;
-        width: 100%;
         left: 0;
         margin-top: rem-calc(-15);
+        position: absolute;
         text-align: center;
+        width: 100%;
+        z-index: 10;
         .fa-ban {
-            font-size: 150px;
             color: $alert-color;
+            font-size: 150px;
             opacity: .6;
         }
     }
@@ -57,8 +57,8 @@
         h3,
         h4 {
             color: $white;
-            text-align: center;
             padding: rem-calc(3);
+            text-align: center;
         }
         h3 {
             background-color: $third-color;
@@ -72,8 +72,8 @@
             margin-top: rem-calc(-8);
         }
         h5 {
-            text-align: center;
             font-size: rem-calc(16);
+            text-align: center;
         }
         & > .row .columns {
             padding-left: 2px;
@@ -106,8 +106,8 @@ form.selecc-red {
         }
         a:nth-child(1) {
             float: left;
-            margin-bottom: 0;
             line-height: rem-calc(44);
+            margin-bottom: 0;
         }
         a:nth-child(2) {
             float: right;

@@ -57,28 +57,34 @@
 @import "foundation/components/offcanvas";
 @import "foundation/components/visibility";
 
+// Estilos del configurador
+@import "administracion";
+@import "alertas";
 @import "appstyles";
-@import "header";
-@import "off-canvas";
-@import "login";
-@import "f-dropdown";
+@import "autocomplete";
+@import "carrusel";
+@import "charts";
 @import "col-dcha";
 @import "col-izda";
+
+//@import "datatables";
+@import "desplegables";
+@import "emergentes";
+
+@import "footable";
+@import "formularios";
+@import "header";
+@import "login";
+@import "multi-select";
 @import "notificaciones";
+@import "range-slider";
+@import "off-canvas";
+@import "opweb";
+@import "paneles";
+@import "pasos";
+@import "pestanias";
+@import "pickadate";
 @import "sedes";
 @import "tablas";
-@import "pickadate";
-@import "reveal";
-@import "alert-box";
-@import "forms";
-@import "multi-select";
-@import "pasos";
-@import "paneles";
-@import "carrusel";
-@import "footable";
-@import "autocomplete";
-@import "noui-range-slider";
-@import "pestanias";
-@import "administracion";
-@import "opweb";
+
 @import "breakpoints";

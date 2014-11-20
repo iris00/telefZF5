@@ -12,9 +12,9 @@
         padding: rem-calc(10);
     }
     .tit h2 {
-        margin: rem-calc((-10) -10 10);
-        padding: rem-calc(5 10);
         background-color: $primary-color;
         color: $white;
+        margin: rem-calc(-10 -10 10);
+        padding: rem-calc(5 10);
     }
 }

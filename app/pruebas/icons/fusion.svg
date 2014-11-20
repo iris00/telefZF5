@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="63px" height="58px" viewBox="0 0 63 58" style="enable-background:new 0 0 63 58;" xml:space="preserve">
+<style type="text/css">
+<![CDATA[
+	.st0{opacity:0.2;fill:#4C6E7F;}
+	.st1{fill:url(#SVGID_3_);stroke:#62A3B2;stroke-miterlimit:10;}
+	.st2{fill:url(#SVGID_4_);stroke:#62A3B2;stroke-miterlimit:10;}
+	.st3{fill:url(#SVGID_5_);stroke:#62A3B2;stroke-miterlimit:10;}
+	.st4{fill:url(#SVGID_6_);stroke:#62A3B2;stroke-miterlimit:10;}
+	.st5{fill:url(#SVGID_7_);stroke:#62A3B2;stroke-miterlimit:10;}
+	.st6{fill:url(#SVGID_8_);stroke:#62A3B2;stroke-miterlimit:10;}
+	.st7{fill:url(#SVGID_9_);stroke:#62A3B2;stroke-miterlimit:10;}
+	.st8{filter:url(#Adobe_OpacityMaskFilter);}
+	.st9{fill:none;stroke:#FFFFFF;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st10{fill:url(#SVGID_2_);}
+	.st11{opacity:0.7;}
+	.st12{opacity:0.8;}
+	.st13{fill:#FFFFFF;}
+	.st14{fill:none;}
+	.st15{opacity:0.4;mask:url(#SVGID_1_);fill:#FFFFFF;}
+	.st16{opacity:0.2;fill:#47728A;}
+]]>
+</style>
+<symbol  id="brillo" viewBox="-10 -10 20 20">
+	<defs>
+		<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="-10" y="-10" width="20" height="20">
+			<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+		</filter>
+	</defs>
+	<mask maskUnits="userSpaceOnUse" x="-10" y="-10" width="20" height="20" id="SVGID_1_">
+		<g class="st8">
+			<radialGradient id="SVGID_2_" cx="0" cy="0" r="10" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#FFFFFF"/>
+				<stop  offset="1" style="stop-color:#000000"/>
+			</radialGradient>
+			<path class="st10" d="M10,0c0-5.5-4.5-10-10-10c-5.5,0-10,4.5-10,10s4.5,10,10,10C5.5,10,10,5.5,10,0z"/>
+		</g>
+	</mask>
+	<path class="st15" d="M10,0c0-5.5-4.5-10-10-10c-5.5,0-10,4.5-10,10s4.5,10,10,10C5.5,10,10,5.5,10,0z"/>
+</symbol>
+<symbol  id="manchas" viewBox="-36.4 -35.3 72.9 70.6">
+	<path class="st16" d="M36.4,1.2c0,0.6-0.1,1.2-0.2,1.8c-0.1,0.5-0.1,1-0.2,1.5c-1.6,0.7-3.3,1-5.3,0.8c-0.8-0.1-2.1-0.3-1.9,1.4
+		c0.3,2.2,0.9,4.3,2.9,5.4c0.7,0.4,1.4,0.6,2.1,0.8c-1,2.7-2.3,5.3-3.8,7.7c-1.1-1.1-2.2-2.2-3.4-3.1c-1.3-0.9-1.5,1.2-1.2,2.1
+		c0.4,1.8,1,3.5,1.5,5.3c-1.1,1.3-2.3,2.5-3.5,3.7c0-0.5,0-1,0.1-1.6c0.3-1.9,0.3-3.6-1.9-5.2c0.5,2-1.1,2.5-1.3,3.9
+		c-0.8,6.2-0.9,6.2-6.5,5.2c-1.5-0.3-0.6-2.9-2.9-3.1c-2.5-0.2-1.2-2.1-0.8-3.7c0.4-2.2,1.9-4.5,0.1-6.9c-2.8,2.1-6,2-9.2,2.5
+		c-2.7,0.4-3.1-1.2-3.3-3.5c-0.2-2.4,0.6-3.4,2.9-3.3c2.1,0.1,2.8-3,5.5-2.7c1.2,0.1,3.5-1.2,6-2.4C6.5,5.8,0.8,8-3.5,4.3
+		c3.4,1.9,7.2-0.1,10.6,1.2c0.5,0.2,1.5,0.4,1.7-0.5c0.1-0.6-0.2-1.4-0.7-1.8C7,1.9,5.5,1.9,4.1,1.6c-5.3-0.8-9.3-4-13-7.7
+		C-5.3-6.2-2.3-4,1-3.1c1,0.3,2.3,1.1,2.9,0c0.9-1.6-0.8-2.1-1.7-2.7C-3.1-8.9-8.4-12-13.7-15.1c-0.9-0.5-1.9-1.5-2.6,0.2
+		c-0.4,1-0.5,2.2,0.6,2.5c3.2,0.7,2.4,3.3,2,5.2c-0.4,2-0.2,2.7,1.7,2.6C-9.5-4.8-9-2.2-9.3-1.2c-0.5,1.5-3.2,2.6-4.3,1.8
+		c-4.6-3.3-3.2,0.2-3.1,2.6c0,0.3-0.3,0.7-0.9,1.7c-1.9-3.8-2.1-7.9-4.3-11.1c-0.6-0.9-1-2.3-2.1-2.2c-1.7,0.2-0.7,1.8-0.9,2.7
+		c-0.6,3.2,0,6.4,0.4,9.6c0.3,2.1,0.6,4.2-1.6,5.6c-1.5,1-0.7,1.9,0.2,2.7c3.2,2.8,5.1,7,9,9.1c1.2,0.6,1.1,2.4,1.6,3.6
+		c1.3,2.9,1.6,5.2-0.7,7.9c-0.3,0.3,0.3,1.3,0.7,2.5c-4.3-1.9-8.2-4.6-11.5-7.9c0-0.2-0.1-0.5-0.2-0.8c-0.3-0.7-0.8-0.9-1.4-0.9
+		c-1.6-1.8-3-3.7-4.2-5.8c4.6,1,8.2,4.8,13.2,4.9c-1.6-5.3-6.6-3.9-9.7-6c0.4-1.8,2.3-0.2,3-1.6c-1.4-3.8-5-4.1-7.7-3.4
+		c-0.9,0.2-1.4,0.1-1.7-0.1c-0.3-0.9-0.6-1.8-0.9-2.8c0.6-4.1,1.8-7.7,0.3-11c-2.2-4.7,4.5-8.1,3.6-13.3c-0.5-3.1-0.4-6,0.2-8.4
+		c2.3-3.9,5.3-7.4,8.8-10.2c0.4,1.7,1,3.4,1.9,5c1.3-1.4,0.9-2.9,0.9-4.2c0-1,0-2,0.1-3c0.6-0.4,1.2-0.8,1.8-1.2c0,3,0,6,0,9
+		c0,1.3,0.3,2.7,1.4,3.3c0.9,0.5,2.7,3,2.7-1c0-1.8,2.3-4,3.6-2.6c3.1,3.3,5.8-0.8,8.7,0c0.7,0.2,2.2-2.3,2.8,0.2
+		c0.5,2-1.4,2.2-2.6,2.3c-3,0.4-6.1,0.6-9.1,0.8c-0.9,0.1-1.8,0-1.5,1.2c0.3,1.2,0.2,2.7,1.2,3.7c2.7-3.1,1.8,0.5,2.3,1.4
+		c0.3,0.6,0.8,1.6,1.3,1.1c2.8-2.7,3.3,0.6,4.8,1.8c2.4,1.8,4.5,4.2,7.8,4.8c-0.1-3.3-3.6-4.5-3.7-7.7c1.7,0.5,1.5,3.1,3.6,2.8
+		C5.3-15.7,4-17.3,4.3-19c0.2-1,0.2-2.2,1.1-2.5c1.2-0.4,1.4,0.9,1.9,1.6c4.4,6.2,8.4,12.7,9.6,20.6c1,6.4,4.5,1.2,6.2,0.9
+		c3.1-0.5-0.1-1.8-0.4-2.8c-0.1-0.3-0.1-0.6-0.1-0.9c-0.4,0.7-1.1,1-2.5,0c-1.9-1.4-2.8-4.7-2.1-5c5.3-2.5,3-6.7,4-10
+		c1.4-4.5,1.1-9.3,3.3-13.6c0.2,0.2,0.5,0.3,0.7,0.5c-1.1,6.2-1,12.6-1.8,18.8c-0.3,2.3-0.7,4.6-1.1,6.8c1.7-5,6.9-8.1,6.6-14.1
+		c1.7,6.7-1.7,12.3-3.9,18c3.6-0.9,7-2,10.3-3.4c0,0.5,0.1,1,0.1,1.5c-0.4,0.4-0.8,0.8-1.2,1.2c-0.6,0.6-1.2,1.3-0.7,2.2
+		C35,1.6,35.7,1.4,36.4,1.2z M14.7,4.2c-0.5-1.6-0.2-3.3-2.3-3.3c-0.8,1.1-2.5-1.3-2.4,1c0.1,2.3,1.6,3.6,3.8,3.9
+		C14.6,5.8,15.1,5.5,14.7,4.2z"/>
+</symbol>
+<g id="detrás" class="st12">
+	<g id="detrás_1_">
+		<g>
+			
+				<radialGradient id="SVGID_3_" cx="35.7832" cy="48.9707" r="6.9189" gradientTransform="matrix(1 0 0 0.8 0 9.7942)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#FFFFFF"/>
+				<stop  offset="1" style="stop-color:#78B0CF"/>
+			</radialGradient>
+			<circle class="st1" cx="35.8" cy="49" r="6.9"/>
+			
+				<use xlink:href="#manchas"  width="72.9" height="70.6" x="-36.4" y="-35.3" transform="matrix(0.1482 0 0 -0.1482 35.7832 48.9717)" style="overflow:visible;"/>
+			
+				<use xlink:href="#brillo"  width="20" height="20" x="-10" y="-10" transform="matrix(9.344111e-002 0 0 -0.1482 34.7539 44.4873)" style="overflow:visible;"/>
+			
+				<use xlink:href="#brillo"  width="20" height="20" x="-10" y="-10" transform="matrix(9.344111e-002 0 0 -0.1482 36.2021 53.6045)" style="overflow:visible;"/>
+		</g>
+		<g>
+			
+				<radialGradient id="SVGID_4_" cx="16.4312" cy="27.4038" r="5.8599" gradientTransform="matrix(1 0 0 0.8 0 5.4808)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#FFFFFF"/>
+				<stop  offset="1" style="stop-color:#78B0CF"/>
+			</radialGradient>
+			<circle class="st2" cx="16.4" cy="27.4" r="5.9"/>
+			
+				<use xlink:href="#manchas"  width="72.9" height="70.6" x="-36.4" y="-35.3" transform="matrix(0.1256 0 0 -0.1256 16.4312 27.4038)" style="overflow:visible;"/>
+			
+				<use xlink:href="#brillo"  width="20" height="20" x="-10" y="-10" transform="matrix(7.914688e-002 0 0 -0.1256 15.5586 23.6055)" style="overflow:visible;"/>
+			
+				<use xlink:href="#brillo"  width="20" height="20" x="-10" y="-10" transform="matrix(7.914688e-002 0 0 -0.1256 16.7852 31.3281)" style="overflow:visible;"/>
+		</g>
+		<g>
+			
+				<radialGradient id="SVGID_5_" cx="40.9287" cy="22.3403" r="6.3889" gradientTransform="matrix(1 0 0 0.8 0 4.4681)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#FFFFFF"/>
+				<stop  offset="1" style="stop-color:#78B0CF"/>
+			</radialGradient>
+			<circle class="st3" cx="40.9" cy="22.3" r="6.4"/>
+			
+				<use xlink:href="#manchas"  width="72.9" height="70.6" x="-36.4" y="-35.3" transform="matrix(0.1369 0 0 -0.1369 40.9287 22.3408)" style="overflow:visible;"/>
+			
+				<use xlink:href="#brillo"  width="20" height="20" x="-10" y="-10" transform="matrix(8.629408e-002 0 0 -0.1369 39.9775 18.1987)" style="overflow:visible;"/>
+			
+				<use xlink:href="#brillo"  width="20" height="20" x="-10" y="-10" transform="matrix(8.629408e-002 0 0 -0.1369 41.3154 26.6191)" style="overflow:visible;"/>
+		</g>
+	</g>
+	<g id="delante_1_">
+		<g>
+			
+				<radialGradient id="SVGID_6_" cx="32.4551" cy="31.8848" r="14.5254" gradientTransform="matrix(1 0 0 0.8 0 6.377)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#FFFFFF"/>
+				<stop  offset="1" style="stop-color:#78B0CF"/>
+			</radialGradient>
+			<circle class="st4" cx="32.5" cy="31.9" r="14.5"/>
+			
+				<use xlink:href="#manchas"  width="72.9" height="70.6" x="-36.4" y="-35.3" transform="matrix(0.3113 0 0 -0.3113 32.4551 31.8848)" style="overflow:visible;"/>
+			
+				<use xlink:href="#brillo"  width="20" height="20" x="-10" y="-10" transform="matrix(0.1962 0 0 -0.3113 30.292 22.4692)" style="overflow:visible;"/>
+			
+				<use xlink:href="#brillo"  width="20" height="20" x="-10" y="-10" transform="matrix(0.1962 0 0 -0.3113 33.333 41.6104)" style="overflow:visible;"/>
+		</g>
+		<path class="st0" d="M35,46.4c-0.7,0.1-1.3,0.2-2,0.2c-4.3,0.4-8.5-5.6-9.4-13.5C22.8,25,25.6,18,30,17.4l2-0.2
+			c-4.4,0.6-7.2,7.6-6.3,15.7C26.5,40.8,30.7,46.8,35,46.4z"/>
+		<path class="st0" d="M36.6,46.1c-0.4,0.1-0.2,0.1-0.9,0.2c-3.6,0.4-8.1-5.2-9-13.1C25.8,25,28.9,18.1,33,17.3l0.6-0.1
+			c-4.4,0.6-7.2,7.6-6.3,15.7C28.2,40.8,32.3,46.5,36.6,46.1z"/>
+	</g>
+</g>
+<g id="delante">
+	<g id="arriba">
+		<g>
+			
+				<radialGradient id="SVGID_7_" cx="-8112.5718" cy="-8191.7119" r="10.9756" gradientTransform="matrix(1 0 0 0.8 8137.5635 6566.6211)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#FFFFFF"/>
+				<stop  offset="1" style="stop-color:#78B0CF"/>
+			</radialGradient>
+			<circle class="st5" cx="24.8" cy="13.1" r="11"/>
+			
+				<use xlink:href="#manchas"  width="72.9" height="70.6" x="-36.4" y="-35.3" transform="matrix(-3.064416e-002 0.2332 0.2332 3.064416e-002 24.7891 13.0869)" style="overflow:visible;"/>
+			
+				<use xlink:href="#brillo"  width="20" height="20" x="-10" y="-10" transform="matrix(-1.931501e-002 0.147 0.2332 3.064416e-002 32.0557 12.3936)" style="overflow:visible;"/>
+			
+				<use xlink:href="#brillo"  width="20" height="20" x="-10" y="-10" transform="matrix(-1.931501e-002 0.147 0.2332 3.064416e-002 17.4155 12.7871)" style="overflow:visible;"/>
+		</g>
+		<g id="jet" class="st11">
+			<polyline class="st9" points="21.3,9.9 24.1,13.2 21.3,16.5 			"/>
+			<polyline class="st9" points="24.4,9.9 27.2,13.2 24.4,16.5 			"/>
+			<line class="st9" x1="24.1" y1="13.2" x2="18.8" y2="13.2"/>
+			<line class="st9" x1="30.3" y1="13.2" x2="27.2" y2="13.2"/>
+		</g>
+	</g>
+	<g id="izda">
+		<g>
+			
+				<radialGradient id="SVGID_8_" cx="-8196.4336" cy="-8109.3135" r="10.9756" gradientTransform="matrix(1.0375 0 0 0.83 8517.4209 6770.0386)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#FFFFFF"/>
+				<stop  offset="1" style="stop-color:#78B0CF"/>
+			</radialGradient>
+			<circle class="st6" cx="13.7" cy="39.4" r="11.4"/>
+			
+				<use xlink:href="#manchas"  width="72.9" height="70.6" x="-36.4" y="-35.3" transform="matrix(-0.2183 -0.1091 -0.1091 0.2183 13.6958 39.3682)" style="overflow:visible;"/>
+			
+				<use xlink:href="#brillo"  width="20" height="20" x="-10" y="-10" transform="matrix(-0.1376 -6.873654e-002 -0.1091 0.2183 11.9131 46.7285)" style="overflow:visible;"/>
+			
+				<use xlink:href="#brillo"  width="20" height="20" x="-10" y="-10" transform="matrix(-0.1376 -6.873654e-002 -0.1091 0.2183 16.4883 32.2393)" style="overflow:visible;"/>
+		</g>
+		<g id="fijo_y_móvil" class="st11">
+			<path class="st13" d="M7.6,36.3c0.3-0.3,0.6-0.4,1-0.5c0.3,0,0.7-0.1,0.9,0.1c0.3,0.3,0.4,0.4,0.3,0.8c-0.2,0.2-0.2,0.6-0.2,0.8
+				c-0.1,0.2-0.1,0.4-0.3,0.6c-0.1,0.1-0.3,0-0.4,0c-0.2,0-0.4-0.1-0.6-0.1c-0.1,0.1-0.2,0-0.3,0.1c0,0-0.1,0.1-0.1,0.1
+				c0,0.1,0.1,0.1,0,0.1c-0.1,0.1,0,0.1-0.1,0.2c-0.1,0.2-0.1,0.5-0.2,0.7c-0.1,0.4-0.1,0.8,0,1.2c0,0.2,0,0.4,0.1,0.6
+				c0,0.1,0,0.2,0,0.3c0,0.1,0.1,0.1,0.1,0.2c0,0.1,0,0.1,0.1,0.2c0.1,0.1,0.1,0.1,0.2,0.1c0.2,0,0.4,0,0.6,0c0.2-0.1,0.3,0,0.5,0
+				c0.2,0,0.2,0.3,0.2,0.5c0,0.3,0.2,0.9,0.3,1.1c0,0.1,0.1,0.1,0.1,0.2c0,0.1,0,0.2-0.1,0.3c-0.1,0.1-0.2,0.1-0.4,0.2
+				c-0.1,0.1-0.3,0.2-0.4,0.2c-0.4,0-0.8-0.2-1.2-0.4c-0.2-0.1-0.3-0.3-0.5-0.4c-0.1-0.1-0.2-0.1-0.2-0.2c0-0.1,0-0.1-0.1-0.2
+				C7,42.8,7,42.6,6.8,42.3c-0.1-0.2-0.1-0.5-0.2-0.7c-0.1-0.2-0.1-0.4-0.1-0.7c-0.1-0.5-0.1-1-0.1-1.4c0-0.5,0.1-0.9,0.3-1.4
+				c0.1-0.3,0.2-0.7,0.4-1c0,0,0.1-0.1,0.1-0.1c-0.1-0.1,0.1-0.2,0.1-0.3C7.4,36.6,7.5,36.5,7.6,36.3"/>
+			<path class="st13" d="M20.8,36.9v6.4c0,0.1-0.1,0.4-0.3,0.5C20.4,43.9,20.1,44,20,44h-3.2c-0.3,0-0.4-0.1-0.5-0.3
+				C16,43.7,16,43.4,16,43.3v-6.4c0-0.3,0-0.4,0.3-0.5c0.1-0.3,0.3-0.3,0.5-0.3H20c0.1,0,0.4,0,0.5,0.3
+				C20.7,36.5,20.8,36.6,20.8,36.9 M18.9,37L18.9,37c0-0.1,0-0.1,0-0.1h-1.1c0,0-0.1,0-0.1,0.1h0.1H18.9z M20.1,42.2v-4.4
+				c0,0,0,0,0-0.1c-0.1,0-0.1,0-0.1,0h-3.2c-0.1,0-0.1,0-0.1,0c-0.1,0.1-0.1,0.1-0.1,0.1v4.4c0,0.1,0,0.1,0.1,0.1c0,0,0,0.1,0.1,0.1
+				H20c0,0,0-0.1,0.1-0.1C20.1,42.3,20.1,42.3,20.1,42.2z M18.7,43.5c0.1-0.1,0.3-0.1,0.3-0.3c0-0.1-0.1-0.3-0.3-0.4
+				c0-0.1-0.1-0.1-0.3-0.1s-0.3,0-0.4,0.1s-0.1,0.3-0.1,0.4c0,0.1,0,0.1,0.1,0.3c0.1,0.1,0.3,0.1,0.4,0.1S18.7,43.7,18.7,43.5z"/>
+			<path class="st13" d="M12.1,42.3v-1.4h-1.4v-0.7h1.4v-1.4h0.7v1.4h1.4v0.7h-1.4v1.4H12.1z"/>
+		</g>
+	</g>
+	<g id="dcha">
+		<g>
+			
+				<radialGradient id="SVGID_9_" cx="49.7188" cy="37.3105" r="10.9746" gradientTransform="matrix(1 0 0 0.8 0 7.4621)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#FFFFFF"/>
+				<stop  offset="1" style="stop-color:#78B0CF"/>
+			</radialGradient>
+			<circle class="st7" cx="49.7" cy="37.3" r="11"/>
+			
+				<use xlink:href="#manchas"  width="72.9" height="70.6" x="-36.4" y="-35.3" transform="matrix(0.2352 0 0 -0.2352 49.7188 37.3096)" style="overflow:visible;"/>
+			
+				<use xlink:href="#brillo"  width="20" height="20" x="-10" y="-10" transform="matrix(0.1482 0 0 -0.2352 48.085 30.1963)" style="overflow:visible;"/>
+			
+				<use xlink:href="#brillo"  width="20" height="20" x="-10" y="-10" transform="matrix(0.1482 0 0 -0.2352 50.3828 44.6602)" style="overflow:visible;"/>
+		</g>
+		<g id="TI_1_">
+			<g>
+				<rect x="48.8" y="35.7" class="st14" width="3" height="2.7"/>
+				<path class="st13" d="M49.9,38h-0.4v-1.8h-0.7v-0.3h1.8v0.3h-0.7V38z"/>
+				<path class="st13" d="M50.9,38v-2.2h0.4V38H50.9z"/>
+			</g>
+			<path id="TI" class="st13" d="M55,34.9v5.4c0,0.2-0.1,0.3-0.3,0.5c-0.1,0.1-0.3,0.2-0.5,0.2h-2.6c0,0.1,0,0.2,0,0.4
+				c0.1,0.1,0.1,0.2,0.2,0.3c0,0.1,0.1,0.2,0.1,0.2c0,0.1-0.1,0.2-0.1,0.2c-0.1,0.1-0.1,0.1-0.2,0.1h-2.5c-0.1,0-0.2,0-0.2-0.1
+				c-0.1,0-0.1-0.1-0.1-0.2c0,0,0-0.1,0.1-0.2c0-0.1,0.1-0.2,0.1-0.3c0.1-0.2,0.1-0.3,0.1-0.4h-2.7c-0.2,0-0.3-0.1-0.5-0.2
+				c-0.1-0.2-0.2-0.3-0.2-0.5v-5.4c0-0.2,0.1-0.4,0.2-0.5c0.2-0.2,0.3-0.3,0.5-0.3h7.9c0.2,0,0.4,0.1,0.5,0.3
+				C54.9,34.5,55,34.7,55,34.9 M54.4,39v-4.1c0-0.1-0.1-0.1-0.1-0.1s0-0.1-0.1-0.1h-7.9c0,0,0,0.1-0.1,0.1c0,0,0,0,0,0.1V39
+				c0,0,0,0,0,0.1c0.1,0,0.1,0,0.1,0h7.9c0.1,0,0.1,0,0.1,0C54.3,39,54.4,39,54.4,39z"/>
+		</g>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>

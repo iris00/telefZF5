@@ -4,15 +4,14 @@
 #notific {
     ul {
         list-style-type: none;
-        //font-size: rem-calc(20);
         padding: rem-calc(30 10 0 30);
         li {
             background: transparent url("../images/linea-notific.png") 6px 10px no-repeat;
+            line-height: rem-calc(20);
+            margin-bottom: rem-calc(-3);
             padding-bottom: rem-calc(20);
             padding-left: rem-calc(30);
-            line-height: rem-calc(20);
             position: relative;
-            margin-bottom: rem-calc(-3);
             &:last-child {
                 background-image: none;
             }
@@ -21,15 +20,15 @@
             font-size: rem-calc(18);
         }
         li:before {
-            height: 14px;
+            background-color: $white;
+            border: 3px solid $iron;
             border-radius: 50%;
-            position: absolute;
+            content: '';
+            height: 14px;
             left: 0;
+            position: absolute;
             top: rem-calc(3);
             width: rem-calc(14);
-            border: 3px solid $iron;
-            content: " ";
-            background-color: $white;
         }
         li.warning:before {
             background-color: $warning-color;
@@ -39,9 +38,8 @@
         }
         span {
             color: $monsoon;
-            font-size: rem-calc(14);
-            padding: rem-calc(5 20 15 0);
             display: block;
+            font-size: rem-calc(14);
             line-height: rem-calc(16);
             padding: rem-calc(10 0 15);
         }

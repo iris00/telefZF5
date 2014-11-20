@@ -10,21 +10,26 @@ a:focus {
     border-bottom: 1px dotted;
 }
 
+// a .icon {
+//     width: 43px;
+//     height: 43px;
+// }
+
 .contenido {
-    padding-top: rem-calc(50);
     min-height: 607px;
+    padding-top: rem-calc(50);
     position: relative;
     a.plus {
         color: $charcoal;
+        left: rem-calc(70);
         position: absolute;
         top: rem-calc(-15);
-        left: rem-calc(70);
         .fa {
-            padding: rem-calc(17 19);
-            box-shadow: 0 0 5px $charcoal;
             background-color: $white;
             border-radius: 50%;
+            box-shadow: 0 0 5px $charcoal;
             font-size: rem-calc(20);
+            padding: rem-calc(17 19);
         }
     }
 }
@@ -38,25 +43,10 @@ article.row .contenido.large-12 > * {
 }
 
 .big {
+    font-family: 'robotoregular', sans-serif;
     font-size: large;
-    font-family: 'robotoregular';
+    font-weight: normal;
 }
-
-// .sedes object {
-//     width: 100%;
-//     min-height: 600px;
-//     overflow: visible;
-// }
-
-// Charts admin
-// .chart-holder {
-//     width: 100%;
-//     h2 {
-//         font-size: rem-calc(16);
-//         text-align: center;
-//         margin-bottom: rem-calc(16);
-//     }
-// }
 
 // Parpadeo al actualizar el precio de la oferta
 @-webkit-keyframes parpadeo {
@@ -102,13 +92,9 @@ article.row .contenido.large-12 > * {
 .cambio {
     padding-left: rem-calc(16);
     -webkit-animation: parpadeo 3s infinite;
-    /* Safari 4+ */
     -moz-animation: parpadeo 3s infinite;
-    /* Fx 5+ */
     -o-animation: parpadeo 3s infinite;
-    /* Opera 12+ */
     animation: parpadeo 3s infinite;
-    /* IE 10+, Fx 29+ */
     p {
         padding-left: rem-calc(16);
     }
@@ -128,17 +114,16 @@ article.row .contenido.large-12 > * {
 footer.row {
     background-color: $secondary-color;
     color: $white;
-    min-height: rem-calc(46);
     line-height: rem-calc(46);
+    min-height: rem-calc(46);
 }
 
-.loader {
-    margin: 0 0 2em;
-    height: 100px;
-    width: 20%;
-    text-align: center;
-    padding: 1em;
-    margin: 0 auto 1em;
-    display: inline-block;
-    vertical-align: top;
-}
+// .loader {
+//     display: inline-block;
+//     height: 100px;
+//     margin: 0 auto 1em;
+//     padding: 1em;
+//     text-align: center;
+//     vertical-align: top;
+//     width: 20%;
+// }

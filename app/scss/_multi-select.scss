@@ -1,26 +1,25 @@
 @charset "UTF-8";
 
-// Multiselect
-// this is applied on that hidden select. DO NOT USE display:none; or visiblity:hidden; and Do not override any of these properties.
+// Sumoselect multiselect
 .SelectClass {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    border: 0;
     height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
     width: 100%;
-    border: none;
     z-index: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
     filter: alpha(opacity = 0);
     -moz-opacity: 0;
     opacity: 0;
 }
 
 .SumoSelect {
-    width: 100%;
     display: inline-block;
     position: relative;
+    width: 100%;
     & > .optWrapper > .options > li {
         -moz-transition: 200ms ease;
         -webkit-transition: 200ms ease;
@@ -28,126 +27,120 @@
     }
     & > .optWrapper > .options > li label,
     & > .CaptionCont {
-        user-select: none;
+        background-color: transparent;
+        color: $oil;
+        cursor: pointer;
+        font-family: 'robotolight', sans-serif;
+        font-size: rem-calc(14);
+        padding: rem-calc(3 0 3 6);
         -o-user-select: none;
         -moz-user-select: none;
         -khtml-user-select: none;
         -webkit-user-select: none;
-        background-color: transparent;
-        color: $oil;
-        font-family: 'robotolight';
-        font-size: rem-calc(14);
-        padding: 3px 0 3px 6px;
-        cursor: pointer;
+        user-select: none;
     }
     & > .CaptionCont {
-        position: relative;
         border: 1px solid #ccc;
-        min-height: 20px;
-        background-color: #fff;
+        min-height: rem-calc(20);
+        position: relative;
+    }
+    & > .CaptionCont:hover {
+        background-color: scale-color($select-bg-color, $lightness: -3%);
     }
     & p {
         margin-bottom: 0;
     }
     & > .CaptionCont > span {
         display: block;
-        padding-right: 30px;
+        overflow: hidden;
+        padding-right: rem-calc(30);
         text-overflow: ellipsis;
         white-space: nowrap;
-        overflow: hidden;
     }
     & > .CaptionCont > span.placeholder {
         color: $aluminum;
     }
     & > .CaptionCont > label {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 17px;
         background: rgb(240, 240, 240);
         background: -moz-linear-gradient(top, rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(218, 218, 218, 1) 50%, rgba(218, 218, 218, 1) 100%);
         background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(240, 240, 240, 1)), color-stop(50%, rgba(240, 240, 240, 1)), color-stop(50%, rgba(218, 218, 218, 1)), color-stop(100%, rgba(218, 218, 218, 1)));
         background: -webkit-linear-gradient(top, rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(218, 218, 218, 1) 50%, rgba(218, 218, 218, 1) 100%);
         background: -o-linear-gradient(top, rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(218, 218, 218, 1) 50%, rgba(218, 218, 218, 1) 100%);
         background: -ms-linear-gradient(top, rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(218, 218, 218, 1) 50%, rgba(218, 218, 218, 1) 100%);
-        background: linear-gradient(to bottom, rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(218, 218, 218, 1) 50%, rgba(218, 218, 218, 1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#dadada',GradientType=0 );
+        background: linear-gradient(to bottom, rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(218, 218, 218, 1) 50%, rgba(218, 218, 218, 1) 100%);
         border: 1px solid #707070;
+        bottom: 0;
         cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 17px;
     }
     & > .CaptionCont > label > i {
         background: url("../images/arrow-multiselect.png") center center no-repeat;
-        width: 15px;
-        height: 28px;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
         border: 1px solid #fcfcfc;
+        bottom: 0;
+        display: block;
+        height: 28px;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 15px;
     }
     & > .optWrapper {
-        top: 30px;
-        width: 100%;
-        position: absolute;
+        background: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.11);
         left: 0;
         opacity: 0;
-        visibility: hidden;
+        position: absolute;
+        top: rem-calc(30);
         transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
         -webkit-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
         -moz-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
         -ms-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
         -o-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+        visibility: hidden;
+        width: 100%;
         z-index: -100;
-        background: #fff;
-        border: 1px solid #ddd;
-        box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.11);
-        border-radius: 3px;
     }
     & > .optWrapper.open {
-        top: 30px;
-        visibility: visible;
         opacity: 1;
+        top: rem-calc(30);
+        visibility: visible;
         z-index: 1000;
     }
     & > .optWrapper > .options {
-        list-style: none;
         display: block;
-        padding: 0px;
-        margin: 0px;
+        list-style: none;
+        margin: 0;
+        max-height: rem-calc(250);
         overflow: auto;
-        border-radius: 3px;
-        /*Set the height of pop up here (only for desktop mode)*/
-        max-height: 250px;
-        /*height*/
+        padding: 0;
     }
     & > .optWrapper.isFloating > .options {
         max-height: 100%;
     }
     & > .optWrapper > .options > li {
-        padding: 4px 6px;
         border-bottom: 1px solid #F3F3F3;
+        padding: rem-calc(4 6);
         position: relative;
-    }
-    & > .optWrapper > .options > li:first-child {
-        border-radius: 3px 3px 0px 0px;
     }
     & > .optWrapper > .options > li:last-child {
         border-bottom: none;
-        border-radius: 0px 0px 3px 3px;
     }
     & > .optWrapper > .options > li:hover {
         background-color: #3399ff;
     }
     & > .optWrapper > .options > li label {
+        display: block;
+        overflow: hidden;
+        text-align: left;
         text-overflow: ellipsis;
         white-space: nowrap;
-        overflow: hidden;
-        display: block;
-        text-align: left;
     }
     & > .optWrapper > .options > li label:hover {
         color: $white;
@@ -157,14 +150,14 @@
     }
     /*Floating styles*/
     & > .optWrapper.isFloating {
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        width: 90%;
-        bottom: 0px;
+        bottom: 0;
+        left: 0;
         margin: auto;
         max-height: 90%;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 90%;
     }
     /*Hover*/
     &:hover > .CaptionCont > label {
@@ -175,110 +168,94 @@
         background-color: inherit;
     }
     & > .optWrapper > .options > li.disabled * {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-        /* IE 5-7 */
+        -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=50)';
         filter: alpha(opacity = 50);
-        /* Netscape */
-        -moz-opacity: 0.5;
-        /* Safari 1.x */
-        -khtml-opacity: 0.5;
-        /* Good browsers */
-        opacity: 0.5;
+        opacity: .5;
     }
     /*styling for multiple select*/
     & > .optWrapper.multiple > .options > li {
-        padding-left: 35px;
+        padding-left: rem-calc(35);
     }
     & > .optWrapper.multiple > .options > li span {
-        position: absolute;
+        bottom: 0;
         display: block;
-        width: 30px;
-        top: 0px;
-        left: 0px;
-        bottom: 0px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: rem-calc(30);
     }
     & > .optWrapper.multiple > .options > li span i {
-        background-image: url("../images/checkbox.png");
-        position: absolute;
-        margin: auto;
-        left: 0px;
-        right: 0px;
-        top: 0px;
-        bottom: 0px;
-        background-repeat: no-repeat;
-        background-position: center center;
-        width: 16px;
-        height: 16px;
+        background: transparent url("../images/checkbox.png") no-repeat center center;
+        bottom: 0;
         cursor: pointer;
+        height: rem-calc(16);
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: rem-calc(16);
     }
     & > .optWrapper > .MultiControls {
+        //background-color: #fff;
+        //border-top: 1px solid #ddd;
+        //box-shadow: 0 0 2px rgba(0, 0, 0, 0.13);
         display: none;
-        border-top: 1px solid #ddd;
-        background-color: #fff;
-        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.13);
-        border-radius: 0px 0px 3px 3px;
     }
     & > .optWrapper.multiple.isFloating > .MultiControls {
+        bottom: 0;
         display: block;
-        margin-top: 5px;
+        margin-top: rem-calc(5);
         position: absolute;
-        bottom: 0px;
         width: 100%;
     }
     & > .optWrapper.multiple.okCancelInMulti > .MultiControls {
         display: block;
     }
-    & > .optWrapper.multiple.okCancelInMulti > .MultiControls > p {
-        padding: 6px;
-    }
     & > .optWrapper.multiple > .MultiControls > p {
-        display: inline-block;
+        @include button;
         cursor: pointer;
-        padding: 12px;
-        width: 50%;
+        display: inline-block;
+        padding: rem-calc(12);
         text-align: center;
-    }
-    & > .optWrapper.multiple > .MultiControls > p:hover {
-        background-color: #f1f1f1;
+        width: 50%;
+        margin-bottom: 0;
+        font-weight: normal;
     }
     & > .optWrapper.multiple > .MultiControls > p.btnOk {
-        border-right: 1px solid #DBDBDB;
-        border-radius: 0px 0px 0px 3px;
-    }
-    & > .optWrapper.multiple > .MultiControls > p.btnCancel {
-        border-radius: 0px 0px 3px 0px;
+        border-right: 1px solid #dbdbdb;
     }
     /*styling for select on popup mode*/
     & > .optWrapper.isFloating > .options > li {
-        padding: 12px 6px;
+        padding: rem-calc(12 6);
     }
     /*styling for only multiple select on popup mode*/
     & > .optWrapper.multiple.isFloating > .options > li {
-        padding-left: 35px;
+        padding-left: rem-calc(35);
     }
     & > .optWrapper.multiple.isFloating {
-        padding-bottom: 43px;
+        padding-bottom: rem-calc(43);
     }
     /*selected state*/
     & > .optWrapper.multiple > .options > li.selected span i {
         background-image: url("../images/checkbox-checked.png");
     }
     .disabled {
-        opacity: 0.7;
+        opacity: .7;
     }
     .disabled > .CaptionCont > label {
-        background-color: #F1F1F1;
+        background-color: #f1f1f1;
     }
 }
 
 /*Background overlay*/
 body > .BackdropSelect {
+    bottom: 0;
     display: none;
+    left: 0;
     position: fixed;
-    top: 0px;
-    right: 0px;
-    left: 0px;
-    bottom: 0px;
+    right: 0;
+    top: 0;
     width: 100%;
     z-index: 1000;
 }

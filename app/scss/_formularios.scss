@@ -1,130 +1,134 @@
 @charset "UTF-8";
 
 // Formularios en general
+button,
+.button {
+    font-weight: normal;
+}
+
 .postfix.button {
     height: rem-calc(30);
     line-height: rem-calc(30);
 }
 
 input[type="text"] {
-    padding: rem-calc(2 4);
     height: rem-calc(30);
+    padding: rem-calc(2 4);
 }
 
-label {
-    cursor: default;
-    line-height: rem-calc(30);
-}
-
-label.required:after {
-    content: "\f069";
-    position: absolute;
-    right: 20px;
-    top: 1px;
-    font-size: rem-calc(10);
-    font-family: fontawesome;
-}
-
-fieldset {
-    border: 0;
-    margin: 0;
-}
-
-fieldset legend {
-    font-weight: normal;
-    font-size: rem-calc(20);
-    font-family: 'robotoregular';
+input[type="text"][disabled],
+input[type="text"].disabled {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 input[type=checkbox] {
     margin-right: rem-calc(10);
 }
 
+label {
+    cursor: default;
+    line-height: rem-calc(30);
+    &.required:after {
+        content: '\f069';
+        font-family: fontawesome;
+        font-size: rem-calc(10);
+        position: absolute;
+        right: rem-calc(20);
+        top: rem-calc(1);
+    }
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    legend {
+        font-family: 'robotoregular', sans-serif;
+        font-size: rem-calc(20);
+        font-weight: normal;
+    }
+}
+
 select {
-    padding: rem-calc(2 0);
-    height: rem-calc(30);
     background-color: transparent;
+    height: rem-calc(30);
+    padding: rem-calc(2 0);
+    &[multiple] {
+        height: auto;
+        max-height: rem-calc(100);
+    }
+    option {
+        background-color: $white;
+        padding: rem-calc(4 0 4 6);
+    }
 }
 
 select,
 select:hover {
     -moz-appearance: none;
-    text-indent: 0.01px;
-    cursor: pointer;
     border-color: $iron;
-}
-
-select[multiple] {
-    height: auto;
-    max-height: 100px;
-}
-
-option {
-    padding: rem-calc(4 0 4 6);
-    background-color: $white;
-}
-
-input[type="text"][disabled],
-input[type="text"].disabled {
-    border: none;
-    background-color: transparent;
-    box-shadow: none;
+    cursor: pointer;
+    text-indent: 0.01px;
 }
 
 .euro {
     position: relative;
     &:after {
-        content: "\20AC";
+        color: $steel;
+        content: '\20AC';
+        font-family: 'robotoregular', sans-serif;
+        font-size: rem-calc(20);
+        font-weight: normal;
         position: absolute;
         right: 12px;
         top: 3px;
         z-index: 20;
-        font-family: 'robotoregular';
-        color: $steel;
-        font-size: rem-calc(20);
     }
     &.peque:after {
         color: $iron;
     }
+    &.peque input {
+        font-family: 'robotolight', sans-serif;
+        font-size: rem-calc(14);
+        color: $oil;
+    }
     input[type="text"][disabled] {
-        text-align: right;
-        padding-right: 25px;
-        margin-bottom: 0;
         -webkit-text-fill-color: $steel;
+        margin-bottom: 0;
+        padding-right: rem-calc(25);
+        text-align: right;
     }
 }
 
 .numeros,
 .euro input {
-    font-size: rem-calc(20);
-    font-family: 'robotoregular';
     color: $steel;
-}
-
-.euro.peque input {
-    font-size: rem-calc(14);
-    font-family: 'robotolight';
-    color: $oil;
+    font-family: 'robotoregular', sans-serif;
+    font-size: rem-calc(20);
+    font-weight: normal;
 }
 
 input[type="text"].numeros {
     border-color: $silver;
-    text-align: center;
     height: rem-calc(35);
     margin-bottom: 0;
+    text-align: center;
 }
 
 .complem-sede input[type="text"],
 .sede-accesor input[type="text"],
 .conf-basica input[type="text"] {
-    font-family: 'robotoregular';
-    font-size: rem-calc(20);
-    text-align: center;
-    margin: 0;
     color: $steel;
-    // background-color: transparent;
-    // border: medium none;
-    // box-shadow: none;
+    font-family: 'robotoregular', sans-serif;
+    font-size: rem-calc(20);
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+}
+
+.complem-sede .tabs-content input[type=checkbox] {
+    margin: 0;
 }
 
 // Validación
@@ -132,10 +136,13 @@ input[type="text"][data-invalid] {
     border: 1px solid $alert-color;
 }
 
-[data-abide] .error small.error, [data-abide] .error span.error, [data-abide] span.error, [data-abide] small.error {
-    font-style: normal;
+[data-abide] .error small.error,
+[data-abide] .error span.error,
+[data-abide] span.error, [data-abide] small.error {
     background-color: $alert-color;
-    font-family: 'robotoregular';
+    font-family: 'robotoregular', sans-serif;
+    font-style: normal;
+    font-weight: normal;
 }
 
 [data-abide] .error input {
@@ -184,24 +191,25 @@ form[data-abide] label {
         }
     }
     .close-reveal-modal {
-        font-size: rem-calc(14);
-        position: static;
-        line-height: normal;
         color: $white;
+        font-size: rem-calc(14);
+        line-height: normal;
+        position: static;
     }
 }
 
 // Formularios Ofertas
-.ofertas, .sedes, .puestos, .admin {
+.ofertas, .sedes,
+.puestos, .admin {
     label, .label {
         background-color: $third-color;
-        text-align: center;
+        font-family: 'robotoregular', sans-serif;
         font-size: rem-calc(16);
-        font-family: 'robotoregular';
-        //line-height: rem-calc(37);
-   
+        font-weight: normal;
+        text-align: center;
     }
-    label span, .label span {
+    label span,
+    .label span {
         display: inline;
     }
 }
@@ -210,7 +218,7 @@ form[data-abide] label {
 .aside-right label {
     background-color: transparent;
     color: $aluminum;
-    font-family: 'robotolight';
+    font-family: 'robotolight', sans-serif;
 }
 
 .oper-tarif {
@@ -218,15 +226,17 @@ form[data-abide] label {
         text-align: right;
     }
     select {
-        font-family: 'robotoregular';
+        font-family: 'robotoregular', sans-serif;
         font-size: rem-calc(16);
+        font-weight: normal;
     }
 }
 
 .svas {
     select {
-        font-family: 'robotoregular';
+        font-family: 'robotoregular', sans-serif;
         font-size: rem-calc(16);
+        font-weight: normal;
         margin-top: rem-calc(20);
     }
 }
@@ -236,21 +246,14 @@ table.puestos {
     select {
         margin-bottom: 0;
     }
-    // select[multiple] {
-    //     margin-bottom: $form-spacing;
-    // }
-    // .search-filter select {
-    //     margin-bottom: rem-calc(16);
-    // }
     input[type="checkbox"] {
-        margin-bottom: 0;
-        margin-top: 10px;
+        margin: rem-calc(10 0 0);
     }
 }
 
 .otros-prod {
-    margin-top: rem-calc(20);
     font-size: rem-calc(18);
+    margin-top: rem-calc(20);
     .fa {
         font-size: rem-calc(25);
         margin-right: rem-calc(5);
@@ -266,14 +269,9 @@ table.puestos {
     }
     .panel {
         margin-bottom: 0;
-        & > .row > div {
-            //display: table-cell;
-       
-        }
         & > .row > .big {
-            vertical-align: middle;
-            text-align: center;
             font-size: rem-calc(25);
+            text-align: center;
         }
     }
 }
@@ -297,11 +295,11 @@ table.puestos {
     }
     input[type="text"] {
         color: $oil;
-        padding: rem-calc(2);
         height: auto;
+        padding: rem-calc(2);
     }
     button, .button {
-        padding: rem-calc(3 15);
         font-size: rem-calc(14);
+        padding: rem-calc(3 15);
     }
 }

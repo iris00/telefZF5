@@ -9,28 +9,29 @@
 }
 
 .breadcrumbs {
-    min-height: rem-calc(46);
-    font-family: 'robotoregular';
-    padding: 0;
+    font-family: 'robotoregular', sans-serif;
+    font-weight: normal;
     margin: 0;
+    min-height: rem-calc(46);
+    padding: 0;
     li {
-        line-height: rem-calc(46);
-        height: rem-calc(46);
-        text-align: center;
         background-color: $base;
         border-bottom: 3px solid $base;
+        height: rem-calc(46);
+        line-height: rem-calc(46);
+        text-align: center;
         .fa-shopping-cart {
             font-size: rem-calc(35);
             vertical-align: middle;
         }
     }
     li.activo:before {
-        width: 28px;
-        height: 46px;
         background: transparent url("../images/breadcrumb.svg") 0 0 no-repeat;
+        height: rem-calc(46);
         position: absolute;
-        right: -28px;
+        right: rem-calc(-28);
         top: 0;
+        width: rem-calc(28);
         z-index: 100;
     }
     li:nth-child(3).activo:before,
@@ -69,15 +70,6 @@
     }
 }
 
-// Pasos configuración sede
-// .breadcrumbs.breadconf {
-//   @include grid-row;
-//   li {
-//     position: relative;
-//     width: 12.5%;
-//   }
-// }
-
 .breadconf,
 .conf-basica .panel,
 .complem-sede.resumen .visual {
@@ -107,9 +99,9 @@
         margin-top: rem-calc(15);
     }
     .paralelo .fa-stack-2x:nth-child(3) {
+        font-size: rem-calc(35);
         margin-left: rem-calc(18);
         margin-top: rem-calc(5);
-        font-size: rem-calc(35);
     }
     .fa-stack-1x.fa-desktop {
         font-size: rem-calc(18);
@@ -120,11 +112,34 @@
         margin-top: rem-calc(5);
     }
     .fa-stack-1x.fa-fighter-jet {
+        font-size: rem-calc(22);
         margin-left: rem-calc(-8);
         margin-top: rem-calc(10);
-        font-size: rem-calc(22);
     }
     .fa-desktop {
         margin-top: rem-calc(10);
+        &:after {
+            content: 'TI';
+            position: absolute;
+            width: 100%;
+            padding-top: rem-calc(15);
+            letter-spacing: rem-calc(1);
+            top: 0;
+            left: 0;
+            font-size: rem-calc(10);
+            padding-left: rem-calc(2);
+            color: $white;
+            font-family: arial, sans-serif;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            &:after {
+                color: $anchor-font-color-hover;
+            }
+        }
+    }
+    .activo .fa-desktop:after {
+        padding-left: 0;
     }
 }

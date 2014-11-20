@@ -3,23 +3,24 @@
 // Login
 .login {
     h2.row {
-        font-size: rem-calc(22);
         background-color: $primary-color;
         border: 1px solid $primary-color;
         border-radius: $global-radius $global-radius 0 0;
         color: $white;
-        padding: rem-calc(5 0 5 20);
+        font-size: rem-calc(22);
         margin-top: rem-calc(20);
+        padding: rem-calc(5 0 5 20);
     }
     .panel {
-        padding: rem-calc(50 20);
-        border-radius: 0 0 $global-radius $global-radius;
         background-color: scale-color($primary-color, $lightness: 85%);
         background-image: linear-gradient(to bottom, $white, scale-color($black, $lightness: 90%));
+        border-radius: 0 0 $global-radius $global-radius;
+        padding: rem-calc(50 20);
     }
     .no-bullet {
-        line-height: rem-calc(40);
+        font-family: 'robotoregular', sans-serif;
         font-size: rem-calc(20);
-        font-family: 'robotoregular';
+        font-weight: normal;
+        line-height: rem-calc(40);
     }
 }

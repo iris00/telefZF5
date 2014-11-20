@@ -6,7 +6,8 @@
 .complem-sede.resumen .visual {
     .sede-accesor-tit {
         font-size: rem-calc(20);
-        font-family: 'robotoregular';
+        font-family: 'robotoregular', sans-serif;
+        font-weight: normal;
         color: $aluminum;
         margin-bottom: rem-calc(24);
         display: block;
@@ -51,7 +52,8 @@
     dd.active a,
     dd a:hover {
         background-color: $primary-color;
-        font-family: 'robotoregular';
+        font-family: 'robotoregular', sans-serif;
+        font-weight: normal;
     }
     dd.active a,
     dd a:hover {
@@ -178,7 +180,8 @@
     text-align: center;
     font-size: rem-calc(18);
     line-height: rem-calc(18);
-    font-family: 'robotoregular';
+    font-family: 'robotoregular', sans-serif;
+    font-weight: normal;
     padding-top: rem-calc(77);
     color: $monsoon;
     border-radius: rem-calc(4);
