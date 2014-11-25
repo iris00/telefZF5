@@ -41,4 +41,13 @@ ul.off-canvas-list {
             background-color: $smoke;
         }
     }
+    select,
+    select:focus {
+        color: $white;
+        border-color: scale-color($primary-color, $lightness: -20%);
+        background-color: transparent;
+    }
+    option {
+        color: $oil;
+    }
 }

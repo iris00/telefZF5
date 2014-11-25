@@ -47,10 +47,6 @@ header {
     section div:nth-child(3) {
         padding-right: rem-calc(16);
         text-align: right;
-        a:focus,
-        a:active {
-            border-bottom: 1px dotted $white;
-        }
         .fa {
             color: $white;
             font-size: rem-calc(28);
@@ -80,5 +76,22 @@ header {
         .fa-info-circle {
             font-size: rem-calc(32);
         }
+    }
+    nav a:hover,
+    nav a:hover .fa,
+    nav a:focus,
+    nav a:focus .fa {
+        color: scale-color($anchor-font-color-hover, $lightness: -20%);
+    }
+    nav a:hover .fa span,
+    nav a:focus .fa span {
+        color: $white;
+    }
+    .tab-bar .menu-icon:hover span:after,
+    .tab-bar .menu-icon:focus span:after {
+        box-shadow: 0 0 0 1px scale-color($anchor-font-color-hover, $lightness: -20%), 0 8px 0 1px scale-color($anchor-font-color-hover, $lightness: -20%), 0 16px 0 1px scale-color($anchor-font-color-hover, $lightness: -20%);
+    }
+    nav a:focus {
+        border-bottom: 0 dotted;
     }
 }

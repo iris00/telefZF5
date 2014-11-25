@@ -5,15 +5,15 @@
     border: 0;
     height: 100%;
     left: 0;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+    filter: alpha(opacity = 0);
+    -moz-opacity: 0;
+    opacity: 0;
     position: absolute;
     right: 0;
     top: 0;
     width: 100%;
     z-index: 1;
-    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
-    filter: alpha(opacity = 0);
-    -moz-opacity: 0;
-    opacity: 0;
 }
 
 .SumoSelect {
@@ -76,6 +76,7 @@
         right: 0;
         top: 0;
         width: 17px;
+        margin-bottom: 0;
     }
     & > .CaptionCont > label > i {
         background: url("../images/arrow-multiselect.png") center center no-repeat;
@@ -184,17 +185,29 @@
         top: 0;
         width: rem-calc(30);
     }
-    & > .optWrapper.multiple > .options > li span i {
-        background: transparent url("../images/checkbox.png") no-repeat center center;
-        bottom: 0;
+    //& > .optWrapper.multiple > .options > li span i {
+    //background: transparent url("../images/checkbox.png") no-repeat center center;
+    // bottom: 0;
+    // height: rem-calc(16);
+    // left: 0;
+    // margin: auto;
+    // position: absolute;
+    // right: 0;
+    // top: 0;
+    // width: rem-calc(16);
+    //}
+    & > .optWrapper.multiple > .options > li span i:after {
+        color: $monsoon;
+        content: '\f096';
         cursor: pointer;
-        height: rem-calc(16);
-        left: 0;
-        margin: auto;
+        font-family: FontAwesome;
+        font-size: rem-calc(20);
+        font-style: normal;
+        font-weight: normal;
+        left: rem-calc(12);
         position: absolute;
-        right: 0;
-        top: 0;
-        width: rem-calc(16);
+        text-decoration: inherit;
+        top: rem-calc(6);
     }
     & > .optWrapper > .MultiControls {
         //background-color: #fff;
@@ -237,8 +250,11 @@
         padding-bottom: rem-calc(43);
     }
     /*selected state*/
-    & > .optWrapper.multiple > .options > li.selected span i {
-        background-image: url("../images/checkbox-checked.png");
+    // & > .optWrapper.multiple > .options > li.selected span i {
+    //     background-image: url("../images/checkbox-checked.png");
+    // }
+    & > .optWrapper.multiple > .options > li.selected span i:after {
+        content: '\f046';
     }
     .disabled {
         opacity: .7;

@@ -3,8 +3,9 @@
 </h2>
 <script type="text/javascript">
 function borrar() {
-    document.all.miForm.action = "opwebServlet?"
-    alert("Se ha eliminado correctamente");
+    'use strict';
+    document.all.miForm.action = 'opwebServlet?';
+    alert('Se ha eliminado correctamente');
 }
 </script>
 
@@ -38,7 +39,7 @@ function borrar() {
 
     <div class="row botonera">
         <div class="large-12 columns text-right">
-            <button type="submit" class="radius tiny close-reveal-modals" title="Eliminar notificación" onClick="borrar();">Eliminar
+            <button type="submit" class="radius tiny close-reveal-modals" title="Eliminar notificación" onClick="borrar();" autofocus>Eliminar
             </button>
         </div>
     </div>

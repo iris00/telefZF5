@@ -72,6 +72,32 @@ select:hover {
     text-indent: 0.01px;
 }
 
+select:focus,
+input[type="checkbox"]:focus {
+    background-color: $input-focus-bg-color;
+    border-color: $input-focus-border-color;
+    @include block-glowing-effect(focus, $glowing-effect-fade-time, $glowing-effect-color);
+    outline: 0 dotted;
+}
+
+::-webkit-input-placeholder {
+    color: $aluminum;
+}
+
+:-moz-placeholder {
+    color: $aluminum;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    color: $aluminum;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: $aluminum;
+}
+
 .euro {
     position: relative;
     &:after {
@@ -151,17 +177,6 @@ input[type="text"][data-invalid] {
 
 form[data-abide] label {
     margin-bottom: rem-calc(17);
-}
-
-// Menu lateral
-.off-canvas-list {
-    select {
-        color: $white;
-        border-color: scale-color($primary-color, $lightness: -20%);
-    }
-    option {
-        color: $oil;
-    }
 }
 
 // input[type="checkbox"].checkbox {
@@ -285,18 +300,19 @@ table.puestos {
         padding-top: 0;
         padding-bottom: 0;
     }
-    label, .label, input[type="text"], button, .button {
-        margin-bottom: 0;
-    }
+    // label, .label, input[type="text"], button, .button {
+    //     margin-bottom: rem-calc(5);
+    // }
     label, .label {
-        color: $oil;
+        color: $primary-color;
         font-size: rem-calc(14);
         line-height: rem-calc(25);
     }
     input[type="text"] {
         color: $oil;
         height: auto;
-        padding: rem-calc(2);
+        //padding: rem-calc(2);
+   
     }
     button, .button {
         font-size: rem-calc(14);

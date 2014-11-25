@@ -1,19 +1,25 @@
 @charset "UTF-8";
 
+.borde {
+    border: 10px solid red;
+}
+
 // Estilos generales
 a:active,
-a:link {
-    outline: 0 none;
+a:link,
+select:focus,
+select:active {
+    outline: 0 transparent !important;
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
 }
 
 a:focus {
     border-bottom: 1px dotted;
 }
-
-// a .icon {
-//     width: 43px;
-//     height: 43px;
-// }
 
 .contenido {
     min-height: 607px;
@@ -31,6 +37,17 @@ a:focus {
             font-size: rem-calc(20);
             padding: rem-calc(17 19);
         }
+    }
+    a.plus:hover,
+    a.plus:active,
+    a.plus:focus {
+        border-bottom: none;
+    }
+    a.plus:hover .fa,
+    a.plus:focus .fa,
+    a.plus:active .fa {
+        background-color: $third-color;
+        color: $white;
     }
 }
 

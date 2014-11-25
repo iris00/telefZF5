@@ -1,0 +1,621 @@
+<!doctype html>
+<html class="no-js" lang="es-ES">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Configurador de Movistar Fusión Empresas">
+    <title>Opweb - Situación actual - Información general</title>
+
+    <!-- Iconos de aplicación -->
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+
+    <!-- build:css css/libraries.min.css -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css css/app.min.css -->
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- endbuild -->
+    <!-- build:js js/vendor/modernizr.min.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+</head>
+
+<body class="opweb">
+    <div class="row">
+        <div class="off-canvas-wrap" data-offcanvas>
+            <div class="inner-wrap">
+                <header role="banner">
+                    <div class="tit-sede text-center">
+                    </div>
+                    <!-- tit-sede -->
+                    <nav class="tab-bar" role="navigation">
+                        <section class="row">
+                            <div class="large-1 medium-1 small-2 columns">
+                                <a title="Menú de navegación" href="" class="left-off-canvas-toggle menu-icon">
+                                    <span></span>
+                                </a>
+                            </div>
+                            <div class="large-9 medium-7 columns show-for-medium-up">
+                                <h1 class="text-center">OPWEB | 2LBS</h1>
+                            </div>
+                            <div class="large-2 medium-4 small-10 columns">
+                                <a href="index.html" title="Inicio" class="home">
+                                    <i class="fa fa-home fa-2x"></i>
+                                </a>
+                            </div>
+                        </section>
+                    </nav>
+                    <!-- tab-bar -->
+                </header>
+
+                <aside class="left-off-canvas-menu">
+                    <ul class="off-canvas-list">
+                        <li class="off-canvas-head">
+                            <p>Manuel Beltrán Pérez</p>
+                            <select name="perfil">
+                                <option value="">Comercial</option>
+                                <option value="">Otro perfil</option>
+                                <option value="">Otro perfil más</option>
+                            </select>
+                        </li>
+                        <li><a href="_otras-oper.html" data-reveal-id="otras-oper" data-reveal-ajax="true"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-bar-chart fa-2x"></i> Crear Informes</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-bookmark fa-2x"></i> Producto MFE</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-comments fa-2x"></i> Ayuda</a>
+                        </li>
+                        <li><a href="admin.html"><i class="fa fa-gears fa-2x"></i> Administración</a>
+                        </li>
+                    </ul>
+                    <!-- off-canvas-list -->
+                </aside>
+                <!-- left-off-canvas-menu -->
+
+                <section role="main" class="main-section">
+                    <article class="row">
+                        <div class="contenido large-12 columns">
+                            <form action="">
+                                <div class="row">
+                                    <div class="medium-1 columns text-right">
+                                        <label>CIF</label>
+                                    </div>
+                                    <div class="medium-2 columns text-right">
+                                        <input type="text" value="B63294714" autofocus>
+                                    </div>
+                                    <div class="medium-3 columns text-right">
+                                        <label>Nombre de la empresa</label>
+                                    </div>
+                                    <div class="medium-3 columns">
+                                        <input type="text" value="CONSTRUCIONS MAXI DEL VALLES S.L.">
+                                    </div>
+                                    <div class="medium-3 columns text-right">
+                                        <button class="radius">Generar Bussines Case</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <dl class="tabs" data-tab>
+                                <dd class="active"><a href="#panel1">Situación actual</a>
+                                </dd>
+                            </dl>
+                            <!-- tabs primer nivel -->
+
+                            <div class="tabs-content parent">
+                                <div class="content active" id="panel1">
+                                    <dl class="tabs child" data-tab>
+                                        <dd class="active">
+                                            <a href="#panel11">Información general y permanencias</a>
+                                        </dd>
+                                        <dd><a href="#panel12">Negocio fijo</a>
+                                        </dd>
+                                        <dd><a href="#panel13">Negocio móvil</a>
+                                        </dd>
+                                        <dd><a href="#panel14">Marcas PO</a>
+                                        </dd>
+                                    </dl>
+                                    <!-- tabs child Segundo nivel -->
+                                </div>
+                                <!-- panel1 -->
+                            </div>
+                            <!-- tabs-content parent -->
+
+                            <div class="tabs-content child">
+                                <div class="content active" id="panel11">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="medium-10 medium-offset-1 columns end">
+                                                <div class="panel tit">
+                                                    <h2>Información General</h2>
+                                                    <div class="panel-cont">
+                                                        <div class="row">
+                                                            <div class="medium-6 columns">
+                                                                <label>
+                                                                    Facturación Anual
+                                                                    <input type="text" value="105,73">
+                                                                </label>
+                                                            </div>
+                                                            <div class="medium-6 columns">
+                                                                <label>
+                                                                    Facturación Mensual media (últ. 3 meses)
+                                                                    <input type="text" value="105,73">
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- fila 1 -->
+
+                                                        <div class="row">
+                                                            <div class="medium-6 columns">
+                                                                <label>
+                                                                    Facturación Móvil
+                                                                    <select name="" id="">
+                                                                        <option value="">Enero-14</option>
+                                                                        <option value="">mayo-13</option>
+                                                                    </select>
+                                                                </label>
+                                                            </div>
+                                                            <div class="medium-6 columns">
+                                                                <label>
+                                                                    Facturación Fijo
+                                                                    <select name="" id="">
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- fila 2 -->
+
+                                                    </div>
+                                                    <!-- panel-cont -->
+                                                </div>
+                                                <!-- panel tit: Información General -->
+                                            </div>
+                                            <!-- columns -->
+                                        </div>
+                                        <!-- row -->
+
+                                        <div class="row">
+                                            <div class="medium-5 medium-offset-1 columns">
+                                                <div class="panel tit">
+                                                    <h2>Permanencia CIF</h2>
+                                                    <div class="panel-cont">
+                                                        <div class="row">
+                                                            <div class="medium-12 columns">
+                                                                <strong>Contrato Premium</strong>
+                                                            </div>
+                                                            <div class="medium-4 columns">
+                                                                <label>
+                                                                    Fecha Fin
+                                                                    <input type="text">
+                                                                </label>
+                                                            </div>
+                                                            <div class="medium-4 columns">
+                                                                <label>
+                                                                    Duración
+                                                                    <input type="text">
+                                                                </label>
+                                                            </div>
+                                                            <div class="medium-4 columns">
+                                                                <label>
+                                                                    Apoyo
+                                                                    <input type="text">
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- fila 1 -->
+                                                    </div>
+                                                    <!-- panel-cont -->
+                                                </div>
+                                                <!-- panel tit: Permanencia CIF -->
+                                            </div>
+                                            <!-- column 1 -->
+
+                                            <div class="medium-5 columns end">
+                                                <div class="panel tit">
+                                                    <h2>Permanencia Línea (unidades)</h2>
+                                                    <div class="panel-cont">
+                                                        <div class="row">
+                                                            <div class="medium-6 columns">
+                                                                <label>
+                                                                    PVR
+                                                                    <input type="text" value="0">
+                                                                </label>
+                                                            </div>
+                                                            <div class="medium-6 columns">
+                                                                <label>
+                                                                    ADSL
+                                                                    <input type="text" value="-">
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- fila 1 -->
+
+                                                        <div class="row">
+                                                            <div class="medium-6 columns">
+                                                                <label>
+                                                                    Puesto Informático
+                                                                    <input type="text" value="-">
+                                                                </label>
+                                                            </div>
+                                                            <div class="medium-6 columns">
+                                                                <label>
+                                                                    Móviles
+                                                                    <input type="text" value="0">
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- fila 2 -->
+
+                                                    </div>
+                                                    <!-- panel-cont -->
+                                                </div>
+                                                <!-- panel tit: Permanencia Línea -->
+                                            </div>
+                                            <!-- columns 2 -->
+                                        </div>
+                                        <!-- row -->
+
+                                    </form>
+                                </div>
+                                <!-- panel11: Información general y permanencias__________________________________________________________________-->
+
+                                <div class="content" id="panel12">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="medium-10 medium-offset-1 columns end">
+                                                <div class="panel tit">
+                                                    <h2>Negocio fijo</h2>
+                                                    <div class="panel-cont">
+                                                        <div class="row">
+                                                            <div class="medium-12 columns">
+                                                                <label>
+                                                                    Líneas
+                                                                    <input type="text" value="3">
+                                                                </label>
+                                                            </div>
+                                                            <div class="medium-12 columns">
+                                                                <label>
+                                                                    Facturación Bruta
+                                                                    <input type="text" value="153,15">
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- panel12 row 1 -->
+
+                                                        <div class="desplegable">
+                                                            <div class="row">
+                                                                <div class="medium-6 columns">
+                                                                    <label>
+                                                                        Circuitos
+                                                                        <input type="text" value="0">
+                                                                    </label>
+                                                                </div>
+                                                                <div class="medium-6 columns">
+                                                                    <label>
+                                                                        Otros
+                                                                        <input type="text" value="0">
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- panel12 desplegable Facturación Bruta -->
+
+                                                        <div class="row">
+                                                            <div class="medium-12 columns">
+                                                                <label>
+                                                                    Descuentos
+                                                                    <input type="text" value="153,15">
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- panel12 row 2 -->
+
+                                                        <div class="desplegable">
+                                                            <div class="row">
+                                                                <div class="medium-6 columns">
+                                                                    <label>
+                                                                        Promociones
+                                                                        <input type="text" value="0">
+                                                                    </label>
+                                                                </div>
+                                                                <div class="medium-6 columns">
+                                                                    <label>
+                                                                        Cuotas
+                                                                        <input type="text" value="0">
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="medium-6 columns">
+                                                                    <label>
+                                                                        Consumos
+                                                                        <input type="text" value="0">
+                                                                    </label>
+                                                                </div>
+                                                                <div class="medium-6 columns">
+                                                                    <label>
+                                                                        Otros
+                                                                        <input type="text" value="0">
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- panel12 desplegable Descuentos -->
+
+                                                        <div class="row">
+                                                            <div class="medium-12 columns">
+                                                                <label>
+                                                                    Facturación Neta
+                                                                    <input type="text" value="153,15">
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- panel12 row 3 -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- panel12: Negocio fijo________________________________________________________________________________________-->
+
+                                <div class="content" id="panel13">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="medium-10 medium-offset-1 columns end">
+                                                <div class="panel tit">
+                                                    <h2>Negocio móvil (mensual)</h2>
+                                                    <div class="panel-cont">
+                                                        <div class="row">
+                                                            <div class="medium-12 columns">
+                                                                <label>
+                                                                    Líneas
+                                                                    <input type="text" value="7">
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="medium-12 columns">
+                                                                <label>
+                                                                    Facturación Bruta
+                                                                    <input type="text" value="134,10">
+                                                                </label>
+
+                                                                <div class="desplegable">
+                                                                    <div class="row">
+                                                                        <label class="medium-4 medium columns">
+                                                                            Servicio Medido
+                                                                            <input type="text" value="83,10">
+                                                                        </label>
+                                                                        <label class="medium-4 columns">
+                                                                            Cuotas
+                                                                            <input type="text" value="55,00">
+                                                                        </label>
+                                                                        <label class="medium-4 columns">
+                                                                            Descuentos y Promociones
+                                                                            <input type="text" value="-28,36">
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- panel13 desplegable Facturación Bruta -->
+                                                            </div>
+                                                        </div>
+                                                        <!-- row 1 -->
+
+                                                        <div class="row">
+                                                            <div class="medium-12 columns">
+                                                                <label>
+                                                                    Cargos y Abonos
+                                                                    <input type="text" value="-4">
+                                                                </label>
+
+                                                                <div class="desplegable">
+                                                                    <div class="row">
+                                                                        <label class="medium-4 columns">
+                                                                            Compromiso mínimo conjunto
+                                                                            <input type="text" value="47">
+                                                                        </label>
+                                                                        <label class="medium-4 columns">
+                                                                            Gasto mínimo
+                                                                            <input type="text" value="0">
+                                                                        </label>
+                                                                        <label class="medium-4 columns">
+                                                                            Devoluciones comerciales
+                                                                            <input type="text" value="0">
+                                                                        </label>
+                                                                    </div>
+                                                                    <!-- fila 1 -->
+
+                                                                    <div class="row">
+                                                                        <div class="medium-12 columns">
+                                                                            <strong>Pago Penalización Operador donante</strong>
+                                                                        </div>
+                                                                        <label class="medium-4 columns">
+                                                                            Pago total
+                                                                            <input type="text" value="0">
+                                                                        </label>
+                                                                        <label class="medium-4 columns">
+                                                                            Pago restante
+                                                                            <input type="text" value="0">
+                                                                        </label>
+                                                                        <label class="medium-4 columns">
+                                                                            Fecha de inicio
+                                                                            <input type="text" value="">
+                                                                        </label>
+                                                                    </div>
+                                                                    <!-- fila 2 -->
+                                                                </div>
+                                                                <!-- panel13 desplegable Cargos y Abonos -->
+                                                            </div>
+                                                        </div>
+                                                        <!-- row 2 -->
+
+                                                        <div class="row">
+                                                            <div class="medium-12 columns">
+                                                                <label>
+                                                                    Facturación neta
+                                                                    <input type="text" value="105,73">
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- row 3 -->
+
+                                                        <div class="row">
+                                                            <div class="medium-12 columns">
+                                                                <label>
+                                                                    Puntos acumulados
+                                                                    <input type="text" value="53860">
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- row 5 -->
+
+                                                        <div class="row">
+                                                            <div class="medium-12 columns">
+                                                                <label>
+                                                                    Inyecciones (último año)
+                                                                    <input type="text" value="0">
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- row 6 -->
+
+                                                    </div>
+                                                    <!-- panel-cont -->
+                                                </div>
+                                                <!-- panel tit: Negocio móvil -->
+                                            </div>
+                                            <!-- columns -->
+                                        </div>
+                                        <!-- row 1 -->
+                                    </form>
+                                </div>
+                                <!-- panel13: Negocio móvil_______________________________________________________________________________________-->
+
+                                <div class="content" id="panel14">
+                                    <form action="">
+                                        <div class="medium-10 medium-offset-1 columns end">
+                                            <div class="panel tit odd-even">
+                                                <h2>Marcas PO</h2>
+                                                <div class="panel-cont">
+                                                    <div class="row">
+                                                        <div class="medium-6 columns">"Totalizado o compartido"</div>
+                                                        <div class="medium-6 columns">
+                                                            <input type="text" disabled value="Totalizado">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="medium-6 columns">"Facturación total (media 3 meses)"</div>
+                                                        <div class="medium-6 columns">
+                                                            <input type="text" disabled value="762,45">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="medium-6 columns">"Ingresos netos totales MFE"</div>
+                                                        <div class="medium-6 columns">
+                                                            <input type="text" disabled value="1014,61">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="medium-6 columns">"Diferencia facturación migración MFE vs facturación original"</div>
+                                                        <div class="medium-6 columns">
+                                                            <input type="text" disabled value="0,37">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="medium-6 columns">"Nº de puestos móviles en la migración a MFE"</div>
+                                                        <div class="medium-6 columns">
+                                                            <input type="text" disabled value="9,00">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="medium-6 columns">"Nº de puestos móviles con tarifa 10&euro;"</div>
+                                                        <div class="medium-6 columns">
+                                                            <input type="text" disabled value="0,00">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="medium-6 columns">"Nº de puestos móviles (20&euro; y 45&euro;)"</div>
+                                                        <div class="medium-6 columns">
+                                                            <input type="text" disabled value="8">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- panel14: Marcas PO___________________________________________________________________________________________-->
+
+                            </div>
+                            <!-- tabs-content child -->
+                        </div>
+                        <!-- contenido -->
+                    </article>
+                </section>
+                <a class="exit-off-canvas"></a>
+            </div>
+            <!-- inner-wrap -->
+        </div>
+        <!-- off-canvas-wrap -->
+    </div>
+    <!-- row -->
+
+    <footer class="row" role="contentinfo">
+        <div class="small-4 large-2 columns">T151221 - 1</div>
+        <div class="small-8 large-8 columns end text-center">
+            Telefónica de España S.A
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- build:js js/vendor/libraries.min.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="bower_components/chartjs/Chart.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js js/vendor/foundation.min.js -->
+    <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+    <!--<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+        <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script> -->
+    <!-- endbuild -->
+    <!-- build:js js/app.min.js -->
+    <script src="js/app.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

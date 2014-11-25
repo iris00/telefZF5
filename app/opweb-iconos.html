@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Configurador de Movistar Fusión Empresas">
-    <title>Configurador MFE - Seleccionar configurador</title>
+    <title>Opweb - Situación actual - Información general</title>
 
     <!-- Iconos de aplicación -->
     <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
@@ -38,7 +38,7 @@
     <!-- endbuild -->
 </head>
 
-<body class="ofertas login">
+<body class="opweb">
     <div class="row">
         <div class="off-canvas-wrap" data-offcanvas>
             <div class="inner-wrap">
@@ -48,36 +48,99 @@
                     <!-- tit-sede -->
                     <nav class="tab-bar" role="navigation">
                         <section class="row">
-                            <div class="large-12 medium-12 columns show-for-medium-up end">
-                                <h1 class="text-center">Selección de Configurador</h1>
+                            <div class="large-1 medium-1 small-2 columns">
+                                <a title="Menú de navegación" href="" class="left-off-canvas-toggle menu-icon" tabindex="0">
+                                    <span></span>
+                                </a>
+                            </div>
+                            <div class="large-9 medium-7 columns show-for-medium-up">
+                                <h1 class="text-center">OPWEB | 2LBS</h1>
+                            </div>
+                            <div class="large-2 medium-4 small-10 columns">
+                                <a href="index.html" title="Inicio" class="home">
+                                    <i class="fa fa-home fa-2x"></i>
+                                </a>
                             </div>
                         </section>
                     </nav>
                     <!-- tab-bar -->
                 </header>
 
-                <section class="main-section" role="main">
-                    <article class="row" data-equalizer>
-                        <div class="contenido medium-10 medium-offset-1 large-8 large-offset-2 columns" data-equalizer-watch>
-                            <h2 class="row text-center">Seleccione el configurador al que desea acceder</h2>
-                            <div class="panel row">
-                                <div class="medium-12 columns">
-                                    <ul class="no-bullet text-center">
-                                        <li><a href="configurador.html">Configurador de Movistar Fusión Empresas</a>
-                                        </li>
-                                        <li><a href="#">Otro configurador</a>
-                                        </li>
-                                        <li><a href="#">Otro configurador</a>
-                                        </li>
-                                        <li><a href="#">Otro configurador</a>
-                                        </li>
-                                        <li><a href="#">Otro configurador</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                <aside class="left-off-canvas-menu">
+                    <ul class="off-canvas-list">
+                        <li class="off-canvas-head">
+                            <p>Manuel Beltrán Pérez</p>
+                            <select name="perfil">
+                                <option value="">Comercial</option>
+                                <option value="">Otro perfil</option>
+                                <option value="">Otro perfil más</option>
+                            </select>
+                        </li>
+                        <li><a href="_otras-oper.html" data-reveal-id="otras-oper" data-reveal-ajax="true"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-bar-chart fa-2x"></i> Crear Informes</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-bookmark fa-2x"></i> Producto MFE</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-comments fa-2x"></i> Ayuda</a>
+                        </li>
+                        <li><a href="admin.html"><i class="fa fa-gears fa-2x"></i> Administración</a>
+                        </li>
+                    </ul>
+                    <!-- off-canvas-list -->
+                </aside>
+                <!-- left-off-canvas-menu -->
+
+                <section role="main" class="main-section">
+                    <article class="row">
+                        <div class="contenido large-12 columns">
+                            <h2>Parque</h2>
+                            <table class="parque">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Parque</th>
+                                        <th>Situación actual</th>
+                                        <th>Nueva oferta</th>
+                                        <th>Variación</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td>Líneas de voz</td>
+                                        <td>27</td>
+                                        <td>31</td>
+                                        <td>4</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#"><i class="fa fa-plus-circle"></i></a>
+                                        </td>
+                                        <td>Pago por uso</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#"><i class="fa fa-minus-circle"></i></a>
+                                        </td>
+                                        <td>Tarifas planas</td>
+                                        <td>3</td>
+                                        <td>3</td>
+                                        <td>0</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <!-- col-dcha -->
+                        <!-- contenido -->
                     </article>
                 </section>
                 <a class="exit-off-canvas"></a>
@@ -94,42 +157,7 @@
             Telefónica de España S.A
         </div>
     </footer>
-
     <!-- footer -->
-
-    <!-- Ventanas modales -->
-    <div id="notific" class="small reveal-modal" data-reveal></div>
-    <!-- modal notificaciones -->
-
-    <div id="otras-oper" class="medium reveal-modal" data-reveal></div>
-    <!-- modal otras operaciones -->
-
-    <div id="cuenta-banc" class="large reveal-modal" data-reveal></div>
-    <!-- modal cuenta bancaria -->
-
-    <div id="camb-titular-lm" class="medium reveal-modal" data-reveal></div>
-    <!-- modal cambiar titular linea móvil -->
-
-    <div id="search" class="medium reveal-modal" data-reveal></div>
-    <!-- modal search -->
-
-    <div id="search-filter" class="medium reveal-modal" data-reveal></div>
-    <!-- modal search-filter -->
-
-    <div id="informes" class="medium reveal-modal" data-reveal></div>
-    <!-- modal informes -->
-
-    <div id="new-notif" class="medium reveal-modal" data-reveal></div>
-    <!-- modal nueva notificación -->
-
-    <div id="edit-notif" class="medium reveal-modal" data-reveal></div>
-    <!-- modal editar notificación -->
-
-    <div id="new-ofert" class="small reveal-modal" data-reveal></div>
-    <!-- modal nueva oferta -->
-
-    <div id="new-client" class="medium reveal-modal" data-reveal></div>
-    <!-- modal nuevo cliente -->
 
     <!-- build:js js/vendor/libraries.min.js -->
     <!-- bower:js -->

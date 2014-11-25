@@ -51,7 +51,7 @@
         a:hover,
         a:focus,
         a:active {
-            color: #00708f;
+            color: scale-color($anchor-font-color-hover, $lightness: -20%);
         }
     }
     .fa-shopping-cart {
@@ -131,15 +131,9 @@
             color: $white;
             font-family: arial, sans-serif;
         }
-        &:hover,
-        &:active,
-        &:focus {
-            &:after {
-                color: $anchor-font-color-hover;
-            }
-        }
     }
-    .activo .fa-desktop:after {
-        padding-left: 0;
+    a:hover .fa-desktop:after,
+    a:focus .fa-desktop:after {
+        color: scale-color($anchor-font-color-hover, $lightness: -20%);
     }
 }

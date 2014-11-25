@@ -210,6 +210,9 @@ table.puestos {
     td .f-dropdown input {
         margin-bottom: rem-calc(16);
     }
+    td .f-dropdown input[type="checkbox"] {
+        margin-right: rem-calc(10);
+    }
 }
 
 table.puestos.accesorios {

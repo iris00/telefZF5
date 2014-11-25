@@ -132,32 +132,11 @@ module.exports = function(grunt) {
                 }
             },
 
-            // browserSync: {
-            //     default_options: {
-            //         bsFiles: {
-            //             src: [
-            //                 "css/*.css",
-            //                 "*.html"
-            //             ]
-            //         },
-            //         options: {
-            //             watchTask: true,
-            //             proxy: "localhost:9000",
-            //             port: 9000,
-            //             browser: ['chrome', 'firefox']
-            //         },
-            //         server: {
-            //             baseDir: './',
-            //         }
-            //     }
-            // },
-
-
 
         browserSync: {
             app: {
                 bsFiles: {
-                    src: 'css/*.css, *.html'
+                    src: 'css/*.css, *.html, js/*.js'
                 },
                 options: {
                     watchTask: true,

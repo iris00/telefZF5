@@ -33,6 +33,9 @@
         .botonera {
             padding-top: rem-calc(15);
         }
+        label {
+            margin-bottom: rem-calc(16);
+        }
     }
     .small-6.separador {
         border-right: 1px solid $base;
