@@ -19,7 +19,7 @@ input[type="text"] {
 input[type="text"][disabled],
 input[type="text"].disabled {
     background-color: transparent;
-    border: none;
+    border: 0;
     box-shadow: none;
 }
 
@@ -30,6 +30,7 @@ input[type=checkbox] {
 label {
     cursor: default;
     line-height: rem-calc(30);
+
     &.required:after {
         content: '\f069';
         font-family: fontawesome;
@@ -43,8 +44,9 @@ label {
 fieldset {
     border: 0;
     margin: 0;
+
     legend {
-        font-family: 'robotoregular', sans-serif;
+        font-family: robotoregular, sans-serif;
         font-size: rem-calc(20);
         font-weight: normal;
     }
@@ -54,10 +56,12 @@ select {
     background-color: transparent;
     height: rem-calc(30);
     padding: rem-calc(2 0);
+
     &[multiple] {
         height: auto;
         max-height: rem-calc(100);
     }
+
     option {
         background-color: $white;
         padding: rem-calc(4 0 4 6);
@@ -69,7 +73,7 @@ select:hover {
     -moz-appearance: none;
     border-color: $iron;
     cursor: pointer;
-    text-indent: 0.01px;
+    text-indent: .01px;
 }
 
 select:focus,
@@ -100,37 +104,41 @@ input[type="checkbox"]:focus {
 
 .euro {
     position: relative;
+
     &:after {
         color: $steel;
         content: '\20AC';
-        font-family: 'robotoregular', sans-serif;
+        font-family: robotoregular, sans-serif;
         font-size: rem-calc(20);
         font-weight: normal;
         position: absolute;
-        right: 12px;
-        top: 3px;
+        right: rem-calc(15);
+        top: rem-calc(3);
         z-index: 20;
     }
+
     &.peque:after {
         color: $iron;
     }
+
     &.peque input {
-        font-family: 'robotolight', sans-serif;
-        font-size: rem-calc(14);
         color: $oil;
+        font-family: robotolight, sans-serif;
+        font-size: rem-calc(14);
     }
+
     input[type="text"][disabled] {
-        -webkit-text-fill-color: $steel;
         margin-bottom: 0;
         padding-right: rem-calc(25);
         text-align: right;
+        -webkit-text-fill-color: $steel;
     }
 }
 
 .numeros,
 .euro input {
     color: $steel;
-    font-family: 'robotoregular', sans-serif;
+    font-family: robotoregular, sans-serif;
     font-size: rem-calc(20);
     font-weight: normal;
 }
@@ -146,7 +154,7 @@ input[type="text"].numeros {
 .sede-accesor input[type="text"],
 .conf-basica input[type="text"] {
     color: $steel;
-    font-family: 'robotoregular', sans-serif;
+    font-family: robotoregular, sans-serif;
     font-size: rem-calc(20);
     font-weight: normal;
     margin: 0;
@@ -164,9 +172,10 @@ input[type="text"][data-invalid] {
 
 [data-abide] .error small.error,
 [data-abide] .error span.error,
-[data-abide] span.error, [data-abide] small.error {
+[data-abide] span.error,
+[data-abide] small.error {
     background-color: $alert-color;
-    font-family: 'robotoregular', sans-serif;
+    font-family: robotoregular, sans-serif;
     font-style: normal;
     font-weight: normal;
 }
@@ -175,9 +184,9 @@ input[type="text"][data-invalid] {
     margin-bottom: 0;
 }
 
-form[data-abide] label {
-    margin-bottom: rem-calc(17);
-}
+// form[data-abide] label {
+//     margin-bottom: rem-calc(17);
+// }
 
 // input[type="checkbox"].checkbox {
 //     -moz-appearance: none;
@@ -188,23 +197,31 @@ form[data-abide] label {
 //     border: 1px solid #555 !important;
 //     margin-right: 10px;
 // }
+
 // input[type="checkbox"]:checked {
 //     background: #abd;
 // }
+
 .botonera {
     padding: rem-calc(15 0);
-    .button, button {
+
+    .button,
+    button {
         margin-bottom: 0;
     }
+
     .button.disabled {
         background-color: $iron;
     }
+
     .func-secondary {
         background-color: $button-func-bg-secondary;
+
         &:hover {
             background-color: #7d7d7d;
         }
     }
+
     .close-reveal-modal {
         color: $white;
         font-size: rem-calc(14);
@@ -214,15 +231,19 @@ form[data-abide] label {
 }
 
 // Formularios Ofertas
-.ofertas, .sedes,
-.puestos, .admin {
-    label, .label {
+.ofertas,
+.sedes,
+.puestos,
+.admin {
+    label,
+    .label {
         background-color: $third-color;
-        font-family: 'robotoregular', sans-serif;
+        font-family: robotoregular, sans-serif;
         font-size: rem-calc(16);
         font-weight: normal;
         text-align: center;
     }
+
     label span,
     .label span {
         display: inline;
@@ -233,15 +254,16 @@ form[data-abide] label {
 .aside-right label {
     background-color: transparent;
     color: $aluminum;
-    font-family: 'robotolight', sans-serif;
+    font-family: robotolight, sans-serif;
 }
 
 .oper-tarif {
     label {
         text-align: right;
     }
+
     select {
-        font-family: 'robotoregular', sans-serif;
+        font-family: robotoregular, sans-serif;
         font-size: rem-calc(16);
         font-weight: normal;
     }
@@ -249,7 +271,7 @@ form[data-abide] label {
 
 .svas {
     select {
-        font-family: 'robotoregular', sans-serif;
+        font-family: robotoregular, sans-serif;
         font-size: rem-calc(16);
         font-weight: normal;
         margin-top: rem-calc(20);
@@ -258,9 +280,11 @@ form[data-abide] label {
 
 // Formularios puestos-fijos
 table.puestos {
-    select {
+    select,
+    input[type="text"] {
         margin-bottom: 0;
     }
+
     input[type="checkbox"] {
         margin: rem-calc(10 0 0);
     }
@@ -269,6 +293,7 @@ table.puestos {
 .otros-prod {
     font-size: rem-calc(18);
     margin-top: rem-calc(20);
+
     .fa {
         font-size: rem-calc(25);
         margin-right: rem-calc(5);
@@ -282,40 +307,81 @@ table.puestos {
         background-color: transparent;
         color: $oil;
     }
+
     .panel {
         margin-bottom: 0;
-        & > .row > .big {
-            font-size: rem-calc(25);
-            text-align: center;
-        }
+    }
+
+    .panel > .row > .big {
+        font-size: rem-calc(25);
+        text-align: center;
     }
 }
 
 // Formularios OPWEB
 .opweb {
-    form, .tabs {
+    form,
+    .tabs {
         margin-top: rem-calc(15);
     }
+
     .tabs-content > .content {
-        padding-top: 0;
         padding-bottom: 0;
+        padding-top: 0;
     }
-    // label, .label, input[type="text"], button, .button {
-    //     margin-bottom: rem-calc(5);
-    // }
-    label, .label {
+
+    label,
+    .label {
         color: $primary-color;
         font-size: rem-calc(14);
         line-height: rem-calc(25);
     }
+
     input[type="text"] {
         color: $oil;
         height: auto;
-        //padding: rem-calc(2);
-   
     }
-    button, .button {
+
+    .filtro-ofer input[type="text"][disabled],
+    .filtro-ofer input.disabled[type="text"] {
+        background-color: $iron;
+        border: 1px solid $base;
+    }
+
+    .columns > button,
+    .columns > .button {
         font-size: rem-calc(14);
         padding: rem-calc(3 15);
+    }
+
+    .fecha:before {
+        top: rem-calc(2);
+    }
+
+    .euro:after {
+        top: rem-calc(1);
+    }
+
+    select {
+        height: rem-calc(25);
+        padding: rem-calc(1 4 3);
+    }
+
+    .filtro-ofer {
+        margin-bottom: rem-calc(16);
+    }
+
+    .filtro-ofer button.radius {
+        width: 100%;
+    }
+
+    form .filtro-ofer:last-child {
+        margin-bottom: 0;
+    }
+
+    .filtro-ofer select,
+    .filtro-ofer input[type="text"],
+    .filtro-ofer .columns > button {
+        margin-bottom: rem-calc(0);
     }
 }

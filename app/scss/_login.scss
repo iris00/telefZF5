@@ -11,14 +11,16 @@
         margin-top: rem-calc(20);
         padding: rem-calc(5 0 5 20);
     }
+
     .panel {
         background-color: scale-color($primary-color, $lightness: 85%);
         background-image: linear-gradient(to bottom, $white, scale-color($black, $lightness: 90%));
         border-radius: 0 0 $global-radius $global-radius;
         padding: rem-calc(50 20);
     }
+
     .no-bullet {
-        font-family: 'robotoregular', sans-serif;
+        font-family: robotoregular, sans-serif;
         font-size: rem-calc(20);
         font-weight: normal;
         line-height: rem-calc(40);

@@ -25,10 +25,6 @@ $(document).on('opened.fndtn.reveal', function () {
     $('input[autofocus], textarea[autofocus], select[autofocus], button[autofocus]').focus().select();
 });
 
-// $( document ).ready(function() {
-//     'use strict';
-//     $('input[autofocus], textarea[autofocus], select[autofocus]').focus().select();
-// });
 
 // CERRAR DROPDOWN al pulsar flechas del carrusel___________________________________________________________________________________
 $('.orbit-prev, .orbit-next').click(function(){
@@ -37,6 +33,23 @@ $('.orbit-prev, .orbit-next').click(function(){
          Foundation.libs.dropdown.close($('.f-dropdown.open'));
      }
  });
+
+
+// OPWEB Cargar contenido de las pestañas de Situación actual por ajax_______________________________________________________________
+$(document).ready(function() {
+    'use strict';
+    $('#tab1').load('tab1.html');
+    $('dl.tabs.child dd a').click(function() {
+        var split = $(this.href.split('#'));
+        var target = split[1];
+        if (!$('#' + target).hasClass('loaded')) {
+            $('#' + target).load(target + '.html', function() {
+                $(this).foundation('reflow');
+            });
+            $('#' + target).addClass('loaded');
+        }
+    });
+});
 
 
 // VALIDACIÓN de formularios________________________________________________________________________________________________________
@@ -235,6 +248,9 @@ window.onload = function() {
 // Footable pagination
 (function(e,t,n){function i(t){var n=e(t.table),i=n.data();this.pageNavigation=i.pageNavigation||t.options.pageNavigation;this.pageSize=i.pageSize||t.options.pageSize;this.firstText=i.firstText||t.options.firstText;this.previousText=i.previousText||t.options.previousText;this.nextText=i.nextText||t.options.nextText;this.lastText=i.lastText||t.options.lastText;this.limitNavigation=parseInt(i.limitNavigation||t.options.limitNavigation||r.limitNavigation,10);this.limitPreviousText=i.limitPreviousText||t.options.limitPreviousText;this.limitNextText=i.limitNextText||t.options.limitNextText;this.limit=this.limitNavigation>0;this.currentPage=i.currentPage||0;this.pages=[];this.control=false}function s(){var t=this;t.name="Footable Paginate";t.init=function(n){if(n.options.paginate===true){if(e(n.table).data("page")===false)return;t.footable=n;e(n.table).unbind(".paging").bind({"footable_initialized.paging footable_row_removed.paging footable_redrawn.paging footable_sorted.paging footable_filtered.paging":function(){t.setupPaging()}}).data("footable-paging",t)}};t.setupPaging=function(){var n=t.footable,r=e(n.table).find("> tbody");n.pageInfo=new i(n);t.createPages(n,r);t.createNavigation(n,r);t.fillPage(n,r,n.pageInfo.currentPage)};t.createPages=function(t,n){var r=1;var i=t.pageInfo;var s=r*i.pageSize;var o=[];var u=[];i.pages=[];var a=n.find("> tr:not(.footable-filtered,.footable-row-detail)");a.each(function(e,t){o.push(t);if(e===s-1){i.pages.push(o);r++;s=r*i.pageSize;o=[]}else if(e>=a.length-a.length%i.pageSize){u.push(t)}});if(u.length>0)i.pages.push(u);if(i.currentPage>=i.pages.length)i.currentPage=i.pages.length-1;if(i.currentPage<0)i.currentPage=0;if(i.pages.length===1){e(t.table).addClass("no-paging")}else{e(t.table).removeClass("no-paging")}};t.createNavigation=function(n,r){var i=e(n.table).find(n.pageInfo.pageNavigation);if(i.length===0){i=e(n.pageInfo.pageNavigation);if(i.parents("table:first").length>0&&i.parents("table:first")!==e(n.table))return;if(i.length>1&&n.options.debug===true)console.error("More than one pagination control was found!")}if(i.length===0)return;if(!i.is("ul")){if(i.find("ul:first").length===0){i.append("<ul />")}i=i.find("ul")}i.find("li").remove();var s=n.pageInfo;s.control=i;if(s.pages.length>0){i.append('<li class="footable-page-arrow"><a data-page="first" href="#first">'+n.pageInfo.firstText+"</a>");i.append('<li class="footable-page-arrow"><a data-page="prev" href="#prev">'+n.pageInfo.previousText+"</a></li>");if(s.limit){i.append('<li class="footable-page-arrow"><a data-page="limit-prev" href="#limit-prev">'+n.pageInfo.limitPreviousText+"</a></li>")}if(!s.limit){e.each(s.pages,function(e,t){if(t.length>0){i.append('<li class="footable-page"><a data-page="'+e+'" href="#">'+(e+1)+"</a></li>")}})}if(s.limit){i.append('<li class="footable-page-arrow"><a data-page="limit-next" href="#limit-next">'+n.pageInfo.limitNextText+"</a></li>");t.createLimited(i,s,0)}i.append('<li class="footable-page-arrow"><a data-page="next" href="#next">'+n.pageInfo.nextText+"</a></li>");i.append('<li class="footable-page-arrow"><a data-page="last" href="#last">'+n.pageInfo.lastText+"</a></li>")}i.off("click","a[data-page]").on("click","a[data-page]",function(r){r.preventDefault();var o=e(this).data("page");var u=s.currentPage;if(o==="first"){u=0}else if(o==="prev"){if(u>0)u--}else if(o==="next"){if(u<s.pages.length-1)u++}else if(o==="last"){u=s.pages.length-1}else if(o==="limit-prev"){u=-1;var a=i.find(".footable-page:first a").data("page");t.createLimited(i,s,a-s.limitNavigation);t.setPagingClasses(i,s.currentPage,s.pages.length)}else if(o==="limit-next"){u=-1;var f=i.find(".footable-page:last a").data("page");t.createLimited(i,s,f+1);t.setPagingClasses(i,s.currentPage,s.pages.length)}else{u=o}if(u>=0){if(s.limit&&s.currentPage!=u){var l=u;while(l%s.limitNavigation!==0){l-=1}t.createLimited(i,s,l)}t.paginate(n,u)}});t.setPagingClasses(i,s.currentPage,s.pages.length)};t.createLimited=function(e,t,n){n=n||0;e.find("li.footable-page").remove();var r,i,s=e.find('li.footable-page-arrow > a[data-page="limit-prev"]').parent(),o=e.find('li.footable-page-arrow > a[data-page="limit-next"]').parent();for(r=t.pages.length-1;r>=0;r--){i=t.pages[r];if(r>=n&&r<n+t.limitNavigation&&i.length>0){s.after('<li class="footable-page"><a data-page="'+r+'" href="#">'+(r+1)+"</a></li>")}}if(n===0){s.hide()}else{s.show()}if(n+t.limitNavigation>=t.pages.length){o.hide()}else{o.show()}};t.paginate=function(n,r){var i=n.pageInfo;if(i.currentPage!==r){var s=e(n.table).find("> tbody");var o=n.raise("footable_paging",{page:r,size:i.pageSize});if(o&&o.result===false)return;t.fillPage(n,s,r);i.control.find("li").removeClass("active disabled");t.setPagingClasses(i.control,i.currentPage,i.pages.length)}};t.setPagingClasses=function(e,t,n){e.find("li.footable-page > a[data-page="+t+"]").parent().addClass("active");if(t>=n-1){e.find('li.footable-page-arrow > a[data-page="next"]').parent().addClass("disabled");e.find('li.footable-page-arrow > a[data-page="last"]').parent().addClass("disabled")}if(t<1){e.find('li.footable-page-arrow > a[data-page="first"]').parent().addClass("disabled");e.find('li.footable-page-arrow > a[data-page="prev"]').parent().addClass("disabled")}};t.fillPage=function(n,r,i){n.pageInfo.currentPage=i;e(n.table).data("currentPage",i);r.find("> tr").hide();e(n.pageInfo.pages[i]).each(function(){t.showRow(this,n)});n.raise("footable_page_filled")};t.showRow=function(t,n){var r=e(t),i=r.next(),s=e(n.table);if(s.hasClass("breakpoint")&&r.hasClass("footable-detail-show")&&i.hasClass("footable-row-detail")){r.add(i).show();n.createOrUpdateDetailRow(t)}else r.show()}}if(t.footable===n||t.footable===null)throw new Error("Please check and make sure footable.js is included in the page and is loaded prior to this script.");var r={paginate:true,pageSize:10,pageNavigation:".pagination",firstText:"&laquo;",previousText:"&lsaquo;",nextText:"&rsaquo;",lastText:"&raquo;",limitNavigation:0,limitPreviousText:"...",limitNextText:"..."};t.footable.plugins.register(s,r)})(jQuery,window)
 
+// Footable filter
+!function(t,e,i){function a(){var e=this;e.name="Footable Filter",e.init=function(i){if(e.footable=i,i.options.filter.enabled===!0){if(t(i.table).data("filter")===!1)return;i.timers.register("filter"),t(i.table).unbind(".filtering").bind({"footable_initialized.filtering":function(){var a=t(i.table),l={input:a.data("filter")||i.options.filter.input,timeout:a.data("filter-timeout")||i.options.filter.timeout,minimum:a.data("filter-minimum")||i.options.filter.minimum,disableEnter:a.data("filter-disable-enter")||i.options.filter.disableEnter};l.disableEnter&&t(l.input).keypress(function(t){return window.event?13!==window.event.keyCode:13!==t.which}),a.bind("footable_clear_filter",function(){t(l.input).val(""),e.clearFilter()}),a.bind("footable_filter",function(t,i){e.filter(i.filter)}),t(l.input).keyup(function(a){i.timers.filter.stop(),27===a.which&&t(l.input).val(""),i.timers.filter.start(function(){var i=t(l.input).val()||"";e.filter(i)},l.timeout)})},"footable_redrawn.filtering":function(){var a=t(i.table),l=a.data("filter-string");l&&e.filter(l)}}).data("footable-filter",e)}},e.filter=function(i){var a=e.footable,l=t(a.table),r=l.data("filter-minimum")||a.options.filter.minimum,o=!i,n=a.raise("footable_filtering",{filter:i,clear:o});if(!(n&&n.result===!1||n.filter&&n.filter.length<r))if(n.clear)e.clearFilter();else{var f=n.filter.split(" ");l.find("> tbody > tr").hide().addClass("footable-filtered");var s=l.find("> tbody > tr:not(.footable-row-detail)");t.each(f,function(t,e){e&&e.length>0&&(l.data("current-filter",e),s=s.filter(a.options.filter.filterFunction))}),s.each(function(){e.showRow(this,a),t(this).removeClass("footable-filtered")}),l.data("filter-string",n.filter),a.raise("footable_filtered",{filter:n.filter,clear:!1})}},e.clearFilter=function(){var i=e.footable,a=t(i.table);a.find("> tbody > tr:not(.footable-row-detail)").removeClass("footable-filtered").each(function(){e.showRow(this,i)}),a.removeData("filter-string"),i.raise("footable_filtered",{clear:!0})},e.showRow=function(e,i){var a=t(e),l=a.next(),r=t(i.table);a.is(":visible")||(r.hasClass("breakpoint")&&a.hasClass("footable-detail-show")&&l.hasClass("footable-row-detail")?(a.add(l).show(),i.createOrUpdateDetailRow(e)):a.show())}}if(e.footable===i||null===e.footable)throw new Error("Please check and make sure footable.js is included in the page and is loaded prior to this script.");var l={filter:{enabled:!0,input:".footable-filter",timeout:300,minimum:2,disableEnter:!1,filterFunction:function(){var e=t(this),i=e.parents("table:first"),a=i.data("current-filter").toUpperCase(),l=e.find("td").text();return i.data("filter-text-only")||e.find("td[data-value]").each(function(){l+=t(this).data("value")}),l.toUpperCase().indexOf(a)>=0}}};e.footable.plugins.register(a,l)}(jQuery,window);
+
 // Footable Bookmarkable 
 !function(a,e,t){function o(a,e){e=e?e:location.hash;var o=new RegExp("&"+a+"(?:=([^&]*))?(?=&|$)","i");return(e=e.replace(/^\#/,"&").match(o))?"undefined"==typeof e[1]?"":decodeURIComponent(e[1]):t}function l(e,t){var o=a(e.table).find("tbody").find("tr:not(.footable-row-detail, .footable-filtered)").length;a(e.table).data("status_num_total",o);var l=a(e.table).find("tbody").find("tr:not(.footable-row-detail)").filter(":visible").length;a(e.table).data("status_num_shown",l);var r=a(e.table).data("sorted"),d=a(e.table).find("th")[r],n=a(d).hasClass("footable-sorted-desc");if(a(e.table).data("status_descending",n),e.pageInfo){var i=e.pageInfo.currentPage;a(e.table).data("status_pagenum",i)}var s="",f=a(e.table).data("filter");a(f).length&&(s=a(f).val()),a(e.table).data("status_filter_val",s);var b,_,p;if("footable_row_expanded"==t.type&&(b=t.row,b&&(_=a(e.table).data("expanded_rows"),p=[],_&&(p=_.split(",")),p.push(b.rowIndex),a(e.table).data("expanded_rows",p.join(",")))),"footable_row_collapsed"==t.type&&(b=t.row)){_=a(e.table).data("expanded_rows"),p=[],_&&(p=_.split(",")),new_expanded_rows=[];for(var u in p)if(p[u]==b.rowIndex){new_expanded_rows=p.splice(u,1);break}a(e.table).data("expanded_rows",new_expanded_rows.join(","))}}function r(){var e=this;e.name="Footable LucidBookmarkable",e.init=function(e){e.options.bookmarkable.enabled&&a(e.table).bind({footable_initialized:function(){var t=e.table.id,l=o(t+"_f"),r=o(t+"_p"),d=o(t+"_s"),n=o(t+"_d"),i=o(t+"_e");if(l){var s=a(e.table).data("filter");a(s).val(l),a(e.table).trigger("footable_filter",{filter:l})}if(r&&a(e.table).data("currentPage",r),"undefined"!=typeof d){var f=a(e.table).data("footable-sort"),b=!0;"true"==n&&(b=!1),f.doSort(d,b)}else a(e.table).trigger("footable_setup_paging");if(i){var _=i.split(",");for(var p in _)row=a(e.table.rows[_[p]]),row.find("> td:first").trigger("footable_toggle_row")}e.lucid_bookmark_read=!0},"footable_page_filled footable_redrawn footable_filtered footable_sorted footable_row_expanded footable_row_collapsed":function(o){if(l(e,o),e.lucid_bookmark_read){var r=e.table.id,d=r+"_f",n=r+"_p",i=r+"_s",s=r+"_d",f=r+"_e",b=location.hash.replace(/^\#/,"&"),_=[d,n,i,s,f];for(var p in _){var u=new RegExp("&"+_[p]+"=([^&]*)","g");b=b.replace(u,"")}var w={};w[d]=a(e.table).data("status_filter_val"),w[n]=a(e.table).data("status_pagenum"),w[i]=a(e.table).data("sorted"),w[s]=a(e.table).data("status_descending"),w[f]=a(e.table).data("expanded_rows");var c=[];for(var g in w)w[g]!==t&&c.push(g+"="+encodeURIComponent(w[g]));b.length&&c.push(b),location.hash=c.join("&")}}})}}if(e.footable===t||null===e.foobox)throw new Error("Please check and make sure footable.js is included in the page and is loaded prior to this script.");var d={bookmarkable:{enabled:!1}};e.footable.plugins.register(r,d)}(jQuery,window);
 
@@ -396,8 +412,22 @@ var availableTags = [
     "Python",
     "Ruby",
     "Scala",
-    "Scheme"
-];
+    "Scheme",
+    "611231231",
+    "621231232",
+    "631231233",
+    "641231234",
+    "651231235",
+    "661231236",
+    "671231237",
+    "681231238",
+    "691231239",
+    "Alta",
+    "Portabilidad",
+    "Portabilidad con cambio de titular"
+]
+availableTags.sort();
+
 $(".autocomplete").autocomplete({
     source: availableTags
 });

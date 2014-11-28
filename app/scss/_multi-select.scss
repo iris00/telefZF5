@@ -20,17 +20,19 @@
     display: inline-block;
     position: relative;
     width: 100%;
+
     & > .optWrapper > .options > li {
         -moz-transition: 200ms ease;
         -webkit-transition: 200ms ease;
         transition: 200ms ease;
     }
+
     & > .optWrapper > .options > li label,
     & > .CaptionCont {
         background-color: transparent;
         color: $oil;
         cursor: pointer;
-        font-family: 'robotolight', sans-serif;
+        font-family: robotolight, sans-serif;
         font-size: rem-calc(14);
         padding: rem-calc(3 0 3 6);
         -o-user-select: none;
@@ -39,17 +41,21 @@
         -webkit-user-select: none;
         user-select: none;
     }
+
     & > .CaptionCont {
         border: 1px solid #ccc;
         min-height: rem-calc(20);
         position: relative;
     }
+
     & > .CaptionCont:hover {
         background-color: scale-color($select-bg-color, $lightness: -3%);
     }
+
     & p {
         margin-bottom: 0;
     }
+
     & > .CaptionCont > span {
         display: block;
         overflow: hidden;
@@ -57,9 +63,11 @@
         text-overflow: ellipsis;
         white-space: nowrap;
     }
+
     & > .CaptionCont > span.placeholder {
         color: $aluminum;
     }
+
     & > .CaptionCont > label {
         background: rgb(240, 240, 240);
         background: -moz-linear-gradient(top, rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(218, 218, 218, 1) 50%, rgba(218, 218, 218, 1) 100%);
@@ -78,6 +86,7 @@
         width: 17px;
         margin-bottom: 0;
     }
+
     & > .CaptionCont > label > i {
         background: url("../images/arrow-multiselect.png") center center no-repeat;
         border: 1px solid #fcfcfc;
@@ -91,6 +100,7 @@
         top: 0;
         width: 15px;
     }
+
     & > .optWrapper {
         background: #fff;
         border: 1px solid #ddd;
@@ -108,12 +118,14 @@
         width: 100%;
         z-index: -100;
     }
+
     & > .optWrapper.open {
         opacity: 1;
         top: rem-calc(30);
         visibility: visible;
         z-index: 1000;
     }
+
     & > .optWrapper > .options {
         display: block;
         list-style: none;
@@ -122,20 +134,25 @@
         overflow: auto;
         padding: 0;
     }
+
     & > .optWrapper.isFloating > .options {
         max-height: 100%;
     }
+
     & > .optWrapper > .options > li {
         border-bottom: 1px solid #F3F3F3;
         padding: rem-calc(4 6);
         position: relative;
     }
+
     & > .optWrapper > .options > li:last-child {
         border-bottom: none;
     }
+
     & > .optWrapper > .options > li:hover {
         background-color: #3399ff;
     }
+
     & > .optWrapper > .options > li label {
         display: block;
         overflow: hidden;
@@ -143,12 +160,15 @@
         text-overflow: ellipsis;
         white-space: nowrap;
     }
+
     & > .optWrapper > .options > li label:hover {
         color: $white;
     }
+
     & > .optWrapper > .options > li span {
         display: none;
     }
+
     /*Floating styles*/
     & > .optWrapper.isFloating {
         bottom: 0;
@@ -160,23 +180,28 @@
         top: 0;
         width: 90%;
     }
+
     /*Hover*/
     &:hover > .CaptionCont > label {
         background-color: #F1F1F1;
     }
+
     /*disabled state*/
     & > .optWrapper > .options > li.disabled {
         background-color: inherit;
     }
+
     & > .optWrapper > .options > li.disabled * {
         -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=50)';
         filter: alpha(opacity = 50);
         opacity: .5;
     }
+
     /*styling for multiple select*/
     & > .optWrapper.multiple > .options > li {
         padding-left: rem-calc(35);
     }
+
     & > .optWrapper.multiple > .options > li span {
         bottom: 0;
         display: block;
@@ -185,6 +210,7 @@
         top: 0;
         width: rem-calc(30);
     }
+
     //& > .optWrapper.multiple > .options > li span i {
     //background: transparent url("../images/checkbox.png") no-repeat center center;
     // bottom: 0;
@@ -196,6 +222,7 @@
     // top: 0;
     // width: rem-calc(16);
     //}
+
     & > .optWrapper.multiple > .options > li span i:after {
         color: $monsoon;
         content: '\f096';
@@ -209,12 +236,14 @@
         text-decoration: inherit;
         top: rem-calc(6);
     }
+
     & > .optWrapper > .MultiControls {
         //background-color: #fff;
         //border-top: 1px solid #ddd;
         //box-shadow: 0 0 2px rgba(0, 0, 0, 0.13);
         display: none;
     }
+
     & > .optWrapper.multiple.isFloating > .MultiControls {
         bottom: 0;
         display: block;
@@ -222,9 +251,11 @@
         position: absolute;
         width: 100%;
     }
+
     & > .optWrapper.multiple.okCancelInMulti > .MultiControls {
         display: block;
     }
+
     & > .optWrapper.multiple > .MultiControls > p {
         @include button;
         cursor: pointer;
@@ -235,30 +266,38 @@
         margin-bottom: 0;
         font-weight: normal;
     }
+
     & > .optWrapper.multiple > .MultiControls > p.btnOk {
         border-right: 1px solid #dbdbdb;
     }
+
     /*styling for select on popup mode*/
     & > .optWrapper.isFloating > .options > li {
         padding: rem-calc(12 6);
     }
+
     /*styling for only multiple select on popup mode*/
     & > .optWrapper.multiple.isFloating > .options > li {
         padding-left: rem-calc(35);
     }
+
     & > .optWrapper.multiple.isFloating {
         padding-bottom: rem-calc(43);
     }
+
     /*selected state*/
     // & > .optWrapper.multiple > .options > li.selected span i {
     //     background-image: url("../images/checkbox-checked.png");
     // }
+
     & > .optWrapper.multiple > .options > li.selected span i:after {
         content: '\f046';
     }
+
     .disabled {
         opacity: .7;
     }
+
     .disabled > .CaptionCont > label {
         background-color: #f1f1f1;
     }

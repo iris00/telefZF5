@@ -5,22 +5,31 @@
     .tabs.child {
         margin-top: 0;
     }
+
     .tabs dd > a,
     .tabs .tab-title > a {
         font-size: rem-calc(14);
         padding: rem-calc(8 16);
     }
+
+    .tabs dd > a:focus {
+        border-bottom: 0;
+    }
+
     .tabs dd.active a,
     .tabs .tab-title.active a {
         background-color: $secondary-color;
         color: $white;
     }
+
     .tabs-content {
         border-top: 1px solid $secondary-color;
     }
+
     .tabs-content.parent {
         margin-bottom: 0;
     }
+
     .tabs-content.child {
         padding-top: rem-calc(16);
     }

@@ -12,38 +12,43 @@
         padding: rem-calc(15 0);
         text-align: center;
     }
+
     a.plus {
         left: auto;
         right: rem-calc(40);
         top: rem-calc(20);
     }
+
     .familias,
     .productos {
         list-style: none;
-        a {
-            color: $charcoal;
+    }
+
+    .familias li,
+    .productos li {
+        color: $charcoal;
+        font-family: robotoregular, sans-serif;
+        font-size: rem-calc(17);
+        padding: rem-calc(8 0);
+
+        & a {
             display: block;
-            font-family: 'robotoregular', sans-serif;
-            font-weight: normal;
-            font-size: rem-calc(17);
-            padding: rem-calc(8 0);
         }
     }
+
     .productos ul {
         list-style-type: disc;
-        li {
-            margin-left: rem-calc(10);
-        }
+        margin-left: rem-calc(35);
+
         a {
-            font-family: 'robotolight', sans-serif;
+            font-family: robotolight, sans-serif;
         }
     }
-    .botonera {
-        .trash {
-            font-size: rem-calc(35);
-            position: relative;
-            right: rem-calc(40);
-            top: rem-calc(7);
-        }
+
+    .botonera .trash {
+        font-size: rem-calc(35);
+        position: relative;
+        right: rem-calc(40);
+        top: rem-calc(7);
     }
 }

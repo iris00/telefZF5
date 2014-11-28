@@ -4,27 +4,35 @@
 table {
     border: 0 solid;
     margin-bottom: 0;
-    thead, tr:nth-of-type(2n) {
+
+    thead,
+    tr:nth-of-type(2n) {
         background-color: $snow;
     }
+
     tbody tr:nth-of-type(n).selected {
         background-color: $silver;
     }
-    tbody tr td, thead tr th {
+
+    tbody tr td,
+    thead tr th {
+        color: $oil;
         font-size: rem-calc(16);
         line-height: rem-calc(24);
-        vertical-align: top;
         padding: rem-calc(10 0);
-        color: $oil;
+        vertical-align: top;
     }
+
     tr th {
         border-bottom: 1px solid $iron;
         font-weight: normal;
         text-align: center;
     }
+
     td.numeros {
         text-align: right;
     }
+
     tfoot {
         background-color: transparent;
     }
@@ -36,14 +44,16 @@ table {
         cursor: pointer;
         position: relative;
     }
+
     .tablesort-arrow {
+        color: $aluminum;
         font-family: 'FontAwesome';
-        position: absolute;
         font-size: rem-calc(20);
         margin-left: rem-calc(4);
-        color: $aluminum;
+        position: absolute;
         speak: none;
     }
+
     tr.awesome {
         background-color: $smoke;
     }
@@ -54,37 +64,48 @@ table.ofertas {
     tbody tr:hover {
         background-color: $smoke;
     }
+
     th:nth-child(1) {
-        width: rem-calc(60);
         border-bottom: 0 solid;
+        width: rem-calc(60);
     }
+
     th:nth-child(3) {
         text-align: right;
     }
+
     td:nth-child(1) {
         padding-top: rem-calc(15);
     }
-    td:nth-child(2), td.warning, td.alert {
-        font-family: 'robotoregular', sans-serif;
+
+    td:nth-child(2),
+    td.warning,
+    td.alert {
+        font-family: robotoregular, sans-serif;
         font-weight: normal;
     }
+
     td.warning {
         color: $warning-color;
     }
+
     td.alert {
         color: $alert-color;
     }
+
     td span {
-        font-size: rem-calc(14);
-        font-family: 'robotolight', sans-serif;
         display: block;
+        font-family: robotolight, sans-serif;
+        font-size: rem-calc(14);
     }
+
     // Alineamiento celdas
     td:nth-child(1),
     td:nth-child(4),
     td:nth-child(5) {
         text-align: center;
     }
+
     // Iconos
     td .fa {
         font-size: rem-calc(30);
@@ -93,54 +114,67 @@ table.ofertas {
 
 // Tabla listado sedes
 table.listado-sedes {
-    width: 98%;
     margin: 0 1% rem-calc(15);
+    width: 98%;
+
     tbody tr {
+        background-color: $snow;
         border: 1px solid $iron;
         border-width: 0 1px 1px;
-        background-color: $snow;
         border-right: 10px solid $iron;
+
         &.bloqueada {
             background-color: $smoke;
         }
+
         &.alert {
             border-right-color: $alert-color;
         }
+
         &.success {
             border-right-color: $success-color;
         }
     }
+
     td {
+        font-size: rem-calc(18);
         text-align: center;
         vertical-align: middle;
-        font-size: rem-calc(18);
+
         &:nth-child(2) {
-            font-family: 'robotoregular', sans-serif;
+            font-family: robotoregular, sans-serif;
             font-weight: normal;
             text-align: left;
         }
+
         &:nth-child(3) {
             padding-right: 20px;
         }
+
         &:nth-child(2) span {
-            font-size: rem-calc(14);
-            font-family: 'robotolight', sans-serif;
             display: block;
+            font-family: robotolight, sans-serif;
+            font-size: rem-calc(14);
         }
     }
+
     // Anchura columnas
     th:nth-child(1) {
         width: rem-calc(80);
     }
+
     th:nth-child(2) {
         width: 60%;
     }
+
     th:nth-child(2) {
         text-align: left;
     }
+
     .fa-stack-2x {
         font-size: 2.5em;
     }
+
     .fa-stack-1x {
         margin-left: 2px;
         margin-top: 5px;
@@ -150,23 +184,24 @@ table.listado-sedes {
 // Tabla configuración sedes
 .conf h2,
 .concept-ocas h3 {
-    font-size: rem-calc(18);
     background-color: $third-color;
-    text-align: center;
-    padding: rem-calc(5) 0;
     color: $white;
+    font-size: rem-calc(18);
+    padding: rem-calc(5) 0;
+    text-align: center;
 }
 
 table.conf-sede {
     .columns {
         padding: 0 1px;
     }
+
     th {
         border-bottom: 0;
-        line-height: rem-calc(37);
+        font-family: robotoregular, sans-serif;
         font-size: rem-calc(25);
-        font-family: 'robotoregular', sans-serif;
         font-weight: normal;
+        line-height: rem-calc(37);
     }
 }
 
@@ -176,40 +211,51 @@ table.puestos {
     &.alert select {
         color: $alert-color;
     }
+
     tr td, tr th {
+        padding: rem-calc(10 2);
         text-align: center;
         vertical-align: middle;
-        padding: rem-calc(10 2);
     }
+
     td.numeros {
         text-align: right;
     }
+
     td:nth-child(2).numeros {
         text-align: center;
     }
+
     // Anchura columnas
     th:nth-child(1), th:nth-child(2) {
         width: 5%;
     }
+
     th:nth-child(5) {
         width: 10%;
     }
+
     th:nth-child(6) {
         width: 13%;
     }
+
     .fa-plus-circle {
         font-size: rem-calc(35px);
     }
+
     td a.plus {
-        position: static;
         float: left;
+        position: static;
     }
+
     td a.plus fa {
         padding: rem-calc(10 12);
     }
+
     td .f-dropdown input {
         margin-bottom: rem-calc(16);
     }
+
     td .f-dropdown input[type="checkbox"] {
         margin-right: rem-calc(10);
     }
@@ -220,6 +266,7 @@ table.puestos.accesorios {
     th:nth-child(2) {
         width: 10%;
     }
+
     th:nth-child(4) {
         width: 13%;
     }
@@ -227,15 +274,18 @@ table.puestos.accesorios {
 
 table.puestos.moviles {
     margin-bottom: rem-calc(20);
+
     th:nth-child(2) {
         width: auto;
     }
+
     td a.plus {
         margin-left: rem-calc(40);
     }
+
     .dispositivo div {
-        width: 45%;
         display: inline-block;
+        width: 45%;
     }
 }
 
@@ -245,21 +295,29 @@ table.notif {
     th {
         text-align: left;
     }
-    th:nth-child(2), th:nth-child(3), tr td:nth-child(2), tr td:nth-child(3) {
+
+    th:nth-child(2),
+    th:nth-child(3),
+    tr td:nth-child(2),
+    tr td:nth-child(3) {
         text-align: center;
     }
+
     // Anchura columnas
     th:nth-child(1) {
         width: 40%;
     }
+
     th:nth-child(4),
     th:nth-child(5) {
         width: rem-calc(50);
     }
+
     td:nth-child(1) {
-        font-family: 'robotoregular', sans-serif;
+        font-family: robotoregular, sans-serif;
         font-weight: normal;
     }
+
     // Iconos
     td .fa {
         font-size: rem-calc(25);
@@ -272,20 +330,75 @@ table.implantac {
     th {
         text-align: left;
     }
+
     th:nth-child(1),
     td:nth-child(1) {
         text-align: center;
     }
+
     // Anchura columnas
     th:nth-child(1) {
         width: 7%;
     }
+
     th:nth-child(3),
     th:nth-child(4) {
         width: 17%;
     }
+
     th:nth-child(6),
     th:nth-child(5) {
         width: 12%;
+    }
+}
+
+// Opweb Tablas
+.opweb {
+    .panel-cont.ofertas {
+        margin: rem-calc(-10);
+    }
+
+    .ofertas {
+        thead {
+            background-color: $gainsboro;
+        }
+
+        tbody tr:nth-of-type(2n) {
+            background-color: $silver;
+        }
+
+        table tbody tr td,
+        table thead tr th {
+            color: $oil;
+            font-size: rem-calc(14);
+            line-height: rem-calc(18);
+            padding: rem-calc(5);
+            vertical-align: top;
+        }
+
+        table thead tr th {
+            border-bottom: 1px solid scale-color($panel-bg, $lightness: $panel-function-factor);
+            font-weight: normal;
+            font-family: robotoregular;
+        }
+
+        td .fa {
+            font-size: rem-calc(25);
+            vertical-align: middle;
+        }
+
+        tr td:nth-child(4) {
+            font-family: robotoregular;
+        }
+
+        tr td:nth-child(5),
+        tr td:nth-child(11),
+        tr td:nth-child(12) {
+            text-align: center;
+        }
+
+        tr td:nth-child(7) {
+            text-align: right;
+        }
     }
 }

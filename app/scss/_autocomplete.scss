@@ -59,6 +59,10 @@
     left: 0;
     position: absolute;
     top: 0;
+    box-shadow: 0 0 5px $glowing-effect-color;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .ui-menu {
@@ -81,7 +85,7 @@
 
 .ui-widget-content {
     background-color: $snow;
-    border: 1px solid $iron;
+    border: 1px solid scale-color($white, $lightness: -40%);
     border-width: 0 1px 1px;
 }
 

@@ -142,7 +142,7 @@ module.exports = function(grunt) {
                     watchTask: true,
                     proxy: 'localhost:9000',
                     //port: 9000,
-                    browser: ['chrome', 'firefox']
+                    browser: ['chrome', 'firefox'/*, 'iexplore', 'opera'*/]
                 },
                 server: {
                     baseDir: './',

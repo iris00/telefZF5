@@ -9,41 +9,60 @@
 
 // max-width 640px, mobile-only styles
 @media only screen and (max-width: 40em) {
-    header nav section > div, header .tab-bar.row, .tab-bar .menu-icon, section div:nth-child(3) a .fa, .tab-bar {
+    header nav section > div,
+    header .tab-bar.row,
+    .tab-bar .menu-icon,
+    section div:nth-child(3) a .fa,
+    .tab-bar {
         height: rem-calc(48);
     }
+
     section div:nth-child(3) a .fa {
-        margin-top: rem-calc(12);
+        margin-top: rem-calc(8);
         vertical-align: top;
     }
+
     table.ofertas th:nth-child(1) {
-        width: rem-calc(30);
+        width: rem-calc(45);
     }
+
+    table.ofertas tbody tr td:nth-child(1) {
+        text-align: left;
+    }
+
     .ofertas a.plus {
         left: rem-calc(80);
     }
+
     table.listado-sedes th:nth-child(2) {
         width: 30%;
     }
+
     .reveal-modal form {
         padding: rem-calc(5);
     }
+
     .complem-sede .tabs-content {
         padding: rem-calc(5);
     }
+
     .breadcrumbs > li {
         font-size: rem-calc(20);
         padding: 0 5px;
     }
+
     .breadconf .current a {
         font-size: rem-calc(16);
     }
+
     .breadconf .fa-stack-1x.fa-fighter-jet {
-        margin-top: rem-calc(13);
+        margin-top: rem-calc(6);
     }
-    .breadconf .fa {
-        font-size: calc(inherit - 1rem);
-    }
+
+    // .breadconf .fa {
+    //     font-size: calc(inherit);
+    // }
+
     // OCULTAR/MOSTRAR columna derecha en mobile
     // aside.col-dcha {
     //     position: absolute;

@@ -25,11 +25,13 @@ a:focus {
     min-height: 607px;
     padding-top: rem-calc(50);
     position: relative;
+
     a.plus {
         color: $charcoal;
         left: rem-calc(70);
         position: absolute;
         top: rem-calc(-15);
+
         .fa {
             background-color: $white;
             border-radius: 50%;
@@ -38,11 +40,13 @@ a:focus {
             padding: rem-calc(17 19);
         }
     }
+
     a.plus:hover,
     a.plus:active,
     a.plus:focus {
         border-bottom: none;
     }
+
     a.plus:hover .fa,
     a.plus:focus .fa,
     a.plus:active .fa {
@@ -60,7 +64,7 @@ article.row .contenido.large-12 > * {
 }
 
 .big {
-    font-family: 'robotoregular', sans-serif;
+    font-family: robotoregular, sans-serif;
     font-size: large;
     font-weight: normal;
 }
@@ -70,6 +74,7 @@ article.row .contenido.large-12 > * {
     0%, 100% {
         background-color: $white;
     }
+
     50% {
         background-color: $info-color;
     }
@@ -80,6 +85,7 @@ article.row .contenido.large-12 > * {
     0%, 100% {
         background-color: $white;
     }
+
     50% {
         background-color: $info-color;
     }
@@ -90,6 +96,7 @@ article.row .contenido.large-12 > * {
     0%, 100% {
         background-color: $white;
     }
+
     50% {
         background-color: $info-color;
     }
@@ -100,6 +107,7 @@ article.row .contenido.large-12 > * {
     0%, 100% {
         background-color: $white;
     }
+
     50% {
         background-color: $info-color;
     }
@@ -112,9 +120,11 @@ article.row .contenido.large-12 > * {
     -moz-animation: parpadeo 3s infinite;
     -o-animation: parpadeo 3s infinite;
     animation: parpadeo 3s infinite;
+
     p {
         padding-left: rem-calc(16);
     }
+
     .big {
         color: $alert-color;
     }

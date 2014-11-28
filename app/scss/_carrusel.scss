@@ -2,35 +2,43 @@
 
 // Carrusel teléfonos
 .carrusel {
-    font-family: 'robotoregular', sans-serif;
+    font-family: robotoregular, sans-serif;
     font-weight: normal;
     min-height: 140px;
     padding: rem-calc(10);
+
     &.destacado {
         background-color: $gainsboro;
     }
+
     li {
         min-height: rem-calc(140);
     }
+
     img {
         cursor: pointer;
         margin: 0 auto;
     }
+
     p {
         margin-bottom: 0;
         padding: 0 rem-calc(20);
     }
+
     .prod-tit,
     .prod-precio {
         font-size: rem-calc(20);
         line-height: rem-calc(20);
     }
+
     .prod-tit {
         color: $aluminum;
     }
+
     .prod-precio {
         color: $charcoal;
     }
+
     // Imágenes de teléfonos y dispositivos
     .fijo span,
     .movil span,
@@ -43,32 +51,39 @@
         width: 133px;
         cursor: pointer;
     }
+
     .movil span {
         background-image: url("../images/moviles.png");
     }
+
     .accesorio span {
         background-image: url("../images/accesorios.png");
     }
+
     .fijo .fi2,
     .movil .mo2,
     .accesorio .acc2 {
         background-position: 0 -154px;
     }
+
     .fijo .fi3,
     .movil .mo3,
     .accesorio .acc3 {
         background-position: 0 -308px;
     }
+
     .fijo .fi4,
     .movil .mo4,
     .accesorio .acc4 {
         background-position: 0 -462px;
     }
+
     .fijo .fi5,
     .movil .mo5,
     .accesorio .acc5 {
         background-position: 0 -616px;
     }
+
     .fijo .fi6,
     .movil .mo6,
     .accesorio .acc6 {
@@ -85,6 +100,7 @@
     h3 {
         font-size: rem-calc(20);
     }
+
     p {
         padding: 0;
     }

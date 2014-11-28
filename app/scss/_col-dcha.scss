@@ -7,6 +7,7 @@
         box-shadow: 0 6px 3px $charcoal;
         min-height: 607px;
     }
+
     // OCULTAR/MOSTRAR columna derecha en mobile
     // .aside-toggle {
     //     background-color: $third-color;
@@ -19,129 +20,163 @@
     //     width: rem-calc(40);
     //     cursor: pointer;
     //     text-align: center;
+
     //     i {
     //         color: $white;
     //     }
     // }
+
     p {
         font-size: rem-calc(14);
         padding: rem-calc(10 20);
     }
+
     header {
         background-color: $third-color;
         color: $white;
         min-height: rem-calc(55);
         padding: rem-calc(10 20 2);
-        .trash:focus {
-            border-bottom-color: $white;
+
+        .trash:focus .fa,
+        .trash:hover .fa {
+            color: scale-color($anchor-font-color-hover, $lightness: -20%);
         }
+
+        .trash:focus {
+            border-bottom: 0 dotted;
+        }
+
         .trash .fa {
             color: $white;
             float: right;
             font-size: rem-calc(26);
         }
+
         p {
             padding: 0;
             margin: 0;
         }
+
         h2 {
             color: $white;
             font-size: rem-calc(20);
             padding-right: rem-calc(20);
         }
+
         .trash {
             position: absolute;
             right: rem-calc(20);
             top: rem-calc(15);
         }
     }
+
     .info-ofer {
         color: $monsoon;
         margin-bottom: rem-calc(15);
         padding-bottom: 0;
     }
+
     span {
         display: block;
         font-size: rem-calc(16);
     }
+
     .fa {
         color: $oil;
         margin-right: rem-calc(6);
     }
+
     .factur {
         background-color: $gainsboro;
         padding: rem-calc(15 0);
+
         p {
             color: $monsoon;
             padding: 0 rem-calc(20);
             margin-bottom: 0;
         }
+
         p span {
             margin-top: rem-calc(10);
         }
+
         p .left {
             color: $oil;
-            font-family: 'robotoregular', sans-serif;
+            font-family: robotoregular, sans-serif;
             font-weight: normal;
         }
     }
+
     // SVAs
     .svas {
         padding-bottom: rem-calc(20);
         border-top: 1px solid $gainsboro;
+
         p,
         div {
             text-align: center;
         }
+
         p:nth-child(1) {
             color: $charcoal;
-            font-family: 'robotoregular', sans-serif;
+            font-family: robotoregular, sans-serif;
             font-weight: normal;
             font-size: rem-calc(20);
             margin: 0;
             padding: rem-calc(10 0);
         }
+
         label {
             color: $oil;
             font-size: rem-calc(20);
         }
+
         .coste {
             display: inline-block;
             font-size: rem-calc(20);
             margin-left: rem-calc(20);
             text-align: right;
         }
+
         select {
             width: 60%;
         }
     }
+
     // oper-tarif
     .oper-tarif {
         padding: rem-calc(20 40 0);
+
         label {
             color: $steel;
             text-align: left;
         }
+
         select {
             margin-bottom: rem-calc(10);
         }
+
         &.destacado {
             background-color: $gainsboro;
         }
     }
+
     // Heco
     .heco {
         position: relative;
+
         p {
             color: $monsoon;
             padding-bottom: 0;
         }
+
         // .accordion a {
         //     background-color: transparent;
         //     color: $oil;
         //     font-size: rem-calc(16);
         //     padding: rem-calc(5 20 5 40); 
         // }
+
         // .accordion .content p {
         //     display: block;
         //     //font-size: rem-calc(16);
@@ -149,6 +184,7 @@
         //     line-height: rem-calc(20);
         //     padding: 0;
         // }
+
         // .accordion a:before {
         //     content: '\f04b';
         //     display: inline-block;
@@ -158,31 +194,38 @@
         //     position: relative;
         //     top: 0;
         // }
+
         // .accordion .active a:before {
         //     transform: rotate(90deg);
         // }
+
         // .accordion a .right {
         //     color: $monsoon;
         // }
    
     }
+
     .contrato {
         background-color: $third-color;
         padding: rem-calc(20);
+
         p {
             color: $white;
             padding: 0;
-            font-family: 'robotoregular', sans-serif;
+            font-family: robotoregular, sans-serif;
             font-weight: normal;
             font-size: rem-calc(18);
         }
+
         input[type=file] {
             margin-bottom: 0;
         }
     }
+
     .estado {
         background-color: $gainsboro;
         padding: rem-calc(20 10);
+
         .button.small {
             font-size: rem-calc(16);
             padding: rem-calc(4 28 3);

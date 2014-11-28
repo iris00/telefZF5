@@ -19,8 +19,8 @@
     font-family: fontawesome;
     font-size: rem-calc(19);
     position: absolute;
-    right: rem-calc(20);
-    top: rem-calc(3);
+    right: rem-calc(15);
+    top: rem-calc(4);
 }
 
 // The picker input element.
@@ -33,7 +33,6 @@ input[readonly].calendario {
     display: block;
     font-family: inherit;
     font-size: rem-calc(14);
-    margin: rem-calc(0 0 16);
     position: relative;
     transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
     width: 100%;
@@ -122,25 +121,13 @@ input[readonly].calendario.picker__input--active {
     background-color: $white;
     display: table-cell;
     vertical-align: middle;
-}
-
-@media (min-height: 26.5em) {
-    .picker__box {
-        font-size: rem-calc(180);
-    }
+    font-size: rem-calc(22);
 }
 
 @media (min-height: 33.875em) {
     .picker__box {
         display: block;
-        font-size: rem-calc(20);
         box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
-    }
-}
-
-@media (min-height: 40.125em) {
-    .picker__box {
-        font-size: rem-calc(22);
     }
 }
 
@@ -184,7 +171,7 @@ input[readonly].calendario.picker__input--active {
     padding-top: rem-calc(16);
     padding-bottom: rem-calc(16);
     background-color: $primary-color;
-    font-family: 'robotoregular', sans-serif;
+    font-family: robotoregular, sans-serif;
     font-weight: normal;
     border: 2px solid $white;
 }
@@ -322,6 +309,7 @@ input[readonly].calendario.picker__input--active {
 //         margin-bottom: .75em;
 //     }
 // }
+
 .picker__table td {
     margin: 0;
     text-align: center;
@@ -418,7 +406,7 @@ input[readonly].calendario.picker__input--active {
 .picker__button--close {
     font-size: .8em;
     padding: .66em 0;
-    font-family: 'robotoregular', sans-serif;
+    font-family: robotoregular, sans-serif;
     width: 33%;
     display: inline-block;
     vertical-align: bottom;

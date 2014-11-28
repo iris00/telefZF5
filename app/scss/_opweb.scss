@@ -6,45 +6,57 @@
         font-size: rem-calc(14);
         padding-top: rem-calc(25);
     }
+
     h2 {
         font-size: rem-calc(16);
     }
+
     .panel {
         padding: rem-calc(10);
+
+        &.tit h2 {
+            background-color: $third-color;
+            color: $white;
+            margin: rem-calc((-10) -10 10 -10);
+            padding: rem-calc(5 10);
+        }
     }
-    .tit h2 {
-        background-color: $primary-color;
-        color: $white;
-        margin: rem-calc((-10) -10 10 -10);
-        padding: rem-calc(5 10);
+
+    .parque {
+        td {
+            text-align: center;
+
+            .fa {
+                font-size: rem-calc(25);
+            }
+        }
+
+        th:first-child {
+            width: rem-calc(30);
+        }
+
+        tbody tr:first-child td {
+            font-family: robotoregular;
+        }
     }
-    .parque td {
-        text-align: center;
-    }
-    .parque td .fa {
-        font-size: rem-calc(25);
-    }
-    .parque th:first-child {
-        width: rem-calc(30);
-    }
-    .parque tbody tr:first-child td {
-        font-family: 'robotoregular';
-    }
-    .desplegable {
-        margin: rem-calc(0 25);
-    }
-    .odd-even h2 {
-        margin-bottom: 0;
-    }
-    .odd-even .row {
-        margin-left: rem-calc(-10);
-        margin-right: rem-calc(-10);
-    }
-    .odd-even .columns:nth-child(odd),
-    .odd-even input[disabled] {
-        margin: rem-calc(8) 0;
-    }
-    .odd-even .row:nth-child(even) {
-        background-color: $smoke;
+
+    .odd-even {
+        h2 {
+            margin-bottom: 0;
+        }
+
+        .row {
+            margin-left: rem-calc(-10);
+            margin-right: rem-calc(-10);
+        }
+
+        .columns:nth-child(odd),
+        input[disabled] {
+            margin: rem-calc(8 0);
+        }
+
+        .row:nth-child(even) {
+            background-color: $smoke;
+        }
     }
 }
