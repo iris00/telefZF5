@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+// Acordeón para Opweb
+.opweb {
+    .accordion {
+        .accordion-navigation > a {
+            padding-left: rem-calc(27);
+            position: relative;
+            font-size: rem-calc(15);
+            overflow: auto;
+
+            &:focus {
+                border-bottom: 0;
+            }
+
+            &:after {
+                color: $steel;
+                content: "\f0da";
+                font-family: fontawesome;
+                font-size: rem-calc(19);
+                left: rem-calc(10);
+                position: absolute;
+                top: rem-calc(2);
+            }
+
+            &.active:after {
+                content: "\f0d7";
+            }
+        }
+    }
+
+    .acord.panel {
+        .content {
+            padding: rem-calc(8);
+        }
+
+        &.tit {
+            padding: 0;
+            margin-bottom: rem-calc(-1);
+
+            .accordion-navigation > a {
+                background-color: $primary-color;
+                color: $white;
+
+                &:after {
+                    color: $white;
+                }
+
+                span {
+                    display: inline-block;
+                    margin: rem-calc(0 20%);
+                }
+            }
+        }
+
+        .acord.panel .accordion-navigation > a {
+            background-color: scale-color($primary-color, $lightness: 5%);
+        }
+
+        .acord.panel .acord.panel .accordion-navigation > a {
+            background-color: scale-color($primary-color, $lightness: 10%);
+        }
+
+        .acord.panel .acord.panel .acord.panel .accordion-navigation > a {
+            background-color: scale-color($primary-color, $lightness: 15%);
+        }
+    }
+
+    .accor .accor-toggle {
+        cursor: pointer;
+        position: relative;
+        padding-left: rem-calc(27);
+
+        &:after {
+            content: "\f0da";
+            font-family: fontawesome;
+            font-size: rem-calc(19);
+            left: rem-calc(10);
+            position: absolute;
+            top: rem-calc(5);
+        }
+
+        &.active:after {
+            content: "\f0d7";
+        }
+    }
+
+    .accor-content {
+        display: none;
+    }
+
+    .accor-content.default {
+        display: table;
+    }
+}

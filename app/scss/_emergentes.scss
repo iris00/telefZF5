@@ -2,8 +2,8 @@
 
 // Reveal-modal
 .reveal-modal {
+    border: 0;
     border-radius: 8px 8px 6px 6px;
-    border: 0 solid;
     padding: 0;
 
     .close-reveal-modal {
@@ -31,10 +31,10 @@
         .close-reveal-modal {
             color: $white;
             font-size: rem-calc(25);
+            font-weight: normal;
             line-height: rem-calc(35);
             margin-left: rem-calc(30);
             position: initial;
-            font-weight: normal;
         }
     }
 
@@ -100,7 +100,7 @@
             text-align: center;
         }
 
-        & > .row .columns {
+        > .row .columns {
             padding-left: 2px;
             padding-right: 2px;
         }
@@ -111,7 +111,7 @@
     }
 }
 
-form.selecc-red {
+.selecc-red {
     padding-top: rem-calc(5);
 
     select {

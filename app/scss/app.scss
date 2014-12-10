@@ -11,7 +11,7 @@
 // Behold, here are all the Foundation components.
 @import "foundation/components/grid";
 
-//@import "foundation/components/accordion";
+@import "foundation/components/accordion";
 @import "foundation/components/alert-boxes";
 
 @import "foundation/components/block-grid";
@@ -58,6 +58,7 @@
 @import "foundation/components/visibility";
 
 // Estilos del cliente
+@import "acordeon";
 @import "administracion";
 @import "alertas";
 @import "appstyles";

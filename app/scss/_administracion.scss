@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* COMIENZAN MIS ESTILOS */
+// COMIENZAN MIS ESTILOS
 // Administración
 .catalogo .panel,
 .implantaciones .panel {
@@ -13,15 +13,10 @@
         text-align: center;
     }
 
-    a.plus {
+    .plus {
         left: auto;
         right: rem-calc(40);
         top: rem-calc(20);
-    }
-
-    .familias,
-    .productos {
-        list-style: none;
     }
 
     .familias li,
@@ -29,16 +24,18 @@
         color: $charcoal;
         font-family: robotoregular, sans-serif;
         font-size: rem-calc(17);
+        list-style: none;
         padding: rem-calc(8 0);
-
-        & a {
-            display: block;
-        }
     }
 
-    .productos ul {
+    .familias li a,
+    .productos li a {
+        display: block;
+    }
+
+    .productos ul li {
         list-style-type: disc;
-        margin-left: rem-calc(35);
+        margin-left: rem-calc(25);
 
         a {
             font-family: robotolight, sans-serif;

@@ -37,36 +37,28 @@
         min-height: rem-calc(55);
         padding: rem-calc(10 20 2);
 
-        .trash:focus .fa,
-        .trash:hover .fa {
-            color: scale-color($anchor-font-color-hover, $lightness: -20%);
-        }
-
-        .trash:focus {
-            border-bottom: 0 dotted;
-        }
-
         .trash .fa {
             color: $white;
             float: right;
             font-size: rem-calc(26);
         }
 
+        .trash:focus .fa,
+        .trash:hover .fa,
+        .trash {
+            border-bottom: 0;
+            color: scale-color($anchor-font-color-hover, $lightness: -20%);
+        }
+
         p {
-            padding: 0;
             margin: 0;
+            padding: 0;
         }
 
         h2 {
             color: $white;
             font-size: rem-calc(20);
             padding-right: rem-calc(20);
-        }
-
-        .trash {
-            position: absolute;
-            right: rem-calc(20);
-            top: rem-calc(15);
         }
     }
 
@@ -92,8 +84,8 @@
 
         p {
             color: $monsoon;
-            padding: 0 rem-calc(20);
             margin-bottom: 0;
+            padding: 0 rem-calc(20);
         }
 
         p span {
@@ -109,8 +101,8 @@
 
     // SVAs
     .svas {
-        padding-bottom: rem-calc(20);
         border-top: 1px solid $gainsboro;
+        padding-bottom: rem-calc(20);
 
         p,
         div {
@@ -120,8 +112,8 @@
         p:nth-child(1) {
             color: $charcoal;
             font-family: robotoregular, sans-serif;
-            font-weight: normal;
             font-size: rem-calc(20);
+            font-weight: normal;
             margin: 0;
             padding: rem-calc(10 0);
         }
@@ -211,13 +203,13 @@
 
         p {
             color: $white;
-            padding: 0;
             font-family: robotoregular, sans-serif;
-            font-weight: normal;
             font-size: rem-calc(18);
+            font-weight: normal;
+            padding: 0;
         }
 
-        input[type=file] {
+        input[type="file"] {
             margin-bottom: 0;
         }
     }

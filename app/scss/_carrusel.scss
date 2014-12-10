@@ -44,12 +44,12 @@
     .movil span,
     .accesorio span {
         background: url("../images/fijos.png") no-repeat 0 0 transparent;
+        cursor: pointer;
         display: block;
         height: 104px;
         margin: 0 auto;
         padding: 0;
         width: 133px;
-        cursor: pointer;
     }
 
     .movil span {

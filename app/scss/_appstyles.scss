@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
-.borde {
-    border: 10px solid red;
+// Estilos generales
+h1,
+h2,
+h3 {
+    font-family: robotoregular, sans-serif;
 }
 
-// Estilos generales
 a:active,
 a:link,
 select:focus,
@@ -26,7 +28,7 @@ a:focus {
     padding-top: rem-calc(50);
     position: relative;
 
-    a.plus {
+    .plus {
         color: $charcoal;
         left: rem-calc(70);
         position: absolute;
@@ -41,15 +43,15 @@ a:focus {
         }
     }
 
-    a.plus:hover,
-    a.plus:active,
-    a.plus:focus {
-        border-bottom: none;
+    .plus:hover,
+    .plus:active,
+    .plus:focus {
+        border-bottom: 0;
     }
 
-    a.plus:hover .fa,
-    a.plus:focus .fa,
-    a.plus:active .fa {
+    .plus:hover .fa,
+    .plus:focus .fa,
+    .plus:active .fa {
         background-color: $third-color;
         color: $white;
     }
@@ -115,11 +117,11 @@ article.row .contenido.large-12 > * {
 
 
 .cambio {
-    padding-left: rem-calc(16);
-    -webkit-animation: parpadeo 3s infinite;
     -moz-animation: parpadeo 3s infinite;
     -o-animation: parpadeo 3s infinite;
+    -webkit-animation: parpadeo 3s infinite;
     animation: parpadeo 3s infinite;
+    padding-left: rem-calc(16);
 
     p {
         padding-left: rem-calc(16);
@@ -131,14 +133,12 @@ article.row .contenido.large-12 > * {
 }
 
 // Search
-#search {
-    input[type="text"] {
-        font-size: rem-calc(18);
-    }
+#search input[type="text"] {
+    font-size: rem-calc(18);
 }
 
 // Footer
-footer.row {
+footer {
     background-color: $secondary-color;
     color: $white;
     line-height: rem-calc(46);

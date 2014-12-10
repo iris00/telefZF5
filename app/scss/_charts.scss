@@ -4,14 +4,16 @@
 .chart-holder {
     @include panel;
     padding: rem-calc(8);
+
     h2 {
         font-size: rem-calc(16);
         margin-bottom: rem-calc(16);
         text-align: center;
     }
+
     canvas {
         display: block;
-        margin: 0 auto;
         height: 600px;
+        margin: 0 auto;
     }
 }

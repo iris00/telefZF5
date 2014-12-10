@@ -43,13 +43,13 @@ module.exports = function(grunt) {
 
 
         // jshint: {
-        // 	options: {
-        // 		jshintrc: '.jshintrc'
-        // 	},
-        // 	all: [
-        // 		'Gruntfile.js',
-        // 		'<%= app %>/js/**/*.js'
-        // 	]
+        //  options: {
+        //      jshintrc: '.jshintrc'
+        //  },
+        //  all: [
+        //      'Gruntfile.js',
+        //      '<%= app %>/js/**/*.js'
+        //  ]
         // },
 
 
@@ -115,22 +115,36 @@ module.exports = function(grunt) {
         },
 
 
+        scsslint: {
+            allFiles: [
+                '<%= app %>/scss/_emergentes.scss',
+            ],
+            options: {
+                //bundleExec: true,
+                config: '.scss-lint.yml',
+                force: true
+                //reporterOutput: 'scss-lint-report.xml',
+            }
+        },
+
+
         watch: {
-                grunt: {
-                    files: ['Gruntfile.js'],
-                    tasks: ['sass']
-                },
-                sass: {
-                    files: '<%= app %>/scss/**/*.scss',
-                    tasks: ['sass']
-                },
-                livereload: {
-                    files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
-                    options: {
-                        livereload: true
-                    }
-                }
+            tasks: ['scsslint'],
+            grunt: {
+                files: ['Gruntfile.js'],
+                tasks: ['sass']
             },
+            sass: {
+                files: '<%= app %>/scss/**/*.scss',
+                tasks: ['sass']
+            },
+            livereload: {
+                files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
+                options: {
+                    livereload: true
+                }
+            }
+        },
 
 
         browserSync: {
@@ -142,7 +156,7 @@ module.exports = function(grunt) {
                     watchTask: true,
                     proxy: 'localhost:9000',
                     //port: 9000,
-                    browser: ['chrome', 'firefox'/*, 'iexplore', 'opera'*/]
+                    browser: ['chrome', 'firefox' /*, 'iexplore', 'opera'*/ ]
                 },
                 server: {
                     baseDir: './',
@@ -159,8 +173,8 @@ module.exports = function(grunt) {
                     //open: true,
                     livereload: true,
                     hostname: 'localhost'
-                    //hostname: '10.47.25.77'
-                    //hostname: '127.0.0.1'
+                        //hostname: '10.47.25.77'
+                        //hostname: '127.0.0.1'
                 }
             },
             dist: {
@@ -171,8 +185,8 @@ module.exports = function(grunt) {
                     keepalive: true,
                     livereload: false,
                     hostname: 'localhost'
-                    //hostname: '10.47.25.77'
-                    //hostname: '127.0.0.1'
+                        //hostname: '10.47.25.77'
+                        //hostname: '127.0.0.1'
                 }
             }
         },
@@ -195,15 +209,14 @@ module.exports = function(grunt) {
 
     });
 
-
+    grunt.loadNpmTasks('grunt-scss-lint');
     grunt.registerTask('compile-sass', ['sass']);
     grunt.registerTask('bower-install', ['wiredep']);
     //grunt.loadNpmTasks('grunt-webfont', ['webfont']);
     grunt.loadNpmTasks('grunt-browser-sync');
 
-    grunt.registerTask('default', ['compile-sass', 'bower-install', 'browserSync', 'connect:app', 'watch'/*, 'webfont'*/]);
+    grunt.registerTask('default', ['compile-sass', 'bower-install', 'connect:app', 'browserSync', 'watch' /*'scsslint', 'webfont'*/ ]);
     // grunt.registerTask('validate-js', ['jshint']);
     grunt.registerTask('server-dist', ['connect:dist']);
-    grunt.registerTask('publish', ['compile-sass', 'clean:dist', /* 'validate-js',*/ 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin'
-    ]);
+    grunt.registerTask('publish', ['compile-sass', 'clean:dist', /* 'validate-js',*/ 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin']);
 };

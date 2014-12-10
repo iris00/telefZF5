@@ -7,6 +7,10 @@
         padding-top: rem-calc(25);
     }
 
+    article.row .contenido.large-12 > * {
+        margin-right: 0;
+    }
+
     h2 {
         font-size: rem-calc(16);
     }
@@ -20,6 +24,12 @@
             margin: rem-calc((-10) -10 10 -10);
             padding: rem-calc(5 10);
         }
+    }
+
+    #wait {
+        text-align: center;
+        padding-top: rem-calc(100);
+        font-size: rem-calc(50);
     }
 
     .parque {
@@ -51,12 +61,25 @@
         }
 
         .columns:nth-child(odd),
-        input[disabled] {
+        input[disabled],
+        p.disabled {
             margin: rem-calc(8 0);
         }
 
         .row:nth-child(even) {
             background-color: $smoke;
         }
+    }
+
+    .fa-circle.success {
+        color: $success-color;
+    }
+
+    .fa-circle.alert {
+        color: $alert-color;
+    }
+
+    .fa-circle.warning {
+        color: $warning-color;
     }
 }

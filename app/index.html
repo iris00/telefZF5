@@ -61,20 +61,22 @@
                     <article class="row" data-equalizer>
                         <div class="contenido medium-8 medium-offset-2 large-6 large-offset-3 columns" data-equalizer-watch>
                             <h2 class="row text-center">Acceder al sistema</h2>
-                            <form action="selecc-configurador.html">
+                            <form action="selecc-configurador.html" data-abide>
                                 <div class="panel row">
                                     <div class="medium-4 columns">
-                                        <label for="">Usuario</label>
+                                        <label class="required" for="">Usuario</label>
                                     </div>
                                     <div class="medium-8 columns">
-                                        <input type="text" placeholder="Escriba su nombre de usuario" autofocus>
+                                        <input type="text" placeholder="Escriba su nombre de usuario" autofocus required pattern="alpha_numeric">
+                                        <small class="error">Este campo es obligatorio y sólo admite letras y números</small>
                                     </div>
 
                                     <div class="medium-4 columns">
-                                        <label for="">Contraseña</label>
+                                        <label class="required" for="">Contraseña</label>
                                     </div>
                                     <div class="medium-8 columns">
-                                        <input type="text" placeholder="Escriba su contraseña">
+                                        <input type="text" placeholder="Escriba su contraseña" required pattern="alpha_numeric">
+                                        <small class="error">Este campo es obligatorio y sólo admite letras y números</small>
                                     </div>
                                     <div class="botonera">
                                         <div class="large-12 columns text-right">

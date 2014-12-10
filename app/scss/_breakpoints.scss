@@ -9,28 +9,41 @@
 
 // max-width 640px, mobile-only styles
 @media only screen and (max-width: 40em) {
-    header nav section > div,
-    header .tab-bar.row,
+    nav section > div,
     .tab-bar .menu-icon,
-    section div:nth-child(3) a .fa,
+    nav section .fa,
     .tab-bar {
         height: rem-calc(48);
     }
 
-    section div:nth-child(3) a .fa {
-        margin-top: rem-calc(8);
+    header section div:nth-child(3) .fa {
+        margin-top: rem-calc(10);
         vertical-align: top;
+    }
+
+    .opweb header section div:nth-child(3) .fa-power-off {
+        margin-top: rem-calc(13);
+    }
+
+    .opweb .filtro-ofer {
+        margin-bottom: rem-calc(0);
+    }
+
+    .opweb .filtro-ofer select,
+    .opweb .filtro-ofer input[type="text"],
+    .opweb .filtro-ofer .columns > button {
+        margin-bottom: rem-calc(16);
     }
 
     table.ofertas th:nth-child(1) {
         width: rem-calc(45);
     }
 
-    table.ofertas tbody tr td:nth-child(1) {
+    table.ofertas tbody td:nth-child(1) {
         text-align: left;
     }
 
-    .ofertas a.plus {
+    .ofertas .plus {
         left: rem-calc(80);
     }
 
@@ -48,7 +61,7 @@
 
     .breadcrumbs > li {
         font-size: rem-calc(20);
-        padding: 0 5px;
+        padding: rem-calc(0 5);
     }
 
     .breadconf .current a {
@@ -57,6 +70,10 @@
 
     .breadconf .fa-stack-1x.fa-fighter-jet {
         margin-top: rem-calc(6);
+    }
+
+    footer .columns {
+        padding: rem-calc(2);
     }
 
     // .breadconf .fa {
@@ -83,5 +100,9 @@
 @media only screen and (max-width: rem-calc(1201)) {
     .contenido {
         padding-left: rem-calc(20);
+    }
+
+    .opweb article.row .contenido.large-12 > * {
+        margin-right: rem-calc(5);
     }
 }

@@ -31,6 +31,11 @@ label {
     cursor: default;
     line-height: rem-calc(30);
 
+    &.inline {
+        padding: rem-calc(2 0);
+        margin-bottom: 0;
+    }
+
     &.required:after {
         content: '\f069';
         font-family: fontawesome;
@@ -250,6 +255,12 @@ input[type="text"][data-invalid] {
     }
 }
 
+.ofertas label[for="filter"] {
+    background-color: transparent;
+    color: $oil;
+    text-align: right;
+}
+
 // Formularios sedes
 .aside-right label {
     background-color: transparent;
@@ -325,6 +336,18 @@ table.puestos {
         margin-top: rem-calc(15);
     }
 
+    legend {
+        font-size: rem-calc(16);
+    }
+
+    .postfix {
+        height: rem-calc(25);
+        line-height: rem-calc(16);
+        padding: rem-calc(4 2);
+        border: 0;
+        background-color: transparent;
+    }
+
     .tabs-content > .content {
         padding-bottom: 0;
         padding-top: 0;
@@ -337,15 +360,31 @@ table.puestos {
         line-height: rem-calc(25);
     }
 
+    .label {
+        margin-bottom: 0;
+    }
+
     input[type="text"] {
         color: $oil;
         height: auto;
     }
 
-    .filtro-ofer input[type="text"][disabled],
-    .filtro-ofer input.disabled[type="text"] {
-        background-color: $iron;
-        border: 1px solid $base;
+    .desplegable {
+        margin: rem-calc(0 30);
+    }
+
+    input[type="text"][disabled],
+    input.disabled[type="text"],
+    p.disabled {
+        background-color: $gainsboro;
+        border: 1px solid $iron;
+    }
+
+    p.disabled {
+        padding: rem-calc(1 4);
+        height: rem-calc(25);
+        overflow: hidden;
+        font-size: rem-calc(14);
     }
 
     .columns > button,

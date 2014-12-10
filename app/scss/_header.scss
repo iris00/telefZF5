@@ -1,15 +1,6 @@
 @charset "UTF-8";
 
 // Header
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: robotoregular, sans-serif;
-}
-
 header {
     .tit-sede {
         background-color: $secondary-color;
@@ -34,7 +25,7 @@ header {
     }
 
     // Icono hamburger
-    .tab-bar .menu-icon {
+    .menu-icon {
         width: rem-calc(45);
 
         span:after {
@@ -113,5 +104,31 @@ header {
 
     nav a:focus {
         border-bottom: 0 dotted;
+    }
+}
+
+// Opweb
+.opweb {
+    header {
+        .tab-bar section h1 {
+            line-height: rem-calc(52);
+        }
+
+        nav section > div,
+        .tab-bar {
+            height: rem-calc(48);
+        }
+
+        section div:nth-child(2) {
+            padding: rem-calc(0 0 0 310);
+        }
+
+        section div .fa {
+            margin-top: -25px;
+        }
+
+        div:nth-child(3) .fa-power-off {
+            margin-top: -21px;
+        }
     }
 }

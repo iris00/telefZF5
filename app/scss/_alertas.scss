@@ -1,25 +1,26 @@
 @charset "UTF-8";
 
 // Alert boxes
-.alert-box {
-    background-color: #009eb8;
-    display: inline-block;
-    font-size: rem-calc(15);
-    left: 150px;
-    position: absolute;
-    top: 10px;
-    &.info {
-        background-color: $primary-color;
-        color: $white;
-    }
-}
-
 .sedes .alert-box,
 .puestos .alert-box {
     left: 30px;
 }
 
-.alert-box.filtro {
-    background-color: $filter-color;
-    color: $oil;
+.alert-box {
+    background-color: $third-color;
+    display: inline-block;
+    font-size: rem-calc(15);
+    left: 150px;
+    position: absolute;
+    top: 10px;
+
+    &.info {
+        background-color: $primary-color;
+        color: $white;
+    }
+
+    &.filtro {
+        background-color: $filter-color;
+        color: $oil;
+    }
 }

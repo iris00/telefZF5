@@ -22,8 +22,19 @@
         color: $white;
     }
 
+    .tabs dd.active a:focus,
+    .tabs dd.active a:hover {
+        background-color: scale-color($secondary-color, $lightness: -35%);
+    }
+
+    .tabs dd > a:focus,
+    .tabs .tab-title > a:hover {
+        background-color: scale-color($silver, $lightness: -35%);
+    }
+
     .tabs-content {
         border-top: 1px solid $secondary-color;
+        font-size: rem-calc(15);
     }
 
     .tabs-content.parent {
