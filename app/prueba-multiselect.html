@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Configurador de Movistar Fusión Empresas">
-    <title>Pricing - Plantilla</title>
+    <title>Configurador MFE - Login</title>
 
     <!-- Iconos de aplicación -->
     <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
@@ -38,42 +38,48 @@
     <!-- endbuild -->
 </head>
 
-<body class="opweb">
+<body class="ofertas login">
     <div class="row">
-        <div class="off-canvas-wrap">
+        <div class="off-canvas-wrap" data-offcanvas>
             <div class="inner-wrap">
                 <header role="banner">
                     <div class="tit-sede text-center">
+
                     </div>
                     <!-- tit-sede -->
                     <nav class="tab-bar" role="navigation">
-                        <section class="row">
-                            <div class="large-1 medium-2 small-1 columns show-for-xxlarge-up">
-                            </div>
-                            <div class="large-9 medium-7 columns show-for-medium-up">
-                                <h1 class="text-center">Pricing - Plantilla</h1>
-                            </div>
-                            <div class="large-2 medium-3 small-11 columns">
-                                <a href="index.html" title="Inicio" class="home">
-                                    <i class="fa fa-home fa-2x"></i>
-                                </a>
-                                <a href="index.html" title="Salir" class="exit">
-                                    <i class="fa fa-power-off"></i>
-                                </a>
+                        <section>
+                            <div class="large-12 medium-12 columns show-for-medium-up">
+                                <h1 class="text-center">Acceso</h1>
                             </div>
                         </section>
                     </nav>
                     <!-- tab-bar -->
                 </header>
 
-                <section role="main" class="main-section">
+                <section class="main-section" role="main">
                     <article class="row">
-                        <div class="contenido large-12 columns">
-                            
+                        <div class="contenido medium-8 medium-offset-2 large-6 large-offset-3 columns">
+                            <form action="action"><select class="multi-select" name="productos" multiple>
+                                            <option value="pro1">Todos</option>
+                                            <option value="pro2">Producto 2</option>
+                                            <option value="pro3">Productos 3</option>
+                                            <option value="pro4">Productos 4</option>
+                                            <option value="pro5">Productos 5</option>
+                                            <option value="pro6">Productos 6</option>
+                                            <option value="pro7">Productos 7</option>
+                                            <option value="pro8">Productos 8</option>
+                                            <option value="pro9">Productos 9</option>
+                                            <option value="pro10">Productos 10</option>
+                                            <option value="pro11">Productos 11</option>
+                                            <option value="pro12">Productos 12</option>
+                                            <option value="pro13">Productos 13</option>
+                                        </select></form>
                         </div>
                         <!-- contenido -->
                     </article>
                 </section>
+                <a class="exit-off-canvas"></a>
             </div>
             <!-- inner-wrap -->
         </div>
@@ -87,7 +93,42 @@
             Telefónica de España S.A
         </div>
     </footer>
+
     <!-- footer -->
+
+    <!-- Ventanas modales -->
+    <div id="notific" class="small reveal-modal" data-reveal></div>
+    <!-- modal notificaciones -->
+
+    <div id="otras-oper" class="medium reveal-modal" data-reveal></div>
+    <!-- modal otras operaciones -->
+
+    <div id="cuenta-banc" class="large reveal-modal" data-reveal></div>
+    <!-- modal cuenta bancaria -->
+
+    <div id="camb-titular-lm" class="medium reveal-modal" data-reveal></div>
+    <!-- modal cambiar titular linea móvil -->
+
+    <div id="search" class="medium reveal-modal" data-reveal></div>
+    <!-- modal search -->
+
+    <div id="search-filter" class="medium reveal-modal" data-reveal></div>
+    <!-- modal search-filter -->
+
+    <div id="informes" class="medium reveal-modal" data-reveal></div>
+    <!-- modal informes -->
+
+    <div id="new-notif" class="medium reveal-modal" data-reveal></div>
+    <!-- modal nueva notificación -->
+
+    <div id="edit-notif" class="medium reveal-modal" data-reveal></div>
+    <!-- modal editar notificación -->
+
+    <div id="new-ofert" class="small reveal-modal" data-reveal></div>
+    <!-- modal nueva oferta -->
+
+    <div id="new-client" class="medium reveal-modal" data-reveal></div>
+    <!-- modal nuevo cliente -->
 
     <!-- build:js js/vendor/libraries.min.js -->
     <!-- bower:js -->
@@ -99,7 +140,7 @@
     <!-- build:js js/vendor/foundation.min.js -->
     <script src="bower_components/foundation/js/foundation/foundation.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script> -->
     <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
     <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
     <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>

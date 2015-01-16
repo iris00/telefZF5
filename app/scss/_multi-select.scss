@@ -123,7 +123,7 @@
         opacity: 1;
         top: rem-calc(30);
         visibility: visible;
-        z-index: 1000;
+        z-index: 1001;
     }
 
     & > .optWrapper > .options {
@@ -269,6 +269,11 @@
 
     & > .optWrapper.multiple > .MultiControls > p.btnOk {
         border-right: 1px solid #dbdbdb;
+    }
+
+    & > .optWrapper.multiple > .MultiControls > p.btnOk,
+    & > .optWrapper.multiple > .MultiControls > p.btnCancel {
+        padding: rem-calc(5 10);
     }
 
     /*styling for select on popup mode*/

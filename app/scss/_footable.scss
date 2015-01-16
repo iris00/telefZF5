@@ -3,10 +3,10 @@
 // FOOTABLE: añade paginación y ordena filas pulsando en cabecera
 .footable {
     .footable-toggle {
-        -webkit-font-smoothing: antialiased;
         display: inline-block;
         font-family: 'fontawesome';
         font-size: rem-calc(14);
+        -webkit-font-smoothing: antialiased;
         font-style: normal;
         font-variant: normal;
         font-weight: normal;
@@ -17,10 +17,10 @@
 
     th {
         -webkit-touch-callout: none;
-        -webkit-user-select: none;
         -khtml-user-select: none;
         -moz-user-select: -moz-none;
         -ms-user-select: none;
+        -webkit-user-select: none;
         user-select: none;
 
         &.footable-sortable {
@@ -36,10 +36,10 @@
         }
 
         .footable-sort-indicator {
-            -webkit-font-smoothing: antialiased;
             color: $aluminum;
             display: inline-block;
             font-family: 'fontawesome';
+            -webkit-font-smoothing: antialiased;
             font-style: normal;
             font-variant: normal;
             font-weight: normal;
@@ -71,9 +71,9 @@
 
         li > a,
         li > span {
+            display: inline-block;
             font-family: robotoregular, sans-serif;
             font-weight: normal;
-            display: inline-block;
             padding: rem-calc(6 12);
             margin: rem-calc(0 3);
             text-decoration: none;
@@ -100,15 +100,15 @@
         .disabled > a:hover,
         .disabled > a:focus {
             background-color: transparent;
+            border-bottom: none transparent;
             color: $aluminum;
             cursor: default;
-            border-bottom: none transparent;
         }
 
         li.footable-page-arrow a {
             font-size: rem-calc(20);
-            padding: rem-calc(0 12 5);
             margin-top: rem-calc(1);
+            padding: rem-calc(0 12 5);
         }
     }
 

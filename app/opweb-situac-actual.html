@@ -71,49 +71,47 @@
                         <div class="contenido large-12 columns">
                             <form action="action">
                                 <div class="row">
-                                    <div class="medium-1 columns text-right">
-                                        <p class="label">CIF</p>
-                                    </div>
                                     <div class="medium-2 columns">
-                                        <p class="disabled">B63294714</p>
+                                        <span class="label">
+                                            CIF
+                                            <input type="text" value="J26191171" disabled="disabled">
+                                        </label>
                                     </div>
-                                    <div class="medium-3 columns text-right">
-                                        <p class="label">Nombre de la empresa</p>
+                                    <div class="medium-5 columns">
+                                        <label>Nombre de la empresa
+                                            <input type="text" value="LUIS DEL HOYO FRIO INDUSTRIAL C.B" disabled="disabled">
+                                        </label>
                                     </div>
                                     <div class="medium-3 columns">
-                                        <p class="disabled">CONSTRUCIONS MAXI DEL VALLES S.L.</p>
+                                        <label>
+                                            Oferta
+                                            <input type="text" value="PU00000001000608" disabled="disabled">
+                                        </label>
                                     </div>
-                                    <div class="medium-3 columns text-right">
-                                        <button class="radius">Generar Bussines Case</button>
+                                    <div class="medium-2 columns text-right">
+                                        <label>&nbsp;</label>
+                                        <button type="button" class="radius" onclick="javascript:GenerarBC(false);">Generar Bussines Case</button>
                                     </div>
                                 </div>
+
                             </form>
 
-                            <!-- <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel1">Situación actual</a>
-                        </dd>
-                    </dl> -->
-                            <!-- tabs primer nivel -->
-
-                            <!-- <div class="tabs-content parent">
-                        <div class="content active" id="panel1"> -->
                             <dl class="tabs" data-tab>
-                                <dd class="active"><a href="#tab1">Información general y permanencias</a>
+                                <dd class="active"><a href="#tab1">Situación Actual</a>
                                 </dd>
-                                <dd><a href="#tab2">Negocio fijo</a>
+                                <dd><a href="#tab2">Propuesta Cliente</a>
                                 </dd>
-                                <dd><a href="#tab3">Negocio móvil</a>
+                                <dd><a href="#tab3">Nuevas Líneas </a>
                                 </dd>
-                                <dd><a href="#tab4">Marcas PO</a>
+                                <dd><a href="#tab4">Descuentos</a>
+                                </dd>
+                                <dd><a href="#tab5">Business case</a>
                                 </dd>
                             </dl>
-                            <!-- tabs child Segundo nivel -->
-                            <!-- </div> -->
-                            <!-- panel1 -->
-                            <!-- </div> -->
-                            <!-- tabs-content parent -->
+                            <!-- tabs -->
 
                             <div class="tabs-content child">
+
                                 <div class="content active" id="tab1">
                                     <div id="wait">
                                         <i class="fa fa-cog fa-spin"></i>
@@ -123,16 +121,37 @@
                                 <!-- panel11: Información general y permanencias__________________________________________________________________-->
 
                                 <div class="content" id="tab2">
+                                    <div id="wait">
+                                        <i class="fa fa-cog fa-spin"></i>
+                                        <p>Cargando...</p>
+                                    </div>
 
                                 </div>
                                 <!-- panel12: Negocio fijo________________________________________________________________________________________-->
 
                                 <div class="content" id="tab3">
+                                    <div id="wait">
+                                        <i class="fa fa-cog fa-spin"></i>
+                                        <p>Cargando...</p>
+                                    </div>
 
                                 </div>
                                 <!-- panel13: Negocio móvil_______________________________________________________________________________________-->
 
                                 <div class="content" id="tab4">
+                                    <div id="wait">
+                                        <i class="fa fa-cog fa-spin"></i>
+                                        <p>Cargando...</p>
+                                    </div>
+
+                                </div>
+                                <!-- panel14: Marcas PO___________________________________________________________________________________________-->
+
+                                <div class="content" id="tab5">
+                                    <div id="wait">
+                                        <i class="fa fa-cog fa-spin"></i>
+                                        <p>Cargando...</p>
+                                    </div>
 
                                 </div>
                                 <!-- panel14: Marcas PO___________________________________________________________________________________________-->
@@ -168,7 +187,7 @@
     <!-- build:js js/vendor/foundation.min.js -->
     <script src="bower_components/foundation/js/foundation/foundation.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
-    <!-- <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
     <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
     <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>

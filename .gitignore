@@ -1,5 +1,6 @@
 WebContent
 node_modules
+pruebas
 dist
 .tmp
 app/bower_components

@@ -38,7 +38,7 @@ $('.orbit-prev, .orbit-next').click(function(){
 // OPWEB Cargar contenido de las pestañas de "Situación actual" por Ajax____________________________________________________________
 $(document).ready(function() {
     'use strict';
-    $('#tab1').load('tab1.html');
+    //$('#tab1').load('tab1.html');
     $('dl.tabs dd a').click(function() {
         var split = $(this.href.split('#'));
         var target = split[1];
@@ -58,6 +58,11 @@ $(document).ready(function() {
         });
 });
 
+
+ $(window).load(function() {
+     'use strict';
+     $('#tab1').load('tab1.html');
+ });
 
 // OPWEB acordeón___________________________________________________________________________________________________________________
 $(document).ready(function() {
@@ -477,7 +482,7 @@ $('#sl-nume-adic').Link('lower').to($('#out-sl-nume-adic'));
 $('#sl-puer-adic').Link('lower').to($('#out-sl-puer-adic'));
 $('#sl-punt-cabl').Link('lower').to($('#out-sl-punt-cabl'));
 $('#sl-wifi-avan').Link('lower').to($('#out-sl-wifi-avan'));
-// Output de Configuración basica de sede
+//Output de Configuración basica de sede
 $('#sl-pues-fijo').Link('lower').to($('#out-sl-pues-fijo'));
 $('#sl-pues-movi').Link('lower').to($('#out-sl-pues-movi'));
 $('#sl-productiv').Link('lower').to($('#out-sl-productiv'));

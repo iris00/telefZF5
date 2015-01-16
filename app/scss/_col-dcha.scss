@@ -1,12 +1,10 @@
 @charset "UTF-8";
 
 // Columna derecha
-.col-dcha {
-    .aside-right {
-        background-color: $silver;
-        box-shadow: 0 6px 3px $charcoal;
-        min-height: 607px;
-    }
+.aside-right {
+    background-color: $silver;
+    box-shadow: 0 6px 3px $charcoal;
+    min-height: 607px;
 
     // OCULTAR/MOSTRAR columna derecha en mobile
     // .aside-toggle {
@@ -31,24 +29,12 @@
         padding: rem-calc(10 20);
     }
 
+    // header
     header {
         background-color: $third-color;
         color: $white;
         min-height: rem-calc(55);
         padding: rem-calc(10 20 2);
-
-        .trash .fa {
-            color: $white;
-            float: right;
-            font-size: rem-calc(26);
-        }
-
-        .trash:focus .fa,
-        .trash:hover .fa,
-        .trash {
-            border-bottom: 0;
-            color: scale-color($anchor-font-color-hover, $lightness: -20%);
-        }
 
         p {
             margin: 0;
@@ -62,6 +48,20 @@
         }
     }
 
+    .trash .fa {
+        color: $white;
+        float: right;
+        font-size: rem-calc(26);
+    }
+
+    .trash:focus .fa,
+    .trash:hover .fa,
+    .trash {
+        border-bottom: 0;
+        color: scale-color($anchor-font-color-hover, $lightness: -20%);
+    }
+
+    // info-ofer
     .info-ofer {
         color: $monsoon;
         margin-bottom: rem-calc(15);
@@ -78,6 +78,7 @@
         margin-right: rem-calc(6);
     }
 
+    // factur
     .factur {
         background-color: $gainsboro;
         padding: rem-calc(15 0);
@@ -88,14 +89,87 @@
             padding: 0 rem-calc(20);
         }
 
-        p span {
+        span {
             margin-top: rem-calc(10);
         }
 
-        p .left {
+        .left {
             color: $oil;
             font-family: robotoregular, sans-serif;
             font-weight: normal;
+        }
+    }
+
+    // Heco
+    .heco {
+        position: relative;
+
+        p {
+            color: $monsoon;
+            padding-bottom: 0;
+        }
+
+        // .accordion a {
+        //     background-color: transparent;
+        //     color: $oil;
+        //     font-size: rem-calc(16);
+        //     padding: rem-calc(5 20 5 40); 
+        // }
+
+        // .accordion .content p {
+        //     display: block;
+        //     //font-size: rem-calc(16);
+        //     //margin-bottom: rem-calc(15);
+        //     line-height: rem-calc(20);
+        //     padding: 0;
+        // }
+
+        // .accordion a:before {
+        //     content: '\f04b';
+        //     display: inline-block;
+        //     font-family: FontAwesome;
+        //     font-size: rem-calc(14);
+        //     left: rem-calc(-20);
+        //     position: relative;
+        //     top: 0;
+        // }
+
+        // .accordion .active a:before {
+        //     transform: rotate(90deg);
+        // }
+
+        // .accordion a .right {
+        //     color: $monsoon;
+        // }
+   
+    }
+
+    // contrato
+    .contrato {
+        background-color: $third-color;
+        padding: rem-calc(20);
+
+        p {
+            color: $white;
+            font-family: robotoregular, sans-serif;
+            font-size: rem-calc(18);
+            font-weight: normal;
+            padding: 0;
+        }
+
+        input {
+            margin-bottom: 0;
+        }
+    }
+
+    // estado
+    .estado {
+        background-color: $gainsboro;
+        padding: rem-calc(20 10);
+
+        .button.small {
+            font-size: rem-calc(16);
+            padding: rem-calc(4 28 3);
         }
     }
 
@@ -150,77 +224,6 @@
 
         &.destacado {
             background-color: $gainsboro;
-        }
-    }
-
-    // Heco
-    .heco {
-        position: relative;
-
-        p {
-            color: $monsoon;
-            padding-bottom: 0;
-        }
-
-        // .accordion a {
-        //     background-color: transparent;
-        //     color: $oil;
-        //     font-size: rem-calc(16);
-        //     padding: rem-calc(5 20 5 40); 
-        // }
-
-        // .accordion .content p {
-        //     display: block;
-        //     //font-size: rem-calc(16);
-        //     //margin-bottom: rem-calc(15);
-        //     line-height: rem-calc(20);
-        //     padding: 0;
-        // }
-
-        // .accordion a:before {
-        //     content: '\f04b';
-        //     display: inline-block;
-        //     font-family: FontAwesome;
-        //     font-size: rem-calc(14);
-        //     left: rem-calc(-20);
-        //     position: relative;
-        //     top: 0;
-        // }
-
-        // .accordion .active a:before {
-        //     transform: rotate(90deg);
-        // }
-
-        // .accordion a .right {
-        //     color: $monsoon;
-        // }
-   
-    }
-
-    .contrato {
-        background-color: $third-color;
-        padding: rem-calc(20);
-
-        p {
-            color: $white;
-            font-family: robotoregular, sans-serif;
-            font-size: rem-calc(18);
-            font-weight: normal;
-            padding: 0;
-        }
-
-        input[type="file"] {
-            margin-bottom: 0;
-        }
-    }
-
-    .estado {
-        background-color: $gainsboro;
-        padding: rem-calc(20 10);
-
-        .button.small {
-            font-size: rem-calc(16);
-            padding: rem-calc(4 28 3);
         }
     }
 }

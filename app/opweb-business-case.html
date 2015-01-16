@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Configurador de Movistar Fusión Empresas">
-    <title>Pricing - Plantilla</title>
+    <title>Opweb - Situación actual</title>
 
     <!-- Iconos de aplicación -->
     <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
@@ -32,6 +32,7 @@
     <!-- build:css css/app.min.css -->
     <link rel="stylesheet" href="css/app.css">
 
+
     <!-- endbuild -->
     <!-- build:js js/vendor/modernizr.min.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
@@ -51,7 +52,7 @@
                             <div class="large-1 medium-2 small-1 columns show-for-xxlarge-up">
                             </div>
                             <div class="large-9 medium-7 columns show-for-medium-up">
-                                <h1 class="text-center">Pricing - Plantilla</h1>
+                                <h1 class="text-center">Pricing - Situación actual</h1>
                             </div>
                             <div class="large-2 medium-3 small-11 columns">
                                 <a href="index.html" title="Inicio" class="home">
@@ -69,7 +70,62 @@
                 <section role="main" class="main-section">
                     <article class="row">
                         <div class="contenido large-12 columns">
-                            
+                            <div class="row">
+                                <div class="medium-3 columns">
+                                    <span class="label ">CIF</span>
+                                    <p class="disabled">B63294714</p>
+                                </div>
+                                <div class="medium-6 columns">
+                                    <p class="label">Nombre de la empresa</p>
+                                    <p class="disabled">CONSTRUCIONS MAXI DEL VALLES S.L.</p>
+                                </div>
+                                <div class="medium-3 columns text-right">
+                                    <label for="">&nbsp;</label>
+                                    <button class="radius">Generar Bussines Case</button>
+                                </div>
+                            </div>
+
+                            <dl class="tabs" data-tab>
+                                <dd class="active"><a href="#tab1">Información general y permanencias</a>
+                                </dd>
+                                <dd><a href="#tab2">Negocio fijo</a>
+                                </dd>
+                                <dd><a href="#tab3">Negocio móvil</a>
+                                </dd>
+                                <dd><a href="#tab4">Marcas PO</a>
+                                </dd>
+                                <dd><a href="#tab5">Business case</a></dd>
+                            </dl>
+                            <!-- tabs child -->
+
+
+                            <div class="tabs-content child">
+                                <div class="content active" id="tab1">
+
+                                </div>
+                                <!-- panel11: Información general y permanencias__________________________________________________________________-->
+
+                                <div class="content" id="tab2">
+
+                                </div>
+                                <!-- panel12: Negocio fijo________________________________________________________________________________________-->
+
+                                <div class="content" id="tab3">
+
+                                </div>
+                                <!-- panel13: Negocio móvil_______________________________________________________________________________________-->
+
+                                <div class="content" id="tab4">
+
+                                </div>
+                                <!-- panel14: Marcas PO___________________________________________________________________________________________-->
+
+                                <div class="content" id="tab5">
+
+                                </div>
+                                <!-- panel15: Business case___________________________________________________________________________________________-->
+                            </div>
+                            <!-- tabs-content child -->
                         </div>
                         <!-- contenido -->
                     </article>
@@ -88,6 +144,13 @@
         </div>
     </footer>
     <!-- footer -->
+
+    <!-- Ventanas modales -->
+    <div id="permanencia" class="medium reveal-modal" data-reveal></div>
+    <!-- modal permanencia -->
+
+    <div  id="penaliz" class="xlarge reveal-modal" data-reveal></div>
+    <!-- modal Pago penalización -->
 
     <!-- build:js js/vendor/libraries.min.js -->
     <!-- bower:js -->

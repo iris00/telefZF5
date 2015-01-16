@@ -117,7 +117,7 @@ module.exports = function(grunt) {
 
         scsslint: {
             allFiles: [
-                '<%= app %>/scss/_emergentes.scss',
+                '<%= app %>/scss/_multi-select.scss',
             ],
             options: {
                 //bundleExec: true,

@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
 // Estilos generales
+body {
+    overflow-y: scroll;
+}
+
 h1,
 h2,
 h3 {
@@ -14,13 +18,28 @@ select:active {
     outline: 0 transparent !important;
 }
 
-select:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 #000;
-}
-
 a:focus {
     border-bottom: 1px dotted;
+}
+
+.oculto {
+    display: none;
+}
+
+.alert {
+    color: $alert-color;
+}
+
+.success {
+    color: $success-color;
+}
+
+.warning {
+    color: $warning-color;
+}
+
+.info {
+    color: $info-color;
 }
 
 .contenido {

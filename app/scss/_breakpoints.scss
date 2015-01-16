@@ -21,6 +21,22 @@
         vertical-align: top;
     }
 
+    table.listado-sedes td:nth-child(3) {
+        padding-right: 0;
+    }
+
+    .contenido .plus {
+        left: rem-calc(26);
+    }
+
+    #notific ul {
+        padding-left: 0;
+    }
+
+    table.puestos td .plus {
+        float: none;
+    }
+
     .opweb header section div:nth-child(3) .fa-power-off {
         margin-top: rem-calc(13);
     }
@@ -97,6 +113,14 @@
     }
 }
 
+// large tablet
+@media only screen and (max-width: 64em) {
+    .opweb header section div:nth-child(2) {
+        padding: rem-calc(0 0 0 40);
+    }
+}
+
+// Small Desktop
 @media only screen and (max-width: rem-calc(1201)) {
     .contenido {
         padding-left: rem-calc(20);

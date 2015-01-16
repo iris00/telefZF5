@@ -6,6 +6,11 @@ button,
     font-weight: normal;
 }
 
+button.tiny.peque {
+    padding-bottom: rem-calc(3);
+    padding-top: rem-calc(3);
+}
+
 .postfix.button {
     height: rem-calc(30);
     line-height: rem-calc(30);
@@ -23,6 +28,13 @@ input[type="text"].disabled {
     box-shadow: none;
 }
 
+input[type="text"][disabled].borde,
+input[type="text"].disabled.borde {
+    background-color: $smoke;
+    border: 1px solid $iron;
+    box-shadow: none;
+}
+
 input[type=checkbox] {
     margin-right: rem-calc(10);
 }
@@ -32,8 +44,12 @@ label {
     line-height: rem-calc(30);
 
     &.inline {
-        padding: rem-calc(2 0);
         margin-bottom: 0;
+        padding: rem-calc(2 0);
+    }
+
+    &.required {
+        padding: 0 rem-calc(15);
     }
 
     &.required:after {
@@ -85,8 +101,13 @@ select:focus,
 input[type="checkbox"]:focus {
     background-color: $input-focus-bg-color;
     border-color: $input-focus-border-color;
-    @include block-glowing-effect(focus, $glowing-effect-fade-time, $glowing-effect-color);
     outline: 0 dotted;
+    @include block-glowing-effect(focus, $glowing-effect-fade-time, $glowing-effect-color);
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
 }
 
 ::-webkit-input-placeholder {
@@ -175,6 +196,11 @@ input[type="text"][data-invalid] {
     border: 1px solid $alert-color;
 }
 
+// [data-abide] .error {
+//     padding: 0 $column-gutter;
+// }
+
+input[type="text"]
 [data-abide] .error small.error,
 [data-abide] .error span.error,
 [data-abide] span.error,
@@ -340,12 +366,21 @@ table.puestos {
         font-size: rem-calc(16);
     }
 
+    .euro.peque:after {
+        color: $jumbo;
+    }
+
+    .euro.bloque.peque:after {
+        top: rem-calc(25);
+        right: rem-calc(20);
+    }
+
     .postfix {
+        background-color: transparent;
+        border: 0;
         height: rem-calc(25);
         line-height: rem-calc(16);
         padding: rem-calc(4 2);
-        border: 0;
-        background-color: transparent;
     }
 
     .tabs-content > .content {
@@ -364,6 +399,16 @@ table.puestos {
         margin-bottom: 0;
     }
 
+    // .label.inline {
+    //     width: auto;
+    //     display: inline;
+    //     float: left;
+    // }
+
+    // .label.inline + .disabled {
+    //     float: left;
+    // }
+
     input[type="text"] {
         color: $oil;
         height: auto;
@@ -381,10 +426,10 @@ table.puestos {
     }
 
     p.disabled {
-        padding: rem-calc(1 4);
+        font-size: rem-calc(14);
         height: rem-calc(25);
         overflow: hidden;
-        font-size: rem-calc(14);
+        padding: rem-calc(1 4);
     }
 
     .columns > button,
@@ -422,5 +467,9 @@ table.puestos {
     .filtro-ofer input[type="text"],
     .filtro-ofer .columns > button {
         margin-bottom: rem-calc(0);
+    }
+
+    .margencero {
+        margin: 0;
     }
 }

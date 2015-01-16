@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Configurador de Movistar Fusión Empresas">
-    <title>Pricing - Plantilla</title>
+    <title>Configurador MFE - Seleccionar configurador</title>
 
     <!-- Iconos de aplicación -->
     <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
@@ -38,9 +38,9 @@
     <!-- endbuild -->
 </head>
 
-<body class="opweb">
+<body class="ofertas login">
     <div class="row">
-        <div class="off-canvas-wrap">
+        <div class="off-canvas-wrap" data-offcanvas>
             <div class="inner-wrap">
                 <header role="banner">
                     <div class="tit-sede text-center">
@@ -48,32 +48,25 @@
                     <!-- tit-sede -->
                     <nav class="tab-bar" role="navigation">
                         <section class="row">
-                            <div class="large-1 medium-2 small-1 columns show-for-xxlarge-up">
-                            </div>
-                            <div class="large-9 medium-7 columns show-for-medium-up">
-                                <h1 class="text-center">Pricing - Plantilla</h1>
-                            </div>
-                            <div class="large-2 medium-3 small-11 columns">
-                                <a href="index.html" title="Inicio" class="home">
-                                    <i class="fa fa-home fa-2x"></i>
-                                </a>
-                                <a href="index.html" title="Salir" class="exit">
-                                    <i class="fa fa-power-off"></i>
-                                </a>
+                            <div class="large-12 medium-12 columns show-for-medium-up end">
+                                <h1 class="text-center">Selección de Configurador</h1>
                             </div>
                         </section>
                     </nav>
                     <!-- tab-bar -->
                 </header>
 
-                <section role="main" class="main-section">
-                    <article class="row">
-                        <div class="contenido large-12 columns">
-                            
+                <section class="main-section" role="main">
+                    <article class="row" data-equalizer>
+                        <div class="contenido medium-12 columns" data-equalizer-watch>
+                            <a href="_error.html" data-reveal-id="error" data-reveal-ajax="true">Abrir modal de error</a><br>
+                            <a href="_aviso.html" data-reveal-id="aviso" data-reveal-ajax="true">Abrir modal de aviso</a><br>
+                            <a href="_info.html" data-reveal-id="info" data-reveal-ajax="true">Abrir modal de información</a><br>
                         </div>
-                        <!-- contenido -->
                     </article>
                 </section>
+
+                <a class="exit-off-canvas"></a>
             </div>
             <!-- inner-wrap -->
         </div>
@@ -87,7 +80,51 @@
             Telefónica de España S.A
         </div>
     </footer>
+
     <!-- footer -->
+
+    <!-- Ventanas modales -->
+    <div id="notific" class="small reveal-modal" data-reveal></div>
+    <!-- modal notificaciones -->
+
+    <div id="otras-oper" class="medium reveal-modal" data-reveal></div>
+    <!-- modal otras operaciones -->
+
+    <div id="cuenta-banc" class="large reveal-modal" data-reveal></div>
+    <!-- modal cuenta bancaria -->
+
+    <div id="camb-titular-lm" class="medium reveal-modal" data-reveal></div>
+    <!-- modal cambiar titular linea móvil -->
+
+    <div id="search" class="medium reveal-modal" data-reveal></div>
+    <!-- modal search -->
+
+    <div id="search-filter" class="medium reveal-modal" data-reveal></div>
+    <!-- modal search-filter -->
+
+    <div id="informes" class="medium reveal-modal" data-reveal></div>
+    <!-- modal informes -->
+
+    <div id="new-notif" class="medium reveal-modal" data-reveal></div>
+    <!-- modal nueva notificación -->
+
+    <div id="edit-notif" class="medium reveal-modal" data-reveal></div>
+    <!-- modal editar notificación -->
+
+    <div id="new-ofert" class="small reveal-modal" data-reveal></div>
+    <!-- modal nueva oferta -->
+
+    <div id="new-client" class="medium reveal-modal" data-reveal></div>
+    <!-- modal nuevo cliente -->
+
+    <div id="error" class="medium reveal-modal" data-reveal></div>
+    <!-- modal error -->
+
+    <div id="aviso" class="medium reveal-modal" data-reveal></div>
+    <!-- modal warning -->
+
+    <div id="info" class="medium reveal-modal" data-reveal></div>
+    <!-- modal info -->
 
     <!-- build:js js/vendor/libraries.min.js -->
     <!-- bower:js -->
@@ -99,7 +136,7 @@
     <!-- build:js js/vendor/foundation.min.js -->
     <script src="bower_components/foundation/js/foundation/foundation.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script> -->
     <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
     <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
     <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>

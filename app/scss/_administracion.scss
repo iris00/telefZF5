@@ -1,9 +1,12 @@
 @charset "UTF-8";
 
-// COMIENZAN MIS ESTILOS
 // Administración
-.catalogo .panel,
-.implantaciones .panel {
+.catalogo,
+.implantaciones {
+    .panel {
+        padding-top: 0;
+    }
+
     h2 {
         background-color: $primary-color;
         color: $white;
@@ -19,26 +22,15 @@
         top: rem-calc(20);
     }
 
-    .familias li,
-    .productos li {
+    li {
         color: $charcoal;
         font-family: robotoregular, sans-serif;
         font-size: rem-calc(17);
         list-style: none;
         padding: rem-calc(8 0);
-    }
-
-    .familias li a,
-    .productos li a {
-        display: block;
-    }
-
-    .productos ul li {
-        list-style-type: disc;
-        margin-left: rem-calc(25);
 
         a {
-            font-family: robotolight, sans-serif;
+            display: block;
         }
     }
 
@@ -48,4 +40,10 @@
         right: rem-calc(40);
         top: rem-calc(7);
     }
+}
+
+.productos li li {
+    font-family: robotolight, sans-serif;
+    list-style-type: disc;
+    margin-left: rem-calc(25);
 }
