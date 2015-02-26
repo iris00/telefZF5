@@ -183,7 +183,7 @@ module.exports = function(grunt) {
                     base: '<%= dist %>/',
                     //open: true,
                     keepalive: true,
-                    livereload: false,
+                    //livereload: true,
                     hostname: 'localhost'
                         //hostname: '10.47.25.77'
                         //hostname: '127.0.0.1'

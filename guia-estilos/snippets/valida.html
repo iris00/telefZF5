@@ -1,0 +1,95 @@
+<form action="ofertas-filtradas.html" data-abide>
+    <div class="row">
+        <div class="large-4 columns">
+            <label class="required">CUC</label>
+        </div>
+        <div class="large-8 columns">
+            <input type="text" placeholder="Ej. T151221" required pattern="alpha_numeric" autofocus>
+            <small class="error">Este campo es obligatorio y sólo admite letras y números</small>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="large-4 columns">
+            <label class="required">Importe</label>
+        </div>
+        <div class="large-8 columns">
+            <div class="row">
+                <div class="large-6 columns">
+                    <div class="euro peque">
+                        <input type="text" placeholder="Desde..." required pattern="number">
+                        <small class="error">Este campo es obligatorio y sólo admite números</small>
+                    </div>
+                </div>
+                <div class="large-6 columns">
+                    <div class="euro peque">
+                        <input type="text" placeholder="Hasta..." required pattern="number">
+                        <small class="error">Este campo es obligatorio y sólo admite números</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Creación</label>
+        </div>
+        <div class="large-8 columns">
+            <div class="row">
+                <div class="large-6 columns fecha">
+                    <input class="calendario" type="text" placeholder="Desde...">
+                    <small class="error">Este campo es obligatorio y sólo admite fechas</small>
+                </div>
+                <div class="large-6 columns fecha">
+                    <input class="calendario" type="text" placeholder="Hasta...">
+                    <small class="error">Este campo es obligatorio y sólo admite fechas</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Productos</label>
+        </div>
+        <div class="large-8 columns">
+            <select class="multi-select" name="productos" multiple style="margin-bottom: 1rem">
+                <option value="pro1">Todos</option>
+                <option value="pro2">Producto 2</option>
+                <option value="pro3">Productos 3</option>
+                <option value="pro4">Productos 4</option>
+                <option value="pro5">Productos 5</option>
+                <option value="pro6">Productos 6</option>
+                <option value="pro7">Productos 7</option>
+                <option value="pro8">Productos 8</option>
+                <option value="pro9">Productos 9</option>
+                <option value="pro10">Productos 10</option>
+                <option value="pro11">Productos 11</option>
+                <option value="pro12">Productos 12</option>
+                <option value="pro13">Productos 13</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Estado</label>
+        </div>
+        <div class="large-8 columns">
+            <select name="estado">
+                <option value="est1">Todos</option>
+                <option value="est2">Estado 2</option>
+                <option value="est3">Estado 3</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row botonera">
+        <div class="large-12 columns text-right">
+            <button type="reset" class="radius func-secondary tiny" title="Borrar formulario">Borrar</button>
+            <button type="submit" class="radius tiny" title="Iniciar búsqueda">Buscar</button>
+        </div>
+    </div>
+</form>

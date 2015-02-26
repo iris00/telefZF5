@@ -1,0 +1,757 @@
+<!doctype html>
+<html class="no-js" lang="es-ES">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Guía de estilos">
+    <title>Guía de estilos - Textos, tablas y encabezados</title>
+
+    <!-- Iconos de aplicación -->
+    <link rel=" icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+
+    <link rel="stylesheet" href="css/libraries.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/guia-estilos.css">
+
+    <script src="js/vendor/modernizr.min.js"></script>
+</head>
+
+<body class="admin guia" onload="$(document).foundation('equalizer', 'reflow');">
+    <div class="row">
+        <div class="off-canvas-wrap" data-offcanvas>
+            <div class="inner-wrap">
+                <header role="banner">
+                    <div class="tit-sede text-center">
+
+                    </div>
+                    <!-- tit-sede -->
+                    <nav class="tab-bar" role="navigation">
+                        <section>
+                            <div class="large-1 medium-1 small-2 columns">
+                                <a title="Menú de navegación" href="" class="left-off-canvas-toggle menu-icon" tabindex="0">
+                                    <span></span>
+                                </a>
+                            </div>
+                            <div class="large-8 medium-6 columns show-for-medium-up">
+                                <h1 class="text-center">Guía de estilos: Textos, tablas y encabezados</h1>
+                            </div>
+                            <div class="large-3 medium-5 small-10 columns">
+                                <a href="_index.html" title="Inicio">
+                                    <i class="fa fa-home fa-2x"></i>
+                                </a>
+                            </div>
+                        </section>
+                    </nav>
+                    <!-- tab-bar -->
+                </header>
+
+                <aside class="left-off-canvas-menu">
+                    <ul class="off-canvas-list">
+                        <li class="off-canvas-head">
+                            <p>Ejemplo de navegación Off-canvas</p>
+                        </li>
+                        <li><a href="#">Enlace 1</a>
+                        </li>
+                        <li><a href="#">Enlace 2</a>
+                        </li>
+                    </ul>
+                    <!-- off-canvas-list -->
+                </aside>
+                <!-- left-off-canvas-menu -->
+
+                <section class="main-section" role="main">
+                    <article class="row" data-equalizer>
+                        <aside class="col-izda medium-3 columns" role="complementary">
+                            <div class="aside-left" data-equalizer-watch>
+                                <ul>
+                                    <li>
+                                        <a href="_index.html">Introducción</a>
+                                    </li>
+                                    <li>
+                                        <a href="colores.html">Colores</a>
+                                    </li>
+                                    <li>
+                                        <a href="tipografias.html">Tipografías</a>
+                                    </li>
+                                    <li><a href="forms.html">Formularios y botones</a>
+                                    </li>
+                                    <li><a class="activa" href="text.html">Encabezados, textos y tablas </a>
+                                    </li>
+                                    <li><a href="icons.html">Iconos</a>
+                                    </li>
+                                    <li><a href="listas.html">Listas</a>
+                                    </li>
+                                    <li>
+                                        <a href="todos.html">Todos los elementos</a>
+                                    </li>
+                                    <li class="titulo"><span>Estructura</span>
+                                        <ul>
+                                            <li><a href="grid.html">Layout</a>
+                                            </li>
+                                            <li><a href="genericas.html">Clases genéricas</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="titulo"><span>Navegación</span>
+                                        <ul>
+                                            <li><a href="cab.html">Cabecera</a>
+                                            </li>
+                                            <li><a href="off-canvas.html">Lateral izquierda oculta (Off-canvas)</a>
+                                            </li>
+                                            <li><a href="izda.html">Lateral izquierda visible</a>
+                                            </li>
+                                            <li><a href="dcha.html">Lateral derecha</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="titulo"><span>Componentes javascript</span>
+                                        <ul>
+                                            <li><a href="alert.html">Alertas</a>
+                                            </li>
+                                            <li><a href="modal.html">Ventanas modales</a>
+                                            </li>
+                                            <li><a href="validacion.html">Validación de formularios</a>
+                                            </li>
+                                            <li><a href="acordeon.html">Acordeón</a>
+                                            </li>
+                                            <li><a href="slider.html">Data-slider</a>
+                                            </li>
+                                            <li><a href="autocomplete.html">Autocompletar</a>
+                                            </li>
+                                            <li><a href="multisel.html">Multiselect</a>
+                                            </li>
+                                            <li><a href="dropdown.html">Dropdown</a>
+                                            </li>
+                                            <li><a href="tabs.html">Pestañas</a>
+                                            </li>
+                                            <li><a href="equalizer.html">Equalizer</a>
+                                            </li>
+                                            <li><a href="calendar.html">Calendario</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- aside-left -->
+                        </aside>
+                        <!-- col-izda -->
+                        <div class="contenido medium-9 columns" data-equalizer-watch>
+                            <h2>Encabezados de sección</h2>
+                            <div class="row">
+                                <div class="medium-6 columns">
+                                    <h4>Ejemplo visual:</h4>
+                                    <h1>h1. Encabezado muy grande e importante.</h1>
+                                    <h2>h2. Encabezado grande de segundo nivel.</h2>
+                                    <h3>h3. Encabezado mediano.</h3>
+                                    <h4>h4. Encabezado moderado, se usa poco.</h4>
+                                    <h5>h5. Encabezado pequeño, se usa poco.</h5>
+                                    <h6>h6. Encabezado muy pequeño, no se usa.</h6>
+                                </div>
+                                <div class="medium-6 columns">
+                                    <h4>Ejemplo código:</h4>
+                                    <pre class="language-markup line-numbers" data-src="snippets/headers.html"></pre>
+                                </div>
+                            </div>
+
+                            <h2>Textos</h2>
+                            <h3>Párrafos</h3>
+                            <div class="row">
+                                <div class="medium-6 columns">
+                                    <h4>Ejemplo visual:</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quaerat, culpa unde necessitatibus molestias atque minima odit, voluptate, temporibus et sit? Aut a vitae deserunt dolorem nam explicabo ab officia sint corrupti, eveniet accusantium veniam.</p>
+                                </div>
+                                <div class="medium-6 columns">
+                                    <h4>Ejemplo código:</h4>
+                                    <pre class="language-markup line-numbers" data-src="snippets/parrafos.html"></pre>
+                                </div>
+                            </div>
+
+                            <h3>Enlaces</h3>
+                            <div class="row">
+                                <div class="medium-6 columns">
+                                    <h4>Ejemplo visual:</h4>
+                                    <p class="panel">Esto es un <a href="#">enlace</a> situado dentro de un párrafo de texto.</p>
+                                </div>
+
+                                <div class="medium-6 columns">
+                                    <h4>Ejemplo código:</h4>
+                                    <pre class="language-markup line-numbers" data-src="snippets/enlaces.html"></pre>
+                                </div>
+                            </div>
+
+                            <h2>Tablas Pricing</h2>
+                            <div class="row">
+                                <div class="medium-12 columns">
+                                    <h4>Ejemplo visual:</h4>
+                                    <div class="opweb">
+                                        <table class="pricing-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Concepto</th>
+                                                    <th>%</th>
+                                                    <th>Duración</th>
+                                                    <th>Eventos</th>
+                                                    <th>Importe</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Llamadas T.P. Números Propios Multilínea
+                                                    </td>
+                                                    <td>0
+                                                    </td>
+                                                    <td>4
+                                                    </td>
+                                                    <td>::
+                                                    </td>
+                                                    <td>0
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TPlana Con Tu Negocio Horario Oficina 15
+                                                    </td>
+                                                    <td>0
+                                                    </td>
+                                                    <td>27
+                                                    </td>
+                                                    <td>::
+                                                    </td>
+                                                    <td>0
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Llamadas T.P. Números Propios Multilínea
+                                                    </td>
+                                                    <td>0
+                                                    </td>
+                                                    <td>4
+                                                    </td>
+                                                    <td>::
+                                                    </td>
+                                                    <td>0
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <h4>Ejemplo código:</h4>
+                                        <pre class="language-markup line-numbers" data-src="snippets/tabla.html"></pre>
+
+                                        <h4>Ejemplo visual:</h4>
+                                        <table class="prop-cliente">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <input type="checkbox" id="checkAll">
+                                                    </th>
+                                                    <th>Línea</th>
+                                                    <th>
+                                                        Plan de tarificación
+                                                        <br>
+                                                        <select>
+                                                            <option value="">Tarifa 20 ADSL / FTTH</option>
+                                                            <option selected="" value="">Tarifa 35 ADSL / FTTH</option>
+                                                            <option value="">Tarifa 40 ADSL / FTTH</option>
+                                                        </select>
+                                                    </th>
+                                                    <th>Tráfico</th>
+                                                    <th colspan="2">Roaming </th>
+                                                    <th><a href="#"><i class="fa fa-plus-circle"></i></a>
+                                                    </th>
+                                                    <th colspan="2">Internacional</th>
+                                                    <th><a href="#"><i class="fa fa-plus-circle"></i></a>
+                                                    </th>
+                                                    <th colspan="2">Otros servicios</th>
+                                                    <th><a href="#"><i class="fa fa-plus-circle"></i></a>
+                                                    </th>
+                                                    <th>PVC SA</th>
+                                                    <th>PVC PC</th>
+                                                </tr>
+
+                                                <tr>
+                                                    <th colspan="4"></th>
+                                                    <th>SA</th>
+                                                    <th>PC</th>
+                                                    <th></th>
+                                                    <th>SA</th>
+                                                    <th>PC</th>
+                                                    <th></th>
+                                                    <th>SA</th>
+                                                    <th>PC</th>
+                                                    <th colspan="3"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="destaca">
+                                                    <td>
+                                                        <input type="checkbox">
+                                                    </td>
+                                                    <td>Móvil 20</td>
+                                                    <td>
+                                                        <select>
+                                                            <option selected="" value="">Tarifa 20 ADSL / FTTH</option>
+                                                            <option value="">Tarifa 35 ADSL / FTTH</option>
+                                                            <option value="">Tarifa 40 ADSL / FTTH</option>
+                                                        </select>
+                                                    </td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><i class="fa fa-plus-circle"></i></a>
+                                                    </td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><i class="fa fa-plus-circle"></i></a>
+                                                    </td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><i class="fa fa-plus-circle"></i></a>
+                                                    </td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox">
+                                                    </td>
+                                                    <td>665896321</td>
+                                                    <td>
+                                                        <select>
+                                                            <option selected="" value="">Tarifa 20 ADSL / FTTH</option>
+                                                            <option value="">Tarifa 35 ADSL / FTTH</option>
+                                                            <option value="">Tarifa 40 ADSL / FTTH</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><a data-reveal-ajax="true" data-reveal-id="prop-client-1" href="_opeweb-prop-client-1.html"><i class="fa fa-pencil-square-o"></i></a>
+                                                    </td>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td><a data-reveal-ajax="true" data-reveal-id="prop-client-2" href="_opeweb-prop-client-2.html"><i class="fa fa-plus-circle"></i></a>
+                                                    </td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><i class="fa fa-plus-circle"></i></a>
+                                                    </td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td><a href="#"><i class="fa fa-plus-circle"></i></a>
+                                                    </td>
+                                                    <td>20.50€</td>
+                                                    <td>€</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox">
+                                                    </td>
+                                                    <td>665896322</td>
+                                                    <td>
+                                                        <select>
+                                                            <option selected="" value="">Tarifa 20 ADSL / FTTH</option>
+                                                            <option value="">Tarifa 35 ADSL / FTTH</option>
+                                                            <option value="">Tarifa 40 ADSL / FTTH</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><a href="#"><i class="fa fa-pencil-square-o"></i></a>
+                                                    </td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><i class="fa fa-plus-circle"></i></a>
+                                                    </td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><i class="fa fa-plus-circle"></i></a>
+                                                    </td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><i class="fa fa-plus-circle"></i></a>
+                                                    </td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                        <h4>Ejemplo código:</h4>
+                                        <pre class="language-markup line-numbers" data-src="snippets/tabla2.html"></pre>
+                                    </div>
+                                    <h2>Tabla Configurador MFE con paginación y filtrado de resultados</h2>
+                                    <h4>Ejemplo visual:</h4>
+                                    <div class="row">
+                                        <div class="medium-2 medium-offset-6 columns">
+                                            <label class="right" for="filter">Filtrar</label>
+                                        </div>
+                                        <div class="medium-4 columns">
+                                            <input type="text" id="filter">
+                                        </div>
+                                    </div>
+                                    <table class="ofertas sortable" data-limit-navigation="5" data-filter="#filter">
+                                        <caption>Listado de Clientes</caption>
+                                        <thead>
+                                            <tr>
+                                                <th data-sort-ignore="true"></th>
+                                                <th data-sort-ignore="true">Cliente</th>
+                                                <th data-type="numeric">Importe</th>
+                                                <th data-typet="numeric" data-sort-initial="descending">Fecha Mod.</th>
+                                                <th data-sort-ignore="true">Estado</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Grupo VIPs S.A.<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">625&euro;</td>
+                                                <td>25/05/2014</td>
+                                                <td>Borrador</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">BMW Automóviles S.A.<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">7362&euro;</td>
+                                                <td>24/05/2014</td>
+                                                <td class="warning">Incidencia</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="sedes.html" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Panadería Madrid S.L.<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">231&euro;</td>
+                                                <td>30/05/2014</td>
+                                                <td>Tramitación Fase I</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Congelados Burgos S.L.<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">736&euro;</td>
+                                                <td>23/05/2014</td>
+                                                <td>Borrador</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Ayuntamiento de Dénia<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">456&euro;</td>
+                                                <td>22/05/2014</td>
+                                                <td class="alert">Anexar contrato</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Google Inc<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">431&euro;</td>
+                                                <td>21/05/2014</td>
+                                                <td>Contrato generado</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Google Inc<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">431&euro;</td>
+                                                <td>21/05/2014</td>
+                                                <td>Contrato generado</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Google Inc<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">431&euro;</td>
+                                                <td>21/05/2014</td>
+                                                <td>Contrato generado</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Google Inc<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">431&euro;</td>
+                                                <td>21/05/2014</td>
+                                                <td>Contrato generado</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Google Inc<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">431&euro;</td>
+                                                <td>19/05/2014</td>
+                                                <td>Contrato generado</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Grupo VIPs S.A.<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">625&euro;</td>
+                                                <td>25/05/2014</td>
+                                                <td>Borrador</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">BMW Automóviles S.A.<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">7362&euro;</td>
+                                                <td>24/05/2014</td>
+                                                <td class="warning">Incidencia</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="sedes.html" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Panadería Madrid S.L.<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">231&euro;</td>
+                                                <td>30/05/2014</td>
+                                                <td>Tramitación Fase I</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Congelados Burgos S.L.<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">736&euro;</td>
+                                                <td>23/05/2014</td>
+                                                <td>Borrador</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Ayuntamiento de Dénia<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">456&euro;</td>
+                                                <td>22/05/2014</td>
+                                                <td class="alert">Anexar contrato</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Google Inc<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">31&euro;</td>
+                                                <td>21/05/2014</td>
+                                                <td>Contrato generado</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Google Inc<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">431&euro;</td>
+                                                <td>21/05/2014</td>
+                                                <td>Contrato generado</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Google Inc<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">431&euro;</td>
+                                                <td>21/05/2014</td>
+                                                <td>Contrato generado</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Google Inc<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">431&euro;</td>
+                                                <td>21/05/2014</td>
+                                                <td>Contrato generado</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Google Inc<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">431&euro;</td>
+                                                <td>21/05/2014</td>
+                                                <td>Contrato generado</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Grupo VIPs S.A.<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">625&euro;</td>
+                                                <td>25/05/2014</td>
+                                                <td>Borrador</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">BMW Automóviles S.A.<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">7362&euro;</td>
+                                                <td>24/05/2014</td>
+                                                <td class="warning">Incidencia</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="sedes.html" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Panadería Madrid S.L.<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">231&euro;</td>
+                                                <td>30/05/2014</td>
+                                                <td>Tramitación Fase I</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Congelados Burgos S.L.<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">736&euro;</td>
+                                                <td>23/05/2014</td>
+                                                <td>Borrador</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" title="Editar">
+                                                        <i class="fa fa-play-circle"></i>
+                                                    </a>
+                                                </td>
+                                                <td><a href="#">Ayuntamiento de Dénia<span>B10156754</span></a>
+                                                </td>
+                                                <td class="numeros">456&euro;</td>
+                                                <td>22/05/2014</td>
+                                                <td class="alert">Anexar contrato</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="5">
+                                                    <div class="pagination pagination-centered hide-if-no-paging" role="menubar" aria-label="Pagination"></div>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                    <h4>Ejemplo código:</h4>
+                                    <pre class="language-markup line-numbers" data-src="snippets/tabla3.html"></pre>
+                                </div>
+
+                            </div>
+
+
+
+
+                        </div>
+                        <!-- contenido -->
+                    </article>
+                </section>
+                <a class="exit-off-canvas"></a>
+            </div>
+            <!-- inner-wrap -->
+        </div>
+        <!-- off-canvas-wrap -->
+    </div>
+    <!-- row -->
+
+    <footer class="row" role="contentinfo">
+        <div class="medium-12 columns text-center">
+            Telefónica de España S.A
+        </div>
+    </footer>
+    <!-- footer -->
+    <div id="search-filter" class="medium reveal-modal" data-reveal></div>
+    <!-- modal search-filter -->
+
+    <script src="js/vendor/libraries.min.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script src="js/app.min.js"></script>
+    <script src="js/vendor/prism.js"></script>
+    <script src="js/vendor/reflow.js"></script>
+
+
+</body>
+
+</html>

@@ -24,3 +24,11 @@
         color: $oil;
     }
 }
+
+.reveal-modal {
+    .alert-box {
+        left: auto;
+        right: rem-calc(60);
+        top: rem-calc(8);
+    }
+}

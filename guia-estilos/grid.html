@@ -1,0 +1,237 @@
+<!doctype html>
+<html class="no-js" lang="es-ES">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Guía de estilos">
+    <title>Guía de estilos - Layout</title>
+
+    <!-- Iconos de aplicación -->
+    <link rel=" icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+
+    <link rel="stylesheet" href="css/libraries.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/guia-estilos.css">
+
+    <script src="js/vendor/modernizr.min.js"></script>
+</head>
+
+<body class="admin guia">
+    <div class="row">
+        <div class="off-canvas-wrap" data-offcanvas>
+            <div class="inner-wrap">
+                <header role="banner">
+                    <div class="tit-sede text-center">
+
+                    </div>
+                    <!-- tit-sede -->
+                    <nav class="tab-bar" role="navigation">
+                        <section>
+                            <div class="large-1 medium-1 small-2 columns">
+                                <a title="Menú de navegación" href="" class="left-off-canvas-toggle menu-icon" tabindex="0">
+                                    <span></span>
+                                </a>
+                            </div>
+                            <div class="large-8 medium-6 columns show-for-medium-up">
+                                <h1 class="text-center">Guía de estilos: Layout</h1>
+                            </div>
+                            <div class="large-3 medium-5 small-10 columns">
+                                <a href="_index.html" title="Inicio">
+                                    <i class="fa fa-home fa-2x"></i>
+                                </a>
+                            </div>
+                        </section>
+                    </nav>
+                    <!-- tab-bar -->
+                </header>
+
+                <aside class="left-off-canvas-menu">
+                    <ul class="off-canvas-list">
+                        <li class="off-canvas-head">
+                            <p>Ejemplo de navegación Off-canvas</p>
+                        </li>
+                        <li><a href="#">Enlace 1</a>
+                        </li>
+                        <li><a href="#">Enlace 2</a>
+                        </li>
+                    </ul>
+                    <!-- off-canvas-list -->
+                </aside>
+                <!-- left-off-canvas-menu -->
+
+                <section class="main-section" role="main">
+                    <article class="row" data-equalizer>
+                        <aside class="col-izda medium-3 columns" role="complementary">
+                            <div class="aside-left" data-equalizer-watch>
+                                <ul>
+                                    <li>
+                                        <a class="activa" href="_index.html">Introducción</a>
+                                    </li>
+                                    <li>
+                                        <a href="colores.html">Colores</a>
+                                    </li>
+                                    <li>
+                                        <a href="tipografias.html">Tipografías</a>
+                                    </li>
+                                    <li><a href="forms.html">Formularios y botones</a>
+                                    </li>
+                                    <li><a href="text.html">Encabezados, textos y tablas </a>
+                                    </li>
+                                    <li><a href="icons.html">Iconos</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="todos.html">Todos los elementos</a>
+                                    </li>
+                                    <li class="titulo"><span>Estructura</span>
+                                        <ul>
+                                            <li><a class="activa" href="grid.html">Layout</a>
+                                            </li>
+                                            <li><a href="genericas.html">Clases genéricas</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="titulo"><span>Navegación</span>
+                                        <ul>
+                                            <li><a href="cab.html">Cabecera</a>
+                                            </li>
+                                            <li><a href="off-canvas.html">Lateral izquierda oculta (Off-canvas)</a>
+                                            </li>
+                                            <li><a href="izda.html">Lateral izquierda visible</a>
+                                            </li>
+                                            <li><a href="dcha.html">Lateral derecha</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="titulo"><span>Componentes javascript</span>
+                                        <ul>
+                                            <li><a href="alert.html">Alertas</a>
+                                            </li>
+                                            <li><a href="modal.html">Ventanas modales</a>
+                                            </li>
+                                            <li><a href="validacion.html">Validación de formularios</a>
+                                            </li>
+                                            <li><a href="acordeon.html">Acordeón</a>
+                                            </li>
+                                            <li><a href="slider.html">Data-slider</a>
+                                            </li>
+                                            <li><a href="autocomplete.html">Autocompletar</a>
+                                            </li>
+                                            <li><a href="multisel.html">Multiselect</a>
+                                            </li>
+                                            <li><a href="dropdown.html">Dropdown</a>
+                                            </li>
+                                            <li><a href="tabs.html">Pestañas</a>
+                                            </li>
+                                            <li><a href="equalizer.html">Equalizer</a>
+                                            </li>
+                                            <li><a href="calendar.html">Calendario</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- aside-left -->
+                        </aside>
+                        <!-- col-izda -->
+                        <div class="contenido medium-9 columns" data-equalizer-watch>
+                            <h2>Creación de estructuras mediante una rejilla de filas y columnas</h2>
+                            <p>Podemos maquetar mediante un sistema de filas y columnas creando una estructura o rejilla de contenedores. Con la clase <code>.row</code> creamos filas y dentro de ellas insertamos contenedores con las clases de anchura de columna: <code>small-6</code> o <code>large-3</code> (número máximo de columnas: 12). Finalmente debemos agregar la clase <code>.columns</code>
+                            </p>
+                            <p>Esta estructura de columnas se puede anidar de forma casi ilimitada.</p>
+                            <p>Si, por ejemplo, queremos una sóla columna, la clase incluirá el número 12 y si queremos tres columnas la clase incluirá el número 4 (4 x 3 = 12).</p>
+                            <div class="row">
+                                <div class="medium-12 columns">
+                                    <h4>Ejemplo visual:</h4>
+                                    <div class="row">
+                                        <div class="large-12 columns">
+                                            <div class="panel">Columna que ocupa el 100% de su contenedor <code>large-12 columns</code>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="large-4 columns">
+                                            <div class="panel">Columna que ocupa el 33% de su contenedor <code>large-4 columns</code>
+                                            </div>
+                                        </div>
+                                        <div class="large-4 columns">
+                                            <div class="panel">Columna que ocupa el 33% de su contenedor <code>large-4 columns</code>
+                                            </div>
+                                        </div>
+                                        <div class="large-4 columns">
+                                            <div class="panel">Columna que ocupa el 33% de su contenedor <code>large-4 columns</code>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="medium-12 columns">
+                                    <h4>Ejemplo código:</h4>
+                                    <pre class="language-markup line-numbers" data-src="snippets/layout.html"></pre>
+                                </div>
+                            </div>
+
+                            <p>Por delante del número indicamos el tipo de dispositivo al que aplica <code>small, medium, large, xlarge y xxlarge</code>, los dispositivos mayores heredan estos estilos. Hay que indicar que es posible añadir simultáneamente anchuras diferentes para los distintos dispositivos en un mismo elemento HTML (por ejemplo <code>small-6 large-3 columns</code>)</p>
+                            <p>Vamos a crear una estructura de <b>2 columnas para tabletas y móviles</b> (anchura del dispositivo menor de 1025px) y <b>de 4 columnas para dispositivos mayores</b> (anchura del dispositivo mayor de 1025px)</p>
+                            <div class="row">
+                                <div class="medium-12 columns">
+                                    <h4>Ejemplo visual <b>(reduzca/amplíe la ventana del navegador para verlo en acción)</b>:</h4>
+                                    <div class="row">
+                                        <div class="small-6 large-3 columns">
+                                            <div class="panel">Columna 1</div>
+                                        </div>
+                                        <div class="small-6 large-3 columns">
+                                            <div class="panel">Columna 2</div>
+                                        </div>
+                                        <div class="small-6 large-3 columns">
+                                            <div class="panel">Columna 3</div>
+                                        </div>
+                                        <div class="small-6 large-3 columns">
+                                            <div class="panel">Columna 4</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="medium-12 columns">
+                                    <h4>Ejemplo código:</h4>
+                                    <pre class="language-markup line-numbers" data-src="snippets/layout2.html"></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- contenido -->
+                    </article>
+                </section>
+                <a class="exit-off-canvas"></a>
+            </div>
+            <!-- inner-wrap -->
+        </div>
+        <!-- off-canvas-wrap -->
+    </div>
+    <!-- row -->
+
+    <footer class="row" role="contentinfo">
+        <div class="small-4 large-2 columns">T151221 - 1</div>
+        <div class="small-8 large-8 columns end text-center">
+            Telefónica de España S.A
+        </div>
+    </footer>
+    <!-- footer -->
+    <div id="search-filter" class="medium reveal-modal" data-reveal></div>
+    <!-- modal search-filter -->
+
+    <script src="js/vendor/libraries.min.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script src="js/app.min.js"></script>
+    <script src="js/vendor/prism.js"></script>
+    <script src="js/vendor/reflow.js"></script>
+
+</body>
+
+</html>

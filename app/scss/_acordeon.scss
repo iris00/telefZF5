@@ -31,14 +31,17 @@
             top: rem-calc(2);
         }
 
-        &.active:after {
-            content: "\f0d7";
-        }
-
         span {
             display: inline-block;
-            margin: rem-calc(0 20%);
         }
+
+        span:first-child {
+            padding-left: 0;
+        }
+    }
+
+    .accordion-navigation.active > a:after {
+        content: "\f0d7";
     }
 
     .acord.panel {
@@ -52,11 +55,11 @@
 
         > a {
             color: $white;
+            font-family: robotoregular;
             position: absolute;
             right: rem-calc(15);
             top: rem-calc(4);
             z-index: 10;
-            font-family: robotoregular;
         }
 
         &.tit .acord.panel .accordion-navigation > a {

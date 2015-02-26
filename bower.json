@@ -1,8 +1,10 @@
 {
-  "name": "zf5_project",
-  "dependencies": {
-    "foundation": "zurb/bower-foundation",
-    "font-awesome": "~4.2.0",
-    "chartjs": "~0.2.0"
-  }
+    "name": "zf5_project",
+    "dependencies": {
+        "foundation": "zurb/bower-foundation",
+        "font-awesome": "~4.2.0",
+        "chartjs": "~0.2.0",
+        "editableSelect": "~0.0.1",
+        "multiple-select": "~1.1.0"
+    }
 }

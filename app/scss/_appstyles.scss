@@ -38,8 +38,23 @@ a:focus {
     color: $warning-color;
 }
 
+#wait {
+    font-size: rem-calc(50);
+    padding-top: rem-calc(100);
+    text-align: center;
+
+    .fa-cog {
+        margin-bottom: rem-calc(20);
+    }
+}
+
 .info {
     color: $info-color;
+}
+
+.postventa {
+    background-color: scale-color($success-color, $lightness: 88) !important;
+    font-style: italic !important;
 }
 
 .contenido {

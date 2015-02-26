@@ -4,7 +4,7 @@
 .footable {
     .footable-toggle {
         display: inline-block;
-        font-family: 'fontawesome';
+        font-family: fontawesome;
         font-size: rem-calc(14);
         -webkit-font-smoothing: antialiased;
         font-style: normal;
@@ -16,29 +16,22 @@
     }
 
     th {
-        -webkit-touch-callout: none;
-        -khtml-user-select: none;
-        -moz-user-select: -moz-none;
-        -ms-user-select: none;
-        -webkit-user-select: none;
-        user-select: none;
-
         &.footable-sortable {
             cursor: pointer;
         }
 
         &.footable-sorted .footable-sort-indicator:before {
-            content: '\f0d8';
+            content: "\f0d8";
         }
 
         &.footable-sorted-desc .footable-sort-indicator:before {
-            content: '\f0d7';
+            content: "\f0d7";
         }
 
         .footable-sort-indicator {
             color: $aluminum;
             display: inline-block;
-            font-family: 'fontawesome';
+            font-family: fontawesome;
             -webkit-font-smoothing: antialiased;
             font-style: normal;
             font-variant: normal;
@@ -49,7 +42,7 @@
         }
 
         .footable-sort-indicator:before {
-            content: '\f0dc';
+            content: "\f0dc";
         }
     }
 
@@ -63,53 +56,49 @@
 
     ul {
         display: inline-block;
-        margin-left: 0;
+        margin: 0;
+    }
 
-        li {
-            display: inline-block;
-        }
+    li {
+        display: inline-block;
+    }
 
-        li > a,
-        li > span {
-            display: inline-block;
-            font-family: robotoregular, sans-serif;
-            font-weight: normal;
-            padding: rem-calc(6 12);
-            margin: rem-calc(0 3);
-            text-decoration: none;
-        }
+    li > a,
+    li > span {
+        display: inline-block;
+        font-family: robotoregular, sans-serif;
+        font-weight: normal;
+        margin: rem-calc(0 3);
+        padding: rem-calc(6 12);
+        text-decoration: none;
+    }
 
-        li > a:hover,
-        li > a:focus,
-        .active > a,
-        .active > span {
-            background-color: $third-color;
-            border-radius: $global-radius;
-            color: $white;
-        }
+    li > a:hover,
+    li > a:focus,
+    .active > a,
+    .active > span {
+        background-color: $third-color;
+        border-radius: $global-radius;
+        color: $white;
+    }
 
-        li > a:focus {
-            background-color: $primary-color;
-        }
+    .disabled > span,
+    .disabled > a {
+        color: $aluminum;
+    }
 
-        .disabled > span,
-        .disabled > a {
-            color: $aluminum;
-        }
+    .disabled > a:hover,
+    .disabled > a:focus {
+        background-color: transparent;
+        border-bottom: none transparent;
+        color: $aluminum;
+        cursor: default;
+    }
 
-        .disabled > a:hover,
-        .disabled > a:focus {
-            background-color: transparent;
-            border-bottom: none transparent;
-            color: $aluminum;
-            cursor: default;
-        }
-
-        li.footable-page-arrow a {
-            font-size: rem-calc(20);
-            margin-top: rem-calc(1);
-            padding: rem-calc(0 12 5);
-        }
+    .footable-page-arrow a {
+        font-size: rem-calc(20);
+        margin-top: rem-calc(1);
+        padding: rem-calc(0 12 5);
     }
 
     &.pagination-centered {

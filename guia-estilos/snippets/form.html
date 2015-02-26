@@ -1,0 +1,113 @@
+<form>
+    <div class="row">
+        <div class="large-6 columns">
+            <label>Input Label</label>
+        </div>
+        <div class="large-6 columns">
+            <input type="text" placeholder="large-6.columns">
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-3 columns">
+            <label>Input Label</label>
+        </div>
+        <div class="large-3 columns">
+            <input type="text" placeholder="large-3.columns">
+        </div>
+
+        <div class="large-3 columns">
+            <label>Input Label</label>
+        </div>
+        <div class="large-3 columns">
+            <input type="text" placeholder="large-3.columns">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-6 columns">
+            <label>Select Label</label>
+        </div>
+        <div class="large-6 columns">
+            <select>
+                <option value="husker">Select 1</option>
+                <option value="starbuck">Select 2</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-6 columns">
+            <label class="required">Campos de fecha (abren calendario)</label>
+        </div>
+        <div class="large-6 columns">
+            <div class="row">
+                <div class="large-6 columns fecha">
+                    <input class="calendario" type="text" placeholder="Desde..." required pattern="day_month_year">
+                </div>
+                <div class="large-6 columns fecha">
+                    <input class="calendario" type="text" placeholder="Hasta..." required pattern="day_month_year">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-6 columns">
+            <label>Multiselect (usa jquery.sumoselect)</label>
+        </div>
+        <div class="large-6 columns">
+            <select class="multi-select" name="productos" multiple style="margin-bottom: 1rem">
+                <option value="pro1">Todos</option>
+                <option value="pro2">Producto 2</option>
+                <option value="pro3">Productos 3</option>
+                <option value="pro4">Productos 4</option>
+                <option value="pro5">Productos 5</option>
+                <option value="pro6">Productos 6</option>
+                <option value="pro7">Productos 7</option>
+                <option value="pro8">Productos 8</option>
+                <option value="pro9">Productos 9</option>
+                <option value="pro10">Productos 10</option>
+                <option value="pro11">Productos 11</option>
+                <option value="pro12">Productos 12</option>
+                <option value="pro13">Productos 13</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-6 columns">
+            <label>Radio buttons label</label>
+        </div>
+        <div class="large-3 columns">
+            <input type="radio" name="radios" value="uno">
+            <span>Radio button 1</span>
+        </div>
+        <div class="large-3 end columns">
+            <input type="radio" name="radios" value="dos">
+            <span>Radio button 2</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-6 columns">
+            <label>Checkboxes label</label>
+        </div>
+        <div class="large-3 columns">
+            <input type="checkbox">
+            <span>Checkbox 1</span>
+        </div>
+        <div class="large-3 end columns">
+            <input type="checkbox">
+            <span>Checkbox 2</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-6 columns">
+            <label>Textarea Label</label>
+        </div>
+        <div class="large-6 columns">
+            <textarea placeholder="large-6.columns"></textarea>
+        </div>
+    </div>
+</form>

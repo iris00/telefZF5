@@ -53,7 +53,7 @@ label {
     }
 
     &.required:after {
-        content: '\f069';
+        content: "\f069";
         font-family: fontawesome;
         font-size: rem-calc(10);
         position: absolute;
@@ -74,7 +74,7 @@ fieldset {
 }
 
 select {
-    background-color: transparent;
+    //background-color: $white;
     height: rem-calc(30);
     padding: rem-calc(2 0);
 
@@ -84,7 +84,7 @@ select {
     }
 
     option {
-        background-color: $white;
+        //background-color: $white;
         padding: rem-calc(4 0 4 6);
     }
 }
@@ -94,20 +94,76 @@ select:hover {
     -moz-appearance: none;
     border-color: $iron;
     cursor: pointer;
-    text-indent: .01px;
+    text-indent: 0.01px;
+}
+
+select[disabled] {
+    cursor: default;
 }
 
 select:focus,
-input[type="checkbox"]:focus {
+input[type="checkbox"]:focus,
+.editable:focus {
+    @include block-glowing-effect(focus, $glowing-effect-fade-time, $glowing-effect-color);
     background-color: $input-focus-bg-color;
     border-color: $input-focus-border-color;
     outline: 0 dotted;
-    @include block-glowing-effect(focus, $glowing-effect-fade-time, $glowing-effect-color);
 }
 
 select:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 #000;
+}
+
+.editable-wrapper {
+    position: relative;
+
+    &:after {
+        color: $base;
+        content: "\f0d7\f040";
+        font-family: fontawesome;
+        font-size: rem-calc(15);
+        position: absolute;
+        right: rem-calc(4);
+        top: rem-calc(2);
+    }
+}
+
+.editable {
+    background-color: $white;
+    border: 1px solid scale-color($white, $lightness: -20%);
+    font-size: rem-calc(14);
+    height: rem-calc(30);
+    padding: rem-calc(2 26 2 5);
+    width: 100%;
+}
+
+.editable-list {
+    border: 1px solid scale-color($white, $lightness: -20%);
+    display: none;
+    font-size: rem-calc(14);
+    list-style-type: none;
+    margin: 0;
+    max-height: rem-calc(400);
+    overflow-x: auto;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1000000;
+
+    li {
+        background-color: $white !important;
+        cursor: pointer;
+        font-size: rem-calc(14);
+        //line-height: rem-calc(19);
+        padding: rem-calc(3 5);
+        text-align: left;
+
+        &:hover {
+            background-color: #39f !important;
+            color: $white;
+        }
+    }
 }
 
 ::-webkit-input-placeholder {
@@ -355,7 +411,7 @@ table.puestos {
     }
 }
 
-// Formularios OPWEB
+// Formularios OPWEB ___________________________________________________________________________________________________________________
 .opweb {
     form,
     .tabs {
@@ -367,7 +423,8 @@ table.puestos {
     }
 
     .euro.peque:after {
-        color: $jumbo;
+        //color: $jumbo;
+        color: $iron;
     }
 
     .euro.bloque.peque:after {
@@ -411,7 +468,7 @@ table.puestos {
 
     input[type="text"] {
         color: $oil;
-        height: auto;
+        height: rem-calc(25);
     }
 
     .desplegable {
@@ -451,12 +508,24 @@ table.puestos {
         padding: rem-calc(1 4 3);
     }
 
+    .prop-cliente {
+        select {
+            background-color: $white;
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+
+        select[disabled] {
+            background-color: #ddd;
+        }
+    }
+
     .filtro-ofer {
         margin-bottom: rem-calc(16);
     }
 
     .filtro-ofer button.radius {
-        width: 100%;
+        margin-top: rem-calc(15);
     }
 
     form .filtro-ofer:last-child {
@@ -472,4 +541,13 @@ table.puestos {
     .margencero {
         margin: 0;
     }
+
+    // .acotar {
+    //     background-color: scale-color($primary-color, $lightness: 90%);
+
+    //     .columns {
+    //         margin: rem-calc(4 0);
+    //         padding-right: rem-calc(18);
+    //     }
+    // }
 }

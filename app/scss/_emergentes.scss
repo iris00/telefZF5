@@ -197,22 +197,29 @@
     background-color: rgba(195, 195, 195, 0.3);
 }
 
-.opweb .penaliz {
-    h3 {
-        background-color: $primary-color;
-        color: $white;
-        font-size: rem-calc(16);
-        font-weight: normal;
-        padding: rem-calc(5);
+.opweb {
+    .modal-scroll {
+        max-height: 500px;
+        overflow: auto;
     }
 
-    table input,
-    table select {
-        margin-bottom: 0;
-    }
+    .penaliz {
+        h3 {
+            background-color: $primary-color;
+            color: $white;
+            font-size: rem-calc(16);
+            font-weight: normal;
+            padding: rem-calc(5);
+        }
 
-    .columns input,
-    .columns select {
-        margin-bottom: rem-calc(8);
+        table input,
+        table select {
+            margin-bottom: 0;
+        }
+
+        .columns input,
+        .columns select {
+            margin-bottom: rem-calc(8);
+        }
     }
 }
