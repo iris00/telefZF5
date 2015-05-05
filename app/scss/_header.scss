@@ -33,6 +33,10 @@ header {
         }
     }
 
+    .rapida {
+        margin-left: rem-calc(100);
+    }
+
     // Columnas
     section {
         background-color: $primary-color;
@@ -66,12 +70,18 @@ header {
             font-size: rem-calc(15);
             height: rem-calc(19);
             min-width: rem-calc(19);
-            padding-top: rem-calc(2);
+            padding-top: rem-calc(3);
+            padding-right: rem-calc(2);
             position: absolute;
             right: rem-calc(1);
             text-align: center;
             top: rem-calc(-8);
             vertical-align: middle;
+            letter-spacing: rem-calc(-2);
+        }
+
+        .fa-bell-o.cero span {
+            display: none;
         }
 
         .fa-home,

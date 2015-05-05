@@ -1,11 +1,6 @@
 @charset "UTF-8";
 
 // Alert boxes
-.sedes .alert-box,
-.puestos .alert-box {
-    left: 30px;
-}
-
 .alert-box {
     background-color: $third-color;
     display: inline-block;
@@ -13,6 +8,39 @@
     left: 150px;
     position: absolute;
     top: 10px;
+
+    &.info {
+        background-color: $primary-color;
+        color: $white;
+    }
+
+    &.filtro {
+        background-color: $filter-color;
+        color: $oil;
+    }
+}
+
+.sedes .alert-box,
+.puestos .alert-box {
+    left: 30px;
+}
+
+.alert-box2 {
+    @include alert;
+    background-color: $third-color;
+    border-radius: $global-radius;
+    display: inline-block;
+    font-size: rem-calc(15);
+    margin: rem-calc(0 5 7 0);
+    padding: rem-calc(2 40 2 10);
+
+    .close {
+        @include alert-close;
+    }
+
+    &.alert-close {
+        opacity: 0;
+    }
 
     &.info {
         background-color: $primary-color;

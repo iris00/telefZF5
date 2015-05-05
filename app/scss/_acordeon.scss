@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 // Acordeón para Opweb
-.opweb {
+.opweb,
+.sedes {
     .acord .accordion-navigation > a {
         background-color: $primary-color;
         color: $white;
@@ -77,19 +78,20 @@
 
     .accor .accor-toggle {
         cursor: pointer;
-        padding-left: rem-calc(27);
+        padding-left: rem-calc(22);
         position: relative;
 
-        &:after {
+        &:before {
             content: "\f0da";
+            display: inline-block;
             font-family: fontawesome;
             font-size: rem-calc(19);
-            left: rem-calc(10);
-            position: absolute;
-            top: rem-calc(5);
+            left: rem-calc(-8);
+            position: relative;
+            width: 12px;
         }
 
-        &.active:after {
+        &.active:before {
             content: "\f0d7";
         }
     }

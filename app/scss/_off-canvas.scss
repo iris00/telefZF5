@@ -1,53 +1,75 @@
 @charset "UTF-8";
 
-/* Off-canvas menu */
-.left-off-canvas-menu {
-    left: 1px;
-}
-
+// Off-canvas menu
 .tab-bar .menu-icon span:after {
     left: rem-calc(30);
 }
 
-li.off-canvas-head {
-    background-color: $primary-color;
-    color: $white;
-    padding: rem-calc(10 10 0);
-    &.clearfix {
-        padding-bottom: 10px;
-    }
-    select {
-        margin-bottom: rem-calc(16);
-    }
-    select:hover {
-        background-color: transparent;
-    }
-}
+.left-off-canvas-menu {
+    //left: 1px;
 
-ul.off-canvas-list {
-    li a {
-        padding: rem-calc(15 10);
-        .fa {
-            border-bottom: 1px dotted $white;
-            font-size: rem-calc(28);
-            margin-right: rem-calc(8);
-            min-width: 28px;
-            text-align: center;
-            vertical-align: middle;
-        }
-        &:hover,
-        &:active,
-        &:focus {
-            background-color: $smoke;
-        }
+    &:after {
+        box-shadow: 4px 0 4px rgba($black, 0.5), -4px 0 4px rgba($black, 0.5);
+        content: ' ';
+        height: 100%;
+        position: absolute;
+        right: rem-calc(-5);
+        top: 0;
+        width: rem-calc(5);
+        z-index: 100;
     }
-    select,
-    select:focus {
+
+    .off-canvas-list {
+        a {
+            padding: rem-calc(15 10);
+
+            .fa {
+                border-bottom: 1px dotted $white;
+                font-size: rem-calc(28);
+                margin-right: rem-calc(8);
+                min-width: 28px;
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            &:active,
+            &:hover,
+            &:focus {
+                background-color: $smoke;
+                color: $oil;
+            }
+        }
+
+        select,
+        select:focus {
+            //background-color: transparent;
+            border-color: scale-color($primary-color, $lightness: -20%);
+            //color: $white;
+
+        }
+
+        // option {
+        //     color: $oil;
+        // }
+
+    }
+
+    .off-canvas-head {
+        background-color: $primary-color;
         color: $white;
-        border-color: scale-color($primary-color, $lightness: -20%);
-        background-color: transparent;
-    }
-    option {
-        color: $oil;
+        padding: rem-calc(10 10 0);
+
+        &.clearfix {
+            padding-bottom: 10px;
+        }
+
+        select {
+            margin-bottom: rem-calc(16);
+        }
+
+        //select:hover {
+        //background-color: transparent;
+        //}
+
     }
 }

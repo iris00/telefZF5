@@ -1,0 +1,43 @@
+// ONLOAD DE LA PANTALLA DE SEDES
+$(document).ready(function() {
+    'use strict';
+    if ($('#nofus').val() === '1') {
+        mensaje('El cliente no tiene servicios compatibles con fusión.', 2);
+    }
+});
+
+
+/**
+ * ABRE UN POPUP PARA BUSCAR Y AÑADIR SEDES
+ * @param cuc
+ * @param oferta
+ * @param cif
+ */
+function pantallaEmergenteSedes(cuc, oferta, cif, contenedorDestino) {
+    'use strict';
+    console.log('pantallaEmergenteSedes : ' + cuc);
+    if (contenedorDestino === 'modal') {
+        contenedorDestino = '#new-sede';
+        $(contenedorDestino).html('<div id="wait"><i class="fa fa-cog fa-spin"></i><p>Cargando buscador de sedes KJ...</p></div>');
+        $(contenedorDestino).foundation('reveal', 'open');
+    } else {
+        $(contenedorDestino).html('<div id="wait"><i class="fa fa-cog fa-spin"></i><p>Cargando buscador de sedes KJ...</p></div>');
+    }
+
+    //alert(contenedorDestino);
+    // hacemos peticion por POST
+    $.post('opwebServlet', {
+            'opcion': 'buscadorKJ',
+            'accion': 'NuevaSede',
+            'CUC': cuc,
+            'NumOferta': oferta,
+            'CIF': cif,
+            'esModal': 1,
+            'contenedorDestino': contenedorDestino
+        },
+        function(result) {
+            $(contenedorDestino).html(result);
+        });
+
+    $(document).foundation('reflow');
+}

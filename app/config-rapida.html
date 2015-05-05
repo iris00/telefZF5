@@ -1,0 +1,568 @@
+<!doctype html>
+<html class="no-js" lang="es-Es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Configurador de Movistar Fusión Empresas">
+    <title>Configurador MFE - Configuración básica de sede</title>
+    <!-- Iconos de aplicación -->
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <!-- build:css css/libraries.min.css -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css css/app.min.css -->
+    <link rel="stylesheet" href="css/app.css">
+    <!-- endbuild -->
+    <!-- build:js js/vendor/modernizr.min.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+</head>
+
+<body class="sedes">
+    <div class="row">
+        <div class="off-canvas-wrap" data-offcanvas>
+            <div class="inner-wrap">
+                <header role="banner">
+                    <div class="tit-sede text-center"></div>
+                    <!-- tit-sede -->
+                    <nav class="tab-bar" role="navigation">
+                        <section>
+                            <div class="large-1 medium-1 small-2 columns">
+                                <a title="Menú de navegación" href="" class="left-off-canvas-toggle menu-icon" tabindex="0">
+                                    <span></span>
+                                </a>
+                            </div>
+                            <div class="large-9 medium-7 columns show-for-medium-up">
+                                <h1 class="text-center">Configuración básica de sede</h1>
+                            </div>
+                            <div class="large-2 medium-4 small-10 columns">
+                                <a href="#" title="Información">
+                                    <i class="fa fa-info-circle"></i>
+                                </a>
+                                <a title="Buscar con filtro avanzado" data-reveal-id="search-filter" data-reveal-ajax="true">
+                                    <i class="fa fa-search-plus"></i>
+                                </a>
+                                <a href="configurador.html" title="Inicio">
+                                    <i class="fa fa-home fa-2x"></i>
+                                </a>
+                            </div>
+                        </section>
+                    </nav>
+                    <!-- tab-bar -->
+                    <nav role="navigation">
+                        <ul class="breadcrumbs breadconf">
+                            <li class="large-2 medium-2 small-4 columns activo">
+                                <a href="#" title="Sede"><i class="fa fa-building-o"></i></a>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns">
+                                <a href="puestos-fijos.html" title="Puestos fijos">
+                                    <span class="fa-stack fa-lg">
+										<i class="fa fa-user fa-stack-2x"></i>
+										<i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i>
+									</span>
+                                </a>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns">
+                                <a href="puestos-moviles.html" title="Puestos móviles">
+                                    <span class="fa-stack fa-lg">
+										<i class="fa fa-user fa-stack-2x"></i>
+										<i class="fa fa-mobile fa-stack-1x"></i>
+									</span>
+                                </a>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns">
+                                <a href="#" title="Accesorios de sede">
+                                    <span class="fa-stack fa-lg">
+										<i class="fa fa-4x fa-building-o fa-stack-2x"></i>
+										<i class="fa fa-fighter-jet fa-stack-1x"></i>
+									</span>
+                                </a>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns">
+                                <a href="#" title="Seguridad"><i class="fa fa-desktop"></i></a>
+                            </li>
+                            <li class="large-2 medium-2 small-4 columns current">
+                                <a href="resumen-sedes.html" title="Precio total de la oferta"><i class="fa fa-shopping-cart"></i>
+								1744&euro;</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- breadcrumbs -->
+                </header>
+                <aside class="left-off-canvas-menu">
+                    <ul class="off-canvas-list">
+                        <li class="off-canvas-head">
+                            <p>Manuel Beltrán Pérez</p>
+                            <select name="perfil">
+                                <option value="">Comercial</option>
+                                <option value="">Otro perfil</option>
+                                <option value="">Otro perfil más</option>
+                            </select>
+                        </li>
+                        <li><a href="_otras-oper.html" data-reveal-id="otras-oper" data-reveal-ajax="true"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
+                        </li>
+                        <li><a href="informes.html"><i class="fa fa-bar-chart fa-2x"></i> Crear informes</a>
+                        </li>
+                        <li><a href="notificaciones.html"><i class="fa fa-bell-o"></i> Notificaciones</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-bookmark fa-2x"></i> Producto MFE</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-comments fa-2x"></i> Ayuda</a>
+                        </li>
+                        <li><a href="admin.html"><i class="fa fa-gears fa-2x"></i> Administración</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-asterisk"></i> Traslados MFE</a>
+                        </li>
+                    </ul>
+                    <!-- off-canvas-list -->
+                </aside>
+                <!-- left-off-canvas-menu -->
+                <section class="main-section" role="main">
+                    <article class="row">
+                        <div class="contenido large-12 columns">
+                            <form data-abide="" name="frmConfAccesorios" id="frmConfAccesorios" action="action" class="config-numer" novalidate="novalidate">
+                                <!-- <script>
+                                var strJSONTitulares = '{ "titulares": { ';
+                                strJSONTitulares = strJSONTitulares + '"titular":[';
+                                strJSONTitulares = strJSONTitulares + '{ "codCliente": "19126197"';
+                                strJSONTitulares = strJSONTitulares + ',"tipoDoc": "D"';
+                                strJSONTitulares = strJSONTitulares + ',"codTitular": "544"';
+                                strJSONTitulares = strJSONTitulares + ',"direccion": "calle 1"';
+                                strJSONTitulares = strJSONTitulares + ',"email": "RBlanco@oha.es"';
+                                strJSONTitulares = strJSONTitulares + ',"nacionalidad": "Española"';
+                                strJSONTitulares = strJSONTitulares + ',"nombre": "nombre1"';
+                                strJSONTitulares = strJSONTitulares + ',"apellidos": "apellidos 1"';
+                                strJSONTitulares = strJSONTitulares + ',"titular": "Roberto Pérez  1"';
+                                strJSONTitulares = strJSONTitulares + ',"numDocumento": "05416592T"';
+                                strJSONTitulares = strJSONTitulares + ',"numDocumentoTitular": "05416592T"';
+                                strJSONTitulares = strJSONTitulares + ',"numTelefono": "918882929"';
+                                strJSONTitulares = strJSONTitulares + '}';
+                                strJSONTitulares = strJSONTitulares + ',';
+                                strJSONTitulares = strJSONTitulares + '{ "codCliente": "19126197"';
+                                strJSONTitulares = strJSONTitulares + ',"tipoDoc": "D"';
+                                strJSONTitulares = strJSONTitulares + ',"codTitular": "543"';
+                                strJSONTitulares = strJSONTitulares + ',"direccion": "calle2"';
+                                strJSONTitulares = strJSONTitulares + ',"email": "RBlanco@oha.es"';
+                                strJSONTitulares = strJSONTitulares + ',"nacionalidad": "Española"';
+                                strJSONTitulares = strJSONTitulares + ',"nombre": "nombre2"';
+                                strJSONTitulares = strJSONTitulares + ',"apellidos": "apellidos 2"';
+                                strJSONTitulares = strJSONTitulares + ',"titular": "Roberto Pérez Blanco 2"';
+                                strJSONTitulares = strJSONTitulares + ',"numDocumento": "15416592T"';
+                                strJSONTitulares = strJSONTitulares + ',"numDocumentoTitular": "15416592T"';
+                                strJSONTitulares = strJSONTitulares + ',"numTelefono": "918882929"';
+                                strJSONTitulares = strJSONTitulares + '}';
+                                strJSONTitulares = strJSONTitulares + ',';
+                                strJSONTitulares = strJSONTitulares + '{ "codCliente": "19126197"';
+                                strJSONTitulares = strJSONTitulares + ',"tipoDoc": "D"';
+                                strJSONTitulares = strJSONTitulares + ',"codTitular": "542"';
+                                strJSONTitulares = strJSONTitulares + ',"direccion": "calle 3"';
+                                strJSONTitulares = strJSONTitulares + ',"email": "RBlanco@oha.es"';
+                                strJSONTitulares = strJSONTitulares + ',"nacionalidad": "Española"';
+                                strJSONTitulares = strJSONTitulares + ',"nombre": "nombre3"';
+                                strJSONTitulares = strJSONTitulares + ',"apellidos": "apellidos 3"';
+                                strJSONTitulares = strJSONTitulares + ',"titular": "Roberto Pérez Blanco 3"';
+                                strJSONTitulares = strJSONTitulares + ',"numDocumento": "25416592T"';
+                                strJSONTitulares = strJSONTitulares + ',"numDocumentoTitular": "25416592T"';
+                                strJSONTitulares = strJSONTitulares + ',"numTelefono": "918882929"';
+                                strJSONTitulares = strJSONTitulares + '}';
+                                strJSONTitulares = strJSONTitulares + ',';
+                                strJSONTitulares = strJSONTitulares + '{ "codCliente": "19126197"';
+                                strJSONTitulares = strJSONTitulares + ',"tipoDoc": "D"';
+                                strJSONTitulares = strJSONTitulares + ',"codTitular": "541"';
+                                strJSONTitulares = strJSONTitulares + ',"direccion": "calle 4"';
+                                strJSONTitulares = strJSONTitulares + ',"email": "RBlanco@oha.es"';
+                                strJSONTitulares = strJSONTitulares + ',"nacionalidad": "Española"';
+                                strJSONTitulares = strJSONTitulares + ',"nombre": "nombre4"';
+                                strJSONTitulares = strJSONTitulares + ',"apellidos": "apellidos 4"';
+                                strJSONTitulares = strJSONTitulares + ',"titular": "Roberto Pérez Blanco 4"';
+                                strJSONTitulares = strJSONTitulares + ',"numDocumento": "35416592T"';
+                                strJSONTitulares = strJSONTitulares + ',"numDocumentoTitular": "35416592T"';
+                                strJSONTitulares = strJSONTitulares + ',"numTelefono": "918882929"';
+                                strJSONTitulares = strJSONTitulares + '}';
+                                strJSONTitulares = strJSONTitulares + ',';
+                                strJSONTitulares = strJSONTitulares + '{ "codCliente": "19126197"';
+                                strJSONTitulares = strJSONTitulares + ',"tipoDoc": "D"';
+                                strJSONTitulares = strJSONTitulares + ',"codTitular": "540"';
+                                strJSONTitulares = strJSONTitulares + ',"direccion": "calle 5"';
+                                strJSONTitulares = strJSONTitulares + ',"email": "RBlanco@oha.es"';
+                                strJSONTitulares = strJSONTitulares + ',"nacionalidad": ""';
+                                strJSONTitulares = strJSONTitulares + ',"nombre": "nombre5"';
+                                strJSONTitulares = strJSONTitulares + ',"apellidos": "apellidos 5"';
+                                strJSONTitulares = strJSONTitulares + ',"titular": "Roberto Pérez Blanco 5"';
+                                strJSONTitulares = strJSONTitulares + ',"numDocumento": "45416592T"';
+                                strJSONTitulares = strJSONTitulares + ',"numDocumentoTitular": "45416592T"';
+                                strJSONTitulares = strJSONTitulares + ',"numTelefono": ""';
+                                strJSONTitulares = strJSONTitulares + '}';
+                                strJSONTitulares = strJSONTitulares + ',';
+                                strJSONTitulares = strJSONTitulares + '{ "codCliente": "19126197"';
+                                strJSONTitulares = strJSONTitulares + ',"tipoDoc": "D"';
+                                strJSONTitulares = strJSONTitulares + ',"codTitular": "539"';
+                                strJSONTitulares = strJSONTitulares + ',"direccion": "calle 6"';
+                                strJSONTitulares = strJSONTitulares + ',"email": "RBlanco@oha.es"';
+                                strJSONTitulares = strJSONTitulares + ',"nacionalidad": ""';
+                                strJSONTitulares = strJSONTitulares + ',"nombre": "nombre6"';
+                                strJSONTitulares = strJSONTitulares + ',"apellidos": "apellidos 6"';
+                                strJSONTitulares = strJSONTitulares + ',"titular": "Roberto Pérez Blanco 6"';
+                                strJSONTitulares = strJSONTitulares + ',"numDocumento": "45416592T"';
+                                strJSONTitulares = strJSONTitulares + ',"numDocumentoTitular": "45416592T"';
+                                strJSONTitulares = strJSONTitulares + ',"numTelefono": ""';
+                                strJSONTitulares = strJSONTitulares + '}';
+                                strJSONTitulares = strJSONTitulares + ',';
+                                strJSONTitulares = strJSONTitulares + '{ "codCliente": "19126197"';
+                                strJSONTitulares = strJSONTitulares + ',"tipoDoc": "D"';
+                                strJSONTitulares = strJSONTitulares + ',"codTitular": "538"';
+                                strJSONTitulares = strJSONTitulares + ',"direccion": "calle 7"';
+                                strJSONTitulares = strJSONTitulares + ',"email": "RBlanco@oha.es"';
+                                strJSONTitulares = strJSONTitulares + ',"nacionalidad": "Española"';
+                                strJSONTitulares = strJSONTitulares + ',"nombre": "nombre7"';
+                                strJSONTitulares = strJSONTitulares + ',"apellidos": "apellidos 7"';
+                                strJSONTitulares = strJSONTitulares + ',"titular": "Roberto Pérez Blanco 7"';
+                                strJSONTitulares = strJSONTitulares + ',"numDocumento": "05416592T"';
+                                strJSONTitulares = strJSONTitulares + ',"numDocumentoTitular": "05416592T"';
+                                strJSONTitulares = strJSONTitulares + ',"numTelefono": "918882929"';
+                                strJSONTitulares = strJSONTitulares + '}';
+                                strJSONTitulares = strJSONTitulares + ',';
+                                strJSONTitulares = strJSONTitulares + '{ "codCliente": "19126197"';
+                                strJSONTitulares = strJSONTitulares + ',"tipoDoc": "D"';
+                                strJSONTitulares = strJSONTitulares + ',"codTitular": "537"';
+                                strJSONTitulares = strJSONTitulares + ',"direccion": "calle 8"';
+                                strJSONTitulares = strJSONTitulares + ',"email": "RBlanco@oha.es"';
+                                strJSONTitulares = strJSONTitulares + ',"nacionalidad": "Española"';
+                                strJSONTitulares = strJSONTitulares + ',"nombre": "nombre8"';
+                                strJSONTitulares = strJSONTitulares + ',"apellidos": "apellidos 8"';
+                                strJSONTitulares = strJSONTitulares + ',"titular": "Roberto Pérez Blanco 8"';
+                                strJSONTitulares = strJSONTitulares + ',"numDocumento": "05416592T"';
+                                strJSONTitulares = strJSONTitulares + ',"numDocumentoTitular": "05416592T"';
+                                strJSONTitulares = strJSONTitulares + ',"numTelefono": "918882929"';
+                                strJSONTitulares = strJSONTitulares + '}';
+                                strJSONTitulares = strJSONTitulares + ',';
+                                strJSONTitulares = strJSONTitulares + '{ "codCliente": "19126197"';
+                                strJSONTitulares = strJSONTitulares + ',"tipoDoc": "D"';
+                                strJSONTitulares = strJSONTitulares + ',"codTitular": "532"';
+                                strJSONTitulares = strJSONTitulares + ',"direccion": "calle 9"';
+                                strJSONTitulares = strJSONTitulares + ',"email": "RBlanco@oha.es"';
+                                strJSONTitulares = strJSONTitulares + ',"nacionalidad": "Española"';
+                                strJSONTitulares = strJSONTitulares + ',"nombre": "Amaya"';
+                                strJSONTitulares = strJSONTitulares + ',"apellidos": "Gallego"';
+                                strJSONTitulares = strJSONTitulares + ',"titular": "Roberto Pérez Blanco 9"';
+                                strJSONTitulares = strJSONTitulares + ',"numDocumento": "05416592T"';
+                                strJSONTitulares = strJSONTitulares + ',"numDocumentoTitular": "05416592T"';
+                                strJSONTitulares = strJSONTitulares + ',"numTelefono": "918882929"';
+                                strJSONTitulares = strJSONTitulares + '}';
+                                strJSONTitulares = strJSONTitulares + ']';
+                                strJSONTitulares = strJSONTitulares + " }";
+                                strJSONTitulares = strJSONTitulares + " }";
+                                console.log(strJSONTitulares);
+                                var titularesJson = jQuery.parseJSON(strJSONTitulares);
+                                //alert(titularesJson.titulares.titular[0].id);
+                                </script> -->
+                                <input type="hidden" value="19126197" id="CUC" name="CUC">
+                                <input type="hidden" value="" id="CIF" name="CIF">
+                                <input type="hidden" value="1592" id="COOFERTA" name="COOFERTA">
+                                <input type="hidden" value="1" id="COSEDE" name="COSEDE">
+                                <input type="hidden" value="2" id="nAcc" name="nAcc">
+                                <input type="hidden" value="" id="listBorrar" name="listBorrar">
+                                <div id="men"></div>
+                                <label class="label-tit">Puestos fijos</label>
+                                <div class="row" id="div_fila_1011">
+                                    <input type="hidden" value="1011" id="accesorio_0">
+                                    <input type="hidden" value="1" id="operacion_0">
+                                    <div class="medium-3 columns">
+                                        <select onchange="javascript:cambiaOperacion('1011')" id="cmbNumeracion_1011">
+                                            <option selected="" value="1">ALTA</option>
+                                            <option value="2">PORTABILIDAD</option>
+                                            <option value="9">PORTABILIDAD CAMBIO TITULAR</option>
+                                            <option value="10">912197001</option>
+                                        </select>
+                                    </div>
+                                    <div class="medium-2 columns" id="div_telf_1011">
+                                        <input type="text" onblur="javascript:validarTelefono (this)" placeholder="Nº de Teléfono" maxlength="9" value="" id="txtNumTelefono_1011">
+                                    </div>
+                                    <div class="medium-3 columns" id="div_oper_1011">
+                                        <select id="cmbOperador_1011">
+                                            <option selected="" value="99">--</option>
+                                            <option value="43">ALFA902</option>
+                                            <option value="47">AMENA</option>
+                                            <option value="28">AMOBILE</option>
+                                            <option value="33">BANKINTER MOVIL</option>
+                                            <option value="23">BEST</option>
+                                            <option value="32">BLAU</option>
+                                            <option value="7">BT</option>
+                                            <option value="6">CARREFOUR</option>
+                                            <option value="8">DIA</option>
+                                            <option value="44">ENJOYTEL</option>
+                                            <option value="12">EPLUS</option>
+                                            <option value="18">EROSKI</option>
+                                            <option value="3">EUSKATEL</option>
+                                            <option value="45">GT MOBILE</option>
+                                            <option value="39">HABLAFACIL</option>
+                                            <option value="48">HAPPY MOVIL</option>
+                                            <option value="24">HITS MOBILE</option>
+                                            <option value="38">HONG DA MOVILE</option>
+                                            <option value="26">HUALONG</option>
+                                            <option value="14">JAZZTEL</option>
+                                            <option value="16">LEBARA</option>
+                                            <option value="11">LLAMAYA</option>
+                                            <option value="27">LYCAMOBILE</option>
+                                            <option value="9">MAS MOVIL</option>
+                                            <option value="34">MOVIL DIRECTO</option>
+                                            <option value="37">MUNDIMOVIL</option>
+                                            <option value="13">MUNDOR</option>
+                                            <option value="19">NUKKII</option>
+                                            <option value="25">OCEANS NETWORK</option>
+                                            <option value="5">ONO</option>
+                                            <option value="1">ORANGE</option>
+                                            <option value="31">ORBITEL</option>
+                                            <option value="35">ORTEL</option>
+                                            <option value="17">PEPEPHONE</option>
+                                            <option value="21">RACC MOVIL</option>
+                                            <option value="20">SIMYO</option>
+                                            <option value="29">SKIMOVIL</option>
+                                            <option value="15">SWENO</option>
+                                            <option value="36">TALKOUT</option>
+                                            <option value="10">TELECABLE</option>
+                                            <option value="4">THE PHONE HOUSE</option>
+                                            <option value="30">TRUPHONE</option>
+                                            <option value="46">TU</option>
+                                            <option value="0">VODAFONE</option>
+                                            <option value="42">VUELING MOVIL</option>
+                                            <option value="41">XL MOVIL</option>
+                                            <option value="2">YOIGO</option>
+                                            <option value="22">ZEROMOVIL</option>
+                                            <option value="40">40 MOVIL</option>
+                                        </select>
+                                    </div>
+                                    <div class="medium-3 columns" id="div_titular_1011">
+                                        <select onchange="javascript:cambiaComboTitular(this,1011)" cols="20" id="cmbTitular_1011">
+                                            <option></option>
+                                            <option value="544">Roberto Pérez 1</option>
+                                            <option value="543">Roberto Pérez Blanco 2</option>
+                                            <option value="542">Roberto Pérez Blanco 3</option>
+                                            <option value="541">Roberto Pérez Blanco 4</option>
+                                            <option value="540">Roberto Pérez Blanco 5</option>
+                                            <option value="539">Roberto Pérez Blanco 6</option>
+                                            <option value="538">Roberto Pérez Blanco 7</option>
+                                            <option value="537">Roberto Pérez Blanco 8</option>
+                                            <option value="532">Roberto Pérez Blanco 9</option>
+                                        </select>
+                                        <input type="hidden" value="false" id="isNewtitular_1011" name="isNewtitular_1011">
+                                    </div>
+                                    <div class="medium-1 columns">
+                                        <a onclick="javascript:LimpiarTitular(1011);"><i class="fa fa-plus-circle fa-2x"></i></a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="medium-4 columns">
+                                        <label for="cmbTipoDocumentoTitular_CT_1011">Tipo de documento</label>
+                                        <select required="" id="cmbTipoDocumentoTitular_CT_1011" disabled="">
+                                            <option value="L">L. Fiscal</option>
+                                            <option value="C">Otros</option>
+                                            <option value="P">Pasaporte</option>
+                                            <option value="T">T. Residente</option>
+                                            <option value="N">Documento Nulo</option>
+                                            <option value="D">DNI / NIF</option>
+                                        </select>
+                                    </div>
+                                    <div class="medium-4 columns">
+                                        <label for="txtNumDocumentoTitular_CT_1011">Nº de documento</label>
+                                        <input type="text" required="" placeholder="Ej. B10158923" value="" id="txtNumDocumentoTitular_CT_1011" readonly="">
+                                    </div>
+                                    <div class="medium-4 columns">
+                                        <label for="txtDsTitular_CT_1011">Razón Social</label>
+                                        <input type="text" required="" placeholder="Razón social" value="" id="txtDsTitular_CT_1011" readonly="">
+                                    </div>
+                                </div>
+                                <label class="label-tit">Puestos móviles</label>
+                                <div class="row">
+                                    <div class="medium-2 columns">
+                                        <select id="cmbTipoDocumentoAutorizado_CT_1011" disabled="">
+                                            <option value="L">L. Fiscal</option>
+                                            <option value="C">Otros</option>
+                                            <option value="P">Pasaporte</option>
+                                            <option value="T">T. Residente</option>
+                                            <option value="N">Documento Nulo</option>
+                                            <option value="D">DNI / NIF</option>
+                                        </select>
+                                    </div>
+                                    <div class="medium-2 columns">
+                                        <input type="text" value="" id="txtNumDocumentoAutorizado_CT_1011" readonly="">
+                                    </div>
+                                    <div class="medium-4 columns">
+                                        <input type="text" placeholder="Nombre" value="" id="txtDsNombreAutorizado_CT_1011" readonly="">
+                                    </div>
+                                    <div class="medium-4 columns">
+                                        <input type="text" placeholder="Apellidos" value="" id="txtDsApellidosAutorizado_CT_1011" readonly="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="medium-4 columns">
+                                        <label for="txtDsNacionalidad_CT_1011">Nacionalidad</label>
+                                        <input type="text" placeholder="Nacionalidad" value="" id="txtDsNacionalidad_CT_1011" readonly="">
+                                    </div>
+                                    <div class="medium-4 columns">
+                                        <label for="txtNumTelefonoContacto_CT_1011">Teléfono de contacto</label>
+                                        <input type="text" placeholder="Teléfono contacto" value="" id="txtNumTelefonoContacto_CT_1011" readonly="">
+                                    </div>
+                                    <div class="medium-4 columns">
+                                        <label for="txtMailContacto_CT_1011">Mail contacto</label>
+                                        <input type="text" placeholder="Mail contacto" value="" id="txtMailContacto_CT_1011" readonly="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <script>
+                                    function capturaDireccion(desc, puesto) {
+
+                                        document.getElementById("displayTxtDsDireccionCompleta_CT_" + puesto).innerHTML = desc;
+                                        document.getElementById("txtDsDireccionCompleta_CT_" + puesto).value = desc.replace(/[\n\r]+/g, '');
+                                        document.getElementById("BuscaKJ_ConfNumeracion_Fija_" + puesto).innerHTML = "";
+                                        $('#isNewtitular_' + puesto).val('true');
+                                    }
+                                    </script>
+                                    <div title="Dirección completa" id="displayTxtDsDireccionCompleta_CT_1011" class="medium-10 columns">&nbsp;</div>
+                                    <input type="hidden" id="txtDsDireccionCompleta_CT_1011">
+                                    <div class="medium-2 columns">
+                                        <a class="button radius tiny func-secondary right" onclick="pantallaEmergenteSedes('19126197', '1592', '', '#BuscaKJ_ConfNumeracion_Fija_1011');" id="BuscaKJBoton_1011">Buscar Dirección</a>
+                                    </div>
+                                    <script src="js/sedes.js"></script>
+                                    <div class="row">
+                                        <div name="BuscaKJ_ConfNumeracion_Fija_1011" id="BuscaKJ_ConfNumeracion_Fija_1011" class="medium-12 columns"></div>
+                                    </div>
+                                </div>
+                                <label class="label-tit">Productividad</label>
+                                <div class="row">
+                                    <div class="large-2 columns">
+                                        <label>Unidades</label>
+                                        <input type="text"placeholder="Ej. 11">
+                                    </div>
+                                    <div class="large-5 columns">
+                                        <label>Dominio</label>
+                                        <input id="dominioOffice" type="text" pattern="domain" placeholder="Su dominio">
+                                        <small class="error">Escriba un dominio valido.</small>
+                                    </div>
+                                    <div class="large-5 columns">
+                                        <label>Email</label>
+                                        <input id="correoOFI" type="text" pattern="email" placeholder="Su correo electrónico">
+                                        <small class="error">Escriba un email valido.</small>
+                                    </div>
+                                </div>
+                                <label class="label-tit">Presencia en internet</label>
+                                <div class="row">
+                                    <div class="large-2 columns">
+                                        <label>Unidades</label>
+                                        <input type="text"placeholder="Ej. 11">
+                                    </div>
+                                    <div class="large-5 columns end">
+                                        <label>Email</label>
+                                        <input id="correoOFI" type="text" pattern="email" placeholder="Su correo electrónico">
+                                        <small class="error">Escriba un email valido.</small>
+                                    </div>
+                                </div>
+                                <div class="row botonera">
+                                    <div class="large-12 columns text-right">
+                                        <a onclick="" id="" class="button radius tiny func-secondary">Más tarde</a>
+                                        <a onclick="finalizar();" id="confOpeNumHref" class="button radius tiny">Configurar</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- contenido -->
+                    </article>
+                </section>
+                <a class="exit-off-canvas"></a>
+            </div>
+            <!-- inner-wrap -->
+        </div>
+        <!-- off-canvas-wrap -->
+    </div>
+    <!-- row -->
+    <footer class="row" role="contentinfo">
+        <div class="small-4 large-2 columns">T151221 - 1</div>
+        <div class="small-8 large-8 columns end text-center">
+            Telefónica de España S.A
+        </div>
+    </footer>
+    <!-- footer -->
+    <!-- Ventanas modales -->
+    <div id="notific" class="small reveal-modal" data-reveal></div>
+    <!-- modal notificaciones -->
+    <div id="otras-oper" class="medium reveal-modal" data-reveal></div>
+    <!-- modal otras operaciones -->
+    <div id="cuenta-banc" class="large reveal-modal" data-reveal></div>
+    <!-- modal cuenta bancaria -->
+    <div id="camb-titular-lm" class="medium reveal-modal" data-reveal></div>
+    <!-- modal cambiar titular linea móvil -->
+    <div id="search" class="small reveal-modal" data-reveal></div>
+    <!-- modal search -->
+    <div id="search-filter" class="medium reveal-modal" data-reveal></div>
+    <!-- modal search-filter -->
+    <div id="informes" class="medium reveal-modal" data-reveal></div>
+    <!-- modal informes -->
+    <div id="new-notif" class="medium reveal-modal" data-reveal></div>
+    <!-- modal nueva notificación -->
+    <div id="new-sede" class="medium reveal-modal" data-reveal></div>
+    <!-- modal nueva sede -->
+    <div id="edit-notif" class="medium reveal-modal" data-reveal></div>
+    <!-- modal editar notificación -->
+    <div id="new-ofert" class="small reveal-modal" data-reveal></div>
+    <!-- modal nueva oferta -->
+    <div id="new-client" class="medium reveal-modal" data-reveal></div>
+    <!-- modal nuevo cliente -->
+    <!-- build:js js/vendor/libraries.min.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="bower_components/multiple-select/jquery.multiple.select.js"></script>
+    <script src="bower_components/footable/js/footable.js"></script>
+    <script src="bower_components/footable/js/footable.paginate.js"></script>
+    <script src="bower_components/footable/js/footable.sort.js"></script>
+    <script src="bower_components/pickadate/lib/picker.js"></script>
+    <script src="bower_components/pickadate/lib/picker.date.js"></script>
+    <script src="bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
+    <script src="bower_components/editableSelect/jquery.editable.select.min.js"></script>
+    <script src="bower_components/jqueryui/jquery-ui-autocomplete.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js js/vendor/foundation.min.js -->
+    <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+    <!--<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+	<script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+	<script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+		<script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script> -->
+    <!-- endbuild -->
+    <!-- build:js js/app.min.js -->
+    <script src="js/app.js"></script>
+    <script src="js/sedes.js"></script>
+    <script src="js/conf_accesorios.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

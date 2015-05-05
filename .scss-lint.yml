@@ -1,7 +1,7 @@
 # Default application configuration that all configurations inherit from.
 linters:
   BorderZero:
-    enabled: true
+    enabled: false #MODIFICADO
 
   CapitalizationInSelector:
     enabled: true
@@ -22,14 +22,14 @@ linters:
     enabled: true
 
   EmptyLineBetweenBlocks:
-    enabled: false
+    enabled: true
     ignore_single_line_blocks: true
 
   EmptyRule:
     enabled: true
 
   FinalNewline:
-    enabled: false
+    enabled: true
     present: true
 
   HexLength:
@@ -48,7 +48,7 @@ linters:
 
   Indentation:
     enabled: true
-    width: 4
+    width: 4 #MODIFICADO
 
   LeadingZero:
     enabled: true
@@ -100,7 +100,7 @@ linters:
     spaces: 0
 
   StringQuotes:
-    enabled: true
+    enabled: false
     style: double_quotes # or single_quotes
 
   TrailingSemicolonAfterPropertyValue:

@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+// HTML5 Number polyfill
+
+.number > span {
+    display: block;
+    position: relative;
+}
+
+.number input[type="number"] {
+    padding-right: 0;
+    text-align: right;
+}
+
+.number-spin-btn-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.number-spin-btn {
+    width: rem-calc(19);
+
+    &:hover,
+    &:active {
+        background-color: $aluminum;
+        cursor: pointer;
+    }
+}
+
+.number-spin-btn-up:before,
+.number-spin-btn-down:before {
+    border-style: solid;
+    content: "";
+    height: 0;
+    left: 50%;
+    margin: -0.15em 0 0 -0.3em;
+    padding: 0;
+    position: absolute;
+    width: 0;
+}
+
+.number-spin-btn-up:before {
+    border-color: transparent transparent $steel;
+    border-width: rem-calc(0 5 5 5);
+    top: 25%;
+}
+
+.number-spin-btn-up:active:before {
+    border-bottom-color: $white;
+    left: 51%;
+    top: 26%;
+}
+
+.number-spin-btn-down:before {
+    border-color: $steel transparent transparent;
+    border-width: rem-calc(5 5 0 5);
+    top: 75%;
+}
+
+.number-spin-btn-down:active:before {
+    border-top-color: $white;
+    left: 51%;
+    top: 76%;
+}
+
+input[type="number"]:disabled {
+    color: $jumbo;
+}
+
+input:disabled + .number-spin-btn-container > .number-spin-btn-up:hover,
+input:disabled + .number-spin-btn-container > .number-spin-btn-down:hover {
+    background-color: transparent;
+    cursor: default;
+}
+
+input:disabled + .number-spin-btn-container > .number-spin-btn-up:before,
+input:disabled + .number-spin-btn-container > .number-spin-btn-up:active:before {
+    border-bottom-color: $aluminum;
+    left: 50%;
+    top: 25%;
+}
+
+input:disabled + .number-spin-btn-container > .number-spin-btn-down:before,
+input:disabled + .number-spin-btn-container > .number-spin-btn-down:active:before {
+    border-top-color: $aluminum;
+    left: 50%;
+    top: 75%;
+}

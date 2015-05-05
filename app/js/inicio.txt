@@ -1,0 +1,22 @@
+function cambiar(esto)
+{
+       vista=document.getElementById(esto).style.display;
+       if (vista=='block')
+             vista='none';
+       else
+             vista='block';
+
+       document.getElementById(esto).style.display = vista;
+}
+
+function pasar_usuario_avanz (){
+       var valor_busq = "113242";
+       var href_busq_avanz= '?opcion=ofertas&accion=bus_avanzada1&matricula_entrada='+valor_busq+'&esModal=1';
+       var anchor = document.getElementById("busc_avanz").href = href_busq_avanz;
+}
+
+function pasar_usuario_busq (){
+       var valor_busq = "113242";
+       var href_busqueda= '?opcion=ofertas&accion=buscar1&matricula_entrada='+valor_busq+'&esModal=1';
+       var anchor = document.getElementById("buscar").href = href_busqueda;
+       }

@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+// Nuevo editable select SELECT2
+.esContainer {
+    // border: 1px solid black;
+    // border-left: 2px solid black;
+}
+
+.esItem {
+    // background: white;
+}
+
+.esItemHover {
+    // background: blue;
+}
+
+.esTextBox {
+    // background: url(arrow.png) 98% 50% no-repeat;
+}
+
+// Select editable
+.editable-wrapper2 {
+    position: relative;
+
+    &:after {
+        color: $base;
+        content: "\f0d7\f040";
+        font-family: fontawesome;
+        font-size: rem-calc(15);
+        position: absolute;
+        right: rem-calc(6);
+        top: rem-calc(4);
+    }
+}
+
+// .editable {
+//     background-color: $white;
+//     border: 1px solid scale-color($white, $lightness: -20%);
+//     font-size: rem-calc(14);
+//     height: rem-calc(30);
+//     margin-bottom: rem-calc(15);
+//     padding: rem-calc(2 26 2 5);
+//     width: 100%;
+// }
+
+.esContainer ul {
+    border: 1px solid scale-color($white, $lightness: -20%);
+    //display: none;
+    font-size: rem-calc(14);
+    list-style-type: none;
+    margin: 0;
+    max-height: rem-calc(400);
+    overflow-x: auto;
+    padding: 0;
+    position: absolute;
+    //top: rem-calc(29);
+    width: 100%;
+    z-index: 1000000;
+
+    li {
+        background-color: $white !important;
+        cursor: pointer;
+        font-size: rem-calc(14);
+        //line-height: rem-calc(19);
+        padding: rem-calc(3 5);
+        text-align: left;
+
+        &:hover {
+            background-color: #39f !important;
+            color: $white;
+        }
+    }
+}

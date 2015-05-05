@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Configurador de Movistar Fusión Empresas">
     <title>Configurador MFE - Resumen de sede</title>
-
     <!-- Iconos de aplicación -->
     <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
@@ -23,7 +22,6 @@
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-
     <!-- build:css css/libraries.min.css -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
     <!-- bower:css -->
@@ -31,7 +29,6 @@
     <!-- endbuild -->
     <!-- build:css css/app.min.css -->
     <link rel="stylesheet" href="css/app.css">
-
     <!-- endbuild -->
     <!-- build:js js/vendor/modernizr.min.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
@@ -68,7 +65,6 @@
                         </section>
                     </nav>
                     <!-- tab-bar -->
-
                     <ul class="breadcrumbs">
                         <li class="small-3 columns current"><a href="#">Sedes</a>
                         </li>
@@ -78,12 +74,11 @@
                         </li>
                         <li class="small-3 columns current">
                             <a href="resumen-sedes.html" title="Precio total de la oferta"><i class="fa fa-shopping-cart"></i>
-                            1744&euro;</a>
+							1744&euro;</a>
                         </li>
                     </ul>
                     <!-- breadcrumbs -->
                 </header>
-
                 <aside class="left-off-canvas-menu">
                     <ul class="off-canvas-list">
                         <li class="off-canvas-head">
@@ -96,7 +91,7 @@
                         </li>
                         <li><a href="_otras-oper.html" data-reveal-id="otras-oper" data-reveal-ajax="true"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
                         </li>
-                        <li><a href="_informes.html" data-reveal-id="informes" data-reveal-ajax="true"><i class="fa fa-bar-chart fa-2x"></i> Crear informes</a>
+                        <li><a href="informes.html"><i class="fa fa-bar-chart fa-2x"></i> Crear informes</a>
                         </li>
                         <li><a href="notificaciones.html"><i class="fa fa-bell-o"></i> Notificaciones</a>
                         </li>
@@ -112,7 +107,6 @@
                     <!-- off-canvas-list -->
                 </aside>
                 <!-- left-off-canvas-menu -->
-
                 <section class="main-section" role="main">
                     <article class="row">
                         <div class="contenido large-12 columns">
@@ -122,20 +116,33 @@
                                     </dd>
                                     <dd><a href="#pues-mov">Puestos móviles</a>
                                     </dd>
-                                    <dd><a href="#pues-act">Puestos Activa</a>
-                                    </dd>
                                     <dd><a href="#conect">Conectividad</a>
                                     </dd>
                                     <dd><a href="#lan">LAN</a>
                                     </dd>
-                                    <dd><a href="#addons">Add-ons</a>
+                                    <dd><a href="#aplicat">Aplicateca</a>
+                                    </dd>
+                                    <dd><a href="#baja-num">Baja numeraciones</a>
+                                    </dd>
+                                    <dd><a href="#incompat">Incompatibilidades</a>
                                     </dd>
                                 </dl>
+                                <div class="row">
+                                    <div class="medium-12 columns">
+                                        <br>
+                                        <select name="selectsedes" id="selectsedes" onchange="javascript:consultaPorSede();">
+                                            <option value="0" selected="">Todas</option>
+                                            <option value="1">Avenida Coruña, 3 A 15706 Santiago de Compostela - A CORUÑA</option>
+                                            <option value="2">Avenida Coruña, 3 0 3 15706 Santiago de Compostela - A CORUÑA</option>
+                                            <option value="3">Calle Burgueiros, 99999 A 15864 Trasmonte(Ames) - A CORUÑA</option>
+                                        </select>
+                                    </div>
+                                </div>
                                 <!-- tabs -->
                                 <div class="medium-12 columns panel">
                                     <div class="tabs-content">
                                         <div class="content active" id="pues-fij">
-                                            <div class="row">
+                                            <!-- <div class="row">
                                                 <div class="medium-7 columns">
                                                     <select autofocus>
                                                         <option value="">Madrid - calle Orense, 14</option>
@@ -148,73 +155,214 @@
                                                         <option value="">Cambios de la oferta</option>
                                                     </select>
                                                 </div>
-                                            </div>
-                                            <table class="listado-sedes">
+                                            </div> -->
+                                            <table id="fijos" class="listado-sedes">
                                                 <caption>Resumen de Sede</caption>
                                                 <thead>
                                                     <tr>
                                                         <th></th>
                                                         <th>Concepto</th>
                                                         <th>Cantidad</th>
-                                                        <th>Modelo/Tarifa</th>
+                                                        <th>Tipo</th>
                                                         <th>Total</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td>
-                                                            <div class="visual">
-                                                                <span class="numeros">4</span>
-                                                                <span class="fa-stack fa-lg">
-                                                                    <i class="fa fa-user fa-stack-2x"></i>
-                                                                    <i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i>
-                                                                </span>
-                                                                <span class="numeros">87&euro;</span>
-                                                            </div>
+                                                            <div class="visual"><span class="numeros">3</span> <span class="fa-stack fa-lg"><i class="fa fa-user fa-stack-2x"></i><i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i></span><span class="numeros">66.0 €</span></div>
                                                         </td>
-                                                        <td>Comunicaciones con fijo</td>
-                                                        <td class="numeros">4</td>
-                                                        <td></td>
-                                                        <td class="numeros">60€</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td>Terminales</td>
+                                                        <td>Sin bono</td>
                                                         <td class="numeros">3</td>
-                                                        <td>Avanzado</td>
-                                                        <td class="numeros">15€</td>
+                                                        <td>SVA</td>
+                                                        <td class="numeros">0€</td>
                                                     </tr>
                                                     <tr>
-                                                        <td></td>
-                                                        <td>Accesorios</td>
+                                                        <td>
+                                                            <div style="display:none" class="visual"><span class="numeros">3</span> <span class="fa-stack fa-lg"><i class="fa fa-user fa-stack-2x"></i><i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i></span><span class="numeros">66.0 €</span></div>
+                                                        </td>
+                                                        <td>Sin terminal</td>
+                                                        <td class="numeros">3</td>
+                                                        <td>Terminal Fijo</td>
+                                                        <td class="numeros">0€</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div style="display:none" class="visual"><span class="numeros">3</span> <span class="fa-stack fa-lg"><i class="fa fa-user fa-stack-2x"></i><i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i></span><span class="numeros">66.0 €</span></div>
+                                                        </td>
+                                                        <td>Antena DECT</td>
                                                         <td class="numeros">1</td>
-                                                        <td>Cascos Bluetooth</td>
-                                                        <td class="numeros">12€</td>
+                                                        <td>Accesorio Fijo</td>
+                                                        <td class="numeros">18€</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div style="display:none" class="visual"><span class="numeros">3</span> <span class="fa-stack fa-lg"><i class="fa fa-user fa-stack-2x"></i><i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i></span><span class="numeros">66.0 €</span></div>
+                                                        </td>
+                                                        <td>Comunic. con fijo</td>
+                                                        <td class="numeros">3</td>
+                                                        <td>Accesorio Fijo</td>
+                                                        <td class="numeros">48€</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                         <!-- tab-content 1 -->
                                         <div class="content" id="pues-mov">
-                                            pues-mov
+                                            <table id="movil" class="listado-sedes">
+                                                <caption>Resumen de Sede</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>Concepto</th>
+                                                        <th>Cantidad</th>
+                                                        <th>Tipo</th>
+                                                        <th>Total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="visual"><span class="numeros">1</span> <span class="fa-stack fa-lg"><i class="fa fa-user fa-stack-2x"></i><i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i></span><span class="numeros">12.33 €</span></div>
+                                                        </td>
+                                                        <td>BLACKBERRY Q5</td>
+                                                        <td class="numeros">1</td>
+                                                        <td>TERMINAL MOVIL</td>
+                                                        <td class="numeros">7.33€</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div style="display:none" class="visual"><span class="numeros">1</span> <span class="fa-stack fa-lg"><i class="fa fa-user fa-stack-2x"></i><i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i></span><span class="numeros">12.33 €</span></div>
+                                                        </td>
+                                                        <td>Tarifa 5</td>
+                                                        <td class="numeros">1</td>
+                                                        <td>TARIFAS</td>
+                                                        <td class="numeros">5€</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                         <!-- tab-content 2 -->
-                                        <div class="content" id="pues-act">
-                                            pues-act
+                                        <div class="content" id="conect">
+                                            <table id="conectividad" class="listado-sedes sin-visual">
+                                                <caption>Resumen de Sede</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Concepto</th>
+                                                        <th>Total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>CE MultiSede 100 M/ 10M 75 canales</td>
+                                                        <td class="numeros">90€</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                         <!-- tab-content 3 -->
-                                        <div class="content" id="conect">
-                                            conect
+                                        <div class="content" id="lan">
+                                            <table id="LAN" class="listado-sedes sin-visual">
+                                                <caption>Resumen de Sede</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <!-- <th></th> -->
+                                                        <th>Concepto</th>
+                                                        <th>Cantidad</th>
+                                                        <th>Total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Mi Cobertura Movil</td>
+                                                        <td class="numeros">1</td>
+                                                        <td class="numeros">9€</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                         <!-- tab-content 4 -->
-                                        <div class="content" id="lan">
-                                            lan
+                                        <div class="content" id="aplicat">
+                                            <table id="TI" class="listado-sedes sin-visual">
+                                                <caption>Resumen de Sede</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <!-- <th></th> -->
+                                                        <th>Concepto</th>
+                                                        <th>Cantidad</th>
+                                                        <th>Total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Tu Web</td>
+                                                        <td class="numeros">8</td>
+                                                        <td class="numeros">40€</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Office 365 Pequeña Empresa</td>
+                                                        <td class="numeros">1</td>
+                                                        <td class="numeros">4.9€</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Licencia DVR</td>
+                                                        <td class="numeros">2</td>
+                                                        <td class="numeros">10€</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                         <!-- tab-content 5 -->
-                                        <div class="content" id="addons">
-                                            addons
+                                        <div class="content" id="baja-num">
+                                            <table id="numeracionesBaja" class="listado-sedes sin-visual">
+                                                <caption>Resumen de Sede</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Dar Baja</th>
+                                                        <th>Numeración</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                </tbody>
+                                            </table>
                                         </div>
                                         <!-- tab-content 6 -->
+                                        <div class="content" id="incompat">
+                                            <table id="productosIncompatibles" class="listado-sedes sin-visual">
+                                                <caption>Productos</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Oferta</th>
+                                                        <th>Sede</th>
+                                                        <th>Producto</th>
+                                                        <th>Descripción Producto</th>
+                                                        <th>Producto Incompatible</th>
+                                                        <th>Producto Requerido</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1126</td>
+                                                        <td>Calle Paloma, 8 0 1
+                                                            <br><span>9003 Burgos - BURGOS</span></td>
+                                                        <td>F01_046</td>
+                                                        <td>Sin bono</td>
+                                                        <td>n cliente Corporativo</td>
+                                                        <td>-------</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1126</td>
+                                                        <td>Calle Marques, 99999 A
+                                                            <br><span>9230 Buniel - BURGOS</span></td>
+                                                        <td>F01_046</td>
+                                                        <td>Sin bono</td>
+                                                        <td>n cliente Corporativo</td>
+                                                        <td>-------</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- tab-content 7 -->
                                     </div>
                                     <!-- tabs-content -->
                                 </div>
@@ -252,7 +400,6 @@
         <!-- off-canvas-wrap -->
     </div>
     <!-- row -->
-
     <footer class="row" role="contentinfo">
         <div class="small-4 large-2 columns">T151221 - 1</div>
         <div class="small-8 large-8 columns end text-center">
@@ -260,86 +407,74 @@
         </div>
     </footer>
     <!-- footer -->
-
     <!-- Ventanas modales -->
     <div id="notific" class="small reveal-modal" data-reveal></div>
     <!-- modal notificaciones -->
-
     <div id="otras-oper" class="medium reveal-modal" data-reveal></div>
     <!-- modal otras operaciones -->
-
     <div id="cuenta-banc" class="large reveal-modal" data-reveal></div>
     <!-- modal cuenta bancaria -->
-
     <div id="camb-titular-lm" class="medium reveal-modal" data-reveal></div>
     <!-- modal cambiar titular linea móvil -->
-
     <div id="search" class="small reveal-modal" data-reveal></div>
     <!-- modal search -->
-
     <div id="search-filter" class="medium reveal-modal" data-reveal></div>
     <!-- modal search-filter -->
-
     <div id="informes" class="medium reveal-modal" data-reveal></div>
     <!-- modal informes -->
-
     <div id="new-notif" class="medium reveal-modal" data-reveal></div>
     <!-- modal nueva notificación -->
-
     <div id="edit-notif" class="medium reveal-modal" data-reveal></div>
     <!-- modal editar notificación -->
-
     <div id="new-ofert" class="small reveal-modal" data-reveal></div>
     <!-- modal nueva oferta -->
-
     <div id="new-client" class="medium reveal-modal" data-reveal></div>
     <!-- modal nuevo cliente -->
-
     <div id="new-sede" class="medium reveal-modal" data-reveal></div>
     <!-- modal nueva sede -->
-
     <div id="conf-cob-movil" class="tiny reveal-modal" data-reveal></div>
     <!-- modal Configuración Cobertura Móvil -->
-
     <div id="ope-num" class="large reveal-modal" data-reveal></div>
     <!-- modal Configuración de las numeraciones  -->
-
     <div id="selecc-red" class="small reveal-modal" data-reveal></div>
     <!-- modal seleccionar red -->
-
     <div id="licen-info" class="small reveal-modal" data-reveal></div>
     <!-- modal información de licencias -->
-
     <div id="concept-ocas" class="medium reveal-modal" data-reveal></div>
     <!-- modal información de licencias -->
-
     <!-- build:js js/vendor/libraries.min.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/fastclick/lib/fastclick.js"></script>
-    <script src="bower_components/chartjs/Chart.min.js"></script>
-    <script src="bower_components/editableSelect/jquery.editable.select.min.js"></script>
     <script src="bower_components/multiple-select/jquery.multiple.select.js"></script>
+    <script src="bower_components/footable/js/footable.js"></script>
+    <script src="bower_components/footable/js/footable.paginate.js"></script>
+    <script src="bower_components/footable/js/footable.sort.js"></script>
+    <script src="bower_components/pickadate/lib/picker.js"></script>
+    <script src="bower_components/pickadate/lib/picker.date.js"></script>
+    <script src="bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
+    <script src="bower_components/editableSelect/jquery.editable.select.min.js"></script>
+    <script src="bower_components/jqueryui/jquery-ui-autocomplete.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/vendor/foundation.min.js -->
     <script src="bower_components/foundation/js/foundation/foundation.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
-    <!-- <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
     <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
     <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
     <!--<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
+	<script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+	<script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
     <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
     <!-- <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script> -->
     <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
     <!-- <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
-        <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script> -->
+		<script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script> -->
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->
     <script src="js/app.js"></script>

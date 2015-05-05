@@ -2,10 +2,10 @@
 
 <div class="alert-box radius alert">
     Texto del alert Texto del alert Texto del alert Texto del alert
-    <a title="Cerrar" href="" class="close"><i class="fa fa-times"></i></a>
+    <!-- <a title="Cerrar" href="" class="close"><i class="fa fa-times"></i></a> -->
 </div>
 
-<form id="FormSedes" name="FormSedes" action="" data-abide="" novalidate="novalidate">
+<form id="FormSedes" name="FormSedes" action="" data-abide novalidate>
     <input type="hidden" id="patron" name="patron" value="ASC">
     <input type="hidden" id="CUC" name="CUC" value="81788688">
     <input type="hidden" id="NumOferta" name="NumOferta" value="587">
@@ -324,129 +324,65 @@
         <div class="row">
             <div class="large-3 columns">
                 <label>Planta</label>
-                <div class="editable-wrapper">
-                    <input class="editable" name="planta" id="planta">
-                    <ol class="editable-list">
-                        <li></li>
-                        <li>Almacén</li>
-                        <li>Altillo</li>
-                        <li>Ascensor</li>
-                        <li>Atico</li>
-                        <li>Bajo</li>
-                        <li>Bungalow</li>
-                        <li>Chalet</li>
-                        <li>Dúplex</li>
-                        <li>Entreplanta</li>
-                        <li>Entresuelo</li>
-                        <li>Garaje</li>
-                        <li>Kiosco</li>
-                        <li>Local</li>
-                        <li>Modulo</li>
-                        <li>Nave</li>
-                        <li>Oficina</li>
-                        <li>Principal</li>
-                        <li>Puesto</li>
-                        <li>Semisótano</li>
-                        <li>Semisótano</li>
-                        <li>Semisótano 1</li>
-                        <li>Semisótano 2</li>
-                        <li>Semisótano 3</li>
-                        <li>Semisótano 4</li>
-                        <li>Semisótano 5</li>
-                        <li>Semisótano 6</li>
-                        <li>Semisótano 7</li>
-                        <li>Semisótano 8</li>
-                        <li>Semisótano 9</li>
-                        <li>Sobreático</li>
-                        <li>Sótano</li>
-                        <li>Sótano 1</li>
-                        <li>Sótano 2</li>
-                        <li>Sótano 3</li>
-                        <li>Sótano 4</li>
-                        <li>Sótano 5</li>
-                        <li>Sótano 6</li>
-                        <li>Sótano 7</li>
-                        <li>Sótano 8</li>
-                        <li>Sótano 9</li>
-                        <li>Terraza</li>
-                        <li>Tienda</li>
-                    </ol>
-                    <select name="planta" class="editable" style="visibility: hidden; display: none;">
-                        <option value=""></option>
-                        <option value="AM">Almacén</option>
-                        <option value="AL">Altillo</option>
-                        <option value="AS">Ascensor</option>
-                        <option value="AT">Atico</option>
-                        <option value="BA">Bajo</option>
-                        <option value="BU">Bungalow</option>
-                        <option value="CH">Chalet</option>
-                        <option value="DU">Dúplex</option>
-                        <option value="ET">Entreplanta</option>
-                        <option value="EN">Entresuelo</option>
-                        <option value="GA">Garaje</option>
-                        <option value="KI">Kiosco</option>
-                        <option value="LO">Local</option>
-                        <option value="MO">Modulo</option>
-                        <option value="NA">Nave</option>
-                        <option value="OF">Oficina</option>
-                        <option value="PR">Principal</option>
-                        <option value="PT">Puesto</option>
-                        <option value="SS">Semisótano</option>
-                        <option value="SE">Semisótano</option>
-                        <option value="X1">Semisótano 1</option>
-                        <option value="X2">Semisótano 2</option>
-                        <option value="X3">Semisótano 3</option>
-                        <option value="X4">Semisótano 4</option>
-                        <option value="X5">Semisótano 5</option>
-                        <option value="X6">Semisótano 6</option>
-                        <option value="X7">Semisótano 7</option>
-                        <option value="X8">Semisótano 8</option>
-                        <option value="X9">Semisótano 9</option>
-                        <option value="SA">Sobreático</option>
-                        <option value="SO">Sótano</option>
-                        <option value="S1">Sótano 1</option>
-                        <option value="S2">Sótano 2</option>
-                        <option value="S3">Sótano 3</option>
-                        <option value="S4">Sótano 4</option>
-                        <option value="S5">Sótano 5</option>
-                        <option value="S6">Sótano 6</option>
-                        <option value="S7">Sótano 7</option>
-                        <option value="S8">Sótano 8</option>
-                        <option value="S9">Sótano 9</option>
-                        <option value="TE">Terraza</option>
-                        <option value="TI">Tienda</option>
-
-                    </select>
-                </div>
+                <select name="planta" class="editable">
+                    <option value=""></option>
+                    <option value="AM">Almacén</option>
+                    <option value="AL">Altillo</option>
+                    <option value="AS">Ascensor</option>
+                    <option value="AT">Atico</option>
+                    <option value="BA">Bajo</option>
+                    <option value="BU">Bungalow</option>
+                    <option value="CH">Chalet</option>
+                    <option value="DU">Dúplex</option>
+                    <option value="ET">Entreplanta</option>
+                    <option value="EN">Entresuelo</option>
+                    <option value="GA">Garaje</option>
+                    <option value="KI">Kiosco</option>
+                    <option value="LO">Local</option>
+                    <option value="MO">Modulo</option>
+                    <option value="NA">Nave</option>
+                    <option value="OF">Oficina</option>
+                    <option value="PR">Principal</option>
+                    <option value="PT">Puesto</option>
+                    <option value="SS">Semisótano</option>
+                    <option value="SE">Semisótano</option>
+                    <option value="X1">Semisótano 1</option>
+                    <option value="X2">Semisótano 2</option>
+                    <option value="X3">Semisótano 3</option>
+                    <option value="X4">Semisótano 4</option>
+                    <option value="X5">Semisótano 5</option>
+                    <option value="X6">Semisótano 6</option>
+                    <option value="X7">Semisótano 7</option>
+                    <option value="X8">Semisótano 8</option>
+                    <option value="X9">Semisótano 9</option>
+                    <option value="SA">Sobreático</option>
+                    <option value="SO">Sótano</option>
+                    <option value="S1">Sótano 1</option>
+                    <option value="S2">Sótano 2</option>
+                    <option value="S3">Sótano 3</option>
+                    <option value="S4">Sótano 4</option>
+                    <option value="S5">Sótano 5</option>
+                    <option value="S6">Sótano 6</option>
+                    <option value="S7">Sótano 7</option>
+                    <option value="S8">Sótano 8</option>
+                    <option value="S9">Sótano 9</option>
+                    <option value="TE">Terraza</option>
+                    <option value="TI">Tienda</option>
+                </select>
             </div>
             <div class="large-3 columns">
                 <label>Bis</label>
-                <div class="editable-wrapper">
-                    <input class="editable" name="pbis" id="pbis">
-                    <ol class="editable-list">
-                        <li></li>
-                        <li>Bis</li>
-                        <li>Cuadruplicado</li>
-                        <li>Duplicado</li>
-                        <li>Kilómetro</li>
-                        <li>Kilómetro margen derecho</li>
-                        <li>Kilómetro margen izquierdo</li>
-                        <li>Quintuplicado</li>
-                        <li>Triplicado</li>
-                    </ol>
-                    <select name="pbis" class="editable" style="visibility: hidden; display: none;">
-                        <option value=""></option>
-                        <option value="B">Bis</option>
-                        <option value="C">Cuadruplicado</option>
-                        <option value="D">Duplicado</option>
-                        <option value="K">Kilómetro</option>
-                        <option value="X">Kilómetro margen derecho</option>
-                        <option value="Y">Kilómetro margen izquierdo</option>
-                        <option value="Q">Quintuplicado</option>
-                        <option value="T">Triplicado</option>
-
-                    </select>
-                </div>
+                <select name="pbis" class="editable">
+                    <option value=""></option>
+                    <option value="B">Bis</option>
+                    <option value="C">Cuadruplicado</option>
+                    <option value="D">Duplicado</option>
+                    <option value="K">Kilómetro</option>
+                    <option value="X">Kilómetro margen derecho</option>
+                    <option value="Y">Kilómetro margen izquierdo</option>
+                    <option value="Q">Quintuplicado</option>
+                    <option value="T">Triplicado</option>
+                </select>
             </div>
             <div class="large-2 columns">
                 <label>Bloque</label>
@@ -466,7 +402,6 @@
                     <option value="S">Sector</option>
                     <option value="T">Torre</option>
                     <option value="Z">Zona</option>
-
                 </select>
             </div>
             <div class="large-1 columns">
@@ -485,128 +420,65 @@
                 <small class="error">Debe especificar un valor válido.</small>
             </div>
         </div>
-
         <div class="row">
             <div class="large-3 columns">
                 <label>Escalera 1</label>
-                <div class="editable-wrapper">
-                    <input class="editable" name="escalera1" id="escalera1">
-                    <ol class="editable-list">
-                        <li></li>
-                        <li>Centro</li>
-                        <li>Derecha</li>
-                        <li>Exterior</li>
-                        <li>Interior</li>
-                        <li>Izquierda</li>
-                    </ol>
-                    <select name="escalera1" class="editable" style="visibility: hidden; display: none;">
-                        <option value=""></option>
-                        <option value="X">Centro</option>
-                        <option value="W">Derecha</option>
-                        <option value="Z">Exterior</option>
-                        <option value="Y">Interior</option>
-                        <option value="V">Izquierda</option>
 
-                    </select>
-                </div>
+                <select name="escalera1" class="editable">
+                    <option value=""></option>
+                    <option value="X">Centro</option>
+                    <option value="W">Derecha</option>
+                    <option value="Z">Exterior</option>
+                    <option value="Y">Interior</option>
+                    <option value="V">Izquierda</option>
+                </select>
             </div>
             <div class="large-3 columns">
                 <label>Escalera 2</label>
-                <div class="editable-wrapper">
-                    <input class="editable" name="escalera2" id="escalera2">
-                    <ol class="editable-list">
-                        <li></li>
-                        <li>Centro</li>
-                        <li>Derecha</li>
-                        <li>Exterior</li>
-                        <li>Interior</li>
-                        <li>Izquierda</li>
-                    </ol>
-                    <select name="escalera2" class="editable" style="visibility: hidden; display: none;">
-                        <option value=""></option>
-                        <option value="X">Centro</option>
-                        <option value="W">Derecha</option>
-                        <option value="Z">Exterior</option>
-                        <option value="Y">Interior</option>
-                        <option value="V">Izquierda</option>
-
-                    </select>
-                </div>
+                <select name="escalera2" class="editable">
+                    <option value=""></option>
+                    <option value="X">Centro</option>
+                    <option value="W">Derecha</option>
+                    <option value="Z">Exterior</option>
+                    <option value="Y">Interior</option>
+                    <option value="V">Izquierda</option>
+                </select>
             </div>
-
             <div class="large-3 columns">
                 <label>Situación 1</label>
-                <div class="editable-wrapper">
-                    <input class="editable" name="man1" id="man1">
-                    <ol class="editable-list">
-                        <li></li>
-                        <li>Apartamento</li>
-                        <li>Centro</li>
-                        <li>Derecha</li>
-                        <li>Despacho</li>
-                        <li>Exterior</li>
-                        <li>Habitación</li>
-                        <li>Interior</li>
-                        <li>Izquierda</li>
-                        <li>Local</li>
-                        <li>Oficina</li>
-                        <li>Puesto</li>
-                        <li>Tienda</li>
-                    </ol>
-                    <select name="man1" class="editable" style="visibility: hidden; display: none;">
-                        <option value=""></option>
-                        <option value="APTO">Apartamento</option>
-                        <option value="CTRO">Centro</option>
-                        <option value="DCHA">Derecha</option>
-                        <option value="DPCH">Despacho</option>
-                        <option value="EXT.">Exterior</option>
-                        <option value="HABI">Habitación</option>
-                        <option value="INT.">Interior</option>
-                        <option value="IZDA">Izquierda</option>
-                        <option value="LOCL">Local</option>
-                        <option value="OFIC">Oficina</option>
-                        <option value="PTO.">Puesto</option>
-                        <option value="TDA.">Tienda</option>
-
-                    </select>
-                </div>
+                <select name="man1" class="editable">
+                    <option value=""></option>
+                    <option value="APTO">Apartamento</option>
+                    <option value="CTRO">Centro</option>
+                    <option value="DCHA">Derecha</option>
+                    <option value="DPCH">Despacho</option>
+                    <option value="EXT.">Exterior</option>
+                    <option value="HABI">Habitación</option>
+                    <option value="INT.">Interior</option>
+                    <option value="IZDA">Izquierda</option>
+                    <option value="LOCL">Local</option>
+                    <option value="OFIC">Oficina</option>
+                    <option value="PTO.">Puesto</option>
+                    <option value="TDA.">Tienda</option>
+                </select>
             </div>
             <div class="large-3 columns">
                 <label>Situación 2</label>
-                <div class="editable-wrapper">
-                    <input class="editable" name="man2" id="man2">
-                    <ol class="editable-list">
-                        <li></li>
-                        <li>Apartamento</li>
-                        <li>Centro</li>
-                        <li>Derecha</li>
-                        <li>Despacho</li>
-                        <li>Exterior</li>
-                        <li>Habitación</li>
-                        <li>Interior</li>
-                        <li>Izquierda</li>
-                        <li>Local</li>
-                        <li>Oficina</li>
-                        <li>Puesto</li>
-                        <li>Tienda</li>
-                    </ol>
-                    <select name="man2" class="editable" style="visibility: hidden; display: none;">
-                        <option value=""></option>
-                        <option value="APTO">Apartamento</option>
-                        <option value="CTRO">Centro</option>
-                        <option value="DCHA">Derecha</option>
-                        <option value="DPCH">Despacho</option>
-                        <option value="EXT.">Exterior</option>
-                        <option value="HABI">Habitación</option>
-                        <option value="INT.">Interior</option>
-                        <option value="IZDA">Izquierda</option>
-                        <option value="LOCL">Local</option>
-                        <option value="OFIC">Oficina</option>
-                        <option value="PTO.">Puesto</option>
-                        <option value="TDA.">Tienda</option>
-
-                    </select>
-                </div>
+                <select name="man2" class="editable">
+                    <option value=""></option>
+                    <option value="APTO">Apartamento</option>
+                    <option value="CTRO">Centro</option>
+                    <option value="DCHA">Derecha</option>
+                    <option value="DPCH">Despacho</option>
+                    <option value="EXT.">Exterior</option>
+                    <option value="HABI">Habitación</option>
+                    <option value="INT.">Interior</option>
+                    <option value="IZDA">Izquierda</option>
+                    <option value="LOCL">Local</option>
+                    <option value="OFIC">Oficina</option>
+                    <option value="PTO.">Puesto</option>
+                    <option value="TDA.">Tienda</option>
+                </select>
             </div>
         </div>
 
@@ -617,12 +489,8 @@
                 <button type="button" name="buscarsede" id="buscarsede" class="radius tiny" title="Buscar sedes" onclick="javascript:buscarCallesKJ();">Buscar sede</button>
             </div>
         </div>
-
     </div>
 </form>
 
-
-<script src="js/popup_sedes.js"></script>
-<script src="js/app.min.js"></script>
-<script src="js/vendor/foundation.min.js"></script>
-<script src="js/vendor/libraries.min.js"></script>
+<script src="bower_components/editableSelect/jquery.editable.select.min.js"></script>
+<script src="js/app.js"></script>

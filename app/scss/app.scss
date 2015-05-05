@@ -61,22 +61,31 @@
 @import "administracion";
 @import "alertas";
 @import "appstyles";
-@import "autocomplete";
+
+// @import "autocompletar";
+// @import "autocomplete";
+@import "autocomplete-ui";
 @import "carrusel";
-@import "charts";
+
+//@import "charts";
 @import "col-dcha";
 @import "col-izda";
 
 //@import "datatables";
 @import "desplegables";
 @import "emergentes";
+
+//@import "editable";
 @import "footable";
 @import "formularios";
 @import "header";
 @import "login";
-@import "multi-select";
+
+//@import "multi-select";
 @import "multiple-select";
 @import "notificaciones";
+
+//@import "number-polyfill";
 @import "off-canvas";
 @import "opweb";
 @import "paneles";
@@ -86,5 +95,4 @@
 @import "range-slider";
 @import "sedes";
 @import "tablas";
-
 @import "breakpoints";

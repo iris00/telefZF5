@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+// jquery ui autocomplete
+.ui-helper {
+    &-hidden {
+        display: none;
+
+        &-accessible {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: rem-calc(1);
+            margin: rem-calc(-1);
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: rem-calc(1);
+        }
+    }
+
+    &-reset {
+        border: 0;
+        font-size: 100%;
+        line-height: rem-calc(20);
+        list-style: none;
+        margin: 0;
+        outline: 0;
+        padding: 0;
+        text-decoration: none;
+    }
+
+    &-clearfix:before,
+    &-clearfix:after {
+        border-collapse: collapse;
+        content: '';
+        display: table;
+    }
+
+    &-clearfix:after {
+        clear: both;
+    }
+
+    &-clearfix {
+        min-height: 0;
+    }
+
+    &-zfix {
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.ui-front {
+    z-index: 1010;
+}
+
+input[type="text"]:focus.ui-autocomplete-loading {
+    background: transparent url("../images/ui-anim_basic_16x16.gif") 99% center no-repeat;
+}
+
+// states and images
+.ui-icon {
+    background-repeat: no-repeat;
+    display: block;
+    overflow: hidden;
+    text-indent: -99999px;
+}
+
+// Misc visuals
+// Overlays
+.ui-widget-overlay {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.ui-autocomplete {
+    cursor: default;
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    &.ui-menu {
+        background-color: $white;
+        border: $input-border-width $input-border-style $input-border-color;
+        max-height: 50vh;
+        overflow: auto;
+    }
+}
+
+.ui-menu {
+    display: block;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 0;
+
+    .ui-menu {
+        position: absolute;
+    }
+
+    .ui-menu-item {
+        cursor: pointer;
+        margin: 0;
+        min-height: 0;
+        padding: rem-calc(10 6);
+        position: relative;
+    }
+
+    .ui-menu-divider {
+        //border-width: 1px 0 0;
+        font-size: 0;
+        height: 0;
+        line-height: 0;
+        //margin: rem-calc(5 0);
+
+    }
+
+    .ui-state-focus,
+    .ui-state-active {
+        background-color: $primary-color;
+        color: $white;
+    }
+
+    .ui-icon {
+        bottom: 0;
+        left: rem-calc(4);
+        margin: auto 0;
+        position: absolute;
+        top: 0;
+    }
+
+    .ui-menu-icon {
+        left: auto;
+        right: 0;
+    }
+}
+
+// icon support
+.ui-menu-icons {
+    position: relative;
+
+    .ui-menu-item {
+        padding-left: rem-calc(20);
+    }
+}

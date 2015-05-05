@@ -3,7 +3,7 @@
 // Paneles sedes
 .sedes {
     .r-s-margen {
-        margin: rem-calc(30);
+        margin: rem-calc(30 45);
 
         p {
             font-size: rem-calc(14);
@@ -40,10 +40,18 @@
             margin-bottom: rem-calc(6);
         }
     }
+
+    .puertos-adic {
+        margin-top: rem-calc(10);
+    }
+
+    .puertos-adic.output {
+        margin-top: rem-calc(6);
+    }
 }
 
 // vertical range-slider
-.range-slider.vertical-range .range-slider-handle {
-    margin-left: rem-calc(-9);
-    top: rem-calc(-3);
-}
+// .range-slider.vertical-range .range-slider-handle {
+//     margin-left: rem-calc(-9);
+//     top: rem-calc(-3);
+// }

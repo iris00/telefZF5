@@ -11,6 +11,18 @@ button.tiny.peque {
     padding-top: rem-calc(3);
 }
 
+.func-secondary {
+    background-color: $button-func-bg-secondary;
+
+    &:hover {
+        background-color: #7d7d7d;
+    }
+}
+
+.contrato .button:hover {
+    background-color: scale-color($primary-color, $lightness: 3%);
+}
+
 .postfix.button {
     height: rem-calc(30);
     line-height: rem-calc(30);
@@ -39,6 +51,11 @@ input[type=checkbox] {
     margin-right: rem-calc(10);
 }
 
+input[type="number"] {
+    height: 2rem;
+    padding: rem-calc(0 4 2);
+}
+
 label {
     cursor: default;
     line-height: rem-calc(30);
@@ -62,6 +79,13 @@ label {
     }
 }
 
+.sedes .label-tit {
+    background-color: $primary-color;
+    margin: rem-calc(20 0);
+    padding-left: rem-calc(10);
+    text-align: left;
+}
+
 fieldset {
     border: 0;
     margin: 0;
@@ -71,6 +95,12 @@ fieldset {
         font-size: rem-calc(20);
         font-weight: normal;
     }
+}
+
+textarea {
+    min-height: rem-calc(90);
+    overflow-y: auto;
+    resize: vertical;
 }
 
 select {
@@ -86,24 +116,28 @@ select {
     option {
         //background-color: $white;
         padding: rem-calc(4 0 4 6);
+
+        &[disabled] {
+            cursor: default;
+        }
     }
 }
 
 select,
 select:hover {
-    -moz-appearance: none;
+    //-moz-appearance: none;
     border-color: $iron;
     cursor: pointer;
-    text-indent: 0.01px;
+    //text-indent: 0.01px;
 }
 
 select[disabled] {
     cursor: default;
+    color: $aluminum;
 }
 
 select:focus,
-input[type="checkbox"]:focus,
-.editable:focus {
+input[type="checkbox"]:focus {
     @include block-glowing-effect(focus, $glowing-effect-fade-time, $glowing-effect-color);
     background-color: $input-focus-bg-color;
     border-color: $input-focus-border-color;
@@ -115,6 +149,7 @@ select:-moz-focusring {
     text-shadow: 0 0 0 #000;
 }
 
+//Select editable
 .editable-wrapper {
     position: relative;
 
@@ -134,6 +169,7 @@ select:-moz-focusring {
     border: 1px solid scale-color($white, $lightness: -20%);
     font-size: rem-calc(14);
     height: rem-calc(30);
+    margin-bottom: rem-calc(15);
     padding: rem-calc(2 26 2 5);
     width: 100%;
 }
@@ -148,6 +184,7 @@ select:-moz-focusring {
     overflow-x: auto;
     padding: 0;
     position: absolute;
+    top: rem-calc(29);
     width: 100%;
     z-index: 1000000;
 
@@ -166,13 +203,41 @@ select:-moz-focusring {
     }
 }
 
-::-webkit-input-placeholder {
-    color: $aluminum;
+// Select editable de Roberto
+.select-editable {
+    position: relative;
+
+    input,
+    input [disabled],
+    input:focus {
+        border-right: 0;
+        box-shadow: 0 0 0 transparent;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: -moz-calc(100% - 22px);
+        width: calc(100% - 22px);
+    }
+
+    input:focus + select {
+        background-color: $white;
+        border: 1px solid red;
+    }
+
+    input[type="text"][disabled] {
+        background-color: $white;
+        border: 1px solid scale-color($white, $lightness: -20%);
+        border-right: 0;
+    }
 }
 
-:-moz-placeholder {
+.select-editable select:focus,
+.select-editable input:focus {
+    outline: none;
+}
+
+::-webkit-input-placeholder {
     color: $aluminum;
-    opacity: 1;
 }
 
 ::-moz-placeholder {
@@ -223,6 +288,7 @@ select:-moz-focusring {
     font-family: robotoregular, sans-serif;
     font-size: rem-calc(20);
     font-weight: normal;
+    line-height: normal;
 }
 
 input[type="text"].numeros {
@@ -233,6 +299,7 @@ input[type="text"].numeros {
 }
 
 .complem-sede input[type="text"],
+.complem-sede input[type="number"],
 .sede-accesor input[type="text"],
 .conf-basica input[type="text"] {
     color: $steel;
@@ -248,28 +315,32 @@ input[type="text"].numeros {
 }
 
 // Validación
-input[type="text"][data-invalid] {
+.error input {
     border: 1px solid $alert-color;
+}
+
+.error label {
+    color: $white;
 }
 
 // [data-abide] .error {
 //     padding: 0 $column-gutter;
 // }
 
-input[type="text"]
-[data-abide] .error small.error,
-[data-abide] .error span.error,
-[data-abide] span.error,
-[data-abide] small.error {
-    background-color: $alert-color;
-    font-family: robotoregular, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-}
+// input[type="text"]
+// [data-abide] .error small.error,
+// [data-abide] .error span.error,
+// [data-abide] span.error,
+// [data-abide] small.error {
+//     background-color: $alert-color;
+//     font-family: robotoregular, sans-serif;
+//     font-style: normal;
+//     font-weight: normal;
+// }
 
-[data-abide] .error input {
-    margin-bottom: 0;
-}
+// [data-abide] .error input {
+//     margin-bottom: 0;
+// }
 
 // form[data-abide] label {
 //     margin-bottom: rem-calc(17);
@@ -299,14 +370,6 @@ input[type="text"]
 
     .button.disabled {
         background-color: $iron;
-    }
-
-    .func-secondary {
-        background-color: $button-func-bg-secondary;
-
-        &:hover {
-            background-color: #7d7d7d;
-        }
     }
 
     .close-reveal-modal {
@@ -356,7 +419,7 @@ input[type="text"]
     }
 
     select {
-        font-family: robotoregular, sans-serif;
+        //font-family: robotoregular, sans-serif;
         font-size: rem-calc(16);
         font-weight: normal;
     }
@@ -364,7 +427,7 @@ input[type="text"]
 
 .svas {
     select {
-        font-family: robotoregular, sans-serif;
+        //font-family: robotoregular, sans-serif;
         font-size: rem-calc(16);
         font-weight: normal;
         margin-top: rem-calc(20);
@@ -492,11 +555,12 @@ table.puestos {
     .columns > button,
     .columns > .button {
         font-size: rem-calc(14);
-        padding: rem-calc(3 15);
+        padding: rem-calc(3 15 4);
     }
 
-    .fecha:before {
+    .row .fecha:after {
         top: rem-calc(2);
+        right: rem-calc(15);
     }
 
     .euro:after {
@@ -525,7 +589,7 @@ table.puestos {
     }
 
     .filtro-ofer button.radius {
-        margin-top: rem-calc(15);
+        margin-top: rem-calc(24);
     }
 
     form .filtro-ofer:last-child {

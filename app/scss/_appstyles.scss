@@ -11,6 +11,12 @@ h3 {
     font-family: robotoregular, sans-serif;
 }
 
+.no-modal {
+    color: $secondary-color;
+    font-size: rem-calc(24);
+    margin-bottom: rem-calc(15);
+}
+
 a:active,
 a:link,
 select:focus,
@@ -55,6 +61,15 @@ a:focus {
 .postventa {
     background-color: scale-color($success-color, $lightness: 88) !important;
     font-style: italic !important;
+
+    input[type="text"][disabled] {
+        height: rem-calc(35);
+        margin-top: rem-calc(-3);
+    }
+
+    .euro:after {
+        top: rem-calc(6);
+    }
 }
 
 .contenido {

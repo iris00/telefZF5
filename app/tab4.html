@@ -1,51 +1,1093 @@
-<form action="action">
-    <div class="medium-10 medium-offset-1 columns end">
-        <div class="panel tit odd-even">
-            <h2>Marcas PO</h2>
-            <div class="panel-cont">
-                <div class="row">
-                    <div class="medium-6 columns">"Totalizado o compartido"</div>
-                    <div class="medium-6 columns">
-                        <p class="disabled">Totalizado</p>
-                    </div>
+<form data-abide="" name="formulario" id="formulario" action="" novalidate="novalidate">
+    <div class="panel tit">
+        <h2>Resumen</h2>
+        <!-- panel tit: Información General -->
+        <div class="panel-cont">
+            <div class="row">
+                <div class="medium-4 columns">
+                    <label>Líneas Actuales</label>
+                    <input type="text" id="txtLinAct_DESC" disabled="disabled" value="11">
                 </div>
-                <div class="row">
-                    <div class="medium-6 columns">"Facturación total (media 3 meses)"</div>
-                    <div class="medium-6 columns">
-                        <p class="disabled">762,45</p>
-                    </div>
+                <div class="medium-4 columns peque bloque">
+                    <label>Facturación Actual</label>
+                    <input type="text" id="txtFactAct_DESC" disabled="disabled" value="0 €">
                 </div>
-                <div class="row">
-                    <div class="medium-6 columns">"Ingresos netos totales MFE"</div>
-                    <div class="medium-6 columns">
-                        <p class="disabled">1014,61</p>
-                    </div>
+                <div class="medium-4 columns">
+                    <label>% Desc. Actual</label>
+                    <input type="text" id="txtPorcenDescAct_DESC" disabled="disabled" value="100,0%">
                 </div>
-                <div class="row">
-                    <div class="medium-6 columns">"Diferencia facturación migración MFE vs facturación original"</div>
-                    <div class="medium-6 columns">
-                        <p class="disabled">0,37</p>
-                    </div>
+            </div>
+            <!-- fila 1 -->
+            <div class="row">
+                <div class="medium-4 columns">
+                    <label>Líneas Propuestas</label>
+                    <input type="text" id="txtLinProp_DESC" disabled="disabled" value="11">
                 </div>
-                <div class="row">
-                    <div class="medium-6 columns">"Nº de puestos móviles en la migración a MFE"</div>
-                    <div class="medium-6 columns">
-                        <p class="disabled">9,00</p>
-                    </div>
+                <div class="medium-4 columns peque bloque">
+                    <label>Facturación Propuesta</label>
+                    <input type="text" id="txtFactProp_DESC" disabled="disabled" value="0 €">
                 </div>
-                <div class="row">
-                    <div class="medium-6 columns">"Nº de puestos móviles con tarifa 10&euro;"</div>
-                    <div class="medium-6 columns">
-                        <p class="disabled">0,00</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="medium-6 columns">"Nº de puestos móviles (20&euro; y 45&euro;)"</div>
-                    <div class="medium-6 columns">
-                        <p class="disabled">8</p>
-                    </div>
+                <div class="medium-4 columns">
+                    <label>% Desc. Propuesto</label>
+                    <input type="text" id="txtPorcenDescProp_DESC" disabled="disabled" value="100,0%">
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="panel tit">
+        <h2>Contrato</h2>
+        <div class="panel-cont">
+            <div class="row">
+                <div class="medium-3 columns">
+                    <label>Duración del Contrato</label>
+                    <select id="" name="">
+
+                        <option id="24">24</option>
+
+                    </select>
+                </div>
+                <div class="medium-3 columns">
+                    <label>Renovación automática de descuentos</label>
+                    <input type="checkbox" checked="checked">
+                </div>
+                <div class="medium-3 columns">
+                    <label>&nbsp;</label>
+                    <button onclick="javascript:validarDescuentos();" id="botonValidar" name="cmdValidarDctos" type="button" class="radius">Validar descuentos</button>
+                </div>
+                <div class="medium-3 columns">
+                    <label>&nbsp;</label>
+                    <button onclick="javascript:recalcularDescuentos(25);" id="botonCalcular" name="cmdRecalcularDctos" type="button" class="radius">Guardar y Recalcular</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel tit">
+		<h2>Líneas de la propuesta</h2>
+		<div class="panel-cont ofertas">
+			<table class="lin-propuesta" summary="Nuevas líneas añadidas">
+				<thead>
+					<tr>
+						<th>CIF</th>
+						<th>Tipo</th>
+						<th>Nº.</th>
+						<th class="text-left">P. Tarificación</th>
+						<th>Nº. de Servicios</th>
+						<th>Tráfico</th>
+						<th class="text-right">Penalización Total</th>
+						<th class="text-right">PVC</th>
+						<th>Acciones</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<td class="text-center">B30619290</td>
+						<td class="text-center">Portabilidad</td>
+						<td class="text-center">4</td>
+						<td class="text-left">Con tu negocio 24h + Internet 40</td>
+						<td class="text-center">
+
+							<a href="javascript:detalleServicios(982);">0</a>
+
+						</td>
+						<td class="text-center">
+
+							<a href="javascript:detalleTrafico(982);">187</a>
+
+						</td>
+						<td id="td_penaliza0" class="text-right">0 €</td>
+						<td class="text-right">160 €</td>
+
+						<td class="text-center">
+							<a title="Modificar la nueva línea" href="javascript:detalleNL(982);"> <i class="fa fa-pencil"></i></a>
+
+							<a title="Eliminar la nueva línea" href="javascript:eliminarNL(982);"> <i class="fa fa-close"></i></a>
+
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+    <div class="panel tit">
+        <input type="hidden" value="16" id="hNumDescuentosTrafico">
+        <h2>Descuentos de Tráfico</h2>
+        <div class="panel-cont ofertas">
+            <table class="desc-trafico" id="descTrafico" summary="Tabla de descuentos">
+                <thead>
+                    <tr>
+                        <th>Descripción</th>
+                        <th>Descuento Actual</th>
+                        <th>Descuento Nuevo</th>
+                        <th>!</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Interno
+                            <input type="hidden" value="Q96" id="hCodDctoTrafico_0">
+                            <input type="hidden" value="Interno" id="hDsDctoTrafico_0">
+                            <input type="hidden" value="0" id="txtDctoTrafico1_0">
+                            <input type="hidden" value="0" id="txtDctoTrafico1L_0">
+                            <!-- se utiliza para la validación del límite -->
+                        </td>
+                        <td class="text-center">0 %</td>
+                        <td class="text-center">
+                            <div class="row collapse postfix-radius">
+                                <div class="small-10 columns">
+                                    <input type="text" maxlength="5" onchange="javascript:validarSemaforo('txtDctoTrafico2_0', 'semaforo_trafico_0', 15, 25);" disabled="" id="txtDctoTrafico2_0" pattern="number" value="0" class="text-right">
+                                    <small class="error">Debe especificar un número válido.</small>
+                                </div>
+                                <div class="small-2 columns">
+                                    <span class="postfix">%</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <i class="fa fa-circle success" id="semaforo_trafico_0"></i>
+                        </td>
+                        <td class="text-center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Movistar
+                            <input type="hidden" value="Q94" id="hCodDctoTrafico_1">
+                            <input type="hidden" value="Movistar" id="hDsDctoTrafico_1">
+                            <input type="hidden" value="0" id="txtDctoTrafico1_1">
+                            <input type="hidden" value="0" id="txtDctoTrafico1L_1">
+                            <!-- se utiliza para la validación del límite -->
+                        </td>
+                        <td class="text-center">0 %</td>
+                        <td class="text-center">
+                            <div class="row collapse postfix-radius">
+                                <div class="small-10 columns">
+                                    <input type="text" maxlength="5" onchange="javascript:validarSemaforo('txtDctoTrafico2_1', 'semaforo_trafico_1', 15, 25);" disabled="" id="txtDctoTrafico2_1" pattern="number" value="0" class="text-right">
+                                    <small class="error">Debe especificar un número válido.</small>
+                                </div>
+                                <div class="small-2 columns">
+                                    <span class="postfix">%</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <i class="fa fa-circle success" id="semaforo_trafico_1"></i>
+                        </td>
+                        <td class="text-center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Otros operadores móviles
+                            <input type="hidden" value="U44" id="hCodDctoTrafico_2">
+                            <input type="hidden" value="Otros operadores móviles" id="hDsDctoTrafico_2">
+                            <input type="hidden" value="0" id="txtDctoTrafico1_2">
+                            <input type="hidden" value="0" id="txtDctoTrafico1L_2">
+                            <!-- se utiliza para la validación del límite -->
+                        </td>
+                        <td class="text-center">0 %</td>
+                        <td class="text-center">
+                            <div class="row collapse postfix-radius">
+                                <div class="small-10 columns">
+                                    <input type="text" maxlength="5" onchange="javascript:validarSemaforo('txtDctoTrafico2_2', 'semaforo_trafico_2', 15, 25);" disabled="" id="txtDctoTrafico2_2" pattern="number" value="0" class="text-right">
+                                    <small class="error">Debe especificar un número válido.</small>
+                                </div>
+                                <div class="small-2 columns">
+                                    <span class="postfix">%</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <i class="fa fa-circle success" id="semaforo_trafico_2"></i>
+                        </td>
+                        <td class="text-center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Operadores Fijos
+                            <input type="hidden" value="U43" id="hCodDctoTrafico_3">
+                            <input type="hidden" value="Operadores Fijos" id="hDsDctoTrafico_3">
+                            <input type="hidden" value="0" id="txtDctoTrafico1_3">
+                            <input type="hidden" value="0" id="txtDctoTrafico1L_3">
+                            <!-- se utiliza para la validación del límite -->
+                        </td>
+                        <td class="text-center">0 %</td>
+                        <td class="text-center">
+                            <div class="row collapse postfix-radius">
+                                <div class="small-10 columns">
+                                    <input type="text" maxlength="5" onchange="javascript:validarSemaforo('txtDctoTrafico2_3', 'semaforo_trafico_3', 15, 25);" disabled="" id="txtDctoTrafico2_3" pattern="number" value="0" class="text-right">
+                                    <small class="error">Debe especificar un número válido.</small>
+                                </div>
+                                <div class="small-2 columns">
+                                    <span class="postfix">%</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <i class="fa fa-circle success" id="semaforo_trafico_3"></i>
+                        </td>
+                        <td class="text-center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Especiales
+                            <input type="hidden" value="U45" id="hCodDctoTrafico_4">
+                            <input type="hidden" value="Especiales" id="hDsDctoTrafico_4">
+                            <input type="hidden" value="0" id="txtDctoTrafico1_4">
+                            <input type="hidden" value="0" id="txtDctoTrafico1L_4">
+                            <!-- se utiliza para la validación del límite -->
+                        </td>
+                        <td class="text-center">0 %</td>
+                        <td class="text-center">
+                            <div class="row collapse postfix-radius">
+                                <div class="small-10 columns">
+                                    <input type="text" maxlength="5" onchange="javascript:validarSemaforo('txtDctoTrafico2_4', 'semaforo_trafico_4', 15, 25);" disabled="" id="txtDctoTrafico2_4" pattern="number" value="0" class="text-right">
+                                    <small class="error">Debe especificar un número válido.</small>
+                                </div>
+                                <div class="small-2 columns">
+                                    <span class="postfix">%</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <i class="fa fa-circle success" id="semaforo_trafico_4"></i>
+                        </td>
+                        <td class="text-center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Roaming Saliente - Zona 1
+                            <input type="hidden" value="N33" id="hCodDctoTrafico_5">
+                            <input type="hidden" value="Roaming Saliente - Zona 1" id="hDsDctoTrafico_5">
+                            <input type="hidden" value="0" id="txtDctoTrafico1_5">
+                            <input type="hidden" value="25" id="txtDctoTrafico1L_5">
+                            <!-- se utiliza para la validación del límite -->
+                        </td>
+                        <td class="text-center">0 %</td>
+                        <td class="text-center">
+                            <div class="row collapse postfix-radius">
+                                <div class="small-10 columns">
+                                    <input type="text" maxlength="5" onchange="javascript:validarSemaforo('txtDctoTrafico2_5', 'semaforo_trafico_5', 15, 25);" id="txtDctoTrafico2_5" pattern="number" value="0" class="text-right">
+                                    <small class="error">Debe especificar un número válido.</small>
+                                </div>
+                                <div class="small-2 columns">
+                                    <span class="postfix">%</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <i class="fa fa-circle success" id="semaforo_trafico_5"></i>
+                        </td>
+                        <td class="text-center">
+                            <a title="Asignar valor 0" onclick="borrarDescuento ('txtDctoTrafico2_5', 'semaforo_trafico_5');"><i class="fa fa-eraser"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Roaming Saliente - Zona 2 y 3
+                            <input type="hidden" value="Q11" id="hCodDctoTrafico_6">
+                            <input type="hidden" value="Roaming Saliente - Zona 2 y 3" id="hDsDctoTrafico_6">
+                            <input type="hidden" value="0" id="txtDctoTrafico1_6">
+                            <input type="hidden" value="25" id="txtDctoTrafico1L_6">
+                            <!-- se utiliza para la validación del límite -->
+                        </td>
+                        <td class="text-center">0 %</td>
+                        <td class="text-center">
+                            <div class="row collapse postfix-radius">
+                                <div class="small-10 columns">
+                                    <input type="text" maxlength="5" onchange="javascript:validarSemaforo('txtDctoTrafico2_6', 'semaforo_trafico_6', 15, 25);" id="txtDctoTrafico2_6" pattern="number" value="0" class="text-right">
+                                    <small class="error">Debe especificar un número válido.</small>
+                                </div>
+                                <div class="small-2 columns">
+                                    <span class="postfix">%</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+
+                            <i class="fa fa-circle success" id="semaforo_trafico_6"></i>
+
+                        </td>
+
+                        <td class="text-center">
+
+                            <a title="Asignar valor 0" onclick="borrarDescuento ('txtDctoTrafico2_6', 'semaforo_trafico_6');"><i class="fa fa-eraser"></i></a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            Roaming Entrante
+                            <input type="hidden" value="M87" id="hCodDctoTrafico_7">
+                            <input type="hidden" value="Roaming Entrante" id="hDsDctoTrafico_7">
+                            <input type="hidden" value="0" id="txtDctoTrafico1_7">
+                            <input type="hidden" value="25" id="txtDctoTrafico1L_7">
+                            <!-- se utiliza para la validación del límite -->
+                        </td>
+                        <td class="text-center">0 %</td>
+                        <td class="text-center">
+                            <div class="row collapse postfix-radius">
+                                <div class="small-10 columns">
+                                    <input type="text" maxlength="5" onchange="javascript:validarSemaforo('txtDctoTrafico2_7', 'semaforo_trafico_7', 15, 25);" id="txtDctoTrafico2_7" pattern="number" value="0" class="text-right">
+                                    <small class="error">Debe especificar un número válido.</small>
+                                </div>
+                                <div class="small-2 columns">
+                                    <span class="postfix">%</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+
+                            <i class="fa fa-circle success" id="semaforo_trafico_7"></i>
+
+                        </td>
+
+                        <td class="text-center">
+
+                            <a title="Asignar valor 0" onclick="borrarDescuento ('txtDctoTrafico2_7', 'semaforo_trafico_7');"><i class="fa fa-eraser"></i></a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            Internacional
+                            <input type="hidden" value="BP9" id="hCodDctoTrafico_8">
+                            <input type="hidden" value="Internacional" id="hDsDctoTrafico_8">
+                            <input type="hidden" value="0" id="txtDctoTrafico1_8">
+                            <input type="hidden" value="25" id="txtDctoTrafico1L_8">
+                            <!-- se utiliza para la validación del límite -->
+                        </td>
+                        <td class="text-center">0 %</td>
+                        <td class="text-center">
+                            <div class="row collapse postfix-radius">
+                                <div class="small-10 columns">
+                                    <input type="text" maxlength="5" onchange="javascript:validarSemaforo('txtDctoTrafico2_8', 'semaforo_trafico_8', 15, 25);" id="txtDctoTrafico2_8" pattern="number" value="0" class="text-right">
+                                    <small class="error">Debe especificar un número válido.</small>
+                                </div>
+                                <div class="small-2 columns">
+                                    <span class="postfix">%</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+
+                            <i class="fa fa-circle success" id="semaforo_trafico_8"></i>
+
+                        </td>
+
+                        <td class="text-center">
+
+                            <a title="Asignar valor 0" onclick="borrarDescuento ('txtDctoTrafico2_8', 'semaforo_trafico_8');"><i class="fa fa-eraser"></i></a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            Datos
+                            <input type="hidden" value="G07" id="hCodDctoTrafico_9">
+                            <input type="hidden" value="Datos" id="hDsDctoTrafico_9">
+                            <input type="hidden" value="0" id="txtDctoTrafico1_9">
+                            <input type="hidden" value="0" id="txtDctoTrafico1L_9">
+                            <!-- se utiliza para la validación del límite -->
+                        </td>
+                        <td class="text-center">0 %</td>
+                        <td class="text-center">
+                            <div class="row collapse postfix-radius">
+                                <div class="small-10 columns">
+                                    <input type="text" maxlength="5" onchange="javascript:validarSemaforo('txtDctoTrafico2_9', 'semaforo_trafico_9', 15, 25);" disabled="" id="txtDctoTrafico2_9" pattern="number" value="0" class="text-right">
+                                    <small class="error">Debe especificar un número válido.</small>
+                                </div>
+                                <div class="small-2 columns">
+                                    <span class="postfix">%</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+
+                            <i class="fa fa-circle success" id="semaforo_trafico_9"></i>
+
+                        </td>
+
+                        <td class="text-center">
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            Datos - Roaming
+                            <input type="hidden" value="A40" id="hCodDctoTrafico_10">
+                            <input type="hidden" value="Datos - Roaming" id="hDsDctoTrafico_10">
+                            <input type="hidden" value="0" id="txtDctoTrafico1_10">
+                            <input type="hidden" value="0" id="txtDctoTrafico1L_10">
+                            <!-- se utiliza para la validación del límite -->
+                        </td>
+                        <td class="text-center">0 %</td>
+                        <td class="text-center">
+                            <div class="row collapse postfix-radius">
+                                <div class="small-10 columns">
+                                    <input type="text" maxlength="5" onchange="javascript:validarSemaforo('txtDctoTrafico2_10', 'semaforo_trafico_10', 15, 25);" id="txtDctoTrafico2_10" pattern="number" value="0" class="text-right">
+                                    <small class="error">Debe especificar un número válido.</small>
+                                </div>
+                                <div class="small-2 columns">
+                                    <span class="postfix">%</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+
+                            <i class="fa fa-circle success" id="semaforo_trafico_10"></i>
+
+                        </td>
+
+                        <td class="text-center">
+
+                            <a title="Asignar valor 0" onclick="borrarDescuento ('txtDctoTrafico2_10', 'semaforo_trafico_10');"><i class="fa fa-eraser"></i></a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            SMS - Movistar
+                            <input type="hidden" value="349" id="hCodDctoTrafico_11">
+                            <input type="hidden" value="SMS - Movistar" id="hDsDctoTrafico_11">
+                            <input type="hidden" value="40" id="txtDctoTrafico1_11">
+                            <input type="hidden" value="0" id="txtDctoTrafico1L_11">
+                            <!-- se utiliza para la validación del límite -->
+                        </td>
+                        <td class="text-center">40 %</td>
+                        <td class="text-center">
+                            <div class="row collapse postfix-radius">
+                                <div class="small-10 columns">
+                                    <input type="text" maxlength="5" onchange="javascript:validarSemaforo('txtDctoTrafico2_11', 'semaforo_trafico_11', 15, 25);" disabled="" id="txtDctoTrafico2_11" pattern="number" value="40" class="text-right">
+                                    <small class="error">Debe especificar un número válido.</small>
+                                </div>
+                                <div class="small-2 columns">
+                                    <span class="postfix">%</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+
+                            <i class="fa fa-circle alert" id="semaforo_trafico_11"></i>
+
+                        </td>
+
+                        <td class="text-center">
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            SMS - OTROS
+                            <input type="hidden" value="C50" id="hCodDctoTrafico_12">
+                            <input type="hidden" value="SMS - OTROS" id="hDsDctoTrafico_12">
+                            <input type="hidden" value="0" id="txtDctoTrafico1_12">
+                            <input type="hidden" value="0" id="txtDctoTrafico1L_12">
+                            <!-- se utiliza para la validación del límite -->
+                        </td>
+                        <td class="text-center">0 %</td>
+                        <td class="text-center">
+                            <div class="row collapse postfix-radius">
+                                <div class="small-10 columns">
+                                    <input type="text" maxlength="5" onchange="javascript:validarSemaforo('txtDctoTrafico2_12', 'semaforo_trafico_12', 15, 25);" disabled="" id="txtDctoTrafico2_12" pattern="number" value="0" class="text-right">
+                                    <small class="error">Debe especificar un número válido.</small>
+                                </div>
+                                <div class="small-2 columns">
+                                    <span class="postfix">%</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+
+                            <i class="fa fa-circle success" id="semaforo_trafico_12"></i>
+
+                        </td>
+
+                        <td class="text-center">
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            SMS Internacional
+                            <input type="hidden" value="79" id="hCodDctoTrafico_13">
+                            <input type="hidden" value="SMS Internacional" id="hDsDctoTrafico_13">
+                            <input type="hidden" value="0" id="txtDctoTrafico1_13">
+                            <input type="hidden" value="25" id="txtDctoTrafico1L_13">
+                            <!-- se utiliza para la validación del límite -->
+                        </td>
+                        <td class="text-center">0 %</td>
+                        <td class="text-center">
+                            <div class="row collapse postfix-radius">
+                                <div class="small-10 columns">
+                                    <input type="text" maxlength="5" onchange="javascript:validarSemaforo('txtDctoTrafico2_13', 'semaforo_trafico_13', 15, 25);" id="txtDctoTrafico2_13" pattern="number" value="0" class="text-right">
+                                    <small class="error">Debe especificar un número válido.</small>
+                                </div>
+                                <div class="small-2 columns">
+                                    <span class="postfix">%</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+
+                            <i class="fa fa-circle success" id="semaforo_trafico_13"></i>
+
+                        </td>
+
+                        <td class="text-center">
+
+                            <a title="Asignar valor 0" onclick="borrarDescuento ('txtDctoTrafico2_13', 'semaforo_trafico_13');"><i class="fa fa-eraser"></i></a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            MMS Roaming
+                            <input type="hidden" value="DO6" id="hCodDctoTrafico_14">
+                            <input type="hidden" value="MMS Roaming" id="hDsDctoTrafico_14">
+                            <input type="hidden" value="0" id="txtDctoTrafico1_14">
+                            <input type="hidden" value="25" id="txtDctoTrafico1L_14">
+                            <!-- se utiliza para la validación del límite -->
+                        </td>
+                        <td class="text-center">0 %</td>
+                        <td class="text-center">
+                            <div class="row collapse postfix-radius">
+                                <div class="small-10 columns">
+                                    <input type="text" maxlength="5" onchange="javascript:validarSemaforo('txtDctoTrafico2_14', 'semaforo_trafico_14', 15, 25);" id="txtDctoTrafico2_14" pattern="number" value="0" class="text-right">
+                                    <small class="error">Debe especificar un número válido.</small>
+                                </div>
+                                <div class="small-2 columns">
+                                    <span class="postfix">%</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+
+                            <i class="fa fa-circle success" id="semaforo_trafico_14"></i>
+
+                        </td>
+
+                        <td class="text-center">
+
+                            <a title="Asignar valor 0" onclick="borrarDescuento ('txtDctoTrafico2_14', 'semaforo_trafico_14');"><i class="fa fa-eraser"></i></a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            Servicio TUM
+                            <input type="hidden" value="C10" id="hCodDctoTrafico_15">
+                            <input type="hidden" value="Servicio TUM" id="hDsDctoTrafico_15">
+                            <input type="hidden" value="0" id="txtDctoTrafico1_15">
+                            <input type="hidden" value="25" id="txtDctoTrafico1L_15">
+                            <!-- se utiliza para la validación del límite -->
+                        </td>
+                        <td class="text-center">0 %</td>
+                        <td class="text-center">
+                            <div class="row collapse postfix-radius">
+                                <div class="small-10 columns">
+                                    <input type="text" maxlength="5" onchange="javascript:validarSemaforo('txtDctoTrafico2_15', 'semaforo_trafico_15', 15, 25);" id="txtDctoTrafico2_15" pattern="number" value="0" class="text-right">
+                                    <small class="error">Debe especificar un número válido.</small>
+                                </div>
+                                <div class="small-2 columns">
+                                    <span class="postfix">%</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+
+                            <i class="fa fa-circle success" id="semaforo_trafico_15"></i>
+
+                        </td>
+
+                        <td class="text-center">
+
+                            <a title="Asignar valor 0" onclick="borrarDescuento ('txtDctoTrafico2_15', 'semaforo_trafico_15');"><i class="fa fa-eraser"></i></a>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- panel-cont 2 -->
+    </div>
+    <!-- panel tit 2 -->
+
+    <div class="panel tit">
+        <h2>Descuentos de Cuotas</h2>
+        <div class="panel-cont ofertas">
+            <input type="hidden" value="12" id="hNumDescuentosCuota">
+            <input type="hidden" value="12" id="cuotasIniciales">
+            <input type="hidden" value="0" id="cuotasAnadidas">
+            <table class="desc-cuotas" id="tblDescCuotas" summary="Tabla de Cuotas">
+                <thead>
+                    <tr>
+                        <th>Descripción</th>
+                        <th>P.V.P.</th>
+                        <th>Cuota Actual</th>
+                        <th>Cuota Propuesta</th>
+                        <th>!</th>
+
+                        <th>Borrar</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+
+                    <tr id="Y97">
+                        <td>DESC, CUOTA BLACKBERRY EN HOSTING
+                            <input type="hidden" value="Y97" id="hCodDctoCuota_0">
+                            <input type="hidden" value="15.0" name="txtDctoCuota1_0" id="txtDctoCuota1_0">
+
+                        </td>
+                        <td class="text-center">15 €</td>
+                        <td class="text-center">15 €</td>
+                        <td class="text-center">
+
+                            <input type="text" maxlength="5" onchange="javascript:validarSemaforoCuotas('txtDctoCuota2_0', 'semaforo_cuota_0', 15.0, 15);" value="15" pattern="number" id="txtDctoCuota2_0" class="text-right">
+                            <small class="error">Debe especificar un número válido.</small>
+
+                        </td>
+                        <td class="text-center">
+
+                            <i id="semaforo_cuota_0"></i>
+
+                        </td>
+
+                        <td class="text-center">
+                            <a title="Asignar valor 0" onclick="borrarDescuentoCuota('txtDctoCuota2_0', 'semaforo_cuota_0', 15.0);"><i class="fa fa-eraser"></i></a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr id="154">
+                        <td>DESCUENTO CUOTA ABONO MOVISTAR MULTISIM
+                            <input type="hidden" value="154" id="hCodDctoCuota_1">
+                            <input type="hidden" value="3.0" name="txtDctoCuota1_1" id="txtDctoCuota1_1">
+
+                        </td>
+                        <td class="text-center">3 €</td>
+                        <td class="text-center">3 €</td>
+                        <td class="text-center">
+
+                            <input type="text" maxlength="5" onchange="javascript:validarSemaforoCuotas('txtDctoCuota2_1', 'semaforo_cuota_1', 3.0, 3);" value="3" pattern="number" id="txtDctoCuota2_1" class="text-right">
+                            <small class="error">Debe especificar un número válido.</small>
+
+                        </td>
+                        <td class="text-center">
+
+                            <i id="semaforo_cuota_1"></i>
+
+                        </td>
+
+                        <td class="text-center">
+                            <a title="Asignar valor 0" onclick="borrarDescuentoCuota('txtDctoCuota2_1', 'semaforo_cuota_1', 3.0);"><i class="fa fa-eraser"></i></a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr id="QC4">
+                        <td>DESCUENTO CUOTA MENSUAL MOVIL 20
+                            <input type="hidden" value="QC4" id="hCodDctoCuota_2">
+                            <input type="hidden" value="20.0" name="txtDctoCuota1_2" id="txtDctoCuota1_2">
+
+                        </td>
+                        <td class="text-center">20 €</td>
+                        <td class="text-center">20 €</td>
+                        <td class="text-center">
+
+                            <input type="text" maxlength="5" onchange="javascript:validarSemaforoCuotas('txtDctoCuota2_2', 'semaforo_cuota_2', 20.0, 20);" value="20" pattern="number" id="txtDctoCuota2_2" class="text-right">
+                            <small class="error">Debe especificar un número válido.</small>
+
+                        </td>
+                        <td class="text-center">
+
+                            <i id="semaforo_cuota_2"></i>
+
+                        </td>
+
+                        <td class="text-center">
+                            <a title="Asignar valor 0" onclick="borrarDescuentoCuota('txtDctoCuota2_2', 'semaforo_cuota_2', 20.0);"><i class="fa fa-eraser"></i></a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr id="LS8">
+                        <td>DTO, C, MENSUAL HABL HORARIO OFICINA 15
+                            <input type="hidden" value="LS8" id="hCodDctoCuota_3">
+                            <input type="hidden" value="15.0" name="txtDctoCuota1_3" id="txtDctoCuota1_3">
+
+                        </td>
+                        <td class="text-center">15 €</td>
+                        <td class="text-center">15 €</td>
+                        <td class="text-center">
+
+                            <input type="text" maxlength="5" onchange="javascript:validarSemaforoCuotas('txtDctoCuota2_3', 'semaforo_cuota_3', 15.0, 15);" value="15" pattern="number" id="txtDctoCuota2_3" class="text-right">
+                            <small class="error">Debe especificar un número válido.</small>
+
+                        </td>
+                        <td class="text-center">
+
+                            <i id="semaforo_cuota_3"></i>
+
+                        </td>
+
+                        <td class="text-center">
+                            <a title="Asignar valor 0" onclick="borrarDescuentoCuota('txtDctoCuota2_3', 'semaforo_cuota_3', 15.0);"><i class="fa fa-eraser"></i></a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr id="LY2">
+                        <td>DTO, CTA,T, INTERNET MULTIDISPOSITIVO 25
+                            <input type="hidden" value="LY2" id="hCodDctoCuota_4">
+                            <input type="hidden" value="25.0" name="txtDctoCuota1_4" id="txtDctoCuota1_4">
+
+                        </td>
+                        <td class="text-center">25 €</td>
+                        <td class="text-center">25 €</td>
+                        <td class="text-center">
+
+                            <input type="text" maxlength="5" onchange="javascript:validarSemaforoCuotas('txtDctoCuota2_4', 'semaforo_cuota_4', 25.0, 25);" value="25" pattern="number" id="txtDctoCuota2_4" class="text-right">
+                            <small class="error">Debe especificar un número válido.</small>
+
+                        </td>
+                        <td class="text-center">
+
+                            <i id="semaforo_cuota_4"></i>
+
+                        </td>
+
+                        <td class="text-center">
+                            <a title="Asignar valor 0" onclick="borrarDescuentoCuota('txtDctoCuota2_4', 'semaforo_cuota_4', 25.0);"><i class="fa fa-eraser"></i></a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr id="CU6">
+                        <td>DTO CUOTA TP NUMEROS PROPIOS MULTILINEA
+                            <input type="hidden" value="CU6" id="hCodDctoCuota_5">
+                            <input type="hidden" value="5.0" name="txtDctoCuota1_5" id="txtDctoCuota1_5">
+
+                        </td>
+                        <td class="text-center">5 €</td>
+                        <td class="text-center">5 €</td>
+                        <td class="text-center">
+
+                            <input type="text" maxlength="5" onchange="javascript:validarSemaforoCuotas('txtDctoCuota2_5', 'semaforo_cuota_5', 5.0, 5);" value="5" pattern="number" id="txtDctoCuota2_5" class="text-right">
+                            <small class="error">Debe especificar un número válido.</small>
+
+                        </td>
+                        <td class="text-center">
+
+                            <i id="semaforo_cuota_5"></i>
+
+                        </td>
+
+                        <td class="text-center">
+                            <a title="Asignar valor 0" onclick="borrarDescuentoCuota('txtDctoCuota2_5', 'semaforo_cuota_5', 5.0);"><i class="fa fa-eraser"></i></a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr id="NX5">
+                        <td>DTO,C, MENS,CON TU NEG 24H+INTERNET 30
+                            <input type="hidden" value="NX5" id="hCodDctoCuota_6">
+                            <input type="hidden" value="30.0" name="txtDctoCuota1_6" id="txtDctoCuota1_6">
+
+                        </td>
+                        <td class="text-center">30 €</td>
+                        <td class="text-center">30 €</td>
+                        <td class="text-center">
+
+                            <input type="text" maxlength="5" onchange="javascript:validarSemaforoCuotas('txtDctoCuota2_6', 'semaforo_cuota_6', 30.0, 30);" value="30" pattern="number" id="txtDctoCuota2_6" class="text-right">
+                            <small class="error">Debe especificar un número válido.</small>
+
+                        </td>
+                        <td class="text-center">
+
+                            <i id="semaforo_cuota_6"></i>
+
+                        </td>
+
+                        <td class="text-center">
+                            <a title="Asignar valor 0" onclick="borrarDescuentoCuota('txtDctoCuota2_6', 'semaforo_cuota_6', 30.0);"><i class="fa fa-eraser"></i></a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr id="NX3">
+                        <td>DTO,C,MENS,CON TU NEG 24H+INTERNET 20
+                            <input type="hidden" value="NX3" id="hCodDctoCuota_7">
+                            <input type="hidden" value="20.0" name="txtDctoCuota1_7" id="txtDctoCuota1_7">
+
+                        </td>
+                        <td class="text-center">20 €</td>
+                        <td class="text-center">20 €</td>
+                        <td class="text-center">
+
+                            <input type="text" maxlength="5" onchange="javascript:validarSemaforoCuotas('txtDctoCuota2_7', 'semaforo_cuota_7', 20.0, 20);" value="20" pattern="number" id="txtDctoCuota2_7" class="text-right">
+                            <small class="error">Debe especificar un número válido.</small>
+
+                        </td>
+                        <td class="text-center">
+
+                            <i id="semaforo_cuota_7"></i>
+
+                        </td>
+
+                        <td class="text-center">
+                            <a title="Asignar valor 0" onclick="borrarDescuentoCuota('txtDctoCuota2_7', 'semaforo_cuota_7', 20.0);"><i class="fa fa-eraser"></i></a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr id="NY3">
+                        <td>DTO,C,MENS,CON TU NEG 24H+MULTIDISP 40
+                            <input type="hidden" value="NY3" id="hCodDctoCuota_8">
+                            <input type="hidden" value="40.0" name="txtDctoCuota1_8" id="txtDctoCuota1_8">
+
+                        </td>
+                        <td class="text-center">40 €</td>
+                        <td class="text-center">40 €</td>
+                        <td class="text-center">
+
+                            <input type="text" maxlength="5" onchange="javascript:validarSemaforoCuotas('txtDctoCuota2_8', 'semaforo_cuota_8', 40.0, 40);" value="40" pattern="number" id="txtDctoCuota2_8" class="text-right">
+                            <small class="error">Debe especificar un número válido.</small>
+
+                        </td>
+                        <td class="text-center">
+
+                            <i id="semaforo_cuota_8"></i>
+
+                        </td>
+
+                        <td class="text-center">
+                            <a title="Asignar valor 0" onclick="borrarDescuentoCuota('txtDctoCuota2_8', 'semaforo_cuota_8', 40.0);"><i class="fa fa-eraser"></i></a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr id="NY5">
+                        <td>DTO,C,MENS,CON TU NEG 24H+MULTIDISP 50
+                            <input type="hidden" value="NY5" id="hCodDctoCuota_9">
+                            <input type="hidden" value="50.0" name="txtDctoCuota1_9" id="txtDctoCuota1_9">
+
+                        </td>
+                        <td class="text-center">50 €</td>
+                        <td class="text-center">50 €</td>
+                        <td class="text-center">
+
+                            <input type="text" maxlength="5" onchange="javascript:validarSemaforoCuotas('txtDctoCuota2_9', 'semaforo_cuota_9', 50.0, 50);" value="50" pattern="number" id="txtDctoCuota2_9" class="text-right">
+                            <small class="error">Debe especificar un número válido.</small>
+
+                        </td>
+                        <td class="text-center">
+
+                            <i id="semaforo_cuota_9"></i>
+
+                        </td>
+
+                        <td class="text-center">
+                            <a title="Asignar valor 0" onclick="borrarDescuentoCuota('txtDctoCuota2_9', 'semaforo_cuota_9', 50.0);"><i class="fa fa-eraser"></i></a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr id="LY4">
+                        <td>DTO,CT, T, INTERNET SMARTPHONE 12
+                            <input type="hidden" value="LY4" id="hCodDctoCuota_10">
+                            <input type="hidden" value="12.0" name="txtDctoCuota1_10" id="txtDctoCuota1_10">
+
+                        </td>
+                        <td class="text-center">12 €</td>
+                        <td class="text-center">12 €</td>
+                        <td class="text-center">
+
+                            <input type="text" maxlength="5" onchange="javascript:validarSemaforoCuotas('txtDctoCuota2_10', 'semaforo_cuota_10', 12.0, 12);" value="12" pattern="number" id="txtDctoCuota2_10" class="text-right">
+                            <small class="error">Debe especificar un número válido.</small>
+
+                        </td>
+                        <td class="text-center">
+
+                            <i id="semaforo_cuota_10"></i>
+
+                        </td>
+
+                        <td class="text-center">
+                            <a title="Asignar valor 0" onclick="borrarDescuentoCuota('txtDctoCuota2_10', 'semaforo_cuota_10', 12.0);"><i class="fa fa-eraser"></i></a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr id="NU9">
+                        <td>DTO,CT, T, INTERNET SMARTPHONE 15
+                            <input type="hidden" value="NU9" id="hCodDctoCuota_11">
+                            <input type="hidden" value="15.0" name="txtDctoCuota1_11" id="txtDctoCuota1_11">
+
+                        </td>
+                        <td class="text-center">15 €</td>
+                        <td class="text-center">15 €</td>
+                        <td class="text-center">
+
+                            <input type="text" maxlength="5" onchange="javascript:validarSemaforoCuotas('txtDctoCuota2_11', 'semaforo_cuota_11', 15.0, 15);" value="15" pattern="number" id="txtDctoCuota2_11" class="text-right">
+                            <small class="error">Debe especificar un número válido.</small>
+
+                        </td>
+                        <td class="text-center">
+
+                            <i id="semaforo_cuota_11"></i>
+
+                        </td>
+
+                        <td class="text-center">
+                            <a title="Asignar valor 0" onclick="borrarDescuentoCuota('txtDctoCuota2_11', 'semaforo_cuota_11', 15.0);"><i class="fa fa-eraser"></i></a>
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+        <!-- panel-cont 2 -->
+    </div>
+    <!-- panel tit 2 -->
+
+
+
+    <div class="panel tit">
+        <h2>Añadir Descuentos</h2>
+
+        <div class="row">
+            <div class="medium-12 columns">
+                <div class="medium-4 columns">
+                    <label>Servicio Medido</label>
+                    <select name="cmbOtrosDescuentosTrafico" id="cmbOtrosDescuentosTrafico">
+
+                        <option value="N45">MMS Internacional</option>
+
+                        <option value="T25">SMS Salientes Roaming</option>
+
+                    </select>
+
+                    <button onclick="javascript:anadirDescuentoTrafico();" name="cmdAnadirDctoTrafico" type="button" class="radius">Añadir descuento de servicio medido</button>
+                </div>
+                <div class="medium-4 columns">
+                    <label>Cuota Mensual</label>
+                    <select name="cmbDescCuotaMensual" id="cmbDescCuotaMensual">
+
+                    </select>
+                    <button onclick="javascript:anadirDescuentoCuotaMensual();" name="cmdAnadirDctoCuotaMensual" type="button" class="radius">Añadir descuento de cuota mensual</button>
+                </div>
+                <div class="medium-4 columns">
+                    <label>Cuota de Alta</label>
+                    <select name="cmbDescCuotaAlta" id="cmbDescCuotaAlta">
+
+                        <option value="OY8">CUOTA ALTA BONO INTERNET MUNDIAL 1GB</option>
+
+                        <option value="W83">CUOTA ALTA MY EUROPE</option>
+
+                        <option value="GP7">CUOTA DE ALTA MY WORLD INTERNACIONAL</option>
+
+                        <option value="GQ3">C, ALTA OUTSIDE EUROPE INTERNACIONAL</option>
+
+                        <option value="OY6">CUOTA ALTA BONO INTERNET MUNDIAL 500 MB</option>
+
+                        <option value="KN6">CUOTA ALTA BONO INTERNET UE 150 MB</option>
+
+                        <option value="KN7">CUOTA ALTA BONO INTERNET UE 500 MB</option>
+
+                        <option value="W87">CUOTA ALTA MY WORLD</option>
+
+                        <option value="OY7">CUOTA ALTA BONO UE 1GB</option>
+
+                        <option value="GP4">CUOTA DE ALTA MY EUROPE INTERNACIONAL</option>
+
+                        <option value="BH3">CUOTA ALTA OUTSIDE EUROPE</option>
+
+                        <option value="AW9">CUOTA ALTA BONO INTERNET MUNDIAL 150 MB</option>
+
+                    </select>
+                    <button onclick="javascript:anadirDescuentoCuotaAlta();" name="cmdAnadirDctoCuotaAlta" type="button" class="radius">Añadir descuento de cuota de alta</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+    var vcDescOtrosTrafico = [];
+    var vcDescCuotasMensual = [];
+    var vcDescCuotasAlta = [];
+    vcDescOtrosTrafico.push(['N45', 'MMS Internacional', '0']);
+    vcDescOtrosTrafico.push(['T25', 'SMS Salientes Roaming', '25']);
+
+    vcDescCuotasMensual.push(['OY8', 'CUOTA ALTA  BONO INTERNET MUNDIAL  1GB', '0', '0.0']);
+    vcDescCuotasMensual.push(['W83', 'CUOTA ALTA MY EUROPE', '0', '0.0']);
+    vcDescCuotasMensual.push(['GP7', 'CUOTA DE ALTA MY WORLD INTERNACIONAL', '0', '0.0']);
+    vcDescCuotasMensual.push(['GQ3', 'C, ALTA OUTSIDE EUROPE INTERNACIONAL', '0', '0.0']);
+    vcDescCuotasMensual.push(['OY6', 'CUOTA ALTA  BONO INTERNET MUNDIAL 500 MB', '0', '0.0']);
+    vcDescCuotasMensual.push(['KN6', 'CUOTA ALTA BONO INTERNET UE 150 MB', '0', '0.0']);
+    vcDescCuotasMensual.push(['KN7', 'CUOTA ALTA BONO INTERNET UE 500 MB', '0', '0.0']);
+    vcDescCuotasMensual.push(['W87', 'CUOTA ALTA MY WORLD', '0', '0.0']);
+    vcDescCuotasMensual.push(['OY7', 'CUOTA ALTA  BONO  UE 1GB', '0', '0.0']);
+    vcDescCuotasMensual.push(['GP4', 'CUOTA DE ALTA MY EUROPE INTERNACIONAL', '0', '0.0']);
+    vcDescCuotasMensual.push(['BH3', 'CUOTA ALTA OUTSIDE EUROPE', '0', '0.0']);
+    vcDescCuotasMensual.push(['AW9', 'CUOTA ALTA BONO INTERNET MUNDIAL 150 MB', '0', '0.0']);
+    </script>
+
 </form>
+
+<script src="pub/js/Pest_NM_Descuentos.js"></script>

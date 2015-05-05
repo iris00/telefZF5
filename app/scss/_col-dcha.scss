@@ -108,13 +108,14 @@
             color: $monsoon;
             line-height: rem-calc(26);
             padding-bottom: 0;
+            margin-bottom: rem-calc(6);
         }
 
         // .accordion a {
         //     background-color: transparent;
         //     color: $oil;
         //     font-size: rem-calc(16);
-        //     padding: rem-calc(5 20 5 40); 
+        //     padding: rem-calc(5 20 5 40);
         // }
 
         // .accordion .content p {
@@ -142,20 +143,21 @@
         // .accordion a .right {
         //     color: $monsoon;
         // }
-   
+
     }
 
     // contrato
     .contrato {
         background-color: $third-color;
-        padding: rem-calc(20 10);
+        padding: rem-calc(20 0);
 
         p {
             color: $white;
             font-family: robotoregular, sans-serif;
             font-size: rem-calc(18);
             font-weight: normal;
-            padding: 0;
+            //padding: 0;
+            padding: rem-calc(0 20);
         }
 
         .button.small {
@@ -171,7 +173,7 @@
     // estado
     .estado {
         background-color: $gainsboro;
-        padding: rem-calc(20 10);
+        padding: rem-calc(20 0);
     }
 
     // SVAs
@@ -195,7 +197,8 @@
 
         label {
             color: $oil;
-            font-size: rem-calc(20);
+            //font-size: rem-calc(20);
+
         }
 
         .coste {
@@ -226,5 +229,15 @@
         &.destacado {
             background-color: $gainsboro;
         }
+
+        &.clearfix {
+            padding: rem-calc(20 26 0);
+        }
+
+        // .numeros.text-center {
+        //     font-size: rem-calc(15);
+        //     margin-top: rem-calc(6);
+        // }
+
     }
 }

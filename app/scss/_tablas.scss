@@ -66,7 +66,7 @@ table {
 // Tabla Ofertas
 table.ofertas {
     tbody tr:hover,
-    tbody tr.activa td {
+    tbody tr.activa {
         background-color: $smoke;
     }
 
@@ -89,6 +89,14 @@ table.ofertas {
         font-family: robotoregular, sans-serif;
         font-weight: normal;
     }
+
+    // td:nth-child(2)::first-letter {
+    //     text-transform: uppercase;
+    // }
+
+    // td:nth-child(2) {
+    //     text-transform: lowercase;
+    // }
 
     td.warning {
         color: $warning-color;
@@ -115,34 +123,125 @@ table.ofertas {
     td .fa {
         font-size: rem-calc(30);
     }
+
+    &.lista-clientes {
+        tbody {
+            display: block;
+            max-height: 510px;
+            overflow-y: auto;
+            border-bottom: 1px solid $iron;
+        }
+
+        tr {
+            display: block;
+            overflow: hidden;
+            clear: both;
+        }
+
+        th,
+        td {
+            float: left;
+        }
+
+        td:nth-child(1) {
+            text-align: left;
+        }
+
+        th:nth-child(1),
+        td:nth-child(1) {
+            width: 5%;
+        }
+
+        th:nth-child(2),
+        td:nth-child(2) {
+            width: 45%;
+            text-align: left;
+        }
+
+        th:nth-child(3),
+        td:nth-child(3) {
+            width: 15%;
+        }
+
+        th:nth-child(4),
+        td:nth-child(4) {
+            width: 20%;
+        }
+
+        th:nth-child(5),
+        td:nth-child(5) {
+            width: 15%;
+        }
+    }
 }
 
 // Tabla listado sedes
 table.listado-sedes {
-    margin: 0 1% rem-calc(15);
-    width: 98%;
+    margin-bottom: rem-calc(15);
+    margin-left: rem-calc(1);
 
     tbody tr {
         background-color: $snow;
         border: 1px solid $iron;
-        border-width: 0 1px 1px;
-        border-right: 10px solid $iron;
+        border-width: 0 10px 1px 1px;
+        border-right-color: $white;
 
         &.bloqueada {
             background-color: $smoke;
         }
 
         &.alert {
-            border-right-color: $alert-color;
+            border-right: 10px solid $alert-color;
         }
 
         &.success {
-            border-right-color: $success-color;
+            border-right: 10px solid $success-color;
+        }
+    }
+
+    &.seleccion {
+        tbody tr {
+            border: none;
+
+            &.bloqueada td {
+                background-color: $smoke;
+            }
+
+            &.bloqueada td:nth-child(4) {
+                background-color: $white;
+            }
+
+            &.alert td:nth-child(3) {
+                border-right: 10px solid $alert-color;
+            }
+
+            &.success td:nth-child(3) {
+                border-right: 10px solid $success-color;
+            }
+
+            &.alert,
+            &.success {
+                border-right: none;
+            }
+        }
+
+        td:nth-child(1) {
+            border-left: 1px solid $iron;
+        }
+
+        tbody tr td {
+            border-bottom: 1px solid $iron;
+        }
+
+        th:nth-child(4),
+        tbody tr td:nth-child(4),
+        tbody tr:last-child td:nth-child(4) {
+            border-bottom: none;
         }
     }
 
     td {
-        font-size: rem-calc(18);
+        font-size: rem-calc(16);
         text-align: center;
         vertical-align: middle;
 
@@ -188,6 +287,37 @@ table.listado-sedes {
         margin-left: 2px;
         margin-top: 5px;
     }
+    &.sin-ico {}
+}
+
+table.listado-kj {
+    margin-top: rem-calc(15);
+
+    tbody tr {
+        //border-right-width: 1px;
+        border-right: 1px solid $iron;
+    }
+
+    th,
+    th:nth-child(2),
+    td:nth-child(2) {
+        text-align: center;
+    }
+
+    th:nth-child(1),
+    td:nth-child(1) {
+        width: 50%;
+        text-align: left;
+        padding-left: rem-calc(5);
+    }
+
+    th:nth-child(2) {
+        width: 40%;
+    }
+
+    th:nth-child(3) {
+        width: 10%;
+    }
 }
 
 // Tabla configuración sedes
@@ -224,7 +354,8 @@ table.puestos {
     tr td, tr th {
         padding: rem-calc(10 2);
         text-align: center;
-        vertical-align: middle;
+        // vertical-align: middle;
+
     }
 
     td.numeros {
@@ -270,6 +401,12 @@ table.puestos {
     }
 }
 
+table.otr-productos {
+    th:nth-child(even) {
+        width: 15%;
+    }
+}
+
 table.puestos.accesorios {
     // Anchura columnas
     th:nth-child(2) {
@@ -294,6 +431,7 @@ table.puestos.moviles {
 
     .dispositivo div {
         display: inline-block;
+        font-size: rem-calc(14);
         width: 45%;
     }
 }
@@ -533,7 +671,7 @@ table.implantac {
         }
 
         thead tr th:nth-child(2) {
-            width: 18%;
+            width: 12%;
         }
 
         thead tr th:nth-child(5),
@@ -594,7 +732,7 @@ table.implantac {
         }
 
         thead tr:first-child th:nth-child(3) {
-            width: 23%;
+            width: 21%;
         }
     }
 
@@ -725,11 +863,71 @@ table.implantac {
     }
 
     .sortable th,
-    .sortable td {
+    .sortable td,
+    .sortable tr td:nth-child(7) {
         text-align: center;
+    }
+
+    .ofertas table thead tr th:nth-child(4) {
+        width: 24%;
+    }
+
+    .ofertas table thead tr th:nth-child(8) {
+        width: 13%;
+    }
+
+    .ofertas table thead tr th:nth-child(9),
+    .ofertas table thead tr th:nth-child(10) {
+        width: 5%;
     }
 
     .ofertas .sortable tr td:nth-child(1) {
         text-align: center;
+    }
+
+    // opweb descuentos
+    .ofertas .desc-trafico th:nth-child(4),
+    .ofertas .desc-trafico th:nth-child(5) {
+        width: 8%;
+    }
+
+    .ofertas .desc-cuotas th:nth-child(5),
+    .ofertas .desc-cuotas th:nth-child(6) {
+        width: 8%;
+    }
+
+    .ofertas .desc-trafico th:nth-child(3) {
+        width: 20%;
+    }
+
+    .ofertas .desc-cuotas th:nth-child(2),
+    .ofertas .desc-cuotas th:nth-child(3) {
+        width: 15%;
+    }
+
+    .ofertas .desc-cuotas th:nth-child(4) {
+        width: 20%;
+    }
+
+    .ofertas .desc-trafico th:nth-child(2) {
+        width: 30%;
+    }
+
+    .ofertas .desc-cuotas th:nth-child(2),
+    .ofertas .desc-cuotas th:nth-child(3) {
+        width: 15%;
+    }
+
+    // líneas de propuesta
+    .ofertas .lin-propuesta th:nth-child(4) {
+        width: 20%;
+    }
+
+    .ofertas .lin-propuesta th:nth-child(8) {
+        width: 7%;
+    }
+
+    .ofertas .lin-propuesta th:nth-child(9) {
+        width: 8%;
     }
 }

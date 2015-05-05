@@ -1,0 +1,278 @@
+$(document).ready(function() {
+	// Ocultamos los divs según la operación
+	var n = $("#nAcc").val();
+	var accesorio = '';
+	var operacion = '';
+	var ind;
+	for (ind=0; ind < n; ind++)
+	{
+		accesorio = $("#accesorio_"+ind).val();
+		operacion = $("#operacion_"+ind).val();
+		if (operacion != 2)
+		{
+			$("#div_telf_"+accesorio).hide();
+			$("#div_oper_"+accesorio).hide();
+		}
+		if (operacion == 2)
+		{
+			$("#div_telf_"+accesorio).show();
+			$("#div_oper_"+accesorio).show();
+			//$("#div_titular_"+accesorio).hide();
+		}
+		else if(operacion==9)
+		{
+			$("#div_telf_"+accesorio).show();
+			$("#div_oper_"+accesorio).show();
+			$("#div_titular_"+accesorio).show();
+		}else{
+			$("#div_telf_"+accesorio).hide();
+			$("#div_oper_"+accesorio).hide();
+			$("#div_titular_"+accesorio).hide();
+
+		}
+	}
+
+
+});
+
+function LimpiarTitular (iCodPuesto)
+{
+
+	document.getElementById('BuscaKJBoton_'+iCodPuesto).style.display='block';
+
+	document.getElementById("displayTxtDsDireccionCompleta_CT_"+iCodPuesto).innerHTML = '&nbsp;';
+	$('#displayTxtDsDireccionCompleta_CT_'+iCodPuesto).val ('');
+
+	$('#hCodTitular_CT_' + iCodPuesto).val (0);
+
+	$('#cmbTipoDocumentoTitular_CT_'       + iCodPuesto).val ('D');
+	$('#txtNumDocumentoTitular_CT_'        + iCodPuesto).val ('');
+	$('#txtDsTitular_CT_'                  + iCodPuesto).val ('');
+	$('#txtDsDireccion_CT_'                + iCodPuesto).val ('');
+	$('#txtDsNacionalidad_CT_'             + iCodPuesto).val ('');
+	$('#txtNumTelefonoContacto_CT_'        + iCodPuesto).val ('');
+	$('#txtMailContacto_CT_'               + iCodPuesto).val ('');
+	$('#cmbTipoDocumentoAutorizado_CT_'    + iCodPuesto).val ('D');
+	$('#txtNumDocumentoAutorizado_CT_'     + iCodPuesto).val ('');
+	$('#txtDsNombreAutorizado_CT_'         + iCodPuesto).val ('');
+	$('#txtDsApellidosAutorizado_CT_'      + iCodPuesto).val ('');
+	$('#txtNumDocumento_CT_'               + iCodPuesto).val ('');
+
+
+	$('#txtNumDocumentoTitular_CT_'        + iCodPuesto).val ('');
+	$('#txtDsTitular_CT_'                  + iCodPuesto).val ('');
+	$('#txtDsDireccion_CT_'                + iCodPuesto).val ('');
+	$('#txtDsNacionalidad_CT_'             + iCodPuesto).val ('');
+	$('#txtNumTelefonoContacto_CT_'        + iCodPuesto).val ('');
+	$('#txtMailContacto_CT_'               + iCodPuesto).val ('');
+	$('#cmbTipoDocumentoAutorizado_CT_'    + iCodPuesto).val ('D');
+	$('#txtNumDocumentoAutorizado_CT_'     + iCodPuesto).val ('');
+	$('#txtDsNombreAutorizado_CT_'         + iCodPuesto).val ('');
+	$('#txtDsApellidosAutorizado_CT_'      + iCodPuesto).val ('');
+	$('#txtNumDocumento_CT_'               + iCodPuesto).val ('');
+
+
+
+	$('#txtCodPostal_CT_'    + iCodPuesto).val ('');
+	$('#txtDsDireccion1_CT_' + iCodPuesto).val ('');
+	$('#txtNumCalle_CT_'     + iCodPuesto).val ('');
+	$('#txtInBis_CT_'        + iCodPuesto).val ('');
+	$('#txtInLetra_CT_'      + iCodPuesto).val ('');
+	$('#txtInEscalera_CT_'   + iCodPuesto).val ('');
+	$('#txtNumPiso_CT_'      + iCodPuesto).val ('');
+	$('#txtNumPuerta_CT_'    + iCodPuesto).val ('');
+	$('#txtDsDireccion2_CT_' + iCodPuesto).val ('');
+	$('#txtDsAclarador_CT_'  + iCodPuesto).val ('');
+	$('#isNewtitular_'  + iCodPuesto).val ('true');
+	$('#BuscaKJBoton_'  + iCodPuesto).show();
+
+
+	enableTitularfields(iCodPuesto, false);
+
+}
+
+function cambiaOperacion(accesorio, operacionBBDD)
+{
+
+	var operacion = $("#cmbNumeracion_"+accesorio).val();
+	console.log("Accesorio: " + accesorio+" - operacion:"+operacion);
+
+	// Cargamos en el campo de texto el valor del telefono introducido
+	if ((operacion == 10) && (operacionBBDD != 10))
+	{
+		var telefono = $("#cmbNumeracion_"+accesorio+" option:selected").html();
+		$("#txtNumTelefono_"+accesorio).val(telefono);
+	}
+
+	if ((operacion != 10) && (operacionBBDD == 10))
+	{
+		$("#txtNumTelefono_"+accesorio).val('');
+	}
+
+	if (operacion == 2)
+	{
+		$("#div_telf_"+accesorio).show();
+		$("#div_oper_"+accesorio).show();
+		$("#div_titular_"+accesorio).hide();
+	}
+	else if(operacion==9)
+	{
+		$("#div_telf_"+accesorio).show();
+		$("#div_oper_"+accesorio).show();
+		$("#div_titular_"+accesorio).show();
+	}else{
+		$("#div_telf_"+accesorio).hide();
+		$("#div_oper_"+accesorio).hide();
+		$("#div_titular_"+accesorio).hide();
+
+	}
+//	if(operacion==9){
+//
+//		//Portabilidad con cambio de titular
+//		$("#div_telf_"+accesorio).show();
+//		$("#div_oper_"+accesorio).show();
+//		$("#div_titular_"+accesorio).show();
+//
+//
+//	}else{
+//		$("#div_telf_"+accesorio).hide();
+//		$("#div_oper_"+accesorio).hide();
+//		$("#div_titular_"+accesorio).hide();
+//
+//
+//	}
+}
+
+function CrearURL ()
+{
+	// Recorremos todos los objetos de pantalla y montamos la url para el post con el par id-valor
+	var i      = 0;
+	var strURL = '';
+console.log ("CrearURL INICIO");
+	var lista_Elementos = document.getElementById ('frmConfAccesorios').elements;
+console.log ("CrearURL NUMELEMENTOS " + lista_Elementos.length);
+	for (i = 0; i < lista_Elementos.length; i++)
+	{
+	    if (lista_Elementos [i].value != '')
+	    {
+	    	console.log ('tipo: ' + lista_Elementos [i].type + ' id: ' + lista_Elementos [i].id + ' value = ' + lista_Elementos [i].value);
+	    	if ((lista_Elementos [i].type.toLowerCase() == 'hidden') || (lista_Elementos [i].type.toLowerCase() == 'text') || (lista_Elementos [i].type.toLowerCase() == 'textarea') || (lista_Elementos [i].type == 'select-one'))
+	    	{
+	    		if (strURL != '')
+	    			strURL+= ',';
+	    		//strURL+= '"' + lista_Elementos [i].id + '":"' + lista_Elementos [i].value + '"'
+	    		strURL+= lista_Elementos [i].id + ':' + lista_Elementos [i].value
+	        }else{
+	        	console.log("dato no en SQL"+lista_Elementos [i].type);
+
+	        }
+	    }
+	}
+//alert("CrearURL FIN " + strURL);
+	return strURL;
+}
+
+function marcarBorrado (accesorio)
+{
+	console.log ("Accesorio: " + accesorio);
+	// Actualiza la lista de accesorios a borrar
+	var lista = $("#listBorrar").val();
+	if (lista != '')
+	{
+		lista += ',';
+	}
+	lista += accesorio;
+	$("#listBorrar").val(lista);
+	// Ocultamos la fila
+	$("#div_fila_"+accesorio).hide();
+}
+function enableTitularfields(iCodPuesto,enabled){
+
+	$('#cmbTipoDocumentoAutorizado_CT_'    + iCodPuesto).attr('disabled', enabled);
+	$('#cmbTipoDocumentoTitular_CT_'       + iCodPuesto).attr('disabled', enabled);
+	$('#txtNumDocumentoTitular_CT_'        + iCodPuesto).attr('readonly', enabled);
+	$('#txtDsTitular_CT_'                  + iCodPuesto).attr('readonly', enabled);
+	$('#txtDsDireccion_CT_'                + iCodPuesto).attr('readonly', enabled);
+	$('#txtDsNacionalidad_CT_'             + iCodPuesto).attr('readonly', enabled);
+	$('#txtNumTelefonoContacto_CT_'        + iCodPuesto).attr('readonly', enabled);
+	$('#txtMailContacto_CT_'               + iCodPuesto).attr('readonly', enabled);
+	$('#cmbTipoDocumentoAutorizado_CT_'    + iCodPuesto).attr('readonly', enabled);
+	$('#txtNumDocumentoAutorizado_CT_'     + iCodPuesto).attr('readonly', enabled);
+	$('#txtDsNombreAutorizado_CT_'         + iCodPuesto).attr('readonly', enabled);
+	$('#txtDsApellidosAutorizado_CT_'      + iCodPuesto).attr('readonly', enabled);
+	$('#txtNumDocumento_CT_'               + iCodPuesto).attr('readonly', enabled);
+
+}
+function cambiaComboTitular(combo,indice){
+
+	enableTitularfields(indice, true);
+
+	if(combo.selectedIndex>-1 && titularesJson.titulares.titular[combo.selectedIndex-1]!=null){
+		//
+
+		$("select[id='cmbTipoDocumentoTitular_CT_"+indice+"']").find("option[value='"+titularesJson.titulares.titular[combo.selectedIndex-1].tipoDoc+"']").attr("selected",true);
+		$("#txtDsTitular_CT_"+indice).val(""+titularesJson.titulares.titular[combo.selectedIndex-1].titular);
+		//$("#txtNumDocumentoTitular_CT_"+indice).val(""+titularesJson.titulares.titular[combo.selectedIndex].codCliente);
+		$("#txtNumDocumentoTitular_CT_"+indice).val(""+titularesJson.titulares.titular[combo.selectedIndex-1].numDocumento);
+
+		/*
+		$("#txtNumDocumentoTitular_CT_"+indice).val(""+titularesJson.titulares.titular[combo.selectedIndex].nombre);
+		$("#txtNumDocumentoTitular_CT_"+indice).val(""+titularesJson.titulares.titular[combo.selectedIndex].apellidos);
+		*/
+
+		$("#txtDsNacionalidad_CT_"+indice).val(""+titularesJson.titulares.titular[combo.selectedIndex-1].nacionalidad);
+		$("#txtNumTelefonoContacto_CT_"+indice).val(""+titularesJson.titulares.titular[combo.selectedIndex-1].numTelefono);
+		$("#txtMailContacto_CT_"+indice).val(""+titularesJson.titulares.titular[combo.selectedIndex-1].email);
+		//alert(titularesJson.titulares.titular[combo.selectedIndex].direccion);
+		$("#displayTxtDsDireccionCompleta_CT_"+indice).html(""+titularesJson.titulares.titular[combo.selectedIndex-1].direccion);
+
+//		$("#txtMailContacto_CT_"+indice).val(""+titularesJson.titulares.titular[combo.selectedIndex].email);
+//		$("#txtMailContacto_CT_"+indice).val(""+titularesJson.titulares.titular[combo.selectedIndex].email);
+//		$("#txtMailContacto_CT_"+indice).val(""+titularesJson.titulares.titular[combo.selectedIndex].email);
+
+
+
+	}else{
+
+		//$("select[id='cmbTipoDocumentoTitular_CT_"+indice+"']").find("option[value='"+titularesJson.titulares.titular[combo.selectedIndex-1].tipoDoc+"']").attr("selected",false);
+		$("#txtDsTitular_CT_"+indice).val("");
+		$("#txtNumDocumentoTitular_CT_"+indice).val("");
+		$("#txtDsNacionalidad_CT_"+indice).val("");
+		$("#txtNumTelefonoContacto_CT_"+indice).val("");
+		$("#txtMailContacto_CT_"+indice).val("");
+
+		$("#txtNumDocumentoAutorizado_CT_"+indice).val("");
+		$("#txtDsNombreAutorizado_CT_"+indice).val("");
+		$("#txtDsApellidosAutorizado_CT_"+indice).val("");
+
+		$("#displayTxtDsDireccionCompleta_CT_"+indice).html("");
+
+
+	}
+}
+
+
+function finalizar()
+{
+	console.log("Finalizar");
+
+	var url = CrearURL();
+	var codOferta  = document.getElementById('COOFERTA').value;
+	var codSede    = document.getElementById('COSEDE').value;
+	var cuc        = document.getElementById('CUC').value;
+	var cif        = document.getElementById('CIF').value;
+	var nAcc	   = document.getElementById('nAcc').value;
+	var listBorrar = document.getElementById('listBorrar').value;
+
+	var data = {"opcion":"accesoriosSede","accion":"guardarConfiguracion","listBorrar":listBorrar,"nAcc":nAcc,"valores":url,"COOFERTA":codOferta,"COSEDE":codSede,"CUC":cuc,"CIF":cif};
+
+	$.post("CInicio",
+			data,
+			function(result)
+			{
+				$('#ope-num').html(result);
+				$('#ope-num').foundation('reveal', 'open');
+				$(document).foundation('reflow');
+			});
+
+}
