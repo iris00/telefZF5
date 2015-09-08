@@ -1,0 +1,181 @@
+<!doctype html>
+<html class="no-js" lang="es-ES">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Configurador de Movistar Fusión Empresas">
+  <title>Configurador MFE - Selección de sedes</title>
+  <!-- Iconos de aplicación -->
+  <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+  <!-- build:css css/libraries.min.css -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css css/app.min.css -->
+  <link rel="stylesheet" href="css/app.css">
+  <!-- endbuild -->
+  <!-- build:js js/vendor/modernizr.min.js -->
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
+<h2>Creación de notificaciones
+<a class="close-reveal-modal" title="Cerrar"><i class="fa fa-times"></i></a>
+</h2>
+<form id="miForm" name="miForm" action="" data-abide validate>
+  <input type="hidden" name="opcion" value="administracion">
+  <input type="hidden" name="accion" value="altaNotificaccion">
+  <!-- <input type="hidden" name="fechadeseada_submit" id="fechadeseada_submit" value="">
+  <input type="hidden" name="fechafin_submit" id="fechafin_submit" value=""> -->
+  <div class="row">
+    <div class="large-3 columns">
+      <label class="required">Título</label>
+    </div>
+    <div class="large-9 columns">
+      <input id="titulo" name="titulo" type="text" value="" maxlength="100" required>
+      <small class="error">El campo Título es obligatorio</small>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-3 columns">
+      <label class="required">Descripción</label>
+    </div>
+    <div class="large-9 columns">
+      <textarea name="descripcion" id="descripcion" cols="30" rows="4" value=""></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-3 columns">
+      <label class="required">Fecha</label>
+    </div>
+    <div class="large-3 columns fecha">
+      <input class="calendario2" name="input_from" id="input_from" type="text" required pattern="day_month_year">
+      <small class="error">El campo Fecha es obligatorio</small>
+    </div>
+    <div class="large-3 columns">
+      <label>Perfiles</label>
+    </div>
+    <div class="large-3 columns">
+      <select name="perfil" id="perfil" multiple class="multi-select2" onchange="prueba();">
+        <option value="0" selected>COMERCIAL(ME)</option>
+        <option value="1" selected>JEFE VENTAS(ME)</option>
+        <option value="2" selected>JEFE AREA(ME)</option>
+        <option value="3" selected>GERENTE(ME)</option>
+        <option value="4" selected>DIRECTOR(ME)</option>
+        <option value="6" selected>TURNA(ME)</option>
+        <option value="51" selected>OPERADOR PLACO</option>
+        <option value="100" selected>ADMINISTRADOR</option>
+        <option value="250" selected>TECNICO GEO</option>
+        <option value="251" selected>COORDINADOR GEO</option>
+        <option value="252" selected>RESPONSABLE GEO</option>
+        <option value="253" selected>JEFE GEO</option>
+        <option value="400" selected>COMERCIAL(PE - CI)</option>
+        <option value="401" selected>JEFE VENTAS(PE - CI)</option>
+        <option value="402" selected>JEFE OFICINA(PE - CI)</option>
+        <option value="403" selected>GERENTE(PE - CI)</option>
+        <option value="404" selected>DIRECTOR UNIDAD(PE - CI)</option>
+        <option value="405" selected>DIRECTOR(PE - CI)</option>
+        <option value="410" selected>COMERCIAL(PE - CD)</option>
+        <option value="411" selected>JEFE VENTAS(PE - CD)</option>
+        <option value="412" selected>JEFE OFICINA(PE - CD)</option>
+        <option value="413" selected>GERENTE(PE - CD)</option>
+        <option value="414" selected>DIRECTOR(PE - CD)</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-3 columns">
+      <label>Territorio</label>
+    </div>
+    <div class="large-3 columns">
+      <select name="territorio" multiple id="territorio" class="multi-select2">
+        <option value="1" selected>CENTRO</option>
+        <option value="2" selected>NORTE</option>
+        <option value="3" selected>CATALUÑA</option>
+        <option value="4" selected>ESTE</option>
+        <option value="5" selected>SUR</option>
+        <option value="6" selected>TODOS</option>
+      </select>
+    </div>
+    <div class="large-3 columns">
+      <label class="required">Expiración</label>
+    </div>
+    <div class="large-3 columns fecha">
+      <input class="calendario2" name="input_to" id="input_to" type="text" required pattern="day_month_year">
+      <small class="error">El campo Expiración es obligatorio</small>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-3 columns">
+      <label>Segmento</label>
+    </div>
+    <div class="large-3 columns end">
+      <select name="segmento" id="segmento" class="multi-select2" multiple>
+        <option value="ME" selected>MEDIANA EMPRESA</option>
+        <option value="PE" selected>PEQUEÑA EMPRESA</option>
+      </select>
+    </div>
+  </div>
+  <div class="row botonera">
+    <div class="large-12 columns text-right">
+      <button id="botonBorra" type="reset" class="radius func-secondary tiny" title="Borrar formulario">Borrar</button>
+      <button type="submit" id="botonAlta" class="radius tiny close-reveal-modals" title="Crear notificación">Crear</button>
+    </div>
+  </div>
+</form>
+  <!-- build:js js/vendor/libraries.min.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="bower_components/footable/js/footable.js"></script>
+  <script src="bower_components/footable/js/footable.paginate.js"></script>
+  <script src="bower_components/footable/js/footable.sort.js"></script>
+  <script src="bower_components/fastclick/lib/fastclick.js"></script>
+  <script src="bower_components/jqueryui/jquery-ui-autocomplete.js"></script>
+  <script src="bower_components/multiple-select/jquery.multiple.select.js"></script>
+  <script src="bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
+  <script src="bower_components/editableSelect/jquery.editable.select.min.js"></script>
+  <script src="bower_components/pickadate/lib/picker.js"></script>
+  <script src="bower_components/pickadate/lib/picker.date.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js js/vendor/foundation.min.js -->
+  <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
+  <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
+  <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+  <!--<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
+  <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+  <!-- <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script> -->
+  <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+  <!-- <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script> -->
+  <!-- endbuild -->
+  <!-- build:js js/app.min.js -->
+  <script src="js/app.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>

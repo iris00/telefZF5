@@ -69,7 +69,7 @@
 				<section role="main" class="main-section">
 					<article class="row">
 						<div class="contenido large-12 columns">
-							<form action="action" class="control-ofer">
+							<form action="action" class="control-ofer" data-abide>
 								<div class="panel tit">
 									<h2>Filtro de ofertas</h2>
 									<div class="panel-cont">
@@ -80,7 +80,8 @@
 														<label>Fecha desde</label>
 													</div>
 													<div class="medium-12 columns fecha">
-														<input class="calendario" type="text" required pattern="day_month_year">
+														<input class="calendario desde" type="text" required pattern="day_month_year">
+                            <small class="error">Este campo es obligatorio.</small>
 													</div>
 												</div>
 											</div>
@@ -92,7 +93,8 @@
 														<label>Fecha hasta</label>
 													</div>
 													<div class="medium-12 columns fecha">
-														<input class="calendario" type="text" required pattern="day_month_year">
+														<input class="calendario hasta" type="text" required pattern="day_month_year">
+                            <small class="error">Este campo es obligatorio.</small>
 													</div>
 												</div>
 											</div>
@@ -6280,16 +6282,17 @@
 	<!-- build:js js/vendor/libraries.min.js -->
 	<!-- bower:js -->
 	<script src="bower_components/jquery/dist/jquery.js"></script>
-	<script src="bower_components/fastclick/lib/fastclick.js"></script>
-	<script src="bower_components/multiple-select/jquery.multiple.select.js"></script>
+	<script src="bower_components/dropzone/dist/min/dropzone.min.js"></script>
 	<script src="bower_components/footable/js/footable.js"></script>
 	<script src="bower_components/footable/js/footable.paginate.js"></script>
 	<script src="bower_components/footable/js/footable.sort.js"></script>
-	<script src="bower_components/pickadate/lib/picker.js"></script>
-	<script src="bower_components/pickadate/lib/picker.date.js"></script>
+	<script src="bower_components/fastclick/lib/fastclick.js"></script>
+	<script src="bower_components/jqueryui/jquery-ui-autocomplete.js"></script>
+	<script src="bower_components/multiple-select/jquery.multiple.select.js"></script>
 	<script src="bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
 	<script src="bower_components/editableSelect/jquery.editable.select.min.js"></script>
-	<script src="bower_components/jqueryui/jquery-ui-autocomplete.js"></script>
+	<script src="bower_components/pickadate/lib/picker.js"></script>
+	<script src="bower_components/pickadate/lib/picker.date.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
 	<!-- build:js js/vendor/foundation.min.js -->
@@ -6313,6 +6316,7 @@
 	<!-- endbuild -->
 	<!-- build:js js/app.min.js -->
 	<script src="js/app.js"></script>
+  <!-- <script src="js/from-to.js"></script> -->
 	<!-- endbuild -->
 </body>
 

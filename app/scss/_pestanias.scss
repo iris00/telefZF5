@@ -2,46 +2,46 @@
 
 // Pestañas OPWEB
 .opweb {
-    .tabs.child {
-        margin-top: 0;
-    }
+  .tabs.child {
+    margin-top: 0;
+  }
 
-    .tabs dd > a,
-    .tabs .tab-title > a {
-        font-size: rem-calc(14);
-        padding: rem-calc(8 16);
-    }
+  .tabs dd > a,
+  .tabs .tab-title > a {
+    font-size: rem-calc(14);
+    padding: rem-calc(8 16);
+  }
 
-    .tabs dd > a:focus {
-        border-bottom: 0;
-    }
+  .tabs dd > a:focus {
+    border-bottom: 0;
+  }
 
-    .tabs dd.active a,
-    .tabs .tab-title.active a {
-        background-color: $secondary-color;
-        color: $white;
-    }
+  .tabs dd.active a,
+  .tabs .tab-title.active a {
+    background-color: $secondary-color;
+    color: $white;
+  }
 
-    .tabs dd.active a:focus,
-    .tabs dd.active a:hover {
-        background-color: scale-color($secondary-color, $lightness: -35%);
-    }
+  .tabs dd.active a:focus,
+  .tabs dd.active a:hover {
+    background-color: scale-color($secondary-color, $lightness: -35%);
+  }
 
-    .tabs dd > a:focus,
-    .tabs .tab-title > a:hover {
-        background-color: scale-color($silver, $lightness: -35%);
-    }
+  .tabs dd > a:focus,
+  .tabs .tab-title > a:hover {
+    background-color: scale-color($silver, $lightness: -35%);
+  }
 
-    .tabs-content {
-        border-top: 1px solid $secondary-color;
-        font-size: rem-calc(15);
-    }
+  .tabs-content {
+    border-top: 1px solid $secondary-color;
+    font-size: rem-calc(15);
+  }
 
-    .tabs-content.parent {
-        margin-bottom: 0;
-    }
+  .tabs-content.parent {
+    margin-bottom: 0;
+  }
 
-    .tabs-content.child {
-        padding-top: rem-calc(16);
-    }
+  .tabs-content.child {
+    padding-top: rem-calc(16);
+  }
 }

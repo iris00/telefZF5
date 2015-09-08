@@ -2,196 +2,198 @@
 
 // Estilos generales
 body {
-    overflow-y: scroll;
+  overflow-y: scroll;
 }
 
 h1,
 h2,
 h3 {
-    font-family: robotoregular, sans-serif;
+  font-family: robotoregular, sans-serif;
 }
 
 .no-modal {
-    color: $secondary-color;
-    font-size: rem-calc(24);
-    margin-bottom: rem-calc(15);
+  color: $secondary-color;
+  font-size: rem-calc(24);
+  margin-bottom: rem-calc(15);
 }
 
 a:active,
 a:link,
 select:focus,
 select:active {
-    outline: 0 transparent !important;
+  outline: 0 transparent !important;
 }
 
 a:focus {
-    border-bottom: 1px dotted;
+  border-bottom: 1px dotted;
 }
 
 .oculto {
-    display: none;
+  display: none;
 }
 
 .alert {
-    color: $alert-color;
+  color: $alert-color;
 }
 
 .success {
-    color: $success-color;
+  color: $success-color;
 }
 
 .warning {
-    color: $warning-color;
+  color: $warning-color;
 }
 
 #wait {
-    font-size: rem-calc(50);
-    padding-top: rem-calc(100);
-    text-align: center;
+  font-size: rem-calc(50);
+  padding-top: rem-calc(100);
+  text-align: center;
 
-    .fa-cog {
-        margin-bottom: rem-calc(20);
-    }
+  .fa-cog {
+    margin-bottom: rem-calc(20);
+  }
 }
 
 .info {
-    color: $info-color;
+  color: $info-color;
 }
 
 .postventa {
-    background-color: scale-color($success-color, $lightness: 88) !important;
-    font-style: italic !important;
+  background-color: scale-color($success-color, $lightness: 88) !important;
+  font-style: italic !important;
 
-    input[type="text"][disabled] {
-        height: rem-calc(35);
-        margin-top: rem-calc(-3);
-    }
+  input[type="text"][disabled] {
+    height: rem-calc(35);
+    margin-top: rem-calc(-3);
+  }
 
-    .euro:after {
-        top: rem-calc(6);
-    }
+  .euro:after {
+    top: rem-calc(3);
+  }
+}
+
+#excepcion .error.row {
+  margin-bottom: rem-calc(20);
 }
 
 .contenido {
-    min-height: 607px;
-    padding-top: rem-calc(50);
-    position: relative;
+  min-height: 607px;
+  padding-bottom: rem-calc(20);
+  padding-top: rem-calc(50);
+  position: relative;
 
-    .plus {
-        color: $charcoal;
-        left: rem-calc(70);
-        position: absolute;
-        top: rem-calc(-15);
+  .plus {
+    color: $charcoal;
+    left: rem-calc(70);
+    position: absolute;
+    top: rem-calc(-15);
 
-        .fa {
-            background-color: $white;
-            border-radius: 50%;
-            box-shadow: 0 0 5px $charcoal;
-            font-size: rem-calc(20);
-            padding: rem-calc(17 19);
-        }
+    .fa {
+      background-color: $white;
+      border-radius: 50%;
+      box-shadow: 0 0 5px $charcoal;
+      font-size: rem-calc(20);
+      padding: rem-calc(17 19);
     }
+  }
 
-    .plus:hover,
-    .plus:active,
-    .plus:focus {
-        border-bottom: 0;
-    }
+  .plus:hover,
+  .plus:active,
+  .plus:focus {
+    border-bottom: 0;
+  }
 
-    .plus:hover .fa,
-    .plus:focus .fa,
-    .plus:active .fa {
-        background-color: $third-color;
-        color: $white;
-    }
+  .plus:hover .fa,
+  .plus:focus .fa,
+  .plus:active .fa {
+    background-color: $third-color;
+    color: $white;
+  }
 }
 
 article.row .contenido.large-12 > * {
-    margin-right: 4px;
+  margin-right: 4px;
 }
 
-.aviso {
-    color: $alert-color;
+.aviso,
+.reveal-modal .aviso.text-center {
+  color: $alert-color;
 }
 
 .big {
-    font-family: robotoregular, sans-serif;
-    font-size: large;
-    font-weight: normal;
+  font-family: robotoregular, sans-serif;
+  font-size: large;
+  font-weight: normal;
 }
 
-// Parpadeo al actualizar el precio de la oferta
-@-webkit-keyframes parpadeo {
-    0%, 100% {
-        background-color: $white;
-    }
+// // Parpadeo al actualizar el precio de la oferta
+// @-webkit-keyframes parpadeo {
+//     0%, 100% {
+//         background-color: $white;
+//     }
 
-    50% {
-        background-color: $info-color;
-    }
-}
+//     50% {
+//         background-color: $info-color;
+//     }
+// }
 
+// @-moz-keyframes parpadeo {
+//     0%, 100% {
+//         background-color: $white;
+//     }
 
-@-moz-keyframes parpadeo {
-    0%, 100% {
-        background-color: $white;
-    }
+//     50% {
+//         background-color: $info-color;
+//     }
+// }
 
-    50% {
-        background-color: $info-color;
-    }
-}
+// @-o-keyframes parpadeo {
+//     0%, 100% {
+//         background-color: $white;
+//     }
 
+//     50% {
+//         background-color: $info-color;
+//     }
+// }
 
-@-o-keyframes parpadeo {
-    0%, 100% {
-        background-color: $white;
-    }
+// @keyframes parpadeo {
+//     0%, 100% {
+//         background-color: $white;
+//     }
 
-    50% {
-        background-color: $info-color;
-    }
-}
-
-
-@keyframes parpadeo {
-    0%, 100% {
-        background-color: $white;
-    }
-
-    50% {
-        background-color: $info-color;
-    }
-}
-
+//     50% {
+//         background-color: $info-color;
+//     }
+// }
 
 .cambio {
-    -moz-animation: parpadeo 3s infinite;
-    -o-animation: parpadeo 3s infinite;
-    -webkit-animation: parpadeo 3s infinite;
-    animation: parpadeo 3s infinite;
+  // -moz-animation: parpadeo 3s infinite;
+  // -o-animation: parpadeo 3s infinite;
+  // -webkit-animation: parpadeo 3s infinite;
+  // animation: parpadeo 3s infinite;
+  padding-left: rem-calc(16);
+
+  p {
     padding-left: rem-calc(16);
+  }
 
-    p {
-        padding-left: rem-calc(16);
-    }
-
-    .big {
-        color: $alert-color;
-    }
+  .big {
+    color: $alert-color;
+  }
 }
 
 // Search
 #search input[type="text"] {
-    font-size: rem-calc(18);
+  font-size: rem-calc(18);
 }
 
 // Footer
 footer {
-    background-color: $secondary-color;
-    color: $white;
-    line-height: rem-calc(46);
-    min-height: rem-calc(46);
+  background-color: $secondary-color;
+  color: $white;
+  line-height: rem-calc(46);
+  min-height: rem-calc(46);
 }
 
 // .loader {
@@ -203,3 +205,6 @@ footer {
 //     vertical-align: top;
 //     width: 20%;
 // }
+
+// Prueba de accecss (requiere import en app.scss)
+//@include accecss(html body, true, false, false);

@@ -1,115 +1,218 @@
 <h2>Filtrado avanzado <a class="close-reveal-modal" title="Cerrar"><i class="fa fa-times"></i></a>
 </h2>
-<form action="ofertas-filtradas.html" data-abide>
-    <div class="row">
-        <div class="large-4 columns">
-            <label class="required">CUC</label>
-        </div>
-        <div class="large-8 columns">
-            <input type="text" placeholder="Ej. T151221" required pattern="alpha_numeric" autofocus>
-            <small class="error">Este campo es obligatorio y sólo admite letras y números</small>
-        </div>
+<form action="" data-abide>
+  <input type="hidden" name="opcion" value="ofertas">
+  <input type="hidden" name="accion" value="bus_avanzada2">
+  <div class="row">
+    <div class="large-4 columns">
+      <label>Nombre</label>
     </div>
-
-    <div class="row">
-        <div class="large-4 columns">
-            <label class="required">CIF</label>
-        </div>
-        <div class="large-8 columns">
-            <input type="text" placeholder="Ej. T151221" required pattern="alpha_numeric">
-            <small class="error">Este campo es obligatorio y sólo admite letras y números</small>
-        </div>
+    <div class="large-8 columns">
+      <input type="text" id="Nombre" name="Nombre" placeholder="Nombre del cliente" pattern="alpha_numeric">
+      <small class="error">Este campo sólo admite letras y números</small>
     </div>
-
-    <div class="row">
-        <div class="large-4 columns">
-            <label class="required">Creación</label>
-        </div>
-        <div class="large-8 columns">
-            <div class="row">
-                <div class="large-6 columns fecha">
-                    <input class="calendario" type="text" placeholder="Desde..." required pattern="day_month_year">
-                    <small class="error">Este campo es obligatorio y sólo admite fechas</small>
-                </div>
-                <div class="large-6 columns fecha">
-                    <input class="calendario" type="text" placeholder="Hasta..." required pattern="day_month_year">
-                    <small class="error">Este campo es obligatorio y sólo admite fechas</small>
-                </div>
-            </div>
-        </div>
+  </div>
+  <div class="row">
+    <div class="large-4 columns">
+      <label>CUC</label>
     </div>
-
-    <div class="row">
-        <div class="large-4 columns">
-            <label class="required">Modificación</label>
-        </div>
-        <div class="large-8 columns">
-            <div class="row">
-                <div class="large-6 columns fecha">
-                    <input class="calendario" type="text" placeholder="Desde..." required pattern="day_month_year">
-                    <small class="error">Este campo es obligatorio y sólo admite fechas</small>
-                </div>
-                <div class="large-6 columns fecha">
-                    <input class="calendario" type="text" placeholder="Hasta..." required pattern="day_month_year">
-                    <small class="error">Este campo es obligatorio y sólo admite fechas</small>
-                </div>
-            </div>
-        </div>
+    <div class="large-8 columns">
+      <input type="text" id="CUC" name="CUC" placeholder="Introduzca un CUC" pattern="number">
+      <small class="error">Este campo sólo admite números</small>
     </div>
-
-    <div class="row">
-        <div class="large-4 columns">
-            <label class="required">Importe</label>
-        </div>
-        <div class="large-8 columns">
-            <div class="row">
-                <div class="large-6 columns">
-                    <div class="euro peque">
-                        <input type="text" placeholder="Desde..." required pattern="number">
-                        <small class="error">Este campo es obligatorio y sólo admite números</small>
-                    </div>
-                </div>
-                <div class="large-6 columns">
-                    <div class="euro peque">
-                        <input type="text" placeholder="Hasta..." required pattern="number">
-                        <small class="error">Este campo es obligatorio y sólo admite números</small>
-                    </div>
-                </div>
-            </div>
-        </div>
+  </div>
+  <div class="row">
+    <div class="large-4 columns">
+      <label>CIF</label>
     </div>
-
-    <div class="row">
-        <div class="large-4 columns">
-            <label>Estado</label>
-        </div>
-        <div class="large-8 columns">
-            <select name="estado">
-                <option value="est1">Todos</option>
-                <option value="est2">Estado 2</option>
-                <option value="est3">Estado 3</option>
-            </select>
-        </div>
+    <div class="large-8 columns">
+      <input type="text" id="CIF" name="CIF" placeholder="Introduzca un CIF" pattern="alpha_numeric">
+      <small class="error">Este campo es obligatorio y sólo admite letras y números</small>
     </div>
-
-    <div class="row">
-        <div class="large-4 columns">
-            <label>Segmento</label>
-        </div>
-        <div class="large-8 columns">
-            <select name="segmento">
-                <option value="est1">Todos</option>
-                <option value="est2">Segmento 2</option>
-                <option value="est3">Segmento 3</option>
-            </select>
-        </div>
+  </div>
+  <div class="row">
+    <div class="large-4 columns">
+      <label>Creación</label>
     </div>
-    <div class="row botonera">
-        <div class="large-12 columns text-right">
-            <button type="reset" class="radius func-secondary tiny" title="Borrar formulario">Borrar</button>
-            <button type="submit" class="radius tiny" title="Iniciar búsqueda">Buscar</button>
+    <div class="large-8 columns">
+      <div class="row">
+        <div class="large-6 columns fecha">
+          <input class="calendario desde" name="fx_creacion_ini" type="text" placeholder="Desde..." pattern="day_month_year">
+          <small class="error">Este campo sólo admite fechas</small>
         </div>
+        <div class="large-6 columns fecha">
+          <input class="calendario hasta" name="fx_creacion_fin" type="text" placeholder="Hasta..." pattern="day_month_year">
+          <small class="error">Este campo sólo admite fechas</small>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="row">
+    <div class="large-4 columns">
+      <label>Modificación</label>
+    </div>
+    <div class="large-8 columns">
+      <div class="row">
+        <div class="large-6 columns fecha">
+          <input class="calendario desde2" name="fx_modif_ini" type="text" placeholder="Desde... " pattern="day_month_year">
+          <small class="error">Este campo sólo admite fechas</small>
+        </div>
+        <div class="large-6 columns fecha">
+          <input class="calendario hasta2" name="fx_modif_fin" type="text" placeholder="Hasta... " pattern="day_month_year">
+          <small class="error">Este campo sólo admite fechas</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-4 columns">
+      <label>Importe</label>
+    </div>
+    <div class="large-8 columns">
+      <div class="row">
+        <div class="large-6 columns">
+          <div class="euro peque">
+            <input type="text" name="importe_desde" placeholder="Desde..." pattern="number">
+            <small class="error">Este campo sólo admite números</small>
+          </div>
+        </div>
+        <div class="large-6 columns">
+          <div class="euro peque">
+            <input type="text" name="importe_hasta" placeholder="Hasta..." pattern="number">
+            <small class="error">Este campo sólo admite números</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-4 columns">
+      <label>Estado</label>
+    </div>
+    <div class="large-8 columns">
+      <select name="estado">
+        <option value="TODOS">Todos</option>
+        <option value="1">ACLARACION</option>
+        <option value="6">ANULADO</option>
+        <option value="7">ANULADO GEO</option>
+        <option value="15">EN PROVISION</option>
+        <option value="16">EN TRAMITACION</option>
+        <option value="17">FINALIZADO</option>
+        <option value="19">INCIDENCIA</option>
+        <option value="21">MESA DE PEDIDOS</option>
+        <option value="23">PENDIENTE ANEXAR CONTRATO</option>
+        <option value="27">PENDIENTE BIENVENIDA</option>
+        <option value="40">PENDIENTE PROYECTO TECNICO</option>
+        <option value="43">PENDIENTE TRAMITAR</option>
+        <option value="50">REGULARIZACION</option>
+        <option value="62">SOLICITUD ANULACION</option>
+        <option value="66">BORRADOR</option>
+        <option value="67">SEDES FINALIZADAS</option>
+        <option value="68">SOLVENCIA APROBADA</option>
+        <option value="69">SOLVENCIA CONDICIONADA</option>
+        <option value="70">PENDIENTE DE ANALISIS</option>
+        <option value="71">CONTRATO GENERADO</option>
+        <option value="72">PENDIENTE ENVIO A HECO</option>
+        <option value="73">ENVIADO A HECO</option>
+        <option value="75">CANCELADO ENVIO A HECO</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-4 columns">
+      <label>Segmento</label>
+    </div>
+    <div class="large-8 columns">
+      <select id="segmento" name="segmento" onchange="cargarSubSegmento(this);">
+        <option value="TODOS">Todos</option>
+        <option value="ME">MEDIANA EMPRESA</option>
+        <option value="PE">PEQUEÑA EMPRESA</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-4 columns">
+      <label>SubSegmento</label>
+    </div>
+    <div class="large-8 columns">
+      <select id="subSegmento" name="subSegmento" multiple class="multi-select2">
+      </select>
+    </div>
+  </div>
+  <div class="row botonera">
+    <div class="large-12 columns text-right">
+      <button type="reset" class="radius func-secondary tiny" title="Borrar formulario">Borrar</button>
+      <button type="submit" class="radius tiny" title="Iniciar búsqueda">Buscar</button>
+    </div>
+  </div>
 </form>
-
 <script src="js/app.js"></script>
+<script>
+  $(document).ready(function() {
+    'use strict';
+    var from_$input = $('.desde').pickadate(),
+    from_picker = from_$input.pickadate('picker');
+
+    var to_$input = $('.hasta').pickadate(),
+    to_picker = to_$input.pickadate('picker');
+
+    // Check if there’s a “from” or “to” date to start with.
+    if (from_picker.get('value')) {
+      to_picker.set('min', from_picker.get('select'));
+    }
+    if (to_picker.get('value')) {
+      from_picker.set('max', to_picker.get('select'));
+    }
+
+    // When something is selected, update the “from” and “to” limits.
+    from_picker.on('set', function(event) {
+      if (event.select) {
+        to_picker.set('min', from_picker.get('select'));
+      } else if ('clear' in event) {
+        to_picker.set('min', false);
+      }
+    });
+
+    to_picker.on('set', function(event) {
+      if (event.select) {
+        from_picker.set('max', to_picker.get('select'));
+      } else if ('clear' in event) {
+        from_picker.set('max', false);
+      }
+    });
+
+    //__________________________________________________________________________________
+
+    var from_$input2 = $('.desde2').pickadate(),
+    from_picker2 = from_$input2.pickadate('picker');
+
+    var to_$input2 = $('.hasta2').pickadate(),
+    to_picker2 = to_$input2.pickadate('picker');
+
+    // Check if there’s a “from” or “to” date to start with.
+    if (from_picker2.get('value')) {
+      to_picker2.set('min', from_picker2.get('select'));
+    }
+    if (to_picker2.get('value')) {
+      from_picker2.set('max', to_picker2.get('select'));
+    }
+
+    // When something is selected, update the “from” and “to” limits.
+    from_picker2.on('set', function(event) {
+      if (event.select) {
+        to_picker2.set('min', from_picker2.get('select'));
+      } else if ('clear' in event) {
+        to_picker2.set('min', false);
+      }
+    });
+
+    to_picker2.on('set', function(event) {
+      if (event.select) {
+        from_picker2.set('max', to_picker2.get('select'));
+      } else if ('clear' in event) {
+        from_picker2.set('max', false);
+      }
+    });
+  });
+</script>
+<script src="js/utils.js"></script>

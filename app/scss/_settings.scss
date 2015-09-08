@@ -52,20 +52,20 @@
 // Fonts
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 @font-face {
-    font-family: robotolight;
-    src: url("../fonts/roboto-light-webfont.eot");
-    src: url("../fonts/roboto-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-light-webfont.woff2") format("woff2"), url("../fonts/roboto-light-webfont.woff") format("woff"), url("../fonts/roboto-light-webfont.ttf") format("truetype"), url("../fonts/roboto-light-webfont.svg#robotolight") format("svg");
-    font-weight: normal;
-    font-style: normal;
+  font-family: robotolight;
+  src: url("../fonts/roboto-light-webfont.eot");
+  src: url("../fonts/roboto-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-light-webfont.woff2") format("woff2"), url("../fonts/roboto-light-webfont.woff") format("woff"), url("../fonts/roboto-light-webfont.ttf") format("truetype"), url("../fonts/roboto-light-webfont.svg#robotolight") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 
 @font-face {
-    font-family: robotoregular;
-    src: url("../fonts/roboto-regular-webfont.eot");
-    src: url("../fonts/roboto-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-regular-webfont.woff2") format("woff2"), url("../fonts/roboto-regular-webfont.woff") format("woff"), url("../fonts/roboto-regular-webfont.ttf") format("truetype"), url("../fonts/roboto-regular-webfont.svg#robotoregular") format("svg");
-    font-weight: normal;
-    font-style: normal;
+  font-family: robotoregular;
+  src: url("../fonts/roboto-regular-webfont.eot");
+  src: url("../fonts/roboto-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-regular-webfont.woff2") format("woff2"), url("../fonts/roboto-regular-webfont.woff") format("woff"), url("../fonts/roboto-regular-webfont.ttf") format("truetype"), url("../fonts/roboto-regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 
@@ -145,7 +145,7 @@ $font-weight-bold: bold !default;
 // $last-child-float: $opposite-direction;
 
 // We use these as default colors throughout
-$primary-color: #0080a6;
+$primary-color: #0080a1;
 $secondary-color: #004250;
 $third-color: #009eb8;
 $fourth-color: #4b92db;
@@ -1024,7 +1024,8 @@ $panel-bg: $white;
 // $panel-border-size: 1px;
 
 // We use this % to control how much we darken things on hover
-// $panel-function-factor: -11%;
+$panel-function-factor: -11%;
+
 // $panel-border-color: scale-color($panel-bg, $lightness: $panel-function-factor);
 
 // We use these to set default inner padding and bottom margin

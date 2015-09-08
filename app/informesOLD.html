@@ -1,0 +1,335 @@
+<!doctype html>
+<html class="no-js" lang="es-ES">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Configurador de Movistar Fusión Empresas">
+  <title>Configurador MFE - Selección de sedes</title>
+  <!-- Iconos de aplicación -->
+  <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+  <!-- build:css css/libraries.min.css -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css css/app.min.css -->
+  <link rel="stylesheet" href="css/app.css">
+  <!-- endbuild -->
+  <!-- build:js js/vendor/modernizr.min.js -->
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
+
+<body class="ofertas">
+  <div class="row">
+    <div class="off-canvas-wrap" data-offcanvas="overlap">
+      <div class="inner-wrap">
+        <header role="banner">
+          <div class="tit-sede text-center">
+          </div>
+          <!-- tit-sede -->
+          <nav class="tab-bar" role="navigation">
+            <section>
+              <div class="large-1 medium-1 small-2 columns">
+                <a title="Menú de navegación" href="" class="left-off-canvas-toggle menu-icon" tabindex="1">
+                  <span></span>
+                </a>
+              </div>
+              <div class="large-8 medium-6 columns show-for-medium-up">
+                <h1 class="text-center">Generación de Informes Personalizados</h1>
+              </div>
+              <div class="large-3 medium-5 small-10 columns">
+                <a href="_notific.html" title="Notificaciones" data-reveal-id="notific" data-reveal-ajax="true">
+                  <i class="fa fa-bell-o"><span>3</span></i>
+                </a>
+                <a href="_buscar.html" title="Buscar" data-reveal-id="search" data-reveal-ajax="true">
+                  <i class="fa fa-search"></i>
+                </a>
+                <a href="_buscar-filtro.html" title="Buscar con filtro avanzado" data-reveal-id="search-filter" data-reveal-ajax="true">
+                  <i class="fa fa-search-plus"></i>
+                </a>
+                <a href="configurador.html" title="Inicio">
+                  <i class="fa fa-home fa-2x"></i>
+                </a>
+              </div>
+            </section>
+          </nav>
+          <!-- tab-bar -->
+        </header>
+        <aside class="left-off-canvas-menu">
+          <ul class="off-canvas-list">
+            <li class="off-canvas-head">
+              <p>Manuel Beltrán Pérez</p>
+              <select name="perfil" onfocus="offcanvas.show()">
+                <option value="">Comercial</option>
+                <option value="">Otro perfil</option>
+                <option value="">Otro perfil más</option>
+              </select>
+            </li>
+            <li><a href="_otras-oper.html" data-reveal-id="otras-oper" data-reveal-ajax="true"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
+            </li>
+            <li><a href="informes.html"><i class="fa fa-bar-chart fa-2x"></i> Crear informes</a>
+            </li>
+            <li><a href="notificaciones.html"><i class="fa fa-bell-o"></i> Notificaciones</a>
+            </li>
+            <li><a href="#"><i class="fa fa-bookmark fa-2x"></i> Producto MFE</a>
+            </li>
+            <li><a href="#"><i class="fa fa-comments fa-2x"></i> Ayuda</a>
+            </li>
+            <li><a href="admin.html"><i class="fa fa-gears fa-2x"></i> Administración</a>
+            </li>
+            <li><a href="#"><i class="fa fa-asterisk"></i> Traslados MFE</a>
+            </li>
+          </ul>
+          <!-- off-canvas-list -->
+        </aside>
+        <!-- left-off-canvas-menu -->
+        <section class="main-section" role="main">
+          <article class="row" data-equalizer>
+            <div class="contenido large-12 small-12 columns" data-equalizer-watch>
+              <form action="action3">
+                <div class="row">
+                  <div class="large-3 columns">
+                    <label>Matricula</label>
+                  </div>
+                  <div class="large-3 columns">
+                    <input type="text" placeholder="Ej. T151221" autofocus>
+                  </div>
+                  <div class="large-3 columns">
+                    <label>Estado</label>
+                  </div>
+                  <div class="large-3 columns">
+                    <select name="estado">
+                      <option value="est1">Todos</option>
+                      <option value="est2">Estado 2</option>
+                      <option value="est3">Estado 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="large-3 columns">
+                    <label>Identificador</label>
+                  </div>
+                  <div class="large-3 columns">
+                    <input type="text" placeholder="Ej. T151221">
+                  </div>
+                  <div class="large-3 columns">
+                    <label>Productos</label>
+                  </div>
+                  <div class="large-3 columns">
+                    <select class="multi-select2" name="productos" multiple>
+                      <option value="pro1">Todos</option>
+                      <option value="pro2">Producto 2</option>
+                      <option value="pro3">Productos 3</option>
+                      <option value="pro4">Productos 4</option>
+                      <option value="pro5">Productos 5</option>
+                      <option value="pro6">Productos 6</option>
+                      <option value="pro7">Productos 7</option>
+                      <option value="pro8">Productos 8</option>
+                      <option value="pro9">Productos 9</option>
+                      <option value="pro10">Productos 10</option>
+                      <option value="pro11">Productos 11</option>
+                      <option value="pro12">Productos 12</option>
+                      <option value="pro13">Productos 13</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="large-3 columns">
+                    <label>Territorio</label>
+                  </div>
+                  <div class="large-3 columns">
+                    <select name="territorio">
+                      <option value="terr1">Todos</option>
+                      <option value="terr2">Territorio 2</option>
+                      <option value="terr3">Territorio 3</option>
+                    </select>
+                  </div>
+                  <div class="large-3 columns">
+                    <label>Tipo</label>
+                  </div>
+                  <div class="large-3 columns">
+                    <select name="tipo">
+                      <option value="tip1">Todos</option>
+                      <option value="tip2">Tipo 2</option>
+                      <option value="tip3">Tipo 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="large-3 columns">
+                    <label>Segmento</label>
+                  </div>
+                  <div class="large-3 columns end">
+                    <select name="segmento">
+                      <option value="seg1">Todos</option>
+                      <option value="seg2">Segmento 2</option>
+                      <option value="seg3">Segmento 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="large-3 columns">
+                    <label>Subsegmento</label>
+                  </div>
+                  <div class="large-3 columns end">
+                    <select name="subsegmento">
+                      <option value="sub1">Todos</option>
+                      <option value="sub2">Subsegmento 2</option>
+                      <option value="sub3">Subsegmento 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="large-3 columns">
+                    <label>Creación</label>
+                  </div>
+                  <div class="large-3 columns fecha">
+                    <input class="calendario desde" type="text" placeholder="Desde...">
+                  </div>
+                  <div class="large-3 columns fecha end">
+                    <input class="calendario hasta" type="text" placeholder="Hasta...">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="large-3 columns">
+                    <label>Modificación</label>
+                  </div>
+                  <div class="large-3 columns fecha">
+                    <input class="calendario desde" type="text" placeholder="Desde...">
+                  </div>
+                  <div class="large-3 columns fecha end">
+                    <input class="calendario hasta" type="text" placeholder="Hasta...">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="large-3 columns">
+                    <label>Solicitud de pedido</label>
+                  </div>
+                  <div class="large-3 columns fecha">
+                    <input class="calendario desde" type="text" placeholder="Desde...">
+                  </div>
+                  <div class="large-3 columns fecha end">
+                    <input class="calendario hasta" type="text" placeholder="Hasta...">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="large-3 columns">
+                    <label>Importe</label>
+                  </div>
+                  <div class="large-3 columns">
+                    <div class="euro peque">
+                      <input type="text" placeholder="Desde...">
+                    </div>
+                  </div>
+                  <div class="large-3 columns end">
+                    <div class="euro peque">
+                      <input type="text" placeholder="Hasta...">
+                    </div>
+                  </div>
+                </div>
+                <div class="row botonera">
+                  <div class="large-12 columns text-right">
+                    <button type="reset" class="radius func-secondary tiny" title="Borrar formulario">Borrar</button>
+                    <button type="submit" class="radius tiny" title="Iniciar búsqueda">Buscar</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- contenido -->
+          </article>
+        </section>
+        <a class="exit-off-canvas"></a>
+      </div>
+      <!-- inner-wrap -->
+    </div>
+    <!-- off-canvas-wrap -->
+  </div>
+  <!-- row -->
+  <footer class="row" role="contentinfo">
+    <div class="small-4 large-2 columns">T151221 - 1</div>
+    <div class="small-8 large-8 columns end text-center">
+      Telefónica de España S.A
+    </div>
+  </footer>
+  <!-- footer -->
+  <!-- Ventanas modales -->
+  <div id="notific" class="medium reveal-modal" data-reveal></div>
+  <!-- modal notificaciones -->
+  <div id="otras-oper" class="medium reveal-modal" data-reveal></div>
+  <!-- modal otras operaciones -->
+  <div id="cuenta-banc" class="large reveal-modal" data-reveal></div>
+  <!-- modal cuenta bancaria -->
+  <div id="camb-titular-lm" class="medium reveal-modal" data-reveal></div>
+  <!-- modal cambiar titular linea móvil -->
+  <div id="search" class="medium reveal-modal" data-reveal></div>
+  <!-- modal search -->
+  <div id="search-filter" class="medium reveal-modal" data-reveal></div>
+  <!-- modal search-filter -->
+  <div id="informes" class="medium reveal-modal" data-reveal></div>
+  <!-- modal informes -->
+  <div id="new-notif" class="medium reveal-modal" data-reveal></div>
+  <!-- modal nueva notificación -->
+  <div id="edit-notif" class="medium reveal-modal" data-reveal></div>
+  <!-- modal editar notificación -->
+  <div id="new-ofert" class="medium reveal-modal" data-reveal></div>
+  <!-- modal nueva oferta -->
+  <div id="new-client" class="medium reveal-modal" data-reveal></div>
+  <!-- modal nuevo cliente -->
+  <!-- build:js js/vendor/libraries.min.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="bower_components/footable/js/footable.js"></script>
+  <script src="bower_components/footable/js/footable.paginate.js"></script>
+  <script src="bower_components/footable/js/footable.sort.js"></script>
+  <script src="bower_components/fastclick/lib/fastclick.js"></script>
+  <script src="bower_components/jqueryui/jquery-ui-autocomplete.js"></script>
+  <script src="bower_components/multiple-select/jquery.multiple.select.js"></script>
+  <script src="bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
+  <script src="bower_components/editableSelect/jquery.editable.select.min.js"></script>
+  <script src="bower_components/pickadate/lib/picker.js"></script>
+  <script src="bower_components/pickadate/lib/picker.date.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js js/vendor/foundation.min.js -->
+  <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
+  <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
+  <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+  <!--<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
+  <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+  <!-- <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script> -->
+  <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+  <!-- <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script> -->
+  <!-- endbuild -->
+  <!-- build:js js/app.min.js -->
+  <script src="js/app.js"></script>
+  <script src="js/from-to.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>

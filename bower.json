@@ -1,13 +1,14 @@
 {
-    "name": "zf5_project",
-    "dependencies": {
-        "foundation": "zurb/bower-foundation",
-        "font-awesome": "~4.2.0",
-        "multiple-select": "~1.1.0",
-        "footable": "~2.0.3",
-        "pickadate": "~3.5.5",
-        "nouislider": "~7.0.10",
-        "editableSelect": "0.0.1",
-        "jqueryui": "1.11.4"
-    }
+  "name": "zf5_project",
+  "dependencies": {
+    "dropzone": "~4.0.1",
+    "font-awesome": "~4.2.0",
+    "footable": "~2.0.3",
+    "foundation": "zurb/bower-foundation",
+    "jqueryui": "1.11.4",
+    "multiple-select": "~1.1.0",
+    "nouislider": "~7.0.10",
+    "editableSelect": "0.0.1",
+    "pickadate": "~3.5.5"
+  }
 }

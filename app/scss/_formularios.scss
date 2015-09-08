@@ -3,330 +3,340 @@
 // Formularios en general
 button,
 .button {
-    font-weight: normal;
-}
+  font-weight: normal;
 
-button.tiny.peque {
-    padding-bottom: rem-calc(3);
-    padding-top: rem-calc(3);
+  &.peque {
+    padding-bottom: rem-calc(6);
+    padding-top: rem-calc(6);
+  }
 }
 
 .func-secondary {
-    background-color: $button-func-bg-secondary;
+  background-color: $button-func-bg-secondary;
 
-    &:hover {
-        background-color: #7d7d7d;
-    }
+  &:hover {
+    background-color: #7d7d7d;
+  }
 }
 
 .contrato .button:hover {
-    background-color: scale-color($primary-color, $lightness: 3%);
+  background-color: scale-color($primary-color, $lightness: 3%);
 }
 
 .postfix.button {
-    height: rem-calc(30);
-    line-height: rem-calc(30);
+  height: rem-calc(30);
+  line-height: rem-calc(30);
 }
 
 input[type="text"] {
-    height: rem-calc(30);
-    padding: rem-calc(2 4);
+  height: rem-calc(30);
+  padding: rem-calc(2 4);
 }
 
 input[type="text"][disabled],
 input[type="text"].disabled {
-    background-color: transparent;
-    border: 0;
-    box-shadow: none;
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
 input[type="text"][disabled].borde,
 input[type="text"].disabled.borde {
-    background-color: $smoke;
-    border: 1px solid $iron;
-    box-shadow: none;
+  background-color: $smoke;
+  border: 1px solid $iron;
+  box-shadow: none;
 }
 
 input[type=checkbox] {
-    margin-right: rem-calc(10);
+  margin-right: rem-calc(10);
 }
 
 input[type="number"] {
-    height: 2rem;
-    padding: rem-calc(0 4 2);
+  height: 2rem;
+  padding: rem-calc(0 4 2);
+}
+
+.mismo input[type="checkbox"] {
+  display: block;
+  margin: 10px auto 25px;
 }
 
 label {
-    cursor: default;
-    line-height: rem-calc(30);
+  cursor: default;
+  line-height: rem-calc(30);
 
-    &.inline {
-        margin-bottom: 0;
-        padding: rem-calc(2 0);
-    }
+  &.inline {
+    margin-bottom: 0;
+    padding: rem-calc(2 0);
+  }
 
-    &.required {
-        padding: 0 rem-calc(15);
-    }
+  &.required {
+    padding: 0 rem-calc(15);
+  }
 
-    &.required:after {
-        content: "\f069";
-        font-family: fontawesome;
-        font-size: rem-calc(10);
-        position: absolute;
-        right: rem-calc(20);
-        top: rem-calc(1);
-    }
+  &.required:after {
+    content: "\f069";
+    font-family: fontawesome;
+    font-size: rem-calc(10);
+    position: absolute;
+    right: rem-calc(20);
+    top: rem-calc(1);
+  }
 }
 
 .sedes .label-tit {
-    background-color: $primary-color;
-    margin: rem-calc(20 0);
-    padding-left: rem-calc(10);
-    text-align: left;
+  background-color: $primary-color;
+  margin: rem-calc(20 0);
+  padding-left: rem-calc(10);
+  text-align: left;
 }
 
 fieldset {
-    border: 0;
-    margin: 0;
+  border: 0;
+  margin: 0;
 
-    legend {
-        font-family: robotoregular, sans-serif;
-        font-size: rem-calc(20);
-        font-weight: normal;
-    }
+  legend {
+    font-family: robotoregular, sans-serif;
+    font-size: rem-calc(20);
+    font-weight: normal;
+  }
 }
 
 textarea {
-    min-height: rem-calc(90);
-    overflow-y: auto;
-    resize: vertical;
+  min-height: rem-calc(90);
+  overflow-y: auto;
+  resize: vertical;
 }
 
 select {
+  //background-color: $white;
+  height: rem-calc(30);
+  padding: rem-calc(2 0);
+
+  &[multiple] {
+    height: auto;
+    max-height: rem-calc(100);
+  }
+
+  option {
     //background-color: $white;
-    height: rem-calc(30);
-    padding: rem-calc(2 0);
+    padding: rem-calc(4 0 4 6);
 
-    &[multiple] {
-        height: auto;
-        max-height: rem-calc(100);
+    &[disabled] {
+      cursor: default;
     }
-
-    option {
-        //background-color: $white;
-        padding: rem-calc(4 0 4 6);
-
-        &[disabled] {
-            cursor: default;
-        }
-    }
+  }
 }
 
 select,
 select:hover {
-    //-moz-appearance: none;
-    border-color: $iron;
-    cursor: pointer;
-    //text-indent: 0.01px;
+  //-moz-appearance: none;
+  border-color: $iron;
+  cursor: pointer;
+  //text-indent: 0.01px;
 }
 
 select[disabled] {
-    cursor: default;
-    color: $aluminum;
+  color: $aluminum;
+  cursor: default;
 }
 
 select:focus,
 input[type="checkbox"]:focus {
-    @include block-glowing-effect(focus, $glowing-effect-fade-time, $glowing-effect-color);
-    background-color: $input-focus-bg-color;
-    border-color: $input-focus-border-color;
-    outline: 0 dotted;
+  @include block-glowing-effect(focus, $glowing-effect-fade-time, $glowing-effect-color);
+  background-color: $input-focus-bg-color;
+  border-color: $input-focus-border-color;
+  outline: 0 dotted;
 }
 
 select:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 #000;
+  color: transparent;
+  text-shadow: 0 0 0 #000;
 }
 
 //Select editable
 .editable-wrapper {
-    position: relative;
+  position: relative;
 
-    &:after {
-        color: $base;
-        content: "\f0d7\f040";
-        font-family: fontawesome;
-        font-size: rem-calc(15);
-        position: absolute;
-        right: rem-calc(4);
-        top: rem-calc(2);
-    }
+  &:after {
+    color: $base;
+    content: "\f0d7\f040";
+    font-family: fontawesome;
+    font-size: rem-calc(15);
+    position: absolute;
+    right: rem-calc(4);
+    top: rem-calc(2);
+  }
 }
 
 .editable {
-    background-color: $white;
-    border: 1px solid scale-color($white, $lightness: -20%);
-    font-size: rem-calc(14);
-    height: rem-calc(30);
-    margin-bottom: rem-calc(15);
-    padding: rem-calc(2 26 2 5);
-    width: 100%;
+  background-color: $white;
+  border: 1px solid scale-color($white, $lightness: -20%);
+  font-size: rem-calc(14);
+  height: rem-calc(30);
+  margin-bottom: rem-calc(15);
+  padding: rem-calc(2 26 2 5);
+  width: 100%;
 }
 
 .editable-list {
-    border: 1px solid scale-color($white, $lightness: -20%);
-    display: none;
+  border: 1px solid scale-color($white, $lightness: -20%);
+  display: none;
+  font-size: rem-calc(14);
+  list-style-type: none;
+  margin: 0;
+  max-height: rem-calc(400);
+  overflow-x: auto;
+  padding: 0;
+  position: absolute;
+  top: rem-calc(29);
+  width: 100%;
+  z-index: 1000000;
+
+  li {
+    background-color: $white !important;
+    cursor: pointer;
     font-size: rem-calc(14);
-    list-style-type: none;
-    margin: 0;
-    max-height: rem-calc(400);
-    overflow-x: auto;
-    padding: 0;
-    position: absolute;
-    top: rem-calc(29);
-    width: 100%;
-    z-index: 1000000;
+    //line-height: rem-calc(19);
+    padding: rem-calc(3 5);
+    text-align: left;
 
-    li {
-        background-color: $white !important;
-        cursor: pointer;
-        font-size: rem-calc(14);
-        //line-height: rem-calc(19);
-        padding: rem-calc(3 5);
-        text-align: left;
-
-        &:hover {
-            background-color: #39f !important;
-            color: $white;
-        }
+    &:hover {
+      background-color: #39f !important;
+      color: $white;
     }
+  }
 }
 
 // Select editable de Roberto
 .select-editable {
-    position: relative;
+  position: relative;
 
-    input,
-    input [disabled],
-    input:focus {
-        border-right: 0;
-        box-shadow: 0 0 0 transparent;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: -moz-calc(100% - 22px);
-        width: calc(100% - 22px);
-    }
+  input, input [disabled], input:focus {
+    border-right: 0;
+    box-shadow: 0 0 0 transparent;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: -moz-calc(100% - 22px);
+    width: calc(100% - 22px);
+  }
 
-    input:focus + select {
-        background-color: $white;
-        border: 1px solid red;
-    }
+  input:focus + select {
+    background-color: $input-focus-bg-color;
+    border: 1px solid $input-focus-border-color;
+  }
 
-    input[type="text"][disabled] {
-        background-color: $white;
-        border: 1px solid scale-color($white, $lightness: -20%);
-        border-right: 0;
-    }
+  input[type="text"][disabled] {
+    background-color: $white;
+    border: 1px solid scale-color($white, $lightness: -20%);
+    border-right: 0;
+  }
 }
 
 .select-editable select:focus,
 .select-editable input:focus {
-    outline: none;
+  outline: none;
 }
 
 ::-webkit-input-placeholder {
-    color: $aluminum;
+  color: $aluminum;
 }
 
 ::-moz-placeholder {
-    color: $aluminum;
-    opacity: 1;
+  color: $aluminum;
+  opacity: 1;
 }
 
 :-ms-input-placeholder {
-    color: $aluminum;
+  color: $aluminum;
 }
 
 .euro {
-    position: relative;
+  position: relative;
 
-    &:after {
-        color: $steel;
-        content: '\20AC';
-        font-family: robotoregular, sans-serif;
-        font-size: rem-calc(20);
-        font-weight: normal;
-        position: absolute;
-        right: rem-calc(15);
-        top: rem-calc(3);
-        z-index: 20;
-    }
-
-    &.peque:after {
-        color: $iron;
-    }
-
-    &.peque input {
-        color: $oil;
-        font-family: robotolight, sans-serif;
-        font-size: rem-calc(14);
-    }
-
-    input[type="text"][disabled] {
-        margin-bottom: 0;
-        padding-right: rem-calc(25);
-        text-align: right;
-        -webkit-text-fill-color: $steel;
-    }
-}
-
-.numeros,
-.euro input {
+  &:after {
     color: $steel;
+    content: "\20AC";
     font-family: robotoregular, sans-serif;
     font-size: rem-calc(20);
     font-weight: normal;
-    line-height: normal;
+    line-height: rem-calc(30);
+    position: absolute;
+    right: rem-calc(12);
+    top: rem-calc(1);
+  }
+
+  &.peque:after {
+    color: $iron;
+    //z-index: -1;
+  }
+
+  &.peque input {
+    background-color: transparent;
+    color: $oil;
+    font-family: robotolight, sans-serif;
+    font-size: rem-calc(14);
+  }
+
+  input[type="text"][disabled] {
+    margin-bottom: 0;
+    padding-right: rem-calc(25);
+    text-align: right;
+    -webkit-text-fill-color: $steel;
+  }
+}
+
+.numeros,
+.euro input,
+.concept-ocas .numeros {
+  color: $steel;
+  font-family: robotoregular, sans-serif;
+  font-size: rem-calc(20);
+  font-weight: normal;
+  line-height: normal;
 }
 
 input[type="text"].numeros {
-    border-color: $silver;
-    height: rem-calc(35);
-    margin-bottom: 0;
-    text-align: center;
+  border-color: $silver;
+  height: rem-calc(35);
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .complem-sede input[type="text"],
 .complem-sede input[type="number"],
 .sede-accesor input[type="text"],
 .conf-basica input[type="text"] {
-    color: $steel;
-    font-family: robotoregular, sans-serif;
-    font-size: rem-calc(20);
-    font-weight: normal;
-    margin: 0;
-    text-align: center;
+  color: $steel;
+  font-family: robotoregular, sans-serif;
+  font-size: rem-calc(20);
+  font-weight: normal;
+  margin: 0;
+  text-align: center;
+}
+
+.complem-sede .numeraciones input[type="text"] {
+  color: #333;
+  font-size: rem-calc(16);
 }
 
 .complem-sede .tabs-content input[type=checkbox] {
-    margin: 0;
+  margin: 0;
 }
 
 // Validación
 .error input {
-    border: 1px solid $alert-color;
+  border: 1px solid $alert-color;
 }
 
 .error label {
-    color: $white;
+  color: $white;
 }
 
 // [data-abide] .error {
 //     padding: 0 $column-gutter;
 // }
-
 // input[type="text"]
 // [data-abide] .error small.error,
 // [data-abide] .error span.error,
@@ -361,23 +371,22 @@ input[type="text"].numeros {
 // }
 
 .botonera {
-    padding: rem-calc(15 0);
+  padding: rem-calc(15 0);
 
-    .button,
-    button {
-        margin-bottom: 0;
-    }
+  .button, button {
+    margin-bottom: 0;
+  }
 
-    .button.disabled {
-        background-color: $iron;
-    }
+  .button.disabled {
+    background-color: $iron;
+  }
 
-    .close-reveal-modal {
-        color: $white;
-        font-size: rem-calc(14);
-        line-height: normal;
-        position: static;
-    }
+  .close-reveal-modal {
+    color: $white;
+    font-size: rem-calc(14);
+    line-height: normal;
+    position: static;
+  }
 }
 
 // Formularios Ofertas
@@ -385,233 +394,231 @@ input[type="text"].numeros {
 .sedes,
 .puestos,
 .admin {
-    label,
-    .label {
-        background-color: $third-color;
-        font-family: robotoregular, sans-serif;
-        font-size: rem-calc(16);
-        font-weight: normal;
-        text-align: center;
-    }
+  label, .label {
+    background-color: $third-color;
+    font-family: robotoregular, sans-serif;
+    font-size: rem-calc(16);
+    font-weight: normal;
+    text-align: center;
+  }
 
-    label span,
-    .label span {
-        display: inline;
-    }
+  label span,
+  .label span {
+    display: inline;
+  }
 }
 
 .ofertas label[for="filter"] {
-    background-color: transparent;
-    color: $oil;
-    text-align: right;
+  background-color: transparent;
+  color: $oil;
+  text-align: right;
 }
 
 // Formularios sedes
 .aside-right label {
-    background-color: transparent;
-    color: $aluminum;
-    font-family: robotolight, sans-serif;
+  background-color: transparent;
+  color: $aluminum;
+  font-family: robotolight, sans-serif;
 }
 
 .oper-tarif {
-    label {
-        text-align: right;
-    }
+  label {
+    text-align: right;
+  }
 
-    select {
-        //font-family: robotoregular, sans-serif;
-        font-size: rem-calc(16);
-        font-weight: normal;
-    }
+  select {
+    //font-family: robotoregular, sans-serif;
+    font-size: rem-calc(16);
+    font-weight: normal;
+  }
 }
 
 .svas {
-    select {
-        //font-family: robotoregular, sans-serif;
-        font-size: rem-calc(16);
-        font-weight: normal;
-        margin-top: rem-calc(20);
-    }
+  select {
+    //font-family: robotoregular, sans-serif;
+    font-size: rem-calc(16);
+    font-weight: normal;
+    margin-top: rem-calc(20);
+  }
 }
 
 // Formularios puestos-fijos
 table.puestos {
-    select,
-    input[type="text"] {
-        margin-bottom: 0;
-    }
+  select, input[type="text"] {
+    margin-bottom: 0;
+  }
 
-    input[type="checkbox"] {
-        margin: rem-calc(10 0 0);
-    }
+  input[type="checkbox"] {
+    margin: rem-calc(10 0 0);
+  }
 }
 
 .otros-prod {
-    font-size: rem-calc(18);
-    margin-top: rem-calc(20);
+  font-size: rem-calc(18);
+  margin-top: rem-calc(20);
 
-    .fa {
-        font-size: rem-calc(25);
-        margin-right: rem-calc(5);
-        vertical-align: text-top;
-    }
+  .fa {
+    font-size: rem-calc(25);
+    margin-right: rem-calc(5);
+    vertical-align: text-top;
+  }
 }
 
 // Formularios tramitación de sede
 .sede-tramit {
-    label {
-        background-color: transparent;
-        color: $oil;
-    }
+  label {
+    background-color: transparent;
+    color: $oil;
+  }
 
-    .panel {
-        margin-bottom: 0;
-    }
+  .panel {
+    margin-bottom: 0;
+  }
 
-    .panel > .row > .big {
-        font-size: rem-calc(25);
-        text-align: center;
-    }
+  .panel > .row > .big {
+    font-size: rem-calc(25);
+    text-align: center;
+  }
 }
 
 // Formularios OPWEB ___________________________________________________________________________________________________________________
 .opweb {
-    form,
-    .tabs {
-        margin-top: rem-calc(15);
-    }
+  form, .tabs {
+    margin-top: rem-calc(15);
+  }
 
-    legend {
-        font-size: rem-calc(16);
-    }
+  legend {
+    font-size: rem-calc(16);
+  }
 
-    .euro.peque:after {
-        //color: $jumbo;
-        color: $iron;
-    }
+  .euro.peque:after {
+    //color: $jumbo;
+    color: $iron;
+  }
 
-    .euro.bloque.peque:after {
-        top: rem-calc(25);
-        right: rem-calc(20);
-    }
+  .euro.bloque.peque:after {
+    top: rem-calc(25);
+    right: rem-calc(20);
+  }
 
-    .postfix {
-        background-color: transparent;
-        border: 0;
-        height: rem-calc(25);
-        line-height: rem-calc(16);
-        padding: rem-calc(4 2);
-    }
+  .postfix {
+    background-color: transparent;
+    border: 0;
+    height: rem-calc(25);
+    line-height: rem-calc(16);
+    padding: rem-calc(4 2);
+  }
 
-    .tabs-content > .content {
-        padding-bottom: 0;
-        padding-top: 0;
-    }
+  .tabs-content > .content {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
 
-    label,
-    .label {
-        color: $primary-color;
-        font-size: rem-calc(14);
-        line-height: rem-calc(25);
-    }
+  label,
+  .label {
+    color: $primary-color;
+    font-size: rem-calc(14);
+    line-height: rem-calc(25);
+  }
 
-    .label {
-        margin-bottom: 0;
-    }
+  .label {
+    margin-bottom: 0;
+  }
 
-    // .label.inline {
-    //     width: auto;
-    //     display: inline;
-    //     float: left;
-    // }
+  // .label.inline {
+  //     width: auto;
+  //     display: inline;
+  //     float: left;
+  // }
 
-    // .label.inline + .disabled {
-    //     float: left;
-    // }
+  // .label.inline + .disabled {
+  //     float: left;
+  // }
 
-    input[type="text"] {
-        color: $oil;
-        height: rem-calc(25);
-    }
+  input[type="text"] {
+    color: $oil;
+    height: rem-calc(25);
+  }
 
-    .desplegable {
-        margin: rem-calc(0 30);
-    }
+  .desplegable {
+    margin: rem-calc(0 30);
+  }
 
-    input[type="text"][disabled],
-    input.disabled[type="text"],
-    p.disabled {
-        background-color: $gainsboro;
-        border: 1px solid $iron;
-    }
+  input[type="text"][disabled],
+  input.disabled[type="text"],
+  p.disabled {
+    background-color: $gainsboro;
+    border: 1px solid $iron;
+  }
 
-    p.disabled {
-        font-size: rem-calc(14);
-        height: rem-calc(25);
-        overflow: hidden;
-        padding: rem-calc(1 4);
-    }
+  p.disabled {
+    font-size: rem-calc(14);
+    height: rem-calc(25);
+    overflow: hidden;
+    padding: rem-calc(1 4);
+  }
 
-    .columns > button,
-    .columns > .button {
-        font-size: rem-calc(14);
-        padding: rem-calc(3 15 4);
-    }
+  .columns > button,
+  .columns > .button {
+    font-size: rem-calc(14);
+    padding: rem-calc(3 15 4);
+  }
 
-    .row .fecha:after {
-        top: rem-calc(2);
-        right: rem-calc(15);
-    }
+  .row .fecha:after {
+    right: rem-calc(15);
+    top: rem-calc(-1);
+  }
 
-    .euro:after {
-        top: rem-calc(1);
-    }
+  .euro:after {
+    right: rem-calc(15);
+    top: rem-calc(-3);
+  }
 
+  select {
+    height: rem-calc(25);
+    padding: rem-calc(1 4 3);
+  }
+
+  .prop-cliente {
     select {
-        height: rem-calc(25);
-        padding: rem-calc(1 4 3);
+      background-color: $white;
+      font-weight: normal;
+      margin-bottom: 0;
     }
 
-    .prop-cliente {
-        select {
-            background-color: $white;
-            font-weight: normal;
-            margin-bottom: 0;
-        }
-
-        select[disabled] {
-            background-color: #ddd;
-        }
+    select[disabled] {
+      background-color: #ddd;
     }
+  }
 
-    .filtro-ofer {
-        margin-bottom: rem-calc(16);
-    }
+  .filtro-ofer {
+    margin-bottom: rem-calc(16);
+  }
 
-    .filtro-ofer button.radius {
-        margin-top: rem-calc(24);
-    }
+  .filtro-ofer button.radius {
+    margin-top: rem-calc(24);
+  }
 
-    form .filtro-ofer:last-child {
-        margin-bottom: 0;
-    }
+  form .filtro-ofer:last-child {
+    margin-bottom: 0;
+  }
 
-    .filtro-ofer select,
-    .filtro-ofer input[type="text"],
-    .filtro-ofer .columns > button {
-        margin-bottom: rem-calc(0);
-    }
+  .filtro-ofer select,
+  .filtro-ofer input[type="text"],
+  .filtro-ofer .columns > button {
+    margin-bottom: rem-calc(0);
+  }
 
-    .margencero {
-        margin: 0;
-    }
+  .margencero {
+    margin: 0;
+  }
 
-    // .acotar {
-    //     background-color: scale-color($primary-color, $lightness: 90%);
+  // .acotar {
+  //     background-color: scale-color($primary-color, $lightness: 90%);
 
-    //     .columns {
-    //         margin: rem-calc(4 0);
-    //         padding-right: rem-calc(18);
-    //     }
-    // }
+  //     .columns {
+  //         margin: rem-calc(4 0);
+  //         padding-right: rem-calc(18);
+  //     }
+  // }
 }

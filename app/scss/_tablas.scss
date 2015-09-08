@@ -2,932 +2,960 @@
 
 // Tablas
 table {
-    border: 0 solid;
-    margin-bottom: 0;
+  border: 0 solid;
+  margin-bottom: 0;
+  width: 100%;
 
-    thead,
-    tr:nth-of-type(2n) {
-        background-color: $snow;
-    }
+  thead,
+  tr:nth-of-type(2n) {
+    background-color: $snow;
+  }
 
-    tbody tr:nth-of-type(n).selected {
-        background-color: $silver;
-    }
+  tbody tr:nth-of-type(n).selected {
+    background-color: $silver;
+  }
 
-    tbody tr td,
-    thead tr th {
-        color: $oil;
-        font-size: rem-calc(16);
-        line-height: rem-calc(24);
-        padding: rem-calc(10 0);
-        vertical-align: top;
-    }
+  tbody tr td,
+  thead tr th {
+    color: $oil;
+    font-size: rem-calc(16);
+    line-height: rem-calc(24);
+    padding: rem-calc(10 0);
+    vertical-align: top;
+  }
 
-    tr th {
-        border-bottom: 1px solid $iron;
-        font-weight: normal;
-        text-align: center;
-    }
+  tr th {
+    border-bottom: 1px solid $iron;
+    font-weight: normal;
+    text-align: center;
+  }
 
-    tr.no-borde th {
-        border: none;
-    }
+  // tr.no-borde th {
+  //   border: 0;
+  // }
 
-    td.numeros {
-        text-align: right;
-    }
+  td.numeros {
+    text-align: right;
+  }
 
-    tfoot {
-        background-color: transparent;
-    }
+  tfoot {
+    background-color: transparent;
+  }
 }
 
 // Tabla ordenable
 .sortable {
-    th[data-sort] {
-        cursor: pointer;
-        position: relative;
-    }
+  th[data-sort] {
+    cursor: pointer;
+    position: relative;
+  }
 
-    .tablesort-arrow {
-        color: $aluminum;
-        font-family: 'FontAwesome';
-        font-size: rem-calc(20);
-        margin-left: rem-calc(4);
-        position: absolute;
-        speak: none;
-    }
+  .tablesort-arrow {
+    color: $aluminum;
+    font-family: "FontAwesome";
+    font-size: rem-calc(20);
+    margin-left: rem-calc(4);
+    position: absolute;
+    speak: none;
+  }
 
-    tr.awesome {
-        background-color: $smoke;
-    }
+  tr.awesome {
+    background-color: $smoke;
+  }
 }
 
 // Tabla Ofertas
 table.ofertas {
-    tbody tr:hover,
-    tbody tr.activa {
-        background-color: $smoke;
+  tbody tr:hover,
+  tbody tr.activa {
+    background-color: $smoke;
+  }
+
+  th:nth-child(1) {
+    border-bottom: 0 solid;
+    width: rem-calc(60);
+  }
+
+  th:nth-child(3) {
+    text-align: right;
+  }
+
+  td:nth-child(1) {
+    padding-top: rem-calc(15);
+  }
+
+  td:nth-child(2),
+  td.warning,
+  td.alert {
+    font-family: robotoregular, sans-serif;
+    font-weight: normal;
+  }
+
+  // td:nth-child(2)::first-letter {
+  //     text-transform: uppercase;
+  // }
+
+  // td:nth-child(2) {
+  //     text-transform: lowercase;
+  // }
+
+  td.warning {
+    color: $warning-color;
+  }
+
+  td.alert {
+    color: $alert-color;
+  }
+
+  td span {
+    display: block;
+    font-family: robotolight, sans-serif;
+    font-size: rem-calc(14);
+  }
+
+  // Alineamiento celdas
+  td:nth-child(1),
+  td:nth-child(4),
+  td:nth-child(5) {
+    text-align: center;
+  }
+
+  // Iconos
+  td .fa {
+    font-size: rem-calc(30);
+  }
+
+  &.lista-clientes {
+    tbody {
+      border-bottom: 1px solid $iron;
+      display: block;
+      max-height: 510px;
+      overflow-y: auto;
     }
 
-    th:nth-child(1) {
-        border-bottom: 0 solid;
-        width: rem-calc(60);
-    }
-
-    th:nth-child(3) {
-        text-align: right;
-    }
-
-    td:nth-child(1) {
-        padding-top: rem-calc(15);
-    }
-
-    td:nth-child(2),
-    td.warning,
-    td.alert {
-        font-family: robotoregular, sans-serif;
-        font-weight: normal;
-    }
-
-    // td:nth-child(2)::first-letter {
-    //     text-transform: uppercase;
-    // }
-
-    // td:nth-child(2) {
-    //     text-transform: lowercase;
-    // }
-
-    td.warning {
-        color: $warning-color;
-    }
-
-    td.alert {
-        color: $alert-color;
-    }
-
-    td span {
-        display: block;
-        font-family: robotolight, sans-serif;
-        font-size: rem-calc(14);
-    }
-
-    // Alineamiento celdas
-    td:nth-child(1),
-    td:nth-child(4),
-    td:nth-child(5) {
-        text-align: center;
-    }
-
-    // Iconos
-    td .fa {
-        font-size: rem-calc(30);
-    }
-
-    &.lista-clientes {
-        tbody {
-            display: block;
-            max-height: 510px;
-            overflow-y: auto;
-            border-bottom: 1px solid $iron;
-        }
-
-        tr {
-            display: block;
-            overflow: hidden;
-            clear: both;
-        }
-
-        th,
-        td {
-            float: left;
-        }
-
-        td:nth-child(1) {
-            text-align: left;
-        }
-
-        th:nth-child(1),
-        td:nth-child(1) {
-            width: 5%;
-        }
-
-        th:nth-child(2),
-        td:nth-child(2) {
-            width: 45%;
-            text-align: left;
-        }
-
-        th:nth-child(3),
-        td:nth-child(3) {
-            width: 15%;
-        }
-
-        th:nth-child(4),
-        td:nth-child(4) {
-            width: 20%;
-        }
-
-        th:nth-child(5),
-        td:nth-child(5) {
-            width: 15%;
-        }
-    }
-}
-
-// Tabla listado sedes
-table.listado-sedes {
-    margin-bottom: rem-calc(15);
-    margin-left: rem-calc(1);
-
-    tbody tr {
-        background-color: $snow;
-        border: 1px solid $iron;
-        border-width: 0 10px 1px 1px;
-        border-right-color: $white;
-
-        &.bloqueada {
-            background-color: $smoke;
-        }
-
-        &.alert {
-            border-right: 10px solid $alert-color;
-        }
-
-        &.success {
-            border-right: 10px solid $success-color;
-        }
-    }
-
-    &.seleccion {
-        tbody tr {
-            border: none;
-
-            &.bloqueada td {
-                background-color: $smoke;
-            }
-
-            &.bloqueada td:nth-child(4) {
-                background-color: $white;
-            }
-
-            &.alert td:nth-child(3) {
-                border-right: 10px solid $alert-color;
-            }
-
-            &.success td:nth-child(3) {
-                border-right: 10px solid $success-color;
-            }
-
-            &.alert,
-            &.success {
-                border-right: none;
-            }
-        }
-
-        td:nth-child(1) {
-            border-left: 1px solid $iron;
-        }
-
-        tbody tr td {
-            border-bottom: 1px solid $iron;
-        }
-
-        th:nth-child(4),
-        tbody tr td:nth-child(4),
-        tbody tr:last-child td:nth-child(4) {
-            border-bottom: none;
-        }
-    }
-
-    td {
-        font-size: rem-calc(16);
-        text-align: center;
-        vertical-align: middle;
-
-        &:nth-child(2) {
-            font-family: robotoregular, sans-serif;
-            font-weight: normal;
-            text-align: left;
-        }
-
-        &:nth-child(3) {
-            padding-right: 20px;
-        }
-
-        &:nth-child(2) span {
-            display: block;
-            font-family: robotolight, sans-serif;
-            font-size: rem-calc(14);
-        }
-
-        .fa-stack {
-            margin-top: rem-calc(-10);
-        }
-    }
-
-    // Anchura columnas
-    th:nth-child(1) {
-        width: rem-calc(80);
-    }
-
-    th:nth-child(2) {
-        width: 60%;
-    }
-
-    th:nth-child(2) {
-        text-align: left;
-    }
-
-    .fa-stack-2x {
-        font-size: 2.5em;
-    }
-
-    .fa-stack-1x {
-        margin-left: 2px;
-        margin-top: 5px;
-    }
-    &.sin-ico {}
-}
-
-table.listado-kj {
-    margin-top: rem-calc(15);
-
-    tbody tr {
-        //border-right-width: 1px;
-        border-right: 1px solid $iron;
+    tr {
+      clear: both;
+      display: block;
+      overflow: hidden;
     }
 
     th,
-    th:nth-child(2),
-    td:nth-child(2) {
-        text-align: center;
+    td {
+      float: left;
+    }
+
+    td:nth-child(1) {
+      text-align: left;
     }
 
     th:nth-child(1),
     td:nth-child(1) {
-        width: 50%;
-        text-align: left;
-        padding-left: rem-calc(5);
+      width: 5%;
     }
 
-    th:nth-child(2) {
-        width: 40%;
+    th:nth-child(2),
+    td:nth-child(2) {
+      text-align: left;
+      width: 45%;
     }
 
-    th:nth-child(3) {
-        width: 10%;
+    th:nth-child(3),
+    td:nth-child(3) {
+      width: 15%;
     }
+
+    th:nth-child(4),
+    td:nth-child(4) {
+      width: 20%;
+    }
+
+    th:nth-child(5),
+    td:nth-child(5) {
+      width: 15%;
+    }
+  }
+}
+
+// Tabla listado sedes
+.panel .listado-sedes {
+  min-height: rem-calc(115);
+}
+
+table.listado-sedes {
+  margin-bottom: rem-calc(15);
+  margin-left: rem-calc(1);
+
+  tbody tr {
+    background-color: $snow;
+    border: 1px solid $iron;
+    border-right-color: $white;
+    border-width: 0 10px 1px 1px;
+
+    &.bloqueada {
+      background-color: $smoke;
+    }
+
+    &.alert {
+      border-right: 10px solid $alert-color;
+    }
+
+    &.success {
+      border-right: 10px solid $success-color;
+    }
+  }
+
+  &.seleccion {
+    tbody tr {
+      border: 0;
+
+      &.bloqueada td {
+        background-color: $smoke;
+      }
+
+      &.bloqueada td:nth-child(4) {
+        background-color: $white;
+      }
+
+      &.alert td:nth-child(3) {
+        border-right: 10px solid $alert-color;
+      }
+
+      &.success td:nth-child(3) {
+        border-right: 10px solid $success-color;
+      }
+
+      &.alert,
+      &.success {
+        border-right: none;
+      }
+    }
+
+    td:nth-child(1) {
+      border-left: 1px solid $iron;
+    }
+
+    tbody tr td {
+      border-bottom: 1px solid $iron;
+    }
+
+    th:nth-child(4),
+    tbody tr td:nth-child(4),
+    tbody tr:last-child td:nth-child(4) {
+      border-bottom: none;
+    }
+  }
+
+  td.numeros {
+    text-align: right;
+  }
+
+  td {
+    font-size: rem-calc(16);
+    text-align: center;
+    vertical-align: middle;
+
+    &:nth-child(2) {
+      font-family: robotoregular, sans-serif;
+      font-weight: normal;
+      text-align: left;
+    }
+
+    &:nth-child(3) {
+      padding-right: 20px;
+    }
+
+    &:nth-child(2) span {
+      display: block;
+      font-family: robotolight, sans-serif;
+      font-size: rem-calc(14);
+    }
+
+    .fa-stack {
+      margin-top: rem-calc(-10);
+    }
+  }
+
+  // Anchura columnas
+  th:nth-child(1) {
+    width: rem-calc(80);
+  }
+
+  th:nth-child(2) {
+    width: 60%;
+  }
+
+  th:nth-child(2) {
+    text-align: left;
+  }
+
+  .fa-stack-2x {
+    font-size: 2.5em;
+  }
+
+  .fa-stack-1x {
+    margin-left: 2px;
+    margin-top: 5px;
+  }
+}
+
+table.listado-kj {
+  margin-top: rem-calc(15);
+
+  tbody tr {
+    //border-right-width: 1px;
+    border-right: 1px solid $iron;
+  }
+
+  th,
+  th:nth-child(2),
+  td:nth-child(2) {
+    text-align: center;
+  }
+
+  th:nth-child(1),
+  td:nth-child(1) {
+    padding-left: rem-calc(5);
+    text-align: left;
+    width: 50%;
+  }
+
+  th:nth-child(2) {
+    width: 40%;
+  }
+
+  th:nth-child(3) {
+    width: 10%;
+  }
 }
 
 // Tabla configuración sedes
-.conf h2,
-.concept-ocas h3 {
-    background-color: $third-color;
-    color: $white;
-    font-size: rem-calc(18);
-    padding: rem-calc(5) 0;
-    text-align: center;
+.conf h2 {
+  background-color: $third-color;
+  color: $white;
+  font-size: rem-calc(18);
+  padding: rem-calc(5) 0;
+  text-align: center;
 }
 
 table.conf-sede {
-    .columns {
-        padding: 0 1px;
-    }
+  .columns {
+    padding: 0 1px;
+  }
 
-    th {
-        border-bottom: 0;
-        font-family: robotoregular, sans-serif;
-        font-size: rem-calc(25);
-        font-weight: normal;
-        line-height: rem-calc(37);
-    }
+  th {
+    border-bottom: 0;
+    font-family: robotoregular, sans-serif;
+    font-size: rem-calc(25);
+    font-weight: normal;
+    line-height: rem-calc(37);
+  }
+}
+
+// Modal conceptos ocasionales
+.concept-ocas .listado-sedes {
+  tbody tr {
+    border-color: $iron;
+    border-width: 1px;
+  }
+
+  .numeros {
+    padding-right: rem-calc(10);
+  }
+
+  th:nth-child(2) {
+    width: 50%;
+  }
 }
 
 // Tabla puestos-fijos
 table.puestos {
-    &.alert input,
-    &.alert select {
-        color: $alert-color;
-    }
+  &.alert input,
+  &.alert select {
+    color: $alert-color;
+  }
 
-    tr td, tr th {
-        padding: rem-calc(10 2);
-        text-align: center;
-        // vertical-align: middle;
+  tr td, tr th {
+    padding: rem-calc(10 2);
+    text-align: center;
+    // vertical-align: middle;
 
-    }
+  }
 
-    td.numeros {
-        text-align: right;
-    }
+  td.numeros {
+    text-align: right;
+  }
 
-    td:nth-child(2).numeros {
-        text-align: center;
-    }
+  td:nth-child(2).numeros {
+    text-align: center;
+  }
 
-    // Anchura columnas
-    th:nth-child(1), th:nth-child(2) {
-        width: 5%;
-    }
+  // Anchura columnas
+  th:nth-child(1), th:nth-child(2) {
+    width: 5%;
+  }
 
-    th:nth-child(5) {
-        width: 10%;
-    }
+  th:nth-child(5) {
+    width: 10%;
+  }
 
-    th:nth-child(6) {
-        width: 13%;
-    }
+  th:nth-child(6) {
+    width: 13%;
+  }
 
-    .fa-plus-circle {
-        font-size: rem-calc(35px);
-    }
+  .fa-plus-circle {
+    font-size: rem-calc(35px);
+  }
 
-    td .plus {
-        float: left;
-        position: static;
-    }
+  td .plus {
+    float: left;
+    position: static;
+  }
 
-    td .plus fa {
-        padding: rem-calc(10 12);
-    }
+  td .plus fa {
+    padding: rem-calc(10 12);
+  }
 
-    td .f-dropdown input {
-        margin-bottom: rem-calc(16);
-    }
+  td .f-dropdown input {
+    margin-bottom: rem-calc(16);
+  }
 
-    td .f-dropdown input[type="checkbox"] {
-        margin-right: rem-calc(10);
-    }
+  td .f-dropdown input[type="checkbox"] {
+    margin-right: rem-calc(10);
+  }
 }
 
 table.otr-productos {
-    th:nth-child(even) {
-        width: 15%;
-    }
+  th:nth-child(even) {
+    width: 15%;
+  }
 }
 
 table.puestos.accesorios {
-    // Anchura columnas
-    th:nth-child(2) {
-        width: 10%;
-    }
+  // Anchura columnas
+  th:nth-child(2) {
+    width: 10%;
+  }
 
-    th:nth-child(4) {
-        width: 13%;
-    }
+  th:nth-child(4) {
+    width: 13%;
+  }
 }
 
 table.puestos.moviles {
-    margin-bottom: rem-calc(20);
+  margin-bottom: rem-calc(20);
 
-    th:nth-child(2) {
-        width: auto;
-    }
+  th:nth-child(2) {
+    width: auto;
+  }
 
-    td .plus {
-        margin-left: rem-calc(40);
-    }
+  td .plus {
+    margin-left: rem-calc(40);
+  }
 
-    .dispositivo div {
-        display: inline-block;
-        font-size: rem-calc(14);
-        width: 45%;
-    }
+  .dispositivo div {
+    float: left;
+    font-size: rem-calc(14);
+    line-height: rem-calc(18);
+    width: 48%;
+  }
+
+  .dispositivo div:first-child {
+    margin-right: 4%;
+  }
 }
 
 // Tabla listado notificaciones
 table.notif {
-    // Alineamiento celdas
-    th {
-        text-align: left;
-    }
+  // Alineamiento celdas
+  th {
+    text-align: left;
+  }
 
-    td {
-        text-align: center;
-    }
+  td {
+    text-align: center;
+  }
 
-    tr td:nth-child(1) {
-        text-align: left;
-    }
+  tr td:nth-child(1) {
+    text-align: left;
+  }
 
-    th:nth-child(2),
-    th:nth-child(3) {
-        text-align: center;
-    }
+  th:nth-child(2),
+  th:nth-child(3) {
+    text-align: center;
+  }
 
-    // Anchura columnas
-    th:nth-child(1) {
-        width: 40%;
-    }
+  // Anchura columnas
+  th:nth-child(1) {
+    width: 40%;
+  }
 
-    th:nth-child(4),
-    th:nth-child(5) {
-        width: rem-calc(50);
-    }
+  th:nth-child(4),
+  th:nth-child(5) {
+    width: rem-calc(50);
+  }
 
-    td:nth-child(1) {
-        font-family: robotoregular, sans-serif;
-        font-weight: normal;
-    }
+  td:nth-child(1) {
+    font-family: robotoregular, sans-serif;
+    font-weight: normal;
+  }
 
-    // Iconos
-    td .fa {
-        font-size: rem-calc(25);
-    }
+  // Iconos
+  td .fa {
+    font-size: rem-calc(25);
+  }
 }
 
 // Administración implantaciones
 table.implantac {
-    // Alineamiento celdas
-    th {
-        text-align: left;
-    }
+  // Alineamiento celdas
+  th {
+    text-align: left;
+  }
 
-    th:nth-child(1),
-    td:nth-child(1) {
-        text-align: center;
-    }
+  th:nth-child(1),
+  td:nth-child(1) {
+    text-align: center;
+  }
 
-    // Anchura columnas
-    th:nth-child(1) {
-        width: 7%;
-    }
+  // Anchura columnas
+  th:nth-child(1) {
+    width: 7%;
+  }
 
-    th:nth-child(3),
-    th:nth-child(4) {
-        width: 17%;
-    }
+  th:nth-child(3),
+  th:nth-child(4) {
+    width: 17%;
+  }
 
-    th:nth-child(6),
-    th:nth-child(5) {
-        width: 12%;
-    }
+  th:nth-child(6),
+  th:nth-child(5) {
+    width: 12%;
+  }
 }
 
 // Opweb Tablas_________________________________________________________________________________________________________________________________
 .opweb {
-    .panel-cont.ofertas {
-        margin: rem-calc(-10);
+  .panel-cont.ofertas {
+    margin: rem-calc(-10);
+  }
+
+  .ofertas {
+    thead {
+      background-color: $gainsboro;
     }
 
-    .ofertas {
-        thead {
-            background-color: $gainsboro;
-        }
-
-        tbody tr:nth-of-type(2n) {
-            background-color: $silver;
-        }
-
-        table tbody tr td,
-        table thead tr th {
-            color: $oil;
-            font-size: rem-calc(14);
-            line-height: rem-calc(18);
-            padding: rem-calc(5);
-            vertical-align: top;
-        }
-
-        table thead tr th {
-            border-bottom: 1px solid scale-color($panel-bg, $lightness: $panel-function-factor);
-            font-weight: normal;
-            font-family: robotoregular;
-        }
-
-        table thead tr th:nth-child(9),
-        table thead tr th:nth-child(4) {
-            width: 13%;
-        }
-
-        table thead tr th:nth-child(10),
-        table thead tr th:nth-child(11) {
-            width: 6%;
-        }
-
-        td .fa {
-            font-size: rem-calc(25);
-            vertical-align: middle;
-        }
-
-        tr td:nth-child(4) {
-            font-family: robotoregular;
-        }
-
-        tr td {
-            text-align: center;
-        }
-
-        tr td:nth-child(1) {
-            text-align: left;
-        }
-
-        tr td:nth-child(7) {
-            text-align: right;
-        }
-
-        &.business-case {
-            > table {
-                margin-bottom: rem-calc(45);
-            }
-
-            .accor-content th:nth-child(1) {
-                padding: rem-calc(5);
-            }
-
-            tr:nth-child(1) th:nth-child(1) {
-                text-align: left;
-            }
-
-            tr:nth-child(1) th {
-                background-color: $third-color;
-                color: $white;
-            }
-
-            th,
-            tr:nth-child(1) th:nth-child(4),
-            thead tr:nth-child(1) th:first-child {
-                width: 25%;
-            }
-
-            tr td:nth-child(4) {
-                font-family: robotolight;
-            }
-
-            .accor .tr-accor th {
-                background-color: $primary-color;
-                color: $white;
-                border-color: $primary-color;
-            }
-
-            table tbody tr td:first-child {
-                background-color: transparent;
-                border-bottom: none;
-            }
-
-            // table thead tr:nth-child(1) th:nth-child(2),
-            // table thead tr:nth-child(1) th:nth-child(3) {
-            //     color: $oil;
-            //     background-color: transparent;
-            // }
-
-            .accor-content th[colspan="4"] {
-                border: 1px solid $panel-border-color;
-                border-left-width: 2px;
-                padding: rem-calc(5 5 25);
-            }
-        }
+    tbody tr:nth-of-type(2n) {
+      background-color: $silver;
     }
 
-    .permanencia {
-        th {
-            background-color: $gainsboro;
-            text-align: left;
-        }
-
-        td,
-        th {
-            color: $oil;
-            font-size: rem-calc(15);
-            line-height: rem-calc(25);
-            padding: rem-calc(5);
-            vertical-align: top;
-        }
+    table tbody tr td,
+    table thead tr th {
+      color: $oil;
+      font-size: rem-calc(14);
+      line-height: rem-calc(18);
+      padding: rem-calc(5);
+      vertical-align: top;
     }
 
-    .pricing-table tbody tr:nth-of-type(2n),
-    .prop-cliente tbody tr:nth-of-type(2n) {
-        background-color: $silver;
+    table thead tr th {
+      border-bottom: 1px solid scale-color($panel-bg, $lightness: $panel-function-factor);
+      font-family: robotoregular;
+      font-weight: normal;
     }
 
-    .pricing-table .bullet-item {
-        font-family: robotoregular;
+    table thead tr th:nth-child(9),
+    table thead tr th:nth-child(4) {
+      width: 13%;
     }
 
-    .pricing-table tr th {
-        background-color: $gainsboro;
-        color: $oil;
-        border-bottom: 0;
-        line-height: rem-calc(25);
-        font-weight: normal;
+    table thead tr th:nth-child(10),
+    table thead tr th:nth-child(11) {
+      width: 6%;
+    }
+
+    td .fa {
+      font-size: rem-calc(25);
+      vertical-align: middle;
+    }
+
+    tr td:nth-child(4) {
+      font-family: robotoregular;
+    }
+
+    tr td {
+      text-align: center;
+    }
+
+    tr td:nth-child(1) {
+      text-align: left;
+    }
+
+    tr td:nth-child(7) {
+      text-align: right;
+    }
+
+    &.business-case {
+      > table {
+        margin-bottom: rem-calc(45);
+      }
+
+      .accor-content th:nth-child(1) {
+        padding: rem-calc(5);
+      }
+
+      tr:nth-child(1) th:nth-child(1) {
         text-align: left;
+      }
+
+      tr:nth-child(1) th {
+        background-color: $third-color;
+        color: $white;
+      }
+
+      th,
+      tr:nth-child(1) th:nth-child(4),
+      thead tr:nth-child(1) th:first-child {
+        width: 25%;
+      }
+
+      tr td:nth-child(4) {
+        font-family: robotolight;
+      }
+
+      .accor .tr-accor th {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: $white;
+      }
+
+      table tbody tr td:first-child {
+        background-color: transparent;
+        border-bottom: 0;
+      }
+
+      // table thead tr:nth-child(1) th:nth-child(2),
+      // table thead tr:nth-child(1) th:nth-child(3) {
+      //     color: $oil;
+      //     background-color: transparent;
+      // }
+
+      .accor-content th[colspan="4"] {
+        border: 1px solid $panel-border-color;
+        border-left-width: 2px;
+        padding: rem-calc(5 5 25);
+      }
+    }
+  }
+
+  .permanencia {
+    th {
+      background-color: $gainsboro;
+      text-align: left;
     }
 
-    .pricing-table tbody tr td,
-    .pricing-table tr th {
-        padding: rem-calc(6);
-        font-size: rem-calc(15);
+    td,
+    th {
+      color: $oil;
+      font-size: rem-calc(15);
+      line-height: rem-calc(25);
+      padding: rem-calc(5);
+      vertical-align: top;
+    }
+  }
+
+  .pricing-table tbody tr:nth-of-type(2n),
+  .prop-cliente tbody tr:nth-of-type(2n) {
+    background-color: $silver;
+  }
+
+  .pricing-table .bullet-item {
+    font-family: robotoregular;
+  }
+
+  .pricing-table tr th {
+    background-color: $gainsboro;
+    border-bottom: 0;
+    color: $oil;
+    font-weight: normal;
+    line-height: rem-calc(25);
+    text-align: left;
+  }
+
+  .pricing-table tbody tr td,
+  .pricing-table tr th {
+    font-size: rem-calc(15);
+    padding: rem-calc(6);
+  }
+
+  .acord .pricing-table th:first-child {
+    width: 40%;
+  }
+
+  .prop-cliente {
+    thead tr th {
+      background-color: $primary-color;
+      border-right: 1px solid $white;
+      color: $white;
     }
 
-    .acord .pricing-table th:first-child {
-        width: 40%;
+    thead tr th:nth-child(2) {
+      width: 12%;
     }
 
-    .prop-cliente {
-        thead tr th {
-            background-color: $primary-color;
-            color: $white;
-            border-right: 1px solid $white;
-        }
-
-        thead tr th:nth-child(2) {
-            width: 12%;
-        }
-
-        thead tr th:nth-child(5),
-        thead tr th:nth-child(7),
-        thead tr th:nth-child(9) {
-            border-right: 0;
-        }
-
-        th,
-        td {
-            padding: rem-calc(3 5);
-            text-align: center;
-            font-size: rem-calc(15);
-        }
-
-        td:nth-child(2) {
-            text-align: left;
-        }
-
-        td:nth-child(14),
-        td:nth-child(15) {
-            text-align: right;
-        }
-
-        th a .fa {
-            color: $white;
-            font-size: rem-calc(22);
-        }
-
-        th a {
-            color: $white;
-        }
-
-        td a .fa {
-            font-size: rem-calc(22);
-        }
-
-        tbody tr.destaca {
-            background-color: scale-color($primary-color, $lightness: 80%);
-        }
-
-        thead tr:last-child th:nth-child(1),
-        thead tr:last-child th:nth-child(4),
-        thead tr:last-child th:nth-child(7),
-        thead tr:last-child th:nth-child(10) {
-            background-color: $white;
-        }
-
-        thead tr:first-child th:nth-child(1),
-        thead tr:first-child th:nth-child(6),
-        thead tr:first-child th:nth-child(8),
-        thead tr:first-child th:nth-child(10),
-        tr td:nth-child(1),
-        tr td:nth-child(6),
-        tr td:nth-child(8),
-        tr td:nth-child(10) {
-            width: 3%;
-        }
-
-        thead tr:first-child th:nth-child(3) {
-            width: 21%;
-        }
+    thead tr th:nth-child(5),
+    thead tr th:nth-child(7),
+    thead tr th:nth-child(9) {
+      border-right: 0;
     }
 
+    th,
+    td {
+      font-size: rem-calc(15);
+      padding: rem-calc(3 5);
+      text-align: center;
+    }
+
+    td:nth-child(2) {
+      text-align: left;
+    }
+
+    td:nth-child(14),
+    td:nth-child(15) {
+      text-align: right;
+    }
+
+    th a .fa {
+      color: $white;
+      font-size: rem-calc(22);
+    }
+
+    th a {
+      color: $white;
+    }
+
+    td a .fa {
+      font-size: rem-calc(22);
+    }
+
+    tbody tr.destaca {
+      background-color: scale-color($primary-color, $lightness: 80%);
+    }
+
+    thead tr:last-child th:nth-child(1),
+    thead tr:last-child th:nth-child(4),
+    thead tr:last-child th:nth-child(7),
+    thead tr:last-child th:nth-child(10) {
+      background-color: $white;
+    }
+
+    thead tr:first-child th:nth-child(1),
+    thead tr:first-child th:nth-child(6),
+    thead tr:first-child th:nth-child(8),
+    thead tr:first-child th:nth-child(10),
+    tr td:nth-child(1),
+    tr td:nth-child(6),
+    tr td:nth-child(8),
+    tr td:nth-child(10) {
+      width: 3%;
+    }
+
+    thead tr:first-child th:nth-child(3) {
+      width: 21%;
+    }
+  }
+
+  .accor {
+    th,
+    td {
+      font-size: rem-calc(15);
+      font-weight: normal;
+      padding: rem-calc(5 10);
+      text-align: center;
+    }
+
+    .accor-content th:nth-child(1) {
+      padding: 0;
+    }
+
+    tr.total {
+      background-color: $iron;
+    }
+
+    thead tr:nth-child(1) th:nth-child(7),
+    thead tr:nth-child(1) th:nth-child(8)
+    th.accor-toggle {
+      background-color: $primary-color;
+      color: $white;
+    }
+
+    table thead tr:nth-child(1) th:nth-child(7),
+    table thead tr:nth-child(1) th:nth-child(8) {
+      background-color: $white;
+    }
+
+    table tbody tr:nth-child(even) {
+      background-color: $silver;
+    }
+
+    table tbody tr td:first-child {
+      background-color: $gainsboro;
+      border-bottom: 1px solid $iron;
+    }
+
+    table tbody tr:last-child td:first-child {
+      border-bottom: 0;
+    }
+
+    table a.tiny {
+      font-family: robotoregular;
+      font-size: rem-calc(20);
+      margin-bottom: 0;
+      padding: rem-calc(0 10);
+      text-align: center;
+      width: rem-calc(30);
+    }
+
+    table a.tiny:focus {
+      border-bottom: 0;
+    }
+
+    thead tr:nth-child(1) th:first-child {
+      width: 30%;
+    }
+
+    thead tr:nth-child(1) th:nth-child(4),
+    thead tr:nth-child(1) th:nth-child(5),
+    thead tr:nth-child(1) th:nth-child(6) {
+      width: 7%;
+    }
+  }
+
+  .reveal-modal {
     .accor {
-        th,
-        td {
-            text-align: center;
-            font-size: rem-calc(15);
-            padding: rem-calc(5 10);
-            font-weight: normal;
-        }
-
-        .accor-content th:nth-child(1) {
-            padding: 0;
-        }
-
-        tr.total {
-            background-color: $iron;
-        }
-
-        thead tr:nth-child(1) th:nth-child(7),
-        thead tr:nth-child(1) th:nth-child(8)
-        th.accor-toggle {
-            color: $white;
-            background-color: $primary-color;
-        }
-
-        table thead tr:nth-child(1) th:nth-child(7),
-        table thead tr:nth-child(1) th:nth-child(8) {
-            background-color: $white;
-        }
-
-        table tbody tr:nth-child(even) {
-            background-color: $silver;
-        }
-
-        table tbody tr td:first-child {
-            background-color: $gainsboro;
-            border-bottom: 1px solid $iron;
-        }
-
-        table tbody tr:last-child td:first-child {
-            border-bottom: 0;
-        }
-
-        table a.tiny {
-            padding: rem-calc(0 10);
-            font-family: robotoregular;
-            font-size: rem-calc(20);
-            margin-bottom: 0;
-            width: rem-calc(30);
-            text-align: center;
-        }
-
-        table a.tiny:focus {
-            border-bottom: 0;
-        }
-
-        thead tr:nth-child(1) th:first-child {
-            width: 30%;
-        }
-
-        thead tr:nth-child(1) th:nth-child(4),
-        thead tr:nth-child(1) th:nth-child(5),
-        thead tr:nth-child(1) th:nth-child(6) {
-            width: 7%;
-        }
+      thead tr:first-child th:nth-child(8) {
+        background-color: $primary-color;
+        color: $white;
+      }
     }
 
-    .reveal-modal {
-        .accor {
-            thead tr:first-child th:nth-child(8) {
-                background-color: $primary-color;
-                color: $white;
-            }
-        }
+    .accor-tr {
+      background-color: $primary-color;
 
-        .accor-tr {
-            background-color: $primary-color;
-
-            th {
-                color: $white;
-            }
-        }
-
-        .accor table {
-            thead tr:first-child th:nth-child(8) {
-                background-color: $white;
-                color: $oil;
-            }
-        }
-
-        .accor table th:nth-child(2),
-        .accor table th:nth-child(3) {
-            background-color: $primary-color;
-            color: $white;
-        }
-
-        .modal-scroll th:first-child {
-            width: 70%;
-            text-align: left;
-        }
+      th {
+        color: $white;
+      }
     }
 
-    .accor.plus {
-        input[type="checkbox"] {
-            margin-bottom: 0;
-        }
-
-        thead tr:nth-child(3) th:first-child {
-            color: $white;
-            background-color: $primary-color;
-        }
+    .accor table {
+      thead tr:first-child th:nth-child(8) {
+        background-color: $white;
+        color: $oil;
+      }
     }
 
-    .penaliz {
-        th {
-            background-color: $primary-color;
-            color: $white;
-            text-align: left;
-            font-weight: normal;
-        }
-
-        th,
-        td {
-            padding: rem-calc(5);
-        }
+    .accor table th:nth-child(2),
+    .accor table th:nth-child(3) {
+      background-color: $primary-color;
+      color: $white;
     }
 
-    .sortable th,
-    .sortable td,
-    .sortable tr td:nth-child(7) {
-        text-align: center;
+    .modal-scroll th:first-child {
+      text-align: left;
+      width: 70%;
+    }
+  }
+
+  .accor.plus {
+    input[type="checkbox"] {
+      margin-bottom: 0;
     }
 
-    .ofertas table thead tr th:nth-child(4) {
-        width: 24%;
+    thead tr:nth-child(3) th:first-child {
+      background-color: $primary-color;
+      color: $white;
+    }
+  }
+
+  .penaliz {
+    th {
+      background-color: $primary-color;
+      color: $white;
+      font-weight: normal;
+      text-align: left;
     }
 
-    .ofertas table thead tr th:nth-child(8) {
-        width: 13%;
+    th,
+    td {
+      padding: rem-calc(5);
     }
+  }
 
-    .ofertas table thead tr th:nth-child(9),
-    .ofertas table thead tr th:nth-child(10) {
-        width: 5%;
-    }
+  .sortable th,
+  .sortable td,
+  .sortable tr td:nth-child(7) {
+    text-align: center;
+  }
 
-    .ofertas .sortable tr td:nth-child(1) {
-        text-align: center;
-    }
+  .ofertas table thead tr th:nth-child(4) {
+    width: 24%;
+  }
 
-    // opweb descuentos
-    .ofertas .desc-trafico th:nth-child(4),
-    .ofertas .desc-trafico th:nth-child(5) {
-        width: 8%;
-    }
+  .ofertas table thead tr th:nth-child(8) {
+    width: 13%;
+  }
 
-    .ofertas .desc-cuotas th:nth-child(5),
-    .ofertas .desc-cuotas th:nth-child(6) {
-        width: 8%;
-    }
+  .ofertas table thead tr th:nth-child(9),
+  .ofertas table thead tr th:nth-child(10) {
+    width: 5%;
+  }
 
-    .ofertas .desc-trafico th:nth-child(3) {
-        width: 20%;
-    }
+  .ofertas .sortable tr td:nth-child(1) {
+    text-align: center;
+  }
 
-    .ofertas .desc-cuotas th:nth-child(2),
-    .ofertas .desc-cuotas th:nth-child(3) {
-        width: 15%;
-    }
+  // opweb descuentos
+  .ofertas .desc-trafico th:nth-child(4),
+  .ofertas .desc-trafico th:nth-child(5) {
+    width: 8%;
+  }
 
-    .ofertas .desc-cuotas th:nth-child(4) {
-        width: 20%;
-    }
+  .ofertas .desc-cuotas th:nth-child(5),
+  .ofertas .desc-cuotas th:nth-child(6) {
+    width: 8%;
+  }
 
-    .ofertas .desc-trafico th:nth-child(2) {
-        width: 30%;
-    }
+  .ofertas .desc-trafico th:nth-child(3) {
+    width: 20%;
+  }
 
-    .ofertas .desc-cuotas th:nth-child(2),
-    .ofertas .desc-cuotas th:nth-child(3) {
-        width: 15%;
-    }
+  .ofertas .desc-cuotas th:nth-child(2),
+  .ofertas .desc-cuotas th:nth-child(3) {
+    width: 15%;
+  }
 
-    // líneas de propuesta
-    .ofertas .lin-propuesta th:nth-child(4) {
-        width: 20%;
-    }
+  .ofertas .desc-cuotas th:nth-child(4) {
+    width: 20%;
+  }
 
-    .ofertas .lin-propuesta th:nth-child(8) {
-        width: 7%;
-    }
+  .ofertas .desc-trafico th:nth-child(2) {
+    width: 30%;
+  }
 
-    .ofertas .lin-propuesta th:nth-child(9) {
-        width: 8%;
-    }
+  .ofertas .desc-cuotas th:nth-child(2),
+  .ofertas .desc-cuotas th:nth-child(3) {
+    width: 15%;
+  }
+
+  // líneas de propuesta
+  .ofertas .lin-propuesta th:nth-child(4) {
+    width: 20%;
+  }
+
+  .ofertas .lin-propuesta th:nth-child(8) {
+    width: 7%;
+  }
+
+  .ofertas .lin-propuesta th:nth-child(9) {
+    width: 8%;
+  }
 }

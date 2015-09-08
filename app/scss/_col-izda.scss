@@ -2,26 +2,26 @@
 
 // Columna izquierda para Administración
 .col-izda {
-    .aside-left {
-        background-color: $third-color;
-        box-shadow: 0 6px 3px $charcoal;
-        min-height: 607px;
-    }
+  .aside-left {
+    background-color: $third-color;
+    box-shadow: 0 6px 3px $charcoal;
+    min-height: 607px;
+  }
 
-    ul {
-        list-style: none;
-        margin: 0;
-    }
+  ul {
+    list-style: none;
+    margin: 0;
+  }
 
-    a {
-        color: $gainsboro;
-        display: block;
-        padding: rem-calc(6 5 6 35);
+  a {
+    color: $gainsboro;
+    display: block;
+    padding: rem-calc(6 5 6 35);
 
-        &:hover,
-        &.activa {
-            background-color: scale-color($third-color, $lightness: -35%);
-            color: #fff;
-        }
+    &:hover,
+    &.activa {
+      background-color: scale-color($third-color, $lightness: -35%);
+      color: #fff;
     }
+  }
 }

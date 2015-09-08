@@ -2,61 +2,61 @@
 
 // Alert boxes
 .alert-box {
-    background-color: $third-color;
-    display: inline-block;
-    font-size: rem-calc(15);
-    left: 150px;
-    position: absolute;
-    top: 10px;
+  background-color: $third-color;
+  display: inline-block;
+  font-size: rem-calc(15);
+  left: 150px;
+  position: absolute;
+  top: 10px;
 
-    &.info {
-        background-color: $primary-color;
-        color: $white;
-    }
+  &.info {
+    background-color: $primary-color;
+    color: $white;
+  }
 
-    &.filtro {
-        background-color: $filter-color;
-        color: $oil;
-    }
+  &.filtro {
+    background-color: $filter-color;
+    color: $oil;
+  }
 }
 
 .sedes .alert-box,
 .puestos .alert-box {
-    left: 30px;
+  left: 30px;
 }
 
 .alert-box2 {
-    @include alert;
-    background-color: $third-color;
-    border-radius: $global-radius;
-    display: inline-block;
-    font-size: rem-calc(15);
-    margin: rem-calc(0 5 7 0);
-    padding: rem-calc(2 40 2 10);
+  @include alert;
+  background-color: $third-color;
+  border-radius: $global-radius;
+  display: inline-block;
+  font-size: rem-calc(15);
+  margin: rem-calc(0 5 7 0);
+  padding: rem-calc(5 40 5 10);
 
-    .close {
-        @include alert-close;
-    }
+  .close {
+    @include alert-close;
+  }
 
-    &.alert-close {
-        opacity: 0;
-    }
+  &.alert-close {
+    opacity: 0;
+  }
 
-    &.info {
-        background-color: $primary-color;
-        color: $white;
-    }
+  &.info {
+    background-color: $primary-color;
+    color: $white;
+  }
 
-    &.filtro {
-        background-color: $filter-color;
-        color: $oil;
-    }
+  &.filtro {
+    background-color: $filter-color;
+    color: $oil;
+  }
 }
 
 .reveal-modal {
-    .alert-box {
-        left: auto;
-        right: rem-calc(60);
-        top: rem-calc(8);
-    }
+  .alert-box {
+    left: auto;
+    right: rem-calc(60);
+    top: rem-calc(8);
+  }
 }

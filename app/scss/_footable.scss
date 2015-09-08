@@ -2,111 +2,111 @@
 
 // FOOTABLE: añade paginación y ordena filas pulsando en cabecera
 .footable {
-    .footable-toggle {
-        display: inline-block;
-        font-family: fontawesome;
-        font-size: rem-calc(14);
-        -webkit-font-smoothing: antialiased;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: normal;
-        padding-right: rem-calc(5);
-        speak: none;
-        text-transform: none;
+  .footable-toggle {
+    display: inline-block;
+    font-family: fontawesome;
+    font-size: rem-calc(14);
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    padding-right: rem-calc(5);
+    speak: none;
+    text-transform: none;
+  }
+
+  th {
+    &.footable-sortable {
+      cursor: pointer;
     }
 
-    th {
-        &.footable-sortable {
-            cursor: pointer;
-        }
-
-        &.footable-sorted .footable-sort-indicator:before {
-            content: "\f0d8";
-        }
-
-        &.footable-sorted-desc .footable-sort-indicator:before {
-            content: "\f0d7";
-        }
-
-        .footable-sort-indicator {
-            color: $aluminum;
-            display: inline-block;
-            font-family: fontawesome;
-            -webkit-font-smoothing: antialiased;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: normal;
-            height: rem-calc(20);
-            padding-left: rem-calc(5);
-            speak: none;
-            text-transform: none;
-        }
-
-        .footable-sort-indicator:before {
-            content: "\f0dc";
-        }
+    &.footable-sorted .footable-sort-indicator:before {
+      content: "\f0d8";
     }
 
-    tfoot td {
-        padding: rem-calc(10 0);
+    &.footable-sorted-desc .footable-sort-indicator:before {
+      content: "\f0d7";
     }
+
+    .footable-sort-indicator {
+      color: $aluminum;
+      display: inline-block;
+      font-family: fontawesome;
+      -webkit-font-smoothing: antialiased;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: normal;
+      height: rem-calc(20);
+      padding-left: rem-calc(5);
+      speak: none;
+      text-transform: none;
+    }
+
+    .footable-sort-indicator:before {
+      content: "\f0dc";
+    }
+  }
+
+  tfoot td {
+    padding: rem-calc(10 0);
+  }
 }
 
 .pagination {
-    margin: rem-calc(20 0);
+  margin: rem-calc(20 0);
 
-    ul {
-        display: inline-block;
-        margin: 0;
-    }
+  ul {
+    display: inline-block;
+    margin: 0;
+  }
 
-    li {
-        display: inline-block;
-    }
+  li {
+    display: inline-block;
+  }
 
-    li > a,
-    li > span {
-        display: inline-block;
-        font-family: robotoregular, sans-serif;
-        font-weight: normal;
-        margin: rem-calc(0 3);
-        padding: rem-calc(6 12);
-        text-decoration: none;
-    }
+  li > a,
+  li > span {
+    display: inline-block;
+    font-family: robotoregular, sans-serif;
+    font-weight: normal;
+    margin: rem-calc(0 3);
+    padding: rem-calc(6 12);
+    text-decoration: none;
+  }
 
-    li > a:hover,
-    li > a:focus,
-    .active > a,
-    .active > span {
-        background-color: $third-color;
-        border-radius: $global-radius;
-        color: $white;
-    }
+  li > a:hover,
+  li > a:focus,
+  .active > a,
+  .active > span {
+    background-color: $third-color;
+    border-radius: $global-radius;
+    color: $white;
+  }
 
-    .disabled > span,
-    .disabled > a {
-        color: $aluminum;
-    }
+  .disabled > span,
+  .disabled > a {
+    color: $aluminum;
+  }
 
-    .disabled > a:hover,
-    .disabled > a:focus {
-        background-color: transparent;
-        border-bottom: none transparent;
-        color: $aluminum;
-        cursor: default;
-    }
+  .disabled > a:hover,
+  .disabled > a:focus {
+    background-color: transparent;
+    border-bottom: none transparent;
+    color: $aluminum;
+    cursor: default;
+  }
 
-    .footable-page-arrow a {
-        font-size: rem-calc(20);
-        margin-top: rem-calc(1);
-        padding: rem-calc(0 12 5);
-    }
+  .footable-page-arrow a {
+    font-size: rem-calc(20);
+    margin-top: rem-calc(1);
+    padding: rem-calc(0 12 5);
+  }
 
-    &.pagination-centered {
-        text-align: center;
-    }
+  &.pagination-centered {
+    text-align: center;
+  }
 }
 
 .no-paging .hide-if-no-paging {
-    display: none;
+  display: none;
 }

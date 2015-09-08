@@ -2,116 +2,116 @@
 
 // Range slider
 .noUi-connect {
-    background: $secondary-color;
+  background: $secondary-color;
 }
 
 .noUi-target,
 .noUi-target * {
-    -ms-touch-action: none;
-    -webkit-touch-callout: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-    //-moz-box-sizing: border-box;
-    //box-sizing: border-box;
+  -ms-touch-action: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  //-moz-box-sizing: border-box;
+  //box-sizing: border-box;
 }
 
 .noUi-origin,
 .noUi-target {
-    border-radius: rem-calc(4);
+  border-radius: rem-calc(4);
 }
 
 .noUi-target {
+  position: relative;
+
+  .noUi-base {
+    height: 100%;
     position: relative;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    width: 100%;
+  }
 
-    .noUi-base {
-        height: 100%;
-        position: relative;
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        width: 100%;
-    }
+  .noUi-origin {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 
-    .noUi-origin {
-        bottom: 0;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
+  .noUi-handle {
+    background: $primary-color;
+    border-radius: 50%;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: grab;
+    position: relative;
+    z-index: 1;
+  }
+
+  .noUi-stacking .noUi-handle {
+    // This class is applied to the lower origin when its values is > 50%.
+    z-index: 10;
+  }
+
+  .noUi-state-tap .noUi-origin {
+    -webkit-transition: left 0.3s, top 0.3s;
+    transition: left 0.3s, top 0.3s;
+  }
+
+  .noUi-state-drag * {
+    cursor: inherit !important;
+  }
+
+  // Slider size and handle placement
+  &.noUi-horizontal {
+    height: rem-calc(4);
 
     .noUi-handle {
-        background: $primary-color;
-        border-radius: 50%;
-        cursor: -webkit-grab;
-        cursor: -moz-grab;
-        cursor: grab;
-        position: relative;
-        z-index: 1;
+      height: rem-calc(26);
+      left: rem-calc(-13);
+      top: rem-calc(-11);
+      width: rem-calc(26);
     }
 
-    .noUi-stacking .noUi-handle {
-        // This class is applied to the lower origin when its values is > 50%.
-        z-index: 10;
+    .noUi-active {
+      box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.4);
+      cursor: -webkit-grabbing;
+      cursor: -moz-grabbing;
+      cursor: grabbing;
+      height: rem-calc(36);
+      left: rem-calc(-18);
+      top: rem-calc(-16);
+      width: rem-calc(36);
     }
+  }
 
-    .noUi-state-tap .noUi-origin {
-        -webkit-transition: left 0.3s, top 0.3s;
-        transition: left 0.3s, top 0.3s;
-    }
+  // .noUi-vertical {
+  //     width: rem-calc(18);
 
-    .noUi-state-drag * {
-        cursor: inherit !important;
-    }
+  //     .noUi-vertical .noUi-handle {
+  //         height: rem-calc(34);
+  //         left: rem-calc(-6);
+  //         top: rem-calc(-17);
+  //         width: rem-calc(28);
+  //     }
+  // }
 
-    // Slider size and handle placement
-    &.noUi-horizontal {
-        height: rem-calc(4);
+  &.noUi-background {
+    background: $base;
+  }
+  // Styling
+  // Disabled state
+  &[disabled].noUi-connect,
+  &[disabled] .noUi-background,
+  &[disabled] .noUi-connect,
+  &[disabled] .noUi-handle {
+    background: $iron;
+  }
 
-        .noUi-handle {
-            height: rem-calc(26);
-            left: rem-calc(-13);
-            top: rem-calc(-11);
-            width: rem-calc(26);
-        }
-
-        .noUi-active {
-            box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.4);
-            cursor: -webkit-grabbing;
-            cursor: -moz-grabbing;
-            cursor: grabbing;
-            height: rem-calc(36);
-            left: rem-calc(-18);
-            top: rem-calc(-16);
-            width: rem-calc(36);
-        }
-    }
-
-    // .noUi-vertical {
-    //     width: rem-calc(18);
-
-    //     .noUi-vertical .noUi-handle {
-    //         height: rem-calc(34);
-    //         left: rem-calc(-6);
-    //         top: rem-calc(-17);
-    //         width: rem-calc(28);
-    //     }
-    // }
-
-    &.noUi-background {
-        background: $base;
-    }
-    // Styling
-    // Disabled state
-    &[disabled].noUi-connect,
-    &[disabled] .noUi-background,
-    &[disabled] .noUi-connect,
-    &[disabled] .noUi-handle {
-        background: $iron;
-    }
-
-    &[disabled] .noUi-handle {
-        cursor: not-allowed;
-    }
+  &[disabled] .noUi-handle {
+    cursor: not-allowed;
+  }
 }

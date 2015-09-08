@@ -1,0 +1,480 @@
+<!doctype html>
+<html class="no-js" lang="es-Es">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Configurador de Movistar Fusión Empresas">
+  <title>Configurador MFE - Configuración básica de sede</title>
+  <!-- Iconos de aplicación -->
+  <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+  <!-- build:css css/libraries.min.css -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css css/app.min.css -->
+  <link rel="stylesheet" href="css/app.css">
+  <!-- endbuild -->
+  <!-- build:js js/vendor/modernizr.min.js -->
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+  <script type="text/javascript">
+  var precioFijo = 16;
+  var precioMovil = 5;
+  var precioPresencia = 15;
+  var precioOffice = 30;
+  var precioSeguridad = 3;
+  var precioConectividad = 90;
+  var controlCluster = true;
+  var precioSwitches = 6.0;
+  </script>
+  <script src="js/navegacion.js"></script>
+  <script src="js/conf_basica.js"></script>
+</head>
+
+<body class="sedes" onload="cargarSliders(42,17,21,6,3,5);calculaImporteOferta()">
+  <div class="row">
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+        <header role="banner">
+          <div class="tit-sede text-center">
+            FORJADOS EXTREMEÑOS S.A. A10024305 (Calle Juan de la Cierva 11 Bajo 0 Plasencia - CACERES)
+          </div>
+          <script type="text/javascript">
+          function pasar_usuario_busq() {
+            var href_busqueda = '?opcion=ofertas&accion=buscar1&esModal=1';
+            var anchor = document.getElementById('buscar').href = href_busqueda;
+          }
+          </script>
+          <script type="text/javascript">
+          function pasar_usuario_avanz() {
+            var href_busq_avanz = '?opcion=ofertas&accion=bus_avanzada1&esModal=1';
+            var anchor = document.getElementById('busc_avanz').href = href_busq_avanz;
+          }
+          </script>
+          <script type="text/javascript">
+          function campana_notif() {
+            var href_campana = 'opwebServlet?opcion=administracion&accion=CampanaNotif&esModal=1';
+            var anchor = document.getElementById('campana_notif').href = href_campana;
+          }
+          </script>
+          <script src="js/navegacion.js"></script>
+          <nav class="tab-bar" role="navigation">
+            <section>
+              <div class="large-1 medium-1 small-1 columns">
+                <a title="Menú de navegación" href="" class="left-off-canvas-toggle menu-icon" tabindex="1">
+                  <span></span>
+                </a>
+              </div>
+              <div class="large-8 medium-6 columns show-for-medium-up">
+                <h1 class="text-center"><a class="lista-sedes" title="Sedes" href="#" onClick="volverSedes('navSedesHome');" id="navSedesHome"><i class="fa fa-building-o"></i></a>Configuración básica sede</h1>
+              </div>
+              <div class="large-3 medium-5 small-10 columns">
+                <a id="campana_notif" href="" onClick="campana_notif();" title="Notificaciones" data-reveal-id="notific" data-reveal-ajax="true">
+                  <i class="fa fa-bell-o"><span>9</span></i>
+                </a>
+                <a id="buscar" href="" title="Buscar" onClick="pasar_usuario_busq();" data-reveal-id="search" data-reveal-ajax="true">
+                  <i class="fa fa-search"></i>
+                </a>
+                <a id="busc_avanz" href="" title="Buscar con filtro avanzado" onClick="pasar_usuario_avanz();" data-reveal-id="search-filter" data-reveal-ajax="true">
+                  <i class="fa fa-search-plus"></i>
+                </a>
+                <a id="volverOfertas" name="volverOfertas" href="" title="Inicio" onClick="volverSedesEliminar('volverOfertas');">
+                  <i class="fa fa-home fa-2x"></i>
+                </a>
+              </div>
+            </section>
+          </nav>
+          <!-- tab-bar -->
+        </header>
+        <script>
+        function cambiar(esto) {
+          vista = document.getElementById(esto).style.display;
+          if (vista == 'block')
+            vista = 'none';
+          else
+            vista = 'block';
+          document.getElementById(esto).style.display = vista;
+        }
+        </script>
+        <aside class="left-off-canvas-menu">
+          <ul class="off-canvas-list">
+            <li class="off-canvas-head">
+              <p>ANGULO LOPEZ, DIEGO</p>
+              <select name="perfil" onfocus="offcanvas.show()">
+                <option value="">ADMINISTRADORES</option>
+              </select>
+            </li>
+            <li><a href="opwebServlet?opcion=administracion&accion=otras_operaciones"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
+            </li>
+            <!-- <li><a href="opwebServlet?opcion=administracion&accion=nuevoInforme"><i class="fa fa-bar-chart fa-2x"></i> Crear informes</a>
+        </li> -->
+            <li><a href="opwebServlet?opcion=administracion&accion=nuevoInforme"><i class="fa fa-bar-chart fa-2x"></i> Crear informes</a> </li>
+            <!-- <li><a href="opwebServlet?opcion=administracion&accion=notificaciones"><i class="fa fa-bell-o"></i> Notificaciones</a>
+        </li> -->
+            <li><a href="opwebServlet?opcion=administracion&accion=notificaciones"><i class="fa fa-bell-o"></i> Notificaciones</a> </li>
+            <li><a href="#" onclick="cambiar('lista_integra');"><i class="fa fa-bookmark fa-2x"></i> Integra</a>
+              <ul id="lista_integra" hidden>
+                <a href="https://www.integra.movistar.es/">Integra1</a>
+                <!--<a href="https://www.integra.movistar.es/">Integra2</a>-->
+              </ul>
+            </li>
+            <li><a href="#" onclick="alert('Gestión en WordPress no implementada');"><i class="fa fa-info-circle fa-2x"></i> Ayuda</a>
+          </ul>
+          <!-- off-canvas-list -->
+        </aside>
+        <!-- left-off-canvas-menu -->
+        <nav role="navigation">
+          <ul class="breadcrumbs breadconf">
+            <li class="large-2 medium-2 small-4 columns activo">
+              <!--<a href="#" title="Configuración Básica de Sede" onClick="volverSede('navSedes');" id="navSedes">-->
+              <!--<a href="#" title="Sede" onClick="volverSedes('navSedes');" id="navSedes">-->
+              <i class="fa fa-building-o"></i>
+              </a>
+            </li>
+            <li class="large-2 medium-2 small-4 columns">
+              <a href="#" title="Puestos fijos" id="navPuestosFijos" onClick="enlaza_puestos_fijosCB('navPuestosFijos');">
+                <span class="fa-stack fa-lg">
+                                        <i class="fa fa-user fa-stack-2x"></i>
+                                        <i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i>
+                                    </span>
+              </a>
+            </li>
+            <li class="large-2 medium-2 small-4 columns">
+              <a href="#" title="Puestos m&oacute;viles" id="navPuestosMoviles" onClick="enlaza_puestos_movilesCB('navPuestosMoviles',0);">
+                <span class="fa-stack fa-lg">
+                                        <i class="fa fa-user fa-stack-2x"></i>
+                                        <i class="fa fa-mobile fa-stack-1x"></i>
+                                    </span>
+              </a>
+            </li>
+            <li class="large-2 medium-2 small-4 columns">
+              <a href="#" title="Accesorios" id="navAccesorios" onClick="enlaza_accesorios('navAccesorios');">
+                <span class="fa-stack fa-lg">
+                                        <i class="fa fa-4x fa-building-o fa-stack-2x"></i>
+                                        <i class="fa fa-fighter-jet fa-stack-1x"></i>
+                                    </span>
+              </a>
+            </li>
+            <li class="large-2 medium-2 small-4 columns">
+              <a href="#" title="Seguridad" id="navPuestoTI" onClick="enlaza_puestoTICB('navPuestoTI','officeCarga');">
+                <i class="fa fa-desktop"></i>
+              </a>
+            </li>
+            <li class="large-2 medium-2 small-4 columns current">
+              <i class="fa fa-shopping-cart"></i>
+              <!-- <a href="" title="Precio total de la oferta" id="resumen" onClick="llamarResumen('resumen');">
+                                 -->
+              <a href="" title="Precio total de la oferta" id="resumen" onClick="llamarResumen('resumen', 'ConfiguracionBasica');">
+
+
+                                651,00 &euro;
+                            </a>
+            </li>
+          </ul>
+        </nav>
+        <section class="main-section" role="main">
+          <article class="row">
+            <div class="contenido large-12 columns">
+              <form id="configBasica" name="configBasica" class="conf-basica" action="">
+                <div class="row">
+                  <input id="opcion" name="opcion" type="hidden" value="sedes">
+                  <input id="accion" name="accion" type="hidden" value="continuar">
+                  <input id="CUC" name="CUC" type="hidden" value="91728212">
+                  <input id="CIF" name="CIF" type="hidden" value="A10024305">
+                  <input id="COOFERTA" name="COOFERTA" type="hidden" value="2392">
+                  <input id="COSEDE" name="COSEDE" type="hidden" value="2">
+                  <input id="TotalMFE" name="TotalMFE" type="hidden" value="<!--TotalMFE-->">
+                  <input id="direccion" name="direccion" type="hidden" value="10000430016800011         BA         ">
+                  <!--indica si la oferta tiene dado de alta puestos moviles para llamar a la consulta-->
+                  <input id="PM" name="PM" type="hidden" value="0">
+                  <input id="ruedaPM" name="ruedaPM" type="hidden" value="S">
+                  <input id='matricula' name='matricula' type='hidden' value='147897'>
+                  <input id='direccionTitulo' name='direccionTitulo' type='hidden' value='Calle Juan de la Cierva 11           Bajo  0 Plasencia - CACERES'>
+                  <input id='COCLUSTER' name='COCLUSTER' type='hidden' value='1'>
+                  <input id='PMOrig' name='PMOrig' type='hidden' value='21'>
+                  <input id='PFOrig' name='PFOrig' type='hidden' value='17'>
+                  <input id='COrig' name='COrig' type='hidden' value='42'>
+                  <input id='PreOrig' name='PreOrig' type='hidden' value='3'>
+                  <input id='ProOrig' name='ProOrig' type='hidden' value='6'>
+                  <input id='SOrig' name='SOrig' type='hidden' value='5'>
+                  <input id="usuario" name="usuario" type="hidden" value="">
+                  <input id="OEValida" name="OEValida" type="hidden" value="true">
+                  <!-- fila 1 col 1 Inicio-->
+                  <div class="medium-4 columns">
+                    <div class="panel row">
+                      <h2 id="pu-ct">Conectividad</h2>
+                      <div class="small-12 columns">
+                        <select name="conectividad" id="conectividad" onChange='actualizaPrecioConect();'>
+                          <option value='025070008' data-precio='75'>CE MultiSede HASTA 20M/800k 4 canales </option>
+                          <option value='025070009' data-precio='80'>CE MultiSede 30 M/3M 22 canales </option>
+                          <option value='025070007' data-precio='75'>CE MultiSede 10M/1M 7 canales </option>
+                          <option value='025070010' selected data-precio='90'>CE MultiSede 100 M/ 10M 75 canales </option>
+                          <option value='025070012' data-precio='65'>CE Activa Multisede HASTA 10M/800k </option>
+                          <option value='025070018' data-precio='95'>CE Multisede - Dual 10M/800k 12 canales </option>
+                          <option value='025070017' data-precio='90'>CE Multisede - Dual HASTA 1M/800k 5 canales </option>
+                        </select>
+                      </div>
+                      <div class="small-6 columns puertos-adic">
+                        Puertos adicionales
+                      </div>
+                      <div class="small-6 columns puertos-adic">
+                        <input type='text' id='out-sl-pues-conecti' name='out-sl-pues-conecti' value=4 2>
+                      </div>
+                    </div>
+                    <div class="r-s-margen">
+                      <div class='slider3' id='sl-pues-conecti' role='slider' aria-labelledby='pu-ct' onChange="validaSlider('COrig', 'out-sl-pues-conecti', 'sl-pues-conecti');"></div>
+                    </div>
+                  </div>
+                  <!-- fila 1 col 1 -->
+                  <!-- fila 1 col 2 Inicio-->
+                  <div class="medium-4 columns">
+                    <div class="panel row">
+                      <h2 id="pu-fi">Puestos fijos</h2>
+                      <div class="small-6 columns">
+                        <a href="" id="enlace-pf" onClick="enlaza_puestos_fijosCB('enlace-pf');">
+                          <span class="fa-stack fa-lg">
+                              <i class="fa fa-user fa-stack-2x"></i>
+                              <i class="fa fa-phone fa-rotate-45 fa-stack-1x"></i>
+                          </span>
+                        </a>
+                      </div>
+                      <div class="small-6 columns output">
+                        <input type='text' id='out-sl-pues-fijo' name='out-sl-pues-fijo' value=1 7 onChange="validaSlider('PFOrig', 'out-sl-pues-fijo', 'sl-pues-fijo');" form='configBasica'>
+                      </div>
+                    </div>
+                    <div class="r-s-margen">
+                      <div class='slider1' id='sl-pues-fijo' role='slider' aria-labelledby='pu-fi' onChange="validaSlider('PFOrig', 'out-sl-pues-fijo', 'sl-pues-fijo');"></div>
+                    </div>
+                  </div>
+                  <!-- fila 1 col 2 -->
+                  <!-- fila 1 col 3 Inicio-->
+                  <div class="medium-4 columns">
+                    <div class="panel row">
+                      <h2 id="pu-mo">Puestos móviles</h2>
+                      <div class="small-6 columns">
+                        <a href="#" id="enlace-pm" onClick="enlaza_puestos_movilesCB('enlace-pm',0);">
+                          <span class="fa-stack fa-lg">
+                                                        <i class="fa fa-user fa-stack-2x"></i>
+                                                        <i class="fa fa-mobile fa-stack-1x"></i>
+                                                    </span>
+                        </a>
+                      </div>
+                      <div class="small-6 columns output">
+                        <input type='text' id='out-sl-pues-movi' name='out-sl-pues-movi' value=2 1 onChange='ofreceIrAConfigPM();' form='configBasica'>
+                        <a href='#' id="enlace-pm2" onClick="enlaza_puestos_movilesCB('enlace-pm2',0);"><i class='fa fa-gear fa-1x'></i><br/></a>
+                      </div>
+                    </div>
+                    <div class="r-s-margen">
+                      <div class='slider1' id='sl-pues-movi' role='slider' aria-labelledby='pu-mo' onChange='ofreceIrAConfigPM();'></div>
+                    </div>
+                  </div>
+                  <!-- fila 1 col 3 -->
+                </div>
+                <!-- row -->
+                <div class="row">
+                  <!-- fila 2 col 1 Inicio-->
+                  <div class="medium-4 columns">
+                    <div class="panel row">
+                      <h2 id='produc'>PRESENCIA</h2>
+                      <!-- h2 id="produc">Productividad</h2-->
+                      <div class="small-6 columns">
+                        <img src="images/web.png" alt="Tu web">
+                        <!--img src="images/office365.png" alt="Office 365"-->
+                      </div>
+                      <div class="small-6 columns output">
+                        <input type='text' id='out-sl-productiv' name='out-sl-productiv' value=6 data-producto='F03_002' onChange="validaSlider('ProOrig', 'out-sl-productiv', 'sl-productiv');" form='configBasica' rows='1'>
+                        <input id="aplicateca_izquierda" name="aplicateca_izquierda" type="hidden" value=" F03_002">
+                      </div>
+                    </div>
+                    <div class="r-s-margen">
+                      <div class='slider' id='sl-productiv' role='slider' aria-labelledby='produc' onChange="validaSlider('ProOrig', 'out-sl-productiv', 'sl-productiv');"></div>
+                      </br> Hacemos tu Web
+                    </div>
+                  </div>
+                  <!-- fila 2 col 1 -->
+                  <!-- fila 2 col 2 Inicio-->
+                  <div class="medium-4 columns">
+                    <div class="panel row">
+                      <!--  <h2 id="presen">Presencia en internet</h2> -->
+                      <h2 id='presen'>PRESENCIA</h2>
+                      <div class="small-6 columns">
+                        <!--img src="images/web.png" alt="Tu web"-->
+                        <img src="images/office365.png" alt="Office 365">
+                      </div>
+                      <div class="small-6 columns output">
+                        <input type='text' id='out-sl-presencia' name='out-sl-presencia' value=3 data-producto='F03_004' onChange="validaSlider('PreOrig', 'out-sl-presencia', 'sl-presencia');" form='configBasica'>
+                        <input id="aplicateca_centro" name="aplicateca_centro" type="hidden" value=" F03_004">
+                      </div>
+                    </div>
+                    <div class="r-s-margen">
+                      <div class='slider' id='sl-presencia' name='sl-presencia' role='slider' aria-labelledby='presen' onChange="validaSlider('PreOrig', 'out-sl-presencia', 'sl-presencia');"></div>
+                      </br> Hacemos tu Tienda
+                    </div>
+                  </div>
+                  <!-- fila 2 col 2 -->
+                  <!-- fila 2 col 3 Inicio-->
+                  <div class="medium-4 columns">
+                    <div class="panel row">
+                      <!-- <h2 id="seguri">Seguridad</h2> -->
+                      <h2 id='seguri'>MCAFEE</h2>
+                      <div class="small-6 columns">
+                        <img src="images/multi-access.png" alt="McAfee Multi Access">
+                      </div>
+                      <div class="small-6 columns output">
+                        <input type='text' id='out-sl-seguridad' name='out-sl-seguridad' value=5 data-producto='F03_027' onChange="validaSlider('SOrig', 'out-sl-seguridad', 'sl-seguridad');" form='configBasica'>
+                        <input id="aplicateca_derecha" name="aplicateca_derecha" type="hidden" value=" F03_027">
+                      </div>
+                    </div>
+                    <div class="r-s-margen">
+                      <div class='slider' id='sl-seguridad' role='slider' aria-labelledby='seguri' onChange="validaSlider('SOrig', 'out-sl-seguridad', 'sl-seguridad');"></div>
+                      </br> Ant.+Fir.
+                      < 25 Licencias </div>
+                    </div>
+                    <!-- fila 2 col 3 -->
+                  </div>
+                  <!-- row -->
+                  <div class="row botonera">
+                    <div class="large-12 columns text-right">
+                      <a id="volverSedes" name="volverSedes" href="#" class="button radius func-secondary tiny" title="Volver selección de sedes" onClick="volverSedes('volverSedes');">Volver</a>
+                      <a id="ContinuarFijos" name="ContinuarFijos" href="#" class="button radius func-secondary tiny" title="Continuar puestos fijos" onClick="enlaza_puestos_fijosCB('ContinuarFijos');">Continuar</a>
+                      <a id="ConfiguracionOferta" name="ConfiguracionOferta" href="#" class="button radius tiny" title="Configuracion Oferta Sede" onClick="enlaza_configuracion_rapida();">Finalizar</a>
+                    </div>
+                  </div>
+              </form>
+              </div>
+              <!-- contenido -->
+          </article>
+        </section>
+        <a class="exit-off-canvas"></a>
+        </div>
+        <!-- inner-wrap -->
+      </div>
+      <!-- off-canvas-wrap -->
+    </div>
+    <!-- row -->
+    <footer class="row" role="contentinfo">
+      <div class="small-4 large-2 columns">147897</div>
+      <div class="small-8 large-8 columns end text-center">
+        Telefónica de España S.A
+      </div>
+    </footer>
+    <!-- footer -->
+    <!-- Ventanas modales -->
+    <div id="notific" class="medium reveal-modal" data-reveal></div>
+    <!-- modal notificaciones -->
+    <div id="otras-oper" class="medium reveal-modal" data-reveal></div>
+    <!-- modal otras operaciones -->
+    <div id="cuenta-banc" class="large reveal-modal" data-reveal></div>
+    <!-- modal cuenta bancaria -->
+    <div id="camb-titular-lm" class="medium reveal-modal" data-reveal></div>
+    <!-- modal cambiar titular linea móvil -->
+    <div id="search" class="medium reveal-modal" data-reveal></div>
+    <!-- modal search -->
+    <div id="search-filter" class="medium reveal-modal" data-reveal></div>
+    <!-- modal search-filter -->
+    <div id="informes" class="medium reveal-modal" data-reveal></div>
+    <!-- modal informes -->
+    <div id="new-notif" class="medium reveal-modal" data-reveal></div>
+    <!-- modal nueva notificación -->
+    <div id="edit-notif" class="medium reveal-modal" data-reveal></div>
+    <!-- modal editar notificación -->
+    <div id="elimina-notif" class="medium reveal-modal" data-reveal></div>
+    <!-- modal eliminar notificacion-->
+    <div id="mostrar-notif" class="medium reveal-modal" data-reveal></div>
+    <!-- modal muestra notificacion-->
+    <div id="new-ofert" class="small reveal-modal" data-reveal></div>
+    <!-- modal nueva oferta -->
+    <div id="new-client" class="medium reveal-modal" data-reveal></div>
+    <!-- modal nuevo cliente -->
+    <div id="new-sede" class="xlarge reveal-modal sedes" data-reveal></div>
+    <!-- modal nueva sede -->
+    <div id="conf-cob-movil" class="tiny reveal-modal" data-reveal></div>
+    <!-- modal Configuración Cobertura Móvil -->
+    <div id="ope-num" class="large reveal-modal" data-reveal></div>
+    <!-- modal Configuración de las numeraciones  -->
+    <div id="selecc-red" class="small reveal-modal" data-reveal></div>
+    <!-- modal seleccionar red -->
+    <div id="licen-info" class="small reveal-modal" data-reveal></div>
+    <!-- modal información de licencias -->
+    <div id="complem-info" class="small reveal-modal" data-reveal></div>
+    <!-- modal información de complementos -->
+    <div id="concept-ocas" class="medium reveal-modal" data-reveal></div>
+    <!-- modal información de licencias -->
+    <div id="excepcion" class="large reveal-modal" data-reveal></div>
+    <!-- modal excepcion -->
+    <div id="incompat" class="medium reveal-modal" data-reveal></div>
+    <!-- modal incompatibilidades-->
+    <div id="pf-conf-numer" class="large reveal-modal" data-reveal></div>
+    <!-- modal configuracion PF-->
+    <div id="pm-conf-numer" class="large reveal-modal" data-reveal></div>
+    <!-- modal configuracion PM-->
+    <!-- MODALES PARA LOS MENSAJES -->
+    <div id="error" class="medium reveal-modal" data-reveal></div>
+    <!-- modal error -->
+    <div id="aviso" class="medium reveal-modal" data-reveal></div>
+    <!-- modal warning -->
+    <div id="info" class="medium reveal-modal" data-reveal></div>
+    <!-- modal info -->
+    <div id="trazas" class="medium reveal-modal" data-reveal></div>
+    <!-- modal info -->
+    <div id="espera" class="medium reveal-modal" data-reveal></div>
+    <!-- modal para la información de espera -->
+    <!-- build:js js/vendor/libraries.min.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="bower_components/footable/js/footable.js"></script>
+    <script src="bower_components/footable/js/footable.paginate.js"></script>
+    <script src="bower_components/footable/js/footable.sort.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="bower_components/jqueryui/jquery-ui-autocomplete.js"></script>
+    <script src="bower_components/multiple-select/jquery.multiple.select.js"></script>
+    <script src="bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
+    <script src="bower_components/editableSelect/jquery.editable.select.min.js"></script>
+    <script src="bower_components/pickadate/lib/picker.js"></script>
+    <script src="bower_components/pickadate/lib/picker.date.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js js/vendor/foundation.min.js -->
+    <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+    <!--<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script> -->
+    <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+    <!-- <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script> -->
+    <!-- endbuild -->
+    <!-- build:js js/app.min.js -->
+    <script src="js/app.js"></script>
+    <!-- endbuild -->
+    <!-- <script src="js/excepciones.js"></script> -->
+    <script src="js/utils.js"></script>
+</body>
+
+</html>

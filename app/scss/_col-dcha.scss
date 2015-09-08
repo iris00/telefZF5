@@ -2,242 +2,257 @@
 
 // Columna derecha
 .aside-right {
-    background-color: $silver;
-    box-shadow: 0 6px 3px $charcoal;
-    min-height: 607px;
+  background-color: $silver;
+  box-shadow: 0 6px 3px $charcoal;
+  min-height: 607px;
 
-    // OCULTAR/MOSTRAR columna derecha en mobile
-    // .aside-toggle {
-    //     background-color: $third-color;
-    //     border-radius: rem-calc(5 0 0 5);
-    //     font-size: rem-calc(30);
-    //     left: rem-calc(-40);
-    //     padding: rem-calc(5 5 5 10);
-    //     position: absolute;
-    //     top: rem-calc(5);
-    //     width: rem-calc(40);
-    //     cursor: pointer;
-    //     text-align: center;
+  // OCULTAR/MOSTRAR columna derecha en mobile
+  // .aside-toggle {
+  //     background-color: $third-color;
+  //     border-radius: rem-calc(5 0 0 5);
+  //     font-size: rem-calc(30);
+  //     left: rem-calc(-40);
+  //     padding: rem-calc(5 5 5 10);
+  //     position: absolute;
+  //     top: rem-calc(5);
+  //     width: rem-calc(40);
+  //     cursor: pointer;
+  //     text-align: center;
 
-    //     i {
-    //         color: $white;
-    //     }
-    // }
+  //     i {
+  //         color: $white;
+  //     }
+  // }
+
+  p {
+    font-size: rem-calc(14);
+    padding: rem-calc(10 20);
+
+    a {
+      color: $secondary-color;
+      font-family: robotoregular;
+
+      // &:after {
+      //   content: "\f064";
+      //   font-family: fontawesome;
+      //   margin-left: rem-calc(10);
+      // }
+
+    }
+  }
+
+  // header
+  header {
+    background-color: $third-color;
+    color: $white;
+    min-height: rem-calc(55);
+    padding: rem-calc(10 20 2);
 
     p {
-        font-size: rem-calc(14);
-        padding: rem-calc(10 20);
+      margin: 0;
+      padding: 0;
     }
 
-    // header
-    header {
-        background-color: $third-color;
-        color: $white;
-        min-height: rem-calc(55);
-        padding: rem-calc(10 20 2);
-
-        p {
-            margin: 0;
-            padding: 0;
-        }
-
-        h2 {
-            color: $white;
-            font-size: rem-calc(20);
-            padding-right: rem-calc(20);
-        }
+    h2 {
+      color: $white;
+      font-size: rem-calc(20);
+      padding-right: rem-calc(20);
     }
+  }
 
-    .trash .fa {
-        color: $white;
-        float: right;
-        font-size: rem-calc(26);
-    }
+  .trash .fa {
+    color: $white;
+    float: right;
+    font-size: rem-calc(26);
+  }
 
-    .trash:focus .fa,
-    .trash:hover .fa,
-    .trash {
-        border-bottom: 0;
-        color: scale-color($anchor-font-color-hover, $lightness: -20%);
-    }
+  .trash:focus .fa,
+  .trash:hover .fa,
+  .trash {
+    border-bottom: 0;
+    color: scale-color($anchor-font-color-hover, $lightness: -20%);
+  }
 
-    // info-ofer
-    .info-ofer {
-        color: $monsoon;
-        margin-bottom: rem-calc(15);
-        padding-bottom: 0;
+  // info-ofer
+  .info-ofer {
+    color: $monsoon;
+    margin-bottom: rem-calc(15);
+    padding-bottom: 0;
+  }
+
+  span {
+    display: block;
+    font-size: rem-calc(16);
+  }
+
+  .fa {
+    color: $oil;
+    margin-right: rem-calc(6);
+  }
+
+  // factur
+  .factur {
+    background-color: $gainsboro;
+    padding: rem-calc(15 0);
+
+    p {
+      color: $monsoon;
+      margin-bottom: 0;
+      padding: 0 rem-calc(20);
     }
 
     span {
-        display: block;
-        font-size: rem-calc(16);
+      margin-top: rem-calc(10);
     }
 
-    .fa {
-        color: $oil;
-        margin-right: rem-calc(6);
+    .left {
+      color: $oil;
+      font-family: robotoregular, sans-serif;
+      font-weight: normal;
+    }
+  }
+
+  // Heco
+  .heco {
+    position: relative;
+
+    p {
+      color: $monsoon;
+      line-height: rem-calc(26);
+      margin-bottom: 0;
     }
 
-    // factur
-    .factur {
-        background-color: $gainsboro;
-        padding: rem-calc(15 0);
-
-        p {
-            color: $monsoon;
-            margin-bottom: 0;
-            padding: 0 rem-calc(20);
-        }
-
-        span {
-            margin-top: rem-calc(10);
-        }
-
-        .left {
-            color: $oil;
-            font-family: robotoregular, sans-serif;
-            font-weight: normal;
-        }
+    p + p {
+      padding-top: 0;
     }
 
-    // Heco
-    .heco {
-        position: relative;
+    // .accordion a {
+    //     background-color: transparent;
+    //     color: $oil;
+    //     font-size: rem-calc(16);
+    //     padding: rem-calc(5 20 5 40);
+    // }
 
-        p {
-            color: $monsoon;
-            line-height: rem-calc(26);
-            padding-bottom: 0;
-            margin-bottom: rem-calc(6);
-        }
+    // .accordion .content p {
+    //     display: block;
+    //     //font-size: rem-calc(16);
+    //     //margin-bottom: rem-calc(15);
+    //     line-height: rem-calc(20);
+    //     padding: 0;
+    // }
 
-        // .accordion a {
-        //     background-color: transparent;
-        //     color: $oil;
-        //     font-size: rem-calc(16);
-        //     padding: rem-calc(5 20 5 40);
-        // }
+    // .accordion a:before {
+    //     content: '\f04b';
+    //     display: inline-block;
+    //     font-family: FontAwesome;
+    //     font-size: rem-calc(14);
+    //     left: rem-calc(-20);
+    //     position: relative;
+    //     top: 0;
+    // }
 
-        // .accordion .content p {
-        //     display: block;
-        //     //font-size: rem-calc(16);
-        //     //margin-bottom: rem-calc(15);
-        //     line-height: rem-calc(20);
-        //     padding: 0;
-        // }
+    // .accordion .active a:before {
+    //     transform: rotate(90deg);
+    // }
 
-        // .accordion a:before {
-        //     content: '\f04b';
-        //     display: inline-block;
-        //     font-family: FontAwesome;
-        //     font-size: rem-calc(14);
-        //     left: rem-calc(-20);
-        //     position: relative;
-        //     top: 0;
-        // }
+    // .accordion a .right {
+    //     color: $monsoon;
+    // }
 
-        // .accordion .active a:before {
-        //     transform: rotate(90deg);
-        // }
+  }
 
-        // .accordion a .right {
-        //     color: $monsoon;
-        // }
+  // contrato
+  .contrato {
+    background-color: $third-color;
+    padding: rem-calc(20 0);
 
-    }
-
-    // contrato
-    .contrato {
-        background-color: $third-color;
-        padding: rem-calc(20 0);
-
-        p {
-            color: $white;
-            font-family: robotoregular, sans-serif;
-            font-size: rem-calc(18);
-            font-weight: normal;
-            //padding: 0;
-            padding: rem-calc(0 20);
-        }
-
-        .button.small {
-            width: 111px;
-        }
+    p {
+      color: $white;
+      font-family: robotoregular, sans-serif;
+      font-size: rem-calc(18);
+      font-weight: normal;
+      margin-bottom: rem-calc(5);
+      padding: rem-calc(0 20);
     }
 
     .button.small {
-        font-size: rem-calc(16);
-        padding: rem-calc(4 28 3);
+      width: 111px;
+    }
+  }
+
+  .button.small {
+    font-size: rem-calc(16);
+    padding: rem-calc(4 28 3);
+  }
+
+  // estado
+  .estado {
+    background-color: $gainsboro;
+    padding: rem-calc(20 0);
+  }
+
+  // SVAs
+  .svas {
+    border-top: 1px solid $gainsboro;
+    padding-bottom: rem-calc(20);
+
+    p,
+    div {
+      text-align: center;
     }
 
-    // estado
-    .estado {
-        background-color: $gainsboro;
-        padding: rem-calc(20 0);
+    p:nth-child(1) {
+      color: $charcoal;
+      font-family: robotoregular, sans-serif;
+      font-size: rem-calc(20);
+      font-weight: normal;
+      margin: 0;
+      padding: rem-calc(10 0);
     }
 
-    // SVAs
-    .svas {
-        border-top: 1px solid $gainsboro;
-        padding-bottom: rem-calc(20);
-
-        p,
-        div {
-            text-align: center;
-        }
-
-        p:nth-child(1) {
-            color: $charcoal;
-            font-family: robotoregular, sans-serif;
-            font-size: rem-calc(20);
-            font-weight: normal;
-            margin: 0;
-            padding: rem-calc(10 0);
-        }
-
-        label {
-            color: $oil;
-            //font-size: rem-calc(20);
-
-        }
-
-        .coste {
-            display: inline-block;
-            font-size: rem-calc(20);
-            margin-left: rem-calc(20);
-            text-align: right;
-        }
-
-        select {
-            width: 60%;
-        }
-    }
-
-    // oper-tarif
-    .oper-tarif {
-        padding: rem-calc(20 40 0);
-
-        label {
-            color: $steel;
-            text-align: left;
-        }
-
-        select {
-            margin-bottom: rem-calc(10);
-        }
-
-        &.destacado {
-            background-color: $gainsboro;
-        }
-
-        &.clearfix {
-            padding: rem-calc(20 26 0);
-        }
-
-        // .numeros.text-center {
-        //     font-size: rem-calc(15);
-        //     margin-top: rem-calc(6);
-        // }
+    label {
+      color: $oil;
+      //font-size: rem-calc(20);
 
     }
+
+    .coste {
+      display: inline-block;
+      font-size: rem-calc(20);
+      margin-left: rem-calc(20);
+      text-align: right;
+    }
+
+    select {
+      width: 60%;
+    }
+  }
+
+  // oper-tarif
+  .oper-tarif {
+    padding: rem-calc(20 40 0);
+
+    label {
+      color: $steel;
+      text-align: left;
+    }
+
+    select {
+      margin-bottom: rem-calc(10);
+    }
+
+    &.destacado {
+      background-color: $gainsboro;
+    }
+
+    &.clearfix {
+      padding: rem-calc(20 26 0);
+    }
+
+    // .numeros.text-center {
+    //     font-size: rem-calc(15);
+    //     margin-top: rem-calc(6);
+    // }
+
+  }
 }

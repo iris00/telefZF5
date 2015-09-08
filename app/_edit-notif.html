@@ -1,92 +1,139 @@
 <h2>Edición de notificaciones
     <a class="close-reveal-modal" title="Cerrar"><i class="fa fa-times"></i></a>
-    <!-- <a href="#" title="Eliminar notificación"><i class="fa fa-trash-o"></i></a> -->
 </h2>
-<form action="action">
-    <div class="row">
-        <div class="large-3 columns">
-            <label>Título</label>
-        </div>
-        <div class="large-9 columns">
-            <input type="text" value="Lanzamiento del Mi Cobertura Móvil" autofocus>
-        </div>
+<form id="miForm" name="miForm" action="" data-abide validate>
+  <input type="hidden" name="opcion" value="administracion">
+  <input type="hidden" name="accion" value="altaNotificaccion">
+  <div class="row">
+    <div class="large-3 columns">
+      <label class="required">Título</label>
     </div>
-
-    <div class="row">
-        <div class="large-3 columns">
-            <label>Descripción</label>
-        </div>
-        <div class="large-9 columns">
-            <textarea name="descripcion2" cols="30" rows="4"></textarea>
-        </div>
+    <div class="large-9 columns">
+      <input id="titulo" name="titulo" type="text" value="" maxlength="100" required>
+      <small class="error">El campo Título es obligatorio</small>
     </div>
-
-    <div class="row">
-        <div class="large-3 columns">
-            <label>Fecha deseada</label>
-        </div>
-        <div class="large-3 columns fecha">
-            <input class="calendario" type="text">
-        </div>
-        <div class="large-3 columns">
-            <label>Perfiles</label>
-        </div>
-        <div class="large-3 columns">
-            <select class="multi-select2" name="perfil2" multiple placeholder="placeholder">
-                    <option value="per1">Perfil 1</option>
-                    <option value="per2">Disabled</option>
-                    <option value="per3">Perfil 3</option>
-                    <option value="per4">Perfil 4</option>
-                    <option value="per5">Texto largo para el perfil 5</option>
-                    <option value="per6">Perfil 6</option>
-                    <option value="per7">Perfil 7</option>
-                    <option value="per8">Perfil 8</option>
-                <option value="per10">Perfil 10</option>
-                    <option value="per11">Perfil 11</option>
-                    <option value="per12">Perfil 12</option>
-                    <option value="per13">Perfil 13</option>
-            </select>
-        </div>
+  </div>
+  <div class="row">
+    <div class="large-3 columns">
+      <label class="required">Descripción</label>
     </div>
-
-    <div class="row">
-        <div class="large-3 columns">
-            <label>Territorio</label>
-        </div>
-        <div class="large-3 columns">
-            <select name="territorio2">
-                <option value="ter11">Todos</option>
-                <option value="ter21">Territorio 2</option>
-                <option value="ter31">Territorio 3</option>
-            </select>
-        </div>
-        <div class="large-3 columns">
-            <label>Expiración</label>
-        </div>
-        <div class="large-3 columns date">
-            <input class="calendario" type="text">
-        </div>
+    <div class="large-9 columns">
+      <textarea name="descripcion" id="descripcion" cols="30" rows="4" value=""></textarea>
     </div>
-
-    <div class="row">
-        <div class="large-3 columns">
-            <label>Segmento</label>
-        </div>
-        <div class="large-3 columns end">
-            <select name="segmento2">
-                <option value="seg1">Todos</option>
-                <option value="seg2">Segmento 2</option>
-                <option value="seg3">Segmento 3</option>
-            </select>
-        </div>
+  </div>
+  <div class="row">
+    <div class="large-3 columns">
+      <label>Fecha</label>
     </div>
-
-    <div class="row botonera">
-        <div class="large-12 columns text-right">
-            <button type="reset" class="radius func-secondary tiny" title="Borrar formulario">Borrar</button>
-            <button type="submit" class="radius tiny" title="Modificar notificación">Modificar</button>
-        </div>
+    <div class="large-3 columns fecha">
+      <input class="calendario2 desde4" type="text" required pattern="day_month_year" data-value="today">
+      <small class="error">El campo Fecha es obligatorio</small>
     </div>
+    <div class="large-3 columns">
+      <label>Perfiles</label>
+    </div>
+    <div class="large-3 columns">
+      <select name="perfil" id="perfil" multiple class="multi-select2" onchange="prueba();">
+        <option value="0" selected>COMERCIAL(ME)</option>
+        <option value="1" selected>JEFE VENTAS(ME)</option>
+        <option value="2" selected>JEFE AREA(ME)</option>
+        <option value="3" selected>GERENTE(ME)</option>
+        <option value="4" selected>DIRECTOR(ME)</option>
+        <option value="6" selected>TURNA(ME)</option>
+        <option value="51" selected>OPERADOR PLACO</option>
+        <option value="100" selected>ADMINISTRADOR</option>
+        <option value="250" selected>TECNICO GEO</option>
+        <option value="251" selected>COORDINADOR GEO</option>
+        <option value="252" selected>RESPONSABLE GEO</option>
+        <option value="253" selected>JEFE GEO</option>
+        <option value="400" selected>COMERCIAL(PE - CI)</option>
+        <option value="401" selected>JEFE VENTAS(PE - CI)</option>
+        <option value="402" selected>JEFE OFICINA(PE - CI)</option>
+        <option value="403" selected>GERENTE(PE - CI)</option>
+        <option value="404" selected>DIRECTOR UNIDAD(PE - CI)</option>
+        <option value="405" selected>DIRECTOR(PE - CI)</option>
+        <option value="410" selected>COMERCIAL(PE - CD)</option>
+        <option value="411" selected>JEFE VENTAS(PE - CD)</option>
+        <option value="412" selected>JEFE OFICINA(PE - CD)</option>
+        <option value="413" selected>GERENTE(PE - CD)</option>
+        <option value="414" selected>DIRECTOR(PE - CD)</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-3 columns">
+      <label>Territorio</label>
+    </div>
+    <div class="large-3 columns">
+      <select name="territorio" multiple id="territorio" class="multi-select2">
+        <option value="1" selected>CENTRO</option>
+        <option value="2" selected>NORTE</option>
+        <option value="3" selected>CATALUÑA</option>
+        <option value="4" selected>ESTE</option>
+        <option value="5" selected>SUR</option>
+        <option value="6" selected>TODOS</option>
+      </select>
+    </div>
+    <div class="large-3 columns">
+      <label class="required">Expiración</label>
+    </div>
+    <div class="large-3 columns fecha">
+      <input class="calendario2 hasta4" type="text" required pattern="day_month_year">
+      <small class="error">El campo Expiración es obligatorio</small>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-3 columns">
+      <label>Segmento</label>
+    </div>
+    <div class="large-3 columns end">
+      <select name="segmento" id="segmento" class="multi-select2" multiple>
+        <option value="ME" selected>MEDIANA EMPRESA</option>
+        <option value="PE" selected>PEQUEÑA EMPRESA</option>
+      </select>
+    </div>
+  </div>
+  <div class="row botonera">
+    <div class="large-12 columns text-right">
+      <button id="botonBorra" type="reset" class="radius func-secondary tiny" title="Borrar formulario">Borrar</button>
+      <button type="submit" id="botonAlta" class="radius tiny close-reveal-modals" title="Crear notificación">Crear</button>
+    </div>
+  </div>
 </form>
-
 <script src="js/app.js"></script>
+<script>
+  $(document).ready(function() {
+    'use strict';
+    var from_$input4 = $('.desde4').pickadate(),
+    from_picker4 = from_$input4.pickadate('picker');
+
+    var to_$input4 = $('.hasta4').pickadate(),
+    to_picker4 = to_$input4.pickadate('picker');
+
+    // Check if there’s a “from” or “to” date to start with.
+    if (from_picker4.get('value')) {
+      to_picker4.set('min', from_picker4.get('select'));
+    }
+    if (to_picker4.get('value')) {
+      from_picker4.set('max', to_picker4.get('select'));
+    }
+
+    // When something is selected, update the “from” and “to” limits.
+    from_picker4.on('set', function(event) {
+      if (event.select) {
+        to_picker4.set('min', from_picker4.get('select'));
+      } else if ('clear' in event) {
+        to_picker4.set('min', false);
+      }
+    });
+
+    to_picker4.on('set', function(event) {
+      if (event.select) {
+        from_picker4.set('max', to_picker4.get('select'));
+      } else if ('clear' in event) {
+        from_picker4.set('max', false);
+      }
+    });
+  });
+</script>
+<script src="js/utils.js"></script>

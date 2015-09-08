@@ -80,13 +80,13 @@
 								<h1 class="text-center">Selección de Sedes</h1>
 							</div>
 							<div class="large-3 medium-5 small-10 columns">
-								<a id="campana_notif" href="" onClick="campana_notif();" title="Notificaciones" data-reveal-id="notific" data-reveal-ajax="true">
+								<a id="campana_notif" href="" onclick="campana_notif();" title="Notificaciones" data-reveal-id="notific" data-reveal-ajax="true">
 									<i class="fa fa-bell-o"><span>1</span></i>
 								</a>
-								<a id="buscar" href="" title="Buscar" onClick="pasar_usuario_busq();" data-reveal-id="search" data-reveal-ajax="true">
+								<a id="buscar" href="" title="Buscar" onclick="pasar_usuario_busq();" data-reveal-id="search" data-reveal-ajax="true">
 									<i class="fa fa-search"></i>
 								</a>
-								<a id="busc_avanz" href="" title="Buscar con filtro avanzado" onClick="pasar_usuario_avanz();" data-reveal-id="search-filter" data-reveal-ajax="true">
+								<a id="busc_avanz" href="" title="Buscar con filtro avanzado" onclick="pasar_usuario_avanz();" data-reveal-id="search-filter" data-reveal-ajax="true">
 									<i class="fa fa-search-plus"></i>
 								</a>
 								<a href="opwebServlet" title="Inicio">
@@ -104,9 +104,9 @@
 				function cambiar(esto) {
 					vista = document.getElementById(esto).style.display;
 					if (vista == 'block')
-						vista = 'none';
+					vista = 'none';
 					else
-						vista = 'block';
+					vista = 'block';
 
 					document.getElementById(esto).style.display = vista;
 				}
@@ -146,200 +146,198 @@
 					<li class="small-2 columns activo">Sedes
 					</li>
 					<li class="small-4 columns">
-						<a id="resumen" name="resumen" href="" title="resumen" onClick="llamarResumen();"> Resumen</a>
+						<a id="resumen" name="resumen" href="" title="resumen" onclick="llamarResumen();"> Resumen</a>
 					</li>
 					<li class="small-3 columns">Pedido
 					</li>
 					<li class="small-3 current columns">
 						<a href="" title="Precio total de la oferta"><i class="fa fa-shopping-cart"></i>
-370 &euro;
-</a>
+							370 &euro;
+						</a>
 					</li>
 				</ul>
-				<!-- breadcrumbs 
-</header>
--->
+				<!-- breadcrumbs
+			</header>
+		-->
 
-				<section class="main-section" role="main">
-					<article class="row">
-						<div class="contenido large-12 columns">
-							<form id="sedes" action="">
-								<input type="hidden" name="opcion" value="sedes">
-								<input type="hidden" name="accion" value="config_basica">
-								<input type="hidden" name="CUC" id="CUC" value="89478104">
-								<input type="hidden" name="NumOferta" id="NumOferta" value="341">
-								<input type="hidden" name="CIF" id="CIF" value="B82539586">
-								<table class="listado-sedes">
-									<caption>Listado de Sedes</caption>
-									<thead>
-										<tr>
-											<th></th>
-											<th>Dirección</th>
-											<th>Importe dentro Fusión</th>
-											<th>Restablecer Sede</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr class='alert'>
-											<td>
-												<a href='opwebServlet?opcion=sedes&accion=datos_sede&CUC=89478104&CIF=B82539586&direccion=28000010613900004 BA&coOF=341' title='Movistar Fusión Empresas (Cloud)'><img src='images/logo-fusion.png' alt='Fusión'>
-												</a>
-											</td>
-											<td><a href='opwebServlet?opcion=sedes&accion=datos_sede&CUC=89478104&CIF=B82539586&direccion=28000010613900004 BA&coOF=341'>28000010613900004 BA<span>Madrid, Madrid</span></a>
-											</td>
-											<td>
-												<div class='euro'>
-													<input type='text' disabled value='0'>
-												</div>
-											</td>
-											<td><a href='#' title='Restablecer valores de la sede'><span class='fa-stack fa-lg'><i class='fa fa-repeat fa-stack-2x'></i><i class='fa fa-home fa-stack-1x'></i></span></a>
-											</td>
-										</tr>
-
-									</tbody>
-								</table>
-
-
-								<div class="botonera clearfix">
-									<div class="large-12 columns text-right">
-										<!-- <a class="plus" id="nSede" name="nSede" href="#" data-reveal-id="new-sede" title="Crear nueva sede" onClick="javascript:pantallaEmergenteSedes('89478104', '341', 'B82539586');">
-											<i class="fa fa-plus"></i>
-										</a> -->
-
-										<a class="plus" href="_nueva-sede.html" data-reveal-id="new-sede" title="Crear nueva sede" data-reveal-ajax="true">
-											<i class="fa fa-plus"></i>
+		<section class="main-section" role="main">
+			<article class="row">
+				<div class="contenido large-12 columns">
+					<form id="sedes" action="">
+						<input type="hidden" name="opcion" value="sedes">
+						<input type="hidden" name="accion" value="config_basica">
+						<input type="hidden" name="CUC" id="CUC" value="89478104">
+						<input type="hidden" name="NumOferta" id="NumOferta" value="341">
+						<input type="hidden" name="CIF" id="CIF" value="B82539586">
+						<table class="listado-sedes">
+							<caption>Listado de Sedes</caption>
+							<thead>
+								<tr>
+									<th></th>
+									<th>Dirección</th>
+									<th>Importe dentro Fusión</th>
+									<th>Restablecer Sede</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="alert">
+									<td>
+										<a href="opwebServlet?opcion=sedes&accion=datos_sede&CUC=89478104&CIF=B82539586&direccion=28000010613900004 BA&coOF=341" title="Movistar Fusión Empresas (Cloud)"><img src="images/logo-fusion.png" alt="Fusión">
 										</a>
+									</td>
+									<td><a href="opwebServlet?opcion=sedes&accion=datos_sede&CUC=89478104&CIF=B82539586&direccion=28000010613900004 BA&coOF=341">28000010613900004 BA<span>Madrid, Madrid</span></a>
+									</td>
+									<td>
+										<div class="euro">
+											<input type="text" disabled value="0">
+										</div>
+									</td>
+									<td><a href="#" title="Restablecer valores de la sede"><span class="fa-stack fa-lg"><i class="fa fa-repeat fa-stack-2x"></i><i class="fa fa-home fa-stack-1x"></i></span></a>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+
+
+						<div class="botonera clearfix">
+							<div class="large-12 columns text-right">
+								<!-- <a class="plus" id="nSede" name="nSede" href="#" data-reveal-id="new-sede" title="Crear nueva sede" onclick="javascript:pantallaEmergenteSedes("89478104", "341", "B82539586");">
+								<i class="fa fa-plus"></i>
+							</a> -->
+
+							<a class="plus" href="_nueva-sede.html" data-reveal-id="new-sede" title="Crear nueva sede" data-reveal-ajax="true">
+								<i class="fa fa-plus"></i>
+							</a>
 
 
 
-										<button type="reset" class="radius func-secondary tiny" title="Cancelar selección de sede">Cancelar</button>
-										<button type="submit" class="radius tiny" title="Ver resumen">Continuar</button>
+							<button type="reset" class="radius func-secondary tiny" title="Cancelar selección de sede">Cancelar</button>
+							<button type="submit" class="radius tiny" title="Ver resumen">Continuar</button>
 
-									</div>
-								</div>
-							</form>
 						</div>
-						<!-- contenido -->
-					</article>
-				</section>
-				<a class="exit-off-canvas"></a>
+					</div>
+				</form>
 			</div>
-			<!-- inner-wrap -->
-		</div>
-		<!-- off-canvas-wrap -->
+			<!-- contenido -->
+		</article>
+	</section>
+	<a class="exit-off-canvas"></a>
+</div>
+<!-- inner-wrap -->
+</div>
+<!-- off-canvas-wrap -->
+</div>
+<!-- row -->
+
+<footer class="row" role="contentinfo">
+	<div class="small-4 large-2 columns">T151221 - 1</div>
+	<div class="small-8 large-8 columns end text-center">
+		Telefónica de España S.A
 	</div>
-	<!-- row -->
+</footer>
+<!-- footer -->
 
-	<footer class="row" role="contentinfo">
-		<div class="small-4 large-2 columns">T151221 - 1</div>
-		<div class="small-8 large-8 columns end text-center">
-			Telefónica de España S.A
-		</div>
-	</footer>
-	<!-- footer -->
+<!-- Ventanas modales -->
+<div id="notific" class="medium reveal-modal" data-reveal></div>
+<!-- modal notificaciones -->
 
-	<!-- Ventanas modales -->
-	<div id="notific" class="medium reveal-modal" data-reveal></div>
-	<!-- modal notificaciones -->
+<div id="otras-oper" class="medium reveal-modal" data-reveal></div>
+<!-- modal otras operaciones -->
 
-	<div id="otras-oper" class="medium reveal-modal" data-reveal></div>
-	<!-- modal otras operaciones -->
+<div id="cuenta-banc" class="large reveal-modal" data-reveal></div>
+<!-- modal cuenta bancaria -->
 
-	<div id="cuenta-banc" class="large reveal-modal" data-reveal></div>
-	<!-- modal cuenta bancaria -->
+<div id="camb-titular-lm" class="medium reveal-modal" data-reveal></div>
+<!-- modal cambiar titular linea móvil -->
 
-	<div id="camb-titular-lm" class="medium reveal-modal" data-reveal></div>
-	<!-- modal cambiar titular linea móvil -->
+<div id="search" class="medium reveal-modal" data-reveal></div>
+<!-- modal search -->
 
-	<div id="camb-titular-lm" class="medium reveal-modal" data-reveal></div>
-	<!-- modal cambiar titular linea móvil -->
+<div id="search-filter" class="medium reveal-modal" data-reveal></div>
+<!-- modal search-filter -->
 
-	<div id="search" class="medium reveal-modal" data-reveal></div>
-	<!-- modal search -->
+<div id="informes" class="medium reveal-modal" data-reveal></div>
+<!-- modal informes -->
 
-	<div id="search-filter" class="medium reveal-modal" data-reveal></div>
-	<!-- modal search-filter -->
+<div id="new-notif" class="medium reveal-modal" data-reveal></div>
+<!-- modal nueva notificación -->
 
-	<div id="informes" class="medium reveal-modal" data-reveal></div>
-	<!-- modal informes -->
+<div id="edit-notif" class="medium reveal-modal" data-reveal></div>
+<!-- modal editar notificación -->
 
-	<div id="new-notif" class="medium reveal-modal" data-reveal></div>
-	<!-- modal nueva notificación -->
+<div id="elimina-notif" class="medium reveal-modal" data-reveal></div>
+<!-- modal eliminar notificacion-->
 
-	<div id="edit-notif" class="medium reveal-modal" data-reveal></div>
-	<!-- modal editar notificación -->
+<div id="new-ofert" class="medium reveal-modal" data-reveal></div>
+<!-- modal nueva oferta -->
 
-	<div id="elimina-notif" class="medium reveal-modal" data-reveal></div>
-	<!-- modal eliminar notificacion-->
+<div id="new-client" class="medium reveal-modal" data-reveal></div>
+<!-- modal nuevo cliente -->
 
-	<div id="new-ofert" class="medium reveal-modal" data-reveal></div>
-	<!-- modal nueva oferta -->
-
-	<div id="new-client" class="medium reveal-modal" data-reveal></div>
-	<!-- modal nuevo cliente -->
-
-	<div id="new-sede" class="large reveal-modal" data-reveal>
-		<div id="wait"><i class="fa fa-cog fa-spin"></i>
-			<p>Cargando...</p>
-		</div>
+<div id="new-sede" class="large reveal-modal" data-reveal>
+	<div id="wait"><i class="fa fa-cog fa-spin"></i>
+		<p>Cargando...</p>
 	</div>
-	<!-- modal nueva sede -->
+</div>
+<!-- modal nueva sede -->
 
-	<div id="conf-cob-movil" class="tiny reveal-modal" data-reveal></div>
-	<!-- modal Configuración Cobertura Móvil -->
+<div id="conf-cob-movil" class="tiny reveal-modal" data-reveal></div>
+<!-- modal Configuración Cobertura Móvil -->
 
-	<div id="ope-num" class="large reveal-modal" data-reveal></div>
-	<!-- modal Configuración de las numeraciones -->
+<div id="ope-num" class="large reveal-modal" data-reveal></div>
+<!-- modal Configuración de las numeraciones -->
 
-	<div id="selecc-red" class="small reveal-modal" data-reveal></div>
-	<!-- modal seleccionar red -->
+<div id="selecc-red" class="small reveal-modal" data-reveal></div>
+<!-- modal seleccionar red -->
 
-	<div id="licen-info" class="small reveal-modal" data-reveal></div>
-	<!-- modal información de licencias -->
+<div id="licen-info" class="small reveal-modal" data-reveal></div>
+<!-- modal información de licencias -->
 
-	<div id="concept-ocas" class="medium reveal-modal" data-reveal></div>
-	<!-- modal información de licencias -->
+<div id="concept-ocas" class="medium reveal-modal" data-reveal></div>
+<!-- modal información de licencias -->
 
-	<div id="excepcion" class="large reveal-modal" data-reveal></div>
-	<!-- modal excepcion -->
+<div id="excepcion" class="large reveal-modal" data-reveal></div>
+<!-- modal excepcion -->
 
-	<!-- build:js js/vendor/libraries.min.js -->
-	<!-- bower:js -->
-	<script src="bower_components/jquery/dist/jquery.js"></script>
-	<script src="bower_components/fastclick/lib/fastclick.js"></script>
-	<script src="bower_components/multiple-select/jquery.multiple.select.js"></script>
-	<script src="bower_components/footable/js/footable.js"></script>
-	<script src="bower_components/footable/js/footable.paginate.js"></script>
-	<script src="bower_components/footable/js/footable.sort.js"></script>
-	<script src="bower_components/pickadate/lib/picker.js"></script>
-	<script src="bower_components/pickadate/lib/picker.date.js"></script>
-	<script src="bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
-	<script src="bower_components/editableSelect/jquery.editable.select.min.js"></script>
-	<script src="bower_components/jqueryui/jquery-ui-autocomplete.js"></script>
-	<!-- endbower -->
-	<!-- endbuild -->
-	<!-- build:js js/vendor/foundation.min.js -->
-	<script src="bower_components/foundation/js/foundation/foundation.js"></script>
-	<script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
-	<script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
-	<script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
-	<!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
-	<script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
-	<script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
-	<!--<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
-	<script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
-	<script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
-	<script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
-	<script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
-	<script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
-	<!-- <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script> -->
-	<script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
-	<!-- <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
-		<script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script> -->
-	<!-- endbuild -->
-	<!-- build:js js/app.min.js -->
-	<script src="js/app.js"></script>
-	<!-- endbuild -->
+<!-- build:js js/vendor/libraries.min.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/dropzone/dist/min/dropzone.min.js"></script>
+<script src="bower_components/footable/js/footable.js"></script>
+<script src="bower_components/footable/js/footable.paginate.js"></script>
+<script src="bower_components/footable/js/footable.sort.js"></script>
+<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<script src="bower_components/jqueryui/jquery-ui-autocomplete.js"></script>
+<script src="bower_components/multiple-select/jquery.multiple.select.js"></script>
+<script src="bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
+<script src="bower_components/editableSelect/jquery.editable.select.min.js"></script>
+<script src="bower_components/pickadate/lib/picker.js"></script>
+<script src="bower_components/pickadate/lib/picker.date.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+<!-- build:js js/vendor/foundation.min.js -->
+<script src="bower_components/foundation/js/foundation/foundation.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
+<!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
+<script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+<!--<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
+<script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+<!-- <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script> -->
+<script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+<!-- <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script> -->
+<!-- endbuild -->
+<!-- build:js js/app.min.js -->
+<script src="js/app.js"></script>
+<!-- endbuild -->
 
 
 </body>

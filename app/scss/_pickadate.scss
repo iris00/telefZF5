@@ -2,306 +2,306 @@
 
 // Contenedor de input .calendario pinta el icono
 .fecha:after {
-    border: 0;
-    color: $iron;
-    content: '\f073';
-    font-family: fontawesome;
-    font-size: rem-calc(19);
-    position: absolute;
-    top: rem-calc(4);
-    right: rem-calc(15);
+  border: 0;
+  color: $iron;
+  content: "\f073";
+  font-family: fontawesome;
+  font-size: rem-calc(19);
+  position: absolute;
+  right: rem-calc(20);
+  top: rem-calc(1);
 }
 
-.row .fecha:after {
-    right: rem-calc(20);
+.reveal-modal .row .row .fecha:after {
+  right: rem-calc(15);
 }
 
 // DATE-PICKER
 .picker {
-    position: absolute;
-    z-index: 1010;
+  position: absolute;
+  z-index: 1010;
 }
 
 // The picker input element
-input[readonly].calendario {
-    background-color: transparent;
-    cursor: pointer;
-    position: relative;
+input[readonly].calendario,
+input[readonly].calendario2,
+input[readonly].calendario3 {
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
 
-    &.picker__input--active {
-        box-shadow: 0 0 5px $aluminum;
-    }
+  &.picker__input--active {
+    box-shadow: 0 0 5px $aluminum;
+  }
+}
+
+input[disabled].calendario,
+input[disabled].calendario2,
+input[disabled].calendario3 {
+  cursor: default;
 }
 
 // Note: the root picker element should *NOT* be styled more than what’s here. Make the holder and frame fullscreen.
 .picker__holder,
 .picker__frame {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 100%;
-    z-index: 10;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 10;
 }
 
 // The holder is the only “scrollable” top-level container element. The holder should overlay the entire screen.
 .picker__holder {
-    -webkit-backface-visibility: hidden;
-    -webkit-overflow-scrolling: touch;
-    overflow-y: auto;
-    position: fixed;
-    -moz-transition: background 0.15s ease-out, top 0s 0.15s;
-    -webkit-transition: background 0.15s ease-out, top 0s 0.15s;
-    transition: background 0.15s ease-out, top 0s 0.15s;
-    width: 100%;
+  -webkit-backface-visibility: hidden;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  position: fixed;
+  -moz-transition: background 0.15s ease-out, top 0s 0.15s;
+  -webkit-transition: background 0.15s ease-out, top 0s 0.15s;
+  transition: background 0.15s ease-out, top 0s 0.15s;
+  width: 100%;
 }
 
 // The frame that bounds the box contents of the picker.
 .picker__frame {
-    margin: 0 auto;
-    max-width: rem-calc(444);
-    min-width: rem-calc(256);
-    -moz-opacity: 0;
-    opacity: 0;
-    position: absolute;
-    -webkit-transition: all 0.15s ease-out;
-    -moz-transition: all 0.15s ease-out;
-    transition: all 0.15s ease-out;
-    width: 100%;
+  margin: 0 auto;
+  max-width: rem-calc(444);
+  min-width: rem-calc(256);
+  -moz-opacity: 0;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  width: 100%;
 }
 
 @media (min-height: 33.875em) {
-    .picker__frame {
-        bottom: -100%;
-        max-height: 80%;
-        overflow: visible;
-        top: auto;
-    }
+  .picker__frame {
+    bottom: -100%;
+    max-height: 80%;
+    overflow: visible;
+    top: auto;
+  }
 }
 
 @media (min-height: 40.125em) {
-    .picker__frame {
-        margin-bottom: 20%;
-    }
+  .picker__frame {
+    margin-bottom: 15%;
+  }
 }
 
 // The wrapper sets the stage to vertically align the box contents.
 .picker__wrap {
-    display: table;
-    height: 100%;
-    width: 100%;
+  display: table;
+  height: 100%;
+  width: 100%;
 }
 
 @media (min-height: 33.875em) {
-    .picker__wrap {
-        display: block;
-    }
+  .picker__wrap {
+    display: block;
+  }
 }
 
 // The box contains all the picker contents.
 .picker__box {
-    background-color: $white;
-    display: table-cell;
-    font-size: rem-calc(22);
-    vertical-align: middle;
+  background-color: $white;
+  display: table-cell;
+  font-size: rem-calc(22);
+  vertical-align: middle;
 }
 
 @media (min-height: 33.875em) {
-    .picker__box {
-        box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
-        display: block;
-    }
+  .picker__box {
+    box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
+    display: block;
+  }
 }
 
 // When the picker opens...
 .picker--opened .picker__holder {
-    background: rgba(0, 0, 0, 0.32);
-    top: 0;
-    -moz-transition: background 0.15s ease-out;
-    -webkit-transition: background 0.15s ease-out;
-    transition: background 0.15s ease-out;
+  background: rgba(0, 0, 0, 0.32);
+  top: 0;
+  -moz-transition: background 0.15s ease-out;
+  -webkit-transition: background 0.15s ease-out;
+  transition: background 0.15s ease-out;
 }
 
 .picker--opened .picker__frame {
-    -moz-opacity: 1;
-    opacity: 1;
-    top: 0;
+  -moz-opacity: 1;
+  opacity: 1;
+  top: 0;
 }
 
 @media (min-height: 33.875em) {
-    .picker--opened .picker__frame {
-        bottom: 0;
-        top: auto;
-    }
+  .picker--opened .picker__frame {
+    bottom: 0;
+    top: auto;
+  }
 }
 
 // $DEFAULT-DATE-PICKER
-// The picker box.
-.picker__box {
-    background-color: $snow;
-}
-
 // The header containing the month and year stuff.
 .picker__header {
-    background-color: $primary-color;
-    font-family: robotoregular, sans-serif;
-    font-weight: normal;
-    padding: rem-calc(16 0);
-    position: relative;
-    text-align: center;
+  background-color: $primary-color;
+  font-family: robotoregular, sans-serif;
+  font-weight: normal;
+  padding: rem-calc(16 0);
+  position: relative;
+  text-align: center;
 
-    .picker__select--year {
-        margin-bottom: 0;
-        margin-right: rem-calc(10);
-        width: 30%;
-    }
+  .picker__select--year {
+    margin-bottom: 0;
+    margin-right: rem-calc(10);
+    width: 30%;
+  }
 
-    .picker__select--month {
-        margin-bottom: 0;
-        margin-left: rem-calc(10);
-        width: 30%;
-    }
+  .picker__select--month {
+    margin-bottom: 0;
+    margin-left: rem-calc(10);
+    width: 30%;
+  }
 }
 
 // The month and year labels.
 .picker__month,
 .picker__year {
-    color: $white;
-    display: inline-block;
-    margin: rem-calc(0 5);
+  color: $white;
+  display: inline-block;
+  margin: rem-calc(0 5);
 }
 
 // The month navigation buttons.
 .picker__nav {
-    &--prev,
-    &--next {
-        cursor: pointer;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: rem-calc(50);
+  &--prev, &--next {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: rem-calc(50);
 
-        &:before {
-            color: $white;
-            content: '\f0da';
-            display: block;
-            font-family: fontawesome;
-            font-size: rem-calc(27);
-            margin: rem-calc(16 0);
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
+    &:before {
+      color: $white;
+      content: "\f0da";
+      display: block;
+      font-family: fontawesome;
+      font-size: rem-calc(27);
+      margin: rem-calc(16 0);
     }
 
-    &--prev {
-        left: 0;
+    &:hover {
+      cursor: pointer;
     }
+  }
 
-    &--prev:before {
-        content: '\f0d9';
-    }
+  &--prev {
+    left: 0;
+  }
 
-    &--disabled,
-    &--disabled:hover,
-    &--disabled:before,
-    &--disabled:before:hover {
-        color: $base;
-        cursor: default;
-    }
+  &--prev:before {
+    content: "\f0d9";
+  }
+
+  &--disabled,
+  &--disabled:hover,
+  &--disabled:before,
+  &--disabled:before:hover {
+    color: $base;
+    cursor: default;
+  }
 }
 
 // The calendar table of dates
 .picker__table {
-    margin-top: rem-calc(15);
+  margin-top: rem-calc(15);
 
-    td {
-        text-align: center;
-    }
+  td {
+    text-align: center;
+  }
 }
 
 // The weekday labels
 .picker__weekday {
-    color: $aluminum;
-    font-family: robotoregular, sans-serif;
-    font-size: rem-calc(17);
-    font-weight: normal;
-    width: 14.285714286%;
+  color: $aluminum;
+  font-family: robotoregular, sans-serif;
+  font-size: rem-calc(17);
+  font-weight: normal;
+  width: 14.285714286%;
 }
 
 // The days
 .picker__day {
+  padding: rem-calc(5 16);
+
+  &--outfocus {
+    color: $iron;
+  }
+
+  &--infocus:hover,
+  &--outfocus:hover,
+  &--highlighted:hover,
+  &--selected,
+  &--selected:hover {
+    background: $primary-color;
+    color: $white;
+    cursor: pointer;
+  }
+
+  &--disabled,
+  &--disabled:hover {
+    background: transparent;
+    color: $gainsboro;
+    cursor: default;
     padding: rem-calc(5 16);
+  }
 
-    &--outfocus {
-        color: $iron;
-    }
-
-    &--infocus:hover,
-    &--outfocus:hover,
-    &--highlighted:hover,
-    &--selected,
-    &--selected:hover {
-        background: $primary-color;
-        color: $white;
-        cursor: pointer;
-    }
-
-    &--disabled,
-    &--disabled:hover {
-        background: transparent;
-        color: $gainsboro;
-        cursor: default;
-        padding: rem-calc(5 16);
-    }
-
-    &--highlighted.picker__day--disabled,
-    &--highlighted.picker__day--disabled:hover {
-        background: $base;
-    }
+  &--highlighted.picker__day--disabled,
+  &--highlighted.picker__day--disabled:hover {
+    background: $base;
+  }
 }
 
 .picker--focused {
-    .picker__day--highlighted,
-    .picker__day--selected {
-        background: $primary-color;
-        color: $white;
-    }
+  .picker__day--highlighted, .picker__day--selected {
+    background: $primary-color;
+    color: $white;
+  }
 
-    .picker__day--highlighted.picker__day--disabled {
-        background: $base;
-    }
+  .picker__day--highlighted.picker__day--disabled {
+    background: $base;
+  }
 
-    .picker__day--disabled {
-        color: $gainsboro;
-        cursor: default;
-        padding: rem-calc(5 16);
-    }
+  .picker__day--disabled {
+    color: $gainsboro;
+    cursor: default;
+    padding: rem-calc(5 16);
+  }
 }
 
 // The footer
 .picker__footer {
-    text-align: center;
+  text-align: center;
 
-    button {
-        background: $primary-color;
-        display: inline-block;
-        font-family: robotoregular, sans-serif;
-        font-size: rem-calc(18);
-        margin-bottom: 0;
-        padding: rem-calc(12 0);
-        width: 33.33333%;
+  button {
+    background: $primary-color;
+    display: inline-block;
+    font-family: robotoregular, sans-serif;
+    font-size: rem-calc(18);
+    margin-bottom: 0;
+    padding: rem-calc(12 0);
+    width: 33.33333%;
 
-        &:hover,
-        &:focus {
-            background: $third-color;
-            color: $black;
-        }
-
-        &[disabled],
-        &[disabled]:hover {
-            background: $gainsboro;
-            color: $jumbo;
-        }
+    &:hover, &:focus {
+      background: $third-color;
+      color: $black;
     }
+
+    &[disabled],
+    &[disabled]:hover {
+      background: $gainsboro;
+      color: $jumbo;
+    }
+  }
 }

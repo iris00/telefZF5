@@ -1,0 +1,150 @@
+<!doctype html>
+<html class="no-js" lang="es-ES">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Configurador de Movistar Fusión Empresas">
+  <title>Configurador MFE - Selección de sedes</title>
+  <!-- Iconos de aplicación -->
+  <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+  <!-- build:css css/libraries.min.css -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css css/app.min.css -->
+  <link rel="stylesheet" href="css/app.css">
+  <!-- endbuild -->
+  <!-- build:js js/vendor/modernizr.min.js -->
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
+
+<body class="ofertas">
+  <div class="row">
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+        <nav class="tab-bar">
+          <section class="left-small">
+            <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+          </section>
+        </nav>
+        <aside class="left-off-canvas-menu">
+          <ul class="off-canvas-list">
+            <li>
+              <label>Foundation</label>
+            </li>
+            <li><a href="#">Option 1</a></li>
+            <li><a href="#" class="off-canvas-submenu-call">Option 2 <span class="right"> + </span></a></li>
+            <ul class="off-canvas-submenu">
+              <li><a href="configurador.html">Sub menu 1</a></li>
+              <li><a href="#">Sub menu 2</a></li>
+              <li><a href="#">Sub menu 3</a></li>
+            </ul>
+            <li><a href="#">Option 3</a></li>
+            <li><a href="#" class="off-canvas-submenu-call">Option 4 <span class="right"> + </span></a></li>
+            <ul class="off-canvas-submenu">
+              <li><a href="#">Sub menu 1</a></li>
+              <li><a href="#">Sub menu 2</a></li>
+              <li><a href="#">Sub menu 3</a></li>
+            </ul>
+            <li><a href="#">Option 5</a></li>
+            <li><a href="#">Option 6</a></li>
+          </ul>
+        </aside>
+        <section class="main-section">
+          <h1 class="text-center">Para que funcione hay que descomentar el código js en app.js (línea 118) y en foundation.offcanvas.js (línea 11) poner close_on_click: false. Los estilos ya están resueltos.</h1>
+          <h2 class="text-center">Something Important</h2>
+          <img src="http://placeimg.com/1640/480/arch/grayscale" alt="" />
+        </section>
+        <a class="exit-off-canvas"></a>
+      </div>
+    </div>
+  </div>
+  <!-- row -->
+  <footer class="row" role="contentinfo">
+    <div class="small-4 large-2 columns">T151221 - 1</div>
+    <div class="small-8 large-8 columns end text-center">
+      Telefónica de España S.A
+    </div>
+  </footer>
+  <!-- footer -->
+  <!-- Ventanas modales -->
+  <div id="notific" class="medium reveal-modal" data-reveal></div>
+  <!-- modal notificaciones -->
+  <div id="otras-oper" class="medium reveal-modal" data-reveal></div>
+  <!-- modal otras operaciones -->
+  <div id="cuenta-banc" class="large reveal-modal" data-reveal></div>
+  <!-- modal cuenta bancaria -->
+  <div id="camb-titular-lm" class="medium reveal-modal" data-reveal></div>
+  <!-- modal cambiar titular linea móvil -->
+  <div id="search" class="medium reveal-modal" data-reveal></div>
+  <!-- modal search -->
+  <div id="search-filter" class="medium reveal-modal" data-reveal></div>
+  <!-- modal search-filter -->
+  <div id="informes" class="medium reveal-modal" data-reveal></div>
+  <!-- modal informes -->
+  <div id="new-notif" class="medium reveal-modal" data-reveal></div>
+  <!-- modal nueva notificación -->
+  <div id="edit-notif" class="medium reveal-modal" data-reveal></div>
+  <!-- modal editar notificación -->
+  <div id="new-ofert" class="medium reveal-modal" data-reveal></div>
+  <!-- modal nueva oferta -->
+  <div id="new-client" class="medium reveal-modal" data-reveal></div>
+  <!-- modal nuevo cliente -->
+  <!-- build:js js/vendor/libraries.min.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="bower_components/footable/js/footable.js"></script>
+  <script src="bower_components/footable/js/footable.paginate.js"></script>
+  <script src="bower_components/footable/js/footable.sort.js"></script>
+  <script src="bower_components/fastclick/lib/fastclick.js"></script>
+  <script src="bower_components/jqueryui/jquery-ui-autocomplete.js"></script>
+  <script src="bower_components/multiple-select/jquery.multiple.select.js"></script>
+  <script src="bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
+  <script src="bower_components/editableSelect/jquery.editable.select.min.js"></script>
+  <script src="bower_components/pickadate/lib/picker.js"></script>
+  <script src="bower_components/pickadate/lib/picker.date.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js js/vendor/foundation.min.js -->
+  <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
+  <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
+  <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+  <!--<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
+  <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+  <!-- <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script> -->
+  <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+  <!-- <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script> -->
+  <!-- endbuild -->
+  <!-- build:js js/app.min.js -->
+  <script src="js/app.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>

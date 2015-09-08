@@ -1,0 +1,219 @@
+<!doctype html>
+<html class="no-js" lang="es-ES">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Configurador de Movistar Fusión Empresas">
+  <title>Configurador MFE - Otras operaciones</title>
+  <!-- Iconos de aplicación -->
+  <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+  <!-- build:css css/libraries.min.css -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css css/app.min.css -->
+  <link rel="stylesheet" href="css/app.css">
+  <!-- endbuild -->
+  <!-- build:js js/vendor/modernizr.min.js -->
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
+
+<body class="ofertas">
+  <div class="row">
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+        <header role="banner">
+          <div class="tit-sede text-center">
+            Otras Operaciones
+          </div>
+          <!-- tit-sede -->
+          <nav class="tab-bar" role="navigation">
+            <section>
+              <div class="large-1 medium-1 small-2 columns">
+                <a title="Menú de navegación" href="" class="left-off-canvas-toggle menu-icon" tabindex="0">
+                  <span></span>
+                </a>
+              </div>
+              <div class="large-9 medium-7 columns show-for-medium-up">
+                <h1 class="text-center"></h1>
+              </div>
+              <div class="large-2 medium-4 small-10 columns">
+                <a href="_buscar-filtro.html" title="Buscar con filtro avanzado" data-reveal-id="search-filter" data-reveal-ajax="true">
+                  <i class="fa fa-search-plus"></i>
+                </a>
+                <a href="configurador.html" title="Inicio">
+                  <i class="fa fa-home fa-2x"></i>
+                </a>
+              </div>
+            </section>
+          </nav>
+          <!-- tab-bar -->
+        </header>
+        <aside class="left-off-canvas-menu">
+          <ul class="off-canvas-list">
+            <li class="off-canvas-head">
+              <p>Manuel Beltrán Pérez</p>
+              <select name="perfil">
+                <option value="">Comercial</option>
+                <option value="">Otro perfil</option>
+                <option value="">Otro perfil más</option>
+              </select>
+            </li>
+            <li><a href="_otras-oper.html" data-reveal-id="otras-oper" data-reveal-ajax="true"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
+            </li>
+            <li><a href="informes.html"><i class="fa fa-bar-chart fa-2x"></i> Crear informes</a>
+            </li>
+            <li><a href="notificaciones.html"><i class="fa fa-bell-o"></i> Notificaciones</a>
+            </li>
+            <li><a href="#"><i class="fa fa-bookmark fa-2x"></i> Producto MFE</a>
+            </li>
+            <li><a href="#"><i class="fa fa-comments fa-2x"></i> Ayuda</a>
+            </li>
+            <li><a href="admin.html"><i class="fa fa-gears fa-2x"></i> Administración</a>
+            </li>
+            <li><a href="#"><i class="fa fa-asterisk"></i> Traslados MFE</a>
+            </li>
+          </ul>
+          <!-- off-canvas-list -->
+        </aside>
+        <!-- left-off-canvas-menu -->
+        <section class="main-section" role="main">
+          <article class="row">
+            <div class="contenido large-12 columns">
+              <form id="formulario" name="formulario" action="ConfiguradorSRV" data-abide="" novalidate="novalidate">
+                <input type="hidden" name="opcion" id="opcion" value="administracion">
+                <input type="hidden" name="accion" id="accion" value="validarCIF">
+                <input type="hidden" name="RES" id="RES" value="">
+                <input type="hidden" name="NUM_BOLETIN" id="NUM_BOLETIN" value="<!--NUM_BOLETIN-->">
+                <input type="hidden" name="COOFERTA" id="COOFERTA" value="X">
+                <div class="row">
+                  <div class="large-2 columns">
+                    <label>CIF</label>
+                  </div>
+                  <div class="large-2 columns">
+                    <input id="CIF" name="CIF" type="text" placeholder="Ej. B11111111" pattern="cif" required="" value="">
+                    <input id="CIF_H" name="CIF_H" type="hidden" value="<!--CIF_H-->">
+                    <small class="error">Este campo es obligatorio y sólo admite letras y números</small>
+                  </div>
+                  <div class="large-2 columns">
+                    <button type="submit" class="radius func-secondary tiny peque" title="Validar CIF">Validar</button>
+                  </div>
+                  <div class="large-2 columns">
+                    <label>Operación</label>
+                  </div>
+                  <div class="large-4 columns">
+                    <select id="operacion" name="operacion" onchange="javascript:gestComboOperacion();" disabled="disabled">
+                      <option value="titular">Cambio de titular</option>
+                      <option value="cuenta" selected="selected">Cambio de cuenta</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- EL CAMBIO DE TITULAR AÑADE UNA DIRECCION GESCAL Y DOCUMENTACION -->
+                <div class="row botonera">
+                  <div class="large-12 columns text-right">
+                    <button type="reset" class="radius func-secondary tiny" title="Borrar formulario">Borrar</button>
+                    <button type="submit" class="radius func-secondary tiny" id="cambiar" title="Cambiar Cuenta Bancaria" disabled="disabled">Aceptar</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- contenido -->
+          </article>
+        </section>
+        <a class="exit-off-canvas"></a>
+      </div>
+      <!-- inner-wrap -->
+    </div>
+    <!-- off-canvas-wrap -->
+  </div>
+  <!-- row -->
+  <footer class="row" role="contentinfo">
+    <div class="small-4 large-2 columns">T151221 - 1</div>
+    <div class="small-8 large-8 columns end text-center">
+      Telefónica de España S.A
+    </div>
+  </footer>
+  <!-- footer -->
+  <!-- Ventanas modales -->
+  <div id="notific" class="small reveal-modal" data-reveal></div>
+  <!-- modal notificaciones -->
+  <div id="otras-oper" class="xlarge reveal-modal" data-reveal></div>
+  <!-- modal otras operaciones -->
+  <div id="cuenta-banc" class="large reveal-modal" data-reveal></div>
+  <!-- modal cuenta bancaria -->
+  <div id="camb-titular-lm" class="medium reveal-modal" data-reveal></div>
+  <!-- modal cambiar titular linea móvil -->
+  <div id="search" class="small reveal-modal" data-reveal></div>
+  <!-- modal search -->
+  <div id="search-filter" class="medium reveal-modal" data-reveal></div>
+  <!-- modal search-filter -->
+  <div id="informes" class="medium reveal-modal" data-reveal></div>
+  <!-- modal informes -->
+  <div id="new-notif" class="medium reveal-modal" data-reveal></div>
+  <!-- modal nueva notificación -->
+  <div id="edit-notif" class="medium reveal-modal" data-reveal></div>
+  <!-- modal editar notificación -->
+  <div id="new-ofert" class="small reveal-modal" data-reveal></div>
+  <!-- modal nueva oferta -->
+  <div id="new-client" class="medium reveal-modal" data-reveal></div>
+  <!-- modal nuevo cliente -->
+  <div id="new-sede" class="xlarge reveal-modal" data-reveal></div>
+  <!-- modal nuevo cliente -->
+  <!-- build:js js/vendor/libraries.min.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="bower_components/footable/js/footable.js"></script>
+  <script src="bower_components/footable/js/footable.paginate.js"></script>
+  <script src="bower_components/footable/js/footable.sort.js"></script>
+  <script src="bower_components/fastclick/lib/fastclick.js"></script>
+  <script src="bower_components/jqueryui/jquery-ui-autocomplete.js"></script>
+  <script src="bower_components/multiple-select/jquery.multiple.select.js"></script>
+  <script src="bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
+  <script src="bower_components/editableSelect/jquery.editable.select.min.js"></script>
+  <script src="bower_components/pickadate/lib/picker.js"></script>
+  <script src="bower_components/pickadate/lib/picker.date.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js js/vendor/foundation.min.js -->
+  <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
+  <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
+  <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+  <!--<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
+  <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+  <!-- <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script> -->
+  <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+  <!-- <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script> -->
+  <!-- endbuild -->
+  <!-- build:js js/app.min.js -->
+  <script src="js/app.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>

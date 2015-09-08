@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery.each demo</title>
+  <style>
+  div {
+    color: blue;
+  }
+
+  .five {
+    color: red;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+  <div class="one"></div>
+  <div class="two"></div>
+  <div class="three"></div>
+  <div class="four"></div>
+  <div class="five"></div>
+  <script>
+  var arr = ['one', 'two', 'three', 'four', 'five'];
+  var obj = {
+    one: 1,
+    two: 2,
+    three: 3,
+    four: 4,
+    five: 5
+  };
+
+  jQuery.each(arr, function(i, val) {
+    'use strict';
+    $('.' + val).text('Mine is ' + val + '.');
+
+    // Will stop running after "three"
+    // return (val !== 'three');
+  });
+
+  jQuery.each(obj, function(i, val) {
+    'use strict';
+    $('.' + i).append(document.createTextNode(' - ' + val));
+  });
+  </script>
+</body>
+
+</html>

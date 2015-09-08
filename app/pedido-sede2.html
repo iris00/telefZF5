@@ -1,0 +1,857 @@
+<!doctype html>
+<html class="no-js" lang="es-Es">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Configurador de Movistar Fusión Empresas">
+  <title>Configurador MFE - Pedido de sede</title>
+  <!-- Iconos de aplicación -->
+  <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+  <!-- build:css css/libraries.min.css -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css css/app.min.css -->
+  <link rel="stylesheet" href="css/app.css">
+  <!-- endbuild -->
+  <!-- build:js js/vendor/modernizr.min.js -->
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
+
+<body class="sedes">
+  <div class="row">
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+        <header role="banner">
+          <div class="tit-sede text-center">
+            Panadería Madrid S.L. B10156754 (Calle Orense 14, Madrid)
+          </div>
+          <!-- tit-sede -->
+          <nav class="tab-bar" role="navigation">
+            <section>
+              <div class="large-1 medium-1 small-2 columns">
+                <a title="Menú de navegación" href="" class="left-off-canvas-toggle menu-icon" tabindex="0">
+                  <span></span>
+                </a>
+              </div>
+              <div class="large-9 medium-7 columns show-for-medium-up">
+                <h1 class="text-center">Datos de tramitación</h1>
+              </div>
+              <div class="large-2 medium-4 small-10 columns">
+                <a href="_buscar-filtro.html" title="Buscar con filtro avanzado" data-reveal-id="search-filter" data-reveal-ajax="true">
+                  <i class="fa fa-search-plus"></i>
+                </a>
+                <a href="configurador.html" title="Inicio">
+                  <i class="fa fa-home fa-2x"></i>
+                </a>
+              </div>
+            </section>
+          </nav>
+          <!-- tab-bar -->
+          <ul class="breadcrumbs">
+            <li class="small-2 columns current"><a href="#">Sedes</a>
+            </li>
+            <li class="small-4 columns current"><a href="#">Resumen</a>
+            </li>
+            <li class="small-3 columns activo"><a href="#">Pedido</a>
+            </li>
+            <li class="small-3 columns current">
+              <a href="resumen-sede.html" title="Precio total de la oferta"><i class="fa fa-shopping-cart"></i>
+              1744&euro;</a>
+            </li>
+          </ul>
+          <!-- breadcrumbs -->
+        </header>
+        <aside class="left-off-canvas-menu">
+          <ul class="off-canvas-list">
+            <li class="off-canvas-head">
+              <p>Manuel Beltrán Pérez</p>
+              <select name="perfil">
+                <option value="">Comercial</option>
+                <option value="">Otro perfil</option>
+                <option value="">Otro perfil más</option>
+              </select>
+            </li>
+            <li><a href="_otras-oper.html" data-reveal-id="otras-oper" data-reveal-ajax="true"><i class="fa fa-file-text-o fa-2x"></i> Otras operaciones</a>
+            </li>
+            <li><a href="informes.html"><i class="fa fa-bar-chart fa-2x"></i> Crear informes</a>
+            </li>
+            <li><a href="notificaciones.html"><i class="fa fa-bell-o"></i> Notificaciones</a>
+            </li>
+            <li><a href="#"><i class="fa fa-bookmark fa-2x"></i> Producto MFE</a>
+            </li>
+            <li><a href="#"><i class="fa fa-comments fa-2x"></i> Ayuda</a>
+            </li>
+            <li><a href="admin.html"><i class="fa fa-gears fa-2x"></i> Administración</a>
+            </li>
+            <li><a href="#"><i class="fa fa-asterisk"></i> Traslados MFE</a>
+            </li>
+          </ul>
+          <!-- off-canvas-list -->
+        </aside>
+        <!-- left-off-canvas-menu -->
+        <section class="main-section" role="main">
+          <article class="row">
+            <div class="contenido large-12 columns">
+              <form class="sede-tramit" action="configurador.html" data-abide>
+                <!-- <fieldset>
+                  <legend>Datos del comercial</legend>
+                  <div class="panel">
+                    <div class="row">
+                      <div class="medium-3 columns big">
+                        <label class="text-right">
+                          <input type="checkbox" autofocus>
+                          Proyecto Técnico Exprés
+                        </label>
+                      </div>
+                      <div class="medium-9 columns">
+                        <div class="row">
+                          <div class="medium-6 columns">
+                            <label class="text-right">Matrícula del comercial</label>
+                          </div>
+                          <div class="medium-6 columns">
+                            <input type="text" value="T151221" autofocus>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-6 columns">
+                            <label class="text-right">Teléfono de contacto</label>
+                          </div>
+                          <div class="medium-6 columns">
+                            <input type="text" value="628232545">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-6 columns">
+                            <label class="text-right">Observaciones</label>
+                          </div>
+                          <div class="medium-6 columns">
+                            <textarea></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </fieldset> -->
+                <!-- panel 1 Datos del comercial -->
+                <!-- <fieldset>
+                  <legend>Datos del cliente</legend>
+                  <div class="panel">
+                    <div class="row">
+                      <div class="medium-3 columns big">Contacto</div>
+                      <div class="medium-9 columns">
+                        <div class="row">
+                          <div class="medium-10 columns">
+                            <label class="text-right">¿Existe un interlocutor diferente en cada sede?</label>
+                          </div>
+                          <div class="medium-2 columns">
+                            <select>
+                              <option>Sí</option>
+                              <option>No</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-6 columns">
+                            <label>Interlocutor comercial</label>
+                            <input type="text" value="Nombre">
+                            <input type="text" value="Número de teléfono">
+                            <input type="text" value="Correo electrónico">
+                            <input type="text" value="Horario de contacto">
+                          </div>
+                          <div class="medium-6 columns">
+                            <label>Interlocutor técnico</label>
+                            <input type="text" value="El mismo">
+                            <input type="text" value="El mismo">
+                            <input type="text" value="El mismo">
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+                <!-- grupo 1 Contacto -->
+                <!-- <hr>
+                    <div class="row">
+                      <div class="medium-3 columns big">Legal</div>
+                      <div class="medium-9 columns">
+                        <div class="row">
+                          <div class="medium-6 columns">
+                            <input type="text" value="Nombre del representante">
+                          </div>
+                          <div class="medium-6 columns">
+                            <input type="text" value="Nombre del notario">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-3 columns">
+                            <select>
+                              <option>Tipo</option>
+                              <option selected>DNI</option>
+                              <option>CIF</option>
+                            </select>
+                          </div>
+                          <div class="medium-3 columns">
+                            <input type="text" value="76045234N">
+                          </div>
+                          <div class="medium-3 columns">
+                            <input type="text" value="Nº Protocolo">
+                          </div>
+                          <div class="medium-3 columns date">
+                            <input class="calendario" type="text" value="08/11/2014">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-6 columns">
+                            <label class="text-right">Idioma del contrato</label>
+                          </div>
+                          <div class="medium-6 columns">
+                            <select>
+                              <option>Idioma</option>
+                              <option selected>Castellano</option>
+                              <option>Catalán</option>
+                              <option>Inglés</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+                <!-- grupo 2 Legal -->
+                <!-- <hr>
+                    <div class="row">
+                      <div class="medium-3 columns big">Facturación</div>
+                      <div class="medium-9 columns">
+                        <div class="row">
+                          <div class="medium-6 columns">
+                            <label class="text-right">Forma de pago</label>
+                          </div>
+                          <div class="medium-6 columns">
+                            <select>
+                              <option>Domiciliación bancaria</option>
+                              <option>Pago por ventanilla</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="medium-12 columns">
+                        <div class="row">
+                          <div class="medium-1 medium-offset-5 columns">
+                            <input type="text" value="IBAN">
+                          </div>
+                          <div class="medium-1 columns">
+                            <input type="text" value="ES76">
+                          </div>
+                          <div class="medium-1 columns">
+                            <input type="text" value="0100">
+                          </div>
+                          <div class="medium-1 columns">
+                            <input type="text" value="5423">
+                          </div>
+                          <div class="medium-1 columns">
+                            <input type="text" value="6544">
+                          </div>
+                          <div class="medium-1 columns">
+                            <input type="text" value="5343">
+                          </div>
+                          <div class="medium-1 columns">
+                            <input type="text" value="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="medium-9 medium-offset-3 columns">
+                        <div class="row">
+                          <div class="medium-10 columns">
+                            <label class="text-right">¿Cuenta diferente en cada sede?</label>
+                          </div>
+                          <div class="medium-2 columns">
+                            <select>
+                              <option>Sí</option>
+                              <option>No</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-5 medium-offset-2 columns">
+                            <label class="text-right">
+                              <input type="checkbox">Facturación electrónica
+                            </label>
+                          </div>
+                          <div class="medium-5 columns text-right">
+                            <label class="text-right">
+                              <input type="checkbox">Facturación detallada
+                            </label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-8 columns">
+                            <label class="text-right">Idioma de la factura</label>
+                          </div>
+                          <div class="medium-4 columns">
+                            <select>
+                              <option>Idioma</option>
+                              <option selected>Castellano</option>
+                              <option>Catalán</option>
+                              <option>Inglés</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-8 columns">
+                            <label class="text-right">Dirección de facturación</label>
+                          </div>
+                          <div class="medium-4 columns">
+                            <select>
+                              <option>Calle Orense 14</option>
+                              <option>Otra dirección</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-2 columns">
+                            <input type="text" value="Código postal">
+                          </div>
+                          <div class="medium-6 columns">
+                            <input type="text" value="Dirección">
+                          </div>
+                          <div class="medium-2 columns">
+                            <input type="text" value="Nº">
+                          </div>
+                          <div class="medium-2 columns">
+                            <input type="text" value="Bis">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-2 columns">
+                            <input type="text" value="Letra">
+                          </div>
+                          <div class="medium-2 columns">
+                            <input type="text" value="Escalera">
+                          </div>
+                          <div class="medium-2 columns">
+                            <input type="text" value="Piso">
+                          </div>
+                          <div class="medium-2 columns">
+                            <input type="text" value="Puerta">
+                          </div>
+                          <div class="medium-4 columns">
+                            <input type="text" value="Aclarador">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-12 columns" rows="4">
+                            <textarea></textarea>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-8 medium-offset-4 columns">
+                            <label class="text-right">
+                              <input type="checkbox">¿Enviar factura a otra dirección?
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+                <!-- grupo 3 Facturación -->
+                <!-- </div> -->
+                <!-- panel 2 Datos del cliente -->
+                <fieldset>
+                  <legend>Datos del cliente</legend>
+                  <div class="panel">
+                    <div class="row">
+                      <div class="medium-1 columns big">Contacto</div>
+                      <div class="medium-11 columns">
+                        <div class="row">
+                          <div class="medium-10 columns">
+                            <label class="text-right">¿Existe un interlocutor diferente en cada sede?</label>
+                          </div>
+                          <div class="medium-2 columns">
+                            <select id="interlSede" name="interlSede">
+                              <option>Sí</option>
+                              <option selected>No</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-5 columns">
+                            <label id='comercial1'>Interlocutor comercial</label>
+                            <div class="medium-12 columns">
+                              <label class="required"></label>
+                              <input id="NomIntComerc" name="NomIntComerc" type="text" placeholder="Nombre" maxlength="100" value="<!--NomIntComerc-->">
+                            </div>
+                            <div class="medium-12 columns">
+                              <label class="required"></label>
+                              <input id=TelIntComerc name="TelIntComerc" type="text" placeholder="Número de teléfono" maxlength="9" pattern="telefonos" value="<!--TelIntComerc-->">
+                              <small class="error">Introduzca un número de telefono válido</small>
+                            </div>
+                            <div class="medium-12 columns">
+                              <label class="required"></label>
+                              <input id="MailIntComerc" name="MailIntComerc" type="text" placeholder="Correo electrónico" maxlength="50" pattern="mail" value="<!--MailIntComerc-->">
+                              <small class="error">Introduzca un email válido</small>
+                            </div>
+                            <div class="medium-12 columns">
+                              <input id="HorIntComerc" name="HorIntComerc" type="text" placeholder="Horario de contacto" maxlength="50" value="<!--HorIntComerc-->">
+                            </div>
+                          </div>
+                          <div class="medium-5 columns">
+                            <label>Interlocutor técnico</label>
+                            <div class="medium-12 columns">
+                              <label class="required"></label>
+                              <input id="NomIntTec" name="NomIntTec" type="text" placeholder="Nombre" maxlength="100" value="<!--NomIntTec-->">
+                            </div>
+                            <div class="medium-12 columns">
+                              <label class="required"></label>
+                              <input id="TelIntTec" name="TelIntTec" type="text" placeholder="Número de teléfono" maxlength="9" pattern="telefonos" value="<!--NumIntTec-->">
+                              <small class="error">Introduzca un número de telefono válido</small>
+                            </div>
+                            <div class="medium-12 columns">
+                              <label class="required"></label>
+                              <input id="MailIntTec" name="MailIntTec" type="text" placeholder="Correo electrónico" maxlength="50" pattern="mail" value="<!--MailIntTec-->">
+                              <small class="error">Introduzca un email válido</small>
+                            </div>
+                          </div>
+                          <div class="medium-2 columns mismo">
+                            <label>El mismo</label>
+                            <div class="medium-12 columns">
+                              <input id="chkMismo_1" name="chkMismo_1" type="checkbox">
+                            </div>
+                            <div class="medium-12 columns">
+                              <input id="chkMismo_2" name="chkMismo_2" type="checkbox">
+                            </div>
+                            <div class="medium-12 columns">
+                              <input id="chkMismo_3" name="chkMismo_3" type="checkbox">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- grupo 1 Contacto -->
+                    <hr>
+                    <div class="row">
+                      <div class="medium-3 columns big">Legal</div>
+                      <div class="medium-9 columns">
+                        <div class="row">
+                          <div class="medium-6 columns">
+                            <label class="required"></label>
+                            <input type="text" placeholder="Nombre del representante" id="nombreRepre" name="nombreRepre" maxlength="50" value="<!--nombreRepe-->">
+                          </div>
+                          <div class="medium-6 columns">
+                            <label class="required"></label>
+                            <input type="text" placeholder="Nombre del notario" id="nombreNotario" name="nombreNotario" maxlength="50" value="<!--nombreNotario-->">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-3 columns">
+                            <select id="tipoDoc" name="tipoDoc">
+                              <option value='D'>DNI</option>
+                              <option value='C'>CIF</option>
+                            </select>
+                            <input type="hidden" id="h_tipoDoc" value="<!--tipoDoc-->">
+                          </div>
+                          <div class="medium-3 columns">
+                            <label class="required"></label>
+                            <input type="text" id="valorDoc" name="valorDoc" placeholder="Introduzca num. documento" maxlength="9" value="<!--valorDoc-->">
+                          </div>
+                          <div class="medium-3 columns">
+                            <label class="required"></label>
+                            <input type="text" placeholder="Nº Protocolo" id="protocolo" name="protocolo" value="<!--protocolo-->" maxlength="50">
+                          </div>
+                          <div class="medium-3 columns fecha">
+                            <label class="required"></label>
+                            <input class="calendario" id="fecha" name="fecha" class="calendario" type="text" placeholder="dd/mm/yyyy" value="<!--fecha-->" maxlength="10">
+                          </div>
+                        </div>
+                        <!--                                                                              <div class="row"> -->
+                        <!--                                                                                     <div class="medium-6 columns"> -->
+                        <!--                                                                                            <label class="text-right">Idioma del contrato</label> -->
+                        <!--                                                                                     </div> -->
+                        <!--                                                                                     <div class="medium-6 columns"> -->
+                        <!--                                                                                            <select id="idiomaContrato" name="idiomaContrato">                                                                                                      -->
+                        <!--                                                                                                   <option selected value="CASTELLANO">CASTELLANO</option> -->
+                        <!--                                                                                                   <option value="CATALAN">CATALAN</option> -->
+                        <!--                                                                                                   <option value="INGLES">INGLES</option> -->
+                        <!--                                                                                            </select> -->
+                        <!--                                                                                     </div> -->
+                        <!--                                                                              </div> -->
+                        <input type="hidden" id="idiomaContrato" name="idiomaContrato" value="CASTELLANO">
+                        <input type="hidden" id="ind_idiomaContrato" value="CASTELLANO">
+                      </div>
+                    </div>
+                    <!-- grupo 2 Legal -->
+                    <hr>
+                    <div class="row">
+                      <div class="medium-3 columns big">Facturación</div>
+                      <div class="medium-9 columns">
+                        <div class="row">
+                          <div class="medium-6 columns">
+                            <label class="text-right">Forma de pago</label>
+                          </div>
+                          <div class="medium-6 columns">
+                            <select id='formaPago' name='formaPago'>
+                              <option value='D' selected>Domiciliación bancaria</option>
+                              <!--                                                             <option value = 'V'>Pago por ventanilla</option> -->
+                            </select>
+                            <!--                                                                                            <input type="hidden" id="ind_formaPago" value="<!--ind_formaPago"> -->
+                            <input type="hidden" id="ind_formaPago" value="D">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id='divisionCuenta' class="row">
+                      <div class="medium-12 columns">
+                        <div class="row">
+                          <div class="medium-6 columns">
+                            <label class="text-right">Titular</label>
+                          </div>
+                          <div class="medium-6 columns">
+                            <input type="text" id="titular_cuenta" name="titular_cuenta" placeholder="Titular" maxlength="80" value="<!--titular_cuenta-->">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-1 medium-offset-4 columns">
+                            <label id="IBAN1">IBAN</label>
+                          </div>
+                          <div class="medium-1 columns">
+                            <input id="DesIban" name="DesIban" type="text" placeholder="IBAN" pattern="alpha" maxlength="4" value="IBAN">
+                            <small class="error">Valor Fijo IBAN</small>
+                          </div>
+                          <div class="medium-1 columns">
+                            <label class="required"></label>
+                            <input id="CodIban" name="CodIban" type="text" placeholder="ES00" maxlength="4" pattern='IBAN_ES' value="<!--CodIban-->">
+                            <small class="error">Introduzca el código IBAN (ESXX)</small>
+                          </div>
+                          <div class="medium-1 columns">
+                            <label class="required"></label>
+                            <input id="EntidadIban" name="EntidadIban" type="text" placeholder="9999" maxlength="4" pattern='number' value="<!--EntidadIban-->">
+                            <small class="error">Este campo es numérico</small>
+                          </div>
+                          <div class="medium-1 columns">
+                            <label class="required"></label>
+                            <input id="OficinaIban" name="OficinaIban" type="text" placeholder="9999" maxlength="4" pattern='number' value="<!--OficinaIban-->">
+                            <small class="error">Este campo es numérico</small>
+                          </div>
+                          <div class="medium-1 columns">
+                            <label class="required"></label>
+                            <input id="DCIban" name="DCIban" type="text" placeholder="9999" maxlength="4" pattern='number' value="<!--DCIban-->">
+                            <small class="error">Este campo es numérico</small>
+                          </div>
+                          <div class="medium-1 columns">
+                            <label class="required"></label>
+                            <input id="cuenta1Iban" name="cuenta1Iban" type="text" placeholder="9999" maxlength="4" pattern='number' value="<!--cuenta1Iban-->">
+                            <small class="error">Este campo es numérico</small>
+                          </div>
+                          <div class="medium-1 columns">
+                            <label class="required"></label>
+                            <input id="cuenta2Iban" name="cuenta2Iban" type="text" placeholder="9999" maxlength="4" pattern='number' value="<!--cuenta2Iban-->">
+                            <small class="error">Este campo es numérico</small>
+                          </div>
+                        </div>
+                        <!--cuentasSedes-->
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="medium-9 medium-offset-3 columns">
+                        <div class="row">
+                          <div class="medium-5 medium-offset-2 columns">
+                            <label class="text-right">
+                              <!--                                                                                                   <input type="checkbox" id="ind_factelec" name="ind_factelec" value="S">Facturación electrónica -->
+                              <!--                                                                                                   <input type="hidden" id="h_ind_factelec" value="<!--ind_factelec"> -->
+                            </label>
+                          </div>
+                          <div class="medium-5 columns text-right">
+                            <label class="text-right">
+                              <input type="checkbox" id="detallada" name="detallada" type="checkbox" value="S">Facturación detallada
+                              <input type="hidden" id="ind_factdeta" value="<!--ind_factdeta-->">
+                            </label>
+                            <input type="hidden" id="ind_idiomaFactura" value="<!--idiomaFactura-->">
+                          </div>
+                        </div>
+                        <!--                                                                              <div class="row"> -->
+                        <!--                                                                                     <div class="medium-8 columns"> -->
+                        <!--                                                                                            <label class="text-right">Idioma de la factura</label> -->
+                        <!--                                                                                     </div> -->
+                        <!--                                                                                     <div class="medium-4 columns"> -->
+                        <!--                                                                                            <select id="idiomaFactura" name="idiomaFactura"> -->
+                        <!--                                                             <option>Idioma</option> -->
+                        <!--                                                             <option selected value='CASTELLANO'>Castellano</option> -->
+                        <!--                                                             <option value='CATALAN'>CATALAN</option> -->
+                        <!--                                                             <option value='INGLES'>INGLES</option> -->
+                        <!--                                                         </select> -->
+                        <!--                                                                                     </div>                                                                                   -->
+                        <!--                                                                              </div> -->
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Direcciones del cliente</legend>
+                  <div class="panel">
+                    <div class="row">
+                      <div class="medium-12  columns">
+                        <input id="fact_cli" name="fact_cli" type="checkbox">
+                        <label>Facturación diferente de Cliente</label>
+                      </div>
+                    </div>
+                    <!--                                                                 <div class="row"> -->
+                    <!--                                                                       <div class="medium-12  columns">                                                                                -->
+                    <!--                                                                              <div class="medium-6 columns"> -->
+                    <!--                                                                                     <select id="cmbSedesCliente" name="cmbSedesCliente"> -->
+                    <!--                                                                                     lst_sedes -->
+                    <!--                                                                                     </select>     -->
+                    <!--                                                                                     <a href="#" onclick="javascript:popUpNewTitular('cmbSedesCliente');"><i class="fa fa-plus-circle"></i></a>                                                                                    -->
+                    <!--                                                                              </div> -->
+                    <!--                                                                              <div class="medium-6 columns"> -->
+                    <!--                                                                                     <select id="cmbSedesFact" name="cmbSedesFact">                                                                                            -->
+                    <!--                                                                                     lst_sedes -->
+                    <!--                                                                                     </select>                                                                          -->
+                    <!--                                                                                     <a href="#" onclick="javascript:popUpNewTitular('cmbSedesFact');"><i class="fa fa-plus-circle"></i></a> -->
+                    <!--                                                                              </div>                                                                                                                                           -->
+                    <!--                                                                       </div> -->
+                    <!--                                                                 </div> -->
+                    <hr>
+                    <div class="row">
+                      <div class="medium-3 columns big">Dirección del Cliente</div>
+                      <div class="medium-9 columns">
+                        <div class="row">
+                          <div class="medium-12  columns">
+                            <select id="cmbSedesCliente" name="cmbSedesCliente" onChange="javascript:cambiacomboDirecciones(this)">
+                              <!--lst_sedes-->
+                              <option value="XX">Nueva dirección ...</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-2 columns">
+                            <input type="text" id="cli_cpostal" name="cli_cpostal" readonly="readonly" value="<!--cli_cpostal-->">
+                          </div>
+                          <div class="medium-6 columns">
+                            <input type="text" id="cli_poblacion" name="cli_poblacion" readonly="readonly" value="<!--cli_poblacion-->">
+                          </div>
+                          <div class="medium-4 columns">
+                            <input type="text" id="cli_provincia" name="cli_provincia" readonly="readonly" value="<!--cli_provincia-->">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-8 columns">
+                            <input type="text" id="cli_direccion" name="cli_direccion" readonly="readonly" value="<!--cli_direccion-->">
+                          </div>
+                          <div class="medium-2 columns">
+                            <input type="text" id="cli_numero" name="cli_numero" readonly="readonly" value="<!--cli_numero-->">
+                          </div>
+                          <div class="medium-2 columns">
+                            <input type="text" id="cli_bis" name="cli_bis" readonly="readonly" value="<!--cli_bis-->">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-2 columns">
+                            <input type="text" id="cli_letra" name="cli_letra" readonly="readonly" value="<!--cli_letra-->">
+                          </div>
+                          <div class="medium-2 columns">
+                            <input type="text" id="cli_escalera" name="cli_escalera" readonly="readonly" maxlength="10" value="<!--cli_escalera-->">
+                          </div>
+                          <div class="medium-2 columns">
+                            <input type="text" id="cli_piso" name="cli_piso" readonly="readonly" value="<!--cli_piso-->">
+                          </div>
+                          <div class="medium-2 columns">
+                            <input type="text" id="cli_puerta" name="cli_puerta" readonly="readonly" value="<!--cli_puerta-->">
+                          </div>
+                          <div class="medium-4 columns">
+                            <input type="text" id="cli_aclarador" name="cli_aclarador" readonly="readonly" value="<!--cli_aclarador-->">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-10 columns" id="displayTxtDsDireccionCompleta" title="Dirección completa">&nbsp;
+                            <!--DIRECCION-->
+                          </div>
+                          <input type="hidden" id="txtDsDireccionCompleta"></input>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row" id="dir_facturacion">
+                      <div class="medium-3 columns big">Dirección facturación</div>
+                      <div class="medium-9 columns">
+                        <div class="row">
+                          <div class="medium-12 columns">
+                            <select id="cmbSedesFact" name="cmbSedesFact" onChange="javascript:cambiacomboDirecciones(this)">
+                              <!--lst_sedes-->
+                              <option value="XX">Nueva dirección ...</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-2 columns">
+                            <input type="text" id="fac_cpostal" name="fac_cpostal" readonly="readonly" value="<!--fac_cpostal-->">
+                          </div>
+                          <div class="medium-6 columns">
+                            <input type="text" id="fac_poblacion" name="fac_poblacion" readonly="readonly" value="<!--fac_poblacion-->">
+                          </div>
+                          <div class="medium-4 columns">
+                            <input type="text" id="fac_provincia" name="fac_provincia" readonly="readonly" value="<!--fac_provincia-->">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-8 columns">
+                            <input type="text" id="fac_direccion" name="fac_direccion" readonly="readonly" value="<!--fac_direccion-->">
+                            <!--                                                                                                   <span id="fac_direccion">cli_direccion</span> -->
+                          </div>
+                          <div class="medium-2 columns">
+                            <input type="text" id="fac_numero" name="fac_numero" readonly="readonly" value="<!--fac_numero-->">
+                          </div>
+                          <div class="medium-2 columns">
+                            <input type="text" id="fac_bis" name="fac_bis" readonly="readonly" value="<!--fac_bis-->">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-2 columns">
+                            <input type="text" id="fac_letra" name="fac_letra" readonly="readonly" value="<!--fac_letra-->">
+                          </div>
+                          <div class="medium-2 columns">
+                            <input type="text" id="fac_escalera" name="fac_escalera" readonly="readonly" maxlength="10" value="<!--fac_escalera-->">
+                          </div>
+                          <div class="medium-2 columns">
+                            <input type="text" id="fac_piso" name="fac_piso" readonly="readonly" value="<!--fac_piso-->">
+                          </div>
+                          <div class="medium-2 columns">
+                            <input type="text" id="fac_puerta" name="fac_puerta" readonly="readonly" value="<!--fac_puerta-->">
+                          </div>
+                          <div class="medium-4 columns">
+                            <input type="text" id="fac_aclarador" name="fac_aclarador" readonly="readonly" value="<!--fac_aclarador-->">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="medium-10 columns" id="displayTxtDsDireccionCompleta2" title="Dirección completa">&nbsp;
+                            <!--DIRECCION-->
+                          </div>
+                          <input type="hidden" id="txtDsDireccionCompleta2"></input>
+                          <div class="medium-2 columns">&nbsp;
+                          </div>
+                          <div class="row">
+                            <div class="medium-12 columns" id="BuscaKJ_ConfPedidoFacturacion" name="BuscaKJ_ConfPedidoFacturacion"></div>
+                            <input type="hidden" name="isNewtitular_Facturacion" id="isNewtitular_Facturacion" value="false" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <div class="row botonera">
+                  <div class="large-12 columns text-right">
+                    <button type="submit" class="radius func-secondary tiny" title="Selección de sedes">Volver</button>
+                    <button type="submit" class="radius tiny" title="Ver contrato">Contrato</button>
+                    <button type="submit" class="radius tiny" title="Tramitar pedido">Tramitar</button>
+                  </div>
+                </div>
+                <!-- botonera -->
+                </fieldset>
+              </form>
+            </div>
+            <!-- contenido -->
+          </article>
+        </section>
+        <a class="exit-off-canvas"></a>
+      </div>
+      <!-- inner-wrap -->
+    </div>
+    <!-- off-canvas-wrap -->
+  </div>
+  <!-- row -->
+  <footer class="row" role="contentinfo">
+    <div class="small-4 large-2 columns">T151221 - 1</div>
+    <div class="small-8 large-8 columns end text-center">
+      Telefónica de España S.A
+    </div>
+  </footer>
+  <!-- footer -->
+  <!-- Ventanas modales -->
+  <div id="notific" class="small reveal-modal" data-reveal></div>
+  <!-- modal notificaciones -->
+  <div id="otras-oper" class="medium reveal-modal" data-reveal></div>
+  <!-- modal otras operaciones -->
+  <div id="cuenta-banc" class="large reveal-modal" data-reveal></div>
+  <!-- modal cuenta bancaria -->
+  <div id="camb-titular-lm" class="medium reveal-modal" data-reveal></div>
+  <!-- modal cambiar titular linea móvil -->
+  <div id="search" class="small reveal-modal" data-reveal></div>
+  <!-- modal search -->
+  <div id="search-filter" class="medium reveal-modal" data-reveal></div>
+  <!-- modal search-filter -->
+  <div id="informes" class="medium reveal-modal" data-reveal></div>
+  <!-- modal informes -->
+  <div id="new-notif" class="medium reveal-modal" data-reveal></div>
+  <!-- modal nueva notificación -->
+  <div id="edit-notif" class="medium reveal-modal" data-reveal></div>
+  <!-- modal editar notificación -->
+  <div id="new-ofert" class="small reveal-modal" data-reveal></div>
+  <!-- modal nueva oferta -->
+  <div id="new-client" class="medium reveal-modal" data-reveal></div>
+  <!-- modal nuevo cliente -->
+  <div id="new-sede" class="medium reveal-modal" data-reveal></div>
+  <!-- modal nueva sede -->
+  <div id="conf-cob-movil" class="tiny reveal-modal" data-reveal></div>
+  <!-- modal Configuración Cobertura Móvil -->
+  <div id="ope-num" class="large reveal-modal" data-reveal></div>
+  <!-- modal Configuración de las numeraciones  -->
+  <div id="selecc-red" class="small reveal-modal" data-reveal></div>
+  <!-- modal seleccionar red -->
+  <div id="licen-info" class="small reveal-modal" data-reveal></div>
+  <!-- modal seleccionar red -->
+  <!-- build:js js/vendor/libraries.min.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="bower_components/footable/js/footable.js"></script>
+  <script src="bower_components/footable/js/footable.paginate.js"></script>
+  <script src="bower_components/footable/js/footable.sort.js"></script>
+  <script src="bower_components/fastclick/lib/fastclick.js"></script>
+  <script src="bower_components/jqueryui/jquery-ui-autocomplete.js"></script>
+  <script src="bower_components/multiple-select/jquery.multiple.select.js"></script>
+  <script src="bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
+  <script src="bower_components/editableSelect/jquery.editable.select.min.js"></script>
+  <script src="bower_components/pickadate/lib/picker.js"></script>
+  <script src="bower_components/pickadate/lib/picker.date.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js js/vendor/foundation.min.js -->
+  <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
+  <!-- <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script> -->
+  <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+  <!--<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
+  <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+  <!-- <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script> -->
+  <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+  <!-- <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script> -->
+  <!-- endbuild -->
+  <!-- build:js js/app.min.js -->
+  <script src="js/app.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>

@@ -2,78 +2,78 @@
 
 // Opweb
 .opweb {
-    .contenido {
-        font-size: rem-calc(14);
-        padding-top: rem-calc(25);
+  .contenido {
+    font-size: rem-calc(14);
+    padding-top: rem-calc(25);
+  }
+
+  article.row .contenido.large-12 > * {
+    margin-right: 0;
+  }
+
+  .contenido h2 {
+    font-size: rem-calc(16);
+  }
+
+  .panel {
+    padding: rem-calc(10);
+
+    &.tit h2 {
+      background-color: $third-color;
+      color: $white;
+      margin: rem-calc((-10) -10 10 -10);
+      padding: rem-calc(5 10);
+    }
+  }
+
+  .parque {
+    td {
+      text-align: center;
+
+      .fa {
+        font-size: rem-calc(25);
+      }
     }
 
-    article.row .contenido.large-12 > * {
-        margin-right: 0;
+    th:first-child {
+      width: rem-calc(30);
     }
 
-    .contenido h2 {
-        font-size: rem-calc(16);
+    tbody tr:first-child td {
+      font-family: robotoregular;
+    }
+  }
+
+  .odd-even {
+    h2 {
+      margin-bottom: 0;
     }
 
-    .panel {
-        padding: rem-calc(10);
-
-        &.tit h2 {
-            background-color: $third-color;
-            color: $white;
-            margin: rem-calc((-10) -10 10 -10);
-            padding: rem-calc(5 10);
-        }
+    .row {
+      margin-left: rem-calc(-10);
+      margin-right: rem-calc(-10);
     }
 
-    .parque {
-        td {
-            text-align: center;
-
-            .fa {
-                font-size: rem-calc(25);
-            }
-        }
-
-        th:first-child {
-            width: rem-calc(30);
-        }
-
-        tbody tr:first-child td {
-            font-family: robotoregular;
-        }
+    .columns:nth-child(odd),
+    input[disabled],
+    p.disabled {
+      margin: rem-calc(8 0);
     }
 
-    .odd-even {
-        h2 {
-            margin-bottom: 0;
-        }
-
-        .row {
-            margin-left: rem-calc(-10);
-            margin-right: rem-calc(-10);
-        }
-
-        .columns:nth-child(odd),
-        input[disabled],
-        p.disabled {
-            margin: rem-calc(8 0);
-        }
-
-        .row:nth-child(even) {
-            background-color: $smoke;
-        }
+    .row:nth-child(even) {
+      background-color: $smoke;
     }
+  }
 
-    .fa-circle.success {
-        color: $success-color;
-    }
+  .fa-circle.success {
+    color: $success-color;
+  }
 
-    .fa-circle.alert {
-        color: $alert-color;
-    }
+  .fa-circle.alert {
+    color: $alert-color;
+  }
 
-    .fa-circle.warning {
-        color: $warning-color;
-    }
+  .fa-circle.warning {
+    color: $warning-color;
+  }
 }
